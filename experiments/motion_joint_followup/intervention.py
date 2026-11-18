@@ -4,8 +4,6 @@ from pathlib import Path
 import sys
 
 import numpy as np
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import maximum_bipartite_matching
 from scipy.stats import spearmanr
 import torch
 
@@ -19,6 +17,7 @@ from motion_evidence import extract_evidence
 from protocol import CENTERS, DEV, SEED, frame_path, frame_record, metadata, setup
 from readout import contacts
 from extract import labels as split_boxes
+from identity_coverage import paired, summarize_pairs, target_sets
 
 MODES=('normal','zero','permute')
 
@@ -55,39 +54,25 @@ def eligible_ids(record):
     image_id,=[im['id'] for im in meta['images'] if im['frame_id']==record['index']]
     anns=[a for a in meta['annotations'] if a['image_id']==image_id and split_boxes([a])[0]]
     assert [a['bbox'] for a in anns]==record['targets']
-    return [(record['sequence'],record['index'],int(a['id'])) for a in anns]
+    return np.asarray([int(a['id']) for a in anns],dtype=int)
 
 
-def unique_bounds(observations,frames,threshold):
-    possible,forced=set(),set()
-    total=0
-    for (xy,scores),rec in zip(observations,frames):
-        ids=eligible_ids(rec)
-        active=contacts(xy[scores>=threshold],rec['targets']) if threshold is not None else np.zeros((0,len(ids)),bool)
-        cols=np.flatnonzero(active.any(axis=0))
-        graph=active[:,cols]
-        graph=graph[graph.any(axis=1)]
-        def maximum(a):
-            if min(a.shape)==0:
-                return 0
-            return int(np.count_nonzero(maximum_bipartite_matching(csr_matrix(a),perm_type='column')>=0))
-        n=maximum(graph)
-        total+=n
-        possible.update(ids[k] for k in cols)
-        if len(cols)==n:
-            forced.update(ids[k] for k in cols)
-        else:
-            forced.update(ids[k] for j,k in enumerate(cols) if maximum(np.delete(graph,j,axis=1))<n)
-    return total,forced,possible
-
-
-def compare_ids(reference,changed):
-    n,f,p=reference
-    m,g,q=changed
-    return dict(reference_tp=n,modified_tp=m,reference_ambiguous_ids=sorted(p-f),
-                modified_ambiguous_ids=sorted(q-g),both_guaranteed=sorted(f&g),
-                both_possible_upper_bound=sorted(p&q),only_reference_guaranteed=sorted(f-q),
-                only_changed_guaranteed=sorted(g-p),both_identity_sets_unique=f==p and g==q)
+def compare_at_thresholds(frames, observations, variant, original_t, changed_t):
+    comparisons=[]
+    for index,record in enumerate(frames):
+        ids=eligible_ids(record)
+        graphs=[]
+        for mode,t in [('normal',original_t),(variant,changed_t)]:
+            xy,scores=observations[mode][index]
+            coords=xy[scores>=t] if t is not None else xy[:0]
+            graphs.append(contacts(coords,record['targets']))
+        before,after=[target_sets(g,ids) for g in graphs]
+        comparisons.append(paired(before,after,graphs))
+    merged=summarize_pairs(comparisons)
+    assert len(set(merged['common']+merged['C_only']+merged['D_only']))==len(merged['common']+merged['C_only']+merged['D_only'])
+    return {key.replace('C_only','normal_only').replace('D_only','intervened_only')
+               .replace('C_optional','normal_optional').replace('D_optional','intervened_optional'):v
+            for key,v in merged.items()}
 
 
 @torch.inference_mode()
@@ -155,16 +140,14 @@ def main():
     metrics={m:evaluate_method(records,v,groups) for m,v in observations.items()}
     # Both independently selected <=1-FP budgets and strictly unchanged D threshold are informative.
     normal=metrics['normal']['all_dev']['froc']['1']
-    reference=unique_bounds(observations['normal'],records,normal['logit_threshold'])
-    assert reference[0]==normal['tp']
     comparisons={}
     for mode in MODES[1:]:
         own=metrics[mode]['all_dev']['froc']['1']
-        changed=unique_bounds(observations[mode],records,own['logit_threshold'])
-        assert changed[0]==own['tp']
-        same_threshold=unique_bounds(observations[mode],records,normal['logit_threshold'])
-        comparisons[mode]={'own_one_fp_budget':compare_ids(reference,changed),
-                           'original_D_threshold':compare_ids(reference,same_threshold)}
+        both=compare_at_thresholds(records,observations,mode,normal['logit_threshold'],own['logit_threshold'])
+        assert len(both['common'])+len(both['normal_only'])==normal['tp']
+        assert len(both['common'])+len(both['intervened_only'])==own['tp']
+        same=compare_at_thresholds(records,observations,mode,normal['logit_threshold'],normal['logit_threshold'])
+        comparisons[mode]={'own_one_fp_budget':both,'original_D_threshold':same}
     result=dict(sources=list(DEV),centers=list(CENTERS),scope='development diagnostic, no fitting',
                 interventions='Zero joint-only patch values; independently cycle the three spans by one or two slots per off-center velocity where all fractions match. No changes to other inputs.',
                 span_assignment_zero_based=assignment.cpu().tolist(),methods=metrics,

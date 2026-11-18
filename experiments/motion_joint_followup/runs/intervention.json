@@ -1,0 +1,1033 @@
+{
+  "sources": [
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "centers": [
+    19,
+    59,
+    99,
+    139
+  ],
+  "scope": "development diagnostic, no fitting",
+  "interventions": "Zero joint-only patch values; independently cycle the three spans by one or two slots per off-center velocity where all fractions match. No changes to other inputs.",
+  "span_assignment_zero_based": [
+    [
+      [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ]
+  ],
+  "methods": {
+    "normal": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 59327,
+        "ignored_candidates": 889,
+        "candidate_oracle_tp": 300,
+        "candidate_oracle_recall": 0.9900990099009901,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 14,
+            "fp": 8,
+            "fn": 289,
+            "recall": 0.0462046204620462,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.2835750579834
+          },
+          "5": {
+            "tp": 34,
+            "fp": 40,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 8.353572845458984
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 79,
+          "fp": 739,
+          "fn": 224,
+          "recall": 0.2607260726072607,
+          "fp_per_frame": 92.375,
+          "ignored_candidates": 103,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 14,
+          "fp": 8,
+          "fn": 289,
+          "recall": 0.0462046204620462,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 7,
+          "logit_threshold": 17.2835750579834
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 27952,
+        "ignored_candidates": 343,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 17.756820678710938
+          },
+          "1": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 9,
+            "recall": 0.3076923076923077,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 15.466323852539062
+          },
+          "5": {
+            "tp": 9,
+            "fp": 14,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.5,
+            "logit_threshold": 3.543689250946045
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 10,
+          "fp": 137,
+          "fn": 3,
+          "recall": 0.7692307692307693,
+          "fp_per_frame": 34.25,
+          "ignored_candidates": 13,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 10,
+          "recall": 0.23076923076923078,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 17.2835750579834
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 31375,
+        "ignored_candidates": 546,
+        "candidate_oracle_tp": 287,
+        "candidate_oracle_recall": 0.9896551724137931,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "5": {
+            "tp": 22,
+            "fp": 20,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 11.842905044555664
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 69,
+          "fp": 602,
+          "fn": 221,
+          "recall": 0.23793103448275862,
+          "fp_per_frame": 150.5,
+          "ignored_candidates": 90,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 11,
+          "fp": 6,
+          "fn": 279,
+          "recall": 0.03793103448275862,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 7,
+          "logit_threshold": 17.2835750579834
+        }
+      }
+    },
+    "zero": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 55551,
+        "ignored_candidates": 554,
+        "candidate_oracle_tp": 279,
+        "candidate_oracle_recall": 0.9207920792079208,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 34.34873580932617
+          },
+          "1": {
+            "tp": 13,
+            "fp": 8,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 18.47845458984375
+          },
+          "5": {
+            "tp": 34,
+            "fp": 39,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.875,
+            "logit_threshold": 8.89348030090332
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 84,
+          "fp": 580,
+          "fn": 219,
+          "recall": 0.27722772277227725,
+          "fp_per_frame": 72.5,
+          "ignored_candidates": 107,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 13,
+          "fp": 8,
+          "fn": 290,
+          "recall": 0.0429042904290429,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 8,
+          "logit_threshold": 18.47845458984375
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 29108,
+        "ignored_candidates": 210,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 17.41156768798828
+          },
+          "1": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 17.41156768798828
+          },
+          "5": {
+            "tp": 9,
+            "fp": 13,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.25,
+            "logit_threshold": 4.163597583770752
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 10,
+          "fp": 124,
+          "fn": 3,
+          "recall": 0.7692307692307693,
+          "fp_per_frame": 31.0,
+          "ignored_candidates": 13,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 11,
+          "recall": 0.15384615384615385,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 18.47845458984375
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 26443,
+        "ignored_candidates": 344,
+        "candidate_oracle_tp": 266,
+        "candidate_oracle_recall": 0.9172413793103448,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 34.34873580932617
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 34.34873580932617
+          },
+          "5": {
+            "tp": 22,
+            "fp": 19,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 12.307066917419434
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 74,
+          "fp": 456,
+          "fn": 216,
+          "recall": 0.25517241379310346,
+          "fp_per_frame": 114.0,
+          "ignored_candidates": 94,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 11,
+          "fp": 6,
+          "fn": 279,
+          "recall": 0.03793103448275862,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 8,
+          "logit_threshold": 18.47845458984375
+        }
+      }
+    },
+    "permute": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 55656,
+        "ignored_candidates": 842,
+        "candidate_oracle_tp": 297,
+        "candidate_oracle_recall": 0.9801980198019802,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 32.70315170288086
+          },
+          "1": {
+            "tp": 13,
+            "fp": 8,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.75276756286621
+          },
+          "5": {
+            "tp": 31,
+            "fp": 40,
+            "fn": 272,
+            "recall": 0.10231023102310231,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 8.94495677947998
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 80,
+          "fp": 800,
+          "fn": 223,
+          "recall": 0.264026402640264,
+          "fp_per_frame": 100.0,
+          "ignored_candidates": 107,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 13,
+          "fp": 8,
+          "fn": 290,
+          "recall": 0.0429042904290429,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 6,
+          "logit_threshold": 17.75276756286621
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 24807,
+        "ignored_candidates": 293,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 18.454174041748047
+          },
+          "1": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 9,
+            "recall": 0.3076923076923077,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 15.537012100219727
+          },
+          "5": {
+            "tp": 9,
+            "fp": 15,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.75,
+            "logit_threshold": 3.1861681938171387
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 9,
+          "fp": 140,
+          "fn": 4,
+          "recall": 0.6923076923076923,
+          "fp_per_frame": 35.0,
+          "ignored_candidates": 14,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 10,
+          "recall": 0.23076923076923078,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 17.75276756286621
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 30849,
+        "ignored_candidates": 549,
+        "candidate_oracle_tp": 284,
+        "candidate_oracle_recall": 0.9793103448275862,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.70315170288086
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.70315170288086
+          },
+          "5": {
+            "tp": 21,
+            "fp": 16,
+            "fn": 269,
+            "recall": 0.07241379310344828,
+            "fp_per_frame": 4.0,
+            "logit_threshold": 12.676363945007324
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 71,
+          "fp": 660,
+          "fn": 219,
+          "recall": 0.24482758620689654,
+          "fp_per_frame": 165.0,
+          "ignored_candidates": 93,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 10,
+          "fp": 6,
+          "fn": 280,
+          "recall": 0.034482758620689655,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 6,
+          "logit_threshold": 17.75276756286621
+        }
+      }
+    }
+  },
+  "continuous_and_ranking": {
+    "zero": [
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 19,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.24447226524353027,
+        "frac_abs_logit_change_gt_1e_4": 0.9905029296875,
+        "spearman_on_all_fixed_reference_peaks": 0.9097060837640666,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 59,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.24679994583129883,
+        "frac_abs_logit_change_gt_1e_4": 0.9899169921875,
+        "spearman_on_all_fixed_reference_peaks": 0.9174927680894763,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 99,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.2494370937347412,
+        "frac_abs_logit_change_gt_1e_4": 0.9864654541015625,
+        "spearman_on_all_fixed_reference_peaks": 0.919526754797097,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 139,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.24383866786956787,
+        "frac_abs_logit_change_gt_1e_4": 0.987994384765625,
+        "spearman_on_all_fixed_reference_peaks": 0.8912427523372133,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 19,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.7584121227264404,
+        "frac_abs_logit_change_gt_1e_4": 0.99219970703125,
+        "spearman_on_all_fixed_reference_peaks": 0.723971515505748,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 59,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.8931338787078857,
+        "frac_abs_logit_change_gt_1e_4": 0.9919921875,
+        "spearman_on_all_fixed_reference_peaks": 0.732471623625676,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 99,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.9320101737976074,
+        "frac_abs_logit_change_gt_1e_4": 0.9917938232421875,
+        "spearman_on_all_fixed_reference_peaks": 0.7308615479608565,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 139,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.9801702499389648,
+        "frac_abs_logit_change_gt_1e_4": 0.9917022705078125,
+        "spearman_on_all_fixed_reference_peaks": 0.7147555454673277,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      }
+    ],
+    "permute": [
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 19,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.08919358253479004,
+        "frac_abs_logit_change_gt_1e_4": 0.9476776123046875,
+        "spearman_on_all_fixed_reference_peaks": 0.9645837494492625,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 59,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.09198880195617676,
+        "frac_abs_logit_change_gt_1e_4": 0.9425262451171875,
+        "spearman_on_all_fixed_reference_peaks": 0.964767659835232,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 99,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.09136748313903809,
+        "frac_abs_logit_change_gt_1e_4": 0.93563232421875,
+        "spearman_on_all_fixed_reference_peaks": 0.9651090521762569,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0026_2",
+        "frame": 139,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.09137272834777832,
+        "frac_abs_logit_change_gt_1e_4": 0.9427093505859375,
+        "spearman_on_all_fixed_reference_peaks": 0.9629297552558436,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 19,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.15869355201721191,
+        "frac_abs_logit_change_gt_1e_4": 0.8985931396484375,
+        "spearman_on_all_fixed_reference_peaks": 0.9042988240772282,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 59,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.1752396821975708,
+        "frac_abs_logit_change_gt_1e_4": 0.89029541015625,
+        "spearman_on_all_fixed_reference_peaks": 0.8799167890361594,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 99,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.1744593381881714,
+        "frac_abs_logit_change_gt_1e_4": 0.8873382568359375,
+        "spearman_on_all_fixed_reference_peaks": 0.8801430453219165,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "frame": 139,
+        "pixels": 327680,
+        "median_abs_logit_change": 0.1774158477783203,
+        "frac_abs_logit_change_gt_1e_4": 0.8815643310546875,
+        "spearman_on_all_fixed_reference_peaks": 0.8623967548191999,
+        "native_map_max_error": 0.0,
+        "negative_control_c_max_error": 0.0
+      }
+    ]
+  },
+  "identities_at_primary": {
+    "zero": {
+      "own_one_fp_budget": {
+        "common": [
+          804730,
+          804733,
+          869089,
+          869150,
+          872681,
+          872693,
+          876477,
+          876487,
+          876492,
+          876518,
+          880324,
+          880328,
+          880381
+        ],
+        "normal_only": [
+          805090
+        ],
+        "intervened_only": [],
+        "always_common": [
+          804730,
+          804733,
+          869089,
+          869150,
+          872681,
+          876477,
+          876492,
+          880324,
+          880328,
+          880381
+        ],
+        "always_normal_only": [
+          805090
+        ],
+        "always_intervened_only": [],
+        "common_min_max": [
+          10,
+          13
+        ],
+        "normal_only_min_max": [
+          1,
+          4
+        ],
+        "intervened_only_min_max": [
+          0,
+          3
+        ],
+        "normal_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ],
+        "intervened_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ]
+      },
+      "original_D_threshold": {
+        "common": [
+          804730,
+          804733,
+          805090,
+          869089,
+          869150,
+          872681,
+          872693,
+          876477,
+          876487,
+          876492,
+          876518,
+          880324,
+          880328,
+          880381
+        ],
+        "normal_only": [],
+        "intervened_only": [],
+        "always_common": [
+          804730,
+          804733,
+          805090,
+          869089,
+          869150,
+          872681,
+          876477,
+          876492,
+          880324,
+          880328,
+          880381
+        ],
+        "always_normal_only": [],
+        "always_intervened_only": [],
+        "common_min_max": [
+          11,
+          14
+        ],
+        "normal_only_min_max": [
+          0,
+          3
+        ],
+        "intervened_only_min_max": [
+          0,
+          3
+        ],
+        "normal_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ],
+        "intervened_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ]
+      }
+    },
+    "permute": {
+      "own_one_fp_budget": {
+        "common": [
+          804730,
+          804733,
+          805090,
+          869150,
+          872681,
+          872693,
+          876477,
+          876487,
+          876492,
+          876518,
+          880324,
+          880328,
+          880381
+        ],
+        "normal_only": [
+          869089
+        ],
+        "intervened_only": [],
+        "always_common": [
+          804730,
+          804733,
+          805090,
+          869150,
+          872681,
+          876477,
+          876492,
+          880324,
+          880328,
+          880381
+        ],
+        "always_normal_only": [
+          869089
+        ],
+        "always_intervened_only": [],
+        "common_min_max": [
+          10,
+          13
+        ],
+        "normal_only_min_max": [
+          1,
+          4
+        ],
+        "intervened_only_min_max": [
+          0,
+          3
+        ],
+        "normal_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ],
+        "intervened_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ]
+      },
+      "original_D_threshold": {
+        "common": [
+          804730,
+          804733,
+          805090,
+          869150,
+          872681,
+          872693,
+          876477,
+          876487,
+          876492,
+          876518,
+          880324,
+          880328,
+          880381
+        ],
+        "normal_only": [
+          869089
+        ],
+        "intervened_only": [],
+        "always_common": [
+          804730,
+          804733,
+          805090,
+          869150,
+          872681,
+          876477,
+          876492,
+          880324,
+          880328,
+          880381
+        ],
+        "always_normal_only": [
+          869089
+        ],
+        "always_intervened_only": [],
+        "common_min_max": [
+          10,
+          13
+        ],
+        "normal_only_min_max": [
+          1,
+          4
+        ],
+        "intervened_only_min_max": [
+          0,
+          3
+        ],
+        "normal_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ],
+        "intervened_optional": [
+          872693,
+          872694,
+          876487,
+          876488,
+          876518,
+          876551
+        ]
+      }
+    }
+  }
+}

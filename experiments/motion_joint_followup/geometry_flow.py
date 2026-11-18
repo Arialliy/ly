@@ -186,6 +186,8 @@ def delta_norm(old,current):
 
 def model_checks():
     release=load_official_detector('cpu')
+    release_start={k:t.clone() for k,t in release.state_dict().items()}
+    archived_hashes=json.loads((STAGE/'runs/artifacts.json').read_text())['weights_and_predictions']
     training_clip='DJI_0043_2_019.npz'
     native=np.load(STAGE/'runs/backbone'/training_clip)
     evidence=np.load(STAGE/'runs/train_motion'/training_clip)
@@ -207,6 +209,7 @@ def model_checks():
         assert opt_ids=={id(p) for p in params.values()}
         assert len(params)==10 and sum(p.numel() for p in params.values())==3450
         assert all(not p.requires_grad and id(p) not in opt_ids for p in release.parameters())
+        assert all(not sub.training for sub in release.modules())
         assert len(net.encoder.visible.nonzero())==(100 if arm in 'BD' else 28)
         inputs={f:torch.from_numpy(evidence[f'{net.selection}_{f}'][ids]) for f in FIELDS}
         initial_hash=hashlib.sha256(np.concatenate([p.detach().flatten().numpy()
@@ -234,6 +237,8 @@ def model_checks():
             opts.step()
             grads.append(dict(step=step,group_gradient_l2=grad,optimizer_step_l2=delta_norm(before,params)))
         filename=STAGE/'runs/models'/f'{arm}.pt'
+        checkpoint_hash=hashlib.sha256(filename.read_bytes()).hexdigest()
+        assert archived_hashes[f'runs/models/{arm}.pt']==checkpoint_hash
         saved=torch.load(filename,map_location='cpu',weights_only=True)
         assert saved.keys()==params.keys()
         diffs=delta_norm(init,saved)
@@ -259,7 +264,8 @@ def model_checks():
             assert (delta==0) if arm in 'AC' else (delta>0.001)
             restore_diff=float((original-native_scores).abs().max())
             assert restore_diff>0.001
-        report[arm] = dict(checkpoint_sha256=hashlib.sha256(filename.read_bytes()).hexdigest(),
+        assert all(torch.equal(release_start[key],t) for key,t in release.state_dict().items())
+        report[arm] = dict(checkpoint_sha256=checkpoint_hash,release_weights_and_buffers_bitwise_unchanged=True,
             initial_trainable_sha256=initial_hash,initial_native_logit_max_error=archived_error,
             num_trainable=sum(p.numel() for p in params.values()),visible_cells=int(net.encoder.visible.sum()),
             restored_delta_by_group_l2=diffs,restored_vs_release_max_abs_logit_delta=restore_diff,

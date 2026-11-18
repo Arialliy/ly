@@ -79,10 +79,24 @@ def target_sets(edges, ids):
     previous target. A target is forced if omitting it lowers the maximum size.
     """
     e=edges[edges.any(axis=1)]
-    matched=np.zeros(len(ids), dtype=bool)
-    if e.size:
-        assignment=maximum_bipartite_matching(csr_matrix(e), perm_type='row')
-        matched=assignment >= 0
+    # The old evaluate.peaks/readout.froc order is descending logit (stable
+    # y,x ties) and original annotation order. Replay its augmenting paths to
+    # show the actual deterministic target set as well as all feasible sets.
+    owner={}
+    neighbors=[np.flatnonzero(row) for row in e]
+    def augment(i,seen):
+        for b in neighbors[i]:
+            if b in seen:
+                continue
+            seen.add(b)
+            if b not in owner or augment(owner[b],seen):
+                owner[b]=i
+                return True
+        return False
+    for i in range(len(e)):
+        augment(i,set())
+    matched=np.array([b in owner for b in range(len(ids))],dtype=bool)
+    assert matched.sum()==cardinality(e)
     assert len(matched)==len(ids)
     n=int(matched.sum())
     possible=e.any(axis=0)
@@ -140,6 +154,9 @@ def paired(c,d, graphs):
     changeable=(sets(c,'forced')!=sets(c,'possible') or sets(d,'forced')!=sets(d,'possible'))
     bounds=overlap_extrema(*graphs) if changeable else [len(cw&dw)]*2
     return dict(common=sorted(cw&dw),C_only=sorted(cw-dw),D_only=sorted(dw-cw),
+                always_common=sorted(sets(c,'forced') & sets(d,'forced')),
+                always_C_only=sorted(sets(c,'forced')-sets(d,'possible')),
+                always_D_only=sorted(sets(d,'forced')-sets(c,'possible')),
                 common_min_max=bounds,C_only_min_max=[len(cw)-bounds[1],len(cw)-bounds[0]],
                 D_only_min_max=[len(dw)-bounds[1],len(dw)-bounds[0]],
                 C_optional=sorted(sets(c,'possible')-sets(c,'forced')),
@@ -166,6 +183,7 @@ def main():
     archived=json.loads((CONF/'runs/scores.json').read_text())
     report={'unit':'annotation_id per source and frame; track_id is a supplementary attribute',
             'scope':'post-hoc analysis of twelve previously reported civilian confirmation frames',
+            'matching_witness':'canonical original descending score with stable y,x ties and input annotation order, incremental augmenting paths',
             'thresholds':{m:thresholds(archived['methods'][m]['all_confirmation']) for m in MODELS}}
     counts={m:Counter() for m in MODELS}
     dense=Counter()
