@@ -1,0 +1,1027 @@
+{
+  "design": {
+    "sources": {
+      "train": [
+        "DJI_0030_9",
+        "DJI_0043_2",
+        "DJI_0057_1",
+        "DJI_0115_2",
+        "DJI_0323_2"
+      ],
+      "development": [
+        "DJI_0026_2",
+        "DJI_0067_2"
+      ],
+      "centers": [
+        19,
+        59,
+        99,
+        139
+      ]
+    },
+    "top_peaks": 1024,
+    "seed": 46,
+    "steps": 300,
+    "class_count_per_batch": 64,
+    "optimizer": "Adam, learning rate 0.003, explicit L2 0.0003 * sum(square(weights)) / 2; biases exempt",
+    "candidate_rule": "Source-blind and label-blind native release 5x5 local maxima with 2-pixel plateau tie suppression, first 1024 by descending logit in each frame, on train and dev; none reselected per probe.",
+    "candidate_metric": "Ignore-only peaks removed. Positive candidate iff touches any eligible one-pixel expanded target box. Candidate AUC/AP permit multiple positives per box; FROC is independent maximum one-to-one box matching.",
+    "features": "42 common fields (32 original TPro, release score, two directions x two anchors x two velocity components, one usability flag); 1120 common motion fields (2x2x28 cells x (all nine patch pixels + valid fraction)); 2880 extra fields (2x2x72x10). No reduction of local patches. Full split-rule fields computed once and shared. Standardize columns on nonignored training candidates with std floor .05 and divide each block by sqrt(width). C zeros the extra block after scaling.",
+    "readouts": "Native training-z-standardized logit skip plus a regularized linear logit, or an 8-ReLU-hidden-unit residual MLP. Both use init=identical baseline logit, common initialized parameters and batches across the two information conditions. D-only input weights initially zero. Equal nominal input shape; effective number of accessible coefficients differs.",
+    "decision": "Compare full vs marginal within each readout at FROC <=1 FP/frame, with <=.5 and <=5, per-source FROC, candidate AUC and AP for context. Inspect both readouts, no winner selection or tuning. This is a development probe restricted to fixed proposals, not a new test-set detector."
+  },
+  "eligible_train": {
+    "positive": 502,
+    "negative": 19930,
+    "ignored": 48
+  },
+  "locations_sha256": "8fc79d5413c6781439c738d1568ac9ab8ae9fdfd07403aaf2e55f08bd7e1d838",
+  "paired_batches_sha256": "d9e25a6e6fda085256a68e43e2c476fd91301f43a2ead7a8cfd67bb6e1643ea8",
+  "train_only_standardizer_sha256": "62b9ceedce362acb841434537f9c0f44e741d11fadb23d30a8c98447f5763f19",
+  "train_center_count": 20,
+  "dev_centers": [
+    {
+      "sequence": "DJI_0026_2",
+      "index": 19
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 59
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 99
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 139
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 19
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 59
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 99
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 139
+    }
+  ],
+  "nominal_readout_parameters": {
+    "linear_C": 4043,
+    "linear_D": 4043,
+    "mlp8_C": 32353,
+    "mlp8_D": 32353
+  },
+  "methods": {
+    "frozen_original": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 35.290096282958984
+          },
+          "1": {
+            "tp": 13,
+            "fp": 7,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 20.02381706237793
+          },
+          "5": {
+            "tp": 34,
+            "fp": 38,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 10.108953475952148
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.8138240564883124,
+          "ap": 0.2427332688525665
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 20.933420181274414
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.84242820739746
+          },
+          "5": {
+            "tp": 9,
+            "fp": 14,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.5,
+            "logit_threshold": -3.913313388824463
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.760196844188368,
+          "ap": 0.15191114398499167
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.290096282958984
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.290096282958984
+          },
+          "5": {
+            "tp": 21,
+            "fp": 15,
+            "fn": 269,
+            "recall": 0.07241379310344828,
+            "fp_per_frame": 3.75,
+            "logit_threshold": 14.641349792480469
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7358936359402125,
+          "ap": 0.2630197902423313
+        }
+      }
+    },
+    "frozen_C": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 35.53105545043945
+          },
+          "1": {
+            "tp": 12,
+            "fp": 8,
+            "fn": 291,
+            "recall": 0.039603960396039604,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 20.028947830200195
+          },
+          "5": {
+            "tp": 34,
+            "fp": 39,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.875,
+            "logit_threshold": 10.085346221923828
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.7864842684028628,
+          "ap": 0.22489905316109424
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 20.975751876831055
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 18.418546676635742
+          },
+          "5": {
+            "tp": 9,
+            "fp": 13,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.25,
+            "logit_threshold": 5.339732646942139
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.6546120032924116,
+          "ap": 0.15123988949733366
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.53105545043945
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.53105545043945
+          },
+          "5": {
+            "tp": 22,
+            "fp": 19,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 13.7672758102417
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7435681924037769,
+          "ap": 0.24407366531479943
+        }
+      }
+    },
+    "frozen_D": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 14,
+            "fp": 8,
+            "fn": 289,
+            "recall": 0.0462046204620462,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.22353172302246
+          },
+          "5": {
+            "tp": 29,
+            "fp": 37,
+            "fn": 274,
+            "recall": 0.09570957095709572,
+            "fp_per_frame": 4.625,
+            "logit_threshold": 9.14971923828125
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.7927403990177914,
+          "ap": 0.21459323810991973
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 17.756820678710938
+          },
+          "1": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 9,
+            "recall": 0.3076923076923077,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 15.466323852539062
+          },
+          "5": {
+            "tp": 9,
+            "fp": 13,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.25,
+            "logit_threshold": 3.543689250946045
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.6824530218384967,
+          "ap": 0.18229658072630914
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "5": {
+            "tp": 22,
+            "fp": 20,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 11.842905044555664
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7390657859451525,
+          "ap": 0.2293873233908861
+        }
+      }
+    },
+    "linear_C": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 298,
+            "recall": 0.0165016501650165,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 21.240659713745117
+          },
+          "1": {
+            "tp": 9,
+            "fp": 7,
+            "fn": 294,
+            "recall": 0.0297029702970297,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 14.2411470413208
+          },
+          "5": {
+            "tp": 28,
+            "fp": 32,
+            "fn": 275,
+            "recall": 0.0924092409240924,
+            "fp_per_frame": 4.0,
+            "logit_threshold": 10.16899585723877
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.8088233805200846,
+          "ap": 0.2343230717745209
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 14.2411470413208
+          },
+          "1": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.75,
+            "logit_threshold": 13.259542465209961
+          },
+          "5": {
+            "tp": 9,
+            "fp": 17,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 4.25,
+            "logit_threshold": 3.2840654850006104
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.730241151643579,
+          "ap": 0.14634876387981835
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 286,
+            "recall": 0.013793103448275862,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.240659713745117
+          },
+          "1": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 286,
+            "recall": 0.013793103448275862,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.240659713745117
+          },
+          "5": {
+            "tp": 22,
+            "fp": 19,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 10.927484512329102
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7417961637803278,
+          "ap": 0.25418815793501615
+        }
+      }
+    },
+    "linear_D": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 298,
+            "recall": 0.0165016501650165,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 21.324993133544922
+          },
+          "1": {
+            "tp": 11,
+            "fp": 8,
+            "fn": 292,
+            "recall": 0.036303630363036306,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 13.828481674194336
+          },
+          "5": {
+            "tp": 28,
+            "fp": 31,
+            "fn": 275,
+            "recall": 0.0924092409240924,
+            "fp_per_frame": 3.875,
+            "logit_threshold": 10.295007705688477
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.8003707998401499,
+          "ap": 0.23538015217941496
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 14.004817008972168
+          },
+          "1": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.75,
+            "logit_threshold": 13.380783081054688
+          },
+          "5": {
+            "tp": 9,
+            "fp": 17,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 4.25,
+            "logit_threshold": 3.008617639541626
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.7022293830230644,
+          "ap": 0.1486031555063295
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 286,
+            "recall": 0.013793103448275862,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.324993133544922
+          },
+          "1": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 286,
+            "recall": 0.013793103448275862,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.324993133544922
+          },
+          "5": {
+            "tp": 22,
+            "fp": 20,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 10.646949768066406
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7390001552553951,
+          "ap": 0.25561817483136623
+        }
+      }
+    },
+    "mlp8_C": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 10.981409072875977
+          },
+          "1": {
+            "tp": 13,
+            "fp": 7,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 7.557077407836914
+          },
+          "5": {
+            "tp": 34,
+            "fp": 38,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 5.329764366149902
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.8090916833276457,
+          "ap": 0.23831673037754666
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 7.761107444763184
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 7.067776679992676
+          },
+          "5": {
+            "tp": 9,
+            "fp": 17,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 4.25,
+            "logit_threshold": 1.5422776937484741
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.7174392742684016,
+          "ap": 0.1434366485891769
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 10.981409072875977
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 10.981409072875977
+          },
+          "5": {
+            "tp": 21,
+            "fp": 15,
+            "fn": 269,
+            "recall": 0.07241379310344828,
+            "fp_per_frame": 3.75,
+            "logit_threshold": 6.349753379821777
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7505186941609857,
+          "ap": 0.26104891447302503
+        }
+      }
+    },
+    "mlp8_D": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 8192,
+        "ignored_candidates": 306,
+        "candidate_oracle_tp": 150,
+        "candidate_oracle_recall": 0.49504950495049505,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 11.032196998596191
+          },
+          "1": {
+            "tp": 13,
+            "fp": 7,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 7.607865810394287
+          },
+          "5": {
+            "tp": 34,
+            "fp": 38,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 5.3838934898376465
+          }
+        },
+        "candidate_ranking": {
+          "pos": 219,
+          "neg": 7667,
+          "auc": 0.8001980854912204,
+          "ap": 0.23652802195023617
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 4096,
+        "ignored_candidates": 129,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 7.811895847320557
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 7.118565082550049
+          },
+          "5": {
+            "tp": 9,
+            "fp": 17,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 4.25,
+            "logit_threshold": 1.6863329410552979
+          }
+        },
+        "candidate_ranking": {
+          "pos": 29,
+          "neg": 3938,
+          "auc": 0.6940421358645208,
+          "ap": 0.14490663575443827
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 4096,
+        "ignored_candidates": 177,
+        "candidate_oracle_tp": 137,
+        "candidate_oracle_recall": 0.4724137931034483,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 11.032196998596191
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 11.032196998596191
+          },
+          "5": {
+            "tp": 21,
+            "fp": 15,
+            "fn": 269,
+            "recall": 0.07241379310344828,
+            "fp_per_frame": 3.75,
+            "logit_threshold": 6.40054178237915
+          }
+        },
+        "candidate_ranking": {
+          "pos": 190,
+          "neg": 3729,
+          "auc": 0.7381603647090372,
+          "ap": 0.2575140851152366
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "linear": {
+      "all_dev": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 2,
+          "5": 0
+        },
+        "delta_auc": -0.008452580679934707,
+        "delta_ap": 0.0010570804048940508
+      },
+      "DJI_0026_2": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.028011768620514577,
+        "delta_ap": 0.002254391626511143
+      },
+      "DJI_0067_2": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.0027960085249326694,
+        "delta_ap": 0.0014300168963500837
+      }
+    },
+    "mlp8": {
+      "all_dev": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.008893597836425293,
+        "delta_ap": -0.0017887084273104925
+      },
+      "DJI_0026_2": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.0233971384038808,
+        "delta_ap": 0.001469987165261366
+      },
+      "DJI_0067_2": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.01235832945194848,
+        "delta_ap": -0.003534829357788427
+      }
+    },
+    "frozen": {
+      "all_dev": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 2,
+          "5": -5
+        },
+        "delta_auc": 0.006256130614928579,
+        "delta_ap": -0.010305815051174505
+      },
+      "DJI_0026_2": {
+        "delta_tp": {
+          "0.5": 1,
+          "1": 1,
+          "5": 0
+        },
+        "delta_auc": 0.027841018546085006,
+        "delta_ap": 0.031056691228975475
+      },
+      "DJI_0067_2": {
+        "delta_tp": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "delta_auc": -0.0045024064586244306,
+        "delta_ap": -0.014686341923913326
+      }
+    }
+  }
+}

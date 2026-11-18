@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "train": [
+      "DJI_0030_9",
+      "DJI_0043_2",
+      "DJI_0057_1",
+      "DJI_0115_2",
+      "DJI_0323_2"
+    ],
+    "development": [
+      "DJI_0026_2",
+      "DJI_0067_2"
+    ],
+    "centers": [
+      19,
+      59,
+      99,
+      139
+    ]
+  },
+  "top_peaks": 1024,
+  "seed": 46,
+  "steps": 300,
+  "class_count_per_batch": 64,
+  "optimizer": "Adam, learning rate 0.003, explicit L2 0.0003 * sum(square(weights)) / 2; biases exempt",
+  "candidate_rule": "Source-blind and label-blind native release 5x5 local maxima with 2-pixel plateau tie suppression, first 1024 by descending logit in each frame, on train and dev; none reselected per probe.",
+  "candidate_metric": "Ignore-only peaks removed. Positive candidate iff touches any eligible one-pixel expanded target box. Candidate AUC/AP permit multiple positives per box; FROC is independent maximum one-to-one box matching.",
+  "features": "42 common fields (32 original TPro, release score, two directions x two anchors x two velocity components, one usability flag); 1120 common motion fields (2x2x28 cells x (all nine patch pixels + valid fraction)); 2880 extra fields (2x2x72x10). No reduction of local patches. Full split-rule fields computed once and shared. Standardize columns on nonignored training candidates with std floor .05 and divide each block by sqrt(width). C zeros the extra block after scaling.",
+  "readouts": "Native training-z-standardized logit skip plus a regularized linear logit, or an 8-ReLU-hidden-unit residual MLP. Both use init=identical baseline logit, common initialized parameters and batches across the two information conditions. D-only input weights initially zero. Equal nominal input shape; effective number of accessible coefficients differs.",
+  "decision": "Compare full vs marginal within each readout at FROC <=1 FP/frame, with <=.5 and <=5, per-source FROC, candidate AUC and AP for context. Inspect both readouts, no winner selection or tuning. This is a development probe restricted to fixed proposals, not a new test-set detector."
+}
