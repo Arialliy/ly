@@ -1,0 +1,1684 @@
+{
+  "stage": "S2b",
+  "seed": 46,
+  "dataset": "NUDT-MIRSDT",
+  "split": "train",
+  "dependencies": {
+    "data_manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+    "s0_sha256": "5f5804e039bab81d3eb531d1d0442d2ef2c3c0f7ca39e5a0f4a01a626f02d639",
+    "s2a_sha256": "d2a9aee69b8d58a058b4e74c642016655d85bbb816cef57b65f5bbe66513850b",
+    "inventory_sha256": "c0f792ea5ba11c3084fee9da242ad805d13a2c61218f67e40d5d37adfd0c12e6",
+    "selector_sha256": "5bb85053f7f6a58b2dee68b4cafd82a5b108d976c9e3fcf1681d59b23f16aab7"
+  },
+  "selection_rule": "SHA256 over UTF-8 pipe-separated fields, starting with seed 46. Select empty then nonempty independently by round-robin of sources, unused sources first then hash of seed|source|class|source_id. Within each source maximize minimum distance to already selected physical centers from that source; break ties by hash of seed|center|class|source_id|physical_frame. Classes are named empty/nonempty.",
+  "schedule_rule": "Order all 12 IDs by SHA256 of seed|epoch|zero_based_epoch|sample_id per epoch. Concatenate epochs then truncate after 400 B=1 updates.",
+  "candidate_centers": {
+    "nonempty": 5874,
+    "empty": 174
+  },
+  "sources_with_empty_centers": {
+    "Sequence17": 84,
+    "Sequence44": 26,
+    "Sequence77": 64
+  },
+  "samples": [
+    {
+      "sample_id": "Sequence12/00019",
+      "source": "Sequence12",
+      "center": 19,
+      "positive": true,
+      "foreground_pixels": 30,
+      "native_hw": [
+        182,
+        264
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence12/masks/00019.png",
+        "sha256": "52a067b640de3374a6b77c35ef738063b7e81c0976370b1eed69e81425c1b974"
+      },
+      "images": [
+        {
+          "number": 11,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00011.png",
+          "sha256": "43ade7e3d3bee8e21418ab9574abd7ef738ffd9a2640808ee01946a4a891ca26"
+        },
+        {
+          "number": 12,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00012.png",
+          "sha256": "3f34757d12e587f7a5cde96ce367273ca097de47a8fa61541812ca1f64bf29d7"
+        },
+        {
+          "number": 13,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00013.png",
+          "sha256": "6749ebf34205b496151f8557c64c7a0b1628300cfa40d7395122cc3d1cde382a"
+        },
+        {
+          "number": 14,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00014.png",
+          "sha256": "9b3e69d024215de8ab284a5de82c122db604d49197f67350cb89d97ce4601ca3"
+        },
+        {
+          "number": 15,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00015.png",
+          "sha256": "45ed0271c09ce3cd91f6d34db1a8fef46186d3c96c6e809b98d6c776cf33d926"
+        },
+        {
+          "number": 16,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00016.png",
+          "sha256": "893ec4a8a4abf9918870e64392baac6320974680afc92956adf72ba12c4340dc"
+        },
+        {
+          "number": 17,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00017.png",
+          "sha256": "7b4e28602416575c875fe674e10af833d8b33e0bde8f3308feeddcef773088dc"
+        },
+        {
+          "number": 18,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00018.png",
+          "sha256": "075c7f89c0af97db5cd1c03b304abb1f191bfb7c76c0a887718e0f1edb39aa0a"
+        },
+        {
+          "number": 19,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00019.png",
+          "sha256": "96c3fd97e9c982f1837d90ce2f027ec252da134b100d73464c94891369a3f48b"
+        },
+        {
+          "number": 20,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00020.png",
+          "sha256": "c44e78600c68a6517738c49eb2f06cd85318be22b5585c1c551ad6ac8fc2e556"
+        },
+        {
+          "number": 21,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00021.png",
+          "sha256": "ff34284db710c8a62218fff07d8962850de361606c9c4595f995188bbb6819b2"
+        },
+        {
+          "number": 22,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00022.png",
+          "sha256": "ae8c17c3121b2099f925b42d6873ae4c2ed0d0c3efd31625d8b0e785d1fc62ae"
+        },
+        {
+          "number": 23,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00023.png",
+          "sha256": "26fe78d628de0d58650998148e90027fc5062bc4d819763f2a581afe653ae866"
+        },
+        {
+          "number": 24,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00024.png",
+          "sha256": "01d7e6601e70dbf8acc697de7caaf62aa83778eae3e7f32a91635b909faa854d"
+        },
+        {
+          "number": 25,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00025.png",
+          "sha256": "52fda507b426241a48b422af6738d8585d38813a9db21d36befadd41c3dd22e9"
+        },
+        {
+          "number": 26,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00026.png",
+          "sha256": "52d8cd1d1c098de073aa5d084066d9294507e79edf576557489c35880658e848"
+        },
+        {
+          "number": 27,
+          "path": "data/public/NUDT-MIRSDT/Sequence12/images/00027.png",
+          "sha256": "112d258d931f579678936b6c60f923fd364f321de4277efbaae35c7ba2e1e021"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence21/00041",
+      "source": "Sequence21",
+      "center": 41,
+      "positive": true,
+      "foreground_pixels": 33,
+      "native_hw": [
+        213,
+        307
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence21/masks/00041.png",
+        "sha256": "4bc8aa6688c3908c016f1a1c94f1d50c5af030f8f6a42252c111d6b01ad62a23"
+      },
+      "images": [
+        {
+          "number": 33,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00033.png",
+          "sha256": "5610aeb3ce52f767af27efad6a47f0cb3bceeaf4f57b5b6e6836e676b7f82739"
+        },
+        {
+          "number": 34,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00034.png",
+          "sha256": "aa691f5cb60fcceb3bc3535a6841dfdc3e3bd77b85222a6a2a4b75c6dd3afc7e"
+        },
+        {
+          "number": 35,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00035.png",
+          "sha256": "dd5d14b2f2ccdcd19606b80d373de312ac6df9cd11b868682e24d7d99e8c683f"
+        },
+        {
+          "number": 36,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00036.png",
+          "sha256": "15473198c4c38ba941f6875f5996ee6926e7b1976d9224286915b4fcf6bfa6d7"
+        },
+        {
+          "number": 37,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00037.png",
+          "sha256": "2878016f92217c57dd524992f24cf26390b6e6cdedae767f3d4422553f192a48"
+        },
+        {
+          "number": 38,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00038.png",
+          "sha256": "b7d031db75714ccebe2e812deba94b5cc1319a0b8b058025f5540e3df0ae026b"
+        },
+        {
+          "number": 39,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00039.png",
+          "sha256": "4a6f792e2e1b3f9563fab9cd9bdcfb3df7853cb04a5ed4b37bcb4c026adb83a6"
+        },
+        {
+          "number": 40,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00040.png",
+          "sha256": "42c5e13a6c86edb91139ac1411f58bf12479d525d8d73239a6154600fb90c168"
+        },
+        {
+          "number": 41,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00041.png",
+          "sha256": "33997b78484c1d0e227d3daed6e0f734058f07876712af579fce75c07c8ce828"
+        },
+        {
+          "number": 42,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00042.png",
+          "sha256": "b20ab6693406d2d90d43f292a8f7d2f4d3c951e643f854e7d7956bf82064abc2"
+        },
+        {
+          "number": 43,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00043.png",
+          "sha256": "769bfd5a5c58e1a6c12fba9ab49697ad5315afefcc6fc68637778a422389f298"
+        },
+        {
+          "number": 44,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00044.png",
+          "sha256": "75139b8d39cc791a493f52df0ad9de7f8a267a6cbc27c6c8e5c67745fc641fa3"
+        },
+        {
+          "number": 45,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00045.png",
+          "sha256": "27f253cc24bc5671b3ad1eeb32f18bf16514e592ccdd9a76e937a62405ce2dcd"
+        },
+        {
+          "number": 46,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00046.png",
+          "sha256": "337464d574382fecf9770185c7fff3228758b3645f7c3d9f776b7ee9a5d1dd37"
+        },
+        {
+          "number": 47,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00047.png",
+          "sha256": "c3a1f5f6e04eecb384ce9aef03e87924f68b2539af3c4f3c7856b06f0b8174f4"
+        },
+        {
+          "number": 48,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00048.png",
+          "sha256": "1152841b1541c357b14746af465e01952c13ec53ad70d31eae7911d4c1bd356f"
+        },
+        {
+          "number": 49,
+          "path": "data/public/NUDT-MIRSDT/Sequence21/images/00049.png",
+          "sha256": "565b181ccf44995e93ee66d10f903acb15c2857bf30d36d83bf9d8cd89ad5005"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence36/00081",
+      "source": "Sequence36",
+      "center": 81,
+      "positive": true,
+      "foreground_pixels": 15,
+      "native_hw": [
+        198,
+        303
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence36/masks/00081.png",
+        "sha256": "c3b8785c0e41d1e0760d432a7a8235a17335a94e9e826d5bd137cbf9b1149066"
+      },
+      "images": [
+        {
+          "number": 73,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00073.png",
+          "sha256": "d8d9955d778d0e3c2b0bc9d70849f476e0d482d6f64cd4f160f964ae035e94ef"
+        },
+        {
+          "number": 74,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00074.png",
+          "sha256": "1cf2a9a11db5e054c82561d20ecc3ee0a7eaaffa5b2e72bd86723051728d4532"
+        },
+        {
+          "number": 75,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00075.png",
+          "sha256": "5b219096d9ef6035a8eaedbff080f67c95877a1e49d23ffa039981aca6dd2b6e"
+        },
+        {
+          "number": 76,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00076.png",
+          "sha256": "7daa89571a7cb8382a1250406205bd78f50e6c166f3146b24c491032d677ba10"
+        },
+        {
+          "number": 77,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00077.png",
+          "sha256": "63c3ba2081cc3d33a0fb6ff32d762de1f61554524fb54fed27f4a1b27d7cb059"
+        },
+        {
+          "number": 78,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00078.png",
+          "sha256": "c5a801ba05cb51ebc68c6a17923dc4278043e407004716b95e23d8f7e2fec936"
+        },
+        {
+          "number": 79,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00079.png",
+          "sha256": "2e14534f4890a5b91485cf92b24f72c0cb043c53e03271e6859723347b18ec28"
+        },
+        {
+          "number": 80,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00080.png",
+          "sha256": "d79b3ff9a208121d176848118e55634b4527c0abeaab0aca044aa12a4b983a90"
+        },
+        {
+          "number": 81,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00081.png",
+          "sha256": "c456f32deb01d16fbf694f8c8af0f80b7af43296e6cb7c3971e216195a9a7d5e"
+        },
+        {
+          "number": 82,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00082.png",
+          "sha256": "6523d54af476ec914effbb89c59efec81746176cf80b488477bb60cbe4af9617"
+        },
+        {
+          "number": 83,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00083.png",
+          "sha256": "11cd871d72d85c2f23de1fe91981d62d4ecd9775c49c5270d74b3dfb2d59069e"
+        },
+        {
+          "number": 84,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00084.png",
+          "sha256": "a308a4bdf7aeaeb88bfd70e2a09bab1cf19c8bcf6b1e4df221061a77c36092fb"
+        },
+        {
+          "number": 85,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00085.png",
+          "sha256": "209014b789b50bb8e0fb777bbc28483bdcb9487cece22b3e02f0ac7ee46fac69"
+        },
+        {
+          "number": 86,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00086.png",
+          "sha256": "a2fa46d30a036ab55190bec871123188490d241dcb87305d48fcb083eb71091f"
+        },
+        {
+          "number": 87,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00087.png",
+          "sha256": "39c0288f58e1fb647886a702c3862731c2750e07d8e5c91a7c9fa7c1e698dda1"
+        },
+        {
+          "number": 88,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00088.png",
+          "sha256": "fbf3b380f5add8c07d22988d1cd2c57abc2d68e04698d988c9498b200cc34d28"
+        },
+        {
+          "number": 89,
+          "path": "data/public/NUDT-MIRSDT/Sequence36/images/00089.png",
+          "sha256": "2433e3b07788cc8d1e4e2de2f4303f0d40be7af28a5d3b1dc991f3d4e99019be"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence6/00059",
+      "source": "Sequence6",
+      "center": 59,
+      "positive": true,
+      "foreground_pixels": 36,
+      "native_hw": [
+        199,
+        304
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence6/masks/00059.png",
+        "sha256": "a60a08fbb238e2d914f5b9ae1e2c88a050f0de9dbbc7488354faf3d548c95ee7"
+      },
+      "images": [
+        {
+          "number": 51,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00051.png",
+          "sha256": "f0eaa056c77a5b743973ceefc8ef7369a801da61bcfaf065f799ca8aa3159b97"
+        },
+        {
+          "number": 52,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00052.png",
+          "sha256": "11d7cb2d058283c571eb0e8106ee7974f0c30af4d68e9040ffa51f54f04c4d73"
+        },
+        {
+          "number": 53,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00053.png",
+          "sha256": "f5d19deeee7d0c5de5179869a5e69e1c9ba7e329041fc34604b319fc7a569fca"
+        },
+        {
+          "number": 54,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00054.png",
+          "sha256": "0b1c60ab68142820327b899f990649f2ec39a1a5e18abcd96483cfeb12e3ba7c"
+        },
+        {
+          "number": 55,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00055.png",
+          "sha256": "0825f918167981d2fade7cd2f5657d8cf5f769871515f9f7810f37606fb22e03"
+        },
+        {
+          "number": 56,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00056.png",
+          "sha256": "a6c0529ea0fb0efc3f422fc6113766b374e400ac692416c88ca57c2a26b9de8b"
+        },
+        {
+          "number": 57,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00057.png",
+          "sha256": "34813910ec3d0af0a2ac19f6c08b732de19bb37cfdc69fd331605b91fd3c5b27"
+        },
+        {
+          "number": 58,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00058.png",
+          "sha256": "8ec3204c1dfd422cf11c02e8b4521d41741ceb99c01f10941568002ba1ae8e16"
+        },
+        {
+          "number": 59,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00059.png",
+          "sha256": "e1640c24291128784aa1b2ecb18620b96ad7f22956dd11a38460ded3ab7a380e"
+        },
+        {
+          "number": 60,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00060.png",
+          "sha256": "9f81e4ecfdf2cc5866739e8b47f7ccd3156421acfc26aab940780a7b3839eb99"
+        },
+        {
+          "number": 61,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00061.png",
+          "sha256": "71664324f8bda3fb269304b05239b94872518a60b33b681b29526582a2ef626a"
+        },
+        {
+          "number": 62,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00062.png",
+          "sha256": "c7bd52a08be9a9db91d8ed27536be3edf672d1c5cd759722eba6d5741032942a"
+        },
+        {
+          "number": 63,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00063.png",
+          "sha256": "cfe5a8b893ce997e4ad505d3fc8110aa8fcbc7675ad43267dfa1f8f880103bdd"
+        },
+        {
+          "number": 64,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00064.png",
+          "sha256": "9edd1727ee4bb79cae03927ef49e7114974a56bc5fc58849590fa479593edcb5"
+        },
+        {
+          "number": 65,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00065.png",
+          "sha256": "5cc0eff212816a3f7179ab146a20f46321978ed8b86bcf66caf61f234be9d2d7"
+        },
+        {
+          "number": 66,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00066.png",
+          "sha256": "1d7e09b0a4b20d6276793b799922336530a57f569fce760f9f6f986d70e528e4"
+        },
+        {
+          "number": 67,
+          "path": "data/public/NUDT-MIRSDT/Sequence6/images/00067.png",
+          "sha256": "7f5e1bf019516983066a166c2b301ed1ea674b2f9b2c96615525a5c7810b4700"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence66/00060",
+      "source": "Sequence66",
+      "center": 60,
+      "positive": true,
+      "foreground_pixels": 67,
+      "native_hw": [
+        212,
+        304
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence66/masks/00060.png",
+        "sha256": "3e5444dbd077bf93c9224520fc651ad017d5ee52d7925d3923dba72bad09ada9"
+      },
+      "images": [
+        {
+          "number": 52,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00052.png",
+          "sha256": "5b72d07b64be2b2ca370f4320429cf48e1555f71a3044df919e16d3f8fb02b33"
+        },
+        {
+          "number": 53,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00053.png",
+          "sha256": "a2e1e0b42d79688bedfb25b0b2ff25ce19902900f5bf3e3bef239d909fbaed51"
+        },
+        {
+          "number": 54,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00054.png",
+          "sha256": "569118c6d370f0b802c2db8fc0b2dda15b920523984e1a32244c65136960f900"
+        },
+        {
+          "number": 55,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00055.png",
+          "sha256": "8a5f32893fffddc04d97b8d8c173ed7898205c900496f2eb22d20cb744437e8f"
+        },
+        {
+          "number": 56,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00056.png",
+          "sha256": "15b46aea3259ce81bf80ab3dc21f771658ab86ade219ae10c2d0911106b13944"
+        },
+        {
+          "number": 57,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00057.png",
+          "sha256": "ec205619f2e875b10979ffba70c93afe3ed551c50f6352800cbba572865bdce8"
+        },
+        {
+          "number": 58,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00058.png",
+          "sha256": "06f5e62e5e9da2c78a42c9d591ef8da5114f627f4754cf93c1b32db91c278724"
+        },
+        {
+          "number": 59,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00059.png",
+          "sha256": "0e0ad6c53c41b4aad76f636e4e28bed9809b98d71ef70394afa613d4b82b5a20"
+        },
+        {
+          "number": 60,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00060.png",
+          "sha256": "142cbccd0127db338b40abc5f59f9558b96ba2c0ce302a44833c4b8089887170"
+        },
+        {
+          "number": 61,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00061.png",
+          "sha256": "6424a8dbacd1efb4103263897e8fd978fa2d418dcfe830f2634b22f74eef581f"
+        },
+        {
+          "number": 62,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00062.png",
+          "sha256": "b72f0a0462f8a8bcac072520d83b86888ac389bb69b8ffc3e8a698ed2df6c0ab"
+        },
+        {
+          "number": 63,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00063.png",
+          "sha256": "0fe2f71e906d7396e95fba4b8be61f003b6f0b87010623f80a7d266c5f6ca8f2"
+        },
+        {
+          "number": 64,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00064.png",
+          "sha256": "0f61346df1433abe7318f66dcf0991db2a6829bfc7c8a79a879ad7870a2b493a"
+        },
+        {
+          "number": 65,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00065.png",
+          "sha256": "0e9c3ef3ed15de5d06974b5c084af3fe7ca10a3fe327393b091508d4889c53f2"
+        },
+        {
+          "number": 66,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00066.png",
+          "sha256": "3d4ea5b4958b27d5d696f71b5e07cacbbf65101cb7bc68723e4b253299d4ebf2"
+        },
+        {
+          "number": 67,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00067.png",
+          "sha256": "b38e07bd791d0f4fde646734a92c28eff6931e10b173233ed95dbaec08779444"
+        },
+        {
+          "number": 68,
+          "path": "data/public/NUDT-MIRSDT/Sequence66/images/00068.png",
+          "sha256": "ecf8f5e4bd6ad3d122ff62baa0bd302cc768d8228e220b96be2bad852c5aaed7"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence71/00084",
+      "source": "Sequence71",
+      "center": 84,
+      "positive": true,
+      "foreground_pixels": 36,
+      "native_hw": [
+        249,
+        249
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence71/masks/00084.png",
+        "sha256": "a82624bf42f8dce060a25e8ac4f830ad91d0e9ab0ff94f04f73b878a73720e49"
+      },
+      "images": [
+        {
+          "number": 76,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00076.png",
+          "sha256": "1176eaea093f22df88f87c46afe7857054427f23b17cff4c1aaebbacc6c8d1e1"
+        },
+        {
+          "number": 77,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00077.png",
+          "sha256": "78bffebd0d56413567af18d86f96f3f5dfbe0ff4f2b4efe6424857dca4e192a5"
+        },
+        {
+          "number": 78,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00078.png",
+          "sha256": "00e4ba06cb8a6cc6deaea536b936bf7fecaf600da189ad9f156122f836aee62f"
+        },
+        {
+          "number": 79,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00079.png",
+          "sha256": "dabbd81360be1b36f9321a776b56511b9d7c054a747d4e4a711d1a9aaef6e52b"
+        },
+        {
+          "number": 80,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00080.png",
+          "sha256": "bc31e3bd98afd5ccc1f9324e56e7a270d89000e1477dc2b14f13138b8848773c"
+        },
+        {
+          "number": 81,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00081.png",
+          "sha256": "afe5928abaccafa451d9530f1e89a8eb61f643ef7fefb12d2927dc0d1c296e09"
+        },
+        {
+          "number": 82,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00082.png",
+          "sha256": "7ee545a80b158fa3abea7f3b4f579bd39f6635b4400be7a9bc9089c3ea345357"
+        },
+        {
+          "number": 83,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00083.png",
+          "sha256": "6fae1eac7b5755cd2fc3bdedc631dcdf23e92da5e947947051351eaa7303e08a"
+        },
+        {
+          "number": 84,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00084.png",
+          "sha256": "45f3bb9cef314d67240dd28bf694e75edd1443f4133cf52d8baa96a9b56926da"
+        },
+        {
+          "number": 85,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00085.png",
+          "sha256": "333e92b224320456037bb7cd44a6184e27c5b4f0319607326407bf319380ef23"
+        },
+        {
+          "number": 86,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00086.png",
+          "sha256": "fd789c2c288ffbcf289d42cc798856595ac558d504fb205a43d184d61acfab21"
+        },
+        {
+          "number": 87,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00087.png",
+          "sha256": "86dda4f6410b353623af6782bab76e6c4bb44456e19973402a91a129f7e5de52"
+        },
+        {
+          "number": 88,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00088.png",
+          "sha256": "29fbdb276ecce1bdb1f7e76c50266e91216ccc6dfac58b54dd02fabcf69c1fa8"
+        },
+        {
+          "number": 89,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00089.png",
+          "sha256": "ba9529c411f911ee597fe14062c503a5a203db4c443ee47ff16742c1b38cbdcb"
+        },
+        {
+          "number": 90,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00090.png",
+          "sha256": "86b666dcfb29ea81b38192f0b9416e72485c7d78e1a8775f586e03e0c294d702"
+        },
+        {
+          "number": 91,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00091.png",
+          "sha256": "67d4b709e8d65abd1bbc64a1254907b7ba8ac38dd6d01af198fb05de67d3ffaa"
+        },
+        {
+          "number": 92,
+          "path": "data/public/NUDT-MIRSDT/Sequence71/images/00092.png",
+          "sha256": "32f393488f8becd71844c9e786f09e253dd1def3033526fe197f6ffca6282355"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence82/00043",
+      "source": "Sequence82",
+      "center": 43,
+      "positive": true,
+      "foreground_pixels": 55,
+      "native_hw": [
+        194,
+        284
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence82/masks/00043.png",
+        "sha256": "63939989c9b8112e71f51b7ff775fc9d4ac8fc60843aa9cd493f0551d81f6812"
+      },
+      "images": [
+        {
+          "number": 35,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00035.png",
+          "sha256": "40bda346234c2765dc33d9f3e5c2418edb635a6c6d474120198de0fc6549fa4e"
+        },
+        {
+          "number": 36,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00036.png",
+          "sha256": "69d218b02485086b97e18e30eafefcabea28472f0f8ad543c481901aec20b90c"
+        },
+        {
+          "number": 37,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00037.png",
+          "sha256": "62b16fa65e3bbed94665371785765ea429a247da9e566b86b36e1d02ce679c9d"
+        },
+        {
+          "number": 38,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00038.png",
+          "sha256": "7e2a4e788bbfc311b2083cf36e7bfd3e4844bc91f452659ee58cd770130c34db"
+        },
+        {
+          "number": 39,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00039.png",
+          "sha256": "f3d1b40bcee4931b0c08dcdd20195757a06a509db73832d5dd4bfab244ab4be9"
+        },
+        {
+          "number": 40,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00040.png",
+          "sha256": "1caa6f26f70b7f2cfebc983075ffedb915500d260b9e5ed6b945d301a19de98e"
+        },
+        {
+          "number": 41,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00041.png",
+          "sha256": "ba6a628a8ce48138b64c634534f437fa7beadbd14998e206f14a405e7e31bc84"
+        },
+        {
+          "number": 42,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00042.png",
+          "sha256": "3de1c6e181504bd16adbb3020312b3cc8ec751e6fdaeaeb8cae6542a9315d647"
+        },
+        {
+          "number": 43,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00043.png",
+          "sha256": "d37f6a0fbb91ce97387dcb2747cded67c25659bc48a6e559202aa228fc95f087"
+        },
+        {
+          "number": 44,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00044.png",
+          "sha256": "985f7c0c46c395f1eca51c079302e191dcdb48e1809435f1753f0ff2d240ac18"
+        },
+        {
+          "number": 45,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00045.png",
+          "sha256": "549350669d7275ae7ecb984f40e41dc0a2dfd1b1b89f27ddde626b610b8139f6"
+        },
+        {
+          "number": 46,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00046.png",
+          "sha256": "223556ef00690bab7bacba10be8cbdde5beac4a5783980e04c4dc64e68587e20"
+        },
+        {
+          "number": 47,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00047.png",
+          "sha256": "ee3e19d4440fd4a4da909b68fd3f8cca2639ecb1e32d1c9c5ecb2c14e5e9729a"
+        },
+        {
+          "number": 48,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00048.png",
+          "sha256": "50df43b37fba11c4b0af6dd7c1c4f3458a9a0694c2335f80b0f5a09532286cb0"
+        },
+        {
+          "number": 49,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00049.png",
+          "sha256": "456070d3edeccb7fadd2cf353eacc66a1e22725f94d0bd2ae403e53c153bc4ad"
+        },
+        {
+          "number": 50,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00050.png",
+          "sha256": "6f51e1db9c298b753204baac8fc221b1385bcd05e77b8044f003f882e92fa8c9"
+        },
+        {
+          "number": 51,
+          "path": "data/public/NUDT-MIRSDT/Sequence82/images/00051.png",
+          "sha256": "d643a9eec52bdf51e39e9fecf1f189b8c86fd2ae222f62589ba20f218dedb163"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence83/00020",
+      "source": "Sequence83",
+      "center": 20,
+      "positive": true,
+      "foreground_pixels": 42,
+      "native_hw": [
+        258,
+        374
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence83/masks/00020.png",
+        "sha256": "e8c6945d9ca7e748575a887a4881f10158576dc9d2b1e5ad1fb484fe23c83d27"
+      },
+      "images": [
+        {
+          "number": 12,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00012.png",
+          "sha256": "ce45a687eca09ac70d70c4ba0df7f28fb2f7a12a9f91a83c25115f86659c60b3"
+        },
+        {
+          "number": 13,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00013.png",
+          "sha256": "6d15cbfe2ec1a39fc4ce4e05658a0bbff8fca870b1f8b6112a9d3e376085adff"
+        },
+        {
+          "number": 14,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00014.png",
+          "sha256": "8be26d99e117ab044910fb0f1f50e7c24d88ea19f53c4830bfdbefc4d07e756f"
+        },
+        {
+          "number": 15,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00015.png",
+          "sha256": "2890084c80915a6678be9c8f83333bb490b3b98625971027f51365462916164a"
+        },
+        {
+          "number": 16,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00016.png",
+          "sha256": "de9c9c7488d146b82e6d9fb64ef56c245f0aa4b49a768e0dee3eb5089634223f"
+        },
+        {
+          "number": 17,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00017.png",
+          "sha256": "5c4737f9745f1886a150ea221d991de24d3c8adedc55b7e3cf8a7f1521265400"
+        },
+        {
+          "number": 18,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00018.png",
+          "sha256": "934cd554f37f4083768235626bd508bce2da2efb580632113b4514a94537cf16"
+        },
+        {
+          "number": 19,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00019.png",
+          "sha256": "94646cb67e4794c97215474dc9f9afdb6ed315f2d03dc7904e396969b68d5e58"
+        },
+        {
+          "number": 20,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00020.png",
+          "sha256": "e1c86d465ae0e357458b120881b9dda339175ec7b968a847ac2b00ed71706c61"
+        },
+        {
+          "number": 21,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00021.png",
+          "sha256": "c5089511f03abee00cffa64ba57b5fb7f7a17bf634d43fb4e89051012f0b9879"
+        },
+        {
+          "number": 22,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00022.png",
+          "sha256": "e79c6b074ac1dac922398c43b462ede55c3e666ee201efae77943a45afb32aa0"
+        },
+        {
+          "number": 23,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00023.png",
+          "sha256": "b8c0b6f6f0fd54198e114b19ea57994be84a95ccf89b3578ee18a1a84ff5ce3d"
+        },
+        {
+          "number": 24,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00024.png",
+          "sha256": "dc082165bf31b71a99bd77fd7c52e2622d6a5d2e25cc97238ff3cd45686dd0a1"
+        },
+        {
+          "number": 25,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00025.png",
+          "sha256": "14efcc16322736a4ab29459dff1e0f705b8701253940b28e5f3aedce702753a7"
+        },
+        {
+          "number": 26,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00026.png",
+          "sha256": "b15b1cbd120713891544e7dc92753ad2cf9bdb8021b774ede71f90f190ad0beb"
+        },
+        {
+          "number": 27,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00027.png",
+          "sha256": "2a398cb12ba56cf234352321cb6a5ced64e52603b400f831c3b00835c0e11435"
+        },
+        {
+          "number": 28,
+          "path": "data/public/NUDT-MIRSDT/Sequence83/images/00028.png",
+          "sha256": "e262b5a6aadfb6d11e46fcf97aee2531f3ea122cc732179245b4851272df110b"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence17/00078",
+      "source": "Sequence17",
+      "center": 78,
+      "positive": false,
+      "foreground_pixels": 0,
+      "native_hw": [
+        209,
+        302
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence17/masks/00078.png",
+        "sha256": "9df4898c0f99c1e5ac64d4ecb11dddd49682a1e5faeb95a54fabe5177cb82211"
+      },
+      "images": [
+        {
+          "number": 70,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00070.png",
+          "sha256": "0ac590f589eb0233f964ccada4336ef002009bd0a8922dd2644e9e10333ea94e"
+        },
+        {
+          "number": 71,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00071.png",
+          "sha256": "0ff0031f455511c801d955d146b57bd5db5a1763c2a8cd58b970144fb13cc4bb"
+        },
+        {
+          "number": 72,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00072.png",
+          "sha256": "31ff209ba145fe14bc604ecc94b4192d3ec186acfe0bc42a6fde359f93064bd8"
+        },
+        {
+          "number": 73,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00073.png",
+          "sha256": "e8aa310f5638e5c184c2d7e8963b69dbce4af266e49227be459bf810c120d31f"
+        },
+        {
+          "number": 74,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00074.png",
+          "sha256": "a3f9b9f4e686993d6dd3d651fe0c32ef80877b9e0cf86a84b0d4b0dcc65c8d7c"
+        },
+        {
+          "number": 75,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00075.png",
+          "sha256": "6f4960568eb95b95b59395c22e4f4925df7092b6aeda6b3b5719f5016240b331"
+        },
+        {
+          "number": 76,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00076.png",
+          "sha256": "badb6a6c79f82e33505d547c0691d353432e295da599323e993e526c22a86755"
+        },
+        {
+          "number": 77,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00077.png",
+          "sha256": "dc5b2113dc764d59e81861537821448f0c1948e7e25e2d426dcb22367346e747"
+        },
+        {
+          "number": 78,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00078.png",
+          "sha256": "cb939fdbc77ae9db6ac1d473869559e9d75c615e65d9cbbd1e7b38a7613d3ec5"
+        },
+        {
+          "number": 79,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00079.png",
+          "sha256": "67426c3ddbac81e3fc35f3a820b8b7a9f9b0d5672217ea22836f0cb14ac55aad"
+        },
+        {
+          "number": 80,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00080.png",
+          "sha256": "16866db92cc849b0100bcb8c281b2cb9405240c7a748f63562b2a5b535fa4d42"
+        },
+        {
+          "number": 81,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00081.png",
+          "sha256": "33dc0b4bfce81c7c1b9013b20da6abc7f4b4305df9ae21642f2ccbd9c036fe50"
+        },
+        {
+          "number": 82,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00082.png",
+          "sha256": "ad9c081e0ffaf9a58929f17f1ebc839bc9b846b2d26e1697606b59beb66282f1"
+        },
+        {
+          "number": 83,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00083.png",
+          "sha256": "4ab849b7e45815e3d3daeddc0e07c1c79eab3b055c02839c00bf6395cfb96fa4"
+        },
+        {
+          "number": 84,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00084.png",
+          "sha256": "a03927009c8a0a5513bf7b5015f324997ac5f4194303149139edc2075aa05dad"
+        },
+        {
+          "number": 85,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00085.png",
+          "sha256": "cc3fdc3c108976baea690ae0a275d6be1745bae3fba4c932c261afa8ef7c65a0"
+        },
+        {
+          "number": 86,
+          "path": "data/public/NUDT-MIRSDT/Sequence17/images/00086.png",
+          "sha256": "34834341162633116842bda6967e680fb407272b8ac942e21804ae89a4ecd195"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence44/00085",
+      "source": "Sequence44",
+      "center": 85,
+      "positive": false,
+      "foreground_pixels": 0,
+      "native_hw": [
+        265,
+        265
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence44/masks/00085.png",
+        "sha256": "2e5cd3bb70fe33686e424e6cc2c0fc3176a2024a0c204c0f15567ae201b92ec7"
+      },
+      "images": [
+        {
+          "number": 77,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00077.png",
+          "sha256": "70bcc9cdb2daae780b4bab2a9858788a9533619d2ae262018704cd3fc4609439"
+        },
+        {
+          "number": 78,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00078.png",
+          "sha256": "1ba30bc87ac203561e352bce51e5707230335f491289ad3920e2513098bbc1fa"
+        },
+        {
+          "number": 79,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00079.png",
+          "sha256": "a5d66c2503ef9b9837f4e32a5e515217afc205295682f388d273bc1d8f143111"
+        },
+        {
+          "number": 80,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00080.png",
+          "sha256": "0f6850de84442990b0e853b4ff6469482083ecb1ceaa7f2d18af16095bb5622d"
+        },
+        {
+          "number": 81,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00081.png",
+          "sha256": "e47e95a89776bc5947398f4f9fe1dfc54dd82e9ab82400bdb41e5a3c3e61cfd0"
+        },
+        {
+          "number": 82,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00082.png",
+          "sha256": "1a8225cd913e786ac7d329312f1e9b1de13927dce8143041551d1af6cbe21987"
+        },
+        {
+          "number": 83,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00083.png",
+          "sha256": "41e1f9acaaa6ade84a83d1e38f08f9a2c0e0f346e59117079975af1530a694c9"
+        },
+        {
+          "number": 84,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00084.png",
+          "sha256": "7e2bf9d0161d13d6c342438556cf211458d6494a037fc08c08509cfd472d8276"
+        },
+        {
+          "number": 85,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00085.png",
+          "sha256": "a7733a1370eef59b924a6a2dcc1e36f99e7f564f8a1d2e83571bbaec2c939d23"
+        },
+        {
+          "number": 86,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00086.png",
+          "sha256": "fbdb55601a43c157ec9fca126274cff4b2c3151394e181709be5defdaf9b978c"
+        },
+        {
+          "number": 87,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00087.png",
+          "sha256": "553e58c903b45944247542bace3858d5890054879dbdcf2313ef3ccb8c467e3b"
+        },
+        {
+          "number": 88,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00088.png",
+          "sha256": "851da432dd9063d2a3e72fc6b108237bb2cc7064fd6037440ed005f59f014001"
+        },
+        {
+          "number": 89,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00089.png",
+          "sha256": "66c48855fc3d8e3a4b98efa8935290478d938daba80f721639be54e1e3b618f7"
+        },
+        {
+          "number": 90,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00090.png",
+          "sha256": "b322c3d48679d5c90f9a0d81306c26df5062bf4f9bb5fe9838028acfc20ba1d8"
+        },
+        {
+          "number": 91,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00091.png",
+          "sha256": "f2e14d88abcfc8298bacd6d4d8ccaf518f3a18b5c052b6c60000bfa575fab341"
+        },
+        {
+          "number": 92,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00092.png",
+          "sha256": "306b168583235d90386fac58445a0839dc2622669a5bb410d516b61e053e3338"
+        },
+        {
+          "number": 93,
+          "path": "data/public/NUDT-MIRSDT/Sequence44/images/00093.png",
+          "sha256": "5978265c09a0fb23435ddf1cc36231be804d63dfe50fefbd0bd4c415d8160f16"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence77/00009",
+      "source": "Sequence77",
+      "center": 9,
+      "positive": false,
+      "foreground_pixels": 0,
+      "native_hw": [
+        201,
+        261
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence77/masks/00009.png",
+        "sha256": "d31f60f197d7d5290c7629899858aa389ce8c9c948838a22f10dcb768ca9123a"
+      },
+      "images": [
+        {
+          "number": 1,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00001.png",
+          "sha256": "f4d10a83db7d5f607dabf13d1e3f068430057407a1381c4f320742ad356325f4"
+        },
+        {
+          "number": 2,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00002.png",
+          "sha256": "c2829900c46770855dfad027e750cc8e37df39469696bccd103899b983eb3697"
+        },
+        {
+          "number": 3,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00003.png",
+          "sha256": "bb4b6539f59dab872ceb67af7a02d92773016ab9ae2dd0cb950322f4d8e7e45e"
+        },
+        {
+          "number": 4,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00004.png",
+          "sha256": "1c2ff9ef09464312a7e7dc2274e03f1b84604d863d9c3d32d4a77d85013bdd8c"
+        },
+        {
+          "number": 5,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00005.png",
+          "sha256": "85817af3bf2b0f8ea703d8dc4d62963f79f3952d97bfbca39829de49aacf1c3a"
+        },
+        {
+          "number": 6,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00006.png",
+          "sha256": "3f19480ac390b7b203607e5b234bcb2db6a23f3a5211ca7a08b767f826640319"
+        },
+        {
+          "number": 7,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00007.png",
+          "sha256": "b2b1983c4cf98ebbb6c8f56d3bac0a947987a1c5695a2f2a15fb8e83e105317c"
+        },
+        {
+          "number": 8,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00008.png",
+          "sha256": "09caf43fe84aab3dca75843b139fee000bfcfb026a005743f01debb922f48ca6"
+        },
+        {
+          "number": 9,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00009.png",
+          "sha256": "5b21dd6cf52ce2fb7e8ecaf390c1e217b1529d026a98ee4bb0b71b329d974ac9"
+        },
+        {
+          "number": 10,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00010.png",
+          "sha256": "258019fc1424852a9967b67412e3f0bd5f19927fce04d8fe7dbf7f34e0a9c7fe"
+        },
+        {
+          "number": 11,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00011.png",
+          "sha256": "4222d5d58eb414dac9b0d3c7bdcfaacf03bd2399062a80502eeeb9b591c3a7d9"
+        },
+        {
+          "number": 12,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00012.png",
+          "sha256": "2dace4ebe5ca1b575becf97667c31dafa3c217fe7141067b2541924fd5f4f3f1"
+        },
+        {
+          "number": 13,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00013.png",
+          "sha256": "8195afb0a0f3cddf4c5d7642027d4dd08b0e26c8b28568a69294912ec39aefdc"
+        },
+        {
+          "number": 14,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00014.png",
+          "sha256": "04da8e99acbcc55a04199e7531a601c33266a60afd53a3e8cc65e8a3c7d095d9"
+        },
+        {
+          "number": 15,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00015.png",
+          "sha256": "f6defae44e2af52e73cbd47e25103590f351e6bf26d33d72e845979005ac842c"
+        },
+        {
+          "number": 16,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00016.png",
+          "sha256": "153a74403828aca9d269faceefdb059169adac74e7da158fcb082914f91c6f8e"
+        },
+        {
+          "number": 17,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00017.png",
+          "sha256": "ea6198a6b370b2d2931fcb99a080770b6744d1c3fb8b2cba7ffe5990878d7bd7"
+        }
+      ]
+    },
+    {
+      "sample_id": "Sequence77/00046",
+      "source": "Sequence77",
+      "center": 46,
+      "positive": false,
+      "foreground_pixels": 0,
+      "native_hw": [
+        201,
+        261
+      ],
+      "center_mask": {
+        "path": "data/public/NUDT-MIRSDT/Sequence77/masks/00046.png",
+        "sha256": "d31f60f197d7d5290c7629899858aa389ce8c9c948838a22f10dcb768ca9123a"
+      },
+      "images": [
+        {
+          "number": 38,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00038.png",
+          "sha256": "c2a9dce3ba839a4163edf851d70368092f60956ca6598817b3cc0d7c3030964d"
+        },
+        {
+          "number": 39,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00039.png",
+          "sha256": "8f69e2ac62ad32d80756f596a07ec2263281ab928c379d3e028bc97805ae26bf"
+        },
+        {
+          "number": 40,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00040.png",
+          "sha256": "219d617cc74cae5ddc89f462c189f5d0925665a5b63143598d128c7770a969e8"
+        },
+        {
+          "number": 41,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00041.png",
+          "sha256": "bfce50815d27f933731ae661b6736d2fdd0e56889d68b81e62a890c84af11b43"
+        },
+        {
+          "number": 42,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00042.png",
+          "sha256": "40e26c506ead2403f9a1d002cca278af455d35fcca256d61586501e73c7d0cfc"
+        },
+        {
+          "number": 43,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00043.png",
+          "sha256": "99ed35f1c1a390eaa6a5be2ad52f85e5672f3a2b1c5f181790603208a114e3e7"
+        },
+        {
+          "number": 44,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00044.png",
+          "sha256": "1aefaad0674d8c32126619e1db8a06ce67c018c8a366b4bc86ccee4c9c649b81"
+        },
+        {
+          "number": 45,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00045.png",
+          "sha256": "44f7e6fb81e1e80f1a9a33ad43d8ac75ef85a35229126594f1e7e9773901ccaf"
+        },
+        {
+          "number": 46,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00046.png",
+          "sha256": "98cba3b51aeeb6453f450a481493a61287c915c2fb543a6446d4103a597cd04a"
+        },
+        {
+          "number": 47,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00047.png",
+          "sha256": "47cc02fcd29533a20974617202acd897efa8fef5dcdc50ca49d05284a926bfae"
+        },
+        {
+          "number": 48,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00048.png",
+          "sha256": "ab8998831f18986f01995d2f40c25feaf8f4c28b4b3e2323fcd575970f46479a"
+        },
+        {
+          "number": 49,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00049.png",
+          "sha256": "ded56102bb4e0f6ef69f69d2ca55db3c7afabaa024bd42b5f801a076945abccd"
+        },
+        {
+          "number": 50,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00050.png",
+          "sha256": "ca1cf97b5f57a5c9ef906672cf7c5f4fb70bb360c462fab26dff917178a19629"
+        },
+        {
+          "number": 51,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00051.png",
+          "sha256": "ebd4e8d3d1c1580ab371226ccbf74413553e4f552bc090a279be464cb7440d6d"
+        },
+        {
+          "number": 52,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00052.png",
+          "sha256": "9e4cac120392e52e64d873a0ca090f810ad527607b47a726b691a1b9f10490d4"
+        },
+        {
+          "number": 53,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00053.png",
+          "sha256": "fbdf1f32744e4320670ccc0b75a98375dd4fc134ae741929957e99479a56fb99"
+        },
+        {
+          "number": 54,
+          "path": "data/public/NUDT-MIRSDT/Sequence77/images/00054.png",
+          "sha256": "0b0bd9ba0abe0805c93940f934e749b60c1e1063751f0bd8950505f8a4ede03b"
+        }
+      ]
+    }
+  ],
+  "schedule": [
+    "Sequence77/00046",
+    "Sequence83/00020",
+    "Sequence12/00019",
+    "Sequence44/00085",
+    "Sequence17/00078",
+    "Sequence21/00041",
+    "Sequence71/00084",
+    "Sequence66/00060",
+    "Sequence36/00081",
+    "Sequence77/00009",
+    "Sequence6/00059",
+    "Sequence82/00043",
+    "Sequence77/00046",
+    "Sequence12/00019",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence6/00059",
+    "Sequence44/00085",
+    "Sequence36/00081",
+    "Sequence77/00009",
+    "Sequence71/00084",
+    "Sequence17/00078",
+    "Sequence21/00041",
+    "Sequence6/00059",
+    "Sequence77/00046",
+    "Sequence44/00085",
+    "Sequence12/00019",
+    "Sequence21/00041",
+    "Sequence17/00078",
+    "Sequence77/00009",
+    "Sequence36/00081",
+    "Sequence66/00060",
+    "Sequence82/00043",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence17/00078",
+    "Sequence36/00081",
+    "Sequence77/00046",
+    "Sequence71/00084",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence21/00041",
+    "Sequence82/00043",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence36/00081",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence21/00041",
+    "Sequence12/00019",
+    "Sequence77/00046",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence17/00078",
+    "Sequence66/00060",
+    "Sequence6/00059",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence77/00046",
+    "Sequence82/00043",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence36/00081",
+    "Sequence66/00060",
+    "Sequence17/00078",
+    "Sequence44/00085",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence21/00041",
+    "Sequence36/00081",
+    "Sequence44/00085",
+    "Sequence66/00060",
+    "Sequence17/00078",
+    "Sequence12/00019",
+    "Sequence77/00009",
+    "Sequence21/00041",
+    "Sequence6/00059",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence77/00046",
+    "Sequence17/00078",
+    "Sequence83/00020",
+    "Sequence44/00085",
+    "Sequence71/00084",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence77/00046",
+    "Sequence6/00059",
+    "Sequence36/00081",
+    "Sequence21/00041",
+    "Sequence66/00060",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence12/00019",
+    "Sequence83/00020",
+    "Sequence77/00046",
+    "Sequence36/00081",
+    "Sequence82/00043",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence17/00078",
+    "Sequence66/00060",
+    "Sequence21/00041",
+    "Sequence71/00084",
+    "Sequence21/00041",
+    "Sequence77/00046",
+    "Sequence66/00060",
+    "Sequence71/00084",
+    "Sequence17/00078",
+    "Sequence44/00085",
+    "Sequence6/00059",
+    "Sequence83/00020",
+    "Sequence36/00081",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence12/00019",
+    "Sequence21/00041",
+    "Sequence17/00078",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence66/00060",
+    "Sequence6/00059",
+    "Sequence77/00009",
+    "Sequence71/00084",
+    "Sequence77/00046",
+    "Sequence44/00085",
+    "Sequence12/00019",
+    "Sequence36/00081",
+    "Sequence71/00084",
+    "Sequence12/00019",
+    "Sequence44/00085",
+    "Sequence82/00043",
+    "Sequence83/00020",
+    "Sequence21/00041",
+    "Sequence17/00078",
+    "Sequence66/00060",
+    "Sequence6/00059",
+    "Sequence77/00009",
+    "Sequence36/00081",
+    "Sequence77/00046",
+    "Sequence44/00085",
+    "Sequence36/00081",
+    "Sequence21/00041",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence71/00084",
+    "Sequence17/00078",
+    "Sequence77/00009",
+    "Sequence12/00019",
+    "Sequence82/00043",
+    "Sequence77/00046",
+    "Sequence6/00059",
+    "Sequence17/00078",
+    "Sequence36/00081",
+    "Sequence21/00041",
+    "Sequence44/00085",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence77/00046",
+    "Sequence77/00009",
+    "Sequence6/00059",
+    "Sequence71/00084",
+    "Sequence82/00043",
+    "Sequence12/00019",
+    "Sequence36/00081",
+    "Sequence77/00046",
+    "Sequence77/00009",
+    "Sequence6/00059",
+    "Sequence82/00043",
+    "Sequence21/00041",
+    "Sequence83/00020",
+    "Sequence44/00085",
+    "Sequence12/00019",
+    "Sequence17/00078",
+    "Sequence71/00084",
+    "Sequence66/00060",
+    "Sequence17/00078",
+    "Sequence44/00085",
+    "Sequence83/00020",
+    "Sequence12/00019",
+    "Sequence36/00081",
+    "Sequence21/00041",
+    "Sequence66/00060",
+    "Sequence6/00059",
+    "Sequence77/00009",
+    "Sequence77/00046",
+    "Sequence71/00084",
+    "Sequence82/00043",
+    "Sequence83/00020",
+    "Sequence36/00081",
+    "Sequence17/00078",
+    "Sequence77/00009",
+    "Sequence12/00019",
+    "Sequence71/00084",
+    "Sequence21/00041",
+    "Sequence44/00085",
+    "Sequence6/00059",
+    "Sequence82/00043",
+    "Sequence77/00046",
+    "Sequence66/00060",
+    "Sequence77/00046",
+    "Sequence12/00019",
+    "Sequence66/00060",
+    "Sequence21/00041",
+    "Sequence17/00078",
+    "Sequence36/00081",
+    "Sequence77/00009",
+    "Sequence44/00085",
+    "Sequence6/00059",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence36/00081",
+    "Sequence77/00009",
+    "Sequence82/00043",
+    "Sequence83/00020",
+    "Sequence71/00084",
+    "Sequence44/00085",
+    "Sequence6/00059",
+    "Sequence12/00019",
+    "Sequence21/00041",
+    "Sequence77/00046",
+    "Sequence17/00078",
+    "Sequence66/00060",
+    "Sequence21/00041",
+    "Sequence77/00009",
+    "Sequence12/00019",
+    "Sequence17/00078",
+    "Sequence36/00081",
+    "Sequence6/00059",
+    "Sequence44/00085",
+    "Sequence77/00046",
+    "Sequence82/00043",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence66/00060",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence21/00041",
+    "Sequence12/00019",
+    "Sequence36/00081",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence66/00060",
+    "Sequence71/00084",
+    "Sequence77/00046",
+    "Sequence17/00078",
+    "Sequence6/00059",
+    "Sequence17/00078",
+    "Sequence6/00059",
+    "Sequence44/00085",
+    "Sequence83/00020",
+    "Sequence77/00009",
+    "Sequence77/00046",
+    "Sequence12/00019",
+    "Sequence71/00084",
+    "Sequence36/00081",
+    "Sequence21/00041",
+    "Sequence66/00060",
+    "Sequence82/00043",
+    "Sequence17/00078",
+    "Sequence36/00081",
+    "Sequence66/00060",
+    "Sequence77/00046",
+    "Sequence21/00041",
+    "Sequence82/00043",
+    "Sequence83/00020",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence71/00084",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence12/00019",
+    "Sequence82/00043",
+    "Sequence83/00020",
+    "Sequence44/00085",
+    "Sequence71/00084",
+    "Sequence66/00060",
+    "Sequence77/00009",
+    "Sequence77/00046",
+    "Sequence6/00059",
+    "Sequence17/00078",
+    "Sequence21/00041",
+    "Sequence36/00081",
+    "Sequence44/00085",
+    "Sequence21/00041",
+    "Sequence77/00046",
+    "Sequence6/00059",
+    "Sequence36/00081",
+    "Sequence71/00084",
+    "Sequence12/00019",
+    "Sequence17/00078",
+    "Sequence83/00020",
+    "Sequence82/00043",
+    "Sequence66/00060",
+    "Sequence77/00009",
+    "Sequence83/00020",
+    "Sequence17/00078",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence77/00046",
+    "Sequence71/00084",
+    "Sequence44/00085",
+    "Sequence66/00060",
+    "Sequence21/00041",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence36/00081",
+    "Sequence17/00078",
+    "Sequence66/00060",
+    "Sequence77/00009",
+    "Sequence83/00020",
+    "Sequence44/00085",
+    "Sequence12/00019",
+    "Sequence82/00043",
+    "Sequence71/00084",
+    "Sequence21/00041",
+    "Sequence77/00046",
+    "Sequence6/00059",
+    "Sequence36/00081",
+    "Sequence77/00046",
+    "Sequence71/00084",
+    "Sequence83/00020",
+    "Sequence21/00041",
+    "Sequence66/00060",
+    "Sequence36/00081",
+    "Sequence6/00059",
+    "Sequence44/00085",
+    "Sequence17/00078",
+    "Sequence82/00043",
+    "Sequence12/00019",
+    "Sequence77/00009",
+    "Sequence6/00059",
+    "Sequence77/00009",
+    "Sequence17/00078",
+    "Sequence12/00019",
+    "Sequence21/00041",
+    "Sequence71/00084",
+    "Sequence44/00085",
+    "Sequence82/00043",
+    "Sequence36/00081",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence77/00046",
+    "Sequence77/00046",
+    "Sequence44/00085",
+    "Sequence17/00078",
+    "Sequence77/00009",
+    "Sequence6/00059",
+    "Sequence82/00043",
+    "Sequence71/00084",
+    "Sequence21/00041",
+    "Sequence83/00020",
+    "Sequence36/00081",
+    "Sequence12/00019",
+    "Sequence66/00060",
+    "Sequence83/00020",
+    "Sequence77/00046",
+    "Sequence66/00060",
+    "Sequence71/00084",
+    "Sequence44/00085",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence17/00078",
+    "Sequence12/00019",
+    "Sequence36/00081",
+    "Sequence6/00059",
+    "Sequence21/00041",
+    "Sequence82/00043",
+    "Sequence77/00009",
+    "Sequence36/00081",
+    "Sequence77/00046",
+    "Sequence83/00020",
+    "Sequence71/00084",
+    "Sequence66/00060",
+    "Sequence21/00041",
+    "Sequence44/00085",
+    "Sequence12/00019",
+    "Sequence6/00059",
+    "Sequence17/00078",
+    "Sequence17/00078",
+    "Sequence12/00019",
+    "Sequence82/00043",
+    "Sequence77/00046",
+    "Sequence83/00020",
+    "Sequence71/00084",
+    "Sequence77/00009",
+    "Sequence21/00041",
+    "Sequence6/00059",
+    "Sequence66/00060",
+    "Sequence36/00081",
+    "Sequence44/00085",
+    "Sequence77/00009",
+    "Sequence21/00041",
+    "Sequence6/00059",
+    "Sequence82/00043"
+  ],
+  "exposure": {
+    "optimizer_updates": 400,
+    "per_sample": {
+      "Sequence12/00019": 33,
+      "Sequence17/00078": 33,
+      "Sequence21/00041": 34,
+      "Sequence36/00081": 33,
+      "Sequence44/00085": 33,
+      "Sequence6/00059": 34,
+      "Sequence66/00060": 33,
+      "Sequence71/00084": 33,
+      "Sequence77/00009": 34,
+      "Sequence77/00046": 33,
+      "Sequence82/00043": 34,
+      "Sequence83/00020": 33
+    },
+    "per_source": {
+      "Sequence12": 33,
+      "Sequence17": 33,
+      "Sequence21": 34,
+      "Sequence36": 33,
+      "Sequence44": 33,
+      "Sequence6": 34,
+      "Sequence66": 33,
+      "Sequence71": 33,
+      "Sequence77": 67,
+      "Sequence82": 34,
+      "Sequence83": 33
+    },
+    "nonempty_updates": 267,
+    "empty_updates": 133
+  }
+}

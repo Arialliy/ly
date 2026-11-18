@@ -1,0 +1,36 @@
+{
+  "stage": "S2b",
+  "status": "RUNNING",
+  "next_allowed_stage": null,
+  "start_utc": "2026-11-18T13:18:36.579332+00:00",
+  "seed": 46,
+  "run_dir": "reports/s2b_runs/seed46_400_20261118_01",
+  "subset_sha256": "acc07845130099b0d1ae19163099974a698487954a8f60bc65e88df57b3e6d74",
+  "base_commit": "6b0682fd5c965cdfce51b6604e29ebadef0c1064",
+  "subset": "manifests/s2b_train12.json",
+  "decision_protocol": {
+    "updates": 400,
+    "finite_losses_and_gradients": true,
+    "minimum_fractional_loss_decrease": 0.2,
+    "foreground_bce_strict_decrease": true,
+    "pd_at_one_fp_per_frame_strict_increase": true,
+    "evaluation_population": "same 12 training centers"
+  },
+  "environment": {
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "host_gpu_index": "2",
+    "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "python": "3.11.12",
+    "torch": "2.7.0+cu128"
+  },
+  "code_sha256": {
+    "checks/check_s2b.py": "613b1350c01cf0faa6c64438fd8e23f3cc8401118b33570e9330a774c7611b84",
+    "engine/s2b_train.py": "e13e87eb07fcf4e53b1604915e85877eb4816b5595bd631ee575898b0dc3c9dd",
+    "evaluation/s2b_diagnostics.py": "9167452b6018bf2955236049ea0d70a8afe858be98ac6a2e648134bde7301b62",
+    "evaluation/s2b_froc.py": "c2bedbcf939acad6ed79ee41e18db606afe36030e334ce9adc5fa47854ed3375",
+    "data/s2b_subset.py": "5bb85053f7f6a58b2dee68b4cafd82a5b108d976c9e3fcf1681d59b23f16aab7",
+    "configs/task.yaml": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab"
+  }
+}

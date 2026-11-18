@@ -1,0 +1,539 @@
+{
+  "step": 200,
+  "loss": {
+    "total": 0.8547391332685947,
+    "foreground_bce": 0.7712091505527496,
+    "background_bce": 0.44247525557875633,
+    "dice_loss_positive": 0.9984806403517723,
+    "empty_frame_total": 0.2616296224296093
+  },
+  "froc": {
+    "frame_count": 12,
+    "empty_frames": 4,
+    "gt": 8,
+    "score_domain": "native_fp32_logits",
+    "threshold_count_including_empty": 15136,
+    "budgets": {
+      "0.5": {
+        "threshold": null,
+        "empty_prediction_point": true,
+        "pd": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fp_per_frame": 0.0,
+        "empty_frame_fp": 0,
+        "per_frame": {
+          "Sequence12/00019": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21/00041": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36/00081": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6/00059": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66/00060": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71/00084": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82/00043": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83/00020": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17/00078": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44/00085": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00009": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00046": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        },
+        "per_sequence": {
+          "Sequence12": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77": {
+            "frames": 2,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        }
+      },
+      "1": {
+        "threshold": null,
+        "empty_prediction_point": true,
+        "pd": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fp_per_frame": 0.0,
+        "empty_frame_fp": 0,
+        "per_frame": {
+          "Sequence12/00019": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21/00041": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36/00081": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6/00059": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66/00060": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71/00084": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82/00043": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83/00020": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17/00078": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44/00085": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00009": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00046": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        },
+        "per_sequence": {
+          "Sequence12": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77": {
+            "frames": 2,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        }
+      },
+      "5": {
+        "threshold": null,
+        "empty_prediction_point": true,
+        "pd": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fp_per_frame": 0.0,
+        "empty_frame_fp": 0,
+        "per_frame": {
+          "Sequence12/00019": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21/00041": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36/00081": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6/00059": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66/00060": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71/00084": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82/00043": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83/00020": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17/00078": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44/00085": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00009": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77/00046": {
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        },
+        "per_sequence": {
+          "Sequence12": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence21": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence36": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence6": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence66": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence71": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence82": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence83": {
+            "frames": 1,
+            "gt": 1,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence17": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence44": {
+            "frames": 1,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          },
+          "Sequence77": {
+            "frames": 2,
+            "gt": 0,
+            "tp": 0,
+            "fp": 0
+          }
+        }
+      }
+    },
+    "curve_file": "froc_200.npz",
+    "curve_sha256": "a377c4fc2786a43e6efe51e25294d858924c83c3ffa7c8b1d53379508b925818"
+  },
+  "per_frame_loss": {
+    "Sequence12/00019": {
+      "total": 1.2279763221740723,
+      "foreground_bce": 0.955453634262085,
+      "background_bce": 0.5019539594650269,
+      "dice_loss": 0.9985452890396118
+    },
+    "Sequence21/00041": {
+      "total": 1.1265020370483398,
+      "foreground_bce": 0.6131201982498169,
+      "background_bce": 0.6410897374153137,
+      "dice_loss": 0.9987943768501282
+    },
+    "Sequence36/00081": {
+      "total": 1.073583722114563,
+      "foreground_bce": 0.6250832676887512,
+      "background_bce": 0.5228182673454285,
+      "dice_loss": 0.9992658495903015
+    },
+    "Sequence6/00059": {
+      "total": 1.1405324935913086,
+      "foreground_bce": 0.8493705987930298,
+      "background_bce": 0.43326082825660706,
+      "dice_loss": 0.9984335899353027
+    },
+    "Sequence66/00060": {
+      "total": 1.182896614074707,
+      "foreground_bce": 0.6601840257644653,
+      "background_bce": 0.7077557444572449,
+      "dice_loss": 0.9978533983230591
+    },
+    "Sequence71/00084": {
+      "total": 1.1320297718048096,
+      "foreground_bce": 0.9154656529426575,
+      "background_bce": 0.35037940740585327,
+      "dice_loss": 0.998214602470398
+    },
+    "Sequence82/00043": {
+      "total": 1.174525499343872,
+      "foreground_bce": 0.6405718326568604,
+      "background_bce": 0.7105851173400879,
+      "dice_loss": 0.9978939294815063
+    },
+    "Sequence83/00020": {
+      "total": 1.1523046493530273,
+      "foreground_bce": 0.910423994064331,
+      "background_bce": 0.39534127712249756,
+      "dice_loss": 0.9988440871238708
+    },
+    "Sequence17/00078": {
+      "total": 0.1922788769006729,
+      "foreground_bce": null,
+      "background_bce": 0.1922788769006729,
+      "dice_loss": null
+    },
+    "Sequence44/00085": {
+      "total": 0.3734194040298462,
+      "foreground_bce": null,
+      "background_bce": 0.3734196424484253,
+      "dice_loss": null
+    },
+    "Sequence77/00009": {
+      "total": 0.24029822647571564,
+      "foreground_bce": null,
+      "background_bce": 0.24029822647571564,
+      "dice_loss": null
+    },
+    "Sequence77/00046": {
+      "total": 0.24052198231220245,
+      "foreground_bce": null,
+      "background_bce": 0.24052198231220245,
+      "dice_loss": null
+    }
+  },
+  "module_updates": {
+    "frame_encoder": {
+      "parameters": 664,
+      "delta_l2_from_init": 0.7294916392799756,
+      "delta_l2_from_previous_snapshot": 0.19593688181949231
+    },
+    "time_convolutions": {
+      "parameters": 2896,
+      "delta_l2_from_init": 2.9022513842675113,
+      "delta_l2_from_previous_snapshot": 0.8808066514228838
+    },
+    "fusion": {
+      "parameters": 832,
+      "delta_l2_from_init": 0.5948647213033723,
+      "delta_l2_from_previous_snapshot": 0.2091171166619047
+    },
+    "spatial_decoder": {
+      "parameters": 18496,
+      "delta_l2_from_init": 1.9236222517000983,
+      "delta_l2_from_previous_snapshot": 0.8429319066692512
+    },
+    "detection_head": {
+      "parameters": 33,
+      "delta_l2_from_init": 0.05548302372989564,
+      "delta_l2_from_previous_snapshot": 0.005437615501696889
+    }
+  }
+}

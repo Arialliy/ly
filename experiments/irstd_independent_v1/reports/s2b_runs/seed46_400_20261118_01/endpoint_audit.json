@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "steps": {
+    "0": {
+      "budgets": {
+        "0.5": {
+          "threshold": null,
+          "tp": 0,
+          "fp": 0,
+          "empty_frame_fp": 0,
+          "pd": 0.0
+        },
+        "1": {
+          "threshold": null,
+          "tp": 0,
+          "fp": 0,
+          "empty_frame_fp": 0,
+          "pd": 0.0
+        },
+        "5": {
+          "threshold": null,
+          "tp": 0,
+          "fp": 0,
+          "empty_frame_fp": 0,
+          "pd": 0.0
+        }
+      },
+      "native_nms_peak_count": 33030,
+      "loss_float64": {
+        "total": 1.0292566383610544,
+        "foreground_bce": 0.6836227244445354,
+        "background_bce": 0.7027237744415654,
+        "dice_loss_positive": 0.9987128293283504,
+        "empty_frame_total": 0.7026973992958588
+      },
+      "logits_sha256": "9014c1b7c4c11dddcee89738e5421c31d45b6b9e39da99a36e09d8c14696b824"
+    },
+    "400": {
+      "budgets": {
+        "0.5": {
+          "threshold": 59.03249740600586,
+          "tp": 7,
+          "fp": 4,
+          "pd": 0.875,
+          "empty_frame_fp": 0
+        },
+        "1": {
+          "threshold": 59.03249740600586,
+          "tp": 7,
+          "fp": 4,
+          "pd": 0.875,
+          "empty_frame_fp": 0
+        },
+        "5": {
+          "threshold": 59.03249740600586,
+          "tp": 7,
+          "fp": 4,
+          "pd": 0.875,
+          "empty_frame_fp": 0
+        }
+      },
+      "native_nms_peak_count": 22849,
+      "loss_float64": {
+        "total": 0.40645246272793173,
+        "foreground_bce": 0.26159615044456636,
+        "background_bce": 0.0325195109177937,
+        "dice_loss_positive": 0.9054478667114104,
+        "empty_frame_total": 0.007068209302254909
+      },
+      "logits_sha256": "5be8d609b9e89a684e90f12e99db702ce6a044811ab1747c6706d94d942f3f0f"
+    }
+  },
+  "source": "Native FP32 saved logits and original training masks",
+  "method": "Independent equal-plateau flood, Chebyshev NMS, tied-score sweep, native centroids; all operating points and per-frame counts, plus float64 loss components."
+}

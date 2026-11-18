@@ -1,0 +1,17 @@
+{
+  "phase": "complete",
+  "completed_steps": 400,
+  "last_completed_diagnostic": 400,
+  "last_update": {
+    "step": 400,
+    "sample_id": "Sequence82/00043",
+    "loss_before_update": 0.822448194026947,
+    "gradient_l2": 1.5573061626612343,
+    "finite_after_update": true
+  },
+  "checkpoint": {
+    "path": "final.pt",
+    "sha256": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+    "global_step": 400
+  }
+}
