@@ -1,0 +1,30 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Noto Sans CJK SC, sans-serif","fontSize":"17px","lineColor":"#40576a"},"flowchart":{"htmlLabels":true,"curve":"linear","nodeSpacing":34,"rankSpacing":27,"padding":10,"wrappingWidth":270}}}%%
+flowchart TB
+    video["17 帧红外视频 · H × W"]
+    center["中心帧<br/>灰度与局部对比度"]
+    spatial["全分辨率空间编码器<br/>16 通道 · H × W"]
+    anchors["17 帧逐帧归一化<br/>每个像素保留静止与移动假设"]
+    align["两组帧轮流选速度与检验<br/>5 × 5 种速度，各对齐 3 × 3 小图"]
+    compare["短、中、长跨度分别比较<br/>候选速度与邻近速度的响应"]
+    relative["保留短跨度相对响应<br/>及短→中、中→长的变化"]
+    absolute["整段在各速度的对齐小图<br/>各跨度在候选速度的对齐小图"]
+    encode["共享速度网格编码器<br/>网格两轴为水平、垂直速度"]
+    motion["合并两次检验<br/>静止、移动各 8 通道<br/>附两个有效标记"]
+    head["逐像素拼接并检测<br/>34 → 16 → 1 通道"]
+    result["中心帧目标概率图 · H × W"]
+    video --> center --> spatial --> head
+    video --> anchors --> align
+    align --> compare --> relative --> encode
+    align --> absolute --> encode
+    encode --> motion --> head --> result
+    classDef input fill:#edf6f2,stroke:#477462,color:#173b2b,stroke-width:1.5px;
+    classDef spatialClass fill:#eaf3fa,stroke:#577894,color:#1b354b,stroke-width:1.5px;
+    classDef motionClass fill:#eff4f8,stroke:#648096,color:#1d3849,stroke-width:1.5px;
+    classDef relation fill:#efeafa,stroke:#8766a4,color:#39274c,stroke-width:1.6px;
+    classDef outputClass fill:#fcf0de,stroke:#9e7650,color:#49341e,stroke-width:1.6px;
+    class video input;
+    class center,spatial spatialClass;
+    class anchors,align,absolute,encode,motion motionClass;
+    class compare,relative relation;
+    class head,result outputClass;
+    linkStyle default stroke:#40576a,stroke-width:1.8px;

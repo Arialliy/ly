@@ -1,0 +1,462 @@
+{
+  "stage": "S0",
+  "status": "PASS",
+  "gate_kind": "engineering",
+  "started_utc": "2026-11-18T11:48:27.275254+00:00",
+  "checks": [
+    "input_contract",
+    "archive_hashes_native_pixels_and_labels",
+    "official_mat_to_png_alignment",
+    "source_background_diagnostic",
+    "loader_and_fault_injections"
+  ],
+  "training_steps": 0,
+  "failure_owner": null,
+  "next_allowed_stage": "S1",
+  "artifacts": [
+    "reports/S0.json",
+    "reports/S0_data_contract.md",
+    "reports/S0_samples.png",
+    "manifests/nudt_mirsdt_mask17.json"
+  ],
+  "code_commit": "73dc0315b6aa27918d15cb0ec604fd2dce223760",
+  "data_manifest_hash": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+  "seeds": {
+    "split": 46,
+    "training": 46
+  },
+  "dev_source_ids": [
+    "Sequence5",
+    "Sequence19",
+    "Sequence34",
+    "Sequence45",
+    "Sequence48",
+    "Sequence49",
+    "Sequence51",
+    "Sequence74"
+  ],
+  "unassigned_source_count": 20,
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.7.0+cu128",
+    "device": "cpu",
+    "container_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92"
+  },
+  "evaluation": {
+    "center_set": "all_eligible_including_empty_and_border_regions",
+    "primary_units": {
+      "detection": "matched_components_per_gt_component",
+      "false_alarms": "unmatched_peaks_per_center_frame"
+    },
+    "budgets_fp_per_frame": [
+      0.5,
+      1.0,
+      5.0
+    ],
+    "peak": "native_score_eight_connected_regional_maximum",
+    "plateau": "one_peak_minimum_y_then_x",
+    "deduplicate": "greedy_descending_score_then_y_then_x",
+    "suppression_chebyshev_radius_px": 2,
+    "match": "maximum_cardinality_then_minimum_total_euclidean_distance",
+    "gt_location": "centroid_of_native_mask_component",
+    "match_max_distance_px_inclusive": 3,
+    "threshold": "retain_score_greater_than_or_equal",
+    "tied_scores": "include_as_a_group",
+    "sweep": "include_empty_prediction_set_and_all_distinct_scores",
+    "dev_threshold": "highest_recall_within_budget_then_fewer_fp_then_highest_threshold",
+    "report": [
+      "dev_threshold_transfer",
+      "descriptive_froc_at_or_below_budget",
+      "tp_fp_counts",
+      "per_sequence"
+    ],
+    "native_benchmark": "use_author_evaluator_with_its_annotated_frame_set_and_settings",
+    "restricted_center_subset": "label_as_17_frame_subset_when_official_coverage_differs"
+  },
+  "implemented_scope": [
+    "mask_video_data",
+    "training_and_inference_interfaces",
+    "dataset_integrity",
+    "evaluation_protocol"
+  ],
+  "code_and_config_sha256": {
+    "checks/audit_pixels.py": "0700bbc97635ce4c265a7dd8c9c0ba1ec49bc925faae3e9dd7b013d25197baf3",
+    "checks/check_backgrounds.py": "ac3130eac9b777ba701caacefa2eaacab2952d05565bd1d70509d9e24a2b62ae",
+    "checks/check_loader.py": "a45504920ad8f8c8de538ba329bb2fff4f69ca2b924d0eed4e312056366edf2f",
+    "checks/check_mat_alignment.py": "6d3d64eb2b6301710a819896bb4d66c2d373bd2957affa3f95b12a988e5e7376",
+    "checks/check_s0.py": "41cf78e3c599a0cb343334d4afb74b5788540eb182290b686d844f1b67895dec",
+    "configs/task.yaml": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab",
+    "contracts.py": "049f7426b861e07757d117f3b66ba2c28b4f960fef10e50dc539a16f631019b4",
+    "data/__init__.py": "97181ab361a6ab7ad0015f0ead35ae4eb2eb660fc760e8ff9e6bf07efbc8186b",
+    "data/dataset.py": "d063be9911e5da69d7b8456ba904896f5454a8b96e124c6ed05afc6192c592e1",
+    "data/manifest.py": "813e57996efe1c7f5b1bd5964cd7981b23a2d1c899abe2bc3f94e8138150b5e0"
+  },
+  "exposure": {
+    "train": {
+      "supervised_centers": 6048,
+      "input_slots_per_full_pass": 102816,
+      "distinct_input_frames_per_full_pass": 7200
+    },
+    "dev": {
+      "supervised_centers": 672,
+      "input_slots_per_full_pass": 11424,
+      "distinct_input_frames_per_full_pass": 800
+    },
+    "test": {
+      "supervised_centers": 1680,
+      "input_slots_per_full_pass": 28560,
+      "distinct_input_frames_per_full_pass": 2000
+    }
+  },
+  "pixel_audit": {
+    "provenance": {
+      "receipt": "provenance/PUBLIC_ARCHIVE_NUDT-MIRSDT.json",
+      "inventory": "provenance/PUBLIC_MEMBERS_NUDT-MIRSDT.json",
+      "inventory_sha256": "c0f792ea5ba11c3084fee9da242ad805d13a2c61218f67e40d5d37adfd0c12e6",
+      "archive_sha256_recorded": "ee90d464a7b4b85b15f4aa175bb49fa312e049170ae181d3e9e28691f0496321",
+      "frames_checked": 10000,
+      "images_and_masks_checked": 20000,
+      "unique_image_png_hashes": 10000,
+      "decoder": "OpenCV 4.12.0 IMREAD_UNCHANGED"
+    },
+    "splits": {
+      "train": {
+        "sources": 72,
+        "frames": 7200,
+        "eligible_centers": 6048,
+        "positive_centers": 5874,
+        "empty_centers": 174,
+        "components_at_centers": 5874,
+        "distinct_native_shapes_hw": 69
+      },
+      "dev": {
+        "sources": 8,
+        "frames": 800,
+        "eligible_centers": 672,
+        "positive_centers": 672,
+        "empty_centers": 0,
+        "components_at_centers": 672,
+        "distinct_native_shapes_hw": 8
+      },
+      "test": {
+        "sources": 20,
+        "frames": 2000,
+        "eligible_centers": 1680,
+        "positive_centers": 1466,
+        "empty_centers": 214,
+        "components_at_centers": 1466,
+        "distinct_native_shapes_hw": 20
+      }
+    },
+    "train_statistics": {
+      "population": "Count one object proxy per 8-connected component in each eligible native training center mask.",
+      "component_width_px": {
+        "n": 5874,
+        "min": 2.0,
+        "median": 7.0,
+        "p90": 9.0,
+        "p95": 10.0,
+        "max": 14.0
+      },
+      "component_height_px": {
+        "n": 5874,
+        "min": 2.0,
+        "median": 7.0,
+        "p90": 9.0,
+        "p95": 10.0,
+        "max": 14.0
+      },
+      "component_area_px": {
+        "n": 5874,
+        "min": 4.0,
+        "median": 36.0,
+        "p90": 54.0,
+        "p95": 60.0,
+        "max": 99.0
+      },
+      "adjacent_center_pairs": 5976,
+      "single_component_pair_centroid_shift_px_per_frame": {
+        "n": 5802,
+        "min": 0.0,
+        "median": 1.4399194758722662,
+        "p90": 2.9449385957149934,
+        "p95": 3.4112251183132525,
+        "max": 6.722917847576413
+      },
+      "overlapping_single_component_pair_centroid_shift_px_per_frame": {
+        "n": 5802,
+        "min": 0.0,
+        "median": 1.4399194758722662,
+        "p90": 2.9449385957149934,
+        "p95": 3.4112251183132525,
+        "max": 6.722917847576413
+      },
+      "motion_interpretation": "Measure image-plane centroid displacement between consecutive eligible centers with one component in each. The overlap subset also shares mask pixels and favors smaller shifts. Object identity, camera compensation and speed ground truth are unavailable. A disappearing object could be replaced by a different visible object. The range describes the sampled pairs."
+    },
+    "train_samples": {
+      "positive": {
+        "source_id": "Sequence1",
+        "number": 9,
+        "height": 157,
+        "width": 209,
+        "components": 1
+      },
+      "negative": {
+        "source_id": "Sequence17",
+        "number": 9,
+        "height": 209,
+        "width": 302,
+        "components": 0
+      },
+      "different_size": {
+        "source_id": "Sequence2",
+        "number": 9,
+        "height": 324,
+        "width": 323,
+        "components": 1
+      }
+    }
+  },
+  "mat_alignment": {
+    "pairs_checked": 10000,
+    "matching_pairs": 10000,
+    "mismatching_pairs": 0,
+    "mat_archive_hash_matches": 10000,
+    "history_planes_checked": 39000,
+    "matching_history_planes": 39000,
+    "by_split": {
+      "train": {
+        "pairs_checked": 7200,
+        "matching_pairs": 7200
+      },
+      "dev": {
+        "pairs_checked": 800,
+        "matching_pairs": 800
+      },
+      "test": {
+        "pairs_checked": 2000,
+        "matching_pairs": 2000
+      }
+    },
+    "mismatch_examples": []
+  },
+  "backgrounds": {
+    "method": "Exact duplicate keys use native dimensions, mode and SHA256 of decoded pixels. Rank cross-split source pairs by Pearson correlation of the two first listed frames resized to 24x24 with Pillow BOX. Exclude flat thumbnails from ranking. For the highest-scoring pair also compare the first, quartile and last listed frames, and four fixed quadrants (TL,TR,BL,BR) at 96x96. These descriptive scores measure image similarity; physical source identities are unknown.",
+    "decoded_frames": 10000,
+    "exact_cross_split_duplicate_frames": 0,
+    "cross_split_pairs": 2176,
+    "cross_split_pairs_by_group": {
+      "dev-test": 160,
+      "dev-train": 576,
+      "test-train": 1440
+    },
+    "comparable_pairs": 2176,
+    "top_pairs": [
+      {
+        "left": "Sequence15",
+        "left_split": "train",
+        "right": "Sequence97",
+        "right_split": "test",
+        "correlation": 0.9794998325213317
+      },
+      {
+        "left": "Sequence14",
+        "left_split": "train",
+        "right": "Sequence87",
+        "right_split": "test",
+        "correlation": 0.8995601863458091
+      },
+      {
+        "left": "Sequence7",
+        "left_split": "train",
+        "right": "Sequence90",
+        "right_split": "test",
+        "correlation": 0.8969631711603577
+      },
+      {
+        "left": "Sequence35",
+        "left_split": "train",
+        "right": "Sequence90",
+        "right_split": "test",
+        "correlation": 0.8920935983271602
+      },
+      {
+        "left": "Sequence24",
+        "left_split": "train",
+        "right": "Sequence94",
+        "right_split": "test",
+        "correlation": 0.8851786257036662
+      }
+    ],
+    "top_pair_temporal_checks": [
+      {
+        "left_frame": 1,
+        "right_frame": 1,
+        "correlation_24": 0.9794998325213317,
+        "correlation_96": 0.9436794722741266,
+        "quadrant_correlations_96": [
+          0.9499654219217576,
+          0.9537251416015251,
+          0.8849151025218651,
+          0.9473670125635524
+        ]
+      },
+      {
+        "left_frame": 25,
+        "right_frame": 25,
+        "correlation_24": 0.9783429984468526,
+        "correlation_96": 0.9409373416686986,
+        "quadrant_correlations_96": [
+          0.9363763555869613,
+          0.921600314747149,
+          0.8845778934682619,
+          0.9498101140716245
+        ]
+      },
+      {
+        "left_frame": 50,
+        "right_frame": 50,
+        "correlation_24": 0.9783201274842631,
+        "correlation_96": 0.9391295572199986,
+        "quadrant_correlations_96": [
+          0.9482967359993981,
+          0.9103411094137799,
+          0.881437493688182,
+          0.9474428699446503
+        ]
+      },
+      {
+        "left_frame": 75,
+        "right_frame": 75,
+        "correlation_24": 0.979868803394002,
+        "correlation_96": 0.9431569509613487,
+        "quadrant_correlations_96": [
+          0.9514400932824737,
+          0.9362140570863424,
+          0.8839465347305422,
+          0.9491574240523384
+        ]
+      },
+      {
+        "left_frame": 100,
+        "right_frame": 100,
+        "correlation_24": 0.9808170771880936,
+        "correlation_96": 0.9459874213293853,
+        "quadrant_correlations_96": [
+          0.9521175278207826,
+          0.9593200484022739,
+          0.8878416178293725,
+          0.9492717404404939
+        ]
+      }
+    ]
+  },
+  "split_independence": {
+    "released_sequence_ids": "verified_disjoint",
+    "physical_capture_or_background_ids": "unverified"
+  },
+  "loader": {
+    "passed_tests": [
+      "heterogeneous_train_dataloader",
+      "inference_fields_and_dtypes",
+      "opencv_all_17_native_pixels",
+      "center_index_offsets_ids_and_geometry",
+      "native_mask_and_components",
+      "right_bottom_padding_validity_and_ignore",
+      "inference_opens_only_source_images",
+      "inference_equals_supervised_inputs",
+      "fixture_8_connected_objects_xyxy_centroids",
+      "reject_missing_context_frame",
+      "reject_temporal_wrap_at_both_ends",
+      "reject_repeated_source_across_splits",
+      "reject_shifted_center_mask",
+      "reject_image_mask_role_swaps",
+      "reject_cross_source_context",
+      "reject_nonbinary_mask",
+      "reject_center_mask_shape_change",
+      "reject_context_frame_shape_change"
+    ],
+    "sample_ids": [
+      "Sequence1/00009",
+      "Sequence17/00009",
+      "Sequence2/00009"
+    ],
+    "batch_shapes": {
+      "frames": [
+        3,
+        17,
+        1,
+        324,
+        323
+      ],
+      "time_offsets": [
+        3,
+        17
+      ],
+      "pixel_valid": [
+        3,
+        17,
+        1,
+        324,
+        323
+      ],
+      "target_map": [
+        3,
+        1,
+        324,
+        323
+      ],
+      "ignore_map": [
+        3,
+        1,
+        324,
+        323
+      ]
+    },
+    "samples": [
+      {
+        "role": "positive",
+        "frame_id": "Sequence1/00009",
+        "original_hw": [
+          157,
+          209
+        ],
+        "components": 1,
+        "foreground_pixels": 25
+      },
+      {
+        "role": "negative",
+        "frame_id": "Sequence17/00009",
+        "original_hw": [
+          209,
+          302
+        ],
+        "components": 0,
+        "foreground_pixels": 0
+      },
+      {
+        "role": "different_size",
+        "frame_id": "Sequence2/00009",
+        "original_hw": [
+          324,
+          323
+        ],
+        "components": 1,
+        "foreground_pixels": 76
+      }
+    ],
+    "figure": "S0_samples.png"
+  },
+  "remaining_limits": [
+    "synthetic_release",
+    "no_physical_scene_ids",
+    "no_velocity_or_track_ids",
+    "official_test_previously_used",
+    "17_frame_subset",
+    "no_model_training",
+    "no_empty_dev_centers",
+    "background_similarity_across_splits"
+  ],
+  "figure_sha256": "b0a1d6c8228b23a33d8335129d8d789751762f9328f33c7a665ee55dc568e676",
+  "finished_utc": "2026-11-18T11:49:07.378374+00:00"
+}

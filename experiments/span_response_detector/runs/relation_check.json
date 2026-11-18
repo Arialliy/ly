@@ -1,0 +1,71 @@
+{
+  "torch": "2.7.0+cu128",
+  "device": "cpu",
+  "toy": {
+    "short_medium_long_Q_vx_neighbor": [
+      0.06622516363859177,
+      0.22900763154029846,
+      0.594059407711029
+    ],
+    "short_medium_long_Q_vy_neighbor": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "changing_encoded_channels": [
+      0.06622516363859177,
+      0.1627824604511261,
+      0.3650517761707306
+    ],
+    "steady_sharp_encoded_channels": [
+      0.594059407711029,
+      0.0,
+      0.0
+    ],
+    "stronger_neighbor_signed_Q": -0.05847953259944916,
+    "cold_target_checked": true,
+    "validity_isolated_by_anchor_exchange_and_velocity": true
+  },
+  "raw_sampler_integration": {
+    "shape": [
+      2,
+      2,
+      2,
+      3,
+      5,
+      5
+    ],
+    "known_velocity_xy": [
+      1,
+      -1
+    ],
+    "estimated_velocity_xy_per_exchange": [
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "independent_Q_at_one_neighbor": [
+      0.6633897423744202,
+      0.6635107398033142,
+      0.8456456661224365
+    ],
+    "reconstructed_Q_at_one_neighbor": [
+      0.6633897423744202,
+      0.6635107398033142,
+      0.8456456661224365
+    ],
+    "border_mask_checked": true
+  },
+  "status": "pass",
+  "scope": "Synthetic correctness and existing sampler interface only; no training or collected video.",
+  "source_sha256": {
+    "check_span_relations.py": "e954139430f116bdec1e18becbc02ec47c482961bff389ee1e5f17c8a66ec389",
+    "span_relations.py": "0ff2c5f59aaa20e66a5a7ec0e1de9fc4cdd83edbf1c18da1b6381062144bafff",
+    "motion_evidence.py": "8160acea9cc1be0da44a3ea417d65824931af851ca3b4e835df669df93a94835"
+  }
+}

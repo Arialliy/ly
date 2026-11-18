@@ -1,0 +1,48 @@
+version: 1
+task: center_frame_mask
+data:
+  dataset: NUDT-MIRSDT
+  kind: synthetic_video
+  manifest: manifests/nudt_mirsdt_mask17.json
+  split_unit: released_sequence_id
+  dev_sources_from_official_train: 8
+  split_seed: 46
+  training_seed: 46
+  unassigned_sources: exclude
+input:
+  clip_length: 17
+  center_index: 8
+  offsets_unit: original_frame_interval
+  context: eight_past_and_eight_future
+  boundary: require_every_physical_frame
+  intensity: native_uint8_divided_by_255
+  spatial_transform: identity
+  batch_padding: bottom_and_right_invalid
+  coordinates: xy_in_original_pixels
+  channel_count: 1
+target:
+  mode: mask
+  source: native_masks_png
+  binary_values: [0, 255]
+  empty_center_mask: include
+  foreground_connectivity: 8
+  output: native_center_frame_logits
+  bbox_convention: xyxy_exclusive
+evaluation:
+  center_set: all_eligible_including_empty_and_border_regions
+  primary_units: {detection: matched_components_per_gt_component, false_alarms: unmatched_peaks_per_center_frame}
+  budgets_fp_per_frame: [0.5, 1.0, 5.0]
+  peak: native_score_eight_connected_regional_maximum
+  plateau: one_peak_minimum_y_then_x
+  deduplicate: greedy_descending_score_then_y_then_x
+  suppression_chebyshev_radius_px: 2
+  match: maximum_cardinality_then_minimum_total_euclidean_distance
+  gt_location: centroid_of_native_mask_component
+  match_max_distance_px_inclusive: 3
+  threshold: retain_score_greater_than_or_equal
+  tied_scores: include_as_a_group
+  sweep: include_empty_prediction_set_and_all_distinct_scores
+  dev_threshold: highest_recall_within_budget_then_fewer_fp_then_highest_threshold
+  report: [dev_threshold_transfer, descriptive_froc_at_or_below_budget, tp_fp_counts, per_sequence]
+  native_benchmark: use_author_evaluator_with_its_annotated_frame_set_and_settings
+  restricted_center_subset: label_as_17_frame_subset_when_official_coverage_differs
