@@ -1,0 +1,74 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-12T13:32:37.887075+00:00",
+  "single_project_root": "/home/ly/DeepProPlus_TLFP_Code",
+  "all_existing_project_code_data_results_weights_local": true,
+  "original_external_project_removed": true,
+  "relocated_original": "archive/original_project",
+  "all_internal_symlinks_valid": 43,
+  "results_and_weights_preserved": true,
+  "data": {
+    "full_public_datasets_bundled": [
+      "NUDT-MIRSDT",
+      "VT-Tiny-MOT"
+    ],
+    "full_public_archive_zip_bytes": 3475675928,
+    "public_extracted_files": 142040,
+    "frozen_selected_clips": 14,
+    "frozen_selected_frames": 2240,
+    "frozen_selected_annotations": 70276,
+    "author_rgbt_gaussian_masks_available": false,
+    "missing_scope": "Author-generated RGBT masks/exact parameters were never obtained; full public box archives do not reproduce them."
+  },
+  "source_validation": {
+    "scope": "curated sources/ subset",
+    "files": 55,
+    "python_files": 53,
+    "byte_identical_to_original": true,
+    "prior_cpu_tests_passed": 37,
+    "complete_historical_source": "archive/",
+    "new_experiment_source": "experiments/head_lfp_joint_20261012/code/"
+  },
+  "historical_tlfp_subset": {
+    "files": 247,
+    "reference_assets": 12,
+    "visualization_png_pdf_pairs": 11,
+    "path": "results/tlfp_pilot_20261012/"
+  },
+  "current_experiment": {
+    "path": "experiments/head_lfp_joint_20261012",
+    "workflow": "COMPLETE",
+    "conditions": [
+      "H",
+      "HL"
+    ],
+    "seed": 46,
+    "steps_per_condition": 2048,
+    "evaluation_steps": [
+      512,
+      1024,
+      2048
+    ],
+    "threshold": 0.5,
+    "development_clips": 2,
+    "strict_small_target_frames": 5200,
+    "heldout_confirmation_run": false,
+    "cpu_actual_model_tests_passed": 6,
+    "gpu_integration": "PASS",
+    "paired_training_audit": "PASS",
+    "result_interpretation_audit": "PASS",
+    "plot_review": "PASS",
+    "new_visualization_png_pdf_pairs": 1,
+    "report": "experiments/head_lfp_joint_20261012/RESULTS.md",
+    "decision": "experiments/head_lfp_joint_20261012/DECISION.md"
+  },
+  "environment": {
+    "python_overlay": "environment/site",
+    "docker_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "requirements": "Validated local Docker image, Docker daemon and compatible NVIDIA driver; all project mounts source this folder."
+  },
+  "validation": "validation/FINAL_EXPERIMENT_AND_LOCATION.json",
+  "complete_file_inventory": "PACKAGE_MANIFEST.json",
+  "manifest_verification_command": "python3 tools/package_manifest.py verify",
+  "visualization_gallery": "visualizations/index.html"
+}

@@ -1,0 +1,195 @@
+{
+  "scope": "two earlier civil traffic development sources only; frozen trained C/D, no tuning, no training",
+  "intervention": "exchange short and long span off-center joint patches at all full-support interior locations, fixed boundaries",
+  "example": {
+    "before": [
+      7.0,
+      8.0,
+      1.0
+    ],
+    "after": [
+      1.0,
+      8.0,
+      7.0
+    ],
+    "subsets_each_direction": [
+      [
+        [
+          4.0,
+          8.0,
+          3.999999761581421
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          4.0,
+          8.0,
+          3.999999761581421
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ],
+        [
+          4.0,
+          8.0,
+          4.0
+        ]
+      ]
+    ],
+    "against_stable_max_error": 2.384185791015625e-07
+  },
+  "rows": [
+    {
+      "seq": "DJI_0026_2",
+      "t": 19,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.1044168472290039,
+      "frac_d_over_1e_minus_4": 0.9688531807175875
+    },
+    {
+      "seq": "DJI_0026_2",
+      "t": 59,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.1077883243560791,
+      "frac_d_over_1e_minus_4": 0.9682661970797564
+    },
+    {
+      "seq": "DJI_0026_2",
+      "t": 99,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.10851538181304932,
+      "frac_d_over_1e_minus_4": 0.9654156577885391
+    },
+    {
+      "seq": "DJI_0026_2",
+      "t": 139,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.10531949996948242,
+      "frac_d_over_1e_minus_4": 0.9697373248220705
+    },
+    {
+      "seq": "DJI_0067_2",
+      "t": 19,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.18293070793151855,
+      "frac_d_over_1e_minus_4": 0.9119854721549637
+    },
+    {
+      "seq": "DJI_0067_2",
+      "t": 59,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.20258426666259766,
+      "frac_d_over_1e_minus_4": 0.9051397754787586
+    },
+    {
+      "seq": "DJI_0067_2",
+      "t": 99,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.20381152629852295,
+      "frac_d_over_1e_minus_4": 0.9023112480739599
+    },
+    {
+      "seq": "DJI_0067_2",
+      "t": 139,
+      "n": 272580,
+      "max_c_change": 0.0,
+      "parity_error": 0.0,
+      "median_d_change": 0.2058875560760498,
+      "frac_d_over_1e_minus_4": 0.895021645021645
+    }
+  ],
+  "n_pixels": 2180640,
+  "fraction_d_abs_logit_change_gt_1e_minus_4": 0.9358413126421601,
+  "median_d_abs_logit_change": 0.1399521827697754,
+  "p90_d_abs_logit_change": 0.5698342323303223,
+  "counts": {
+    "reference_D": {
+      "0.5": {
+        "tp": 6,
+        "fp": 3,
+        "fn": 297,
+        "recall": 0.019801980198019802,
+        "fp_per_frame": 0.375,
+        "logit_threshold": 32.816314697265625
+      },
+      "1": {
+        "tp": 14,
+        "fp": 8,
+        "fn": 289,
+        "recall": 0.0462046204620462,
+        "fp_per_frame": 1.0,
+        "logit_threshold": 17.2835750579834
+      },
+      "5": {
+        "tp": 34,
+        "fp": 40,
+        "fn": 269,
+        "recall": 0.11221122112211221,
+        "fp_per_frame": 5.0,
+        "logit_threshold": 8.353572845458984
+      }
+    },
+    "swapped_D": {
+      "0.5": {
+        "tp": 6,
+        "fp": 3,
+        "fn": 297,
+        "recall": 0.019801980198019802,
+        "fp_per_frame": 0.375,
+        "logit_threshold": 32.816314697265625
+      },
+      "1": {
+        "tp": 13,
+        "fp": 8,
+        "fn": 290,
+        "recall": 0.0429042904290429,
+        "fp_per_frame": 1.0,
+        "logit_threshold": 17.75364875793457
+      },
+      "5": {
+        "tp": 30,
+        "fp": 37,
+        "fn": 273,
+        "recall": 0.09900990099009901,
+        "fp_per_frame": 4.625,
+        "logit_threshold": 9.233880043029785
+      }
+    }
+  }
+}

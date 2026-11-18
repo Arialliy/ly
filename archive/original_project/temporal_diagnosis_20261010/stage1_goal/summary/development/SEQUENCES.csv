@@ -1,0 +1,9 @@
+variant,sequence,original_fused_match,candidate_fused_match,fused_gain,fused_loss,window_gain,window_loss,window_count,original_window_matches,candidate_window_matches,any_to_none,none_to_any,original_all_match,all_to_not_all,protected_original,protected_lost,a_original_match,b_original_match,a_candidate_match,b_candidate_match,a_candidate_ge05,b_candidate_ge05,a_candidate_ge09,b_candidate_ge09,candidate_all_box_low,candidate_all_box_high,candidate_box_flip,response_flip_to_both_low,n,tracks,fused_net,protected_loss_rate,protection_satisfied
+paired_mean,DJI_0028_2,61,197,137,1,421,4,642,177,594,1,138,61,1,61,1,64,63,199,201,214,214,214,214,0,214,0,0,214,3,136,0.01639344262295082,False
+paired_mean,DJI_0028_4,277,464,188,1,575,4,1410,834,1405,0,184,266,4,266,1,266,281,460,465,465,465,465,465,0,465,0,0,465,6,187,0.0037593984962406013,True
+paired_mean,DJI_0032_5,132,252,122,2,425,6,893,365,784,0,129,89,4,89,1,92,142,257,249,273,267,262,262,9,259,21,0,289,17,120,0.011235955056179775,False
+paired_mean,DJI_0047_3,79,303,231,7,696,20,1349,225,901,9,294,47,1,47,1,47,97,304,302,372,368,339,340,22,310,117,0,449,7,224,0.02127659574468085,False
+paired_max,DJI_0028_2,61,194,137,4,418,13,642,177,582,2,137,61,6,61,4,64,63,195,197,214,214,214,214,0,214,0,0,214,3,133,0.06557377049180328,False
+paired_max,DJI_0028_4,277,464,188,1,574,4,1410,834,1404,0,184,266,4,266,0,266,281,459,465,465,465,465,465,0,465,0,0,465,6,187,0.0,True
+paired_max,DJI_0032_5,132,253,125,4,429,10,893,365,784,0,134,89,5,89,3,92,142,256,247,278,272,270,267,5,267,17,0,289,17,121,0.033707865168539325,False
+paired_max,DJI_0047_3,79,292,221,8,679,18,1349,225,886,10,279,47,1,47,1,47,97,293,300,382,385,357,357,24,332,93,0,449,7,213,0.02127659574468085,False

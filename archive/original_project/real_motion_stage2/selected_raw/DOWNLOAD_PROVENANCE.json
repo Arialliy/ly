@@ -1,0 +1,984 @@
+{
+  "source_url": "https://drive.google.com/file/d/17CgPc3huCf-KMr-I9zFVqmV0hzBVky9w/view",
+  "official_public_form_used": true,
+  "range_only": true,
+  "archive_bytes": 2448061811,
+  "transferred_bytes": 1228881,
+  "transfer_budget": 49980000,
+  "members": [
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00173.jpg",
+      "bytes": 9398,
+      "sha256": "a016537766f0b01fde9a173f7cda1e66c75617355248b4da3d3fe4c3e17382a8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00174.jpg",
+      "bytes": 9390,
+      "sha256": "de018c3381f22348f6121b23be41be9fc5a94a0c1c33405e262275b054e09fb7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00175.jpg",
+      "bytes": 9430,
+      "sha256": "1501850d4361b8e083d4b7293e37bc3c5eec98c5c5400a1e75ba6e046da4af18",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00176.jpg",
+      "bytes": 9382,
+      "sha256": "9b5ba4384fd9716acfd242b376e43dee5a84e5916003f64a6280582795a58371",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00177.jpg",
+      "bytes": 9396,
+      "sha256": "519122720da9366e6fb32fedd4620889601880ba017a846d6f427335782118fb",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00178.jpg",
+      "bytes": 9410,
+      "sha256": "ecdc3c227383748bda75d79142e8bef22dc37cc8efd76acb4b3b79e7e2bd0153",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00179.jpg",
+      "bytes": 9406,
+      "sha256": "995467d844e36193ad4f0743559cc3f6284b1edaac0d3650c4f2a8637486a894",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00180.jpg",
+      "bytes": 9381,
+      "sha256": "090b9438d930756e038cb89ec546cebda3aaf9847f5e10d43144d38ab46c88b0",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00181.jpg",
+      "bytes": 9437,
+      "sha256": "a8e2f1d38ad95f5113f1eda40b41eb9ed90813e26f048ed106ede82a721c24d0",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00182.jpg",
+      "bytes": 9334,
+      "sha256": "8d9c7143cb2df59a4e7964b21eb867f671aab2a57fd157d76ec5563459e63fc2",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00183.jpg",
+      "bytes": 9409,
+      "sha256": "cb37609f82c942243e2de3acd9bf701e80c992a096021198ffa245659b1dee17",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00184.jpg",
+      "bytes": 9404,
+      "sha256": "e3947d527f93c173ee5354069833d5007045ec3deeb0eebc10e481888cac13ea",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00185.jpg",
+      "bytes": 9411,
+      "sha256": "04eef0b501471e6f0bb3921cb57ded685bca3730f52faa912fe0b2d0224800d3",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00186.jpg",
+      "bytes": 9382,
+      "sha256": "168c56d791df3e660cb3920b2dc32c7ec9985f7376188ce1fff5f3be324c023c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00187.jpg",
+      "bytes": 9388,
+      "sha256": "a119fa08a51fb824fde7041e2d31703ebe8a08ec0906847552f35d0fe60b08d3",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00188.jpg",
+      "bytes": 9418,
+      "sha256": "21d414f408c60aaffa69d3c9d762437db7d4c86bf58a531bb0e79ea1d36aa1c7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00189.jpg",
+      "bytes": 9389,
+      "sha256": "037f3af263d9e31fbb21bfae25c9dd5b9905b483f607c49ed434a75803047a2e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00190.jpg",
+      "bytes": 9401,
+      "sha256": "c5f3c37ab7f6d203242656fb2f9f2f56f64bad75c445d2cda327896e5d601f48",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00191.jpg",
+      "bytes": 9364,
+      "sha256": "5b3f3ee2e49374c37db4add5e03c831ccd85a77409c82ef626729f13530d7d84",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00192.jpg",
+      "bytes": 9375,
+      "sha256": "4b55d3b42b4aac6d86198f9fec3f4800ef7905c5bb270d75e67817cac550b106",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00193.jpg",
+      "bytes": 9476,
+      "sha256": "d2aa0536bcb9a0ef70c42cff082821e259afcc97ef92b5290a2151cd87ac156a",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00194.jpg",
+      "bytes": 9457,
+      "sha256": "42bd2f6beb38da21b267fb400973c2f80a5dc2c14bee6d77e0955857f675f411",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00195.jpg",
+      "bytes": 9410,
+      "sha256": "83b423067b6d4001b5d1ce79b22e6933f4e848ae7703d44585385c25b996deb8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00196.jpg",
+      "bytes": 9422,
+      "sha256": "1c3c951c5daee8b5f537ecb024bfd223b4ad8de95d5e009a6926fcd43f39cead",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00197.jpg",
+      "bytes": 9369,
+      "sha256": "f5ea1a43456ad1e63f4cf7e846399fa58e0223d4d70942007cf3e4d4dde2f653",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00198.jpg",
+      "bytes": 9345,
+      "sha256": "74d8c472120a4fdd67413fc0df7a2ff46d87ffc02a14a2ea02447768950ba4ff",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00199.jpg",
+      "bytes": 9334,
+      "sha256": "cca45a58dec88da711a6a4560e77ce1733a2546a803ecdb38b2676fa96a8eca6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00200.jpg",
+      "bytes": 9359,
+      "sha256": "8f758f5e56540bfbf0346636e6eb539d3a2e4503af318cb00dfc32ac76c262d9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00201.jpg",
+      "bytes": 9350,
+      "sha256": "e4d05e9195b491b48fd6bd127819c0c8d080621271904ac003a69c18b35e7fd5",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00202.jpg",
+      "bytes": 9278,
+      "sha256": "ac570a226f6e170c6fb6ecbdf53933c2ce4e889a65203c458ab16f9ec6a54ad9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00203.jpg",
+      "bytes": 9309,
+      "sha256": "884ac30863bd62766d06f668636126d2ce6aac58439c2f1b8bd48970b61bd7ed",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00204.jpg",
+      "bytes": 9330,
+      "sha256": "f4c7ba8e585a87331be4ef73eb09b20c2ca4b6523b5bcb43479d6ce2c61ac0f9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00205.jpg",
+      "bytes": 9447,
+      "sha256": "01379019826e3b31fc78302b1fc53e99fdd155e2c2c7ce8df561b92788010bac",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00206.jpg",
+      "bytes": 9459,
+      "sha256": "1c8288070b0a843d7cdfd4ba8f4c3bfa5b8cabafac8f7a0222472ad734329ffc",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00207.jpg",
+      "bytes": 9436,
+      "sha256": "b9fea5d29e1bcca5acf364e065d5d17a5480e7b09d8d921de714faf0ad204006",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00208.jpg",
+      "bytes": 9445,
+      "sha256": "02c48e9e366355d3818f330e9d510d9d7a3864e4f47d914c56fed4d70345cb2a",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00209.jpg",
+      "bytes": 9438,
+      "sha256": "f00611839ae89b7df3e4423328947a63f199044c47bb00d490f336abe55abb7c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00210.jpg",
+      "bytes": 9510,
+      "sha256": "2199201028337f09c474e5347a0554991fd20e13e9325d8b05ac7f70552bc9ad",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00211.jpg",
+      "bytes": 9479,
+      "sha256": "48e294a4e02c9db085271da3494e66c905777b0b07121c0a788466e0801540e3",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00212.jpg",
+      "bytes": 9398,
+      "sha256": "0ecb5f9d2b2f4b4d1c39abe492055aa4a717d8207829210a7724c2b8e91cdda8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00213.jpg",
+      "bytes": 9437,
+      "sha256": "6284c17b3c122ddb6d7a3e134aa6a91797ed0b7797123b62e4fe5f33a85ace2b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00214.jpg",
+      "bytes": 9413,
+      "sha256": "97f0b5b7eda83e5f745bf3405ac116370135d5fe62bd55363f78f2ed731eb05d",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00215.jpg",
+      "bytes": 9428,
+      "sha256": "f972a63e26fd55e5f39358fdc2d6a50fb5b5e59838a473875b5d6d1a7260e1b1",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00216.jpg",
+      "bytes": 9444,
+      "sha256": "365d9628ed233c18e3952e94a2216bba2f63d8dd4626f66cd943d42c2b0f9b21",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00217.jpg",
+      "bytes": 9515,
+      "sha256": "e7d07168fa0d23198171b61df73a91a76f1b4693b11232bff317b75646faeb9f",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00218.jpg",
+      "bytes": 9484,
+      "sha256": "1f9cdc54d64932cf6743fe6deffac6a6f4cefb7803fd1f00646cecb7ccdd3642",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00219.jpg",
+      "bytes": 9494,
+      "sha256": "b05c388053de3a6886ccc76e0ef1e2e6ce678017c050c47258103eaf125e274b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00220.jpg",
+      "bytes": 9470,
+      "sha256": "0f1aa0453507654d9d08f7bf103e70d08d643b658020967358ca6e03022791ed",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00221.jpg",
+      "bytes": 9440,
+      "sha256": "abb939791653a997a12d1186d82b151dd06430d5ddf37d8fa462a627e0699f19",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00222.jpg",
+      "bytes": 9383,
+      "sha256": "2b696d18a862d3e164cf6a7bcb53f7c2b7d0d8b7f956e688d281d542384479c7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00223.jpg",
+      "bytes": 9420,
+      "sha256": "90feb82f2fcdeff5bf1adc937a9796245d3756c5fd4d8d1345ccbafe8cea0c87",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00224.jpg",
+      "bytes": 9434,
+      "sha256": "719147b2fee38d1dbfc5775905f8809a5769537ee52e2b0599a38644aadb1895",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00225.jpg",
+      "bytes": 9472,
+      "sha256": "5291221ac6a93cf63c04f2e4393c1e17740e3ad83ec2ac97603acc24676209a7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00226.jpg",
+      "bytes": 9469,
+      "sha256": "f1e0933f1c224052236bf4d5d20174dafe70556706c22818614d908edd303828",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00227.jpg",
+      "bytes": 9478,
+      "sha256": "9b5d736beb2b7ae235a82f20e9df3d8324d7a91d8e0037f3ae17678f0c73f1cb",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00228.jpg",
+      "bytes": 9523,
+      "sha256": "5b0fbf1f207cc5cc01bb8bfce80dc3ac12944b4b81bdb6bfbf6a2efcbda8f112",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00229.jpg",
+      "bytes": 9526,
+      "sha256": "314128a9c83ada03118e2f3fac8247a26d03f4c41d15a1cf10fc5b6cf94e7ce8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00230.jpg",
+      "bytes": 9495,
+      "sha256": "693b6b751b6d9c87dbd20272746a43d066d8546491b5ca7ea996cd2599c46b2b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00231.jpg",
+      "bytes": 9482,
+      "sha256": "56721c9d7500e443d23a6a1b034971b2c88a85577d7d52c3591e7c7d80c2f955",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00232.jpg",
+      "bytes": 9388,
+      "sha256": "4325798e64df8beb2c3a27faf7a1f7e3b32c949dcf92c606c2ef1a1a12d23382",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00233.jpg",
+      "bytes": 9448,
+      "sha256": "6225f97d45889f95fed8e5174f34b4f58c251cfe1aeeff54439f9d6be73cc6c5",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00234.jpg",
+      "bytes": 9407,
+      "sha256": "69879df06fb9d49238c60faad61086f9cce38604227770d688136777b639fae3",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00235.jpg",
+      "bytes": 9429,
+      "sha256": "94d8fb45329cb250b634760f88c55889a5a4176e6e967b436898c179366cd1b7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00236.jpg",
+      "bytes": 9437,
+      "sha256": "6f095d141ca309327e15233b48b1522ebab7787978092472f18c05b40b4eb35a",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00237.jpg",
+      "bytes": 9421,
+      "sha256": "6db83ae9b6cf60652a65fb1aa85f6e9ee793e36603ca1c0c860da19a8ea9ef57",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00238.jpg",
+      "bytes": 9381,
+      "sha256": "6ce2b928cd56581967c7a70a839c760462afa1a4f09e677301ec4b6c4765952e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00239.jpg",
+      "bytes": 9400,
+      "sha256": "0534b2e3ea4e5e6107e1e2ab7546a42ec435856567413bc86c44490892a4ffe6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00240.jpg",
+      "bytes": 9402,
+      "sha256": "c76b0493cb8b0d20bd271f6bfa888588eebe8df8a6cfa3ee413072f9e7f3d08a",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00241.jpg",
+      "bytes": 9388,
+      "sha256": "07867451f4efd6a7e9c9ecaee4508ba987b9f8e9957a4edf7412df5707e5f8b2",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00242.jpg",
+      "bytes": 9381,
+      "sha256": "23623c649f3ba2df092d47afd4e478adeb5225e3b3bdb67c0ba8bf4e6b148095",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00243.jpg",
+      "bytes": 9333,
+      "sha256": "38c8869ef17bf8b3f732545d639fbc7359c61f148b715c7981777806436950c9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00244.jpg",
+      "bytes": 9355,
+      "sha256": "2019b242c71c29b9440b6e51f8aa26b22d3f9ed6f752365a0616f76aa7eeedb7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00245.jpg",
+      "bytes": 9387,
+      "sha256": "78f64a6ba9fb1c3d25a531e75aa93ec021158ffcebf1fed4ff3dddea3e9c86c7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00246.jpg",
+      "bytes": 9431,
+      "sha256": "27f4f6d304b2952f1e1d8e575c1f0fb19ece6125e65d55f0ee499f6e6291e65c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00247.jpg",
+      "bytes": 9405,
+      "sha256": "518f9bb228d779fd34071ca086a213dd9e38cc99657aaaf988c15e2ad50afb6f",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00248.jpg",
+      "bytes": 9410,
+      "sha256": "b50e7f32a3877508d0e40502e95c23fe6fabf82c3fd0f0bf28338a0608548321",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00249.jpg",
+      "bytes": 9443,
+      "sha256": "b225b09a3d113815f072b5a8818b7d4bc51cbc8532dc6861ccaa7064156d82b6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00250.jpg",
+      "bytes": 9462,
+      "sha256": "a55007d04970a466f57377f4a55e3e27759a5ba9020e1d66a4879b55db9a3012",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00251.jpg",
+      "bytes": 9466,
+      "sha256": "8a7318ca2f1fb7a5f52e83466d4c6b1bc2d9bcddefb5be5620999d58d6d519d3",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00252.jpg",
+      "bytes": 9466,
+      "sha256": "087b98be4fb37cbb6e7396cb491516cf97a083ee9e063c3a65cdc06cf5aff355",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00253.jpg",
+      "bytes": 9546,
+      "sha256": "bdacc775e80605157587e3bfd453317291fdce3ebfcf0da21111f1606af1ff2c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00254.jpg",
+      "bytes": 9570,
+      "sha256": "eb4110e09de2a7ab28099f64bafe4790cabb48fe631a01b8b309404f2535f05e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00255.jpg",
+      "bytes": 9519,
+      "sha256": "45e5498edfbaa98eeeb82c8d9e1332af8cbfe9403209b3b0c4adaca7b3f90bf8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00256.jpg",
+      "bytes": 9528,
+      "sha256": "c31ba8b31fdecc8f2869b00368841a7edf1a2626df58e65447c98e3fc332747c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00257.jpg",
+      "bytes": 9530,
+      "sha256": "858b3a729fd26f70232b8f8cd5d0cf62cb758b950d745d3e8c80016011e8bda6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00258.jpg",
+      "bytes": 9488,
+      "sha256": "3750bb67b9de6c6c8d8a5acc03198e128475640b2241e86fc726918f5f914e70",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00259.jpg",
+      "bytes": 9544,
+      "sha256": "cc44de72f678762829704cdbc0ce3f6929f59dd9eedba417aa663c804c0db520",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00260.jpg",
+      "bytes": 9497,
+      "sha256": "9e57c3e837dce55f1fd8dc95c0fccc7123e60f75b6b8f8fda33b70ccc74bca48",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00261.jpg",
+      "bytes": 9573,
+      "sha256": "64cb6452dcf5a61379c33bb95cce62594f04dc8e791d6a25762040bffe07df95",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00262.jpg",
+      "bytes": 9554,
+      "sha256": "4cee604e2359d3ce3cd2f55d1311eeace1e71b7b5ceb114c09e9ddfc15770831",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00263.jpg",
+      "bytes": 9560,
+      "sha256": "8f56357618b1a05e20f189ab51d1f41b80569965b754d9bcaf5b433a4bd5c71c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00264.jpg",
+      "bytes": 9599,
+      "sha256": "16cf360fe530f5c34f1f761374ade7f1d5129fb5c8e418a2a4eb1dc252862bc1",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00265.jpg",
+      "bytes": 9579,
+      "sha256": "7bdaa096ac0e504e0777d5f13b3baf07a0638e72248ad5f42717761643614e0a",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00266.jpg",
+      "bytes": 9595,
+      "sha256": "13a8d88b65b802b7e613fda5fe52c2f88c41115fdc32bce5b63eb788f415e2c1",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00267.jpg",
+      "bytes": 9580,
+      "sha256": "6007e777071c4bd9330dedcfa879718ed8e93472213b2064b5353a6594e8d461",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00268.jpg",
+      "bytes": 9567,
+      "sha256": "2bf480ece618f19c77533cbe2423ba67e493030d6e71ce84efb8965ca65e928f",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00269.jpg",
+      "bytes": 9589,
+      "sha256": "cdd2a2d22c10c3088e8b1a9707ff0210f9c7f97857ed9f91d34429e98641836e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00270.jpg",
+      "bytes": 9584,
+      "sha256": "3fd829a5e1f907a3bfe3c17660fbb3e5a13fcb7cf4477959c45802e53ca1de61",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00271.jpg",
+      "bytes": 9593,
+      "sha256": "a9a25fb35a52bb3aaef38f71365d02adf9c6bff9f9ff40b5e273a55bcc9ad1e0",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00272.jpg",
+      "bytes": 9570,
+      "sha256": "02c76987aead28f1d56bba6f57dab929a1e22dc24acd657278b7d58ae14fdb93",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00273.jpg",
+      "bytes": 9568,
+      "sha256": "d8ab68852aeb2de89d837b383bcf0e89cc9eaf2ef28fab5cc70e1a038e025ac6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00274.jpg",
+      "bytes": 9630,
+      "sha256": "1f14817a2b84bd731967c32e2df48134bbc568322e85461035b31d73ca9dc846",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00275.jpg",
+      "bytes": 9612,
+      "sha256": "3fe24e1034297015cdd91df2b49b74d5ce2ff51982fdfef300987b899f03bc2b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00276.jpg",
+      "bytes": 9627,
+      "sha256": "039758536230e1124b6f0fab2d7563458937c6912b4308a47b3a83bdc992ada0",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00277.jpg",
+      "bytes": 9614,
+      "sha256": "2c377f20c472d2e10217ad2ee83bceeec6b77f581fba8e8fa81b8ef6b4285f15",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00278.jpg",
+      "bytes": 9614,
+      "sha256": "0a9ff4dd6e044cc1c299efe8203031635680cea8a836ad77991cc12fb4c839e2",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00279.jpg",
+      "bytes": 9648,
+      "sha256": "240da13418cd0b116b0ca6c2899aef78f256df7ab4b10c13a7d64f06e37f9c22",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00280.jpg",
+      "bytes": 9624,
+      "sha256": "9c2f70c4a73b2eac42902fb360e5e30687955615288be3d1fa82563cd5a3d09e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00281.jpg",
+      "bytes": 9591,
+      "sha256": "9b619371d5b59b82db607348d583138de4821878c3851a2733c7c2aed6a501a7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00282.jpg",
+      "bytes": 9550,
+      "sha256": "c21bbed5372fa7ec33cab70cd4676f5fadd0e5f2b67aa43e1d892d94f48d8df1",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00283.jpg",
+      "bytes": 9631,
+      "sha256": "4a8f46444cb2cf5bce3a240c5082e31bd193a2882d7fc20ddb528c438041fe80",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00284.jpg",
+      "bytes": 9626,
+      "sha256": "8c9c6e2ce66c55a13ea5d20ce1b5da1d4bb0e4f41591957d8a3c6e07adfd7e33",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00285.jpg",
+      "bytes": 9567,
+      "sha256": "19f64f9e745e08fb0435bac98fb6230a06b847c4bf2066032fcc3b56c26b8b23",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00286.jpg",
+      "bytes": 9584,
+      "sha256": "ec19cc19d9f79445d7fe59c6d9453040f20217271566d0b5192aa9a85a6538f5",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00287.jpg",
+      "bytes": 9627,
+      "sha256": "ca7c8ca953424fbd5570dbfe6a26dadbc10bf94ddcffbe54f69097ae0fa2f5c0",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00288.jpg",
+      "bytes": 9645,
+      "sha256": "fca0bfb38a5ec462dcf807bb33bc5a48d3309efd6ac77f511833c071b78d759d",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00289.jpg",
+      "bytes": 9658,
+      "sha256": "9065a3ec9ae4f4b73ff2733ef146aa0243cbde4b988631e387c13c44965ec004",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00290.jpg",
+      "bytes": 9663,
+      "sha256": "8ca81a64a150b55162732e680942676dd2b94ff235d21398950d143d2beffeef",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00291.jpg",
+      "bytes": 9628,
+      "sha256": "11d6653a00c7ea460ed85c6de08f120c52f26b7ef7766b2233a02ba344c557cb",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00292.jpg",
+      "bytes": 9532,
+      "sha256": "6ae112e236c6329b48b6f089ccd31cf286cc4a3a5a84046f3a8f827c8bf12ca6",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00293.jpg",
+      "bytes": 9572,
+      "sha256": "eaaa52b5f17458b80a2368232b93855587e523fb387f97af4302c7cc7b05a1a2",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00294.jpg",
+      "bytes": 9578,
+      "sha256": "7fbf65fe9de6f5d089149379f16e0330404dda59cf8795461885b7863ca89c50",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00295.jpg",
+      "bytes": 9588,
+      "sha256": "6b6752dd1c70a64d35b41b23dc2e906bd442beef4dc48b9cef4f3aa9456b4a13",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00296.jpg",
+      "bytes": 9600,
+      "sha256": "ec027095bc5d1244c3e8410717733d410a8193654047e3174814a9377ca45b1c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00297.jpg",
+      "bytes": 9600,
+      "sha256": "0e3ad521202e725cf2a486b7cccd85a5c8487b346976ae67a0526021259f0370",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00298.jpg",
+      "bytes": 9638,
+      "sha256": "741bf27eed83bec0a18126673c7286e9b890e45af4a2cc7d90d45a749b5f365e",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00299.jpg",
+      "bytes": 9566,
+      "sha256": "831deb4d222cc40a788b3098170da3f0a043acfffa6e8b5e8b50890e7bab48f9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00300.jpg",
+      "bytes": 9615,
+      "sha256": "8a74cb994cf5b751779fe8bdfb038d157ef9480bc243b230b1f63d2bdc2a96d7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00301.jpg",
+      "bytes": 9614,
+      "sha256": "af6081994a86d813646c62c9b38ef2cd7fe8f532489b0fe5aa8200a9203c5ef9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00302.jpg",
+      "bytes": 9553,
+      "sha256": "9482edabd435d48761f04c943dac3f85ba3595aa60243a8e0963d92e13277ec5",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00303.jpg",
+      "bytes": 9595,
+      "sha256": "f579876c32da608262cf25693b92ae3799570fde894492440045c480ece6e618",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00304.jpg",
+      "bytes": 9619,
+      "sha256": "6ace53f5800f3a6792970181365870a11ae8071179fecb4b2904c662f87afebf",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00305.jpg",
+      "bytes": 9626,
+      "sha256": "65a56df23184c5c9df8a5ab4e05cd1b82b90091b0f76eb9809b7a5d241f02ad9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00306.jpg",
+      "bytes": 9590,
+      "sha256": "6cf8786282ed4a7893ffd2e1584155a475e387941bcc1c8e86c70ded06a6c79c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00307.jpg",
+      "bytes": 9617,
+      "sha256": "b03aa623623c98894f40d6c58fc45de416e66f7954501ba7f30a42acc11befd7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00308.jpg",
+      "bytes": 9638,
+      "sha256": "e843b450a05417e339dcf1649b17a36f2fbd749cf29bfc5d015df7b8a108cc49",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00309.jpg",
+      "bytes": 9636,
+      "sha256": "46ba653e0f69a5d58ffcd406ca5c1f63c79a99a3406f47de43ba0ac6c4e425aa",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00310.jpg",
+      "bytes": 9620,
+      "sha256": "485c9a3e251f5971a44ebbf544da71da20171921261d1bff7af0ea4c7e42cfa9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00311.jpg",
+      "bytes": 9559,
+      "sha256": "ffea1e9e08c700d362e40002f018b5b8eba235f1b217cd6bf4498d16294ee7fe",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00312.jpg",
+      "bytes": 9439,
+      "sha256": "4a6aa7c643127f624ca26807f92d931dc47836343daa87c7b1fefba44d6f4cb2",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00313.jpg",
+      "bytes": 9539,
+      "sha256": "8859af68b3eb66baca8815b2a4a7cc713bef0575d710102e2e28fc44a6a4b76d",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00314.jpg",
+      "bytes": 9525,
+      "sha256": "642c298bad07f7dcf8c9f4a5ddf7838d9685dd242ff9ab14a5fdcdcd7a1518d8",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00315.jpg",
+      "bytes": 9573,
+      "sha256": "bfed132d3bfd0d8b1f12d578aea6cadf24c31411e974ecadb1715cf16bfe4593",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00316.jpg",
+      "bytes": 9524,
+      "sha256": "aeeb22ed683e86c800259caecedd6922042b185f7e5f96a642f12287b908cee9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00317.jpg",
+      "bytes": 9533,
+      "sha256": "1bc331b047910d31d90d6ef516fba2e7eebfc40b5faac3b0d468d20bdd67828c",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00318.jpg",
+      "bytes": 9522,
+      "sha256": "6720f728c90308cf335120844148c83c81f7e61f3c87fa434f15d07a3a7e94e9",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00319.jpg",
+      "bytes": 9529,
+      "sha256": "bb279ef428adfcbe55ee868d84cc8d4132fafc3bce8974643e488e8182d70192",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00320.jpg",
+      "bytes": 9536,
+      "sha256": "3406a3fc04998e60492bd148cfa2d8c005d2c4768767c519d1b6f2e8eaa3843b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00321.jpg",
+      "bytes": 9530,
+      "sha256": "fe52a18ce41974412660912d5f135120c36d551ca65ba0ef79b76108774708bc",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00322.jpg",
+      "bytes": 9362,
+      "sha256": "61b46db5fa532aff67c03426ca383fca89e13a65589979fe9ae15043371e3d99",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00323.jpg",
+      "bytes": 9451,
+      "sha256": "3615b43e2c020409c0edc844cf881bb6d74f4e2d1d09425f4029cbf3617baa83",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00324.jpg",
+      "bytes": 9449,
+      "sha256": "ef86da326013b310360a3b5474910afc247a100d9f8e94cc722c4dd2c5ee0bd7",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00325.jpg",
+      "bytes": 9486,
+      "sha256": "e98804548b94816508fb1cf12cd5959a009bae891e0a6c9b9e7af6b6d7c2232f",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00326.jpg",
+      "bytes": 9487,
+      "sha256": "95b3d638d3ee5104bb6ac5b8306c09995deaecc7a6fdf2580b049377494bce87",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00327.jpg",
+      "bytes": 9478,
+      "sha256": "e4a74684e2724df286c824e75eaa7ef25ea1ac12fa9110b6c24ba02533221db1",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00328.jpg",
+      "bytes": 9469,
+      "sha256": "5f1b58930088d9a4c3b81ebbe9112c88dd97643320237e610e5bb2f549711a63",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00329.jpg",
+      "bytes": 9530,
+      "sha256": "2f71e2ff60c9666cc3e95a397cee0683bc41aaafb8b89538ca95e566e7bbbe8b",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00330.jpg",
+      "bytes": 9507,
+      "sha256": "0f3ebca2d6ad8e10b5dc2ace616ff505b7772d7fb048757695ab90bcf0262f15",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00331.jpg",
+      "bytes": 9548,
+      "sha256": "7cc608487d490c6866a7e047be4886e45c1319a6f24b03d8f0312cd767261257",
+      "crc_verified": false
+    },
+    {
+      "member": "VT-Tiny-MOT/train2017/DJI_0028_2/01/00332.jpg",
+      "bytes": 9427,
+      "sha256": "e25a791d90f75548f33e253daa5f20b098a43b5da016dbe168c77ef985124877",
+      "crc_verified": false
+    }
+  ],
+  "response_body_bytes_including_form_and_retries": 1231344,
+  "response_body_budget_bytes": 50000000,
+  "form_response_bytes": 2463,
+  "helper_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/fetch_public_zip_subset.py",
+  "helper_sha256": "3e9dd53969b592ff08942a57d6429ebee543a458fd95ea6de0f95bd1fbdc39fc",
+  "acquisition_script_sha256": "caa1620259f42bdd2479a99f993da663a74038c09b7c6582b75f367a94ce9d81",
+  "selected_candidate_sha256": "0a2b806756bde6b7bce8fdb9b04db45c5c9c5cf35c83b48495d6a8207d316a67",
+  "reduced_manifest": "SELECTED_ZIP_MANIFEST.json",
+  "raw_bytes_preserved": true,
+  "sequence": "DJI_0028_2",
+  "target_original_track_id": 3800006,
+  "raw_start_frame": 173,
+  "raw_end_frame": 332,
+  "downloaded_frame_count": 160
+}

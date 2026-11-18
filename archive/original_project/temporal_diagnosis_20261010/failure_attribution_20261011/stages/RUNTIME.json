@@ -1,0 +1,98 @@
+[
+  {
+    "name": "deeppro_failure_stage_audit_20261011",
+    "id": "2f5f54083bc9bcf8623a3e978b9c55d1479b3ae443710bbe3cf554db41903a1e",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-11T11:58:59.755280771Z",
+      "FinishedAt": "2026-10-11T11:59:19.95459486Z"
+    },
+    "config": {
+      "entrypoint": [
+        "/opt/conda/bin/python3"
+      ],
+      "cmd": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/failure_attribution_20261011/stages/attribute_stages.py"
+      ],
+      "user": "1004:1004"
+    },
+    "resources": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "DeviceRequests": null
+    }
+  },
+  {
+    "name": "deeppro_failure_stage_figures_20261011",
+    "id": "5703d74cc5e2a96c7affabb7b7552f6e826dd73aa238d477d6160710ed5f02c3",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-11T12:00:43.299940942Z",
+      "FinishedAt": "2026-10-11T12:00:59.819972963Z"
+    },
+    "config": {
+      "entrypoint": [
+        "/opt/conda/bin/python3"
+      ],
+      "cmd": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/failure_attribution_20261011/stages/plot_fusion_traces.py"
+      ],
+      "user": "1004:1004"
+    },
+    "resources": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "DeviceRequests": null
+    }
+  },
+  {
+    "name": "deeppro_failure_stage_verification_20261011",
+    "id": "094e1873e7f721366240bd48401aaa040eeece9d6b66e2799c8e6de49c4d3559",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-11T12:01:56.149683881Z",
+      "FinishedAt": "2026-10-11T12:02:06.930740929Z"
+    },
+    "config": {
+      "entrypoint": [
+        "/opt/conda/bin/python3"
+      ],
+      "cmd": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/failure_attribution_20261011/stages/verify_stages.py"
+      ],
+      "user": "1004:1004"
+    },
+    "resources": {
+      "NanoCpus": 2000000000,
+      "Memory": 8589934592,
+      "DeviceRequests": null
+    }
+  }
+]

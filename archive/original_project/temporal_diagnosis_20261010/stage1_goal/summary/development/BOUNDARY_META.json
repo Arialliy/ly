@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "rule": "Original selected pair only, both slots 8..31 vs at least one outside",
+  "interpretation": "Descriptive, original response-dependent pair selection, no new causal claim",
+  "object_rows_sha256": "e4d9e522c06bdc4d87fdd4fe3a6da6c06600d412023aea9a06c05c3ce5df7ea4",
+  "output_sha256": "9423802832a57f918d1b73361d96f1c5a99fac3b0bfa8544b206466a03ec6424",
+  "script_sha256": "fe9e5535f72890a368c627a4602554347d645d0f857ad38c803fc9740980c09f"
+}

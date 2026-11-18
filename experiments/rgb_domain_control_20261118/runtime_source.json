@@ -1,0 +1,10 @@
+{
+  "filename": "onnxruntime-1.23.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "digests": {
+    "blake2b_256": "e980113381ba832d5e777accedc6cb41d10f9eca82321ae31ebb6bcede530cea",
+    "md5": "9fc788ccacb918827945156b3f0475fe",
+    "sha256": "da44b99206e77734c5819aa2142c69e64f3b46edc3bd314f6a45a932defc0b3e"
+  },
+  "url": "https://files.pythonhosted.org/packages/e9/80/113381ba832d5e777accedc6cb41d10f9eca82321ae31ebb6bcede530cea/onnxruntime-1.23.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "size": 17372080
+}

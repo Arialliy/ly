@@ -1,0 +1,34 @@
+{
+  "frozen_utc": "2026-10-09T17:45:36.171029+00:00",
+  "task": "analyze existing DeepPro-Plus failures; no new method or training",
+  "seed": 46,
+  "checkpoint_domain": "RGB-T official released checkpoint; this is distinct from completed nativeNUDTcheckpoint reproduction",
+  "clips": "first4 entries from frozen real_motion_stage2/INSPECTION_QUEUE.json; firstalreadyacquired; othersacquire regardless of predictions",
+  "window_policy": "official T40,stride36,lastanchored160; unmodified,maxoverlap; saveeverywindowbeforefusion",
+  "thresholds": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "prediction_representation": "8-connected components; peak pixel selected with row-major ties; center coordinate x+0.5,y+0.5",
+  "matching": "point-in-original-box edges, deterministic maximum-cardinality one-to-one,gt sorted trackid; do not call officialPd/Fa orAP",
+  "retained_targets": "ALL annotated nonignored targets perframe,selectedtrackmarked butnotexclusive",
+  "metrics": [
+    "per-track/frame one-to-one peak-in-box match",
+    "longest consecutive unmatched run",
+    "matched normalizedcentererror",
+    "component count/area and unmatched components (not verifiedfalsepositive)",
+    "continuous boxmax assecondaryresponseproxy",
+    "overlap same-frame per-window differences and withinwindowpositions"
+  ],
+  "blocks": "four disjoint40frame blocks for descriptive comparison; distinctfrommodelwindows; no causalityfromblockcorrelation",
+  "limitations": [
+    "bbox labels notpixelmasks",
+    "annotationpresence notverifiedvisibility",
+    "exactseqexclusion notsceneindependence",
+    "notofficialRGBTbenchmark",
+    "clip boundaries mayomitreal surroundingcontext; originalt40windowsusesthechosenclip",
+    "unmatchedcomponents mayincludeunannotatedobjects",
+    "no temporalfailurepreassumed"
+  ]
+}

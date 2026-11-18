@@ -1,0 +1,8 @@
+scope,query,choice_0026,choice_0067,small_matched,gained,lost,unmatched_components,positive_pixels_outside_boxes,positive_pixels,component_count,matched_count
+shared,M>=720,C03,C03,720,74,54,3967,38641,99357,7339,3372
+shared,lost=0,C09,C09,700,0,0,4015,38368,98381,7276,3261
+per_clip,M>=720,C03,C03,720,74,54,3967,38641,99357,7339,3372
+per_clip,M>=720,C06,C03,720,74,54,3968,38959,99698,7329,3361
+per_clip,M>=720,C08,C03,721,73,52,3935,38729,99438,7297,3362
+per_clip,lost=0,C08,C09,707,7,0,3949,38474,98456,7215,3266
+per_clip,lost=0,C09,C09,700,0,0,4015,38368,98381,7276,3261

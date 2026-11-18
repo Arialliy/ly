@@ -1,0 +1,980 @@
+{
+  "created_utc": "2026-11-17T17:37:54.269157+00:00",
+  "scope": "Read-only dataset/annotation audit; only explicit 8 train and 2 development clips accessed. No confirmation image or annotation accessed.",
+  "allowed_train": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "allowed_development": [
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "forbidden_confirmation": [
+    "DJI_0051_3",
+    "DJI_0075_3",
+    "DJI_0139_2",
+    "DJI_0343_3"
+  ],
+  "dataset_identity": "VT-Tiny-MOT public MOT annotation packaging of the RGBT-Tiny source domain; not independent datasets",
+  "source_source": "data/README.md; provenance/DATA_INVENTORY.json; per-clip manifest and annotations",
+  "loader_contract": {
+    "raw": "numpy.load(raw_array,mmap_mode=\"r\") with shape [frame,height,width], native uint8",
+    "frame_join": "FRAME_MANIFEST.frames[i].source_image_id -> annotation.image_id",
+    "track_identity": "Use (sequence, annotation.track_id); original tracking_id also retained and consistent in each inspected track. Identity accuracy not manually certified.",
+    "bbox": "[left,top,width,height], center=(left+width/2,top+height/2)",
+    "mask": "segmentation polygons are bbox rectangles; no native per-pixel target mask in this packaging",
+    "target_present": "Annotation presence does not establish visible target; visibility and interpolated-box flags absent",
+    "image_alias": "images/ and source_archive/.../01/ are hardlinked aliases, not independent data"
+  },
+  "total_frames": 1600,
+  "total_annotations": 33004,
+  "total_track_ids_within_sequence": 355,
+  "categories": [
+    {
+      "supercategory": "none",
+      "id": 0,
+      "name": "ship"
+    },
+    {
+      "supercategory": "none",
+      "id": 1,
+      "name": "car"
+    },
+    {
+      "supercategory": "none",
+      "id": 2,
+      "name": "cyclist"
+    },
+    {
+      "supercategory": "none",
+      "id": 3,
+      "name": "pedestrian"
+    },
+    {
+      "supercategory": "none",
+      "id": 4,
+      "name": "bus"
+    },
+    {
+      "supercategory": "none",
+      "id": 5,
+      "name": "drone"
+    },
+    {
+      "supercategory": "none",
+      "id": 6,
+      "name": "plane"
+    }
+  ],
+  "records": [
+    {
+      "sequence": "DJI_0030_9",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0030_9/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0030_9/annotations.json",
+        "manifest": "data/stage1/DJI_0030_9/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0030_9/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 2240,
+      "track_count": 15,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "0": 2240
+      },
+      "bbox_under16_each_dimension_count": 2122,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 2240
+      },
+      "crowd_counts": {
+        "0": 2240
+      },
+      "missing_frame_gaps_per_track": 3,
+      "maximum_missing_gap": 5,
+      "consecutive_track_steps": 2222,
+      "center_displacement_pixels": {
+        "median": 0.5,
+        "p95": 1.118033988749895,
+        "p99": 1.4142135623730951,
+        "maximum": 2.1213203435596424
+      },
+      "eight_frame_complete_annotation_track_windows": 2130,
+      "fps": 15,
+      "annotation_sha256": "456703b6d2510f4ca1d3902af598356329e67699f4d35c592d2b5de34fd73ee8",
+      "manifest_sha256": "78852a1fafd58114d9b919a93744179e97653bd5860f5869212468d42f0d905c"
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0043_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0043_2/annotations.json",
+        "manifest": "data/stage1/DJI_0043_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0043_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 11758,
+      "track_count": 96,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "1": 44,
+        "2": 50,
+        "3": 11664
+      },
+      "bbox_under16_each_dimension_count": 11708,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 11758
+      },
+      "crowd_counts": {
+        "0": 11758
+      },
+      "missing_frame_gaps_per_track": 123,
+      "maximum_missing_gap": 81,
+      "consecutive_track_steps": 11539,
+      "center_displacement_pixels": {
+        "median": 1.0,
+        "p95": 2.23606797749979,
+        "p99": 3.2015621187164243,
+        "maximum": 6.103277807866851
+      },
+      "eight_frame_complete_annotation_track_windows": 10792,
+      "fps": 15,
+      "annotation_sha256": "5980f23f6d44b40316a22c23681a53231a2420ccaf1114b54371688da5fbb5de",
+      "manifest_sha256": "0d0bd4018a4f37ca9b9384427a0a715d79c688ec9f0b54ab1994ce59704922d0"
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0057_1/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0057_1/annotations.json",
+        "manifest": "data/stage1/DJI_0057_1/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0057_1/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 480,
+      "track_count": 3,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "3": 320,
+        "5": 160
+      },
+      "bbox_under16_each_dimension_count": 320,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 480
+      },
+      "crowd_counts": {
+        "0": 480
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 477,
+      "center_displacement_pixels": {
+        "median": 0.7071067811865476,
+        "p95": 3.1622776601683795,
+        "p99": 4.709411968305807,
+        "maximum": 6.082762530298219
+      },
+      "eight_frame_complete_annotation_track_windows": 459,
+      "fps": 15,
+      "annotation_sha256": "74147cfd998f03906ae992364dfbce42fe1685f3b2ab817595154b8ad111a1ca",
+      "manifest_sha256": "11f149e7e6555ef2805196362ddc207a8775152197de51747699851a73c1ee8c"
+    },
+    {
+      "sequence": "DJI_0113_3",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0113_3/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0113_3/annotations.json",
+        "manifest": "data/stage1/DJI_0113_3/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0113_3/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 160,
+      "track_count": 1,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "6": 160
+      },
+      "bbox_under16_each_dimension_count": 160,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 160
+      },
+      "crowd_counts": {
+        "0": 160
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 159,
+      "center_displacement_pixels": {
+        "median": 1.0,
+        "p95": 1.4142135623730951,
+        "p99": 1.4142135623730951,
+        "maximum": 1.4142135623730951
+      },
+      "eight_frame_complete_annotation_track_windows": 153,
+      "fps": 15,
+      "annotation_sha256": "f8242786d6b6ea689c6c7653deb21997a29ffa7bf606a927640b14562454e249",
+      "manifest_sha256": "3af677560aee9ca143fd797d51ef43ac58b9c8086c3a00133ba8710b73eb1262"
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0115_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0115_2/annotations.json",
+        "manifest": "data/stage1/DJI_0115_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0115_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 629,
+      "track_count": 5,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "3": 480,
+        "6": 149
+      },
+      "bbox_under16_each_dimension_count": 399,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 629
+      },
+      "crowd_counts": {
+        "0": 629
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 624,
+      "center_displacement_pixels": {
+        "median": 0.5,
+        "p95": 3.0,
+        "p99": 3.0413812651491097,
+        "maximum": 4.0
+      },
+      "eight_frame_complete_annotation_track_windows": 600,
+      "fps": 15,
+      "annotation_sha256": "50dc9aae381bca0f7202875f1e58db3d345d6e6f12033b3360623b413fd82432",
+      "manifest_sha256": "8088afc33e67ee8fd5d22745d4998dfb87f9d1f28874a399d9f3a4a93e975ac0"
+    },
+    {
+      "sequence": "DJI_0217_2",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0217_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0217_2/annotations.json",
+        "manifest": "data/stage1/DJI_0217_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0217_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 480,
+      "track_count": 3,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "3": 320,
+        "5": 160
+      },
+      "bbox_under16_each_dimension_count": 212,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 480
+      },
+      "crowd_counts": {
+        "0": 480
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 477,
+      "center_displacement_pixels": {
+        "median": 0.0,
+        "p95": 3.640054944640259,
+        "p99": 5.110730447248956,
+        "maximum": 5.830951894845301
+      },
+      "eight_frame_complete_annotation_track_windows": 459,
+      "fps": 15,
+      "annotation_sha256": "8865fba60d47f9b3e1d53ce5c8e196869e2356cd781b8ff93ea4f0ed91bf3b5f",
+      "manifest_sha256": "fc7ac29fcfa7d4834a705ff40cd0b55a0c43e9ca7843a0e014d857e3d0bfcd56"
+    },
+    {
+      "sequence": "DJI_0309_1",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0309_1/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0309_1/annotations.json",
+        "manifest": "data/stage1/DJI_0309_1/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0309_1/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 160,
+      "track_count": 1,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "6": 160
+      },
+      "bbox_under16_each_dimension_count": 160,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 160
+      },
+      "crowd_counts": {
+        "0": 160
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 159,
+      "center_displacement_pixels": {
+        "median": 1.0,
+        "p95": 6.5,
+        "p99": 14.503619613989702,
+        "maximum": 17.5
+      },
+      "eight_frame_complete_annotation_track_windows": 153,
+      "fps": 15,
+      "annotation_sha256": "4705847cbddf5fa227f77253079b60920c3c2fd7e32e28fc7dbc8dcb00406523",
+      "manifest_sha256": "193fdf0c3e0aab96b902ff0efee4cd8b56ab5f37c17385114c4509c2f7ef4f7f"
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "split": "train",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0323_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0323_2/annotations.json",
+        "manifest": "data/stage1/DJI_0323_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0323_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 800,
+      "track_count": 5,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "0": 800
+      },
+      "bbox_under16_each_dimension_count": 800,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 800
+      },
+      "crowd_counts": {
+        "0": 800
+      },
+      "missing_frame_gaps_per_track": 0,
+      "maximum_missing_gap": 0,
+      "consecutive_track_steps": 795,
+      "center_displacement_pixels": {
+        "median": 0.0,
+        "p95": 1.0,
+        "p99": 1.118033988749895,
+        "maximum": 1.5811388300841898
+      },
+      "eight_frame_complete_annotation_track_windows": 765,
+      "fps": 15,
+      "annotation_sha256": "c27cc3bcf0c93ae4ae7fb027b5fa1c4c0d59fcdfa4a749baefe9ab83d78b103d",
+      "manifest_sha256": "5ee2a0c385caf4c9686bf115da1597d0bfd6fdd871386291142195cd8d133a4d"
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "split": "calibration",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0026_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0026_2/annotations.json",
+        "manifest": "data/stage1/DJI_0026_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0026_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 1418,
+      "track_count": 20,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "0": 1418
+      },
+      "bbox_under16_each_dimension_count": 609,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 2,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 1418
+      },
+      "crowd_counts": {
+        "0": 1418
+      },
+      "missing_frame_gaps_per_track": 14,
+      "maximum_missing_gap": 18,
+      "consecutive_track_steps": 1384,
+      "center_displacement_pixels": {
+        "median": 0.0,
+        "p95": 6.30617497146104,
+        "p99": 16.610128461497762,
+        "maximum": 25.079872407968907
+      },
+      "eight_frame_complete_annotation_track_windows": 1263,
+      "fps": 15,
+      "annotation_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+      "manifest_sha256": "771a03b5baa8d7bf0731f8b2ded31b23840f3dc4f70fc74053b987c3afa9a46e"
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "split": "calibration",
+      "paths": {
+        "raw_array": "data/stage1/DJI_0067_2/raw_frames.npy",
+        "annotations": "data/stage1/DJI_0067_2/annotations.json",
+        "manifest": "data/stage1/DJI_0067_2/FRAME_MANIFEST.json",
+        "images": "data/stage1/DJI_0067_2/images"
+      },
+      "frame_count": 160,
+      "source_frame_first_last": [
+        0,
+        159
+      ],
+      "consecutive_source_frames": true,
+      "local_index_equals_source_frame": true,
+      "manifest_image_ids_equal_annotation_images": true,
+      "npy_header": {
+        "version": [
+          1,
+          0
+        ],
+        "descr": "|u1",
+        "shape": [
+          160,
+          512,
+          640
+        ],
+        "fortran_order": false
+      },
+      "first_jpg_mode": "L",
+      "first_jpg_dimensions": [
+        640,
+        512
+      ],
+      "first_jpg_sha256_matches_manifest": true,
+      "annotation_count": 14879,
+      "track_count": 206,
+      "duplicate_frame_track_count": 0,
+      "track_category_change_count": 0,
+      "track_original_id_change_count": 0,
+      "category_counts": {
+        "0": 1280,
+        "1": 4417,
+        "2": 3291,
+        "3": 5891
+      },
+      "bbox_under16_each_dimension_count": 11372,
+      "bbox_nonpositive_count": 0,
+      "bbox_outside_image_count": 0,
+      "segmentation_all_rectangular_bbox_polygon": true,
+      "annotation_fields": [
+        "area",
+        "bbox",
+        "category_id",
+        "id",
+        "ignore",
+        "image_id",
+        "iscrowd",
+        "segmentation",
+        "track_id",
+        "tracking_id"
+      ],
+      "visibility_or_interpolation_field_present": false,
+      "ignore_counts": {
+        "0": 14879
+      },
+      "crowd_counts": {
+        "0": 14879
+      },
+      "missing_frame_gaps_per_track": 576,
+      "maximum_missing_gap": 137,
+      "consecutive_track_steps": 14097,
+      "center_displacement_pixels": {
+        "median": 1.118033988749895,
+        "p95": 5.0,
+        "p99": 7.0178344238090995,
+        "maximum": 12.165525060596439
+      },
+      "eight_frame_complete_annotation_track_windows": 12016,
+      "fps": 15,
+      "annotation_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+      "manifest_sha256": "963634b5f35a70e44a4502a16c6e55381d791d223ed9e24ecac70abcce947186"
+    }
+  ],
+  "source_caveats": [
+    {
+      "claim": "Author paper explicitly states bbox temporal interpolation for occlusions shorter than 5 frames. Per-instance provenance absent here.",
+      "primary_url": "https://arxiv.org/html/2406.14482v2",
+      "section": "III-B Temporal Occlusion",
+      "evidence": "Primary text rechecked 2026-11-18; not inferred from numerical linearity."
+    },
+    {
+      "claim": "Frozen first-160-frame clips are historical selected samples, not random samples of all RGBT-Tiny/infrared domains. Development clips contain ships/cars/cyclists/pedestrians, no drone or plane labels.",
+      "evidence": "Local manifests and full allowed-subset category counts."
+    },
+    {
+      "claim": "One tracking ID and constant category do not independently guarantee pixel correspondence or identity correctness through occlusion.",
+      "evidence": "Audit inference; needs visual verification of sampled event."
+    },
+    {
+      "claim": "Center displacement outliers may involve label jitter, target motion, or camera motion. No ambiguity conclusion follows from displacement alone.",
+      "evidence": "Audit inference."
+    }
+  ],
+  "not_done": [
+    "No model training or inference",
+    "No matching/ambiguity prevalence measurement",
+    "No visibility human ground-truth assignment",
+    "No public full-dataset image or label loading",
+    "No confirmation data access",
+    "No data mutations or downloads"
+  ],
+  "existing_release_detection_cache": {
+    "records": [
+      {
+        "sequence": "DJI_0026_2",
+        "relative_path": "results/references/release_evaluation/DJI_0026_2",
+        "objects": 1418,
+        "score_shape": [
+          2,
+          1418
+        ],
+        "plans": [
+          "O",
+          "S"
+        ],
+        "threshold": 0.5,
+        "all_receipt_objects_match_current_annotation_id_image_id_track_id_bbox": true,
+        "sha256": {
+          "COMPLETE.json": "e05dd11d3b6079ef2f2244fa4f1663819dc27a9aafb65d967dce1df540f51234",
+          "scores.npz": "9117b233c9246e0499eab94916c0b6f6d468a0f0f57d180333dc65661c5f9f04"
+        }
+      },
+      {
+        "sequence": "DJI_0067_2",
+        "relative_path": "results/references/release_evaluation/DJI_0067_2",
+        "objects": 14879,
+        "score_shape": [
+          2,
+          14879
+        ],
+        "plans": [
+          "O",
+          "S"
+        ],
+        "threshold": 0.5,
+        "all_receipt_objects_match_current_annotation_id_image_id_track_id_bbox": true,
+        "sha256": {
+          "COMPLETE.json": "0bed3b35fc1f5b24713a443b08b81a6228ace814fbd96e8993a25f15b429354c",
+          "scores.npz": "a31b419b0bb7e0496a7528515218f10370a091188ddbe9e42844ce2edf499be5"
+        }
+      }
+    ],
+    "join": "Row j in COMPLETE.json objects matches scores.npz [:,j]; join observations by annotation_id, or (sequence,frame,track_id). Select row whose plans entry is O for official-window-fusion diagnostic.",
+    "score_keys": [
+      "matched",
+      "box_max",
+      "peak_x",
+      "peak_y",
+      "component_area",
+      "frame_counts",
+      "coverage",
+      "strict_small",
+      "offsets",
+      "plans",
+      "threshold"
+    ],
+    "scope": "Precomputed one-to-one component-peak-in-box matching at threshold 0.5; diagnostic only, not official Pd/Fa. Existing caches inspected, no inference or score re-evaluation."
+  }
+}

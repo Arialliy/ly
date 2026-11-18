@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-12T09:57:53.039153+00:00",
+  "status": "PASS",
+  "cpu_only": true,
+  "formal_optimizer_updates": 0,
+  "docker_image": "deeppro-official-eval:20261009",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "tests": [
+    "test_explicit_value_and_gradient_frame",
+    "test_explicit_value_and_gradient_track",
+    "test_overlapping_objects_keep_instance_semantics",
+    "test_extremely_low_positive_logits_have_direct_gradient",
+    "test_empty_window_provides_negative_gradient",
+    "test_all_unknown_window_finite_connected_zero",
+    "test_missing_observation_does_not_become_absence",
+    "test_frame_assignments_switch_track_assignment_constant",
+    "test_input_object_order_does_not_change_assignment",
+    "test_track_capacity_overflow_fails",
+    "test_same_frame_capacity_overflow_fails",
+    "test_duplicate_same_frame_identity_fails",
+    "test_incorrect_unknown_negative_eligibility_fails",
+    "test_background_cannot_include_target_support",
+    "test_no_negative_pixels_is_finite",
+    "test_nonfinite_assignment_cost_rejected",
+    "test_nonfinite_empty_window_loss_rejected",
+    "test_mask_negative_is_not_diluted_by_extra_unused_queries"
+  ],
+  "tests_count": 18,
+  "failures": 0,
+  "errors": 0,
+  "sources": {
+    "code/losses.py": "0fdfbcca909cedd2616c6669167a20faec2f84c91a60846c99dbb58a406fe642",
+    "code/test_losses.py": "b8a48fc62a95af069deae7c1bfc0e11df9bd444a2491e05d4a6c7790636ec64b"
+  },
+  "real_train_target_integration": {
+    "old_plan_entry": 0,
+    "pair": 0,
+    "window": 0,
+    "queries": 100,
+    "object_frames": 40,
+    "negative_query_frames": 3960,
+    "negative_eligible_frames": 40,
+    "target_digest": "b0f5adc53adddb8c0960e3bb56c25338656e643cb8f7454307d9669102bd415b",
+    "assignment_sha256": "7c2824fdd48dced5e43220c077004c3f4d29f3eb3968e7c61623f57eaf5b0537",
+    "loss": 3.465736210346222,
+    "cpu_forward_backward_seconds": 0.8637895880383439,
+    "finite_existence_and_mask_gradients": true
+  }
+}

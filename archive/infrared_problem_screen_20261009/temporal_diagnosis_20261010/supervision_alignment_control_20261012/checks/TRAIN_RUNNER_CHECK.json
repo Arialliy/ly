@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "checks": {
+    "original_plan_selection_sources_all_train_fingerprints": true,
+    "checkpoint_adjacent_model_source": true,
+    "original_parameter_count_70913": true,
+    "all_original_parameters_trainable": true,
+    "released_bn_buffers_hash": true,
+    "criterion_has_no_parameters": true,
+    "all_valid_loss_matches_actual_official_4D": true,
+    "all_valid_gradient_matches_actual_official_4D": true,
+    "partial_valid_value_equals_mathematical_mask": true,
+    "partial_valid_gradient_equals_mathematical_mask": true,
+    "invalid_pixels_exact_zero_gradient": true,
+    "variable_count_windows_equal_mean": true,
+    "variable_count_windows_actually_distinct": true,
+    "pure_negative_window_official_loss_one": true,
+    "pure_negative_window_exact_zero_gradient": true,
+    "pure_negative_windows_counted": true,
+    "empty_valid_window_rejected": true,
+    "true_first_batch_shape_and_dtype": true,
+    "true_labels_shape_and_dtype": true,
+    "true_valid_shape_and_dtype": true,
+    "true_labels_binary_and_invalid_zero": true,
+    "true_background_mask_unmutated": true,
+    "true_first_batch_hash_matches_completed_control": true,
+    "true_label_loss_and_gradient_finite": true,
+    "true_label_mask_zero_gradient_outside_valid": true,
+    "true_label_mass_matches_loss_stats": true,
+    "true_valid_count_matches_loss_stats": true,
+    "model_has_no_gradient_or_update": true,
+    "bn_untouched_by_smoke": true
+  },
+  "details": {
+    "all_valid_loss_max_difference": 0.0,
+    "all_valid_gradient_max_difference": 0.0,
+    "partial_valid_counts": [
+      63,
+      78,
+      35,
+      105
+    ],
+    "first_input_sha256": "de415ab59a3e3840fd9173b319465bc9fdd595ec8cb8b4bd67c773f9368a3004",
+    "first_label_sha256": "0b1ad48a914554b95b8c089cafc8437fb4691723e6a8552010d574dbc3818272",
+    "first_label_stats": {
+      "per_window": [
+        {
+          "positive_box_frames": 40,
+          "excluded_box_frames": 0,
+          "valid_pixels": 481172,
+          "target_positive_pixels": 1710,
+          "sum_object_support_before_union_and_exclusion": 1710,
+          "positive_box_frames_without_quantized_support": 0,
+          "pure_negative_window": false
+        },
+        {
+          "positive_box_frames": 40,
+          "excluded_box_frames": 0,
+          "valid_pixels": 481204,
+          "target_positive_pixels": 1656,
+          "sum_object_support_before_union_and_exclusion": 1656,
+          "positive_box_frames_without_quantized_support": 0,
+          "pure_negative_window": false
+        },
+        {
+          "positive_box_frames": 40,
+          "excluded_box_frames": 80,
+          "valid_pixels": 481060,
+          "target_positive_pixels": 1890,
+          "sum_object_support_before_union_and_exclusion": 1890,
+          "positive_box_frames_without_quantized_support": 0,
+          "pure_negative_window": false
+        },
+        {
+          "positive_box_frames": 40,
+          "excluded_box_frames": 80,
+          "valid_pixels": 481092,
+          "target_positive_pixels": 1829,
+          "sum_object_support_before_union_and_exclusion": 1829,
+          "positive_box_frames_without_quantized_support": 0,
+          "pure_negative_window": false
+        }
+      ],
+      "valid_pixels_per_window": [
+        481172,
+        481204,
+        481060,
+        481092
+      ],
+      "target_mass_per_window": [
+        1710,
+        1656,
+        1890,
+        1829
+      ],
+      "positive_boxes_per_window": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "pure_negative_windows": 0,
+      "target_mass": 7085,
+      "valid_fraction": 0.734149169921875
+    },
+    "synthetic_first_label_loss": 0.996332049369812,
+    "initial_model_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07"
+  },
+  "execution": "CPU only; real model/source/data/labels loaded; no model forward, optimizer, or updates",
+  "torch_version": "2.7.0+cu128",
+  "label_config": {
+    "version": 1,
+    "condition": "gaussian_softiou_approx",
+    "center": "original_float_bbox_geometric_center",
+    "pixel_coordinates": "x=j+0.5,y=i+0.5; half-open original bbox",
+    "sigma_x": "original_bbox_width/6",
+    "sigma_y": "original_bbox_height/6",
+    "support": "truncate outside original bbox; no minimum sigma or peak normalization",
+    "quantization": "floor(255*Gaussian) to uint8",
+    "target": "quantized>0 cast float32; max union over positive boxes",
+    "positive_objects": "all valid non-ignore non-crowd boxes fully inside crop core9; no size/class filter",
+    "valid_domain": "old_background_mask union full_positive_box_rects, then excluded-object bbox+2px overrides",
+    "excluded_objects": "all valid ignore/crowd or non-full-core boxes; original float box+2px",
+    "crop_core_margin": 9,
+    "outside_positive_box_guard_margin": 2,
+    "loss": "unchanged official SoftLoUloss on gathered valid pixels per window; four-window mean",
+    "smooth": 0.0,
+    "empty_target_window": "retain official loss1 and zero gradient; log occurrence",
+    "alignment_limit": "approximate mask generator and masked domain; not exact author training reproduction"
+  },
+  "train_source_sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11",
+  "test_source_sha256": "e4d26e7ca35069e2e9207ec06f79c2b5eadbaac7dfb9257a08abdb8a4cf0be84",
+  "label_source_sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668"
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-11T12:37:55.074664+00:00",
+  "sha256": "27adbdc9e6e0e9bb34a4bd9ce17cd0e831b84718a74ae0e8012f1ae62af5725d",
+  "thresholds": [
+    0.41,
+    0.42,
+    0.43,
+    0.44,
+    0.45,
+    0.46,
+    0.47,
+    0.48,
+    0.49
+  ],
+  "primary_protocol_unchanged": true,
+  "registered_after_original_23_point_results": true,
+  "additional_threshold_predictions_seen": false
+}

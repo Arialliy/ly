@@ -1,0 +1,548 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-12T13:07:37.246896+00:00",
+  "package": "/home/ly/DeepProPlus_TLFP_Code",
+  "scope": "Location, existence, symlink closure, recorded collection completion and file sizes. Does not run models, mutate frozen code, or hash active experiment outputs. Historical absolute paths in immutable provenance remain historical.",
+  "old_project_removed": true,
+  "relocated_original_exists": true,
+  "symlink_count": 43,
+  "symlinks": [
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard3/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard0/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../../infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard1/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/logs",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "target": "../../../../../../infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/raw_frames.npy",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/raw_frames.npy",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/raw_frames.npy",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/annotations.json",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/annotations.json",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0047_3/annotations.json",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/raw_frames.npy",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/raw_frames.npy",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/raw_frames.npy",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/annotations.json",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/annotations.json",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_2/annotations.json",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/raw_frames.npy",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/raw_frames.npy",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/raw_frames.npy",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/annotations.json",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/annotations.json",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0032_5/annotations.json",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/raw_frames.npy",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/raw_frames.npy",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/raw_frames.npy",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/annotations.json",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/annotations.json",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data_diagnostics/DJI_0028_4/annotations.json",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0051_3/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0051_3/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0051_3/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0115_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0115_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0115_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0043_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0043_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0043_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0217_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0217_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0217_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0113_3/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0113_3/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0113_3/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0343_3/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0343_3/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0343_3/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0030_9/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0030_9/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0030_9/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0139_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0139_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0139_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0309_1/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0309_1/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0309_1/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0057_1/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0057_1/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0057_1/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0323_2/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0323_2/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0323_2/images",
+      "inside_package": true,
+      "resolution_error": null
+    },
+    {
+      "path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data/DJI_0075_3/images",
+      "target": "../../../../../infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0075_3/images",
+      "resolved": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0075_3/images",
+      "inside_package": true,
+      "resolution_error": null
+    }
+  ],
+  "internalized_record_count": 43,
+  "walk_errors": [],
+  "external_assets": [
+    {
+      "role": "发布权重",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+      "exists_inside_package": true,
+      "bundled_path": "results/references/deeppro_plus_release.pth"
+    },
+    {
+      "role": "训练与开发原始数据",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/data",
+      "exists_inside_package": true,
+      "bundled_path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data"
+    },
+    {
+      "role": "训练计划",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+      "exists_inside_package": true,
+      "bundled_path": "results/references/TRAIN_PLAN.json"
+    },
+    {
+      "role": "数据划分",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json",
+      "exists_inside_package": true,
+      "bundled_path": "results/references/DATA_SELECTION.json"
+    },
+    {
+      "role": "共同未训练初始化",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/init",
+      "exists_inside_package": true,
+      "bundled_path": "results/tlfp_pilot_20261012/init"
+    },
+    {
+      "role": "当前S/T权重与日志",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/training",
+      "exists_inside_package": true,
+      "bundled_path": "results/tlfp_pilot_20261012/training"
+    },
+    {
+      "role": "当前推理结果",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions",
+      "exists_inside_package": true,
+      "bundled_path": "results/tlfp_pilot_20261012/predictions"
+    },
+    {
+      "role": "当前评价表与缓存",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation",
+      "exists_inside_package": true,
+      "bundled_path": "results/tlfp_pilot_20261012/evaluation"
+    },
+    {
+      "role": "冻结分层",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv",
+      "exists_inside_package": true,
+      "bundled_path": "results/references/COHORTS.csv"
+    },
+    {
+      "role": "历史数据曝光核验",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run",
+      "exists_inside_package": true,
+      "bundled_path": "archive/original_project/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run"
+    },
+    {
+      "role": "发布预测缓存",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/predictions/official",
+      "exists_inside_package": true,
+      "bundled_path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/predictions/official"
+    },
+    {
+      "role": "旧评分参照及来源校验",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation",
+      "exists_inside_package": true,
+      "bundled_path": "archive/original_project/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation"
+    },
+    {
+      "role": "冻结参照锚点",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json",
+      "exists_inside_package": true,
+      "bundled_path": "archive/original_project/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json"
+    },
+    {
+      "role": "冻结协议与哈希",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/PROTOCOL_FREEZE.json",
+      "exists_inside_package": true,
+      "bundled_path": "results/tlfp_pilot_20261012/PROTOCOL_FREEZE.json"
+    },
+    {
+      "role": "pytest等已安装隔离依赖",
+      "path": "/home/ly/DeepProPlus_TLFP_Code/environment/site",
+      "exists_inside_package": true,
+      "bundled_path": "environment/site"
+    }
+  ],
+  "local_collection": {
+    "status": "COMPLETE",
+    "prior_all_hashes_verified": true,
+    "file_count": 21191,
+    "logical_bytes": 59852705092,
+    "destinations_size_location_checked": 21191,
+    "bad_entries": [],
+    "full_payload_hashes_not_repeated": true
+  },
+  "public_datasets": [
+    {
+      "dataset": "NUDT-MIRSDT",
+      "record_status": "COMPLETE",
+      "crc_record": "PASS",
+      "archive_bytes_current": 1027614117,
+      "member_manifest_sha_rechecked": true,
+      "extracted_files_size_location_checked": 48122,
+      "bad_members": [],
+      "all_paths_inside_package": true
+    },
+    {
+      "dataset": "VT-Tiny-MOT",
+      "record_status": "COMPLETE",
+      "crc_record": "PASS",
+      "archive_bytes_current": 2448061811,
+      "member_manifest_sha_rechecked": true,
+      "extracted_files_size_location_checked": 93918,
+      "bad_members": [],
+      "all_paths_inside_package": true
+    }
+  ],
+  "public_verification_status": "PASS",
+  "stage1_sequences": [
+    {
+      "sequence": "DJI_0030_9",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0113_3",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0217_2",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0309_1",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "split": "train"
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "split": "calibration"
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "split": "calibration"
+    },
+    {
+      "sequence": "DJI_0051_3",
+      "split": "confirmation"
+    },
+    {
+      "sequence": "DJI_0075_3",
+      "split": "confirmation"
+    },
+    {
+      "sequence": "DJI_0139_2",
+      "split": "confirmation"
+    },
+    {
+      "sequence": "DJI_0343_3",
+      "split": "confirmation"
+    }
+  ],
+  "docker": {
+    "name": "head_joint_train_h_main",
+    "state": "running",
+    "running": true,
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "/home/ly/DeepProPlus_TLFP_Code",
+        "Destination": "/home/ly/DeepProPlus_TLFP_Code",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/home/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009",
+        "Destination": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012",
+        "Destination": "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": "rprivate"
+      }
+    ],
+    "command": [
+      "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012/code/train_joint.py",
+      "--source",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+      "--checkpoint",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+      "--dataset-root",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data",
+      "--selection",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json",
+      "--plan",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+      "--variant",
+      "H",
+      "--output",
+      "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012/training/H/run"
+    ],
+    "experiment_directory": "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012",
+    "all_host_mount_sources_inside_package": true,
+    "only_writable_host_mount_is_experiment": true
+  },
+  "issues": []
+}

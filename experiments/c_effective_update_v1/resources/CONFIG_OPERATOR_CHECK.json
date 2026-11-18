@@ -1,0 +1,19 @@
+{
+  "status": "PASS_CPU_SYNTHETIC_ONLY",
+  "device": "CPU",
+  "torch": "2.2.0a0+81ea7a4",
+  "tests": {
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "real_checkpoint_ConFIG_step_executed": false,
+  "training_executed": false,
+  "scope": "Official normal-case direction, fixed-coordinate None behavior, Adam zero-vs-None semantics, numerical fallback and malformed input checks only.",
+  "source_sha256": {
+    "code/config_operator.py": "caf4a63106fe8f6b8e130085c9ea1172ec70e49d3dbbd02e1b75324a21cdf0f3",
+    "tests/test_config_operator.py": "d90da27c0ad733ddf5eae7a580f3082417096dc90dcd1e4ece5c76214bba1ab9",
+    "resources/config_official/SOURCE_MANIFEST.json": "78a3a085f7a4d7f5a0f36a8bcbb607118cd9d485d45c8970d2ce3ea9b666e16c"
+  }
+}

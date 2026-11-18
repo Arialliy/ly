@@ -1,0 +1,21 @@
+{
+  "code/launch_training.py": "eed17f31daef3b55ca996fbbd6bf734019f8b985d671a5e32b6f090d9349315e",
+  "code/losses.py": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+  "code/training_diagnostics.py": "401fec264de5d334be95f2bb39da25708b1b2d79714ca76086e2861549745248",
+  "code/train_pilot.py": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "training/CONTAINER_STATE.json": "627261b0717413f82223160556b152f1f675e2300c2f796de5e35bcb66bc4ca3",
+  "training/TRAINING_PROTOCOL.json": "09269a4798866f1b6544577184c76b5bfae79ebb97432d6f35070f3547d3fa2f",
+  "training/WARM_REUSE_CHECK.json": "acf297114aff959551d48da2efc8b65dd87bac6b0010822e65ae792d62cf02f2",
+  "training/REPORT.md": "49b9015166c5cf7900f6408a92b95a6404863457b548aa5ee43f5eacd1f61a96",
+  "training/GPU_TELEMETRY.jsonl": "0cf47b674c145d33e9aa05308065c9bdf2f63ff7b59458ea7b80c269d8bdf521",
+  "training/stdout.log": "bcf14837d70075d8f47a312fbedec9e88004da147b6a824e4692ccf1e4fc6c99",
+  "training/COMPLETION_CHECK.json": "4dbe6b531d31d1ac75708ed8cc5150e22a600ef6ea0d5bb19443ae62b7b45a51",
+  "training/LAUNCH.json": "738acf54a122fb91a0f6de285d4fd578504b9ead68fee0aeca31b1363a6ab6e0",
+  "training/SOURCE_BEFORE.json": "7a5bfc2ec611f329701635e1a0f012b29ad987c0bb40c6b1cb816ae3fd669cfa",
+  "training/COMMAND.sh": "ca4c9bf8777681a75df8d9c48807cdbda312afa68eb3a33b8485826ad241a1eb",
+  "training/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "training/LOG_SUMMARY.json": "e1bfed672f04b40d7a33e1596126bf90066999f74fe8e0fb8bbced7c4fdead8a",
+  "training/run/RUN.json": "833dc1e10bbf8642f92e6f6c57dadc3ff819bd71a6b85a128d4a8dce479a3f2e",
+  "training/run/TRAIN.jsonl": "326713208e0672f4c40657bb930a2bed2165ed351a9222ae33cdf080461fa899",
+  "training/run/final_model.pth": "3dc5b7ea6a3e5709a8beb5375d2ab811d71cf32de86fac9f7d527cdb194b74b5"
+}

@@ -1,0 +1,62 @@
+{
+  "formal_training_count": 3,
+  "containers": [
+    {
+      "name": "mutual_train_E0_20261012",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T18:04:05.076613344Z",
+        "FinishedAt": "2026-10-11T18:08:15.616159598Z"
+      },
+      "log_path": "training_container_logs/mutual_train_E0_20261012.log",
+      "log_sha256": "10246b3507ca58fff5928a87486680c0d41a4b8eb0474581e76393b3c73ba9c1",
+      "log_capture_returncode": 0
+    },
+    {
+      "name": "mutual_train_E1_20261012",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T18:04:04.623321639Z",
+        "FinishedAt": "2026-10-11T18:13:21.273610383Z"
+      },
+      "log_path": "training_container_logs/mutual_train_E1_20261012.log",
+      "log_sha256": "14360bd74ce9ef7baea654da06d710b3ac81c59d60cb10d02e28358781e90bd2",
+      "log_capture_returncode": 0
+    },
+    {
+      "name": "mutual_train_E2_20261012",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T18:04:04.617651102Z",
+        "FinishedAt": "2026-10-11T18:14:02.220296404Z"
+      },
+      "log_path": "training_container_logs/mutual_train_E2_20261012.log",
+      "log_sha256": "7ac4efc80ed4b4888c7f639109359c7ea9760e2cad242096f62bf387396a2e47",
+      "log_capture_returncode": 0
+    }
+  ]
+}

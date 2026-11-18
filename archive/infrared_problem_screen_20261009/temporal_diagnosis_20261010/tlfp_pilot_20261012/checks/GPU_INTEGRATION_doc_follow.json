@@ -1,0 +1,9 @@
+{
+  "status": "FAILED",
+  "seed": 46,
+  "formal_updates": 0,
+  "cases": [],
+  "amp_training": false,
+  "error": "ModuleNotFoundError(\"No module named 'networks'\")",
+  "seconds": 1.4006709270179272
+}

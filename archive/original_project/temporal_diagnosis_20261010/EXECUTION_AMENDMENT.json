@@ -1,0 +1,8 @@
+{
+  "reason": "Native 640x512 40-frame inference exhausted 32GB GPU; all four failed logs retained",
+  "change": "Spatial core128 halo16; keep all40 time samples per patch, source model/eval/checkpoint/input resolution/normalization/window policy unchanged",
+  "validation": "Five fixed image-relative crops per sequence; whole-patch vs core48 stitched logits assert_close atol=rtol1e-4; thresholds0.1/0.5/0.9 disagreements allzero",
+  "scope": "Full640x512 direct numerical comparison unavailable dueOOM; local dependency radius9 source audit requested",
+  "cpu_image": "deeppro-official-eval:20261009",
+  "seed": 46
+}

@@ -1,0 +1,21 @@
+{
+  "arm": "C",
+  "selection": "split",
+  "seed": 46,
+  "updates": 300,
+  "balanced_batch": 128,
+  "train_pos": 1898,
+  "train_neg": 5120,
+  "trainable_params": 3450,
+  "batch_sha256": "4d65f4091391c1dca91c7ae19a777d3155bdafa076ea0a7f97d9b7497c7df531",
+  "initial_params_sha256": "37c8186c1b5d0e8f069075c1f8f5f4435c99201bd0418c84951044f45b7af030",
+  "initial_release_max_error": 0.0,
+  "bce_steps_1_100_200_300": [
+    3.9509215354919434,
+    0.6002680659294128,
+    0.6389045715332031,
+    0.6806808114051819
+  ],
+  "train_seconds": 3.7640608719957527,
+  "device": "NVIDIA GeForce RTX 5090"
+}

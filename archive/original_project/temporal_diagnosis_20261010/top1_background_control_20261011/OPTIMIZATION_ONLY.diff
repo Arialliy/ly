@@ -1,0 +1,39 @@
+--- lambda0/code/losses.py
++++ top1/code/losses.py
+@@ -1,5 +1,7 @@
+ """Weak-box MIL losses for the frozen stage-1 comparison; no mask reconstruction."""
+ from __future__ import annotations
++
++import math
+ 
+ import torch
+ import torch.nn.functional as F
+@@ -43,6 +45,19 @@
+     return losses.flatten()[index].max(dim=1).values.mean()
+ 
+ 
++def background_top1pct_mean(pixel_losses: torch.Tensor) -> torch.Tensor:
++    """Nonempty 1-D unreduced negative losses; ties favor smaller flat indices."""
++    k = max(1, math.ceil(.01 * pixel_losses.numel()))
++    # topk determines only the value cutoff; it never chooses the gradient support.
++    cutoff = pixel_losses.topk(k, sorted=False).values.min()
++    above = pixel_losses > cutoff
++    tied = pixel_losses == cutoff
++    remaining = k - above.sum()
++    tie_order = tied.to(torch.int32).cumsum(dim=0)
++    chosen = above | (tied & (tie_order <= remaining))
++    return pixel_losses[chosen].mean()
++
++
+ def pilot_loss(logits: torch.Tensor, positive_boxes: list[list[tuple]],
+                background_masks: torch.Tensor, extra_specs: list[dict],
+                strategy: str, random_pairs: list[list[int]]) -> tuple[torch.Tensor, dict]:
+@@ -57,7 +72,7 @@
+                  for slot, rect in positive_boxes[wi]]
+         window_positive.append(torch.stack(terms).mean() if terms else logits[wi].sum()*0.0)
+         selected = logits[wi][background_masks[wi]]
+-        window_negative.append(F.softplus(selected).mean() if selected.numel()
++        window_negative.append(background_top1pct_mean(F.softplus(selected)) if selected.numel()
+                                else logits[wi].sum()*0.0)
+     pos = torch.stack(window_positive).mean()
+     neg = torch.stack(window_negative).mean()

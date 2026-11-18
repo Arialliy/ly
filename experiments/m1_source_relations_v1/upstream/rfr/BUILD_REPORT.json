@@ -1,0 +1,50 @@
+{
+  "status": "compiled",
+  "started_utc": "2026-10-14T19:36:47.418406+00:00",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "target_devices": [
+    "1, 12.0",
+    "2, 12.0",
+    "3, 12.0"
+  ],
+  "torch_cuda_arch_list": "12.0",
+  "cpus": 2,
+  "memory_limit_gb": 8,
+  "gpu_devices_exposed": false,
+  "network": "none",
+  "max_jobs": 2,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--cpus=2",
+    "--memory=8g",
+    "--memory-swap=8g",
+    "--network=none",
+    "--user",
+    "1004:1004",
+    "--env",
+    "MAX_JOBS=2",
+    "--env",
+    "OMP_NUM_THREADS=2",
+    "--env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "--env",
+    "TORCH_CUDA_ARCH_LIST=12.0",
+    "--mount",
+    "type=bind,src=<project_root>,dst=/workspace",
+    "--workdir",
+    "/workspace/experiments/m1_source_relations_v1/upstream/rfr/dcn",
+    "--entrypoint",
+    "python",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "setup.py",
+    "build_ext",
+    "--inplace"
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-10-14T19:37:26.366968+00:00",
+  "binaries": {
+    "dcn/_rfr_dcn.cpython-311-x86_64-linux-gnu.so": "ff58357ae1e96506f59b5726f3a88dfeb71edff2ade009251bb273b8a253c7f4"
+  }
+}

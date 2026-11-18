@@ -1,0 +1,47 @@
+{
+  "status": "PASS_CODE_REVIEW_WITH_UPSTREAM_IDENTITY_CHECK_REQUIRED",
+  "scope": "Independent read-only CPU/code review; no GPU/model execution; no prior artifact changes",
+  "native_config": "Only two test data roots and seq_list differ from author config",
+  "native_data": {
+    "sequence": "Sequence85",
+    "images": 100,
+    "masks": 100,
+    "ids": "00001 through 00100",
+    "shape_hw": [
+      200,
+      300
+    ]
+  },
+  "checks": {
+    "all23_protocol_bound_hashes_match": true,
+    "all53_author_source_hashes_match": true,
+    "main_resize_chain_matches_author": true,
+    "auxiliary_resize_chain_matches_preregistered_adapter": true,
+    "missing_masks_are_unused_zero_placeholders": true,
+    "annotation_free_prompt_path": true,
+    "eval_no_grad_and_state_hash_guards": true,
+    "all320_development_images_equal_frozen_raw_array": true,
+    "all320_image_names_match_frame_manifest": true
+  },
+  "material_findings": [
+    {
+      "file": "evaluation_code/evaluate_reference.py",
+      "lines": [
+        177,
+        179
+      ],
+      "finding": "Scorer accepts a self-consistent external protocol and length-checks checkpoint/commit rather than binding them to the frozen protocol. Current producer pins the intended checkpoint/commit.",
+      "resolution": "Root explicitly committed to comparing frozen protocol SHA, checkpoint SHA, commit and all bound files before scoring; no frozen source edits requested."
+    }
+  ],
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/PROTOCOL.json": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/tep_common.py": "1d3b79a2ff187ed3ca5a6d483433d6491705310dec79636b5feae2b960ee2b05",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_check.py": "c54c1842ad47fb315e619ebb3e822475fa761b0057bfa99a2163318b73bb1df8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/infer_full_frames.py": "7d123d74cb9eb79d07f3961432d88c0081b7349ceee365cbea415f95a218666e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/evaluation_code/evaluate_reference.py": "e58f353a2a72c9f1b8ddbcbe0aac5e5b45fcd07187d59cfde682456268427ded",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_config.yaml": "3af8e4c96e42c407c5146f0b17c67b650e479c7f59cfb887bffd799193b66e61",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_sequence.txt": "18294cb430bca7047f487e9a6ae19194fe933198b8cc6c798a7a3db36153fd88",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DOC_FOLLOW_RESULT.json": "02a4ac22e01d5c51149ed15ff2eecc8e297a85628b95bbd016407e578758cd6e"
+  }
+}

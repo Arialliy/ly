@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN",
+  "steps": 128,
+  "start_step": 2048,
+  "final_step": 2176,
+  "conditions": [
+    "Continuation",
+    "Revision"
+  ],
+  "checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "protocol_sha256": "8600114b894590f2deca0fca769161e5d4e11835ffa64e0f680b2ae39f88e2b0",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/evaluate.py": "10a9db0a41826f3bb8a46bfb852b65d08f8cc76c8d9088dfb0cada6f92fa7a4c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/infer.py": "c9d6d79ebc05898f40e42694a1b916cc5862140344d7973b2f40059aa4e70f1e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/launch.py": "24b66299fec9635545c6aa1eb56e1c503eb626fe0714e95f541bbc7c6118a587",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/revision.py": "dfbb7c9c47f7e3c476dad5292c23f677818565e05dd427eb24ac7eef89adaff7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/revision_smoke.py": "a1c25b86564877134d12a7ee2815d45b969f16295b1189c1ac058e8c38a7205d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/runtime.py": "ea503b8ff948d8f74673e79381884729c55e69ceec0996796edf45c5a20d9451",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/code/train.py": "cda5475591a9f9384b0b1b1bb5f5f93ebbbfc17900327979c43532bec23407b0"
+  },
+  "checks": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/checks/REVISION_SMOKE.json": "1a1aef7885235cf1b785b5006f8f436e94b129461c7c3a9f59e93eb1e11b3d57",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/checks/CPU_EVALUATION_FIXTURE/FIXTURE_RESULT.json": "84248eecb86ea1a4a9061ad8e92985456f4dc7ad47b00f091bbaef51307271dc"
+  },
+  "evidence": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/RESULTS.json": "11f87da4beb57cee26dcc9d77a89a9034a03e7a873f9f500001747d7ea63ca0e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/analysis/trace_summary/TRACE_SUMMARY.json": "4b70b1264f2c03afa44b01d5c668d180a497878e3bbbc72f5f2c5650967c529e"
+  }
+}

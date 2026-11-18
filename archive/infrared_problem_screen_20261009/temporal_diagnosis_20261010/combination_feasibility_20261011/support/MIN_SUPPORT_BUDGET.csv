@@ -1,0 +1,16 @@
+target,sequence,target_count,min_support_windows,starts,supported
+original700,pooled_shared_arrangement,700,5,"[0, 36, 72, 108, 120]",705
+original700,DJI_0026_2,294,5,"[0, 36, 72, 96, 120]",301
+original700,DJI_0026_2,294,5,"[0, 36, 72, 108, 120]",295
+original700,DJI_0067_2,406,5,"[0, 36, 72, 108, 120]",410
+original700_plus_gain74,pooled_shared_arrangement,774,8,"[0, 24, 36, 60, 72, 96, 108, 120]",778
+original700_plus_gain74,DJI_0026_2,302,6,"[0, 24, 60, 72, 96, 120]",302
+original700_plus_gain74,DJI_0026_2,302,6,"[0, 36, 60, 72, 96, 120]",302
+original700_plus_gain74,DJI_0067_2,472,8,"[0, 24, 36, 60, 72, 96, 108, 120]",476
+loss54_plus_gain73,pooled_shared_arrangement,127,8,"[0, 24, 36, 60, 72, 96, 108, 120]",778
+loss54_plus_gain73,DJI_0026_2,9,6,"[0, 24, 60, 72, 96, 120]",302
+loss54_plus_gain73,DJI_0026_2,9,6,"[0, 36, 60, 72, 96, 120]",302
+loss54_plus_gain73,DJI_0067_2,118,8,"[0, 24, 36, 60, 72, 96, 108, 120]",476
+all809,pooled_shared_arrangement,809,11,"[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",809
+all809,DJI_0026_2,304,7,"[0, 12, 48, 60, 72, 96, 120]",304
+all809,DJI_0067_2,505,11,"[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",505

@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "checks_passed": 52,
+  "checks": {
+    "frozen code/common.py": true,
+    "frozen code/model.py": true,
+    "frozen code/targets.py": true,
+    "frozen code/losses.py": true,
+    "frozen code/train.py": true,
+    "frozen code/infer.py": true,
+    "frozen code/launch_gpu.py": true,
+    "protocol": true,
+    "R0 completed2048": true,
+    "R0 originalfrozen": true,
+    "R0 snapshots": true,
+    "R0DJI_0026_2 fixed global inference": true,
+    "R0DJI_0026_2 noGTinput": true,
+    "R0DJI_0026_2 tileconsistency": true,
+    "R0DJI_0026_2 eightunionwindows": true,
+    "R0DJI_0026_2 score": true,
+    "R0DJI_0067_2 fixed global inference": true,
+    "R0DJI_0067_2 noGTinput": true,
+    "R0DJI_0067_2 tileconsistency": true,
+    "R0DJI_0067_2 eightunionwindows": true,
+    "R0DJI_0067_2 score": true,
+    "R1 completed2048": true,
+    "R1 originalfrozen": true,
+    "R1 snapshots": true,
+    "R1DJI_0026_2 fixed global inference": true,
+    "R1DJI_0026_2 noGTinput": true,
+    "R1DJI_0026_2 tileconsistency": true,
+    "R1DJI_0026_2 eightunionwindows": true,
+    "R1DJI_0026_2 score": true,
+    "R1DJI_0067_2 fixed global inference": true,
+    "R1DJI_0067_2 noGTinput": true,
+    "R1DJI_0067_2 tileconsistency": true,
+    "R1DJI_0067_2 eightunionwindows": true,
+    "R1DJI_0067_2 score": true,
+    "R2 completed2048": true,
+    "R2 originalfrozen": true,
+    "R2 snapshots": true,
+    "R2DJI_0026_2 fixed global inference": true,
+    "R2DJI_0026_2 noGTinput": true,
+    "R2DJI_0026_2 tileconsistency": true,
+    "R2DJI_0026_2 eightunionwindows": true,
+    "R2DJI_0026_2 score": true,
+    "R2DJI_0067_2 fixed global inference": true,
+    "R2DJI_0067_2 noGTinput": true,
+    "R2DJI_0067_2 tileconsistency": true,
+    "R2DJI_0067_2 eightunionwindows": true,
+    "R2DJI_0067_2 score": true,
+    "checks/TRAINING_AUDIT.json": true,
+    "evaluation/TABLE_VALIDATION.json": true,
+    "checks/GPU_PREFLIGHT.json": true,
+    "closed decision": true,
+    "noactiveowncontainers": true
+  },
+  "scoring_containers": {
+    "ord_score_r0": {
+      "status": "exited",
+      "exit_code": 0,
+      "finished_at": "2026-10-12T10:18:41.926686216Z"
+    },
+    "ord_score_r1": {
+      "status": "exited",
+      "exit_code": 0,
+      "finished_at": "2026-10-12T10:16:55.37736649Z"
+    },
+    "ord_score_r2": {
+      "status": "exited",
+      "exit_code": 0,
+      "finished_at": "2026-10-12T10:20:11.517218296Z"
+    },
+    "ord_score_summary": {
+      "status": "exited",
+      "exit_code": 0,
+      "finished_at": "2026-10-12T10:20:42.970259829Z"
+    }
+  },
+  "scope": "Execution, frozen interface and receipt checks. Training/table numeric audits separately linked; candidate failed performance constraints.",
+  "closeout_claim_audit": "PASS",
+  "closeout_claim_checks": 42
+}

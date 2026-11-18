@@ -1,0 +1,397 @@
+{
+  "status": "PASS",
+  "probability_absolute_tolerance": 0.0001,
+  "max_abs_error": 7.569789886474609e-06,
+  "all_probabilities_bitwise_equal": false,
+  "threshold05_disagreements": 0,
+  "all_matching_peak_area_background_arrays_exact": true,
+  "score_checks": [
+    {
+      "sequence": "DJI_0026_2",
+      "field": "matched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "component_area",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "frame_counts",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "coverage",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "strict_small",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "offsets",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "peak_x",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "peak_y",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/O_areas",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/O_unmatched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/O_offsets",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/S_areas",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/S_unmatched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "field": "areas/S_offsets",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "matched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "component_area",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "frame_counts",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "coverage",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "strict_small",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "offsets",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "peak_x",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "peak_y",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/O_areas",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/O_unmatched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/O_offsets",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/S_areas",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/S_unmatched",
+      "exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "field": "areas/S_offsets",
+      "exact": true
+    }
+  ],
+  "comparisons": [
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_000.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3098112,
+      "max_abs_error": 4.470348358154297e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_024.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3094524,
+      "max_abs_error": 3.6954879760742188e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_036.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3095894,
+      "max_abs_error": 2.8312206268310547e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_060.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3098591,
+      "max_abs_error": 3.159046173095703e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_072.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3094094,
+      "max_abs_error": 3.427267074584961e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_096.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3086650,
+      "max_abs_error": 3.159046173095703e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_108.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3122234,
+      "max_abs_error": 4.887580871582031e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "windows/window_120.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 3221436,
+      "max_abs_error": 3.2782554626464844e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "artifact": "official_fused.npz",
+      "pixels": 52428800,
+      "exact": false,
+      "unequal_pixels": 12372424,
+      "max_abs_error": 4.470348358154297e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_000.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4442956,
+      "max_abs_error": 5.066394805908203e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_024.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4473528,
+      "max_abs_error": 4.947185516357422e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_036.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4518601,
+      "max_abs_error": 4.500150680541992e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_060.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4567873,
+      "max_abs_error": 7.569789886474609e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_072.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4560257,
+      "max_abs_error": 6.22868537902832e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_096.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4590706,
+      "max_abs_error": 7.212162017822266e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_108.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4595949,
+      "max_abs_error": 5.900859832763672e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "windows/window_120.npz",
+      "pixels": 13107200,
+      "exact": false,
+      "unequal_pixels": 4620987,
+      "max_abs_error": 6.794929504394531e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "artifact": "official_fused.npz",
+      "pixels": 52428800,
+      "exact": false,
+      "unequal_pixels": 18245129,
+      "max_abs_error": 6.794929504394531e-06,
+      "absolute_tolerance": 0.0001,
+      "within_predeclared_tolerance": true,
+      "threshold05_disagreements": 0
+    }
+  ],
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation/T_bypass/DJI_0026_2/component_areas.npz": "d08f947a097cd49c1d0131d129e36b2696e7e2406b4f82ef3fa34c16687d37ea",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/component_areas.npz": "d08f947a097cd49c1d0131d129e36b2696e7e2406b4f82ef3fa34c16687d37ea",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/COMPLETE.json": "f4318aa0adb2f8dd731a6c2d4da83a73d2f5fcb2de9d40d5607d48534405bc8d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/COMPLETE.json": "8a4db34c7d6eb711dc8aae4b915e660642a2e31913e1be16ba6b777b580af6d5",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_000.npz": "05771be997cd7e2e43f4bf369e824065906c491857e0a96c2a2509038b28354c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_000.npz": "a6760b4f16481eab8e885962a8759dee628fd9a33fa083b8a7c46a2dad884f73",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_024.npz": "b95f12677d62f83665ed49517b52f20699a4ced2c156390ab1d40767e999de0c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_024.npz": "a5cb2cd800e06baa5c7183176add769f6db39a8971c4f2f20b54c14d7d0d383d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_036.npz": "8dbd7a743d861540108b0219046040c62d5f113ebc1ac3be8d0284928ec0f553",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_036.npz": "0f69e9b79390cbfa247f10a312c638d9242f173db74c4f17cdf2708a39423174",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_060.npz": "7a584e06625fde0e74196d97b22e43f678c468190630fc6b49e8733e23032e55",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_060.npz": "98b12b95cff9585a60acce5d39421d016adee1da4644f0ee8be3b47e1ccb39c8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_072.npz": "6efffd70a1c19b1d2a403e824cf9031ef6a238dcf42bc28c11b42204570b9141",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_072.npz": "db2a966f108ea08ee2eac9e3aab3a9eece8ab725dfa34311583f7151a19713a3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_096.npz": "14ebfdf1e05c6cef848d24be2a60e1adbdf02d2337a4c0dd8a4471f62bc0fe3d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_096.npz": "f2b933d684f38c4b3db2255c03bb010a4b72b62869e2f439bc5a8ffb7f992412",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_108.npz": "162a87336939211c02cbf96a2c80b5baf9cee14fe0e7c1950ad053fdd81332d6",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_108.npz": "1ed8551e6cf4b5779d9a854103ad88e544cbc7355fe4b3ad9f1c949b8dc023e8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/windows/window_120.npz": "8b9defa8f52e778c5bfbde780c8c9f29274f4543990e0250c0c66d3ae922fca9",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_120.npz": "cbd16a3162bade5b191cb06572a1c40f78ed31aa26654c9dfa6a0d63d37a503e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0026_2/official_fused.npz": "cb9ec79e2df1c8e9983ef820a426a97f7042942aa527dc031bce9fda3abd8320",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/official_fused.npz": "448537e1430853f5cbf72458c8c873bee3b21eed9e17a9ece110cc6f82784a8e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation/T_bypass/DJI_0067_2/component_areas.npz": "702654feff0e6925dd42f31608010cb14015223c0ab8d233534e77e28c99f6ba",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/component_areas.npz": "702654feff0e6925dd42f31608010cb14015223c0ab8d233534e77e28c99f6ba",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/COMPLETE.json": "a6f5dc4094ff3b783cc80133e96a93395512d3c96e35ab0443ef2f4fbc7eac6f",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/COMPLETE.json": "e14b4ec93fdd0915cabbb3098e6387eac65b6e4180ec715550b782e8a9ee6449",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_000.npz": "0a655c572675adb457f0bbf6b485969b289ea71177aee56cf2a798c225248896",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_000.npz": "c12def99344f88ac805e3123c60f872e98058fe5bc9bb2e276379c5821b2e8f2",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_024.npz": "71a0fa4f67c907cb96a66e029b2aa2575727b8b73031667705b3d4c6ed5e7bde",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_024.npz": "2b49ebe34f92d491cd075e4e8ecafe6eed88b88c93c41257921b87020e1ec0ae",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_036.npz": "818a2b6893bace9529272cf76327229f1ef4d1846637f051affdeb0a35c46f88",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_036.npz": "04ad7b5ea25106d5c22ab86b50d20e0552ceb61c57beb0f65c3a3326a7f3dcb8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_060.npz": "e5251914948ae8085fc1b5c4a6d51ef84791822b619072c6101cbcb4ab5e28f1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_060.npz": "b5624c19eafd79d2a51d644d6c7c12c7e26d0d98c0a05222369a3bc9cbda48f1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_072.npz": "2cc3837405630fb56ef3ef4dbd19c20e0a90814a90eb80851c639724862cdede",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_072.npz": "39256ceabe0009ddcf9031a4db2a1859a914365824291d54ff285409fc04296a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_096.npz": "387fd5b4d866c3a59b8ba8c020e020f43118d4b2d158dc2dafc4905c6fe4399a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_096.npz": "cb179cbac3ff1faa1a1087c9f20c4687c562f8a73fbe224a358fb0fc7ba556cf",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_108.npz": "b2876579e594ca05cbc1f159f710372188a646609b916dff2c35525017238201",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_108.npz": "0003886068419475fe1c5810383af760ae8245c6b26484a99f6bbb07ccac554b",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/windows/window_120.npz": "693e002d40df03e89ff38e1d5caef2040a37f7c2a540991f1cc2e574e729c8e8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_120.npz": "47c65269cf07957d99b17e88e23470e6d2a9cd2f0672921a4855a5c9f3692c73",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions/T_bypass/DJI_0067_2/official_fused.npz": "52ade44e4e30e2d86cdadbfbfa6a41ed41f1f1130cfbc513f84f115da2fbb803",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/official_fused.npz": "3c6d4fd13ba7106a6a1dbc452fa34543e6967bc14d4751727eb37c2562219074"
+  },
+  "scope": "Same frozen original state; published cache can differ by FP32 tiling arithmetic, bounded before evaluation. Zero threshold and exact diagnostic detection differences required. No tolerance retuning."
+}

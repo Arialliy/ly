@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "object_frames": 157,
+  "window_object_rows": 500,
+  "matched_rows": 206,
+  "all_expected_windows_present_exactly_once": true,
+  "input_actual_matches_and_slots_preserved": true,
+  "all_output_hashes_match": true,
+  "annotation_frame_counts_conserve40": true
+}

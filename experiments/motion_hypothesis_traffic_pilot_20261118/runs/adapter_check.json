@@ -1,0 +1,89 @@
+{
+  "kind": "training-crop integration check, untrained adapter; does not evaluate detection",
+  "software": {
+    "torch": "2.7.0+cu128",
+    "device": "cpu",
+    "seed": 46
+  },
+  "release": "archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "sha256_release": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "dated_detector_source": "archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+  "sha256_dated_detector_source": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "strict_model_state_load": true,
+  "loader": "project top1_background_control train_pilot.load_model",
+  "sha256_adapter": "e879ef6110483e879601577c6403d85e7ea257f22e9cd2708ff783f32b9754bf",
+  "sha256_motion_extractor": "c0d4af11469d41592512edebc0e25dbff9bf10d4ad95067b695fd22f35108707",
+  "raw_file": "data/stage1/DJI_0043_2/raw_frames.npy",
+  "sha256_raw_file": "ccaa322f9f493c458201d9c92819e19fe4dba7ef9af97de0f4ff041e44af15db",
+  "source_sequence": "DJI_0043_2",
+  "split": "train",
+  "crop_tyx_exclusive": [
+    [
+      0,
+      40
+    ],
+    [
+      216,
+      296
+    ],
+    [
+      280,
+      360
+    ]
+  ],
+  "clip_shape": [
+    1,
+    1,
+    40,
+    80,
+    80
+  ],
+  "logit_shape": [
+    1,
+    40,
+    80,
+    80
+  ],
+  "feature_shape": [
+    1,
+    8,
+    40,
+    80,
+    80
+  ],
+  "normalization_mean_std": [
+    85.0799,
+    47.4845
+  ],
+  "rescored_tyx": [
+    [
+      20,
+      25,
+      47
+    ],
+    [
+      20,
+      33,
+      33
+    ],
+    [
+      20,
+      38,
+      49
+    ],
+    [
+      20,
+      38,
+      54
+    ]
+  ],
+  "initial_max_abs_logit_diff": 0.0,
+  "bypass_none_empty_exact": true,
+  "features_exact": true,
+  "nonzero_bias": 0.25,
+  "changed_voxels": 4,
+  "max_abs_unselected_change": 0.0,
+  "last_layer_gradient_l1": 2.7461233139038086,
+  "frozen_release_has_no_grads": true,
+  "optimizer_updates": 0
+}

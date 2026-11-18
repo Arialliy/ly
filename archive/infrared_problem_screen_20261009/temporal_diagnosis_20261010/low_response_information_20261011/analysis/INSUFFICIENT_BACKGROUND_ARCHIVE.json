@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "records": 11212,
+  "actual_blocks": 148190,
+  "target_records": 6838,
+  "reference_records": 4374,
+  "every_count_and_q95_matches": true,
+  "coordinate_convention": "pixel centers for peaks; integer block top-left",
+  "purpose": "Retain literal insufficient local samples; full score maps and deterministic sampling retain all other samples.",
+  "script_sha256": "8ee3b3a816ce9e10444530ccfe1088b2c3cf3ce1d80a8a8caad2729ba1761225"
+}

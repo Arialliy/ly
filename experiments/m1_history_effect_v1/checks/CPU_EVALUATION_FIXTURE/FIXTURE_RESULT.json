@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "test_only": true,
+  "meaning": "HistoryCurrent aliases old History score arrays; HistoryOff aliases release. No new predictions; validates wrappers only.",
+  "evaluate_source_sha256": "87c26c981bb4fc6beb48a7af85018c732ca2668def148b4e0574995a2411433e",
+  "summary_sha256": "27aa4d8950b0f77d6d6d08b17c2fa875ba09ac53d48d2064cb3d6a903e65c211",
+  "common_rows": 18,
+  "current_changed_rows": 0,
+  "off_release_arrays_exact": true
+}

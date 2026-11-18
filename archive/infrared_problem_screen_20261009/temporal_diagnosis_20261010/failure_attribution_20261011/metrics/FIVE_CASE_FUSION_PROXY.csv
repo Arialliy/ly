@@ -1,0 +1,11 @@
+sequence,arrangement,frame,source_frame,annotation_id,track_id,category_id,small_geometry,point_group,original_system_case,point_matched,center_proxy_hit,box_pixel_hit,center_neighborhood_max,box_max,center_x,center_y,center_clamped,any_original5_center_proxy_hit,any_original5_box_pixel_hit
+DJI_0026_2,official,147,147,805870,400005,0,1,gain,original_window_match_lost_by_fusion,0,1,1,1.0,1.0,524,317,0,1,1
+DJI_0026_2,symmetric,147,147,805870,400005,0,1,gain,original_window_match_lost_by_fusion,1,1,1,1.0,1.0,524,317,0,,
+DJI_0067_2,official,74,74,874123,7701908,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999958276748657,0.9999958276748657,351,225,0,1,1
+DJI_0067_2,official,75,75,874218,7701908,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999459981918335,0.9999459981918335,351,225,0,1,1
+DJI_0067_2,official,142,142,880643,7701917,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999997615814209,0.9999997615814209,474,207,0,1,1
+DJI_0067_2,official,144,144,880830,7701917,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9998774528503418,0.9998774528503418,475,207,0,1,1
+DJI_0067_2,symmetric,74,74,874123,7701908,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999326467514038,0.9999871253967285,351,225,0,,
+DJI_0067_2,symmetric,75,75,874218,7701908,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999990463256836,0.9999990463256836,351,225,0,,
+DJI_0067_2,symmetric,142,142,880643,7701917,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9999986886978149,0.9999986886978149,474,207,0,,
+DJI_0067_2,symmetric,144,144,880830,7701917,3,1,both_failure,original_window_match_lost_by_fusion,0,1,1,0.9997634291648865,0.9997634291648865,475,207,0,,

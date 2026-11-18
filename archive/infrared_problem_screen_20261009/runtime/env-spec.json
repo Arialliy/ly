@@ -1,0 +1,24 @@
+{
+  "base": "ppg/ultralytics:8.3.203",
+  "image_id": "sha256:03c5b4808c649ef69d848f65e2dac085373576c35749dfa89e0bb76f1a8a1b35",
+  "provider": "local_docker",
+  "pip_phases": [],
+  "resource_shape": {
+    "cpus": 4,
+    "mem_gib": 12,
+    "gpu": "CUDA_VISIBLE_DEVICES selected per command; existing jobs preserved"
+  },
+  "mount": "/home/ly:/home/ly",
+  "env": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "diagnostic_seed": 46,
+  "seed_scope": "Matches declared default seed_everything(seed=46) in official train.py:33. Explicitly called by local inference; official train entrypoint does not call it. No training run claimed.",
+  "smoke": {
+    "script": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/gpu_witness.py",
+    "expect": "WITNESS_OK"
+  }
+}

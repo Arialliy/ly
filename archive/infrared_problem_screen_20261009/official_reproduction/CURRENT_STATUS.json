@@ -1,0 +1,32 @@
+{
+  "updated_utc": "2026-10-09T18:01:43.359131+00:00",
+  "stage": "official_weight_reproduction_complete",
+  "data": "PASS:20 sequences,2000 frames,6000 PNG",
+  "source_commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "seed": 46,
+  "checkpoint_training_seed": "unknown",
+  "checkpoint_training_reproduced": false,
+  "environment_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "env_spec_sha256": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+  "wrapper_static_review": "PASS",
+  "runtime_gate": "PASS doc_follow_v4",
+  "full_test_status": "completed_all_four_shards_exit0",
+  "next_stages": "analyze DeepPro-Plus failures on real sequences -> validate temporal cause -> assess remaining gap against existing temporal methods -> mechanism",
+  "research_problem_fixed": false,
+  "full_test_frames": 2000,
+  "metrics_at_0_5": {
+    "tp": 1724,
+    "gt": 1729,
+    "fp_pixels": 3558,
+    "pd_percent": 99.71081550028919,
+    "fa": 2.6891574351272892e-05,
+    "fa_times_1e5": 2.689157435127289
+  },
+  "auc": 0.9977783921038268,
+  "iou": 0.8584927987017378,
+  "independent_full_recheck": "PASS_WITH_WARNINGS",
+  "independent_full_recheck_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/result_recheck/RESULT_RECHECK.json",
+  "next_stage": "Four real clips and natural-window diagnostics now complete; locate persistent low-response cause, confirm visibility/generalization before new mechanism",
+  "single_frame_required": false,
+  "real_diagnostic_report": "../temporal_diagnosis_20261010/REPORT.md"
+}

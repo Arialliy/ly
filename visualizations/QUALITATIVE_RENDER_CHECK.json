@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "inspection": "Rendered all six full-frame comparisons and both crop PNGs; reviewed fixed color scales, labels, counts and boundary box visibility. Crop boundary margin corrected and rerendered.",
+  "sample_policy": "0/80/159 each clip; lowest frozen low-response track ID at frame80",
+  "counts_from_existing_comparison_table": true,
+  "new_training_or_inference": false,
+  "figure_count": 8,
+  "script_sha256": "9484b93f93268b02e23c0a0760bbd844162fa0685d8a49333600a4443893f82d",
+  "figures": [
+    {
+      "png": "frame_DJI_0026_2_000.png",
+      "png_sha256": "fc32f1d305f14953d781928220793ab6ed4c6fc3f119d5356aed44eb2fbc2b3a",
+      "pdf_sha256": "3ea6a8a18d76b47361fafcf27bfef7520d70c21b0696c13f77619b96f0293674"
+    },
+    {
+      "png": "frame_DJI_0026_2_080.png",
+      "png_sha256": "5debc7fc3b28dd98e97811f8d5bfec66e393feb651d9b1e267fe90e59201b0fa",
+      "pdf_sha256": "dce179248b9b82e7a5869325aa8adf3088dfadf4a933272984465e81056b50d4"
+    },
+    {
+      "png": "frame_DJI_0026_2_159.png",
+      "png_sha256": "9a26ba45915af33c84f3ad933a208412c0768d1cc13388a84d912e2c8c14f2d2",
+      "pdf_sha256": "9d63615ad79e8c3777e9a883cd7bd94fd15d01a7221c4eb2af3c5dbef145d79c"
+    },
+    {
+      "png": "frame_DJI_0067_2_000.png",
+      "png_sha256": "789219f4efebac9fc181a7226117ba68ba739f9304bc254a14b69e46b74e5ba8",
+      "pdf_sha256": "45f4bbf31050207539f71c2add40a9c6c07122cba26f8e8b9cf26ec97c64281e"
+    },
+    {
+      "png": "frame_DJI_0067_2_080.png",
+      "png_sha256": "eaa9838ee9b14a0d002a198510ec703a4cd912662c3d94ede6564ed6b4e619e9",
+      "pdf_sha256": "3ec56036db920146a4a92671854df813c8d104ce000779fceae54566d07cf154"
+    },
+    {
+      "png": "frame_DJI_0067_2_159.png",
+      "png_sha256": "0684323ab30f98d094aa6e550bc53eaec13c22925463a59423b0246fb1089746",
+      "pdf_sha256": "71a62f4425903bbdc2ce99e412b364f4e2aa5fbfc89654bfcae54d6900cb0a7c"
+    },
+    {
+      "png": "zoom_DJI_0026_2_080_track_400006.png",
+      "png_sha256": "52518e999df6e7f20a6caafeff3fc7c6d60e1c1ae0fde6984042251136c50b90",
+      "pdf_sha256": "da698e16dd301082be5fe5d675ecbbe4f66d8ce37ec68773176fbc22c43a536e"
+    },
+    {
+      "png": "zoom_DJI_0067_2_080_track_7700051.png",
+      "png_sha256": "4dcb4fdc3dd6bf62e6a725e3c9eb73ccd89306234d25da96292637fe98b654c4",
+      "pdf_sha256": "3762edd641ac47807348e4090032ede6a7234d6a94610a7e55f4b72ced8792d5"
+    }
+  ]
+}

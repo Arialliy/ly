@@ -1,0 +1,790 @@
+                    This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
+                                 Except for this watermark, it is identical to the accepted version;
+                           the final published version of the proceedings is available on IEEE Xplore.
+
+
+
+
+     CHAL: Causal-guided Hierarchical Anomaly-aware Learning for Moving
+                       Infrared Small Target Detection
+
+           Weiwei Duan, Luping Ji*, Shipeng Lei, Sicheng Zhu, Jianghong Huang, and Mao Ye
+ School of Computer Science and Engineering, University of Electronic Science and Technology of China
+                           dwwuestc@163.com, jiluping@uestc.edu.cn, cvlab.uestc@gmail.com
+
+
+
+                            Abstract
+
+Infrared small target detection is one highly special cat-                             Targets              Reverse                Targets
+egory of object detection, faced with tiny target imaging
+size and cluttered backgrounds. Currently, almost all exist-
+ing methods are target-centered, directly learning the target
+                                                                                   (a) Background                                 (b) Background
+features from backgrounds. However, due to weak target
+signals, they are often difficult in effectively capturing sta-          and   : Directly-learned object;             and   : Undirectly-learned object.
+
+ble features. Sometimes, they cannot even distinguish real            Figure 1. Paradigm comparisons: (a) target-centered and (b) ours.
+targets from background confounders. To overcome these
+problems, from an opposite perspective, we propose the
+first Causal-guided Hierarchical Anomaly-aware Learn-              due to the long-range imaging mechanism, infrared small
+ing (CHAL) framework. Breaking through target-centered             targets usually show two special vision characteristics:
+paradigm, it focuses on background learning, while the tar-        Small (image size) and Dim (background contrast), often
+gets are handled as the anomalies in backgrounds. In detail,       lacking distinct shapes and texture features.
+to fulfill the goal, a spatio-temporal neural field is designed       In early stages, many traditional model-driven methods
+to model the background evolution patterns from genera-            were first proposed to address ISTD, e.g., TopHat [1] and
+tive perspective. Meanwhile, a hierarchical anomaly-aware          PSTNN [33]. This type of methods often relies heavily on
+learning is proposed to decompose anomaly discovery. Fur-          the prior knowledge of infrared images, lacking learning ca-
+thermore, to block the spurious correlations often caused by       pabilities. To overcome their obvious shortcomings, with
+background confounders, and enhance true target causal-            the progress of deep learning, many effective data-driven
+ity, a causal-guiding mechanism is designed. The exper-            methods have been proposed. Depending on the frame
+iments on three infrared datasets verify the effectiveness         number to be processed, they can be further grouped into
+and superiority of our CHAL. Even in visible-light scenar-         Single-frame and Multi-frame [9]. The former usually rely
+ios, it still possesses obvious adaptivity. Code is open at        on the vision features of only an individual image, no mo-
+https://github.com/UESTC-nnLab/CHAL.                               tion information is available, e.g., ISNet [43], MSHNet [22]
+                                                                   and PConv [39]. By contrast, multi-frame schemes could
+                                                                   often extract the visual and motion patterns of small targets
+1. Introduction                                                    from consecutive frames, which have become mainstream,
+                                                                   e.g., SSTNet [2], Tridos [7] and DTUM [19].
+Infrared small target detection (ISTD) has become a crucial
+                                                                      Despite advances, almost all existing data-driven meth-
+task in computer vision due to its independence from ex-
+                                                                   ods are primarily based on target-centered feature learning,
+ternal light sources and its all-weather visibility capability.
+                                                                   as shown in Figure 1 (a). This paradigm faces a funda-
+It has been increasingly applied to a wide range of critical
+                                                                   mental contradiction, i.e., it often depends on rich target
+applications [8], including early warning systems, satellite
+                                                                   features (target-centered), which are precisely lacking in in-
+remote sensing, and rescue missions [1, 4]. As an important
+                                                                   frared small targets. As such, the detector is highly sus-
+research branch of object detection, it has garnered signifi-
+                                                                   ceptible to confounding effects, e.g., when a weak target is
+cant research attention over the past decades [13, 22].
+                                                                   near bright cloud edges, the model can easily learn stronger
+    Compared with conventional visible-light objects [10],
+                                                                   background confounders rather than dim targets, becoming
+  * Corresponding Author                                           a confounder detector and resulting in false alarms.
+
+
+
+                                                              21357
+    This critical challenge motivates us to reverse the exist-    lyzing individual frames, as they have no available mo-
+ing paradigm from weak targets to dominant backgrounds,           tion information, e.g., ACM [4], MSHNet [22], MTML-
+i.e., background-centered feature learning, as shown in           Net [38] and PConv [39]. In contrast, multi-frame schemes
+Figure 1 (b). Specifically, we reformulate moving ISTD            [7, 19, 32, 42] can simultaneously capture the visual fea-
+(MISTD) as an anomaly-discovery task, treating small tar-         tures and motion patterns of targets, providing them with
+gets as the anomalies in backgrounds. However, one key            greater detection performance [9]. For example, Tridos [7]
+challenge in this task is distinguishing true anomalies (tar-     expands the pattern of feature learning from both spatial-
+gets) from spurious anomalies (background confounders)            temporal and frequency domains. Furthermore, DTUM
+that also deviate from the learned normality (backgrounds).       [19] uses a direction-coded temporal U-shape module to en-
+Traditional background model methods, e.g., PSTNN [33]            code the motion direction of targets.
+and FGLR-MCP [23], are insufficient due to their heavy re-            Anomaly Detection. Anomaly Detection (AD) aims
+liance on rigid infrared image priors.                            to detect abnormal samples that deviate from the normal
+    Currently, causal learning [21] has emerged as a power-       patterns [15]. Recently, it has gained significant atten-
+ful tool for addressing confounding effects. Prior works [24,     tion in various applications [28], e.g., industrial manufac-
+25] often use interventions to decouple high-level seman-         turing [26, 41] and video surveillance [44]. For example,
+tics. However, the confounders of MISTD are non-semantic          DiffusionAD [41] designs a norm-guided denoising diffu-
+(e.g., textures, edges) and dynamically evolving, making          sion network, comprising reconstruction and segmentation.
+existing causal designs unsuitable for direct application. In-    Moreover, MA-PDM [44] develops a patch diffusion model
+spired by these analyses, we propose a Causal-guided Hi-          with motion and appearance guiding for video AD. How-
+erarchical Anomaly-aware Learning (CHAL) framework.               ever, existing methods often concern the visible images,
+It first models the background normality and then causally        making them ineffective in challenging infrared scenes.
+perceives the true source of deviations.                              Causal Reasoning. Causal learning [14] is a theoretical
+    In our framework, it mainly comprises three core parts.       framework for studying causal relationships in data. It aims
+First, the Spatio-Temporal Neural Fields serve as a normal-       to remove spurious correlations by explicitly modeling con-
+ity estimator to learn the continuous spatio-temporal evo-        founding factors and designing adjustment strategies, and
+lution of background patterns. Second, the Hierarchical           has been applied to various fields [3, 24, 25]. For exam-
+Anomaly-Aware Learning breaks down anomaly discovery              ple, UFR [24] designs an unbiased Faster R-CNN with gen-
+into a hierarchical process: mining potential appearance          eralizable feature learning to construct a structural causal
+anomalies first and then verifying them via motion consis-        model. Furthermore, CRCL [25] introduces the causal
+tency. Finally, the Causal Relation Guiding is proposed to        representation consistency learning for AD in surveillance
+address the interference of confounders, blocking spurious        videos, mining robust causal variables. Given the solid
+correlations and enhancing true causality. The extensive ex-      foundation and potential of causal learning, it is highly an-
+periments on three public infrared datasets verify the effec-     ticipated that it could be effectively applied to MISTD.
+tiveness and superiority of our CHAL. Even in visible-light
+scenarios, it still possesses obvious adaptivity.                 3. Methodology
+    In summary, our primary contributions include: (i)
+breaking through existing target-centered feature learning,       3.1. Overall Architecture
+the first causal-guided hierarchical anomaly-aware frame-         Problem Formulation. Unlike prior works, we reformulate
+work is proposed. (ii) rather than focusing on weak tar-          MISTD as an anomaly discovery task, rather than focus-
+gets, a spatio-temporal neural field is proposed to per-          ing on target features. Instead of directly classifying pix-
+form background-centered feature learning, establishing a         els as targets or backgrounds, we aim to analyze regions
+solid foundation for anomaly discovery. (iii) a hierarchical      that deviate from the background’s spatio-temporal evolu-
+anomaly-aware learning strategy is developed to disentan-         tion patterns. Formally, given infrared video sequences D,
+gle appearance and motion anomalies, achieving from dis-          a set of consecutive frames within a time window t, i.e.,
+covery to verification. (iv) a causal relation guiding mecha-     I = {I 1 , I 2 , · · · , I t }, is randomly sampled as inputs. Our
+nism is presented to perform feature intervention, blocking       primary goal is to train a anomaly detector fθ (·) to locate
+spurious correlations and enhancing true causality.               the anomalies Y in the keyframe I t , using the temporal
+                                                                  context of adjacent frames, that is
+2. Related Work
+Infrared Small Target Detection. According to the dif-                         min E(I,Y )∼D [Ltotal (fθ (I), Y )],             (1)
+                                                                                 θ
+ferences in research strategies, current ISTD methods can
+be categorized into two types: Single-frame and Multi-            where Ltotal is the total training loss, and E(I,Y )∼D de-
+frame [46]. Single-frame schemes mainly focus on ana-             notes computing the expectation over all samples.
+
+
+
+                                                             21358
+                           (a)      (b)                                       First, the multiscale features F are processed by early
+         Z         T                            Z       T
+                                                                          feature fusion to obtain single-scale multi-frame feature
+
+
+
+
+                                           ck
+                             Causal
+                                                                          representations FC . Then, the spatio-temporal volume V
+
+
+
+
+                                          Blo
+                            Learning                                      is obtained by stacking FC , as follows:
+     F                 Y                   F                Y                                                         t
+                                                Enhancing                                                            X
+                                                                                         V = fsta (FC ) = fatt (fup (   FCi )),          (2)
+Figure 2. (a) Structural causal model; (b) Causal learning results.                                                    i=1
+
+                                                                              where fsta (·) is stacking operation, fatt (·) denotes the spa-
+   Core Challenges. As illustrated in Figure 2, we con-                       tial and chanel attention, and fup (·) means upsampling.
+struct a causal graph to explore the relations between dif-                       Second, the spatial scene representation Zs , which con-
+ferent variables in the anomaly discovery process. In fig-                    tains invariant appearance features, and the dynamic mo-
+ure, the path T → Y denotes that the target features T                        tion encoding Zd , which explicitly models motion evolu-
+directly influence the detection results Y . As such, the core                tion patterns, are extracted by a scene encoder with two dis-
+challenges of our task primarily lie in the confounding path                  entangled branches, described by following equations:
+F ← Z → Y . In detail, Z often represents complex back-                                
+ground clutter, bright cloud edges, or sensor noise. It can di-                         Fa = Γ(V ) = σr (fB (fc (V ))),
+                                                                                       
+rectly corrupt the feature learning process (F ← Z) while                                Zs = ψs (Fa ) = ζ(fmlp (fF (fp (Fa )))),         (3)
+                                                                                                               ′
+                                                                                                                   (fF (fc′ (V )))),
+                                                                                       
+simultaneously generating false alarms (Z → Y ), There-                                  Zd = ψd (V ) = ζ(fmlp
+                                                                                       
+fore, our core insight is to distinguish spurious anomalies
+                                                                              where Fa is the smoothed features obtained by an aggre-
+by causal learning, blocking the confounding path and en-
+                                                                              gator Γ(·), comprising a 3D convolution block fc (·) with
+hancing true causality (T → F → Y ).
+                                                                              batch normalization fB (·) and ReLU activation σr . ψs (·) is
+   Overview. The proposed causal-guided anomaly-aware
+                                                                              the scene encoder with the 3D adaptive pooling fp (·), flatten
+learning framework, i.e., CHAL, is shown in Figure 3,
+                                                                              operation fF (·), and multi-layer perceptron fmlp (·). ψd (·)
+comprising three core components: SNF, HAL and CRG.
+                                                                              is the motion encoder and ζ is the tanh function. Then, Zs
+Specifically, it first takes an infrared video clip I as input.
+                                                                              and Zd are concatenated to obtain the overall scene encod-
+A CSPDarknet [12] is utilized as the shared feature extrac-
+                                                                              ing Z with background prior knowledge.
+tor to capture multiscale features by FPN. Following most
+                                                                                  Third, to construct continuous neural scene represen-
+video object detection methods [45], the multi-frame fea-
+                                                                              tations, we construct a 3D coordinate grid G to generate
+tures FC ∈ Rb×t×c×h×w are extracted by iteratively feed-
+                                                                              spatio-temporal coordinates O ∈ Rhw×3 for each point
+ing each frame into the feature extractor, where b, c, h and w
+                                                                              (i, j) of keyframe features Ft . Position encoding is used
+are the batch size, the channel, height and width of features,
+                                                                              to map coordinates O to a high-dimensional Fourier feature
+respectively. Second, scene encoding features Z and posi-
+                                                                              space to obtain refined query signals Q, as follows:
+tion encoding features Q are obtained by projecting FC into                     
+a semantic subspace and constructing a 3D spatio-temporal                       
+                                                                                  O = {G(i, j, t) | ∀(i, j) ∈ Ft },
+grid G. These two features, Z and Q, represent the scene
+                                                                                
+                                                                                
+                                                                                                  2j          2i
+                                                                                   G(i, j, t) = (      − 1,          − 1, α · t),
+                                                                                
+context and high-frequency position details, processed by                                         w−1        h−1                         (4)
+the background neural field F to generate predicted back-                                                                 l
+                                                                                                                                  
+                                                                                
+                                                                                                                     sin(2 πµ), L
+grounds B. Then, B are fed into HAL. It performs anomaly                        Q = {P(µ) | ∀µ ∈ O} = fcat (                      ) ,
+                                                                                
+                                                                                                                       cos(2l πµ) l=1
+                                                                                
+perception by mining appearance anomaly candidates Aa
+and verifying real anomalies Af by motion consistency.                    where α is a learnable time scale parameter, fcat (·) is con-
+Moreover, CRG performs causal intervention and suppres-                   catenation, and L is the number of frequency bands in
+sion for confounders in the feature space to obtain features              Fourier feature mapping to control the representation ability
+Ff . Finally, Ff is fed into a detection head to compute the              of the position encoder P for high-frequency details.
+total training loss Ltotal , thereby providing implicit super-               Finally, the enhanced global scene encoding Z and re-
+vision by backpropagation for the overall framework.                      fined high-frequency query signals are fed into the back-
+                                                                          ground neural fields Fθ (·) to perform counterfactual pre-
+3.2. Spatio-Temporal Neural Fields                                        diction, obtaining normal backgrounds B, as follows:
+In our task, a key challenge is modeling complex and evolv-
+                                                                                      B = Fθ (Z, Q) = R(fθ (fcat (T (Z), Q))),           (5)
+ing infrared backgrounds. Previous methods [29, 32] often
+struggle to capture the continuous spatio-temporal proper-                where T (·) denotes expanding scene context to each query
+ties of backgrounds. To address this, we develop SNF to                   point, fθ (·) represents two linear layers with residual con-
+implicitly learn spatio-temporal background evolution pat-                nections (128 hidden dimension), achieving high-level de-
+terns via neural field modeling, as shown in Figure 3.                    tail reconstruction. R means restoring the tensor shape.
+
+
+
+                                                                      21359
+          t frames, I                          Spatio-Temporal Neural Fields                            l            Fa           Zs              Background Fields
+                                                                                                 atia
+                                                                                               Sp
+                                                                   Ft
+                                                                              Stack                                                         Z
+                                          F                                                V                    Scene Encoder           C
+                              Feature                          FC                                                                 Zd
+
+
+
+
+                                                                                               M
+                                                                                                                     Proj.
+
+
+
+
+                                                                                                ot
+                                                                              Ft-1
+
+
+
+
+                                                                                                 io
+                                               Early Fusion
+
+
+
+
+                                                                                                    n
+                      I1     Extractor                                                 3D Grid
+                                                                                                                                        Q
+                                                                              Create                        O    Position Proj.
+                                                                 F1                                              Encoder
+                                    Shared
+                                                    FC[k]                 Fk                    Hierarchical Anomaly-Aware Learning
+                                                                                                                                  Proj.
+                      I2                  F                                                      Enhancing                                          Recon.
+
+                              Feature                          Cosin
+                                                                                                                                    3D SwinTrans
+                             Extractor                       Similarity
+                                                                                                                                        weights
+                                                                                                                                    1
+
+                                                                                               Residual                             0 frame       Learnable
+                                                       [k]
+                      It                                                         Appearance Anomalies Extracting Causal Verification
+             Inputs                            Causal Relation Guiding                                           Anomaly Scores           Adjust
+                                                                                                                                                      Norm.
+                                                                Fg     Z                             T
+                                          Ff                                                                                                             (0,1)
+
+
+
+
+                                                                                 ck
+                              Detection                                                                                                                    Keyframe
+
+
+                                                                                Blo
+                               Head                                     Gated
+                                                                                                                                                         Ft
+                              Inference                                          F                          Y
+                                                                         Fg            Enhancing
+            Results                             Feature Refining                Causal-guided Gating                            Appearance Attention            Ft
+
+Figure 3. Our proposed CHAL framework. Spatio-Temporal Neural Fields is proposed to implicitly model the spatio-temporal evolution
+patterns of backgrounds, obtaining predicted backgrounds B. Hierarchical Anomaly-Aware Learning is designed to decompose anomaly
+discovery from a simple single-step into a hierarchical one, mining potential appearance anomalies Aa and then performing causal verifi-
+cation based on motion consistency. Causal Relation Guiding is presented to address causal confounding, blocking spurious correlations
+from backgrounds (e.g., F ← Z → Y ), and enhancing true causality from real targets (e.g, T → F → Y ).
+
+3.3. Hierarchical Anomaly-Aware Learning                                        self-attention, achieving high-level anomaly perception and
+                                                                                enhancing the motion consistency, that is
+Unlike general anomaly detection methods [28, 41], our pri-                                      k       k             b×t×c×h×w
+mary motivation is to decompose this process into a hier-                       E = {fpro (Aa ) | ∀Aa ∈ Aa } ∈ R
+                                                                                
+archical one from discovery to validation. Therefore, we
+                                                                                
+                                                                                   fpro (Aka ) = fsta (Wk · Aka + bk ) + ρ, k ∈ [1, t]   (7)
+propose the HAL, as shown in Figure 3.                                          
+                                                                                A = ΥE + F (i) (E) + F (i) (E + F (i) (E))
+                                                                                
+   First, the appearance anomalies Aa are obtained by cal-                             c                         a              mlp                  a
+culating the similarity S between every frame features Fk                          where fpro (·) is projecting anomaly maps to a high-
+and predicted counterfactual backgrounds Bk . It could be                       dimensional feature subspace, Wk and bk are the weights
+further described as follows:                                                   and bias term, respectively. ρ is the position encoding in-
+                                                                                formation, fsta (·) is stacking operation, Fa (·) means the
+   
+        k
+   Aa = ∆θ (1 − fcos (F k , Bk )), k ∈ [1, t],
+   
+                                                                                shifted window multi-head self-attention, Fmlp (·) is the
+                              Fk (i, j) • Bk (i, j)     (6)
+   fcos (Fk , Bk )(i, j) =
+                                                     ,                         multi-layer perceptron with the DropPath and LayerNorm,
+                            ∥Fk (i, j)∥2 ∥Bk (i, j)∥2                           and Υ[·] denotes function composition (i ∈ [1, N ]).
+                                                                                   Finally, the anomaly maps Ac are reconstructed by a de-
+where Aka ∈ Rb×c×h×w is the appearance anomalies of                             coder Φr . Moreover, temporal-weight learning is designed
+k-th frame, b is batch size, ∆θ represents the anomaly am-                      to assign distinct weights ωk to each frame, as follows:
+plifier with three convolution layers with residual connec-                      
+                                                                                    A = Φr (Ac ) = fr (π−1 (Ac )) ∈ Rb×t×c×h×w
+tions. fcos (·) represents calculating cosine similarity, “•”                     r
+                                                                                 
+                                                                                 
+means inner product, and ∥ · ∥2 denotes l2 norm.                                             t
+                                                                                           X                      exp(βk )                 (8)
+    Second, for the consecutive appearance anomaly se-                           A f =
+                                                                                               ωk · Akr , ωk = P            , k ∈ [1, t],
+                                                                                                                    exp(βk )
+                                                                                 
+                                                                                                k=1                                 k
+quence Aa , it contains false anomalies caused by con-
+founding factors. As such, we employ a N layers spatio-                         where fr (·) represents a reconstructing decoder with two
+temporal swin transformer [30] to perform joint spatio-                         convolution layers, π−1 (·) means selecting the correspond-
+temporal modeling within local 3D windows using shifted                         ing anomaly maps, and Af is the final causal anomalies.
+
+
+
+                                                                        21360
+3.4. Causal Relation Guiding                                          4. Experiments
+As shown in Figure 2, the core challenge is the confound-             4.1. Implement Details
+ing path F ← Z → Y . To block this path and estimate
+the true causal effect, we present CRG in Figure 3, to elimi-         All comparison methods are evaluated on three public
+nate the confounding bias introduced by Z, inspired by the            datasets, DAUB-H [16], NUDT-MIRSDT [19], and IRDST-
+backdoor adjustment mechanism of causal theory [14].                  R [31]. For a fair comparison, following previous works
+   The core idea is to stratify the data by the confounder            [2, 7, 8], we use the standard detection evaluation metrics,
+Z and then adaptively compute the weights average of the              i.e., Precision (P r), Recall (Re), F1 and mAP50 (the mean
+predictions across all strata. Formally, the causal effect of         Average Precision with an IoU threshold 0.5). For all com-
+F on Y could be estimated as follows:                                 pared methods, their input frames are resized to 512 × 512.
+                      X                                               In detail, our CHAL and compared methods are all trained
+    P (Y |do(F )) =       P (Y |F , Z = z)P (Z = z), (9)              for 100 epochs with a batch size of 4. AdamW is adopted as
+                       z                                              the optimizer with an initial learning rate of 8 × 10−5 and
+where do (·) signifies an intervention to remove the influ-           a weight decay of 5 × 10−2 . Hyper-parameters t, L, N , τ ,
+ence of Z, P (Y |F , Z = z) denotes the prediction condi-             λ1 , and λ2 are set to 5, 6, 2, 0.3, 4.0, and 1.2, respectively,
+tioned on both features F and a specific z, and P (Z = z) is          with detailed experiments in Appendix.
+the prior distribution of confounders. However, in MISTD,
+Z is continuous and dynamic, which makes direct compu-                4.2. Comparison with SOTA Methods
+tation difficult. Therefore, causal-guided gating is proposed         Quantitative Comparisons. Table 1 presents the quan-
+as a differentiable substitution in feature subspace.                 titative comparisons across 17 representative methods, in-
+    Specifically, the causally verified anomalies Af are first        cluding single-frame and multi-frame ones. From table,
+normalized to (0, 1), acting as a learned proxy for Z. We             we could have two obvious observations. One is that our
+then apply a nonlinear filter to obtain anomaly scores H by           CHAL establishes new SOTA benchmarks across most met-
+             (
+               ηe · fnor (Af ), if fnor (Af ) > τ,                    rics, consistently securing the top performance on all three
+      H=                                                 (10)         datasets. For example, on NUDT-MIRSDT, our CHAL
+               ηs · fnor (Af ), otherwise,
+                                                                      obtains the highest mAP50 75.25%, Re 88.49% and F1
+where ηe > 1 and ηs < 1 are two learnable scaling factors             87.41%. Only in terms of P r, the 86.35% by our CHAL
+to control the strength of intervention, stratifying Af to two        is slightly lower than the SOTA 92.50% by ADSUNet. It
+strata with anomaly threshold τ . fnor (·) is normalization.          achieves a higher P r by sacrificing Re, whereas our method
+   Meanwhile, F̂t is computed by appearance attention M,              is more balanced, achieving a higher F1. The other is that
+denoting the observed feature F with residual confounders.            general anomaly detection methods are ineffective in highly
+Then, the final features Ff are obtained by performing                challenging infrared scenarios. For instance, on DAUB-H,
+backdoor adjustment on confounders Z. By scaling F̂t with             the SOTA AD one, i.e., DiffusionAD, only obtains mAP50
+anomaly scores H, it could effectively isolate the confound-          19.50% and F1 42.13%, notably lower than the mAP50
+ing path F ← Z → Y , thereby forcing the feature flow to              54.28% and F1 74.15% by CHAL. Moreover, because these
+approximate the true causal chain T → F → Y , that is                 AD schemes primarily focus on visible-light images, on
+       (                                                              IRDST-R, they even fail to converge during training.
+        F̂t = Ft ⊙ M = Ft ⊙ [σs (fe (Ft ))],
+                                                          (11)            PR Curve Comparisons. As usual, we further employ
+        Ff = fref (Fg ) = fref (F̂t ⊙ (1 + H)),                       precision-recall (PR) curves to visually assess the compre-
+where fref (·) is the feature refining with two-layer convo-          hensive performance of various methods, as illustrated in
+lutions, guaranteeing the unconfounded feature Ff reflects            Figure 4. The proximity of a method to the top-right cor-
+the real causal effect P (Y |do(F )). Finally, Ff is fed into a       ner directly indicates its effectiveness. These figures clearly
+detection head based on YOLOX [12] to obtain final results.
+The total training objective is defined as follows:
+             Ltotal = Lobj + λ1 Lreg + λ2 Lcls ,           (12)
+where λ1 and λ2 are two loss weights. We use sigmoid
+focal loss [20] as classification loss Lcls and probability loss
+Lobj , NWD loss [37] as localization loss Lreg . Crucially,
+Ltotal is designed to implicitly supervise all components
+(SNF, HAL and CRG), minimizing the total loss on Ff to
+drive the gradient to penalize deviations at every upstream
+stage, correctly identifying the true anomaly.                            Figure 4. PR curve comparisons on two datasets (partly).
+
+
+
+
+                                                                  21361
+ Table 1. Quantitative comparisons (partly). The best and second-best results are marked in red and blue , respectively. All multi-frame
+ methods utilize five frames for fair comparison. “⋆” means the method is based on anomaly detection. FPS is tested on RTX4090.
+
+                                                              DAUB-H                           NUDT-MIRSDT                       IRDST-R
+                  Method               Pub                                                                                                               Param↓ GFlops↓ FPS↑
+                                                  mAP50 (%) Pr (%) Re (%) F1 (%) mAP50 (%) Pr (%) Re (%) F1 (%) mAP50 (%) Pr (%) Re (%) F1 (%)
+                  ISNet [43]         CVPR’22        44.73     56.35   80.99   66.46    68.72     81.62 85.50 83.51       59.27     73.75 81.98 77.65 3.49M 265.73 11.20
+                  UIUNet [35]        TIP’22         49.23     73.72   67.49   70.47    66.63     83.00 81.83 82.41       59.22     76.55 78.47 77.50 53.06M 456.70 3.63
+                  DNANet [18]        TIP’23         50.76     71.04   72.01   71.52    68.97     82.87 84.61 83.73       67.43     85.97 79.04 82.36 7.22M 135.24 4.82
+                  SIRST5K [27]       TGRS’24        40.66     57.63   71.14   63.68    68.91     86.88 80.76 83.71       47.43     71.08 67.03 68.99 11.48M 182.61 7.37
+   Single-frame
+
+
+
+
+                  MSHNet [22]        CVPR’24        26.47     48.56   55.39   51.75    71.77     86.18 84.74 85.45       60.86     78.54 78.52 75.53 6.59M 69.59 18.55
+                  LSKNet [34]        TGRS’25        46.34     56.97   82.76   67.48    72.73     85.36 86.07 85.72       65.84     82.66 80.88 81.76 3.42M 76.00 40.63
+                  PConv [39]         AAAI’25        48.48     70.74   69.14   69.93    68.91     83.74 83.03 83.39       58.45     79.50 74.74 77.04 6.59M 69.29 10.01
+                  MTMLNet [38]       TIP’25         27.56     53.46   52.48   52.96    61.66     81.82 76.48 79.06       58.53     80.72 73.55 76.97 16.79M 117.97 15.21
+                  DiffusionAD ⋆ [41] TPAMI’25       19.50     31.72   62.71   42.13    Training Without Convergence      Training Without Convergence 39.32M 551.78 5.05
+                             ⋆
+                  INPFormer [28] CVPR’25            1.31       5.73   23.84   9.24      0.28     2.00 14.02 3.50         Training Without Convergence 142.37M 362.92 0.67
+                  TSNet [17]         ESWA’26        40.34     59.88   68.69   63.99    51.76     69.66 75.90 72.64       39.22     58.98 67.75 63.06 3.18M 197.81 12.81
+                  ST-Trans [32]        TGRS’24      44.93     87.21   52.54   65.57    67.28     93.41   72.66   81.74   64.50   86.84   75.16   80.58   38.13M   145.16 3.90
+    Multi-frame
+
+
+
+
+                  SSTNet [2]           TGRS’24      52.25     83.49   63.25   71.98    64.87     87.17   75.09   80.68   68.21   75.70   91.34   82.79   11.95M   123.59 9.24
+                  Tridos [7]           TGRS’24      49.72     88.55   56.69   69.13    73.01     87.66   84.15   85.87   61.69   83.16   74.11   78.37   14.13M   130.72 11.23
+                  DTUM [19]            TNNLS’25     50.32     81.53   63.00   71.08    72.45     88.99   82.77   85.77   64.72   83.32   78.81   81.00    9.64M   128.16 14.28
+                  ADSUNet [42]         PR’26        43.43     92.54   47.96   63.18    47.66     92.50   52.12   66.67   66.68   88.76   75.24   81.44   26.06M   112.84 10.52
+                  CHAL (Ours)          -            54.28     73.08   75.26   74.15    75.25     86.35   88.49   87.41   71.37   86.58   83.02   84.76   15.69M   137.04 12.96
+
+
+
+                    PConv 2025          DTUM 2025           CHAL (ours)       Ground Truth
+                                                                                                       Visual Comparisons. For intuitiveness, we select 2 rep-
+DAUB-H
+
+
+
+
+                                                                                                    resentative methods to visually compare our CHAL on three
+                                                                                                    datasets, as depicted in Figure 5. It is obvious that our pro-
+                           13/6.bmp                                                                 posed CHAL typically detects targets accurately, whereas
+                                                                                                    the other two often result in missed or false detections. For
+NUDT
+
+
+
+
+                                                                                                    example, on NUDT-MIRSDT, our CHAL could accurately
+                                                                                                    detect the target near a tree, while PConv could not find the
+                           4/10.bmp
+                                                                                                    real target, and DTUM mistakenly treats a bright spot as a
+                                                                                                    target. On challenging IRDST-R, the other two could not
+IRDST-R
+
+
+
+
+                                                                                                    even detect the target occluded by clouds.
+                           26/14.bmp
+                                                                                                    4.3. Ablation and Analysis
+ Figure 5. Visual comparisons. Blue boxes and yellow circles are
+ the missed and false detections. More results are in Appendix.                                     Effects of Different Components. To evaluate the impact
+                                                                                                    of various configurations within our CHAL, we conduct a
+                                                                                                    series of ablation studies, as shown in Table 2. Through
+ show that our curves outperform those of competing meth-                                           comparisons, we could have two obvious findings. First, it
+ ods. For example, on DAUB-H, our PR curve consistently                                             is apparent that the individual components are consistently
+ occupies the higher positions. This pattern continues on                                           effective in enhancing detection capabilities. For exam-
+ NUDT-MIRSDT, where our curve exceeds others in the top-                                            ple, on DAUB-H, the baseline configuration (w/o All), de-
+ right. Therefore, these PR curves validate the superiority of                                      void of any specialized components, only achieves mAP50
+ our CHAL in balancing P r and Re compared to others.                                               23.48% and F1 46.36%. The integration of SNF (w S) im-
+    Inference Cost Comparisons. Table 1 also shows the                                              proves these scores to 43.76% for mAP50 and 60.90% for
+ inference Cost comparisons, revealing two notable findings.                                        F1. Similarly, incrementally applying HAL (w S & H) fur-
+ First, although our CHAL utilizes a sequence of five con-                                          ther increases metrics to 48.63% for mAP50 and 66.68%
+ secutive frames, its parameters remain at a moderate level.                                        for F1. Second, these components have synergistic effects.
+ For example, our model has 15.69M parameters, higher                                               For instance, on NUDT-MIRSDT, when all components are
+ than the SOTA method ISNet (3.49M), but still lower than                                           fully assembled (w All), performance reaches peaks, with
+ many methods, e.g., the 16,79M by MTMLNet, and the                                                 an mAP50 of 54.28% and an F1 of 74.15%.
+ 26.06M by ADSUNet. Second, processing multi-frame im-                                                  Effects of Spatio-Temporal Neural Fields. Figure 6
+ ages causes a high GFLOPs, but it often promotes detection                                         presents the 3D visualizations before and after SNF to show
+ performance. For instance, our CHAL has 137.04 GFLOPs,                                             the background modeling process. From this, it is obvious
+ higher than some methods. However, compared to all other                                           that the features before SNF are confounded, containing
+ methods, its mAP50 and F1 score are the highest.                                                   both a low-frequency background plane and a peak repre-
+
+
+
+                                                                                             21362
+Table 2. The ablation study of our CHAL with different settings on DAUB-H and NUDT-MIRSDT. SNF: three components of spatio-
+temporal neural fields (S1 is background fields Fθ , S2 denotes scene encoder, S3 means position encoder). HAL: two anomaly-aware
+learning schemes (H1 is appearance anomaly learning, H2 denotes causal anomaly verification based on motion consistency). CRG: three
+components of causal relation guiding (C1 is anomaly enhancing, C2 denotes causal-guided gating, C3 is causal feature refining).
+
+                            SNF                 HAL            CRG                    DAUB-H                          NUDT-MIRSDT
+ Settings                                                                                                                                          Param↓   GFlops↓
+                       S1   S2    S3   H1         H2      C1    C2   C3   mAP50       Pr       Re      F1     mAP50      Pr      Re      F1
+ w/o All               -     -    -         -         -   -      -   -    23.48      35.38    67.21   46.36   50.30     60.47   84.69   70.56       9.99M    52.53
+                       ✓    -     -         -         -   -      -   -    37.72      53.47    59.62   56.38   58.08     69.03   74.74   71.77      10.61M    62.89
+ wS                    ✓    ✓     -         -         -   -      -   -    41.21      54.12    63.66   58.50   61.68     73.95   75.81   74.87      11.93M    78.22
+                       ✓    ✓     ✓         -         -   -      -   -    43.76      56.91    65.50   60.90   63.50     75.30   77.90   76.58      12.48M    89.47
+                       ✓    ✓     ✓     ✓         -       -      -   -    45.28      59.99    66.84   63.23   65.55     78.12   81.52   79.78      13.39M   102.94
+ wS&H
+                       ✓    ✓     ✓     ✓         ✓       -      -   -    48.63      66.20    67.17   66.68   68.49     80.64   84.93   82.73      14.17M   120.33
+                       ✓    ✓     ✓     ✓         ✓       ✓     -    -    50.45      62.92    79.20   70.13   71.17     83.22   86.13   84.65      14.86M   124.27
+ wS&H&C                ✓    ✓     ✓     ✓         ✓       ✓     ✓    -    53.19      67.57    79.68   73.12   73.82     85.30   87.90   86.58      14.98M   128.39
+                       ✓    ✓     ✓     ✓         ✓       ✓     -    ✓    52.54      63.08    83.00   71.68   72.73     83.55   88.86   86.12      15.32M   135.22
+ w All                 ✓    ✓     ✓     ✓         ✓       ✓     ✓    ✓    54.28      73.08    75.26   74.15   75.25     86.35   88.49   87.41      15.69M   137.04
+
+
+Image                                                                                        DAUB-H
+
+
+
+
+             9/9.bmp              8/8.bmp                  1/6.bmp         5/6.bmp
+
+
+            Target
+
+                                                                                             Only                     Only                      Final
+                                                                                             NUDT
+
+
+Before           3D
+
+
+
+
+                                                                                             Only                     Only                      Final
+
+
+                                                                                             Figure 7. Feature distributions of the Aa , Ar and Af in HAL.
+
+                                                                                             anomaly Aa , targets and backgrounds overlap significantly.
+After            3D
+                                                                                             When employing the reconstructed temporal anomaly Ar ,
+                                                                                             they begin to separate gradually. After applying the fi-
+Figure 6. Visualization of the background modeling. The first and                            nal causal anomaly Af , clear boundaries emerge. It val-
+third rows show the original infrared images and predicted back-                             idates our initial motivation that relying solely on appear-
+grounds B. The second and fourth rows denote the 3D visualiza-                               ance anomaly is insufficient to distinguish true targets from
+tions before and after SNF. More results are in Appendix.                                    background confounders. Moreover, this clearly demon-
+                                                                                             strates the effectiveness of our HAL strategy, successfully
+senting anomaly signals. After SNF, the peak correspond-                                     learning a robust feature representation.
+ing to the target appears to be removed, and it is not included                                  Effects of Causal Relation Guiding. First, to visu-
+in the predicted backgrounds. It indicates that our SNF does                                 ally demonstrate the effectiveness of CRG, we present four
+not simply provide a background average. Instead, as a criti-                                groups of feature heatmaps before and after CRG, as illus-
+cal foundation for discovering anomalies, it attempts to pre-                                trated in Figure 8. From figure, it is evident that the focus
+cisely reconstruct complex background confounders, e.g.,                                     positions of feature heatmaps by “w/o CRG” are obscure,
+the cloud edges in the third column (1/6.bmp).                                               and targets are even lost in complex backgrounds. In con-
+    Effects of Hierarchical Anomaly-Aware Learning. To                                       trast, after employing CRG, the feature response of small
+thoroughly analyze the impacts of HAL, we select two sam-                                    targets is notably enhanced. Meanwhile, the noisy back-
+ples from DAUB-H and NUDT-MIRSDT to visualize the                                            ground becomes cleaner. This indicates that causal-guided
+feature distributions of targets (red) and backgrounds (blue)                                gating and feature refinement could effectively suppress
+at different stages, as shown in Figure 7. From this, it could                               spurious correlations and enhance true causality, thereby
+be easily observed that when only using the appearance                                       improving the detection performance of small targets.
+
+
+
+                                                                                     21363
+w/o CRG Ground Truth
+
+
+
+
+                                                                                                    F1
+                                  8/10.bmp           9/6.bmp           4/8.bmp       19/9.bmp
+
+
+
+
+                                                                                                                   Anomaly Strength                   Anomaly Type
+w CRG
+
+
+
+
+                                                                                                     Figure 9. The ablation study of different anomaly strengths and
+                                                                                                     types on our CHAL. More experimental results are in Appendix.
+
+                                                                                                    mote sensing dataset, i.e. RsCarData [36], to validate the
+  Figure 8. Feature heatmap comparisons before (w/o) and after (w)                                  adaptability of our CHAL. Despite differences in imag-
+  CRG. The first two columns are on DAUB-H, and the last two are                                    ing modalities, the vehicle detection on RsCarData faces
+  on NUDT-MIRSDT. More results are in Appendix.                                                     similar challenge as MISTD, From it, it is obvious that
+                                                                                                    our CHAL significantly outperforms all compared methods
+     Second, to verify the motivation of CRG, we compare it                                         across most metrics. For instance, our method achieves the
+  with general attentions, as shown in Table 3. From it, we ob-                                     highest mAP50 of 57.37% and F1 of 76.14%, surpassing the
+  serve that “w CRG” exhibits overwhelming superiority. For                                         second-best method STF by 4.96% in mAP50 and 4.41% in
+  example, its mAP50 surpasses the SOTA CBAM by 3.83%                                               F1. It indicates that our CHAL is not merely tailored for
+  on DAUB-H and 5.07% on NUDT-MIRSDT. Notably, its                                                  infrared domains, but a generalized framework can be suc-
+  15.69M parameters are even lower than the 16.28M by self-                                         cessfully extended to other small-object detection tasks.
+  attention. It indicates that the significant performance gain
+  stems from our causal-guided design, which is more effec-                                          Table 4. Performance comparisons on visible-light scenarios. “▲”
+  tive than target-centered attention mechanisms.                                                    denotes a multi-frame method using five consecutive frames.
+
+                        Table 3. Ablation study on general attention and our CRG.                                                       RsCarData
+                                                                                                         Methods                                                     Param↓
+                                                                                                                            mAP50 (%)   Pr (%)   Re (%)   F1 (%)
+                                               DAUB-H          NUDT-MIRSDT                               CenterNet [6]         48.90    63.17    69.42     66.15     14.44M
+                       Settings                                                    Param↓                VFNet [40]            36.80    48.12    56.35     51.91     32.67M
+                                             mAP50     F1      mAP50         F1                          TOOD [10]             42.00    52.09    63.23     57.12     31.79M
+                       w/o CRG               48.63   66.68     68.49       82.73   14.17M                YOLOX [12]            43.51    54.26    64.35     58.88      8.97M
+                                                                                                         DSFNet ▲ [36]         51.75    69.98    73.46     70.07     19.84M
+                       Self-Attention        49.85   67.74     69.27       82.93   16.28M                STF ▲ [47]            52.41    68.53    75.25     71.73     16.13M
+                       CBAM                  50.45   68.85     70.18       83.42   15.13M                HyperYOLO [11]        16.51    17.91    26.51     21.38     33.37M
+                       w CRG                 54.28   74.15     75.25       87.41   15.69M                CFPT [5]              20.42    41.63    49.99     45.43     37.08M
+                                                                                                         CHAL (Ours)           57.37    81.08    71.78     76.14     15.69M
+
+      Effect of Anomaly Strength and Type. To further
+  explore the perception ability of our CHAL for different                                           5. Conclusion
+  anomaly strengths and types, we perform a group of ab-
+  lation experiments on several synthetic test sets based on                                         To address the shortcomings of current target-centered
+  NUDT-MIRSDT, as shown in Figure 9. Specifically, we                                                detection paradigm, this paper proposes the first causal-
+  control the anomaly strength by adjusting the contrast be-                                         guided hierarchical anomaly-aware learning framework
+  tween synthetic targets and local backgrounds. Three repre-                                        (i.e. CHAL) for moving infrared small targets. Just oppo-
+  sentative anomaly types are designed, i.e., brightness, tex-                                       site to existing works, it emphasizes the background fea-
+  ture, and motion (the motion trajectory deviates from the                                          ture learning, rather than small target features, with all tar-
+  background). From figure, we could clearly find that our                                           gets treated as the anomalies appearing in backgrounds.
+  CHAL notably outperforms all ablation variants. For exam-                                          In the CHAL, Spatio-Temporal Neural Fields, Hierarchi-
+  ple, when the strength is less than 0.4, the performance of                                        cal Anomaly-Aware Learning and Causal Relation Guid-
+  “w/o HAL” and “only Aa ” tends to be 0. Conversely, our                                            ing strategy are designed to implement our new detection
+  CHAL still maintains a high F1. Moreover, this trend con-                                          framework. The experiments on three infrared benchmarks
+  tinues for all anomaly types. It shows that our CHAL could                                         verify the effectiveness and the superiority of our CHAL,
+  simultaneously perceive both low-level appearance anoma-                                           even in visible-light scenarios. Its weakness is the large pa-
+  lies and high-level motion ones, while others cannot.                                              rameter scale, causing relatively high computational cost.
+      Performance in Visible-Light Scenarios. Table 4                                                In the future, a lighter-weight anomaly-aware scheme with
+  presents the comparisons on a challenging visible-light re-                                        efficient causal learning merits further exploration.
+
+
+
+                                                                                                21364
+Acknowledgments This work is supported by the Na-                           Gao. Hyper-yolo: When visual object detection meets hyper-
+tional Natural Science Foundation of China (NSFC) un-                       graph computation. IEEE Transactions on Pattern Analysis
+der Grant No.62476049 and 62276048. The authors would                       and Machine Intelligence, 2024. 8
+like to thank the anonymous reviewers for their constructive           [12] Zheng Ge, Songtao Liu, Feng Wang, Zeming Li, and Jian
+comments that helped improve this work.                                     Sun. YOLOX: Exceeding yolo series in 2021. arXiv preprint
+                                                                            arXiv:2107.08430, 2021. 3, 5, 8
+References                                                             [13] Jinhui Han, Saed Moradi, Iman Faramarzi, Honghui Zhang,
+                                                                            Qian Zhao, Xiaojian Zhang, and Nan Li. Infrared small tar-
+ [1] Xiangzhi Bai and Fugen Zhou. Analysis of new top-hat                   get detection based on the weighted strengthened local con-
+     transformation and the application for infrared dim small tar-         trast measure. IEEE Geoscience and Remote Sensing Letters,
+     get detection. Pattern Recognition, 43(6):2145–2156, 2010.             18(9):1670–1674, 2020. 1
+     1                                                                 [14] Paul W Holland. Statistics and causal inference. Journal
+ [2] Shengjia Chen, Luping Ji, Jiewen Zhu, Mao Ye, and Xi-                  of the American statistical Association, 81(396):945–960,
+     aoyong Yao. SSTNet: Sliced Spatio-Temporal Network                     1986. 2, 5
+     With Cross-Slice ConvLSTM for Moving Infrared Dim-                [15] Haoqi Huang, Ping Wang, Jianhua Pei, Jiacheng Wang, Sha-
+     Small Target Detection. IEEE Transactions on Geoscience                hen Alexanian, and Dusit Niyato. Deep learning advance-
+     and Remote Sensing, 62:1–12, 2024. 1, 5, 6                             ments in anomaly detection: A comprehensive survey. IEEE
+ [3] Tieyuan Chen, Huabin Liu, Tianyao He, Yihang Chen, Chao-               Internet of Things Journal, pages 1–1, 2025. 2
+     fan Gan, Xiao Ma, Cheng Zhong, Yang Zhang, Yingxue                [16] Bingwei Hui, Zhiyong Song, Hongqi Fan, Ping Zhong, Wei-
+     Wang, Hui Lin, et al. MECD: Unlocking multi-event causal               dong Hu, Xiaofeng Zhang, Jianguo Lin, Hongyan Su, Wei
+     discovery in video reasoning. Advances in Neural Informa-              Jin, Yongjie Zhang, and Yaxi Bai. A dataset for infrared
+     tion Processing Systems, 37:92554–92580, 2024. 2                       image dim-small aircraft target detection and tracking under
+ [4] Yimian Dai, Yiquan Wu, Fei Zhou, and Kobus Barnard.                    ground / air background, 2019. 5
+     Asymmetric Contextual Modulation for Infrared Small Tar-          [17] Sixiang Ji, Haofei Zhang, Jingmin Zhang, Chun Fei, Xi-
+     get Detection. In 2021 IEEE Winter Conference on Applica-              aoyang Wang, Juanxiu Liu, and Ping Zhang. A three-stage
+     tions of Computer Vision (WACV), pages 949–958, 2021. 1,               model for infrared small target detection with spatial and
+     2                                                                      semantic feature fusion. Expert Systems with Applications,
+ [5] Zewen Du, Zhenjiang Hu, Guiyu Zhao, Ying Jin, and Hong-                295:128776, 2026. 6
+     bin Ma. Cross-layer feature pyramid transformer for small         [18] Boyang Li, Chao Xiao, Longguang Wang, Yingqian Wang,
+     object detection in aerial images. IEEE Transactions on Geo-           Zaiping Lin, Miao Li, Wei An, and Yulan Guo. Dense nested
+     science and Remote Sensing, 2025. 8                                    attention network for infrared small target detection. IEEE
+ [6] Kaiwen Duan, Song Bai, Lingxi Xie, Honggang Qi, Qing-                  Transactions on Image Processing, 32:1745–1758, 2022. 6
+     ming Huang, and Qi Tian. Centernet: Keypoint triplets for         [19] Ruojing Li, Wei An, Chao Xiao, Boyang Li, Yingqian Wang,
+     object detection. In Proceedings of the IEEE/CVF inter-                Miao Li, and Yulan Guo. Direction-coded temporal u-shape
+     national conference on computer vision, pages 6569–6578,               module for multiframe infrared small target detection. IEEE
+     2019. 8                                                                Transactions on Neural Networks and Learning Systems, 36
+ [7] Weiwei Duan, Luping Ji, Shengjia Chen, Sicheng Zhu, and                (1):555–568, 2025. 1, 2, 5, 6
+     Mao Ye. Triple-domain feature learning with frequency-            [20] Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, and
+     aware memory enhancement for moving infrared small tar-                Piotr Dollár. Focal loss for dense object detection. In Pro-
+     get detection. IEEE Transactions on Geoscience and Remote              ceedings of the IEEE International Conference on Computer
+     Sensing, 62:1–14, 2024. 1, 2, 5, 6                                     Vision, pages 2980–2988, 2017. 5
+ [8] Weiwei Duan, Luping Ji, Shengjia Chen, Sicheng Zhu,               [21] Xiangru Lin, Ziyi Wu, Guanqi Chen, Guanbin Li, and
+     Jianghong Huang, and Mao Ye. Weakly supervised con-                    Yizhou Yu. A causal debiasing framework for unsupervised
+     trastive learning with quantity prompts for moving infrared            salient object detection. In Proceedings of the AAAI confer-
+     small target detection. IEEE Transactions on Geoscience                ence on artificial intelligence, pages 1610–1619, 2022. 2
+     and Remote Sensing, 63:1–14, 2025. 1, 5                           [22] Qiankun Liu, Rui Liu, Bolun Zheng, Hongkui Wang, and
+ [9] Weiwei Duan, Luping Ji, Jianghong Huang, Shengjia Chen,                Ying Fu. Infrared small target detection with scale and loca-
+     Shuang Peng, Sicheng Zhu, and Mao Ye. Semi-supervised                  tion sensitivity. In Proceedings of the IEEE/CVF Computer
+     multi-view prototype learning with motion reconstruction for           Vision and Pattern Recognition, 2024. 1, 2, 6
+     moving infrared small target detection. IEEE Transactions         [23] Ting Liu, Yongxian Liu, Jungang Yang, Boyang Li, Yingqian
+     on Geoscience and Remote Sensing, 2025. 1, 2                           Wang, and Wei An. Graph laplacian regularization for fast
+[10] Chengjian Feng, Yujie Zhong, Yu Gao, Matthew R Scott, and              infrared small target detection. Pattern Recognition, 158:
+     Weilin Huang. Tood: Task-aligned one-stage object detec-               111077, 2025. 2
+     tion. In 2021 IEEE/CVF International Conference on Com-           [24] Yajing Liu, Shijun Zhou, Xiyao Liu, Chunhui Hao, Baojie
+     puter Vision (ICCV), pages 3490–3499. IEEE Computer So-                Fan, and Jiandong Tian. Unbiased faster r-cnn for single-
+     ciety, 2021. 1, 8                                                      source domain generalized object detection. In Proceedings
+[11] Yifan Feng, Jiangang Huang, Shaoyi Du, Shihui Ying, Jun-               of the IEEE/CVF Conference on Computer Vision and Pat-
+     Hai Yong, Yipeng Li, Guiguang Ding, Rongrong Ji, and Yue               tern Recognition (CVPR), pages 28838–28847, 2024. 2
+
+
+
+
+                                                                  21365
+[25] Yang Liu, Hongjin Wang, Zepu Wang, Xiaoguang Zhu, Jing          [37] Chang Xu, Jinwang Wang, Wen Yang, Huai Yu, Lei Yu, and
+     Liu, Peng Sun, Rui Tang, Jianwei Du, Victor C. M. Leung,             Gui-Song Xia. Detecting tiny objects in aerial images: A
+     and Liang Song. Crcl: Causal representation consistency              normalized wasserstein distance and a new benchmark. IS-
+     learning for anomaly detection in surveillance videos. IEEE          PRS Journal of Photogrammetry and Remote Sensing, 190:
+     Transactions on Image Processing, 34:2351–2366, 2025. 2              79–93, 2022. 5
+[26] Zhikang Liu, Yiming Zhou, Yuansheng Xu, and Zilei Wang.         [38] Bo Yang, Fengqian Li, Songliang Zhao, Wei Wang, Jun Luo,
+     Simplenet: A simple network for image anomaly detection              Huayan Pu, Mingliang Zhou, and Yangjun Pi. MTMLNet:
+     and localization. In Proceedings of the IEEE/CVF Confer-             Multi-task mutual learning network for infrared small target
+     ence on Computer Vision and Pattern Recognition, pages               detection and segmentation. IEEE Transactions on Image
+     20402–20411, 2023. 2                                                 Processing, 2025. 2, 6
+[27] Yahao Lu, Yupei Lin, Han Wu, Xiaoyu Xian, Yukai Shi, and        [39] Jiangnan Yang, Shuangli Liu, Jingjun Wu, Xinyu Su, Nan
+     Liang Lin. SIRST-5K: Exploring Massive Negatives Synthe-             Hai, and Xueli Huang. Pinwheel-shaped convolution and
+     sis with Self-supervised Learning for Robust Infrared Small          scale-based dynamic loss for infrared small target detection.
+     Target Detection. IEEE Transactions on Geoscience and Re-            In Proceedings of the AAAI Conference on Artificial Intelli-
+     mote Sensing, 2024. 6                                                gence, pages 9202–9210, 2025. 1, 2, 6
+[28] Wei Luo, Yunkang Cao, Haiming Yao, Xiaotian Zhang,              [40] Haoyang Zhang, Ying Wang, Feras Dayoub, and Niko Sun-
+     Jianan Lou, Yuqi Cheng, Weiming Shen, and Wenyong Yu.                derhauf. Varifocalnet: An iou-aware dense object detector.
+     Exploring intrinsic normal prototypes within a single im-            In Proceedings of the IEEE/CVF conference on computer vi-
+     age for universal anomaly detection. In Proceedings of the           sion and pattern recognition, pages 8514–8523, 2021. 8
+     Computer Vision and Pattern Recognition Conference, pages       [41] Hui Zhang, Zheng Wang, Dan Zeng, Zuxuan Wu, and Yu-
+     9974–9983, 2025. 2, 4, 6                                             Gang Jiang. DiffusionAD: Norm-Guided One-Step Denois-
+[29] Shuang Peng, Luping Ji, Shengjia Chen, Weiwei Duan, and              ing Diffusion for Anomaly Detection. IEEE Transactions
+     Sicheng Zhu. Moving infrared dim and small target detec-             on Pattern Analysis and Machine Intelligence, 47(8):7140–
+     tion by mixed spatio-temporal encoding. Engineering Appli-           7152, 2025. 2, 4, 6
+     cations of Artificial Intelligence, 144:110100, 2025. 3         [42] Liuwei Zhang, Yuyang Xi, Zhipeng Wang, Wang Zhang,
+[30] Tushar Sangam, Ishan Rajendrakumar Dave, Waqas Sultani,              Fanjiao Tan, and Qingyu Hou. ADSUNet: Accumulation-
+     and Mubarak Shah. Transvisdrone: Spatio-temporal trans-              difference-based Siamese U-Net for inter-frame infrared dim
+     former for vision-based drone-to-drone detection in aerial           and small target detection. Pattern Recognition, 169:111942,
+     videos. In 2023 IEEE International Conference on Robotics            2026. 2, 6
+     and Automation (ICRA), pages 6006–6013. IEEE, 2023. 4           [43] Mingjin Zhang, Rui Zhang, Yuxiang Yang, Haichen Bai,
+[31] Heng Sun, Junxiang Bai, Fan Yang, and Xiangzhi Bai.                  Jing Zhang, and Jie Guo. ISNet: Shape matters for infrared
+     Receptive-Field and Direction Induced Attention Network              small target detection. In Proceedings of the IEEE/CVF Con-
+     for Infrared Dim Small Target Detection With a Large-Scale           ference on Computer Vision and Pattern Recognition, pages
+     Dataset IRDST. IEEE Transactions on Geoscience and Re-               877–886, 2022. 1, 6
+     mote Sensing, 61:1–13, 2023. 5
+                                                                     [44] Hang Zhou, Jiale Cai, Yuteng Ye, Yonghui Feng, Chenxing
+[32] Xiaozhong Tong, Zhen Zuo, Shaojing Su, Junyu Wei, Xiaoy-             Gao, Junqing Yu, Zikai Song, and Wei Yang. Video anomaly
+     ong Sun, Peng Wu, and Zongqing Zhao. ST-Trans: Spatial-              detection with motion and appearance guided patch diffusion
+     Temporal Transformer for Infrared Small Target Detection in          model. In Proceedings of the AAAI Conference on Artificial
+     Sequential Images. IEEE Transactions on Geoscience and               Intelligence, pages 10761–10769, 2025. 2
+     Remote Sensing, 2024. 2, 3, 6
+                                                                     [45] Qianyu Zhou, Xiangtai Li, Lu He, Yibo Yang, Guangliang
+[33] Guanghui Wang, Bingjie Tao, Xuan Kong, and Zhenming
+                                                                          Cheng, Yunhai Tong, Lizhuang Ma, and Dacheng Tao.
+     Peng. Infrared small target detection using nonoverlapping
+                                                                          Transvod: end-to-end video object detection with spatial-
+     patch spatial-temporal tensor factorization with capped nu-
+                                                                          temporal transformers. IEEE Transactions on Pattern Anal-
+     clear norm regularization. IEEE Transactions on Geoscience
+                                                                          ysis and Machine Intelligence, 45(6):7853–7869, 2022. 3
+     and Remote Sensing, 60:1–17, 2021. 1, 2
+                                                                     [46] Sicheng Zhu, Luping Ji, Jiewen Zhu, Shengjia Chen, and
+[34] Fengyi Wu, Anran Liu, Tianfang Zhang, Luping Zhang, Jun-
+                                                                          Weiwei Duan. TMP: Temporal Motion Perception with spa-
+     hai Luo, and Zhenming Peng. Saliency at the helm: Steering
+                                                                          tial auxiliary enhancement for moving Infrared dim-small
+     infrared small target detection with learnable kernels. IEEE
+                                                                          target detection. Expert Systems with Applications, page
+     Transactions on Geoscience and Remote Sensing, 63:1–14,
+                                                                          124731, 2024. 2
+     2025. 6
+                                                                     [47] Sicheng Zhu, Luping Ji, Jiewen Zhu, Shengjia Chen, and
+[35] Xin Wu, Danfeng Hong, and Jocelyn Chanussot. UIU-Net:
+                                                                          Haohao Ren. Spatio-temporal fusion with motion masks
+     U-Net in U-Net for infrared small object detection. IEEE
+                                                                          for the moving small target detection from remote-sensing
+     Transactions on Image Processing, 32:364–376, 2022. 6
+                                                                          videos. Engineering Applications of Artificial Intelligence,
+[36] Chao Xiao, Qian Yin, Xinyi Ying, Ruojing Li, Shuanglin
+                                                                          138:109362, 2024. 8
+     Wu, Miao Li, Li Liu, Wei An, and Zhijie Chen. Dsfnet: Dy-
+     namic and static fusion network for moving object detection
+     in satellite videos. IEEE Geoscience and Remote Sensing
+     Letters, 19:1–5, 2021. 8
+
+
+
+
+                                                                21366
+

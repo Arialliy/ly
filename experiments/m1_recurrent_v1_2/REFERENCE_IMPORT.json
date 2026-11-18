@@ -1,0 +1,14 @@
+{
+  "zip": "/home/md0/ly/DeepProPlus_TLFP_Code/M1_v12_state_update_reference.zip",
+  "zip_sha256": "a438c0eeea7eefdade531de08732f34ec19b278fb2f69be6a93ea8c4da35db9d",
+  "files": {
+    "reference/M1_v12_state_update_reference/README.md": "dc4c89c44fe28fd091289512a1f98c671ac8d62b4aa3fb2d3fbed5a6826955b6",
+    "reference/M1_v12_state_update_reference/SOURCE_MAP.md": "eee10c2b7c15e520bbfc9a4d87a983dfd81b4c393dae637a84cf0c15230604a4",
+    "reference/M1_v12_state_update_reference/TEST_RESULTS.xml": "0a89c4c510ceaf55975360893ecd55f40972e1d0960d957bffc7c57438a1d6bb",
+    "reference/M1_v12_state_update_reference/VALIDATION.json": "06312e8cfaef32a4bd259af7063eacd8912994017116af7e7c9159ecfd8a787f",
+    "reference/M1_v12_state_update_reference/state_update.py": "92626b129e9c0b1da865f3d77068390d11f7ac00ed417d535a036a5ad34e2852",
+    "reference/M1_v12_state_update_reference/test_state_update.py": "7c306fb521f5b95abb6a1da7cace4f1033a7090f7dc4a7727ee133973f9a4b0e"
+  },
+  "core_modified": false,
+  "request_precedence": "Latest recovery-first Current/History request supersedes original reference README Frame/Pixel experiment order"
+}

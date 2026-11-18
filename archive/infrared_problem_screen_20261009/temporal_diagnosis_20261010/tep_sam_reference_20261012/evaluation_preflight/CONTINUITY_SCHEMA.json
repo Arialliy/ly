@@ -1,0 +1,7 @@
+{
+  "reused_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation_code/trajectory_tables.py",
+  "reused_source_sha256": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165",
+  "rule": "Both local and source frame must advance by one; missing labels, selection gaps and cohort exclusions break segments.",
+  "observation": "Frozen strict-small observations, not complete physical trajectory lengths.",
+  "no_reference_duplication": "One TEP track record per cohort, with distinct delta-vs-O and delta-vs-S columns."
+}

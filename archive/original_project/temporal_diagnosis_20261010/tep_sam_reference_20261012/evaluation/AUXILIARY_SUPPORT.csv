@@ -1,0 +1,13 @@
+group,cohort,frames,both_matched,main_only,auxiliary_only,neither
+pooled,all,5200,383,395,573,3849
+pooled,low_all_05,4342,125,282,455,3480
+pooled,extreme_all_001,4170,103,260,425,3382
+pooled,both_fixed_success,646,219,85,78,264
+DJI_0026_2,all,606,147,18,92,349
+DJI_0026_2,low_all_05,302,32,4,65,201
+DJI_0026_2,extreme_all_001,286,30,4,53,199
+DJI_0026_2,both_fixed_success,292,109,14,23,146
+DJI_0067_2,all,4594,236,377,481,3500
+DJI_0067_2,low_all_05,4040,93,278,390,3279
+DJI_0067_2,extreme_all_001,3884,73,256,372,3183
+DJI_0067_2,both_fixed_success,354,110,71,55,118

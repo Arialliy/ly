@@ -1,0 +1,10 @@
+{
+  "status": "PENDING_CURRENT_EXPERIMENT_COMPLETION",
+  "previous_manifest": "provenance/PACKAGE_MANIFEST_before_full_collection.json",
+  "data_collection_manifests": [
+    "provenance/ALL_LOCAL_COLLECTION.json",
+    "provenance/DATA_INVENTORY.json",
+    "provenance/PUBLIC_DATA_VERIFICATION.json"
+  ],
+  "active_experiment": "experiments/head_lfp_joint_20261012/runtime/WORKFLOW.json"
+}

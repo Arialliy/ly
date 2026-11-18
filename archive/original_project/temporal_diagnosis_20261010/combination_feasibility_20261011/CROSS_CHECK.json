@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "sequence": "DJI_0026_2",
+      "all11_plans_small_actual_subset_support": true,
+      "identity_join_exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "all11_plans_small_actual_subset_support": true,
+      "identity_join_exact": true
+    }
+  ],
+  "support_bound_720_shared_and_721_per_clip_attained_by_actual_fusion": true,
+  "max_five_window_matches_budgeted": 721,
+  "zero_loss_max_budgeted": 707,
+  "all774_compatibility_impossible_in_five": true,
+  "no_small_fusion_only_success_in_all_22_actual_runs": true,
+  "pooled": [
+    {
+      "sequence": "pooled",
+      "plan": "C00",
+      "support": 694,
+      "actual": 690,
+      "support_but_fusion_miss": 4,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 2,
+      "original_success_lost_without_support": 70
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C01",
+      "support": 706,
+      "actual": 705,
+      "support_but_fusion_miss": 1,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 0,
+      "original_success_lost_without_support": 63
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C02",
+      "support": 702,
+      "actual": 699,
+      "support_but_fusion_miss": 3,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 2,
+      "original_success_lost_without_support": 67
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C03",
+      "support": 720,
+      "actual": 720,
+      "support_but_fusion_miss": 0,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 0,
+      "original_success_lost_without_support": 54
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C04",
+      "support": 688,
+      "actual": 686,
+      "support_but_fusion_miss": 2,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 0,
+      "original_success_lost_without_support": 56
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C05",
+      "support": 690,
+      "actual": 687,
+      "support_but_fusion_miss": 3,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 2,
+      "original_success_lost_without_support": 53
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C06",
+      "support": 708,
+      "actual": 708,
+      "support_but_fusion_miss": 0,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 0,
+      "original_success_lost_without_support": 40
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C07",
+      "support": 691,
+      "actual": 685,
+      "support_but_fusion_miss": 6,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 3,
+      "original_success_lost_without_support": 38
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C08",
+      "support": 716,
+      "actual": 713,
+      "support_but_fusion_miss": 3,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 1,
+      "original_success_lost_without_support": 18
+    },
+    {
+      "sequence": "pooled",
+      "plan": "C09",
+      "support": 705,
+      "actual": 700,
+      "support_but_fusion_miss": 5,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 0,
+      "original_success_lost_without_support": 0
+    },
+    {
+      "sequence": "pooled",
+      "plan": "ALL11",
+      "support": 809,
+      "actual": 792,
+      "support_but_fusion_miss": 17,
+      "fusion_only_small": 0,
+      "original_success_lost_despite_support": 9,
+      "original_success_lost_without_support": 0
+    }
+  ]
+}

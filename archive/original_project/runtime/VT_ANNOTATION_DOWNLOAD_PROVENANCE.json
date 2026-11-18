@@ -1,0 +1,16 @@
+{
+  "source_url": "https://drive.google.com/file/d/17CgPc3huCf-KMr-I9zFVqmV0hzBVky9w/view",
+  "official_public_form_used": true,
+  "range_only": true,
+  "archive_bytes": 2448061811,
+  "transferred_bytes": 10479087,
+  "transfer_budget": 100000000,
+  "members": [
+    {
+      "member": "VT-Tiny-MOT/annotations/instances_01_train2017.json",
+      "bytes": 108316673,
+      "sha256": "39f19472ad2dddd5b4cbf1aebb35450ccf412841b9661d4904ffbe08eccce125",
+      "crc_verified": false
+    }
+  ]
+}

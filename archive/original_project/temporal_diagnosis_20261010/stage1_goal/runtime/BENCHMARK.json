@@ -1,0 +1,146 @@
+{
+  "scope": "synthetic input forward+backward only, no optimizer step, no weight file writes, not detection performance",
+  "seed": 46,
+  "torch": "2.7.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 90701,
+  "device": "NVIDIA GeForce RTX 5090",
+  "tf32": false,
+  "cudnn_deterministic": true,
+  "source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "checkpoint_unchanged": true,
+  "checkpoint_metadata": {
+    "epoch": 21,
+    "class_avg_iou": 0.16041548053381177
+  },
+  "checkpoint_optimizer_groups": [
+    {
+      "lr": 0.00049,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": false
+    }
+  ],
+  "results": [
+    {
+      "batch": 1,
+      "frames": 40,
+      "patch": 64,
+      "bn_mode": "train",
+      "precision": "float32",
+      "timed_repetitions": 3,
+      "seconds": [
+        0.025805726007092744,
+        0.0218923890060978,
+        0.021396349009592086
+      ],
+      "median_seconds": 0.0218923890060978,
+      "max_allocated_bytes": 850999296,
+      "max_reserved_bytes": 1073741824,
+      "synthetic_losses": [
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209
+      ],
+      "finite_gradients": true
+    },
+    {
+      "batch": 4,
+      "frames": 40,
+      "patch": 64,
+      "bn_mode": "train",
+      "precision": "float32",
+      "timed_repetitions": 3,
+      "seconds": [
+        0.09365278200129978,
+        0.09505546301079448,
+        0.08804725098889321
+      ],
+      "median_seconds": 0.09365278200129978,
+      "max_allocated_bytes": 1606448640,
+      "max_reserved_bytes": 2327838720,
+      "synthetic_losses": [
+        0.9999997019767761,
+        0.9999997019767761,
+        0.9999997019767761
+      ],
+      "finite_gradients": true
+    },
+    {
+      "batch": 1,
+      "frames": 40,
+      "patch": 96,
+      "bn_mode": "train",
+      "precision": "float32",
+      "timed_repetitions": 3,
+      "seconds": [
+        0.05484484200133011,
+        0.056021611992036924,
+        0.05735847700270824
+      ],
+      "median_seconds": 0.056021611992036924,
+      "max_allocated_bytes": 1830991872,
+      "max_reserved_bytes": 2550136832,
+      "synthetic_losses": [
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209
+      ],
+      "finite_gradients": true
+    },
+    {
+      "batch": 4,
+      "frames": 40,
+      "patch": 96,
+      "bn_mode": "train",
+      "precision": "float32",
+      "timed_repetitions": 3,
+      "seconds": [
+        0.19653079399722628,
+        0.19364036098704673,
+        0.19239605400071014
+      ],
+      "median_seconds": 0.19364036098704673,
+      "max_allocated_bytes": 3530978816,
+      "max_reserved_bytes": 3753902080,
+      "synthetic_losses": [
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209
+      ],
+      "finite_gradients": true
+    },
+    {
+      "batch": 4,
+      "frames": 40,
+      "patch": 128,
+      "bn_mode": "train",
+      "precision": "float32",
+      "timed_repetitions": 3,
+      "seconds": [
+        0.34840116200211924,
+        0.3483218460023636,
+        0.3482619029964553
+      ],
+      "median_seconds": 0.3483218460023636,
+      "max_allocated_bytes": 6222804480,
+      "max_reserved_bytes": 6589251584,
+      "synthetic_losses": [
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209
+      ],
+      "finite_gradients": true
+    }
+  ]
+}

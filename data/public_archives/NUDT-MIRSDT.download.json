@@ -1,0 +1,225 @@
+{
+  "source_url": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+  "archive_bytes": 1027614117,
+  "chunks": {
+    "0": {
+      "end": 33554431,
+      "bytes": 33554432,
+      "sha256": "95dce4fec6127425219ccf98a8e50d4df8492cdafc2941ce11cae1dadcb7b79a",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "33554432": {
+      "end": 67108863,
+      "bytes": 33554432,
+      "sha256": "bea11d81113a9bd6b50bea718fe8abecae84300fee738777f9ee22b2c7e017eb",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "100663296": {
+      "end": 134217727,
+      "bytes": 33554432,
+      "sha256": "71aa3a86313246be0366df3ac508a05cbbc4598bb79d3bbcf2ddc7175d91735b",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "67108864": {
+      "end": 100663295,
+      "bytes": 33554432,
+      "sha256": "332e12c306528b1610d3931b017a7998e256f22e0cccbddc0f65bc1b1fce42c2",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "134217728": {
+      "end": 167772159,
+      "bytes": 33554432,
+      "sha256": "2954732f26adf33e2c15e6030fa5ce31152a427a4c3bcb12b2a23d315ed7eb4a",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "201326592": {
+      "end": 234881023,
+      "bytes": 33554432,
+      "sha256": "3a81eb745496da2d3a5bd7a8272157d2c35ca38bed03f93a04409e1046170c47",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "234881024": {
+      "end": 268435455,
+      "bytes": 33554432,
+      "sha256": "467c5899f1d094e264782dde202db36dad8226bb63d632a63874f264ec716f9d",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "167772160": {
+      "end": 201326591,
+      "bytes": 33554432,
+      "sha256": "9748f2dadc7c1c56042b0bdfe5a2ab1013f039904295c546ce6f077446e3899a",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "268435456": {
+      "end": 301989887,
+      "bytes": 33554432,
+      "sha256": "4768fac44effb45dc6351da1b45eb267e424aefc397fb2935075a6fd946eefdf",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "301989888": {
+      "end": 335544319,
+      "bytes": 33554432,
+      "sha256": "0ecf57a2028312d14ad56ce52412039bcea1ca19be56f107663ce06d0166f858",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "335544320": {
+      "end": 369098751,
+      "bytes": 33554432,
+      "sha256": "9098be8e055c48ace390905a868237c4784afdfde6f26c085abe9f7448f795c9",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "369098752": {
+      "end": 402653183,
+      "bytes": 33554432,
+      "sha256": "461601b08f92327d3859d6841f60888b00b5f507436f55f2ae4bf1fdb9ec528c",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "402653184": {
+      "end": 436207615,
+      "bytes": 33554432,
+      "sha256": "865731066fb5884f002b76638d9ac3855d44a7c1c60a0ff397231148f0a0a576",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "436207616": {
+      "end": 469762047,
+      "bytes": 33554432,
+      "sha256": "543de7977e654a8617b343eda5375bffc74fba46757f542e001718f90529be60",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "469762048": {
+      "end": 503316479,
+      "bytes": 33554432,
+      "sha256": "09cbb916da6aa5fd94655395762238c9dd3b6cd0ee637a6a14653d7d8769fdbf",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "503316480": {
+      "end": 536870911,
+      "bytes": 33554432,
+      "sha256": "fc0a43c7939e4c8d60324ac893553168cc80014aad2321693909b852227d9ddf",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "536870912": {
+      "end": 570425343,
+      "bytes": 33554432,
+      "sha256": "ba76471d7a878ba15494705078c8fa714415c6160a003d4d3603c1cfc56ebe0e",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "570425344": {
+      "end": 603979775,
+      "bytes": 33554432,
+      "sha256": "72c8fa40e3fd6ed904b242fec68051e716842a753e9ec4165fedd907546de9e4",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "637534208": {
+      "end": 671088639,
+      "bytes": 33554432,
+      "sha256": "e729be98d5ed1e982146a9c47d2e7dca7623a99b32daedebab7f4fcf3eb67d16",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "671088640": {
+      "end": 704643071,
+      "bytes": 33554432,
+      "sha256": "b8118e25e930203170dae267c903c8e730c089552bf1bc37dbe82bbc5d98579c",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "603979776": {
+      "end": 637534207,
+      "bytes": 33554432,
+      "sha256": "1e78057a7b205d8f9d160688c996b422f25b7ef0a99461b36601a299612e8f12",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "704643072": {
+      "end": 738197503,
+      "bytes": 33554432,
+      "sha256": "2b389be70478df5f8eab844668ca8494fd688af77968482ec59f6700240c4432",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "738197504": {
+      "end": 771751935,
+      "bytes": 33554432,
+      "sha256": "4729e5287b98251adfa3625010ca05e6aa798580b2123fbc82340d41cb2b4c80",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "771751936": {
+      "end": 805306367,
+      "bytes": 33554432,
+      "sha256": "be3b728e02610fa53fcfde916f49535a34f0c52ee7e97cd197b1d924a23f5403",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "805306368": {
+      "end": 838860799,
+      "bytes": 33554432,
+      "sha256": "e7bfc8a5961b402ac96fc75218cf7e7592cfa8732912f56018f9e1e7f2f1b005",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "838860800": {
+      "end": 872415231,
+      "bytes": 33554432,
+      "sha256": "3930f7d9448b3d9471f1fa73cb1e630cff7487c3ed664938f5bbcf3c40f7eaaa",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "872415232": {
+      "end": 905969663,
+      "bytes": 33554432,
+      "sha256": "2bb53ead6a666afcf63498582cc1e960118f910fe5f6a331c80139919d758591",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "905969664": {
+      "end": 939524095,
+      "bytes": 33554432,
+      "sha256": "74865cc1498aa7362aa958e57481aac00160cb369d0351d002ba8285f230590e",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "939524096": {
+      "end": 973078527,
+      "bytes": 33554432,
+      "sha256": "9ee47b311c52f66e42b58e4be6ae0a89ce11cab56dbd986c802728c4904fc3e6",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "973078528": {
+      "end": 1006632959,
+      "bytes": 33554432,
+      "sha256": "8af525740a956180b02d06d6ef70ce5ff9c6f6076dcd91c7390742a87956f5a9",
+      "attempts": 1,
+      "transient_failure_types": []
+    },
+    "1006632960": {
+      "end": 1027614116,
+      "bytes": 20981157,
+      "sha256": "ea9bbf1720166f127464bb12955a0fc8af245cc107f052a4ef6313eb7d9fa00d",
+      "attempts": 1,
+      "transient_failure_types": []
+    }
+  },
+  "created_utc": "2026-10-12T12:54:50.551861+00:00",
+  "updated_utc": "2026-10-12T12:57:50.002257+00:00"
+}

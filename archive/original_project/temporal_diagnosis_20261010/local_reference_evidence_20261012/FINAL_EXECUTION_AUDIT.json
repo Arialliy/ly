@@ -1,0 +1,319 @@
+{
+  "status": "PASS",
+  "checks_passed": 76,
+  "checks": [
+    {
+      "check": "main_protocol_unchanged",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/infer_evidence.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/launch_gpu.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/module.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/preflight.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/test_module.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:code/train_evidence.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:evaluation_code/evaluate.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:evaluation_code/launch_score.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:evaluation_code/trajectory_tables.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:evaluation_code/validate_tables.py",
+      "pass": true
+    },
+    {
+      "check": "main_frozen:evaluation_code/verify_identity.py",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:ENGINEERING_SPEC.json",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:USER_REQUEST.txt",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:EVALUATION_PROTOCOL.md",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:checks/MODULE_CPU_TESTS.json",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:checks/GPU_INTEGRATION.json",
+      "pass": true
+    },
+    {
+      "check": "main_artifact:runtime/DOC_FOLLOW_RESULT.json",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:diagnostic_code/infer_misreference.py",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:diagnostic_code/test_misreference.py",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:runtime/launch_misreference.py",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:runtime/DIAGNOSTIC_INVOCATION.md",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:DIAGNOSTIC_TRIGGER.md",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:PROTOCOL.md",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:PROTOCOL_FREEZE.json",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:training/N2/run/final_model.pth",
+      "pass": true
+    },
+    {
+      "check": "aux_frozen:checks/MISREFERENCE_CPU_TESTS.json",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:preflight",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:preflight",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:train_N0",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:train_N0",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:train_N1",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:train_N1",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:train_N2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:train_N2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N0_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N0_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N0_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N0_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N1_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N1_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N1_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N1_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N2_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N2_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:infer_N2_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:infer_N2_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:misreference_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:misreference_DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "launch_complete:misreference_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "user_gpu:misreference_DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "TRAINING_AUDIT.json",
+      "pass": true
+    },
+    {
+      "check": "evaluation/TABLE_VALIDATION.json",
+      "pass": true
+    },
+    {
+      "check": "diagnostic_evaluation/TABLE_VALIDATION.json",
+      "pass": true
+    },
+    {
+      "check": "runtime/CPU_SCORING_WATCH.json",
+      "pass": true
+    },
+    {
+      "check": "runtime/MISREFERENCE_CPU_WATCH.json",
+      "pass": true
+    },
+    {
+      "check": "final_only:N0DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N0DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "final_only:N0DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N0DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "final_only:N1DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N1DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "final_only:N1DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N1DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "final_only:N2DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N2DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "final_only:N2DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "nonzero_tiled:N2DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "aux_zero_shift_exact:DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "aux_all_state_unchanged:DJI_0026_2",
+      "pass": true
+    },
+    {
+      "check": "aux_zero_shift_exact:DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "aux_all_state_unchanged:DJI_0067_2",
+      "pass": true
+    },
+    {
+      "check": "frozen_seed_only",
+      "pass": true
+    },
+    {
+      "check": "exactly_three_training_directories",
+      "pass": true
+    },
+    {
+      "check": "no_own_active_docker",
+      "pass": true
+    },
+    {
+      "check": "report_no_pending",
+      "pass": true
+    }
+  ],
+  "completed_formal_trainings": 3,
+  "completed_main_inferences": 6,
+  "completed_conditional_aux_inferences": 2,
+  "preflight_optimizer_steps": 0,
+  "extra_training_after_main": 0,
+  "scientific_failures_hidden": false,
+  "environment_note": "One document-follow outer path typo exited before launcher; retained receipt. All real formal jobs completed0.",
+  "current_gpu_snapshot": "0, 3859 MiB\n1, 4501 MiB\n2, 3859 MiB\n3, 0 MiB\n",
+  "unix": 1791751576.5405717
+}

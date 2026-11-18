@@ -1,0 +1,91 @@
+{
+  "recorded_utc": "2026-10-09T20:07:04.180643+00:00",
+  "containers": [
+    {
+      "name": "deeppro_stage1_data_20261010",
+      "id": "730dcb66927b37055dcf4c4c193328dac634eb8c8a43eed23e75df73bfda6b97",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 126,
+        "Error": "",
+        "StartedAt": "2026-10-09T20:04:44.834936182Z",
+        "FinishedAt": "2026-10-09T20:04:45.014808221Z"
+      },
+      "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+      "user": "1000:1000",
+      "entrypoint": [
+        "bash"
+      ],
+      "command": [
+        "python3",
+        "-u",
+        "acquire_pilot_data.py"
+      ],
+      "device_requests": null
+    },
+    {
+      "name": "deeppro_stage1_data_20261010_v2",
+      "id": "dd4503e343eff5e30549856ac1bef8d903895917ec292a2baadac2311c282ea2",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-09T20:05:04.169873978Z",
+        "FinishedAt": "2026-10-09T20:05:43.186283798Z"
+      },
+      "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+      "user": "1004:1004",
+      "entrypoint": [
+        "/opt/conda/bin/python3"
+      ],
+      "command": [
+        "-u",
+        "acquire_pilot_data.py"
+      ],
+      "device_requests": null
+    },
+    {
+      "name": "deeppro_stage1_data_20261010_crc",
+      "id": "bb54b377f4ccaf789b49ae193f909dcdf18b51612900310c5cde017fab670c66",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-09T20:07:58.582802213Z",
+        "FinishedAt": "2026-10-09T20:08:13.839910709Z"
+      },
+      "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+      "user": "1004:1004",
+      "entrypoint": [
+        "/opt/conda/bin/python3"
+      ],
+      "command": [
+        "-u",
+        "acquire_pilot_data.py"
+      ],
+      "device_requests": null
+    }
+  ],
+  "first_failure_note": "Image ENTRYPOINT bash did not accept Python binary argument; exited 126 before network/data operations; corrected explicit Python entrypoint and host UID in v2.",
+  "image_tag": "deeppro-official-eval:20261009",
+  "gpu_used": false,
+  "crc_followup_note": "All 2240 members use data descriptors; initial local-header CRC status false caused independent integrity assertion to fail. Fetched central directory only within same cumulative budget; all central CRCs now verified independently. Original JPEG bytes and array contents unchanged."
+}

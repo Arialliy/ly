@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-11T14:08:17.092224+00:00",
+  "verifier_sha256": "b6b94d2e77ae7ff047b9bd190c4811248e64d553072fb40b7a31baf7e9a74640",
+  "source_fingerprints_unchanged": true,
+  "output_fingerprints_valid": true,
+  "source_files_checked": 30,
+  "output_files_checked": 24,
+  "window_checks": [
+    {
+      "sequence": "DJI_0026_2",
+      "start": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 24,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 36,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 60,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 72,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 96,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 108,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "start": 120,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 24,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 36,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 60,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 72,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 96,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 108,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "start": 120,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0
+    }
+  ],
+  "fused_checks": [
+    {
+      "sequence": "DJI_0026_2",
+      "plan": "O",
+      "frames": 160,
+      "pixels": 52428800,
+      "fused_logits_not_maximum": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0,
+      "mask_from_logit_zero_differing_pixels": 0,
+      "old_fused_probability_sha256": "448537e1430853f5cbf72458c8c873bee3b21eed9e17a9ece110cc6f82784a8e",
+      "probability_saturated_0": 5,
+      "probability_saturated_1": 3440,
+      "fused_logit_min": -95.93299865722656,
+      "fused_logit_max": 47.23701477050781
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "plan": "S",
+      "frames": 160,
+      "pixels": 52428800,
+      "fused_logits_not_maximum": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0,
+      "mask_from_logit_zero_differing_pixels": 0,
+      "old_fused_probability_sha256": "800550cc71a545b9168801b682c95357359e412841e2a010e9dab949f060648b",
+      "probability_saturated_0": 5,
+      "probability_saturated_1": 3686,
+      "fused_logit_min": -95.93299865722656,
+      "fused_logit_max": 47.23701477050781
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "plan": "O",
+      "frames": 160,
+      "pixels": 52428800,
+      "fused_logits_not_maximum": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0,
+      "mask_from_logit_zero_differing_pixels": 0,
+      "old_fused_probability_sha256": "3c6d4fd13ba7106a6a1dbc452fa34543e6967bc14d4751727eb37c2562219074",
+      "probability_saturated_0": 261,
+      "probability_saturated_1": 14096,
+      "fused_logit_min": -140.6451416015625,
+      "fused_logit_max": 86.69886779785156
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "plan": "S",
+      "frames": 160,
+      "pixels": 52428800,
+      "fused_logits_not_maximum": 0,
+      "probability_differing_pixels": 0,
+      "max_probability_error": 0.0,
+      "mask_0p5_differing_pixels": 0,
+      "mask_from_logit_zero_differing_pixels": 0,
+      "old_fused_probability_sha256": "d0959f6813e870462499eb61ac9c4ac0562eca69280cc5370fa2f8a2028ec00e",
+      "probability_saturated_0": 231,
+      "probability_saturated_1": 13518,
+      "fused_logit_min": -122.79886627197266,
+      "fused_logit_max": 77.12933349609375
+    }
+  ],
+  "total_window_pixels_checked": 209715200,
+  "total_fused_pixels_checked": 209715200,
+  "elapsed_seconds": 13.336056216037832,
+  "scope": "CPU re-sigmoid and independent pixelmax; no GPU rerun, no metric changes, no inverse sigmoid"
+}

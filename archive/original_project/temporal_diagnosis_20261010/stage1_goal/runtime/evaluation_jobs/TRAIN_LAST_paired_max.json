@@ -1,0 +1,18 @@
+{
+  "id": "29587ada80f96f561eeca43c1c41de34ab11581bbaba87f0d0b2fbcc7e6ac0fc",
+  "name": "deeppro_stage1_train_paired_max",
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-09T20:09:58.572343913Z",
+    "FinishedAt": "2026-10-09T20:14:05.084644075Z"
+  },
+  "observed_utc": "2026-10-09T20:15:23.973949+00:00"
+}

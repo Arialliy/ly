@@ -1,0 +1,12 @@
+{
+  "mode": "warm-reuse",
+  "environment_ledger": "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "spec": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/env-spec.json",
+  "spec_file_sha256": "d70e5fed5dc0b0c1ac3e4e4573f88395e1730daef5c326df4885cbfab9a0b701",
+  "packages_changed": false,
+  "source_mount_readonly": true,
+  "gpu_preflight": "0, NVIDIA GeForce RTX 5090, 0 MiB, 32607 MiB\n1, NVIDIA GeForce RTX 5090, 0 MiB, 32607 MiB\n2, NVIDIA GeForce RTX 5090, 0 MiB, 32607 MiB\n3, NVIDIA GeForce RTX 5090, 0 MiB, 32607 MiB\n",
+  "seed": 46,
+  "note": "No new environment; E0 actual model endpoint replay gate is enforced before inference results are used."
+}

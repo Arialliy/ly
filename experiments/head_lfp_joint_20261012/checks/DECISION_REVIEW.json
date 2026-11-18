@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "decision_sha256": "8fc5d80b1b990ea620e9c308e112ae6119fc085009c54e2c3130be0db2628f60",
+  "result_audit_sha256": "974b56fa4b7f95a3963dc2ea78475997879624761ceec49dbd97f9761aad644f",
+  "scope": "Manual independent cross-check of DECISION numeric statements and claim limits against endpoint raw-score audit, all process summary rows, exact trajectory7701908 rows, and training resource metadata. No new inference or training.",
+  "checks": [
+    "O/S M,U,gain/loss,low/extreme recovery align with independent audit",
+    "HL-vs-H S samecount is correctly treated as differentsets",
+    "646 protected double-success wording distinguishes neither matched",
+    "Recovery everylowtrack1to3frames and sourcecoverage accurately limited",
+    "S track7701908 totalmiss-2 butlongest+3 corroborated for both arms",
+    "All12 process configuration rows at512/1024/2048 exceed4015; displayed recovery/U monotone",
+    "Fixed-background median pairedchange and27/114 counts correctly scoped",
+    "H447.7328s/3.583444480GB, HL627.7108s/3.617005056GB matchRUN metadata",
+    "No contradiction identified between DECISION and independent supported conclusions"
+  ],
+  "issues": []
+}

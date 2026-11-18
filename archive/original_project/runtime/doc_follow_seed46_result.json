@@ -1,0 +1,151 @@
+{
+  "task": "Fresh seed46 doc-follow audit",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-09 15:36:29 UTC",
+  "authorized_gpu0_sharing": true,
+  "preflight_gpu_memory": [
+    "0, 9455 MiB, 32607 MiB",
+    "1, 9455 MiB, 32607 MiB",
+    "2, 21840 MiB, 32607 MiB",
+    "3, 9455 MiB, 32607 MiB"
+  ],
+  "source_documents": [
+    "/home/ly/.codex/skills/run-experiment/SKILL.md",
+    "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/COMPUTE.md"
+  ],
+  "commands": [
+    {
+      "stage": "witness",
+      "command": "docker run --rm --gpus all --user 1004:1004 --cpus 4 --memory 12g -e CUDA_VISIBLE_DEVICES=0 -e OMP_NUM_THREADS=2 -e MKL_NUM_THREADS=2 -e OPENBLAS_NUM_THREADS=2 -e CUBLAS_WORKSPACE_CONFIG=:4096:8 -v /home/ly:/home/ly --entrypoint python ppg/ultralytics:8.3.203 /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/gpu_witness.py",
+      "executed_verbatim": true,
+      "exit_code": 0
+    },
+    {
+      "stage": "inference",
+      "command": "docker run --rm --gpus all --user 1004:1004 --cpus 4 --memory 12g -e CUDA_VISIBLE_DEVICES=0 -e OMP_NUM_THREADS=2 -e MKL_NUM_THREADS=2 -e OPENBLAS_NUM_THREADS=2 -e CUBLAS_WORKSPACE_CONFIG=:4096:8 -v /home/ly:/home/ly --entrypoint python ppg/ultralytics:8.3.203 /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/infer_checkpoint.py --source /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/deeppro_audit_source --checkpoint /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/deeppro_audit_source/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth --input-npy /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/first_val_clip/raw_frames.npy --output-npz /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/first_val_seed46.npz --model-type DeepPro-Plus --normalization RGB-T --device cuda:0 --seed 46 --tile-core 128 --tile-halo 16 --verify-tiling",
+      "executed_verbatim": true,
+      "exit_code": 0
+    }
+  ],
+  "witness": {
+    "sentinel": "WITNESS_OK",
+    "seed": 46,
+    "torch": "2.7.0+cu128",
+    "numpy": "2.2.5",
+    "scipy": "1.16.2",
+    "cv2": "4.12.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "shape": [
+      8,
+      8
+    ],
+    "sum": 42.68129348754883
+  },
+  "archive_inspection": {
+    "output": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/first_val_seed46.npz",
+    "metadata_seed": 46,
+    "shape": [
+      160,
+      512,
+      640
+    ],
+    "dtype": "float32",
+    "all_finite": true,
+    "probability_min": 0,
+    "probability_max": 1,
+    "coverage_shape": [
+      160
+    ],
+    "frames_covered": 160,
+    "coverage_min": 1,
+    "coverage_max": 2,
+    "coverage_matches_windows": true,
+    "windows": [
+      [
+        0,
+        40
+      ],
+      [
+        36,
+        76
+      ],
+      [
+        72,
+        112
+      ],
+      [
+        108,
+        148
+      ],
+      [
+        120,
+        160
+      ]
+    ],
+    "tiling_check": {
+      "shape": [
+        1,
+        1,
+        40,
+        96,
+        112
+      ],
+      "max_absolute_logit_error": 0.0001068115234375,
+      "max_absolute_probability_error": 8.791685104370117e-06,
+      "threshold_0_5_disagreements": 0,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "status": "passed"
+    },
+    "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+    "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "elapsed_inference_seconds": 8.508866577001754,
+    "seed_note": "Matches declared seed_everything default 46 in official train.py:33; original entrypoint does not call it. Explicitly activated for local inference, not a claim about checkpoint training seed.",
+    "passed": true
+  },
+  "environment_changes": "None; no installation, source edits, checkpoint edits, or base-environment changes performed.",
+  "seed_scope": "Explicit seed46 local inference follows source-declared default; original training entrypoint did not call the seed function, so checkpoint training seed remains unconfirmed.",
+  "documentation_divergences": [
+    {
+      "location": "local_docker.md DeepPro block",
+      "observed": "Provider ledger still records old canonical hash ac6c0ce74e36b5fa36f9c041a77d46fc4f82cab8fc81fc5866880857d73f40ef, seed0 witness, and pending validation.",
+      "current_compute_document": "COMPUTE.md declares seed46 and canonical hash 644494fe6dcff11df0ee5550b3007531c71661043de5c1a58756b026929837c0.",
+      "action": "Reported to parent; no documentation edits performed by doc-follow agent.",
+      "resolution_status": "resolved_by_current_ledger_block",
+      "resolved_at_utc": "2026-10-09T15:37:52.218430+00:00"
+    }
+  ],
+  "limits": "Engineering inference validation only; no performance-reproduction or causal-online-performance claim.",
+  "audit_history": [
+    {
+      "recorded_at_utc": "2026-10-09T15:37:52.218430+00:00",
+      "prior_status": "PASS_WITH_STALE_PROVIDER_LEDGER",
+      "prior_documentation_divergences": [
+        {
+          "location": "local_docker.md DeepPro block",
+          "observed": "Provider ledger still records old canonical hash ac6c0ce74e36b5fa36f9c041a77d46fc4f82cab8fc81fc5866880857d73f40ef, seed0 witness, and pending validation.",
+          "current_compute_document": "COMPUTE.md declares seed46 and canonical hash 644494fe6dcff11df0ee5550b3007531c71661043de5c1a58756b026929837c0.",
+          "action": "Reported to parent; no documentation edits performed by doc-follow agent.",
+          "resolution_status": "resolved_by_current_ledger_block",
+          "resolved_at_utc": "2026-10-09T15:37:52.218430+00:00"
+        }
+      ],
+      "event": "Initial observation retained. Parent appended a current seed46 provider block during the independent doc-follow run."
+    }
+  ],
+  "ledger_reconciliation": {
+    "verified_at_utc": "2026-10-09T15:37:52.218430+00:00",
+    "ledger_block": "## DeepPro source-seed46 correction, 2026-10-09",
+    "canonicalization": "json.dumps(spec, sort_keys=True, separators=(comma, colon), ensure_ascii=False).encode(utf-8)",
+    "computed_spec_sha256": "644494fe6dcff11df0ee5550b3007531c71661043de5c1a58756b026929837c0",
+    "current_ledger_sha256": "644494fe6dcff11df0ee5550b3007531c71661043de5c1a58756b026929837c0",
+    "compute_document_sha256": "644494fe6dcff11df0ee5550b3007531c71661043de5c1a58756b026929837c0",
+    "hashes_match": true,
+    "spec_diagnostic_seed": 46,
+    "prior_seed0_blocks_preserved_as_history": true,
+    "gpu_rerun": false,
+    "remaining_documentation_divergences": [],
+    "note": "The current ledger block supersedes the prior seed0 block for this run. Its running status describes the audit when the block was written; this result records completion."
+  }
+}

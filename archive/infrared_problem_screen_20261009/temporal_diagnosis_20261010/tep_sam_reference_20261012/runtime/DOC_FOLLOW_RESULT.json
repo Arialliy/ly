@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "validation_kind": "fresh_agent_follows_doc",
+  "status": "FAILED_PRECONDITION_GPU_NOT_IDLE",
+  "command": "bash /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_native_check.sh",
+  "command_executed_verbatim": true,
+  "attempt_count": 1,
+  "retry_performed": false,
+  "exit_code": 1,
+  "stdout_stderr": "GPU0 not idle: 591 MiB\n",
+  "document": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/COMPUTE.md",
+    "sha256_before": "9aca73f46c7c6d4a763ed6b8ec85b821e220269035a28b48e2c6d151f80a3792",
+    "sha256_after": "9aca73f46c7c6d4a763ed6b8ec85b821e220269035a28b48e2c6d151f80a3792",
+    "unchanged": true
+  },
+  "launcher": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_native_check.sh",
+    "sha256_before": "04c3d17391f96cb54edaaa486c7d9ab7ba3b9291a54f13db0c57d37366234f41",
+    "sha256_after": "04c3d17391f96cb54edaaa486c7d9ab7ba3b9291a54f13db0c57d37366234f41",
+    "unchanged": true
+  },
+  "timing": {
+    "start_utc": "2026-10-11 19:47:52 UTC",
+    "end_observed_utc": "2026-10-11 19:48:09 UTC",
+    "tool_reported_command_wall_time_seconds": 0.000035547,
+    "native_forward_seconds": null,
+    "native_wall_seconds": null,
+    "note": "End time was sampled after the failure report; no inference timing exists."
+  },
+  "gpu_preflight": {
+    "separate_preflight_gpu0_mib": 0,
+    "launcher_gpu0_mib": 591,
+    "required_memory_used_mib_less_than": 500
+  },
+  "failure": {
+    "stage": "host GPU idle guard before docker run",
+    "exact_message": "GPU0 not idle: 591 MiB",
+    "doc_vs_reality": "Expected native-running evidence was not reached because GPU0 occupancy changed between the separate preflight (0 MiB) and the launcher guard (591 MiB). The launcher correctly refused as documented. No documentation repair or retry was performed."
+  },
+  "receipt_checks": {
+    "native_check_directory_exists": false,
+    "native_check_log_exists": false,
+    "complete_json_exists": false,
+    "probabilities_npz_exists": false,
+    "auxiliary_probabilities_npz_exists": false,
+    "witness_executed": false,
+    "strict_checkpoint_load_executed": false,
+    "native_frame_count": 0,
+    "native_metric_comparisons_executed": 0
+  },
+  "native_metrics": null,
+  "scope": {
+    "native_container_launched": false,
+    "training_launched": false,
+    "development_inference_launched": false,
+    "confirmation_data_used": false,
+    "author_source_modified": false,
+    "external_notifications_sent": false
+  }
+}

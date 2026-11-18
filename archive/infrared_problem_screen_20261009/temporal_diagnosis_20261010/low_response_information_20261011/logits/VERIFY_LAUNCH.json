@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-11T14:08:02.579268+00:00",
+  "command": [
+    "docker",
+    "run",
+    "-d",
+    "--name",
+    "deeppro_low_response_verify_logits_20261011",
+    "--user",
+    "1004:1004",
+    "--cpus",
+    "2",
+    "--memory",
+    "8g",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-v",
+    "/home/ly:/home/ly",
+    "--entrypoint",
+    "/opt/conda/bin/python3",
+    "deeppro-official-eval:20261009",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/logits/verify_logits.py"
+  ],
+  "launch_exit_code": 0,
+  "stdout": "4e933fa32867fecc2eae987b1e67d20e8ad0a12c18cf2386d498035357d3477d\n",
+  "stderr": ""
+}

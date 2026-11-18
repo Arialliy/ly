@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-11T17:12:48.696177+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--mount",
+    "type=bind,src=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,dst=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,readonly",
+    "--env",
+    "CUDA_VISIBLE_DEVICES=",
+    "--entrypoint",
+    "python",
+    "deeppro-official-eval:20261009",
+    "-"
+  ],
+  "script_sha256": "8a07c8b1afa55d40c5f01175676d55b63f93d97ad1f9e3471a459e7b6246ebed",
+  "script": "\nfrom pathlib import Path\nimport torch,json,hashlib,math,numpy as np\nq=Path('/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010');ref=q.parent/'official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth'\npaths={'released':ref,'top1_background':q/'top1_background_control_20261011/training/run/final_model.pth','gaussian_softiou_approx':q/'supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/final_model.pth'}\ndef sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()\nnumpy_core=np._core if hasattr(np,'_core') else np.core\nwith torch.serialization.safe_globals([(numpy_core.multiarray.scalar,'numpy.core.multiarray.scalar'),np.dtype,type(np.dtype(np.float64))]):\n ck={k:torch.load(p,map_location='cpu',weights_only=True) for k,p in paths.items()}\nstates={k:v['model_state_dict'] for k,v in ck.items()}\nnames=json.loads((q/'supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/INITIAL_STATE.json').read_text())['parameter_names'];bufs=sorted(set(states['released'])-set(names));assert len(names)==64 and sum(states['released'][k].numel() for k in names)==70913\nbnmods={k.rsplit('.',1)[0] for k in bufs};bnp=[k for k in names if k.rsplit('.',1)[0] in bnmods];assert len(bnp)==24\nres={'device':'CPU','torch':torch.__version__,'forward_calls':0,'training_steps':0,'parameter_count':70913,'parameter_tensors':len(names),'buffer_tensors':len(bufs),'bn_affine_tensors':len(bnp),'sources':{k:{'path':str(p),'sha256':sha(p),'checkpoint_step':ck[k].get('step'),'checkpoint_keys':sorted(ck[k])} for k,p in paths.items()},'comparisons':{},'per_parameter':[]}\nfor cond in ['top1_background','gaussian_softiou_approx']:\n s=states[cond];r=states['released'];assert set(s)==set(r)\n for k in s:assert s[k].shape==r[k].shape and s[k].dtype==r[k].dtype\n groups={'all_parameters':names,'BN_affine':bnp,'TPro_time_mapping':[k for k in names if k.startswith('TPro.QK_heads.')],'TPro_other':[k for k in names if k.startswith('TPro.') and not k.startswith('TPro.QK_heads.')],'spatial_frontend':[k for k in names if k.startswith(('conv_in.','layer1.'))],'prediction_head':[k for k in names if k.startswith(('conv_out1.','conv_out2.'))]}\n gres={}\n for g,ks in groups.items():\n  ds=sum(float(((s[k].double()-r[k].double())**2).sum()) for k in ks);rs=sum(float((r[k].double()**2).sum()) for k in ks)\n  gres[g]={'parameter_tensors':len(ks),'elements':sum(s[k].numel() for k in ks),'changed_tensors':sum(not torch.equal(s[k],r[k]) for k in ks),'changed_elements':sum(int(torch.count_nonzero(s[k]-r[k])) for k in ks),'initial_l2':math.sqrt(rs),'delta_l2':math.sqrt(ds),'relative_l2':math.sqrt(ds/rs) if rs else None,'max_abs_delta':max(float((s[k]-r[k]).abs().max()) for k in ks)}\n for k in names:\n  d=s[k].double()-r[k].double();res['per_parameter'].append({'condition':cond,'name':k,'elements':d.numel(),'initial_l2':float(r[k].double().norm()),'delta_l2':float(d.norm()),'changed_elements':int(torch.count_nonzero(d)),'max_abs_delta':float(d.abs().max())})\n res['comparisons'][cond]={'groups':gres,'bn_buffers_bitwise_identical':all(torch.equal(s[k],r[k]) for k in bufs),'all_parameters_finite':all(bool(torch.isfinite(s[k]).all()) for k in names),'state_schema_equal':True}\nprint(json.dumps(res,allow_nan=False))\n",
+  "returncode": 0,
+  "stderr": "",
+  "gpu_requested": false,
+  "readonly_mount": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009"
+}

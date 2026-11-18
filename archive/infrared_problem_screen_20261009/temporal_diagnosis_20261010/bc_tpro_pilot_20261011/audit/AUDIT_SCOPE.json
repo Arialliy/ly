@@ -1,0 +1,15 @@
+{
+  "scope": "Independent result scoring audit; model author is independent of evaluator, not a fresh architecture reviewer",
+  "frames_fixed_before_reading_scores": [0, 39, 80, 120, 159],
+  "conditions": ["single_dynamic", "bc_tpro"],
+  "sequences": ["DJI_0026_2", "DJI_0067_2"],
+  "plans": {"O": [0, 36, 72, 108, 120], "S": [0, 24, 60, 96, 120]},
+  "threshold": 0.5,
+  "independent_recomputed_fused_frames": 40,
+  "full_new_fused_frames": 1280,
+  "not_full_output_recomputation": true,
+  "gpu_use": false,
+  "original_scoring_functions_called": false,
+  "tiling_scope": "Inspect and bind the existing trained-model direct/tiled witnesses, not rerun GPU inference",
+  "checks": ["checkpoint/source identity", "same implementation and config except variant", "training final step", "three trained tiling witnesses per inference", "window sha256, shape, dtype, probability range", "five-window probability max", "independent GT preparation", "8-connectivity and row-major tied peaks", "one-to-one half-open point-box matching", "frame counts, per-object matches/peaks/areas/boxmax", "component area and unmatched status"]
+}

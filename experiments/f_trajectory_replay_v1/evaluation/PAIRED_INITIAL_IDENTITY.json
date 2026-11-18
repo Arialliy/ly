@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "phase": "INITIAL",
+  "protocol_sha256": "70a5e81aec95eae0154d058fe64842a291f181da2bca6e1679cf86a27b89c5e0",
+  "audit_kind": "post_freeze_read_only_CPU_not_preregistered_training_code",
+  "audit_source_sha256": "ce913f458399767e408ba7295b1c63eab2d95f93453aef010d489e0bd194e615",
+  "sources": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/training/FRAME/run/snapshot_2304.pth": "467436f2cce9491ea5a12ddad221e9231499950258deded1f562b9328660debc",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/training/ORIGINAL/run/snapshot_2304.pth": "5dc9ff6cbb180891630ee8e4f0f80974abd7669ef30b947bfec71f8a31561d7d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/training/ORIGINAL/run/TRAIN_DIAGNOSTICS_000.json": "f194b5832963d51decfd3dd103622090175d3fdfaa953bf6deb0e47ec68c2538",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/training/REPLAY/run/snapshot_2304.pth": "f92023889437a95434b63d709936f6fd2f80cf19e9307c54984ff1913a9f460f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/training/REPLAY/run/TRAIN_DIAGNOSTICS_000.json": "77e58f9b516a8aca5a35b2d2fc24ff14399be1cd09bdce9939ce6ee34e7fc54e"
+  },
+  "conditions": {
+    "ORIGINAL": {
+      "model_tensor_sha256": "495e9b6128dbdf2e75dfd6deb8eedf18e6544d634bad0e700b3db10eb6f54917",
+      "optimizer_sha256": "dca2deb9e60eafdb228c1103079ff50b696a6c2c6f6bd835dd88034c1fa6560c",
+      "recorded_initial_rng_sha256": "3c86cbdac460cf9648188c7ae8780b75f043f6fe38dc35fbdd4b9a8e96670afd",
+      "checkpoint_sha256": "5dc9ff6cbb180891630ee8e4f0f80974abd7669ef30b947bfec71f8a31561d7d"
+    },
+    "REPLAY": {
+      "model_tensor_sha256": "495e9b6128dbdf2e75dfd6deb8eedf18e6544d634bad0e700b3db10eb6f54917",
+      "optimizer_sha256": "dca2deb9e60eafdb228c1103079ff50b696a6c2c6f6bd835dd88034c1fa6560c",
+      "recorded_initial_rng_sha256": "3c86cbdac460cf9648188c7ae8780b75f043f6fe38dc35fbdd4b9a8e96670afd",
+      "checkpoint_sha256": "f92023889437a95434b63d709936f6fd2f80cf19e9307c54984ff1913a9f460f"
+    }
+  },
+  "initial_diagnostic_rows_exactly_equal": true,
+  "model_and_full_optimizer_exactly_equal_to_original_F2304": true,
+  "initial_rng_hash_equal": true,
+  "rng_evidence_limit": "Full RNG states were not saved in checkpoints; equality uses training RUN initial RNG hashes.",
+  "added_optimizer_updates": 0,
+  "model_inference_executed": false
+}

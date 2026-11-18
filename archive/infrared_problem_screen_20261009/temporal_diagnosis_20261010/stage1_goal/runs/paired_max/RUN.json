@@ -1,0 +1,56 @@
+{
+  "strategy": "paired_max",
+  "steps": 512,
+  "lr": 0.0001,
+  "seed": 46,
+  "optimizer": "fresh Adam",
+  "weight_decay": 0.0001,
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "train_source_sha256": "ca37be9d9ecb68ca1e779c2ba7177d1f87e498d57ef272d99470f46e97b702af",
+  "loss_source_sha256": "bbb51878fc2b442626707ff117474e2df4cad992a715c569aae56c9784f325b6",
+  "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "torch_version": "2.7.0+cu128",
+  "source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "status": "complete",
+  "protocol": "weak_box_MIL_not_official_SoftIoU",
+  "duration_seconds": 232.21208356900024,
+  "counts": {
+    "extra_disabled_n_lt_2": 113,
+    "extra_objects": 1786
+  },
+  "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "final_checkpoint_sha256": "b85a8e4504a774baeca17e8f80c66322f6b132cc9a04445b47efce820e359170",
+  "train_log_sha256": "788e9fbaa0ef4053e4d53dc3faa5751de45008c6cc533957e0e994781fa6a799",
+  "final_step": 512,
+  "checkpoint_selection": "fixed final step; no best checkpoint"
+}

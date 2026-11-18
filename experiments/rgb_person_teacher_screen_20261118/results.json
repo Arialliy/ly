@@ -1,0 +1,175 @@
+{
+  "runtime_seconds": 7.017467454003054,
+  "device": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.0+cu128",
+  "summary": {
+    "DJI_0043_2": {
+      "frames": 8,
+      "G": 583,
+      "full_0.5": {
+        "predictions": 22,
+        "max_match_count": 22,
+        "min_shortfall": 561,
+        "max_match_rate": 0.03773584905660377
+      },
+      "full_0.2": {
+        "predictions": 55,
+        "max_match_count": 55,
+        "min_shortfall": 528,
+        "max_match_rate": 0.09433962264150944
+      },
+      "tiled_0.5": {
+        "predictions": 27,
+        "max_match_count": 27,
+        "min_shortfall": 556,
+        "max_match_rate": 0.04631217838765009
+      },
+      "tiled_0.2": {
+        "predictions": 76,
+        "max_match_count": 76,
+        "min_shortfall": 507,
+        "max_match_rate": 0.13036020583190394
+      }
+    },
+    "DJI_0057_1": {
+      "frames": 8,
+      "G": 16,
+      "full_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "full_0.2": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "tiled_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "tiled_0.2": {
+        "predictions": 1,
+        "max_match_count": 1,
+        "min_shortfall": 15,
+        "max_match_rate": 0.0625
+      }
+    },
+    "DJI_0115_2": {
+      "frames": 8,
+      "G": 24,
+      "full_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 24,
+        "max_match_rate": 0.0
+      },
+      "full_0.2": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 24,
+        "max_match_rate": 0.0
+      },
+      "tiled_0.5": {
+        "predictions": 1,
+        "max_match_count": 1,
+        "min_shortfall": 23,
+        "max_match_rate": 0.041666666666666664
+      },
+      "tiled_0.2": {
+        "predictions": 1,
+        "max_match_count": 1,
+        "min_shortfall": 23,
+        "max_match_rate": 0.041666666666666664
+      }
+    },
+    "DJI_0217_2": {
+      "frames": 8,
+      "G": 16,
+      "full_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "full_0.2": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "tiled_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 16,
+        "max_match_rate": 0.0
+      },
+      "tiled_0.2": {
+        "predictions": 9,
+        "max_match_count": 9,
+        "min_shortfall": 7,
+        "max_match_rate": 0.5625
+      }
+    },
+    "DJI_0067_2": {
+      "frames": 8,
+      "G": 295,
+      "full_0.5": {
+        "predictions": 0,
+        "max_match_count": 0,
+        "min_shortfall": 295,
+        "max_match_rate": 0.0
+      },
+      "full_0.2": {
+        "predictions": 7,
+        "max_match_count": 7,
+        "min_shortfall": 288,
+        "max_match_rate": 0.023728813559322035
+      },
+      "tiled_0.5": {
+        "predictions": 4,
+        "max_match_count": 4,
+        "min_shortfall": 291,
+        "max_match_rate": 0.013559322033898305
+      },
+      "tiled_0.2": {
+        "predictions": 33,
+        "max_match_count": 33,
+        "min_shortfall": 262,
+        "max_match_rate": 0.11186440677966102
+      }
+    },
+    "pooled": {
+      "frames": 40,
+      "G": 934,
+      "full_0.5": {
+        "predictions": 22,
+        "max_match_count": 22,
+        "min_shortfall": 912,
+        "max_match_rate": 0.023554603854389723
+      },
+      "full_0.2": {
+        "predictions": 62,
+        "max_match_count": 62,
+        "min_shortfall": 872,
+        "max_match_rate": 0.06638115631691649
+      },
+      "tiled_0.5": {
+        "predictions": 32,
+        "max_match_count": 32,
+        "min_shortfall": 902,
+        "max_match_rate": 0.034261241970021415
+      },
+      "tiled_0.2": {
+        "predictions": 120,
+        "max_match_count": 120,
+        "min_shortfall": 814,
+        "max_match_rate": 0.1284796573875803
+      }
+    }
+  }
+}

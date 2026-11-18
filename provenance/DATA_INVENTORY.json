@@ -1,0 +1,172 @@
+{
+  "created_utc": "2026-10-12T12:56:32.709658+00:00",
+  "local_project_archive_status": "COMPLETE_SHA256_VERIFIED",
+  "local_project_archive": "archive/infrared_problem_screen_20261009",
+  "stage1": {
+    "path": "data/stage1",
+    "sequences": 14,
+    "frames": 2240,
+    "annotation_count": 70276,
+    "raw_dtype": "uint8",
+    "raw_shape_per_sequence": [
+      160,
+      512,
+      640
+    ],
+    "splits": {
+      "train": [
+        "DJI_0030_9",
+        "DJI_0043_2",
+        "DJI_0057_1",
+        "DJI_0113_3",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0309_1",
+        "DJI_0323_2"
+      ],
+      "calibration": [
+        "DJI_0026_2",
+        "DJI_0067_2"
+      ],
+      "confirmation": [
+        "DJI_0051_3",
+        "DJI_0075_3",
+        "DJI_0139_2",
+        "DJI_0343_3"
+      ]
+    },
+    "split_integrity": "Unchanged; collection only, confirmation not used for training",
+    "images_alias_materialization": "images/ and source_archive/ reference same original image files; duplicate paths are not additional frames"
+  },
+  "public_datasets": [
+    {
+      "dataset": "NUDT-MIRSDT",
+      "state": "COMPLETE",
+      "source_url": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+      "archive_bytes": 1027614117,
+      "uncompressed_bytes": 1020055152,
+      "members": 48724,
+      "completion_record": "provenance/PUBLIC_ARCHIVE_NUDT-MIRSDT.json",
+      "zip_sha256": "ee90d464a7b4b85b15f4aa175bb49fa312e049170ae181d3e9e28691f0496321",
+      "crc": "PASS",
+      "extracted_directory": "data/public/NUDT-MIRSDT",
+      "files": 48122,
+      "extension_counts": {
+        ".png": 36120,
+        ".mat": 12000,
+        ".txt": 2
+      },
+      "member_hash_manifest": "provenance/PUBLIC_MEMBERS_NUDT-MIRSDT.json"
+    },
+    {
+      "dataset": "VT-Tiny-MOT",
+      "state": "COMPLETE",
+      "source_url": "https://drive.google.com/file/d/17CgPc3huCf-KMr-I9zFVqmV0hzBVky9w/view",
+      "archive_bytes": 2448061811,
+      "uncompressed_bytes": 2876983408,
+      "members": 94270,
+      "completion_record": "provenance/PUBLIC_ARCHIVE_VT-Tiny-MOT.json",
+      "zip_sha256": "105579264e5b9e4bd289f006abb81c3c2335b591c3a207db3895a179d11fa4b8",
+      "crc": "PASS",
+      "extracted_directory": "data/public/VT-Tiny-MOT",
+      "files": 93918,
+      "extension_counts": {
+        ".json": 6,
+        ".jpg": 93882,
+        ".ini": 30
+      },
+      "member_hash_manifest": "provenance/PUBLIC_MEMBERS_VT-Tiny-MOT.json"
+    }
+  ],
+  "missing_author_assets": [
+    "DeepPro author-generated RGBT-Tiny Gaussian masks and exact mask-generation parameters; public VT-MOT boxes are not an author-mask reproduction"
+  ],
+  "other_source_paths_search": "provenance/LOCAL_DATASET_SEARCH.json",
+  "private_download_credentials_required": false,
+  "downloaded_code_executed": false,
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-12T13:02:50.789257+00:00",
+  "public_zip_total_bytes": 3475675928,
+  "public_extracted_total_bytes": 3897038560,
+  "subset_consistency": "PASS",
+  "subset_consistency_record": "provenance/PUBLIC_DATA_VERIFICATION.json",
+  "vt_sequence_count": 116,
+  "vt_infrared_jpgs": 46941,
+  "vt_visible_jpgs": 46941,
+  "vt_annotation_statistics": [
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_00_test2017.json",
+      "images": 12590,
+      "annotations": 180251,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_00_train2017.json",
+      "images": 34111,
+      "annotations": 431201,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_01_test2017.json",
+      "images": 12590,
+      "annotations": 189101,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_01_train2017.json",
+      "images": 34111,
+      "annotations": 456796,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_test2017.json",
+      "images": 12590,
+      "annotations": 211182,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_train2017.json",
+      "images": 34111,
+      "annotations": 496700,
+      "categories": 7
+    }
+  ],
+  "nudt_details": {
+    "sequences": 120,
+    "file_counts_by_role": {
+      "images": 12000,
+      "masks": 12000,
+      "masks_centroid": 12000,
+      "Mix": 12000
+    },
+    "trajectory_preview_pngs": 120,
+    "official_train_list_entries": 8000,
+    "official_test_list_entries": 2000,
+    "official_train_sequences": 80,
+    "official_test_sequences": 20,
+    "archive_sequences_not_in_these_two_lists": [
+      "Sequence100",
+      "Sequence102",
+      "Sequence103",
+      "Sequence104",
+      "Sequence106",
+      "Sequence107",
+      "Sequence108",
+      "Sequence109",
+      "Sequence110",
+      "Sequence111",
+      "Sequence112",
+      "Sequence113",
+      "Sequence114",
+      "Sequence115",
+      "Sequence116",
+      "Sequence117",
+      "Sequence118",
+      "Sequence120",
+      "Sequence98",
+      "Sequence99"
+    ],
+    "original_test_subset_pngs_exactly_equal": 6000
+  },
+  "incomplete_download_or_extraction_files": []
+}

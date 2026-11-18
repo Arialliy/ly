@@ -1,0 +1,15 @@
+{
+  "status": "RESOURCE_BINDING_ONLY",
+  "timestamp": "2026-10-11T19:51:22.275442+00:00",
+  "prior_attempt": "runtime/DOC_FOLLOW_RESULT.json",
+  "selected_host_gpu": 3,
+  "precondition": "memory.used<500MiB, launcher checks immediately",
+  "scientific_protocol_sha256": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+  "model_or_evaluation_change": false,
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/COMPUTE_GPU3.md": "a9c0e1a143949b7b2f0cea6f304097bf086b96c217d4263ba00b7b5b19dba785",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_native_check_gpu3.sh": "049db7ee7d94d24f8ecbb9267c478bf00a8c08802dea02bd3ac5dd331bfa7e42",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_check.py": "c54c1842ad47fb315e619ebb3e822475fa761b0057bfa99a2163318b73bb1df8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/tep_common.py": "1d3b79a2ff187ed3ca5a6d483433d6491705310dec79636b5feae2b960ee2b05"
+  }
+}

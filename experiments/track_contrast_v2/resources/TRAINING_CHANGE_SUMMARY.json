@@ -1,0 +1,506 @@
+{
+  "status": "complete",
+  "generated_utc": "2026-10-12T18:05:18.311946+00:00",
+  "uses_development": false,
+  "fixed_training_indices": [
+    5,
+    6,
+    18,
+    25,
+    30,
+    32,
+    51,
+    7
+  ],
+  "weighting": {
+    "readout": "segment-index multiset exposure weights; overlapping/repeated observations retained",
+    "contrast": "pairs_requested weights; all requested pairs used on every fixed diagnostic entry",
+    "loss": "unweighted mean of the same8 fixed batch losses, preserving each loss's registered internal reduction",
+    "comparison": "all endpoint changes reported against C_init; FRAME and GAP separately compared with CONT and with each other"
+  },
+  "lambda_readout": 0.0023821861727945912,
+  "snapshots": {
+    "C_init": {
+      "entry_indices": [
+        5,
+        6,
+        18,
+        25,
+        30,
+        32,
+        51,
+        7
+      ],
+      "entry_count": 8,
+      "observations_with_multiplicity": 9776,
+      "requested_contrast_pairs": 1024,
+      "readout_exposure_weights": [
+        576,
+        1168,
+        576,
+        1672,
+        976,
+        680,
+        1928,
+        2200
+      ],
+      "contrast_pair_weights": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "readout": {
+        "target_logit_mean": -9.028494716666138,
+        "background_logit_mean": -13.158154823971262,
+        "logit_margin_mean": 4.1296599335883135,
+        "probability_margin_mean": 0.13382256410272148,
+        "evidence_mean": 0.133863375755408,
+        "target_logit_above_zero_fraction": 0.12653437116428745,
+        "background_logit_above_zero_fraction": 0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.9239330291748047,
+        "negative_cosine_mean": 0.5364762134850025,
+        "cosine_margin_mean": 0.38745681568980217
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.6300808526575565,
+        "keep": 0.0007775600388413295,
+        "C": 0.7273037247359753,
+        "base": 0.7137256450951099,
+        "frame": 6.2322679460048676,
+        "gap": 4.174238093197346
+      },
+      "optimized_objective_eight_batch_mean": 0.7137256450951099
+    },
+    "CONT": {
+      "entry_indices": [
+        5,
+        6,
+        18,
+        25,
+        30,
+        32,
+        51,
+        7
+      ],
+      "entry_count": 8,
+      "observations_with_multiplicity": 9776,
+      "requested_contrast_pairs": 1024,
+      "readout_exposure_weights": [
+        576,
+        1168,
+        576,
+        1672,
+        976,
+        680,
+        1928,
+        2200
+      ],
+      "contrast_pair_weights": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "readout": {
+        "target_logit_mean": -9.06915325736063,
+        "background_logit_mean": -13.059960761749217,
+        "logit_margin_mean": 3.990807740417128,
+        "probability_margin_mean": 0.13055801777848927,
+        "evidence_mean": 0.1305964182492242,
+        "target_logit_above_zero_fraction": 0.12479541937739827,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.9243371337652206,
+        "negative_cosine_mean": 0.5347131565213203,
+        "cosine_margin_mean": 0.3896239772439003
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.6319965347647667,
+        "keep": 0.0006753117304469924,
+        "C": 0.7252938374876976,
+        "base": 0.7148341573774815,
+        "frame": 6.238921284675598,
+        "gap": 4.197320722043514
+      },
+      "optimized_objective_eight_batch_mean": 0.7148341573774815
+    },
+    "FRAME": {
+      "entry_indices": [
+        5,
+        6,
+        18,
+        25,
+        30,
+        32,
+        51,
+        7
+      ],
+      "entry_count": 8,
+      "observations_with_multiplicity": 9776,
+      "requested_contrast_pairs": 1024,
+      "readout_exposure_weights": [
+        576,
+        1168,
+        576,
+        1672,
+        976,
+        680,
+        1928,
+        2200
+      ],
+      "contrast_pair_weights": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "readout": {
+        "target_logit_mean": -8.555189911160259,
+        "background_logit_mean": -12.415777200957953,
+        "logit_margin_mean": 3.8605872290224177,
+        "probability_margin_mean": 0.13646999566546,
+        "evidence_mean": 0.13652006219523774,
+        "target_logit_above_zero_fraction": 0.12888707037795633,
+        "background_logit_above_zero_fraction": 0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.9230563193559647,
+        "negative_cosine_mean": 0.5291116945445538,
+        "cosine_margin_mean": 0.3939446248114109
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.6313542351126671,
+        "keep": 0.0007656626548850909,
+        "C": 0.722938098013401,
+        "base": 0.7144553251564503,
+        "frame": 5.885808527469635,
+        "gap": 3.931814193725586
+      },
+      "optimized_objective_eight_batch_mean": 0.7284764168463049
+    },
+    "GAP": {
+      "entry_indices": [
+        5,
+        6,
+        18,
+        25,
+        30,
+        32,
+        51,
+        7
+      ],
+      "entry_count": 8,
+      "observations_with_multiplicity": 9776,
+      "requested_contrast_pairs": 1024,
+      "readout_exposure_weights": [
+        576,
+        1168,
+        576,
+        1672,
+        976,
+        680,
+        1928,
+        2200
+      ],
+      "contrast_pair_weights": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "readout": {
+        "target_logit_mean": -8.692578464014831,
+        "background_logit_mean": -12.570191809471618,
+        "logit_margin_mean": 3.8776133879897245,
+        "probability_margin_mean": 0.13504416902386468,
+        "evidence_mean": 0.13509230302424213,
+        "target_logit_above_zero_fraction": 0.12847790511480475,
+        "background_logit_above_zero_fraction": 0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.9235286489129066,
+        "negative_cosine_mean": 0.5303105339407921,
+        "cosine_margin_mean": 0.39321811497211456
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.6314958892762661,
+        "keep": 0.0007461360764864367,
+        "C": 0.7231262996792793,
+        "base": 0.7145051211118698,
+        "frame": 5.978293150663376,
+        "gap": 3.9658899158239365
+      },
+      "optimized_objective_eight_batch_mean": 0.7239526092321711
+    }
+  },
+  "comparisons": {
+    "CONT_minus_C_init": {
+      "readout": {
+        "target_logit_mean": -0.04065854069449237,
+        "background_logit_mean": 0.09819406222204563,
+        "logit_margin_mean": -0.1388521931711857,
+        "probability_margin_mean": -0.0032645463242322037,
+        "evidence_mean": -0.003266957506183804,
+        "target_logit_above_zero_fraction": -0.0017389517868891813,
+        "background_logit_above_zero_fraction": -0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.0004041045904159546,
+        "negative_cosine_mean": -0.0017630569636821747,
+        "cosine_margin_mean": 0.0021671615540981293
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.0019156821072101593,
+        "keep": -0.00010224830839433707,
+        "C": -0.002009887248277664,
+        "base": 0.001108512282371521,
+        "frame": 0.006653338670730591,
+        "gap": 0.023082628846168518
+      }
+    },
+    "FRAME_minus_C_init": {
+      "readout": {
+        "target_logit_mean": 0.4733048055058795,
+        "background_logit_mean": 0.7423776230133097,
+        "logit_margin_mean": -0.2690727045658958,
+        "probability_margin_mean": 0.002647431562738528,
+        "evidence_mean": 0.0026566864398297474,
+        "target_logit_above_zero_fraction": 0.002352699213668874,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "contrast": {
+        "positive_cosine_mean": -0.0008767098188400269,
+        "negative_cosine_mean": -0.007364518940448761,
+        "cosine_margin_mean": 0.006487809121608734
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.00127338245511055,
+        "keep": -1.1897383956238627e-05,
+        "C": -0.004365626722574234,
+        "base": 0.000729680061340332,
+        "frame": -0.34645941853523254,
+        "gap": -0.2424238994717598
+      }
+    },
+    "GAP_minus_C_init": {
+      "readout": {
+        "target_logit_mean": 0.3359162526513071,
+        "background_logit_mean": 0.5879630144996444,
+        "logit_margin_mean": -0.25204654559858897,
+        "probability_margin_mean": 0.0012216049211432045,
+        "evidence_mean": 0.0012289272688341402,
+        "target_logit_above_zero_fraction": 0.001943533950517301,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "contrast": {
+        "positive_cosine_mean": -0.00040438026189804077,
+        "negative_cosine_mean": -0.006165679544210434,
+        "cosine_margin_mean": 0.005761299282312393
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.0014150366187095642,
+        "keep": -3.1423962354892865e-05,
+        "C": -0.004177425056695938,
+        "base": 0.0007794760167598724,
+        "frame": -0.2539747953414917,
+        "gap": -0.20834817737340927
+      }
+    },
+    "FRAME_minus_CONT": {
+      "readout": {
+        "target_logit_mean": 0.5139633462003719,
+        "background_logit_mean": 0.644183560791264,
+        "logit_margin_mean": -0.13022051139471014,
+        "probability_margin_mean": 0.005911977886970732,
+        "evidence_mean": 0.0059236439460135515,
+        "target_logit_above_zero_fraction": 0.004091651000558055,
+        "background_logit_above_zero_fraction": 0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": -0.0012808144092559814,
+        "negative_cosine_mean": -0.005601461976766586,
+        "cosine_margin_mean": 0.004320647567510605
+      },
+      "losses_eight_batch_mean": {
+        "det": -0.0006422996520996094,
+        "keep": 9.035092443809845e-05,
+        "C": -0.00235573947429657,
+        "base": -0.00037883222103118896,
+        "frame": -0.35311275720596313,
+        "gap": -0.2655065283179283
+      }
+    },
+    "GAP_minus_CONT": {
+      "readout": {
+        "target_logit_mean": 0.37657479334579946,
+        "background_logit_mean": 0.48976895227759876,
+        "logit_margin_mean": -0.11319435242740328,
+        "probability_margin_mean": 0.004486151245375408,
+        "evidence_mean": 0.004495884775017944,
+        "target_logit_above_zero_fraction": 0.0036824857374064823,
+        "background_logit_above_zero_fraction": 0.00020458265277252223
+      },
+      "contrast": {
+        "positive_cosine_mean": -0.0008084848523139954,
+        "negative_cosine_mean": -0.004402622580528259,
+        "cosine_margin_mean": 0.003594137728214264
+      },
+      "losses_eight_batch_mean": {
+        "det": -0.0005006454885005951,
+        "keep": 7.082434603944421e-05,
+        "C": -0.002167537808418274,
+        "base": -0.00032903626561164856,
+        "frame": -0.2606281340122223,
+        "gap": -0.2314308062195778
+      }
+    },
+    "GAP_minus_FRAME": {
+      "readout": {
+        "target_logit_mean": -0.1373885528545724,
+        "background_logit_mean": -0.15441460851366529,
+        "logit_margin_mean": 0.01702615896730686,
+        "probability_margin_mean": -0.0014258266415953236,
+        "evidence_mean": -0.0014277591709956072,
+        "target_logit_above_zero_fraction": -0.000409165263151573,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "contrast": {
+        "positive_cosine_mean": 0.0004723295569419861,
+        "negative_cosine_mean": 0.001198839396238327,
+        "cosine_margin_mean": -0.0007265098392963409
+      },
+      "losses_eight_batch_mean": {
+        "det": 0.00014165416359901428,
+        "keep": -1.9526578398654237e-05,
+        "C": 0.0001882016658782959,
+        "base": 4.9795955419540405e-05,
+        "frame": 0.09248462319374084,
+        "gap": 0.034075722098350525
+      }
+    }
+  },
+  "paired_batch_directions": {
+    "FRAME_minus_CONT": {
+      "probability_margin_mean": {
+        "positive_entries": [
+          5,
+          6,
+          18,
+          25,
+          30,
+          32,
+          51,
+          7
+        ],
+        "negative_entries": []
+      },
+      "logit_margin_mean": {
+        "positive_entries": [],
+        "negative_entries": [
+          5,
+          6,
+          18,
+          25,
+          30,
+          32,
+          51,
+          7
+        ]
+      }
+    },
+    "GAP_minus_CONT": {
+      "probability_margin_mean": {
+        "positive_entries": [
+          5,
+          6,
+          18,
+          25,
+          30,
+          32,
+          51,
+          7
+        ],
+        "negative_entries": []
+      },
+      "logit_margin_mean": {
+        "positive_entries": [],
+        "negative_entries": [
+          5,
+          6,
+          18,
+          25,
+          30,
+          32,
+          51,
+          7
+        ]
+      }
+    },
+    "GAP_minus_FRAME": {
+      "probability_margin_mean": {
+        "positive_entries": [],
+        "negative_entries": [
+          5,
+          6,
+          18,
+          25,
+          30,
+          32,
+          51,
+          7
+        ]
+      },
+      "logit_margin_mean": {
+        "positive_entries": [
+          5,
+          6,
+          18,
+          30,
+          32,
+          51,
+          7
+        ],
+        "negative_entries": [
+          25
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Training diagnostics are not actual-component detections or held-out evaluation.",
+    "ROI-mean logit thresholds and sigmoid evidence are training proxies, not calibrated success probabilities.",
+    "Old contrast and new segment readouts use different target subsets; their summary changes cannot by themselves establish a causal mismatch.",
+    "Repeated segment exposure counts are not independent observation or sample counts.",
+    "C_init versus endpoint includes additional training; FRAME/GAP versus CONT isolates the registered added loss within this fixed single-seed256-step revision.",
+    "The three optimized-objective values use different added terms; compare common loss components or the explicit paired deltas for interpretation."
+  ],
+  "source_sha256": {
+    "CALIBRATION.json": "934ea3d203a3c6f9ffdd26e173710eaba1926b2650b53bc09c652d86a9e7a98a",
+    "training/CONT/run/RUN.json": "46fa893e69532d6731d22d8eae6611f139c8d6b3be0a274f4adfe6f1f9587c36",
+    "training/CONT/run/TRAIN_DIAGNOSTICS.json": "8193a173a9404076e3b195c7db6c0534038d09345bf719305df573ce40bf58a6",
+    "training/FRAME/run/RUN.json": "364bc32f6688017e82e890403e18fcf6b96d03f604516c5960aaaf88f1b7edd3",
+    "training/FRAME/run/TRAIN_DIAGNOSTICS.json": "e769260a6afbdca1ca0f95c66deef77cecc09fb0497a9660280b0958024e8489",
+    "training/GAP/run/RUN.json": "34c5ed5639e4b84efba10c8d9532034bc60ce54174a08234d18c1ee28e8d556d",
+    "training/GAP/run/TRAIN_DIAGNOSTICS.json": "fef0dad9a31e2d9ec9d9b976f8f5ca03d446fb0f927bb24222d66fe9c51a40bb"
+  }
+}

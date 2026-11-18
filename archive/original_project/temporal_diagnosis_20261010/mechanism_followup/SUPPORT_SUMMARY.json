@@ -1,0 +1,437 @@
+{
+  "all": {
+    "n": 1417,
+    "ids": 33,
+    "a_suppressed_common_half": 74,
+    "a_suppressed_common_strong": 45,
+    "b_requires_exclusive_half": 64,
+    "b_requires_exclusive_strong": 47,
+    "both_shared_high": 547,
+    "both_global_shared_high": 587,
+    "safe_shared_eligible": 757,
+    "current_frame_in_safe_shared": 315,
+    "both_safe_high": 78,
+    "both_safe_strong": 70,
+    "a_suppressed_at_b_peak": 60,
+    "a_strong_suppressed_at_b_peak": 39,
+    "a_lambda_monotone_decreasing": 1237,
+    "strong_suppression_ids": 12,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 8,
+      "DJI_0047_3": 37
+    },
+    "suppression_and_b_matched": 26,
+    "suppression_and_safe_both_high": 6,
+    "suppression_and_safe_both_high_current_safe": 6,
+    "suppression_and_both_global_high": 42,
+    "four_patterns_half": {
+      "no_suppression+no_extra_support": 1283,
+      "suppression+no_extra_support": 70,
+      "no_suppression+extra_support": 60,
+      "suppression+extra_support": 4
+    },
+    "a_lambda_means": [
+      0.3929675950267696,
+      0.3796087109843711,
+      0.36647294164349037,
+      0.3571598025224181,
+      0.3546638791609212
+    ]
+  },
+  "strong_flips": {
+    "n": 97,
+    "ids": 18,
+    "a_suppressed_common_half": 31,
+    "a_suppressed_common_strong": 24,
+    "b_requires_exclusive_half": 44,
+    "b_requires_exclusive_strong": 42,
+    "both_shared_high": 28,
+    "both_global_shared_high": 43,
+    "safe_shared_eligible": 54,
+    "current_frame_in_safe_shared": 11,
+    "both_safe_high": 2,
+    "both_safe_strong": 2,
+    "a_suppressed_at_b_peak": 23,
+    "a_strong_suppressed_at_b_peak": 17,
+    "a_lambda_monotone_decreasing": 57,
+    "strong_suppression_ids": 10,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 6,
+      "DJI_0047_3": 18
+    },
+    "suppression_and_b_matched": 20,
+    "suppression_and_safe_both_high": 2,
+    "suppression_and_safe_both_high_current_safe": 2,
+    "suppression_and_both_global_high": 24,
+    "four_patterns_half": {
+      "no_suppression+extra_support": 41,
+      "no_suppression+no_extra_support": 25,
+      "suppression+extra_support": 3,
+      "suppression+no_extra_support": 28
+    },
+    "a_lambda_means": [
+      0.3028974835062566,
+      0.23919688893490257,
+      0.14653002973029822,
+      0.03980532204187127,
+      0.008977346369731807
+    ]
+  },
+  "flips": {
+    "n": 137,
+    "ids": 20,
+    "a_suppressed_common_half": 46,
+    "a_suppressed_common_strong": 31,
+    "b_requires_exclusive_half": 58,
+    "b_requires_exclusive_strong": 44,
+    "both_shared_high": 42,
+    "both_global_shared_high": 64,
+    "safe_shared_eligible": 75,
+    "current_frame_in_safe_shared": 23,
+    "both_safe_high": 6,
+    "both_safe_strong": 6,
+    "a_suppressed_at_b_peak": 37,
+    "a_strong_suppressed_at_b_peak": 26,
+    "a_lambda_monotone_decreasing": 90,
+    "strong_suppression_ids": 11,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 7,
+      "DJI_0047_3": 24
+    },
+    "suppression_and_b_matched": 26,
+    "suppression_and_safe_both_high": 2,
+    "suppression_and_safe_both_high_current_safe": 2,
+    "suppression_and_both_global_high": 31,
+    "four_patterns_half": {
+      "no_suppression+extra_support": 54,
+      "no_suppression+no_extra_support": 37,
+      "suppression+extra_support": 4,
+      "suppression+no_extra_support": 42
+    },
+    "a_lambda_means": [
+      0.3282837065346697,
+      0.2721379160509465,
+      0.17651346669416598,
+      0.08031863459308698,
+      0.04177830672346324
+    ]
+  },
+  "stable_low": {
+    "n": 778,
+    "ids": 24,
+    "a_suppressed_common_half": 28,
+    "a_suppressed_common_strong": 14,
+    "b_requires_exclusive_half": 0,
+    "b_requires_exclusive_strong": 0,
+    "both_shared_high": 21,
+    "both_global_shared_high": 32,
+    "safe_shared_eligible": 516,
+    "current_frame_in_safe_shared": 231,
+    "both_safe_high": 9,
+    "both_safe_strong": 7,
+    "a_suppressed_at_b_peak": 11,
+    "a_strong_suppressed_at_b_peak": 5,
+    "a_lambda_monotone_decreasing": 708,
+    "strong_suppression_ids": 6,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 1,
+      "DJI_0047_3": 13
+    },
+    "suppression_and_b_matched": 0,
+    "suppression_and_safe_both_high": 4,
+    "suppression_and_safe_both_high_current_safe": 4,
+    "suppression_and_both_global_high": 11,
+    "four_patterns_half": {
+      "no_suppression+no_extra_support": 750,
+      "suppression+no_extra_support": 28
+    },
+    "a_lambda_means": [
+      0.033513198012576045,
+      0.015793706284161484,
+      0.004367498690180562,
+      0.0006798053829991786,
+      0.0005013259591376406
+    ]
+  },
+  "stable_high": {
+    "n": 502,
+    "ids": 17,
+    "a_suppressed_common_half": 0,
+    "a_suppressed_common_strong": 0,
+    "b_requires_exclusive_half": 6,
+    "b_requires_exclusive_strong": 3,
+    "both_shared_high": 484,
+    "both_global_shared_high": 491,
+    "safe_shared_eligible": 166,
+    "current_frame_in_safe_shared": 61,
+    "both_safe_high": 63,
+    "both_safe_strong": 57,
+    "a_suppressed_at_b_peak": 12,
+    "a_strong_suppressed_at_b_peak": 8,
+    "a_lambda_monotone_decreasing": 439,
+    "strong_suppression_ids": 0,
+    "strong_suppression_clips": {},
+    "suppression_and_b_matched": 0,
+    "suppression_and_safe_both_high": 0,
+    "suppression_and_safe_both_high_current_safe": 0,
+    "suppression_and_both_global_high": 0,
+    "four_patterns_half": {
+      "no_suppression+no_extra_support": 496,
+      "no_suppression+extra_support": 6
+    },
+    "a_lambda_means": [
+      0.9677030802866505,
+      0.9727791742565668,
+      0.979505775678814,
+      0.9851850570658169,
+      0.9889343768002028
+    ]
+  },
+  "strong_safe_eligible": {
+    "n": 54,
+    "ids": 14,
+    "a_suppressed_common_half": 13,
+    "a_suppressed_common_strong": 8,
+    "b_requires_exclusive_half": 28,
+    "b_requires_exclusive_strong": 26,
+    "both_shared_high": 11,
+    "both_global_shared_high": 23,
+    "safe_shared_eligible": 54,
+    "current_frame_in_safe_shared": 11,
+    "both_safe_high": 2,
+    "both_safe_strong": 2,
+    "a_suppressed_at_b_peak": 12,
+    "a_strong_suppressed_at_b_peak": 7,
+    "a_lambda_monotone_decreasing": 31,
+    "strong_suppression_ids": 6,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 4,
+      "DJI_0047_3": 4
+    },
+    "suppression_and_b_matched": 7,
+    "suppression_and_safe_both_high": 2,
+    "suppression_and_safe_both_high_current_safe": 2,
+    "suppression_and_both_global_high": 8,
+    "four_patterns_half": {
+      "no_suppression+extra_support": 26,
+      "suppression+extra_support": 2,
+      "suppression+no_extra_support": 11,
+      "no_suppression+no_extra_support": 15
+    },
+    "a_lambda_means": [
+      0.22237734568497664,
+      0.15517233499997,
+      0.10198658702800224,
+      0.023467395619107642,
+      0.011450169180902334
+    ]
+  },
+  "strong_high_window_matched": {
+    "n": 75,
+    "ids": 18,
+    "a_suppressed_common_half": 25,
+    "a_suppressed_common_strong": 20,
+    "b_requires_exclusive_half": 29,
+    "b_requires_exclusive_strong": 27,
+    "both_shared_high": 23,
+    "both_global_shared_high": 37,
+    "safe_shared_eligible": 45,
+    "current_frame_in_safe_shared": 9,
+    "both_safe_high": 2,
+    "both_safe_strong": 2,
+    "a_suppressed_at_b_peak": 17,
+    "a_strong_suppressed_at_b_peak": 13,
+    "a_lambda_monotone_decreasing": 45,
+    "strong_suppression_ids": 10,
+    "strong_suppression_clips": {
+      "DJI_0032_5": 5,
+      "DJI_0047_3": 15
+    },
+    "suppression_and_b_matched": 20,
+    "suppression_and_safe_both_high": 2,
+    "suppression_and_safe_both_high_current_safe": 2,
+    "suppression_and_both_global_high": 20,
+    "four_patterns_half": {
+      "no_suppression+extra_support": 27,
+      "no_suppression+no_extra_support": 23,
+      "suppression+extra_support": 2,
+      "suppression+no_extra_support": 23
+    },
+    "a_lambda_means": [
+      0.32320622419229295,
+      0.27714739650479336,
+      0.17729838672141093,
+      0.0491431471971769,
+      0.010513193908335173
+    ]
+  },
+  "strong_by_clip": {
+    "DJI_0028_2": {
+      "n": 0,
+      "ids": 0,
+      "a_suppressed_common_half": 0,
+      "a_suppressed_common_strong": 0,
+      "b_requires_exclusive_half": 0,
+      "b_requires_exclusive_strong": 0,
+      "both_shared_high": 0,
+      "both_global_shared_high": 0,
+      "safe_shared_eligible": 0,
+      "current_frame_in_safe_shared": 0,
+      "both_safe_high": 0,
+      "both_safe_strong": 0,
+      "a_suppressed_at_b_peak": 0,
+      "a_strong_suppressed_at_b_peak": 0,
+      "a_lambda_monotone_decreasing": 0,
+      "strong_suppression_ids": 0,
+      "strong_suppression_clips": {},
+      "suppression_and_b_matched": 0,
+      "suppression_and_safe_both_high": 0,
+      "suppression_and_safe_both_high_current_safe": 0,
+      "suppression_and_both_global_high": 0,
+      "four_patterns_half": {},
+      "a_lambda_means": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "DJI_0028_4": {
+      "n": 7,
+      "ids": 1,
+      "a_suppressed_common_half": 1,
+      "a_suppressed_common_strong": 0,
+      "b_requires_exclusive_half": 6,
+      "b_requires_exclusive_strong": 6,
+      "both_shared_high": 0,
+      "both_global_shared_high": 0,
+      "safe_shared_eligible": 5,
+      "current_frame_in_safe_shared": 1,
+      "both_safe_high": 0,
+      "both_safe_strong": 0,
+      "a_suppressed_at_b_peak": 0,
+      "a_strong_suppressed_at_b_peak": 0,
+      "a_lambda_monotone_decreasing": 3,
+      "strong_suppression_ids": 0,
+      "strong_suppression_clips": {},
+      "suppression_and_b_matched": 0,
+      "suppression_and_safe_both_high": 0,
+      "suppression_and_safe_both_high_current_safe": 0,
+      "suppression_and_both_global_high": 0,
+      "four_patterns_half": {
+        "no_suppression+extra_support": 5,
+        "no_suppression+no_extra_support": 1,
+        "suppression+extra_support": 1
+      },
+      "a_lambda_means": [
+        0.11940101999236472,
+        0.0020875432813432277,
+        0.004784406086547018,
+        0.007889442742113926,
+        0.01149680666645736
+      ]
+    },
+    "DJI_0032_5": {
+      "n": 35,
+      "ids": 11,
+      "a_suppressed_common_half": 7,
+      "a_suppressed_common_strong": 6,
+      "b_requires_exclusive_half": 14,
+      "b_requires_exclusive_strong": 13,
+      "both_shared_high": 7,
+      "both_global_shared_high": 14,
+      "safe_shared_eligible": 22,
+      "current_frame_in_safe_shared": 5,
+      "both_safe_high": 1,
+      "both_safe_strong": 1,
+      "a_suppressed_at_b_peak": 7,
+      "a_strong_suppressed_at_b_peak": 5,
+      "a_lambda_monotone_decreasing": 11,
+      "strong_suppression_ids": 5,
+      "strong_suppression_clips": {
+        "DJI_0032_5": 6
+      },
+      "suppression_and_b_matched": 5,
+      "suppression_and_safe_both_high": 1,
+      "suppression_and_safe_both_high_current_safe": 1,
+      "suppression_and_both_global_high": 6,
+      "four_patterns_half": {
+        "suppression+no_extra_support": 7,
+        "no_suppression+extra_support": 14,
+        "no_suppression+no_extra_support": 14
+      },
+      "a_lambda_means": [
+        0.1963949074033465,
+        0.15806140649629888,
+        0.08716784452908258,
+        0.022864046796307286,
+        0.01168778175152251
+      ]
+    },
+    "DJI_0047_3": {
+      "n": 55,
+      "ids": 6,
+      "a_suppressed_common_half": 23,
+      "a_suppressed_common_strong": 18,
+      "b_requires_exclusive_half": 24,
+      "b_requires_exclusive_strong": 23,
+      "both_shared_high": 21,
+      "both_global_shared_high": 29,
+      "safe_shared_eligible": 27,
+      "current_frame_in_safe_shared": 5,
+      "both_safe_high": 1,
+      "both_safe_strong": 1,
+      "a_suppressed_at_b_peak": 16,
+      "a_strong_suppressed_at_b_peak": 12,
+      "a_lambda_monotone_decreasing": 43,
+      "strong_suppression_ids": 5,
+      "strong_suppression_clips": {
+        "DJI_0047_3": 18
+      },
+      "suppression_and_b_matched": 15,
+      "suppression_and_safe_both_high": 1,
+      "suppression_and_safe_both_high_current_safe": 1,
+      "suppression_and_both_global_high": 18,
+      "four_patterns_half": {
+        "no_suppression+no_extra_support": 10,
+        "no_suppression+extra_support": 22,
+        "suppression+no_extra_support": 21,
+        "suppression+extra_support": 2
+      },
+      "a_lambda_means": [
+        0.39402594547351294,
+        0.3210061126608307,
+        0.20234631786754925,
+        0.05464815456356291,
+        0.006931865270827199
+      ]
+    }
+  },
+  "maximum_errors": {
+    "a_replay_abs_error": 1.9669532775878906e-06,
+    "a_projection_vs_official_max_abs_error": 7.152557373046875e-07,
+    "b_replay_abs_error": 3.2782554626464844e-06,
+    "b_projection_vs_official_max_abs_error": 5.960464477539062e-07,
+    "a_shared_exclusive_reconstruction_max_abs_error": 4.76837158203125e-07,
+    "a_global_shared_interior_max_abs_error": 1.52587890625e-05,
+    "a_endpoint_4_max_abs_probability_error": 3.814697265625e-06,
+    "a_endpoint_4_max_abs_logit_error": 4.9591064453125e-05,
+    "a_endpoint_6_max_abs_probability_error": 4.023313522338867e-06,
+    "a_endpoint_6_max_abs_logit_error": 4.57763671875e-05,
+    "b_shared_exclusive_reconstruction_max_abs_error": 3.5762786865234375e-07,
+    "b_global_shared_interior_max_abs_error": 1.9073486328125e-05,
+    "b_endpoint_4_max_abs_probability_error": 9.59634780883789e-06,
+    "b_endpoint_4_max_abs_logit_error": 5.340576171875e-05,
+    "b_endpoint_6_max_abs_probability_error": 9.238719940185547e-06,
+    "b_endpoint_6_max_abs_logit_error": 5.7220458984375e-05
+  },
+  "threshold_disagreements": {
+    "a_replay_threshold_disagreement_0_1": 0,
+    "a_replay_threshold_disagreement_0_5": 0,
+    "a_replay_threshold_disagreement_0_9": 0,
+    "b_replay_threshold_disagreement_0_1": 0,
+    "b_replay_threshold_disagreement_0_5": 0,
+    "b_replay_threshold_disagreement_0_9": 0
+  }
+}

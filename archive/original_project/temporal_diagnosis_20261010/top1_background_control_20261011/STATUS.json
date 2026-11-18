@@ -1,0 +1,102 @@
+{
+  "status": "COMPLETE",
+  "completed_at": "2026-10-11T23:09:57.395709+08:00",
+  "experiment": "one fixed top-1% negative-aggregation control",
+  "training_runs": 1,
+  "seed": 46,
+  "updates": 512,
+  "threshold": 0.5,
+  "top_fraction": 0.01,
+  "checkpoint": "training/run/final_model.pth",
+  "validation": {
+    "audit/LOSS_MASK_AUDIT.json": "PASS",
+    "audit/COMPLETED_AUDIT.json": "PASS"
+  },
+  "rows": {
+    "SUMMARY.csv": 6,
+    "SEQUENCE_SUMMARY.csv": 12,
+    "OBJECT_COMPARISON.csv": 10400,
+    "TRACK_SUMMARY.csv": 780,
+    "RECOVERY_CONCENTRATION.csv": 24,
+    "FRAME_COUNTS.csv": 1920
+  },
+  "outcomes": [
+    {
+      "arrangement": "O",
+      "M": 877,
+      "U": 8339,
+      "A": 48354,
+      "U_budget": 4015,
+      "budget_pass": false,
+      "U_reduction_vs_mean": 159822,
+      "U_reduction_fraction_vs_mean": 0.9504106183954663,
+      "recorded_background_costs_reduced_vs_mean": true,
+      "background_deltas_vs_mean": {
+        "unmatched_components": -159822,
+        "positive_pixels_outside_boxes": -892082,
+        "unmatched_component_area_sum": -963401
+      },
+      "delta_M_vs_release": 177,
+      "gain_vs_release_same": 211,
+      "loss_vs_release_same": 34,
+      "loss_vs_release_O": 34,
+      "low_recovered": 169,
+      "low_recovered_tracks": 44,
+      "low_recovered_clips": 2,
+      "extreme_recovered": 96,
+      "recorded_background_deltas_vs_release": {
+        "unmatched_components": 4324,
+        "positive_pixels_outside_boxes": 9986,
+        "unmatched_component_area_sum": 17073
+      },
+      "recorded_background_costs_not_increased_vs_release": false,
+      "exceeds_shared_720_within_U_budget": false,
+      "preserves_more_original_O_successes_than_release_S": false,
+      "auxiliary_old_S_joint_pass": null,
+      "no_official_Pd_Fa_claim": true,
+      "no_temporal_causal_claim": true,
+      "no_novelty_claim": true
+    },
+    {
+      "arrangement": "S",
+      "M": 913,
+      "U": 8330,
+      "A": 48641,
+      "U_budget": 4015,
+      "budget_pass": false,
+      "U_reduction_vs_mean": 160229,
+      "U_reduction_fraction_vs_mean": 0.9505811021660071,
+      "recorded_background_costs_reduced_vs_mean": true,
+      "background_deltas_vs_mean": {
+        "unmatched_components": -160229,
+        "positive_pixels_outside_boxes": -890099,
+        "unmatched_component_area_sum": -960701
+      },
+      "delta_M_vs_release": 193,
+      "gain_vs_release_same": 224,
+      "loss_vs_release_same": 31,
+      "loss_vs_release_O": 49,
+      "low_recovered": 179,
+      "low_recovered_tracks": 46,
+      "low_recovered_clips": 2,
+      "extreme_recovered": 101,
+      "recorded_background_deltas_vs_release": {
+        "unmatched_components": 4363,
+        "positive_pixels_outside_boxes": 10000,
+        "unmatched_component_area_sum": 17628
+      },
+      "recorded_background_costs_not_increased_vs_release": false,
+      "exceeds_shared_720_within_U_budget": false,
+      "preserves_more_original_O_successes_than_release_S": true,
+      "auxiliary_old_S_joint_pass": false,
+      "no_official_Pd_Fa_claim": true,
+      "no_temporal_causal_claim": true,
+      "no_novelty_claim": true
+    }
+  ],
+  "scope": "custom weak-box adaptation on two existing development clips",
+  "no_sweep": true,
+  "no_additional_seed": true,
+  "no_threshold_retuning": true,
+  "broken_report_links": []
+}

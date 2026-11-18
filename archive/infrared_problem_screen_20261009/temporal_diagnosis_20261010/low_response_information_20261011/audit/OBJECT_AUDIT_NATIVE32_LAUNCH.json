@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-11T14:16:08.639750+00:00",
+  "command": [
+    "docker",
+    "run",
+    "-d",
+    "--name",
+    "deeppro_low_response_object_audit_native32_20261011",
+    "--user",
+    "1004:1004",
+    "--cpus",
+    "2",
+    "--memory",
+    "8g",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-v",
+    "/home/ly:/home/ly",
+    "--entrypoint",
+    "/opt/conda/bin/python3",
+    "deeppro-official-eval:20261009",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/audit/recompute_objects.py"
+  ],
+  "returncode": 0,
+  "stdout": "3cecb10dba17f0670bd4b4812eb091f5e8dae44d55f03e030c59886766795567\n",
+  "stderr": ""
+}

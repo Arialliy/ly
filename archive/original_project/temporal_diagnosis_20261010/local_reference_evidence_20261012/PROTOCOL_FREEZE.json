@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_BEFORE_FORMAL_TRAINING",
+  "time_unix": 1791750245.7252085,
+  "protocol_sha256": "a51d1ff730af2eeeb79a9701267ee17278128426cf8d2cdb3b8769ae66c7d19a",
+  "code_sha256": {
+    "code/infer_evidence.py": "c67bb9b926fbc141842b446c9d58d29c372ac6b917c04b6efa0c809395d80a80",
+    "code/launch_gpu.py": "03e607ab722e74b948592a3e2f93c46124d0c26c25247a8028194b5be793e2d4",
+    "code/module.py": "f87efd3f00c5167672045c83880c693e892cf906b58103f6327a55bba2502f2a",
+    "code/preflight.py": "1b76914bb3813a3f6911cf2f6a8e9404cc9ea540c3c4899291387ca04212b041",
+    "code/test_module.py": "32c0800e915e63ed101f1f30a0386808ca7a3f9feba6086073fa53b975d425a4",
+    "code/train_evidence.py": "96362e07c45e1d435e2f890fd0a2aaca03581e2d7f741dbedfa07cc0a41e5342",
+    "evaluation_code/evaluate.py": "f1797f27cd687e9e7728b24d2355b8ae4ab5b66c46bd3d28c5eac959bd172225",
+    "evaluation_code/launch_score.py": "20d96f6b14022afef86438cf69a7e838530b162d9bf2d6c33e28938ea6ca2d95",
+    "evaluation_code/trajectory_tables.py": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165",
+    "evaluation_code/validate_tables.py": "b203e7285920589cfae5fcdf63b45056774b440721a23124c10f5531416bfe60",
+    "evaluation_code/verify_identity.py": "84fd58765180f24df8883584674e325144764811f4f1ced76181914852481a23"
+  },
+  "artifacts_sha256": {
+    "ENGINEERING_SPEC.json": "c858f218617f10c145b00f2059c1ef66acd815f73919f9a41376b652b877929d",
+    "USER_REQUEST.txt": "282f7a629156b383b32522e134629b941f9d796a30cebe6a374707cea997215b",
+    "EVALUATION_PROTOCOL.md": "e87be9feb2b24624e74f6b090491670ae18b8dc6c8f5c8c37c3405a52210f4d4",
+    "checks/MODULE_CPU_TESTS.json": "5fa9affe925f7aaa147b1f7b8705cb9b92f1369987e7dcb09cfb6f9a5066d45c",
+    "checks/GPU_INTEGRATION.json": "12eb9027b0f2596a11f3ee35cd3494cf0b6fef4f6d9843eda21749641ce5120b",
+    "runtime/DOC_FOLLOW_RESULT.json": "1d2ba7b118df7c4aca1d0478a97978528cfc9082eb7e651de0566013f5f305a1"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "status": "NUMERIC_TABLE_REVIEW_PASS",
+  "date": "2026-10-12",
+  "review_scope": "Read-only three existing CSVs, no new experiment, inference, or diagnostic.",
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/SUMMARY.csv": "0c103122e5e8f12ff37f982c84e8ec54b475f866727d0fe3eb3a30ea5bfd1799",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/WINDOW_DEPENDENCE.csv": "e08f34ff30bad96a9816a3049e5050e3753e70c885bd78d4881e80be463fe071",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/CONTINUOUS_MISS_SUMMARY.csv": "d67c6700b631f280f0bb0810ba5df9f8ad1ff0d4daabd482137f5a0883d3df77"
+  },
+  "E0_budget_excess": {
+    "O": 7895,
+    "S": 8216
+  },
+  "deltas": [
+    {
+      "condition": "E1",
+      "reference": "E0",
+      "arrangement": "O",
+      "M": -16,
+      "unmatched_components": -1377,
+      "positive_pixels_outside_boxes": 1589,
+      "unmatched_component_area_sum": -5400,
+      "low_all_05_matched": -16
+    },
+    {
+      "condition": "E1",
+      "reference": "E0",
+      "arrangement": "S",
+      "M": -45,
+      "unmatched_components": -1396,
+      "positive_pixels_outside_boxes": 1544,
+      "unmatched_component_area_sum": -3748,
+      "low_all_05_matched": -35
+    },
+    {
+      "condition": "E2",
+      "reference": "E0",
+      "arrangement": "O",
+      "M": -1,
+      "unmatched_components": -47,
+      "positive_pixels_outside_boxes": 35,
+      "unmatched_component_area_sum": -340,
+      "low_all_05_matched": -2
+    },
+    {
+      "condition": "E2",
+      "reference": "E0",
+      "arrangement": "S",
+      "M": 2,
+      "unmatched_components": -62,
+      "positive_pixels_outside_boxes": 49,
+      "unmatched_component_area_sum": 215,
+      "low_all_05_matched": 3
+    },
+    {
+      "condition": "E2",
+      "reference": "E1",
+      "arrangement": "O",
+      "M": 15,
+      "unmatched_components": 1330,
+      "positive_pixels_outside_boxes": -1554,
+      "unmatched_component_area_sum": 5060,
+      "low_all_05_matched": 14
+    },
+    {
+      "condition": "E2",
+      "reference": "E1",
+      "arrangement": "S",
+      "M": 47,
+      "unmatched_components": 1334,
+      "positive_pixels_outside_boxes": -1495,
+      "unmatched_component_area_sum": 3963,
+      "low_all_05_matched": 38
+    }
+  ],
+  "findings": [
+    "E0 fails the fixed unmatched-component budget for O and S.",
+    "E1 reduces unmatched component count and area against E0, but loses matches, reduces low-response recovery, increases outside-box foreground, and still fails budget. Do not claim every E1 metric is worse.",
+    "E2 is nearly E0 on actual matching and fails budget; its extra matches over E1 accompany more unmatched components and unmatched-component area. No usable independent mutual-verification advantage is established.",
+    "Stable646 both-plan retention is 605/603/603 for E0/E1/E2.",
+    "Across all130 fixed tracks, E2 longest miss versus E0 is identical for O; S has zero shorter and one longer track.",
+    "Do not identify unreliable cross-frame correspondence as the established root cause; the common adaptation failure does not erase this candidate negative result."
+  ],
+  "report_text_review": {
+    "status": "PASS",
+    "closeout_sha256": "51fbeb57367bc153ec0df14f469ec7790756ec446dc7c1565a82ae400adcebd6",
+    "tables": "All two-table numeric entries and stable646 state partitions match the three source CSVs.",
+    "decisions": "E0 remains a failed-budget shared-supervision control; E1/E2 stopped within tested scope. Fixed S strong control preserved.",
+    "mechanistic_boundary": "Does not identify unreliable cross-frame correspondence as the root cause or reject all temporal methods.",
+    "minor_wording_note": "Resolved in final CLOSEOUT.md: paired table values are O/S."
+  }
+}

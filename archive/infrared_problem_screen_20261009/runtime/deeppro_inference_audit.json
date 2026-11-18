@@ -1,0 +1,53 @@
+{
+  "commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "repo": "https://github.com/TinaLRJ/DeepPro",
+  "verification": "CPU metadata load only; weights_only=True with audited numpy scalar/dtype allowlist. Model module import only. No model instantiation or GPU forward.",
+  "checkpoints": [
+    {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/deeppro_audit_source/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+      "sha256": "e2ad2d5c9b39c3d428f57d8d50edefd6a09f8b45dff53fb9d31134272e5cc83e",
+      "bytes": 937131,
+      "state_keys": 100,
+      "QK_heads": 8,
+      "temporal_weight_shape": [
+        40,
+        40
+      ],
+      "epoch": 30,
+      "unsafe_globals_static": [
+        "numpy.core.multiarray.scalar",
+        "numpy.dtype"
+      ]
+    },
+    {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/runtime/deeppro_audit_source/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+      "sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+      "bytes": 937131,
+      "state_keys": 100,
+      "QK_heads": 8,
+      "temporal_weight_shape": [
+        40,
+        40
+      ],
+      "epoch": 21,
+      "unsafe_globals_static": [
+        "numpy.core.multiarray.scalar",
+        "numpy.dtype"
+      ]
+    }
+  ],
+  "files": {
+    "train.py": "51d77e855ee798ee5b6371a130f2cab5b823ffe22a192ea52383d879f95f988d",
+    "test.py": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b",
+    "data_utils/TrainDataLoader.py": "ac94cf5bbfa2a4bcb76f5eeec0e047b999c76d1423afeb1a54136bf535ffa3d4",
+    "data_utils/TestDataLoader.py": "03210e84ac9acfc3fd85ef5bcd2c787cfc126e2580e622fca9c3297c3e1c022e",
+    "log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "networks/layers/basic.py": "000d204655d38ba503a2ad01fc2544fd5136c95dc3fda48dc95f5d059e7827c7",
+    "networks/layers/TPro.py": "90e35e9578ae4e167de5277c2bd88a004dd1ce3bc38feacc8f80200e7aefce87",
+    "networks/losses/HPM_loss_MultiFrame.py": "9c7b4bb994ffec7c324e59f2971eb27380d704ee2b347068aeb731dcfa064d0a",
+    "networks/losses/HAM_loss_MultiFrame.py": "4a98c9ceeecc273068381262cf0a0688aa87b72f3b183a237da16e547f0de889",
+    "networks/models/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "networks/models/DeepPro.py": "ebd710ca3262bf6cace8d7f3a435e2761146c928c70c6d1fecaa5cc6d2a03473"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "condition": "R0",
+  "gpu": 2,
+  "status": "FAILED",
+  "inferences": [
+    {
+      "sequence": "DJI_0026_2",
+      "exit_code": 1
+    }
+  ]
+}

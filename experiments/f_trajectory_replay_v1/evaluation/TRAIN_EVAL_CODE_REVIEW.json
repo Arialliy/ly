@@ -1,0 +1,35 @@
+{
+  "status": "PASS_STATIC_REVIEW",
+  "review_scope": "Independent read-only review of training full-frame inference/scoring, not a claim of completed model runs.",
+  "reviewer": "dev_eval_review",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/code/train_infer.py": "c1eb431e6ffa5365513073dd6619409818a9842638e7b60ee63287551dbf474e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/code/train_evaluate.py": "ae92ec03758daf9ae5d058bdcd1b3b0a30be3d45d73ae973dbcbea591b334aa1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/f_trajectory_replay_v1/TRAIN_EVAL_PLAN.json": "8b1b927de02c333e10845b3d2a3ce18f32095702d1514ea14a6f9722e79bae1a"
+  },
+  "checks": {
+    "original_gt_data_and_match_frame_direct_reuse": true,
+    "O_S_fixed_five_window_probability_max_800_frames_each": true,
+    "known_weak_2066_vs_39_track_all_6197_frames_distinguished": true,
+    "all_other_matching_valid_gt_included_in_retention": true,
+    "all_full_frames_in_background_costs_and_per_frame_denominator": true,
+    "old_4015_budget_not_applied_to_training_range": true,
+    "continuous_local_and_source_frames_required_gap_splits": true,
+    "F_init_miss_segments_and_isolated_010_included": true,
+    "endpoint_2816_seed46_run_snapshot_sha_schedule_sha_checked": true,
+    "score_and_summary_frozen_sources_checked": true,
+    "score_record_condition_sequence_arrangement_threshold_checked": true,
+    "no_label_input_to_model": true,
+    "repeated_tiling_numerical_probe_removed_verified_path_reused": true
+  },
+  "resolved_findings": [
+    "Added seed46 and completed RUN snapshot hash binding for trained endpoints.",
+    "Added frozen file, runtime, annotation, and tiling provenance checks for scoring.",
+    "Added score-record condition/sequence/threshold/plans checks in summary."
+  ],
+  "limitations": [
+    "CPU plan check establishes valid memberships/range; endpoint model execution remains pending.",
+    "39 tracks are source-scoped training identities, not independent test trajectories.",
+    "Historical low-response membership under crop contexts does not imply full-frame release detection failure."
+  ]
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "sequence": "DJI_0028_2",
+    "selected_track": 3800006,
+    "primary_threshold": 0.5,
+    "unambiguous_point_match_flips": 16,
+    "flip_categories": {
+      "boxmax_crosses_threshold": {
+        "pairs": 11,
+        "geometric_centroid_presence_flips": 11,
+        "weighted_centroid_presence_flips": 11,
+        "either_box_has_probability_exactly_one": 0
+      },
+      "boxmax_both_at_or_above_threshold": {
+        "pairs": 5,
+        "geometric_centroid_presence_flips": 4,
+        "weighted_centroid_presence_flips": 4,
+        "either_box_has_probability_exactly_one": 5
+      }
+    },
+    "selected_track_boxmax_proxies": [
+      {
+        "threshold": 0.1,
+        "gt_frames": 160,
+        "primary_point_matches": 154,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 160,
+        "proxy_positive_but_point_unmatched_frames": 6
+      },
+      {
+        "threshold": 0.5,
+        "gt_frames": 160,
+        "primary_point_matches": 154,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 160,
+        "proxy_positive_but_point_unmatched_frames": 6
+      },
+      {
+        "threshold": 0.9,
+        "gt_frames": 160,
+        "primary_point_matches": 154,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 160,
+        "proxy_positive_but_point_unmatched_frames": 6
+      }
+    ],
+    "status": "SUPPLEMENTARY_REPRESENTATION_SENSITIVITY_NOT_REPLACEMENT_METRIC",
+    "code_sha256": "1f9626551713ad87d26161c41fa5cea83df30b7b6b6d363d03d391bccae89244",
+    "limits": [
+      "Peak rules and all original primary results remain unchanged.",
+      "Centroid presence is a representation sensitivity on preselected flip cases, not a new full benchmark metric.",
+      "GT boxes in the retained pairs do not overlap other GT boxes, so a point cannot be assigned to both this GT and another GT.",
+      "Positive box max can originate from another response, merged blob, or annotation mismatch; it is not detection success.",
+      "Probability exactly one shows sigmoid saturation at FP32 output; it does not prove saturation caused the match flip.",
+      "Window contrast changes context, slots and padding together; the cause is not isolated."
+    ]
+  },
+  {
+    "sequence": "DJI_0028_4",
+    "selected_track": 4400005,
+    "primary_threshold": 0.5,
+    "unambiguous_point_match_flips": 2,
+    "flip_categories": {
+      "boxmax_crosses_threshold": {
+        "pairs": 1,
+        "geometric_centroid_presence_flips": 1,
+        "weighted_centroid_presence_flips": 1,
+        "either_box_has_probability_exactly_one": 0
+      },
+      "boxmax_both_at_or_above_threshold": {
+        "pairs": 1,
+        "geometric_centroid_presence_flips": 0,
+        "weighted_centroid_presence_flips": 0,
+        "either_box_has_probability_exactly_one": 1
+      }
+    },
+    "selected_track_boxmax_proxies": [
+      {
+        "threshold": 0.1,
+        "gt_frames": 160,
+        "primary_point_matches": 158,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 146,
+        "proxy_positive_but_point_unmatched_frames": 2
+      },
+      {
+        "threshold": 0.5,
+        "gt_frames": 160,
+        "primary_point_matches": 158,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 146,
+        "proxy_positive_but_point_unmatched_frames": 2
+      },
+      {
+        "threshold": 0.9,
+        "gt_frames": 160,
+        "primary_point_matches": 158,
+        "boxmax_at_or_above_threshold_frames": 160,
+        "boxmax_exactly_one_frames": 146,
+        "proxy_positive_but_point_unmatched_frames": 2
+      }
+    ],
+    "status": "SUPPLEMENTARY_REPRESENTATION_SENSITIVITY_NOT_REPLACEMENT_METRIC",
+    "code_sha256": "1f9626551713ad87d26161c41fa5cea83df30b7b6b6d363d03d391bccae89244",
+    "limits": [
+      "Peak rules and all original primary results remain unchanged.",
+      "Centroid presence is a representation sensitivity on preselected flip cases, not a new full benchmark metric.",
+      "GT boxes in the retained pairs do not overlap other GT boxes, so a point cannot be assigned to both this GT and another GT.",
+      "Positive box max can originate from another response, merged blob, or annotation mismatch; it is not detection success.",
+      "Probability exactly one shows sigmoid saturation at FP32 output; it does not prove saturation caused the match flip.",
+      "Window contrast changes context, slots and padding together; the cause is not isolated."
+    ]
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "selected_track": 4801536,
+    "primary_threshold": 0.5,
+    "unambiguous_point_match_flips": 56,
+    "flip_categories": {
+      "boxmax_crosses_threshold": {
+        "pairs": 54,
+        "geometric_centroid_presence_flips": 53,
+        "weighted_centroid_presence_flips": 53,
+        "either_box_has_probability_exactly_one": 0
+      },
+      "boxmax_both_at_or_above_threshold": {
+        "pairs": 2,
+        "geometric_centroid_presence_flips": 2,
+        "weighted_centroid_presence_flips": 2,
+        "either_box_has_probability_exactly_one": 1
+      }
+    },
+    "selected_track_boxmax_proxies": [
+      {
+        "threshold": 0.1,
+        "gt_frames": 160,
+        "primary_point_matches": 0,
+        "boxmax_at_or_above_threshold_frames": 26,
+        "boxmax_exactly_one_frames": 0,
+        "proxy_positive_but_point_unmatched_frames": 26
+      },
+      {
+        "threshold": 0.5,
+        "gt_frames": 160,
+        "primary_point_matches": 0,
+        "boxmax_at_or_above_threshold_frames": 23,
+        "boxmax_exactly_one_frames": 0,
+        "proxy_positive_but_point_unmatched_frames": 23
+      },
+      {
+        "threshold": 0.9,
+        "gt_frames": 160,
+        "primary_point_matches": 0,
+        "boxmax_at_or_above_threshold_frames": 21,
+        "boxmax_exactly_one_frames": 0,
+        "proxy_positive_but_point_unmatched_frames": 21
+      }
+    ],
+    "status": "SUPPLEMENTARY_REPRESENTATION_SENSITIVITY_NOT_REPLACEMENT_METRIC",
+    "code_sha256": "1f9626551713ad87d26161c41fa5cea83df30b7b6b6d363d03d391bccae89244",
+    "limits": [
+      "Peak rules and all original primary results remain unchanged.",
+      "Centroid presence is a representation sensitivity on preselected flip cases, not a new full benchmark metric.",
+      "GT boxes in the retained pairs do not overlap other GT boxes, so a point cannot be assigned to both this GT and another GT.",
+      "Positive box max can originate from another response, merged blob, or annotation mismatch; it is not detection success.",
+      "Probability exactly one shows sigmoid saturation at FP32 output; it does not prove saturation caused the match flip.",
+      "Window contrast changes context, slots and padding together; the cause is not isolated."
+    ]
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "selected_track": 4621500,
+    "primary_threshold": 0.5,
+    "unambiguous_point_match_flips": 10,
+    "flip_categories": {
+      "boxmax_crosses_threshold": {
+        "pairs": 10,
+        "geometric_centroid_presence_flips": 10,
+        "weighted_centroid_presence_flips": 10,
+        "either_box_has_probability_exactly_one": 0
+      },
+      "boxmax_both_at_or_above_threshold": {
+        "pairs": 0,
+        "geometric_centroid_presence_flips": 0,
+        "weighted_centroid_presence_flips": 0,
+        "either_box_has_probability_exactly_one": 0
+      }
+    },
+    "selected_track_boxmax_proxies": [
+      {
+        "threshold": 0.1,
+        "gt_frames": 160,
+        "primary_point_matches": 17,
+        "boxmax_at_or_above_threshold_frames": 17,
+        "boxmax_exactly_one_frames": 1,
+        "proxy_positive_but_point_unmatched_frames": 0
+      },
+      {
+        "threshold": 0.5,
+        "gt_frames": 160,
+        "primary_point_matches": 17,
+        "boxmax_at_or_above_threshold_frames": 17,
+        "boxmax_exactly_one_frames": 1,
+        "proxy_positive_but_point_unmatched_frames": 0
+      },
+      {
+        "threshold": 0.9,
+        "gt_frames": 160,
+        "primary_point_matches": 17,
+        "boxmax_at_or_above_threshold_frames": 17,
+        "boxmax_exactly_one_frames": 1,
+        "proxy_positive_but_point_unmatched_frames": 0
+      }
+    ],
+    "status": "SUPPLEMENTARY_REPRESENTATION_SENSITIVITY_NOT_REPLACEMENT_METRIC",
+    "code_sha256": "1f9626551713ad87d26161c41fa5cea83df30b7b6b6d363d03d391bccae89244",
+    "limits": [
+      "Peak rules and all original primary results remain unchanged.",
+      "Centroid presence is a representation sensitivity on preselected flip cases, not a new full benchmark metric.",
+      "GT boxes in the retained pairs do not overlap other GT boxes, so a point cannot be assigned to both this GT and another GT.",
+      "Positive box max can originate from another response, merged blob, or annotation mismatch; it is not detection success.",
+      "Probability exactly one shows sigmoid saturation at FP32 output; it does not prove saturation caused the match flip.",
+      "Window contrast changes context, slots and padding together; the cause is not isolated."
+    ]
+  }
+]

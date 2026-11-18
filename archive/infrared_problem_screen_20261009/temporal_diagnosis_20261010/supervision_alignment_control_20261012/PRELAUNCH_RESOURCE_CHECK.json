@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-11T16:33:10.970383+00:00",
+  "first_requested_gpu": 0,
+  "used_mib": 4877,
+  "result": "correctly_refused_before_docker_launch_no_training",
+  "available_gpu_next": 3,
+  "note": "Other workloads appeared since earlier resource preflight; no existing process was stopped."
+}

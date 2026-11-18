@@ -1,0 +1,544 @@
+{
+  "selection": "Earliest strong-flip frame per track, all 18 track IDs; plus predetermined opposite-response frames17/45",
+  "rendering": "JPEG L pixels unmodified, no histogram normalization, nearest-neighbor zoom; box overlays shown alongside original raw crops on contact sheets",
+  "first_flip": [
+    {
+      "panel": 1,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0028_4",
+      "track_id": "4400003",
+      "category": "ship",
+      "local_frame": 81,
+      "source_frame": 366,
+      "bbox_xywh": [
+        131.0,
+        471.0,
+        10.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        104,
+        442,
+        168,
+        506
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/VT-Tiny-MOT/train2017/DJI_0028_4/01/00366.jpg",
+      "original_sha256": "5e36882d59feaa7f17e2b6b820ca952a5b5ff6deaf37dccf7c299b5d49ec5cb3",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 2,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4800531",
+      "category": "car",
+      "local_frame": 61,
+      "source_frame": 124,
+      "bbox_xywh": [
+        630.0,
+        318.0,
+        10.0,
+        8.0
+      ],
+      "crop_xyxy": [
+        576,
+        290,
+        640,
+        354
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00124.jpg",
+      "original_sha256": "e700844be17a3dd9c07da93cdedd9d32ce78bd8bdbdf9b1d5597148995fbeeb9",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 3,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4801009",
+      "category": "cyclist",
+      "local_frame": 17,
+      "source_frame": 80,
+      "bbox_xywh": [
+        333.0,
+        452.0,
+        8.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        305,
+        423,
+        369,
+        487
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00080.jpg",
+      "original_sha256": "79ca183b3fe9f93349a6340d23959d8208568558399208bdcae69189024407ed",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 4,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4801517",
+      "category": "pedestrian",
+      "local_frame": 40,
+      "source_frame": 103,
+      "bbox_xywh": [
+        355.0,
+        449.0,
+        4.0,
+        8.0
+      ],
+      "crop_xyxy": [
+        325,
+        421,
+        389,
+        485
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00103.jpg",
+      "original_sha256": "fc072f142ac8b01df1a2249b2058c042886165e9017fdc49c018c2c9a0ad836e",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 5,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4801583",
+      "category": "pedestrian",
+      "local_frame": 100,
+      "source_frame": 163,
+      "bbox_xywh": [
+        362.0,
+        444.0,
+        5.0,
+        12.0
+      ],
+      "crop_xyxy": [
+        332,
+        418,
+        396,
+        482
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00163.jpg",
+      "original_sha256": "25ffba518e088454dc14900b03b577c53a55be2cd030323404f6a2ea2c4ea1ca",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 6,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4803451",
+      "category": "cyclist",
+      "local_frame": 102,
+      "source_frame": 165,
+      "bbox_xywh": [
+        65.0,
+        463.0,
+        8.0,
+        14.0
+      ],
+      "crop_xyxy": [
+        37,
+        438,
+        101,
+        502
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00165.jpg",
+      "original_sha256": "5bfd260c22cf1c8056f4bf6fe74d2d60f4bcba4b678377b951a61a64454501c9",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 7,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4920504",
+      "category": "car",
+      "local_frame": 80,
+      "source_frame": 143,
+      "bbox_xywh": [
+        0.0,
+        343.0,
+        10.0,
+        13.0
+      ],
+      "crop_xyxy": [
+        0,
+        317,
+        64,
+        381
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00143.jpg",
+      "original_sha256": "b1c2656e80a1bb4ca4418a62317e17ab108f6ec81d220f28627c55a05ac2e7f2",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 8,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4920505",
+      "category": "car",
+      "local_frame": 46,
+      "source_frame": 109,
+      "bbox_xywh": [
+        0.0,
+        352.0,
+        9.0,
+        11.0
+      ],
+      "crop_xyxy": [
+        0,
+        325,
+        64,
+        389
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00109.jpg",
+      "original_sha256": "58bc3a5221321f3f40a4a2212c56718cde361cb675380c2fc93eaabd3456ebc3",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 9,
+      "contact_sheet": "visibility_first_flip_page1.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4921018",
+      "category": "cyclist",
+      "local_frame": 63,
+      "source_frame": 126,
+      "bbox_xywh": [
+        601.0,
+        420.0,
+        11.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        574,
+        391,
+        638,
+        455
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00126.jpg",
+      "original_sha256": "e7d7729d63483839f6e14317b9952cc3e0b9dca9db6b6f4ef9b661fc45c2d055",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 10,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4923712",
+      "category": "pedestrian",
+      "local_frame": 135,
+      "source_frame": 198,
+      "bbox_xywh": [
+        14.0,
+        469.0,
+        9.0,
+        13.0
+      ],
+      "crop_xyxy": [
+        0,
+        443,
+        64,
+        507
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00198.jpg",
+      "original_sha256": "1f0f6bf0e0d4673eacba25bf0c98e9ad519b889a98d0acbe91aae6acb2b22ed1",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 11,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4923713",
+      "category": "pedestrian",
+      "local_frame": 134,
+      "source_frame": 197,
+      "bbox_xywh": [
+        28.0,
+        461.0,
+        9.0,
+        15.0
+      ],
+      "crop_xyxy": [
+        0,
+        436,
+        64,
+        500
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00197.jpg",
+      "original_sha256": "26fe8e13ffe3a5fd07e01661f0cc460100208da4830a5eb0638c78f420231146",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 12,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0032_5",
+      "track_id": "4923951",
+      "category": "pedestrian",
+      "local_frame": 110,
+      "source_frame": 173,
+      "bbox_xywh": [
+        59.0,
+        463.0,
+        10.0,
+        14.0
+      ],
+      "crop_xyxy": [
+        32,
+        438,
+        96,
+        502
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/VT-Tiny-MOT/train2017/DJI_0032_5/01/00173.jpg",
+      "original_sha256": "a81fef7ee540a609e58367324228008eab00cac4b19e707facb2857ad250909c",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 13,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4500503",
+      "category": "car",
+      "local_frame": 17,
+      "source_frame": 17,
+      "bbox_xywh": [
+        377.0,
+        33.0,
+        7.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        348,
+        4,
+        412,
+        68
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00017.jpg",
+      "original_sha256": "cf2dd3dfe35f4a41f6d9fa9353cf2ab1ae5450f11e1e92f444605c87f749cd15",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 14,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4501000",
+      "category": "cyclist",
+      "local_frame": 44,
+      "source_frame": 44,
+      "bbox_xywh": [
+        368.0,
+        411.0,
+        10.0,
+        8.0
+      ],
+      "crop_xyxy": [
+        341,
+        383,
+        405,
+        447
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00044.jpg",
+      "original_sha256": "492845c1291f8919a7b4bec12f6e27744abd2d71163b39e7ad02b8e4817fe709",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 15,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4501001",
+      "category": "cyclist",
+      "local_frame": 72,
+      "source_frame": 72,
+      "bbox_xywh": [
+        169.0,
+        417.0,
+        10.0,
+        8.0
+      ],
+      "crop_xyxy": [
+        142,
+        389,
+        206,
+        453
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00072.jpg",
+      "original_sha256": "bc539e705b111f4e35ec1cc8e9a74a0a2e31c50674c7c62a6f5099077d894682",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 16,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4501002",
+      "category": "cyclist",
+      "local_frame": 12,
+      "source_frame": 12,
+      "bbox_xywh": [
+        280.0,
+        419.0,
+        12.0,
+        8.0
+      ],
+      "crop_xyxy": [
+        254,
+        391,
+        318,
+        455
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00012.jpg",
+      "original_sha256": "7d123e6cd736446bfb8363e0f5b6d44e50d4f4adc24fd4406ec1fea89303ce24",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 17,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4501003",
+      "category": "cyclist",
+      "local_frame": 61,
+      "source_frame": 61,
+      "bbox_xywh": [
+        363.0,
+        418.0,
+        12.0,
+        9.0
+      ],
+      "crop_xyxy": [
+        337,
+        390,
+        401,
+        454
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00061.jpg",
+      "original_sha256": "d707a97a10ce996edaf8252fb711e7ab4d8d75eb2c55777e7d2edfa3b04c2755",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    },
+    {
+      "panel": 18,
+      "contact_sheet": "visibility_first_flip_page2.png",
+      "sequence": "DJI_0047_3",
+      "track_id": "4621500",
+      "category": "pedestrian",
+      "local_frame": 12,
+      "source_frame": 12,
+      "bbox_xywh": [
+        158.0,
+        489.0,
+        5.0,
+        9.0
+      ],
+      "crop_xyxy": [
+        128,
+        448,
+        192,
+        512
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00012.jpg",
+      "original_sha256": "7d123e6cd736446bfb8363e0f5b6d44e50d4f4adc24fd4406ec1fea89303ce24",
+      "selection": "First strong-flip local frame for this track; numerical ID ascending within sequence."
+    }
+  ],
+  "opposite_pairs": [
+    {
+      "figure": "opposite_frame017_whole_and_crops.png",
+      "sequence": "DJI_0047_3",
+      "local_frame": 17,
+      "source_frame": 17,
+      "track_id": "4500503",
+      "category": "car",
+      "bbox_xywh": [
+        377.0,
+        33.0,
+        7.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        348,
+        4,
+        412,
+        68
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00017.jpg",
+      "original_sha256": "cf2dd3dfe35f4a41f6d9fa9353cf2ab1ae5450f11e1e92f444605c87f749cd15",
+      "a_start": 0,
+      "b_start": 12,
+      "a_boxmax": 0.050307948142290115,
+      "b_boxmax": 0.9900866150856018
+    },
+    {
+      "figure": "opposite_frame017_whole_and_crops.png",
+      "sequence": "DJI_0047_3",
+      "local_frame": 17,
+      "source_frame": 17,
+      "track_id": "4621500",
+      "category": "pedestrian",
+      "bbox_xywh": [
+        161.0,
+        491.0,
+        5.0,
+        9.0
+      ],
+      "crop_xyxy": [
+        131,
+        448,
+        195,
+        512
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00017.jpg",
+      "original_sha256": "cf2dd3dfe35f4a41f6d9fa9353cf2ab1ae5450f11e1e92f444605c87f749cd15",
+      "a_start": 0,
+      "b_start": 12,
+      "a_boxmax": 0.9998302459716797,
+      "b_boxmax": 2.2900323983776616e-06
+    },
+    {
+      "figure": "opposite_frame045_whole_and_crops.png",
+      "sequence": "DJI_0047_3",
+      "local_frame": 45,
+      "source_frame": 45,
+      "track_id": "4500503",
+      "category": "car",
+      "bbox_xywh": [
+        395.0,
+        39.0,
+        6.0,
+        7.0
+      ],
+      "crop_xyxy": [
+        366,
+        10,
+        430,
+        74
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00045.jpg",
+      "original_sha256": "02c256686d3aebb88824c6b767577735e48380bec4576a0a4837c3f59ac7c0bd",
+      "a_start": 12,
+      "b_start": 36,
+      "a_boxmax": 1.0132290526598808e-06,
+      "b_boxmax": 0.9892921447753906
+    },
+    {
+      "figure": "opposite_frame045_whole_and_crops.png",
+      "sequence": "DJI_0047_3",
+      "local_frame": 45,
+      "source_frame": 45,
+      "track_id": "4501000",
+      "category": "cyclist",
+      "bbox_xywh": [
+        366.0,
+        411.0,
+        11.0,
+        9.0
+      ],
+      "crop_xyxy": [
+        339,
+        383,
+        403,
+        447
+      ],
+      "original_image": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/VT-Tiny-MOT/train2017/DJI_0047_3/01/00045.jpg",
+      "original_sha256": "02c256686d3aebb88824c6b767577735e48380bec4576a0a4837c3f59ac7c0bd",
+      "a_start": 12,
+      "b_start": 36,
+      "a_boxmax": 0.9974976181983948,
+      "b_boxmax": 0.00029635976534336805
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "tests": 47,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "torch": "2.7.0+cu128",
+  "python": "3.11.12",
+  "success": true,
+  "source_unchanged_during_check": true,
+  "status": "PASS",
+  "source_sha256": {
+    "source_relational_reducer.py": "e21bdfaa2cd3ce56728e95f10eab66da48404591da7fa3c256ebfc287180366b",
+    "experiments/m1_source_relations_v1/check.py": "f7baeb61467cb016eca6a359d29a543d4f7408ad9fdc24b6b7bcc5dd4e42b2f6",
+    "experiments/m1_source_relations_v1/code/adapter.py": "6f849da4db684699dc41a1d14a9d96afd0169621d257dbf603c72c09b9e5b8e4",
+    "experiments/m1_source_relations_v1/code/pda.py": "446eed820011c3ef5e8b73eca732ece846db679a67442f609791ee94028efc1c",
+    "experiments/m1_source_relations_v1/code/runtime.py": "dc69adeb547513f64cedbc9a60135d923c26cef20a6554c4d35d14648802d91a",
+    "experiments/m1_source_relations_v1/tests/test_adapter.py": "c813474a46ca1a0dcb83e94332afc52ce4009f9267d947462370722e26be88ab",
+    "experiments/m1_source_relations_v1/tests/test_baseline_integration.py": "7139cd8a124be5b7cf08093ac2f5b98bd3863fecfc3ed4fe0cbb2ab228390904",
+    "experiments/m1_source_relations_v1/tests/test_factory.py": "2e30aa9e4c0d760bddb0f4ceb817d7ee85e4280cdf12119d70addffde31e2863",
+    "experiments/m1_source_relations_v1/tests/test_reducer.py": "19a2e9be9732c957aa8a1a653b973153dcd2bee7a271f04cfa5177ea5e225b92"
+  },
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "training_started": false,
+  "GPU_used": false,
+  "native_PDA_forward_verified": false,
+  "exit_code": 0
+}

@@ -1,0 +1,213 @@
+{
+  "status": "complete",
+  "pid": 3100327,
+  "created_utc": "2026-10-09T20:15:23.881968+00:00",
+  "split": "calibration_only",
+  "sequences": [
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "pending_variants": [],
+  "gpu_assignments": {},
+  "training_verified": {
+    "paired_mean": {
+      "gpu": 0,
+      "container": {
+        "id": "1bb3dae531df2d37cb5c6206cb29c22a51bfdb1948b267fba3c2824d6713debc",
+        "name": "deeppro_stage1_train_paired_mean",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-09T20:09:48.347633661Z",
+          "FinishedAt": "2026-10-09T20:13:59.716805789Z"
+        },
+        "observed_utc": "2026-10-09T20:15:23.938553+00:00"
+      },
+      "run_sha256": "f30b1aa88b1737d89125b12fb1e41054f0defc8dfd9267fc762e4396f946f4ea",
+      "checkpoint_sha256": "26ecb55cab7d9759991a03a97c809a2e4f6937a3a48462b4913979c24c4784c3",
+      "final_step": 512,
+      "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+      "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab"
+    },
+    "paired_max": {
+      "gpu": 1,
+      "container": {
+        "id": "29587ada80f96f561eeca43c1c41de34ab11581bbaba87f0d0b2fbcc7e6ac0fc",
+        "name": "deeppro_stage1_train_paired_max",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-09T20:09:58.572343913Z",
+          "FinishedAt": "2026-10-09T20:14:05.084644075Z"
+        },
+        "observed_utc": "2026-10-09T20:15:23.973949+00:00"
+      },
+      "run_sha256": "444d04f40b355d3fe51069c1f1243e172a3a3b3b0e6b614ac4df12b4e96f2819",
+      "checkpoint_sha256": "b85a8e4504a774baeca17e8f80c66322f6b132cc9a04445b47efce820e359170",
+      "final_step": 512,
+      "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+      "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab"
+    },
+    "ohem": {
+      "gpu": 2,
+      "container": {
+        "id": "df34e1d16c57b29795a3fb0a1cc8318862c5e5b7523c29bb7ace97967188b807",
+        "name": "deeppro_stage1_train_ohem",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-09T20:10:08.086711153Z",
+          "FinishedAt": "2026-10-09T20:14:07.420648802Z"
+        },
+        "observed_utc": "2026-10-09T20:15:23.998605+00:00"
+      },
+      "run_sha256": "7abd823f5317471cf9c0dc0dd3e5901f620897c3254a8f2961971a0350a62f32",
+      "checkpoint_sha256": "44b6928062ae2423009854cd7b3a7f868d3a1acb5f63236c28586f1d03c7012b",
+      "final_step": 512,
+      "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+      "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab"
+    },
+    "random_pair_max": {
+      "gpu": 3,
+      "container": {
+        "id": "a5f2dabf3a8d2c28860bd8784c7d7cf8c7257528b4067bea171bac9c2a0fcc80",
+        "name": "deeppro_stage1_train_random_pair_max",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-10-09T20:10:08.552129204Z",
+          "FinishedAt": "2026-10-09T20:14:05.009059595Z"
+        },
+        "observed_utc": "2026-10-09T20:15:24.033878+00:00"
+      },
+      "run_sha256": "0c90753169cbcf720ef608ed18b6dd9b8a5131dd0d09072a0ae130033cfa9a77",
+      "checkpoint_sha256": "29b82dae9c4d7e4442ab3644be121451d0919fd995e38947987d92e053ce172f",
+      "final_step": 512,
+      "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+      "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab"
+    }
+  },
+  "active_infer": {},
+  "active_score": [],
+  "pending_score": [],
+  "inference_completed": [
+    [
+      "paired_mean",
+      "DJI_0026_2"
+    ],
+    [
+      "paired_max",
+      "DJI_0026_2"
+    ],
+    [
+      "ohem",
+      "DJI_0026_2"
+    ],
+    [
+      "official",
+      "DJI_0026_2"
+    ],
+    [
+      "paired_max",
+      "DJI_0067_2"
+    ],
+    [
+      "paired_mean",
+      "DJI_0067_2"
+    ],
+    [
+      "ohem",
+      "DJI_0067_2"
+    ],
+    [
+      "official",
+      "DJI_0067_2"
+    ],
+    [
+      "random_pair_max",
+      "DJI_0026_2"
+    ],
+    [
+      "random_pair_max",
+      "DJI_0067_2"
+    ]
+  ],
+  "scoring_completed": [
+    [
+      "official",
+      "DJI_0026_2"
+    ],
+    [
+      "paired_mean",
+      "DJI_0026_2"
+    ],
+    [
+      "paired_max",
+      "DJI_0026_2"
+    ],
+    [
+      "ohem",
+      "DJI_0026_2"
+    ],
+    [
+      "official",
+      "DJI_0067_2"
+    ],
+    [
+      "paired_max",
+      "DJI_0067_2"
+    ],
+    [
+      "paired_mean",
+      "DJI_0067_2"
+    ],
+    [
+      "ohem",
+      "DJI_0067_2"
+    ],
+    [
+      "random_pair_max",
+      "DJI_0026_2"
+    ],
+    [
+      "random_pair_max",
+      "DJI_0067_2"
+    ]
+  ],
+  "frozen_sources": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/infer_pilot.py": "9cf91749b60f104ff87fae63232eac704bbb20b6d0893048abb50a5043a551c4",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/score_pilot.py": "a94b312d59abe746fa4b193ea31da1f76ef62ef3e1f27bd32e027085d93f96c8"
+  },
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "last_poll_utc": "2026-10-09T20:20:02.137020+00:00",
+  "completed_utc": "2026-10-09T20:20:02.137030+00:00"
+}

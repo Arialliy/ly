@@ -1,0 +1,1194 @@
+{
+  "sample_id": 40,
+  "selection_reasons": [
+    "seed46_uniform_sample_without_replacement"
+  ],
+  "raw_source_relative_path": "data/stage1/DJI_0030_9/raw_frames.npy",
+  "crop_xyxy_exclusive": [
+    126,
+    220,
+    191,
+    285
+  ],
+  "raw_shape": [
+    160,
+    512,
+    640
+  ],
+  "display_grayscale_range": [
+    0,
+    255
+  ],
+  "crop_resampling": "nearest",
+  "heatmap_source": "heatmaps/0040.npy",
+  "heatmap_sha256": "4075ff6348cd2ac33d97a1a06e984389cecc7ae3b0ca77b3b9678972fe601037",
+  "heatmap_frame_index": 3,
+  "heatmap_fixed_color_range": [
+    -1,
+    1
+  ],
+  "frame_status": [
+    {
+      "frame": 40,
+      "t": 0,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 41,
+      "t": 1,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 42,
+      "t": 2,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 43,
+      "t": 3,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 44,
+      "t": 4,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 45,
+      "t": 5,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 46,
+      "t": 6,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 47,
+      "t": 7,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    }
+  ],
+  "original_alternative_path": {
+    "score": 4.413878440856934,
+    "gap_per_frame": 0.29475027322769165,
+    "hits_tol1": 6,
+    "hits_tol2": 7,
+    "positions": [
+      [
+        157,
+        252
+      ],
+      [
+        151,
+        248
+      ],
+      [
+        157,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ]
+    ],
+    "branch_frame": 1,
+    "branch_type": "same_target"
+  },
+  "display_candidate": {
+    "score": 4.413878440856934,
+    "gap_per_frame": 0.29475027322769165,
+    "hits_tol1": 6,
+    "hits_tol2": 7,
+    "positions": [
+      [
+        157,
+        252
+      ],
+      [
+        151,
+        248
+      ],
+      [
+        157,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ]
+    ],
+    "branch_frame": 1,
+    "branch_type": "same_target"
+  },
+  "display_candidate_selection_reason": "Original stored alternative differs from the best path; displayed unchanged.",
+  "display_candidate_selected_post_hoc_using_gt": false,
+  "display_candidate_is_gt_constrained_oracle": false,
+  "display_gt_boxes": "original, no dilation; evaluation tolerances are separate",
+  "figure": "0040_DJI_0030_9_f047.png",
+  "sample": {
+    "anchor": [
+      158,
+      252
+    ],
+    "template_std": 49.505864966254286,
+    "response_stds": [
+      0.13052253425121307,
+      0.12691524624824524,
+      0.1276252418756485,
+      0.13018371164798737,
+      0.12979210913181305,
+      0.12692302465438843,
+      0.12514281272888184
+    ],
+    "numerically_valid": true,
+    "separation_radius": 8,
+    "absolute_scr": 9.422042670541455,
+    "signed_scr": 9.422042670541455,
+    "ring_std": 4.022021327088601,
+    "weak_proxy": false,
+    "roi_gt_support": true,
+    "graph_gt_support": true,
+    "best_path_hits_tol1": 7,
+    "best_path_hits_tol2": 7,
+    "best_path_good_tol1": true,
+    "best_path_good_tol2": true,
+    "gt_path_gap_per_frame": 0.0,
+    "wrong_path_gap_per_frame": null,
+    "competition": {
+      "0.02": false,
+      "0.05": false,
+      "0.1": false
+    },
+    "lk_history_hits_tol2": 7,
+    "lk_all_valid": true,
+    "explicit_candidate_competition": false,
+    "lk_history_hits_tol1": 7,
+    "lk_path_good_tol1": true,
+    "lk_path_good_tol2": true,
+    "independent": {
+      "raw9": {
+        "history_hits_tol1": 7,
+        "history_hits_tol2": 7,
+        "previous_hit_tol1": true,
+        "previous_hit_tol2": true,
+        "previous_top6_contains_gt": true,
+        "previous_gt_wrong_gap": 0.3406141400337219,
+        "positions": [
+          [
+            157,
+            252
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ]
+      },
+      "rich17": {
+        "history_hits_tol1": 7,
+        "history_hits_tol2": 7,
+        "previous_hit_tol1": true,
+        "previous_hit_tol2": true,
+        "previous_top6_contains_gt": true,
+        "previous_gt_wrong_gap": 0.5605122447013855,
+        "positions": [
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ]
+      }
+    },
+    "best_path": [
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ]
+    ],
+    "gt_compatible_oracle_path": [
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ],
+      [
+        158,
+        252
+      ]
+    ],
+    "gt_boxes": [
+      [
+        153,
+        248,
+        11,
+        9
+      ],
+      [
+        153,
+        247,
+        11,
+        9
+      ],
+      [
+        153,
+        247,
+        11,
+        9
+      ],
+      [
+        153,
+        247,
+        11,
+        10
+      ],
+      [
+        153,
+        248,
+        11,
+        9
+      ],
+      [
+        153,
+        247,
+        11,
+        10
+      ],
+      [
+        153,
+        248,
+        11,
+        9
+      ],
+      [
+        153,
+        247,
+        11,
+        9
+      ]
+    ],
+    "lk_path": [
+      [
+        157.46258544921875,
+        252.47560119628906
+      ],
+      [
+        157.5050506591797,
+        252.4272918701172
+      ],
+      [
+        157.56761169433594,
+        252.3878631591797
+      ],
+      [
+        157.6117401123047,
+        252.32603454589844
+      ],
+      [
+        157.67970275878906,
+        252.25511169433594
+      ],
+      [
+        157.78280639648438,
+        252.19085693359375
+      ],
+      [
+        157.93157958984375,
+        252.04811096191406
+      ],
+      [
+        158.0,
+        252.0
+      ]
+    ],
+    "lk_valid": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "alternative_path": {
+      "score": 4.413878440856934,
+      "gap_per_frame": 0.29475027322769165,
+      "hits_tol1": 6,
+      "hits_tol2": 7,
+      "positions": [
+        [
+          157,
+          252
+        ],
+        [
+          151,
+          248
+        ],
+        [
+          157,
+          252
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          158,
+          252
+        ]
+      ],
+      "branch_frame": 1,
+      "branch_type": "same_target"
+    },
+    "candidate_paths": [
+      {
+        "score": 6.477129936218262,
+        "gap_per_frame": 6.811959707420101e-08,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.413878440856934,
+        "gap_per_frame": 0.29475027322769165,
+        "hits_tol1": 6,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            157,
+            252
+          ],
+          [
+            151,
+            248
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.352356433868408,
+        "gap_per_frame": 0.30353912711143494,
+        "hits_tol1": 6,
+        "hits_tol2": 6,
+        "positions": [
+          [
+            157,
+            253
+          ],
+          [
+            154,
+            259
+          ],
+          [
+            157,
+            253
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 4.29550838470459,
+        "gap_per_frame": 0.3116602897644043,
+        "hits_tol1": 6,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            151,
+            256
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.166494369506836,
+        "gap_per_frame": 0.33009085059165955,
+        "hits_tol1": 6,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            151,
+            247
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.14140510559082,
+        "gap_per_frame": 0.3336750566959381,
+        "hits_tol1": 6,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            151,
+            248
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.115635395050049,
+        "gap_per_frame": 0.33735641837120056,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            164,
+            246
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.102263927459717,
+        "gap_per_frame": 0.3392666280269623,
+        "hits_tol1": 6,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            253
+          ],
+          [
+            164,
+            258
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.078360557556152,
+        "gap_per_frame": 0.3426814079284668,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            164,
+            246
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.061410427093506,
+        "gap_per_frame": 0.34510284662246704,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            164,
+            258
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.0361552238464355,
+        "gap_per_frame": 0.3487107455730438,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            164,
+            246
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.018979072570801,
+        "gap_per_frame": 0.35116448998451233,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            164,
+            258
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 4.006824493408203,
+        "gap_per_frame": 0.35290083289146423,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            152,
+            258
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 3.3711869716644287,
+        "gap_per_frame": 0.443706214427948,
+        "hits_tol1": 5,
+        "hits_tol2": 5,
+        "positions": [
+          [
+            145,
+            255
+          ],
+          [
+            147,
+            255
+          ],
+          [
+            153,
+            253
+          ],
+          [
+            157,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 2.9139444828033447,
+        "gap_per_frame": 0.5090265870094299,
+        "hits_tol1": 6,
+        "hits_tol2": 6,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            157,
+            256
+          ],
+          [
+            157,
+            262
+          ],
+          [
+            157,
+            256
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 2.589939594268799,
+        "gap_per_frame": 0.555312991142273,
+        "hits_tol1": 6,
+        "hits_tol2": 6,
+        "positions": [
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            252
+          ],
+          [
+            158,
+            248
+          ],
+          [
+            157,
+            242
+          ],
+          [
+            158,
+            248
+          ],
+          [
+            158,
+            252
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "unannotated_region"
+      }
+    ],
+    "best_score": 6.47713041305542,
+    "gt_compatible_score": 6.47713041305542,
+    "sample_id": 40,
+    "sequence": "DJI_0030_9",
+    "split": "train",
+    "frame": 47,
+    "slots": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "track_id": 7800004,
+    "annotation_id": 822246,
+    "category_id": 0
+  },
+  "interpretation": "A diagnostic score-competition illustration, not proof of intrinsic correspondence ambiguity."
+}

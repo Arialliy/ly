@@ -1,0 +1,155 @@
+{
+  "started_utc": "2026-10-09T20:05:04.572612+00:00",
+  "body_budget_bytes": 250000000,
+  "conservative_debited_bytes": 68061860,
+  "actual_body_bytes_completed_reads": 68026770,
+  "requests": [
+    {
+      "endpoint": "https://drive.google.com/uc",
+      "range": null,
+      "status": 200,
+      "content_range": null,
+      "completed_body_bytes": 2463,
+      "debited_bytes": 20000
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=799496399-800995556",
+      "status": 206,
+      "content_range": "bytes 799496399-800995556/2448061811",
+      "completed_body_bytes": 1499158,
+      "debited_bytes": 1499159
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=848787344-852194350",
+      "status": 206,
+      "content_range": "bytes 848787344-852194350/2448061811",
+      "completed_body_bytes": 3407007,
+      "debited_bytes": 3407008
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=931757094-935108194",
+      "status": 206,
+      "content_range": "bytes 931757094-935108194/2448061811",
+      "completed_body_bytes": 3351101,
+      "debited_bytes": 3351102
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=1258688288-1264630254",
+      "status": 206,
+      "content_range": "bytes 1258688288-1264630254/2448061811",
+      "completed_body_bytes": 5941967,
+      "debited_bytes": 5941968
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=1282972798-1288888577",
+      "status": 206,
+      "content_range": "bytes 1282972798-1288888577/2448061811",
+      "completed_body_bytes": 5915780,
+      "debited_bytes": 5915781
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=1767069074-1769415462",
+      "status": 206,
+      "content_range": "bytes 1767069074-1769415462/2448061811",
+      "completed_body_bytes": 2346389,
+      "debited_bytes": 2346390
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=2158265958-2160358882",
+      "status": 206,
+      "content_range": "bytes 2158265958-2160358882/2448061811",
+      "completed_body_bytes": 2092925,
+      "debited_bytes": 2092926
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=2245874752-2249013015",
+      "status": 206,
+      "content_range": "bytes 2245874752-2249013015/2448061811",
+      "completed_body_bytes": 3138264,
+      "debited_bytes": 3138265
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=740896834-742340822",
+      "status": 206,
+      "content_range": "bytes 740896834-742340822/2448061811",
+      "completed_body_bytes": 1443989,
+      "debited_bytes": 1443990
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=964362163-967233315",
+      "status": 206,
+      "content_range": "bytes 964362163-967233315/2448061811",
+      "completed_body_bytes": 2871153,
+      "debited_bytes": 2871154
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=907091407-911865013",
+      "status": 206,
+      "content_range": "bytes 907091407-911865013/2448061811",
+      "completed_body_bytes": 4773607,
+      "debited_bytes": 4773608
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=1030266802-1037116385",
+      "status": 206,
+      "content_range": "bytes 1030266802-1037116385/2448061811",
+      "completed_body_bytes": 6849584,
+      "debited_bytes": 6849585
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=1480062601-1487763766",
+      "status": 206,
+      "content_range": "bytes 1480062601-1487763766/2448061811",
+      "completed_body_bytes": 7701166,
+      "debited_bytes": 7701167
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=2392050993-2397108863",
+      "status": 206,
+      "content_range": "bytes 2392050993-2397108863/2448061811",
+      "completed_body_bytes": 5057871,
+      "debited_bytes": 5057872
+    },
+    {
+      "endpoint": "https://drive.google.com/uc",
+      "range": null,
+      "status": 200,
+      "content_range": null,
+      "completed_body_bytes": 2463,
+      "debited_bytes": 20000
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=2447996254-2448061810",
+      "status": 206,
+      "content_range": "bytes 2447996254-2448061810/2448061811",
+      "completed_body_bytes": 65557,
+      "debited_bytes": 65558
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "range": "bytes=2436495387-2448061712",
+      "status": 206,
+      "content_range": "bytes 2436495387-2448061712/2448061811",
+      "completed_body_bytes": 11566326,
+      "debited_bytes": 11566327
+    }
+  ],
+  "scope": "All form/range/retry bodies; reserve requested bytes before read, never refunded after interruption; no transport headers.",
+  "last_read_utc": "2026-10-09T20:08:03.955370+00:00",
+  "last_exit_utc": "2026-10-09T20:08:04.360533+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "rendered_utc": "2026-10-11T18:23:37.157130+00:00",
+  "path_complete": true,
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/SUMMARY.csv": "0c103122e5e8f12ff37f982c84e8ec54b475f866727d0fe3eb3a30ea5bfd1799",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/SEQUENCE_SUMMARY.csv": "8caf33c92ea1f11fa9e221d5a5ab3117d89ed55587fc4a0ff53df88fe88e17b3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/WINDOW_DEPENDENCE.csv": "e08f34ff30bad96a9816a3049e5050e3753e70c885bd78d4881e80be463fe071",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/CONTINUOUS_MISS_SUMMARY.csv": "d67c6700b631f280f0bb0810ba5df9f8ad1ff0d4daabd482137f5a0883d3df77",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/PROVENANCE_SUMMARY.csv": "f40ca56fa229a0844bb8dbbe177735fb5dcf7135b38c1948796f9e6fb620f0ab",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/COMPUTE_COST.csv": "020ba5bcf72e6a435d5794aa804ee2a2c942694710b7a598ecb44399b6a8118f",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation/TABLE_VALIDATION.json": "11cb8f6ae291908aa553ec2a8b30a41ad991edf5278b5a8b39aba6f28067a7f7",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/TRAINING_AUDIT.json": "481763b32443841807225c5524ce9986ce3755fa511a5be9636aeb4f9b05940e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/RESULTS_AUDIT.json": "1b16f8bb6b87efff964228a4c894a03870779f18357d83ab3d5dbda19282dc2e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/SEED_AMENDMENT.json": "68b16b5da7079de165464b7e8406f6b106d3fec7de9c2c005fb00b728e65b0d3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation_path/SUMMARY.csv": "f085894434aeeba6ee628d013388518a2c400988af4c23aff4e762d488b958c1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/evaluation_path/TABLE_VALIDATION.json": "36500ad0acf17667e011e878eccbd1b05cac219be95b1dc421c2cd1bf09e367b"
+  },
+  "renderer_sha256": "b84646cf3e554ddec711e2dfe12e0caa47af065a5a326d600ec4360d992fc335",
+  "report_sha256": "f5f7c081822b7d6457ebeb9a5182ad4e2169c4410a5a843eea2192cf5d8fa9db"
+}

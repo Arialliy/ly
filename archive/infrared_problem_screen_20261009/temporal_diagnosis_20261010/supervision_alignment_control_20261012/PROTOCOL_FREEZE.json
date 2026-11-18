@@ -1,0 +1,41 @@
+{
+  "frozen_utc": "2026-10-11T16:32:19.429028+00:00",
+  "condition": "gaussian_softiou_approx",
+  "label_config": {
+    "version": 1,
+    "condition": "gaussian_softiou_approx",
+    "center": "original_float_bbox_geometric_center",
+    "pixel_coordinates": "x=j+0.5,y=i+0.5; half-open original bbox",
+    "sigma_x": "original_bbox_width/6",
+    "sigma_y": "original_bbox_height/6",
+    "support": "truncate outside original bbox; no minimum sigma or peak normalization",
+    "quantization": "floor(255*Gaussian) to uint8",
+    "target": "quantized>0 cast float32; max union over positive boxes",
+    "positive_objects": "all valid non-ignore non-crowd boxes fully inside crop core9; no size/class filter",
+    "valid_domain": "old_background_mask union full_positive_box_rects, then excluded-object bbox+2px overrides",
+    "excluded_objects": "all valid ignore/crowd or non-full-core boxes; original float box+2px",
+    "crop_core_margin": 9,
+    "outside_positive_box_guard_margin": 2,
+    "loss": "unchanged official SoftLoUloss on gathered valid pixels per window; four-window mean",
+    "smooth": 0.0,
+    "empty_target_window": "retain official loss1 and zero gradient; log occurrence",
+    "alignment_limit": "approximate mask generator and masked domain; not exact author training reproduction"
+  },
+  "protocol_sha256": "5a5b74e5dda97b027f6daf108ff10f4b5470e0a85043caaba7612fb723d55b57",
+  "code_sha256": {
+    "code/gaussian_labels.py": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+    "code/infer_supervision.py": "c37e3849927b1f28b685d2579a239bebc8296136f0d9fb1369707e612001ebe7",
+    "code/launch_jobs.py": "8dfda03989258a603e3ef4bf5e803f80ffe1a749693de30992b28b2d267b02a7",
+    "code/test_gaussian_labels.py": "95ce004c3c7d201819bde5e4829c3a043ee48e916341b17a03d825bd7c770c0f",
+    "code/test_train_supervision.py": "e4d26e7ca35069e2e9207ec06f79c2b5eadbaac7dfb9257a08abdb8a4cf0be84",
+    "code/train_supervision.py": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11"
+  },
+  "preflight_sha256": {
+    "checks/TRAIN_RUNNER_CHECK.json": "d13ce595b835ba6cbcc87a0576718c50f348800f0db1266d088b096e0138a4af",
+    "LABEL_PREFLIGHT.json": "36ae5182e4192c68a95d4c44e75986809cb533d8c598f3ca8de4de2b2e88bcbd"
+  },
+  "fixed_steps": 512,
+  "fixed_seed": 46,
+  "checkpoint_rule": "last512",
+  "no_additional_configurations": true
+}

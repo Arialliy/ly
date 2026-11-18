@@ -1,0 +1,56 @@
+{
+  "cohort": [
+    "DJI_0075_3",
+    "DJI_0139_2",
+    "DJI_0343_3"
+  ],
+  "centers": [
+    19,
+    59,
+    99,
+    139
+  ],
+  "excluded_confirmation": [
+    "DJI_0051_3"
+  ],
+  "resolution": [
+    512,
+    640
+  ],
+  "training_updates": 0,
+  "dev_logit_threshold": {
+    "original": 20.02381706237793,
+    "A": 23.96633529663086,
+    "B": 21.260292053222656,
+    "C": 20.028947830200195,
+    "D": 17.2835750579834
+  },
+  "raw_hashes": {
+    "results/references/DATA_SELECTION.json": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+    "experiments/motion_joint_factorial/runs/scores.json": "a3093f8d705b6b1fd2176d84b5fdc120f76aa12e0a0a530be976404e8554f23b",
+    "experiments/motion_joint_factorial/model.py": "c5dd3f55c46e1e79f793665e0343687f3062fdec0d7b5abdd0ee2f6704618296",
+    "experiments/motion_joint_factorial/motion_evidence.py": "8160acea9cc1be0da44a3ea417d65824931af851ca3b4e835df669df93a94835",
+    "experiments/motion_joint_factorial/cache_backbone.py": "84c7c64bc87d5febf4e9154176c4d5aec2b82d83c7dcf2af47ada2dff54bbe52",
+    "experiments/motion_joint_factorial/experiment.py": "173805803a00267adb987db6b603c0371edde6266fd1186c772ef2185d8a223c",
+    "experiments/motion_joint_factorial/protocol.py": "7bc47c621eb911bc0e91f2dcaa3dee92dcb4d7fe3260730e224751240eafe7fc",
+    "experiments/motion_joint_factorial/evaluate.py": "f569a8504c28c840edbdba084d84e44ef43cc7919a298048f64723eddf303444",
+    "experiments/motion_hypothesis_traffic_pilot_20261118/readout.py": "d3f41ece060910d52ca6d2f22c3f0eafaff1f718a353d9881d253ee911fab594",
+    "experiments/motion_hypothesis_traffic_pilot_20261118/extract.py": "c0d4af11469d41592512edebc0e25dbff9bf10d4ad95067b695fd22f35108707",
+    "experiments/motion_joint_confirmation/PROTOCOL.md": "89df7bd06fbf88963d38c5c8ed053cacbe5f333c3c1db4bff2862cc426fc75d2",
+    "experiments/motion_joint_confirmation/locked_protocol.py": "090bb8d99cd92891b8614ec0a37738d5386a6cc8ca11a480ba02aa8beb878f4d",
+    "experiments/motion_joint_confirmation/infer_locked.py": "aee68a4aa9862a14e0fb68aa3ef768e113cde23c8bb62dbca3e0f8b1497f292a",
+    "data/stage1/DJI_0075_3/annotations.json": "3446daf4a1530cf0ca19b07af689f7e1894639ad50daa316cf62418f37b54e67",
+    "data/stage1/DJI_0075_3/raw_frames.npy": "74295640dab8296452f9189ea00be40914b27bafc534793f5f0fac35a6a0898a",
+    "data/stage1/DJI_0139_2/annotations.json": "b835fde597d8ae57ab6af6831becc8a972fbf5929dd990992e16fc54e4cae27c",
+    "data/stage1/DJI_0139_2/raw_frames.npy": "609b7ac32a1347c87e9cb86576e47463e740013fc856169da73d09f4a7adc775",
+    "data/stage1/DJI_0343_3/annotations.json": "ac4549b5e6295e9c9a2a0d24638ec1129bc7aaada433260c52cb6bc9aa57e0af",
+    "data/stage1/DJI_0343_3/raw_frames.npy": "f03bbc28baf424653778c7a53d346c7b46c084a8fdeaf1ee5ebfd3b31f2a538f"
+  },
+  "weight_hashes": {
+    "archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+    "experiments/motion_joint_factorial/runs/models/A.pt": "7ea2b2d8ad64e08ceeacce53c56f63c1fd46274321b46efecdffa131f0105f4f",
+    "experiments/motion_joint_factorial/runs/models/B.pt": "f20d82c834e33e0204022b848f0b2543c2e69829f2e79a1a9ed048cb885213cf",
+    "experiments/motion_joint_factorial/runs/models/C.pt": "6a6eb1fe9552b40cd44b772ca4a2c1b1f8010fc23d02d62030d3e3bfc42fb293",
+    "experiments/motion_joint_factorial/runs/models/D.pt": "c7882b2c8b67a72096e8ed08f780f89d9a0b8d9face682273ee24802492ad9d8"
+  }
+}

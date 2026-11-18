@@ -1,0 +1,494 @@
+[
+  {
+    "completed_utc": "2026-10-09T17:56:07.073742+00:00",
+    "sequence": "DJI_0028_4",
+    "selected_track_id": 4400005,
+    "annotation_count": 1280,
+    "unique_source_track_ids": 9,
+    "per_frame_annotation_count_min": 8,
+    "per_frame_annotation_count_max": 8,
+    "selected_presence": 160,
+    "selected_missing": [],
+    "selected_overlap_frames": 0,
+    "selected_identical_box_frames": [],
+    "selected_min_neighbor_distance_px": 19.00657780874821,
+    "selected_overlap_source_tracks": {},
+    "all_truncated_boxes": 0,
+    "global_registration_valid_pairs": 145,
+    "global_registration_pair_count": 155,
+    "global_registration_invalid_reasons": {
+      "grid_cells_lt6": 10
+    },
+    "selected_blocks": [
+      {
+        "raw_start": 285,
+        "raw_end": 324,
+        "valid_pairs": 30,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 1.6031219541881399,
+        "raw_median_same_valid_pairs": 1.6077867519239248,
+        "adjusted_median": 1.632959803068101,
+        "median_width": 8.0,
+        "median_height": 7.0,
+        "median_mean_contrast": 7.253500585739616,
+        "median_standardized_p90_contrast": 9.726908582294062
+      },
+      {
+        "raw_start": 325,
+        "raw_end": 364,
+        "valid_pairs": 32,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.5830951894845301,
+        "raw_median_same_valid_pairs": 0.607775360759103,
+        "adjusted_median": 0.5916574089814335,
+        "median_width": 7.0,
+        "median_height": 7.0,
+        "median_mean_contrast": 9.828663247213782,
+        "median_standardized_p90_contrast": 16.821739995550878
+      },
+      {
+        "raw_start": 365,
+        "raw_end": 404,
+        "valid_pairs": 31,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 1.4,
+        "raw_median_same_valid_pairs": 1.40356688476182,
+        "adjusted_median": 1.389258127536486,
+        "median_width": 7.0,
+        "median_height": 7.0,
+        "median_mean_contrast": 9.27602583586626,
+        "median_standardized_p90_contrast": 16.837134279798953
+      },
+      {
+        "raw_start": 405,
+        "raw_end": 444,
+        "valid_pairs": 34,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 1.6,
+        "raw_median_same_valid_pairs": 1.6,
+        "adjusted_median": 1.5927520800420834,
+        "median_width": 8.0,
+        "median_height": 8.0,
+        "median_mean_contrast": 6.691862036934339,
+        "median_standardized_p90_contrast": 11.136926395093369
+      }
+    ],
+    "selected_negative_mean_contrast_frames": [],
+    "same_original_category_tracking_id_multiple_global_ids": [
+      {
+        "category_id": 0,
+        "original_tracking_id": "4",
+        "source_track_ids": [
+          4400004,
+          4520004
+        ]
+      }
+    ],
+    "id_note": "Source IDs preserved; different global IDs sharing an original category/tracking_id are not automatically merged and are not automatically called an identity error. Stable selected IDs only establish label continuity.",
+    "visibility_verified": false,
+    "read_model_predictions": false
+  },
+  {
+    "completed_utc": "2026-10-09T17:56:07.102859+00:00",
+    "sequence": "DJI_0032_5",
+    "selected_track_id": 4801536,
+    "annotation_count": 1748,
+    "unique_source_track_ids": 57,
+    "per_frame_annotation_count_min": 7,
+    "per_frame_annotation_count_max": 16,
+    "selected_presence": 160,
+    "selected_missing": [],
+    "selected_overlap_frames": 122,
+    "selected_identical_box_frames": [],
+    "selected_min_neighbor_distance_px": 3.640054944640259,
+    "selected_overlap_source_tracks": {
+      "4921583": 10,
+      "4801583": 112,
+      "4801517": 4
+    },
+    "all_truncated_boxes": 0,
+    "global_registration_valid_pairs": 155,
+    "global_registration_pair_count": 155,
+    "global_registration_invalid_reasons": {},
+    "selected_blocks": [
+      {
+        "raw_start": 63,
+        "raw_end": 102,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.7280109889280518,
+        "raw_median_same_valid_pairs": 0.7280109889280518,
+        "adjusted_median": 0.6672266907135561,
+        "median_width": 5.0,
+        "median_height": 9.0,
+        "median_mean_contrast": 1.5942001263831642,
+        "median_standardized_p90_contrast": 1.3711837659808945
+      },
+      {
+        "raw_start": 103,
+        "raw_end": 142,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.6082762530298219,
+        "raw_median_same_valid_pairs": 0.6082762530298219,
+        "adjusted_median": 0.630217644449101,
+        "median_width": 5.0,
+        "median_height": 12.0,
+        "median_mean_contrast": 30.044555469088863,
+        "median_standardized_p90_contrast": 1.9084044890214311
+      },
+      {
+        "raw_start": 143,
+        "raw_end": 182,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.6403124237432849,
+        "raw_median_same_valid_pairs": 0.6403124237432849,
+        "adjusted_median": 0.6782946635152487,
+        "median_width": 6.0,
+        "median_height": 12.0,
+        "median_mean_contrast": 9.521536439939403,
+        "median_standardized_p90_contrast": 1.6776807454993894
+      },
+      {
+        "raw_start": 183,
+        "raw_end": 222,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.7211102550927978,
+        "raw_median_same_valid_pairs": 0.7211102550927978,
+        "adjusted_median": 0.7305540325612653,
+        "median_width": 6.0,
+        "median_height": 13.0,
+        "median_mean_contrast": 15.986532688896588,
+        "median_standardized_p90_contrast": 1.9914364493225394
+      }
+    ],
+    "selected_negative_mean_contrast_frames": [
+      79,
+      80,
+      81,
+      85,
+      86,
+      88,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      168,
+      177
+    ],
+    "same_original_category_tracking_id_multiple_global_ids": [
+      {
+        "category_id": 1,
+        "original_tracking_id": "16",
+        "source_track_ids": [
+          4800516,
+          4920516
+        ]
+      },
+      {
+        "category_id": 2,
+        "original_tracking_id": "9",
+        "source_track_ids": [
+          4801009,
+          4921009
+        ]
+      },
+      {
+        "category_id": 3,
+        "original_tracking_id": "17",
+        "source_track_ids": [
+          4801517,
+          4921517
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "11",
+        "source_track_ids": [
+          4800511,
+          4920511
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "12",
+        "source_track_ids": [
+          4800512,
+          4920512
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "14",
+        "source_track_ids": [
+          4800514,
+          4920514
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "15",
+        "source_track_ids": [
+          4800515,
+          4920515
+        ]
+      },
+      {
+        "category_id": 3,
+        "original_tracking_id": "83",
+        "source_track_ids": [
+          4801583,
+          4921583
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "5",
+        "source_track_ids": [
+          4800505,
+          4920505
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "4",
+        "source_track_ids": [
+          4800504,
+          4920504
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "8",
+        "source_track_ids": [
+          4800508,
+          4920508
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "19",
+        "source_track_ids": [
+          4800519,
+          4920519
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "20",
+        "source_track_ids": [
+          4800520,
+          4920520
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "30",
+        "source_track_ids": [
+          4800530,
+          4920530
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "31",
+        "source_track_ids": [
+          4800531,
+          4920531
+        ]
+      },
+      {
+        "category_id": 4,
+        "original_tracking_id": "29",
+        "source_track_ids": [
+          4802029,
+          4922029
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "32",
+        "source_track_ids": [
+          4800532,
+          4920532
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "35",
+        "source_track_ids": [
+          4800535,
+          4920535
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "34",
+        "source_track_ids": [
+          4800534,
+          4920534
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "501",
+        "source_track_ids": [
+          4801001,
+          4921001
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "39",
+        "source_track_ids": [
+          4800539,
+          4920539
+        ]
+      },
+      {
+        "category_id": 1,
+        "original_tracking_id": "41",
+        "source_track_ids": [
+          4800541,
+          4920541
+        ]
+      }
+    ],
+    "id_note": "Source IDs preserved; different global IDs sharing an original category/tracking_id are not automatically merged and are not automatically called an identity error. Stable selected IDs only establish label continuity.",
+    "visibility_verified": false,
+    "read_model_predictions": false
+  },
+  {
+    "completed_utc": "2026-10-09T17:56:07.114220+00:00",
+    "sequence": "DJI_0047_3",
+    "selected_track_id": 4621500,
+    "annotation_count": 665,
+    "unique_source_track_ids": 10,
+    "per_frame_annotation_count_min": 2,
+    "per_frame_annotation_count_max": 7,
+    "selected_presence": 160,
+    "selected_missing": [],
+    "selected_overlap_frames": 0,
+    "selected_identical_box_frames": [],
+    "selected_min_neighbor_distance_px": 54.02082931610732,
+    "selected_overlap_source_tracks": {},
+    "all_truncated_boxes": 0,
+    "global_registration_valid_pairs": 155,
+    "global_registration_pair_count": 155,
+    "global_registration_invalid_reasons": {},
+    "selected_blocks": [
+      {
+        "raw_start": 0,
+        "raw_end": 39,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.565685424949238,
+        "raw_median_same_valid_pairs": 0.565685424949238,
+        "adjusted_median": 0.6143745748439033,
+        "median_width": 5.0,
+        "median_height": 9.0,
+        "median_mean_contrast": 60.05022401433693,
+        "median_standardized_p90_contrast": 1.7428942373006224
+      },
+      {
+        "raw_start": 40,
+        "raw_end": 79,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.6,
+        "raw_median_same_valid_pairs": 0.6,
+        "adjusted_median": 0.6489720022013796,
+        "median_width": 6.0,
+        "median_height": 8.0,
+        "median_mean_contrast": 40.54155336122391,
+        "median_standardized_p90_contrast": 1.7927200877226435
+      },
+      {
+        "raw_start": 80,
+        "raw_end": 119,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.447213595499958,
+        "raw_median_same_valid_pairs": 0.447213595499958,
+        "adjusted_median": 0.48378549705638,
+        "median_width": 5.0,
+        "median_height": 8.0,
+        "median_mean_contrast": -13.937499999999993,
+        "median_standardized_p90_contrast": 0.21423675807626583
+      },
+      {
+        "raw_start": 120,
+        "raw_end": 159,
+        "valid_pairs": 35,
+        "lag5_pairs": 35,
+        "raw_median_all_pairs": 0.447213595499958,
+        "raw_median_same_valid_pairs": 0.447213595499958,
+        "adjusted_median": 0.4591623563991402,
+        "median_width": 5.0,
+        "median_height": 9.0,
+        "median_mean_contrast": 36.69446808510639,
+        "median_standardized_p90_contrast": 1.2660519455432775
+      }
+    ],
+    "selected_negative_mean_contrast_frames": [
+      62,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "same_original_category_tracking_id_multiple_global_ids": [
+      {
+        "category_id": 1,
+        "original_tracking_id": "1",
+        "source_track_ids": [
+          4500501,
+          4620501
+        ]
+      }
+    ],
+    "id_note": "Source IDs preserved; different global IDs sharing an original category/tracking_id are not automatically merged and are not automatically called an identity error. Stable selected IDs only establish label continuity.",
+    "visibility_verified": false,
+    "read_model_predictions": false
+  }
+]

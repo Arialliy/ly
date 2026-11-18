@@ -1,0 +1,20 @@
+{
+  "exposure_plan_shape": [
+    100,
+    256
+  ],
+  "all_exposures_training_only": true,
+  "all_steps_balanced_pairs": true,
+  "prediction_replay": {
+    "real": "bitwise_equal",
+    "current": "bitwise_equal"
+  },
+  "auc_independent_pairwise": {
+    "DJI_0026_2/real": 0.8809171597633136,
+    "DJI_0067_2/real": 0.5195540935672515,
+    "DJI_0026_2/current": 0.915310650887574,
+    "DJI_0067_2/current": 0.5030874884579871
+  },
+  "verification_code_sha256": "006e1c7c8ca780b3c20ff17a20f6cb2e05fb755a63fed8a9df5d9124bba5e4df",
+  "status": "PASS"
+}

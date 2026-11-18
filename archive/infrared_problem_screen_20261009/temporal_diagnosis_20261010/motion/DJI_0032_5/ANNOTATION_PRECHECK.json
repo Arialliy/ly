@@ -1,0 +1,2564 @@
+{
+  "sequence": "DJI_0032_5",
+  "candidate_id": "DJI_0032_5__4801536__00063__00222",
+  "selected_track_id": 4801536,
+  "selected_presence": 160,
+  "selected_duplicate_or_missing_per_available_frame": [],
+  "selected_expected_frames_missing": [],
+  "selected_truncated_frame_ids": [],
+  "unique_tracks": 57,
+  "source_track_presence": {
+    "4800516": 1,
+    "4801536": 160,
+    "4801009": 45,
+    "4801517": 145,
+    "4920507": 2,
+    "4920511": 26,
+    "4920512": 21,
+    "4920514": 33,
+    "4920515": 44,
+    "4921583": 12,
+    "4920516": 106,
+    "4920505": 17,
+    "4800505": 2,
+    "4800515": 17,
+    "4801583": 148,
+    "4801017": 1,
+    "4801509": 1,
+    "4800511": 40,
+    "4920504": 30,
+    "4800512": 1,
+    "4800508": 5,
+    "4800504": 5,
+    "4920508": 13,
+    "4920519": 58,
+    "4920520": 45,
+    "4800514": 4,
+    "4920530": 66,
+    "4921009": 1,
+    "4921018": 26,
+    "4800531": 16,
+    "4802029": 26,
+    "4920532": 51,
+    "4922029": 42,
+    "4920535": 51,
+    "4920531": 38,
+    "4921517": 14,
+    "4923951": 74,
+    "4800519": 7,
+    "4800530": 1,
+    "4920533": 46,
+    "4800520": 18,
+    "4800534": 8,
+    "4921001": 30,
+    "4920534": 44,
+    "4803451": 9,
+    "4800532": 10,
+    "4801001": 14,
+    "4920539": 33,
+    "4920541": 26,
+    "4800535": 20,
+    "4800541": 6,
+    "4923712": 26,
+    "4923713": 26,
+    "4800539": 2,
+    "4920544": 16,
+    "4801084": 13,
+    "4923714": 6
+  },
+  "selected_min_width": 3,
+  "selected_max_width": 6,
+  "selected_min_height": 8,
+  "selected_max_height": 14,
+  "selected_max_center_step_px": 3.1622776601683795,
+  "selected_overlapping_frame_count": 122,
+  "selected_identical_box_frames": [],
+  "selected_overlap_tracks": {
+    "4921583": 10,
+    "4801583": 112,
+    "4801517": 4
+  },
+  "selected_min_neighbor_distance_px": 3.640054944640259,
+  "neighbor_per_frame": [
+    {
+      "frame": 63,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 5,
+          "iou": 0.06578947368421052
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 5,
+        "iou": 0.06578947368421052
+      }
+    },
+    {
+      "frame": 64,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 4,
+          "iou": 0.046511627906976744
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 4,
+        "iou": 0.046511627906976744
+      }
+    },
+    {
+      "frame": 65,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 4,
+          "iou": 0.05194805194805195
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 4,
+        "iou": 0.05194805194805195
+      }
+    },
+    {
+      "frame": 66,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.946221994724902,
+          "intersection_px2": 3,
+          "iou": 0.038461538461538464
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.946221994724902,
+        "intersection_px2": 3,
+        "iou": 0.038461538461538464
+      }
+    },
+    {
+      "frame": 67,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 4,
+          "iou": 0.05194805194805195
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 4,
+        "iou": 0.05194805194805195
+      }
+    },
+    {
+      "frame": 68,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 5.830951894845301,
+          "intersection_px2": 8,
+          "iou": 0.0975609756097561
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 8,
+        "iou": 0.0975609756097561
+      }
+    },
+    {
+      "frame": 69,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 4,
+          "iou": 0.05194805194805195
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 4,
+        "iou": 0.05194805194805195
+      }
+    },
+    {
+      "frame": 70,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 4,
+          "iou": 0.04395604395604396
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 4,
+        "iou": 0.04395604395604396
+      }
+    },
+    {
+      "frame": 71,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 4,
+          "iou": 0.041666666666666664
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 4,
+        "iou": 0.041666666666666664
+      }
+    },
+    {
+      "frame": 72,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 8.32165848854662,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 73,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 74,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4921583,
+          "center_distance_px": 6.020797289396148,
+          "intersection_px2": 5,
+          "iou": 0.05555555555555555
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4921583,
+        "center_distance_px": 6.020797289396148,
+        "intersection_px2": 5,
+        "iou": 0.05555555555555555
+      }
+    },
+    {
+      "frame": 75,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 8,
+          "iou": 0.07142857142857142
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 8,
+        "iou": 0.07142857142857142
+      }
+    },
+    {
+      "frame": 76,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.708203932499369,
+          "intersection_px2": 8,
+          "iou": 0.08695652173913043
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.708203932499369,
+        "intersection_px2": 8,
+        "iou": 0.08695652173913043
+      }
+    },
+    {
+      "frame": 77,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.826237921249264,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 78,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.632168761236874,
+          "intersection_px2": 3,
+          "iou": 0.03260869565217391
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.632168761236874,
+        "intersection_px2": 3,
+        "iou": 0.03260869565217391
+      }
+    },
+    {
+      "frame": 79,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 8.06225774829855,
+          "intersection_px2": 3,
+          "iou": 0.030927835051546393
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.06225774829855,
+        "intersection_px2": 3,
+        "iou": 0.030927835051546393
+      }
+    },
+    {
+      "frame": 80,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.5,
+          "intersection_px2": 4,
+          "iou": 0.037383177570093455
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.5,
+        "intersection_px2": 4,
+        "iou": 0.037383177570093455
+      }
+    },
+    {
+      "frame": 81,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.810249675906654,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 82,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.905694150420948,
+          "intersection_px2": 4,
+          "iou": 0.03571428571428571
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.905694150420948,
+        "intersection_px2": 4,
+        "iou": 0.03571428571428571
+      }
+    },
+    {
+      "frame": 83,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.632168761236874,
+          "intersection_px2": 4,
+          "iou": 0.039603960396039604
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.632168761236874,
+        "intersection_px2": 4,
+        "iou": 0.039603960396039604
+      }
+    },
+    {
+      "frame": 84,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 4,
+          "iou": 0.041666666666666664
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 4,
+        "iou": 0.041666666666666664
+      }
+    },
+    {
+      "frame": 85,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 4,
+          "iou": 0.04395604395604396
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 4,
+        "iou": 0.04395604395604396
+      }
+    },
+    {
+      "frame": 86,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 87,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 88,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.5,
+          "intersection_px2": 4,
+          "iou": 0.03773584905660377
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.5,
+        "intersection_px2": 4,
+        "iou": 0.03773584905660377
+      }
+    },
+    {
+      "frame": 89,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.602325267042627,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 90,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 4,
+          "iou": 0.041666666666666664
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 4,
+        "iou": 0.041666666666666664
+      }
+    },
+    {
+      "frame": 91,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.902246907382429,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 92,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.74642784226795,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 93,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.200609733428363,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 94,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.726812023536855,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 95,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 4,
+          "iou": 0.04878048780487805
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 4,
+        "iou": 0.04878048780487805
+      }
+    },
+    {
+      "frame": 96,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.74642784226795,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 97,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.602325267042627,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 98,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.946221994724902,
+          "intersection_px2": 4,
+          "iou": 0.046511627906976744
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.946221994724902,
+        "intersection_px2": 4,
+        "iou": 0.046511627906976744
+      }
+    },
+    {
+      "frame": 99,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.06225774829855,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 100,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.06225774829855,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 101,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 9.17877987534291,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 102,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 5,
+          "iou": 0.056179775280898875
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 5,
+        "iou": 0.056179775280898875
+      }
+    },
+    {
+      "frame": 103,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.810249675906654,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 104,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 5,
+          "iou": 0.056179775280898875
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 5,
+        "iou": 0.056179775280898875
+      }
+    },
+    {
+      "frame": 105,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.632168761236874,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 106,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.32165848854662,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 107,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.32165848854662,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 108,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.946221994724902,
+          "intersection_px2": 4,
+          "iou": 0.046511627906976744
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.946221994724902,
+        "intersection_px2": 4,
+        "iou": 0.046511627906976744
+      }
+    },
+    {
+      "frame": 109,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 110,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 111,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.3824115301167,
+          "intersection_px2": 4,
+          "iou": 0.044444444444444446
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.3824115301167,
+        "intersection_px2": 4,
+        "iou": 0.044444444444444446
+      }
+    },
+    {
+      "frame": 112,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.74642784226795,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 113,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.3824115301167,
+          "intersection_px2": 4,
+          "iou": 0.044444444444444446
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.3824115301167,
+        "intersection_px2": 4,
+        "iou": 0.044444444444444446
+      }
+    },
+    {
+      "frame": 114,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 6,
+          "iou": 0.06521739130434782
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 6,
+        "iou": 0.06521739130434782
+      }
+    },
+    {
+      "frame": 115,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.656854249492381,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 116,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 117,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 7,
+          "iou": 0.07692307692307693
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 7,
+        "iou": 0.07692307692307693
+      }
+    },
+    {
+      "frame": 118,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 6,
+          "iou": 0.057692307692307696
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 6,
+        "iou": 0.057692307692307696
+      }
+    },
+    {
+      "frame": 119,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 6,
+          "iou": 0.06521739130434782
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 6,
+        "iou": 0.06521739130434782
+      }
+    },
+    {
+      "frame": 120,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.946221994724902,
+          "intersection_px2": 5,
+          "iou": 0.053763440860215055
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.946221994724902,
+        "intersection_px2": 5,
+        "iou": 0.053763440860215055
+      }
+    },
+    {
+      "frame": 121,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 5,
+          "iou": 0.056179775280898875
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 5,
+        "iou": 0.056179775280898875
+      }
+    },
+    {
+      "frame": 122,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 5,
+          "iou": 0.05
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 5,
+        "iou": 0.05
+      }
+    },
+    {
+      "frame": 123,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.0,
+          "intersection_px2": 8,
+          "iou": 0.0784313725490196
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.0,
+        "intersection_px2": 8,
+        "iou": 0.0784313725490196
+      }
+    },
+    {
+      "frame": 124,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 5,
+          "iou": 0.056179775280898875
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 5,
+        "iou": 0.056179775280898875
+      }
+    },
+    {
+      "frame": 125,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.830951894845301,
+          "intersection_px2": 12,
+          "iou": 0.12244897959183673
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 12,
+        "iou": 0.12244897959183673
+      }
+    },
+    {
+      "frame": 126,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.264982043070834,
+          "intersection_px2": 10,
+          "iou": 0.10526315789473684
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.264982043070834,
+        "intersection_px2": 10,
+        "iou": 0.10526315789473684
+      }
+    },
+    {
+      "frame": 127,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.363961030678928,
+          "intersection_px2": 7,
+          "iou": 0.058823529411764705
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 7,
+        "iou": 0.058823529411764705
+      }
+    },
+    {
+      "frame": 128,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 8.06225774829855,
+          "intersection_px2": 4,
+          "iou": 0.03773584905660377
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.06225774829855,
+        "intersection_px2": 4,
+        "iou": 0.03773584905660377
+      }
+    },
+    {
+      "frame": 129,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.615773105863909,
+          "intersection_px2": 8,
+          "iou": 0.0784313725490196
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.615773105863909,
+        "intersection_px2": 8,
+        "iou": 0.0784313725490196
+      }
+    },
+    {
+      "frame": 130,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.602325267042627,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 131,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 9.17877987534291,
+          "intersection_px2": 3,
+          "iou": 0.02564102564102564
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 9.17877987534291,
+        "intersection_px2": 3,
+        "iou": 0.02564102564102564
+      }
+    },
+    {
+      "frame": 132,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 9.617692030835672,
+          "intersection_px2": 3,
+          "iou": 0.024193548387096774
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 9.617692030835672,
+        "intersection_px2": 3,
+        "iou": 0.024193548387096774
+      }
+    },
+    {
+      "frame": 133,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 12,
+          "iou": 0.09523809523809523
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 12,
+        "iou": 0.09523809523809523
+      }
+    },
+    {
+      "frame": 134,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 10.124228365658293,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 135,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.845903006477066,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 136,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.3824115301167,
+          "intersection_px2": 10,
+          "iou": 0.08547008547008547
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.3824115301167,
+        "intersection_px2": 10,
+        "iou": 0.08547008547008547
+      }
+    },
+    {
+      "frame": 137,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.7781745930520225,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 138,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.158910531638177,
+          "intersection_px2": 15,
+          "iou": 0.12195121951219512
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.158910531638177,
+        "intersection_px2": 15,
+        "iou": 0.12195121951219512
+      }
+    },
+    {
+      "frame": 139,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801517,
+          "center_distance_px": 8.5,
+          "intersection_px2": 8,
+          "iou": 0.08
+        },
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 4.743416490252569,
+          "intersection_px2": 28,
+          "iou": 0.2828282828282828
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 4.743416490252569,
+        "intersection_px2": 28,
+        "iou": 0.2828282828282828
+      }
+    },
+    {
+      "frame": 140,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 16,
+          "iou": 0.13114754098360656
+        },
+        {
+          "other_track_id": 4801517,
+          "center_distance_px": 8.139410298049853,
+          "intersection_px2": 8,
+          "iou": 0.07692307692307693
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 16,
+        "iou": 0.13114754098360656
+      }
+    },
+    {
+      "frame": 141,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 3.640054944640259,
+          "intersection_px2": 40,
+          "iou": 0.40816326530612246
+        },
+        {
+          "other_track_id": 4801517,
+          "center_distance_px": 7.280109889280518,
+          "intersection_px2": 9,
+          "iou": 0.09473684210526316
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 3.640054944640259,
+        "intersection_px2": 40,
+        "iou": 0.40816326530612246
+      }
+    },
+    {
+      "frame": 142,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.70087712549569,
+          "intersection_px2": 8,
+          "iou": 0.06722689075630252
+        },
+        {
+          "other_track_id": 4801517,
+          "center_distance_px": 8.94427190999916,
+          "intersection_px2": 2,
+          "iou": 0.0196078431372549
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.70087712549569,
+        "intersection_px2": 8,
+        "iou": 0.06722689075630252
+      }
+    },
+    {
+      "frame": 143,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.0,
+          "intersection_px2": 21,
+          "iou": 0.1891891891891892
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.0,
+        "intersection_px2": 21,
+        "iou": 0.1891891891891892
+      }
+    },
+    {
+      "frame": 144,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.0710678118654755,
+          "intersection_px2": 7,
+          "iou": 0.051094890510948905
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.0710678118654755,
+        "intersection_px2": 7,
+        "iou": 0.051094890510948905
+      }
+    },
+    {
+      "frame": 145,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 4.6097722286464435,
+          "intersection_px2": 18,
+          "iou": 0.1565217391304348
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 4.6097722286464435,
+        "intersection_px2": 18,
+        "iou": 0.1565217391304348
+      }
+    },
+    {
+      "frame": 146,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 16,
+          "iou": 0.13675213675213677
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 16,
+        "iou": 0.13675213675213677
+      }
+    },
+    {
+      "frame": 147,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.106335201775948,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 148,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 149,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 150,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.1478150704935,
+          "intersection_px2": 9,
+          "iou": 0.07692307692307693
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.1478150704935,
+        "intersection_px2": 9,
+        "iou": 0.07692307692307693
+      }
+    },
+    {
+      "frame": 151,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.020797289396148,
+          "intersection_px2": 6,
+          "iou": 0.057692307692307696
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.020797289396148,
+        "intersection_px2": 6,
+        "iou": 0.057692307692307696
+      }
+    },
+    {
+      "frame": 152,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.363961030678928,
+          "intersection_px2": 7,
+          "iou": 0.058823529411764705
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 7,
+        "iou": 0.058823529411764705
+      }
+    },
+    {
+      "frame": 153,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 6,
+          "iou": 0.057692307692307696
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 6,
+        "iou": 0.057692307692307696
+      }
+    },
+    {
+      "frame": 154,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.726812023536855,
+          "intersection_px2": 6,
+          "iou": 0.05172413793103448
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.726812023536855,
+        "intersection_px2": 6,
+        "iou": 0.05172413793103448
+      }
+    },
+    {
+      "frame": 155,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.726812023536855,
+          "intersection_px2": 7,
+          "iou": 0.05343511450381679
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.726812023536855,
+        "intersection_px2": 7,
+        "iou": 0.05343511450381679
+      }
+    },
+    {
+      "frame": 156,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 157,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.656854249492381,
+          "intersection_px2": 7,
+          "iou": 0.06796116504854369
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.656854249492381,
+        "intersection_px2": 7,
+        "iou": 0.06796116504854369
+      }
+    },
+    {
+      "frame": 158,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 4.6097722286464435,
+          "intersection_px2": 16,
+          "iou": 0.1509433962264151
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 4.6097722286464435,
+        "intersection_px2": 16,
+        "iou": 0.1509433962264151
+      }
+    },
+    {
+      "frame": 159,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.656854249492381,
+          "intersection_px2": 14,
+          "iou": 0.11864406779661017
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.656854249492381,
+        "intersection_px2": 14,
+        "iou": 0.11864406779661017
+      }
+    },
+    {
+      "frame": 160,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.70087712549569,
+          "intersection_px2": 8,
+          "iou": 0.06722689075630252
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.70087712549569,
+        "intersection_px2": 8,
+        "iou": 0.06722689075630252
+      }
+    },
+    {
+      "frame": 161,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 8,
+          "iou": 0.06153846153846154
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 8,
+        "iou": 0.06153846153846154
+      }
+    },
+    {
+      "frame": 162,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.363961030678928,
+          "intersection_px2": 7,
+          "iou": 0.058823529411764705
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 7,
+        "iou": 0.058823529411764705
+      }
+    },
+    {
+      "frame": 163,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 164,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.810249675906654,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 165,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.433034373659253,
+          "intersection_px2": 6,
+          "iou": 0.045454545454545456
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 6,
+        "iou": 0.045454545454545456
+      }
+    },
+    {
+      "frame": 166,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 167,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.0710678118654755,
+          "intersection_px2": 7,
+          "iou": 0.051094890510948905
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.0710678118654755,
+        "intersection_px2": 7,
+        "iou": 0.051094890510948905
+      }
+    },
+    {
+      "frame": 168,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 169,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 5,
+          "iou": 0.047619047619047616
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 5,
+        "iou": 0.047619047619047616
+      }
+    },
+    {
+      "frame": 170,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 8.06225774829855,
+          "intersection_px2": 4,
+          "iou": 0.03773584905660377
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.06225774829855,
+        "intersection_px2": 4,
+        "iou": 0.03773584905660377
+      }
+    },
+    {
+      "frame": 171,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.020797289396148,
+          "intersection_px2": 8,
+          "iou": 0.06504065040650407
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.020797289396148,
+        "intersection_px2": 8,
+        "iou": 0.06504065040650407
+      }
+    },
+    {
+      "frame": 172,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.408326913195984,
+          "intersection_px2": 9,
+          "iou": 0.07258064516129033
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.408326913195984,
+        "intersection_px2": 9,
+        "iou": 0.07258064516129033
+      }
+    },
+    {
+      "frame": 173,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.830951894845301,
+          "intersection_px2": 9,
+          "iou": 0.06666666666666667
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 9,
+        "iou": 0.06666666666666667
+      }
+    },
+    {
+      "frame": 174,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 8,
+          "iou": 0.058823529411764705
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 8,
+        "iou": 0.058823529411764705
+      }
+    },
+    {
+      "frame": 175,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 8,
+          "iou": 0.06557377049180328
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 8,
+        "iou": 0.06557377049180328
+      }
+    },
+    {
+      "frame": 176,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 9,
+          "iou": 0.07758620689655173
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 9,
+        "iou": 0.07758620689655173
+      }
+    },
+    {
+      "frame": 177,
+      "overlapping_neighbors": [],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 8.902246907382429,
+        "intersection_px2": 0,
+        "iou": 0.0
+      }
+    },
+    {
+      "frame": 178,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.106335201775948,
+          "intersection_px2": 7,
+          "iou": 0.05343511450381679
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.106335201775948,
+        "intersection_px2": 7,
+        "iou": 0.05343511450381679
+      }
+    },
+    {
+      "frame": 179,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.632168761236874,
+          "intersection_px2": 6,
+          "iou": 0.05042016806722689
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.632168761236874,
+        "intersection_px2": 6,
+        "iou": 0.05042016806722689
+      }
+    },
+    {
+      "frame": 180,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 9,
+          "iou": 0.061224489795918366
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 9,
+        "iou": 0.061224489795918366
+      }
+    },
+    {
+      "frame": 181,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.726812023536855,
+          "intersection_px2": 8,
+          "iou": 0.056338028169014086
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.726812023536855,
+        "intersection_px2": 8,
+        "iou": 0.056338028169014086
+      }
+    },
+    {
+      "frame": 182,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 183,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.408326913195984,
+          "intersection_px2": 10,
+          "iou": 0.07518796992481203
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.408326913195984,
+        "intersection_px2": 10,
+        "iou": 0.07518796992481203
+      }
+    },
+    {
+      "frame": 184,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 16,
+          "iou": 0.12598425196850394
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 16,
+        "iou": 0.12598425196850394
+      }
+    },
+    {
+      "frame": 185,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.315072906367325,
+          "intersection_px2": 18,
+          "iou": 0.144
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.315072906367325,
+        "intersection_px2": 18,
+        "iou": 0.144
+      }
+    },
+    {
+      "frame": 186,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.810249675906654,
+          "intersection_px2": 7,
+          "iou": 0.04697986577181208
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.810249675906654,
+        "intersection_px2": 7,
+        "iou": 0.04697986577181208
+      }
+    },
+    {
+      "frame": 187,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.433034373659253,
+          "intersection_px2": 7,
+          "iou": 0.04895104895104895
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.433034373659253,
+        "intersection_px2": 7,
+        "iou": 0.04895104895104895
+      }
+    },
+    {
+      "frame": 188,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.5,
+          "intersection_px2": 7,
+          "iou": 0.051470588235294115
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.5,
+        "intersection_px2": 7,
+        "iou": 0.051470588235294115
+      }
+    },
+    {
+      "frame": 189,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 16,
+          "iou": 0.12598425196850394
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 16,
+        "iou": 0.12598425196850394
+      }
+    },
+    {
+      "frame": 190,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.826237921249264,
+          "intersection_px2": 12,
+          "iou": 0.0916030534351145
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.826237921249264,
+        "intersection_px2": 12,
+        "iou": 0.0916030534351145
+      }
+    },
+    {
+      "frame": 191,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.615773105863909,
+          "intersection_px2": 18,
+          "iou": 0.13043478260869565
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.615773105863909,
+        "intersection_px2": 18,
+        "iou": 0.13043478260869565
+      }
+    },
+    {
+      "frame": 192,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.363961030678928,
+          "intersection_px2": 8,
+          "iou": 0.06153846153846154
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.363961030678928,
+        "intersection_px2": 8,
+        "iou": 0.06153846153846154
+      }
+    },
+    {
+      "frame": 193,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 16,
+          "iou": 0.12121212121212122
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 16,
+        "iou": 0.12121212121212122
+      }
+    },
+    {
+      "frame": 194,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.946221994724902,
+          "intersection_px2": 14,
+          "iou": 0.10852713178294573
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.946221994724902,
+        "intersection_px2": 14,
+        "iou": 0.10852713178294573
+      }
+    },
+    {
+      "frame": 195,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.830951894845301,
+          "intersection_px2": 24,
+          "iou": 0.18181818181818182
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 24,
+        "iou": 0.18181818181818182
+      }
+    },
+    {
+      "frame": 196,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 16,
+          "iou": 0.1095890410958904
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 16,
+        "iou": 0.1095890410958904
+      }
+    },
+    {
+      "frame": 197,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 198,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 199,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.211102550927978,
+          "intersection_px2": 14,
+          "iou": 0.09859154929577464
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.211102550927978,
+        "intersection_px2": 14,
+        "iou": 0.09859154929577464
+      }
+    },
+    {
+      "frame": 200,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.905694150420948,
+          "intersection_px2": 6,
+          "iou": 0.045454545454545456
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.905694150420948,
+        "intersection_px2": 6,
+        "iou": 0.045454545454545456
+      }
+    },
+    {
+      "frame": 201,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.1478150704935,
+          "intersection_px2": 32,
+          "iou": 0.24615384615384617
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.1478150704935,
+        "intersection_px2": 32,
+        "iou": 0.24615384615384617
+      }
+    },
+    {
+      "frame": 202,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 16,
+          "iou": 0.1095890410958904
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 16,
+        "iou": 0.1095890410958904
+      }
+    },
+    {
+      "frame": 203,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 4.949747468305833,
+          "intersection_px2": 27,
+          "iou": 0.2
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 4.949747468305833,
+        "intersection_px2": 27,
+        "iou": 0.2
+      }
+    },
+    {
+      "frame": 204,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 24,
+          "iou": 0.16551724137931034
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 24,
+        "iou": 0.16551724137931034
+      }
+    },
+    {
+      "frame": 205,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.264982043070834,
+          "intersection_px2": 21,
+          "iou": 0.16279069767441862
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.264982043070834,
+        "intersection_px2": 21,
+        "iou": 0.16279069767441862
+      }
+    },
+    {
+      "frame": 206,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 7.5,
+          "intersection_px2": 7,
+          "iou": 0.05185185185185185
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 7.5,
+        "intersection_px2": 7,
+        "iou": 0.05185185185185185
+      }
+    },
+    {
+      "frame": 207,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 208,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.020797289396148,
+          "intersection_px2": 16,
+          "iou": 0.11940298507462686
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.020797289396148,
+        "intersection_px2": 16,
+        "iou": 0.11940298507462686
+      }
+    },
+    {
+      "frame": 209,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 210,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.656854249492381,
+          "intersection_px2": 18,
+          "iou": 0.13043478260869565
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.656854249492381,
+        "intersection_px2": 18,
+        "iou": 0.13043478260869565
+      }
+    },
+    {
+      "frame": 211,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.408326913195984,
+          "intersection_px2": 24,
+          "iou": 0.19047619047619047
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.408326913195984,
+        "intersection_px2": 24,
+        "iou": 0.19047619047619047
+      }
+    },
+    {
+      "frame": 212,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.656854249492381,
+          "intersection_px2": 18,
+          "iou": 0.13043478260869565
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.656854249492381,
+        "intersection_px2": 18,
+        "iou": 0.13043478260869565
+      }
+    },
+    {
+      "frame": 213,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.800735254367722,
+          "intersection_px2": 16,
+          "iou": 0.1095890410958904
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.800735254367722,
+        "intersection_px2": 16,
+        "iou": 0.1095890410958904
+      }
+    },
+    {
+      "frame": 214,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 14,
+          "iou": 0.11382113821138211
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 14,
+        "iou": 0.11382113821138211
+      }
+    },
+    {
+      "frame": 215,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.70087712549569,
+          "intersection_px2": 16,
+          "iou": 0.1322314049586777
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.70087712549569,
+        "intersection_px2": 16,
+        "iou": 0.1322314049586777
+      }
+    },
+    {
+      "frame": 216,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.70087712549569,
+          "intersection_px2": 16,
+          "iou": 0.1322314049586777
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.70087712549569,
+        "intersection_px2": 16,
+        "iou": 0.1322314049586777
+      }
+    },
+    {
+      "frame": 217,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 5.830951894845301,
+          "intersection_px2": 24,
+          "iou": 0.18181818181818182
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 5.830951894845301,
+        "intersection_px2": 24,
+        "iou": 0.18181818181818182
+      }
+    },
+    {
+      "frame": 218,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.708203932499369,
+          "intersection_px2": 21,
+          "iou": 0.15555555555555556
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.708203932499369,
+        "intersection_px2": 21,
+        "iou": 0.15555555555555556
+      }
+    },
+    {
+      "frame": 219,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.519202405202649,
+          "intersection_px2": 14,
+          "iou": 0.11382113821138211
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.519202405202649,
+        "intersection_px2": 14,
+        "iou": 0.11382113821138211
+      }
+    },
+    {
+      "frame": 220,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.4031242374328485,
+          "intersection_px2": 16,
+          "iou": 0.11428571428571428
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.4031242374328485,
+        "intersection_px2": 16,
+        "iou": 0.11428571428571428
+      }
+    },
+    {
+      "frame": 221,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 16,
+          "iou": 0.12598425196850394
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 16,
+        "iou": 0.12598425196850394
+      }
+    },
+    {
+      "frame": 222,
+      "overlapping_neighbors": [
+        {
+          "other_track_id": 4801583,
+          "center_distance_px": 6.103277807866851,
+          "intersection_px2": 14,
+          "iou": 0.11864406779661017
+        }
+      ],
+      "nearest_neighbor": {
+        "other_track_id": 4801583,
+        "center_distance_px": 6.103277807866851,
+        "intersection_px2": 14,
+        "iou": 0.11864406779661017
+      }
+    }
+  ],
+  "no_model_outputs_read": true,
+  "annotation_presence_does_not_verify_visibility": true
+}

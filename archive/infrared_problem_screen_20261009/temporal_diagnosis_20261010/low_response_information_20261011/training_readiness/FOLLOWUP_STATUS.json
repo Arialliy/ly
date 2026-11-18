@@ -1,0 +1,24 @@
+{
+  "updated_at_utc": "2026-10-11T14:26:37.330516+00:00",
+  "initial_read_only_audit": "AUDIT.json",
+  "subsequent_control": {
+    "status": "COMPLETE",
+    "effective_strategy": "lambda0_base_weak_box_MIL",
+    "effective_extra_lambda": 0,
+    "legacy_trainer_strategy": "paired_mean",
+    "legacy_trainer_extra_lambda": 1.0,
+    "fixed_threshold": 0.5,
+    "final_checkpoint_sha256": "f6a1228155592d6683d07269e61a8078056ffce0c3916e1aebcaa268045f2562",
+    "training_checks": {
+      "final_step": 512,
+      "finite_logged_steps": true,
+      "bn_buffers_equal": true,
+      "logged_total_equals_pos_plus_neg": true,
+      "unchanged_original_sources": true,
+      "train_seconds": 233.50033868500032
+    },
+    "all_arrangements_exceed_U_budget": true,
+    "generated_at_utc": "2026-10-11T14:26:04.899147+00:00"
+  },
+  "report": "../lambda0_control/REPORT.md"
+}

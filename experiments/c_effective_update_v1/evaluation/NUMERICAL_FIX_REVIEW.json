@@ -1,0 +1,147 @@
+{
+  "status": "PASS_LIMITED_NUMERICAL_ASSERTION_AND_RESUME_AMENDMENT",
+  "active_protocol_sha256": "d1e544edc74f5f966c324c08cc543080e8b3f197dad0852a07df9a948766c2fe",
+  "prior_protocol_sha256": "3789abfde8fb33dc074329ec73993fd044a40f97bfafd59a51632b2c748f4ff6",
+  "amendment_sha256": "4f098d66e313f5bb981e94fbcb20f468097ac2811394f39b38451a48076a465d",
+  "probe_sha256": "354ad16eb8792a51fe51899f1e087c67594d743e353721a99d70a04d16e80423",
+  "blocking_findings": [],
+  "independent_verification": {
+    "all_active_frozen_files_match": true,
+    "all_reused_sources_unchanged": true,
+    "prior_freeze_preserved_exactly": true,
+    "only_changed_previously_frozen_files": [
+      "PROTOCOL.md",
+      "code/run_effect.py"
+    ],
+    "run_effect_exact_old_hash_recovered_by_reversing_only_three_blocks": true,
+    "three_blocks": [
+      "replace elementwise diagnostic assertion with whole-vector relative L2 diagnostic",
+      "log relative residual, max absolute residual and cosine",
+      "hash-checked skipping of explicitly retained completed pair results"
+    ],
+    "original_run_effect_sha256": "8bebe2b816eaffb95fad457e7c666a0d8df57fa312cb94624ef4cec364e3b623",
+    "current_run_effect_sha256": "73d52d495ab427af6e473ba832566e9284b05f8b295ebccd9dc268354e69d3b5",
+    "effect_common_unchanged": true,
+    "retained_complete_pairs": {
+      "1": {
+        "json_unchanged": true,
+        "npz_unchanged": true,
+        "json_sha256": "86da746dc2399e3ca3df5fa1c69098da19e7b85efefdda0d246f63cb3630191e",
+        "npz_sha256": "fd50ff87c2e3d73b25968c5679c96725b677a1cc3ea690f2234995cd02c2aaa2"
+      },
+      "4": {
+        "json_unchanged": true,
+        "npz_unchanged": true,
+        "json_sha256": "492282f730f89e54147740f928b24def0e0a0e9ac6f0f568913788f587b49104",
+        "npz_sha256": "455cdba5ee065c4d72bebe872573c2feb9fdbbd38565cfd8bba989bb30903e30"
+      }
+    }
+  },
+  "numerical_evidence": {
+    "failed_pairs": [
+      0,
+      2,
+      7
+    ],
+    "zero_update_probe": {
+      "status": "COMPLETE",
+      "parameter_updates": 0,
+      "model_and_adam_unchanged": true,
+      "rows": [
+        {
+          "pair_id": 0,
+          "index": 63,
+          "full_l2": 0.7104354446808113,
+          "group_l2": [
+            1.1257659548526626,
+            0.643661952161484,
+            0.277661253055287
+          ],
+          "residual_l2": 5.749991388803845e-06,
+          "relative_to_full": 8.093615587250486e-06,
+          "relative_to_group_norm_sum": 2.808862213216358e-06,
+          "max_absolute_error": 2.946704626083374e-06,
+          "cosine": 0.9999999999676932,
+          "repeated_full_backward_equal": true,
+          "original_scalar": 0.7398344278335571,
+          "group_scalar_sum": 0.7398344278335571
+        },
+        {
+          "pair_id": 7,
+          "index": 32,
+          "full_l2": 0.2506217237255541,
+          "group_l2": [
+            0.8179963369598761,
+            0.8183822564182964,
+            0.1400963589884151
+          ],
+          "residual_l2": 2.1793759415990066e-06,
+          "relative_to_full": 8.695878031648824e-06,
+          "relative_to_group_norm_sum": 1.2267980129388717e-06,
+          "max_absolute_error": 5.401670932769775e-07,
+          "cosine": 0.9999999999622271,
+          "repeated_full_backward_equal": true,
+          "original_scalar": 0.6575369834899902,
+          "group_scalar_sum": 0.6575369834899902
+        },
+        {
+          "pair_id": 2,
+          "index": 25,
+          "full_l2": 0.8480763439200282,
+          "group_l2": [
+            0.9162831301196097,
+            0.32804034385309844,
+            0.24590270017783186
+          ],
+          "residual_l2": 5.728295653463367e-06,
+          "relative_to_full": 6.754457537378891e-06,
+          "relative_to_group_norm_sum": 3.843910241831992e-06,
+          "max_absolute_error": 3.0063092708587646e-06,
+          "cosine": 0.9999999999772637,
+          "repeated_full_backward_equal": true,
+          "original_scalar": 0.8752819299697876,
+          "group_scalar_sum": 0.8752819299697876
+        }
+      ],
+      "probe_sha256": "8151c994dccb1494f3e3a2e978b3ad37d099b7e3dbc72fbc880d45a1e735aae3"
+    },
+    "completed_pair_readonly_cpu_recomputation": [
+      {
+        "pair_id": 1,
+        "relative_l2": 1.0667566584308776e-06,
+        "cosine": 0.9999999999994562
+      },
+      {
+        "pair_id": 4,
+        "relative_l2": 5.330421149814777e-06,
+        "cosine": 0.9999999999886077
+      }
+    ],
+    "failure_indices_mapped_to_parameters": {
+      "14332": "conv_out1.0.weight[28]",
+      "14314": "conv_out1.0.weight[10]",
+      "14408": "conv_out1.0.weight[104]",
+      "14472": "conv_out1.0.weight[168]",
+      "14482": "conv_out1.0.weight[178]",
+      "13687": "TPro.conv.0.weight[503]"
+    },
+    "interpretation": "Consistent with finite-precision accumulation order differences: separate group backwards apply shared-layer reductions separately, while original scalar backward combines upstream signals before the shared backward. Identical repeated original scalar gradients in the zero-update probe argue against uncontrolled stochastic changes. This is not evidence of an altered full_F gradient or model update.",
+    "new_guard": "norm(grouped_sum - original_full_gradient) / max(norm(original_full_gradient), 1e-12) <= 1e-4; original scalar gradient still drives full_F Adam",
+    "diagnostic_limit": "Whole-vector closeness is a diagnostic of recomposition, not proof that replacing original full_F with grouped gradients would be bitwise equivalent. The implementation does not make that replacement.",
+    "official_numerical_context": "https://docs.pytorch.org/docs/2.14/notes/numerical_accuracy.html"
+  },
+  "unchanged_execution_contract": [
+    "same 16 update/observer pairs and frozen release teacher cohorts",
+    "same original loss scalars and coefficients, trainable coordinates, FP32 and BN settings",
+    "same F2304 model and full Adam-state reset and four RNG state reset",
+    "same autograd full_F/no_keep/no_track gradients and one actual Adam step per copy",
+    "same effect metrics and conditional gate; no real ConFIG step enabled by this amendment",
+    "pair1 and pair4 preserved byte-for-byte; only remaining14 pair copies resume"
+  ],
+  "failed_log_sha256": {
+    "runtime/diagnose_0.log": "30109a121bc047e0bb274df5fe55da4f1462d1b9e0fc6bc5a03e6cd35820824b",
+    "runtime/diagnose_1.log": "5d8622511297c57f93109709a8850d546fbc4d28a802d32244a1e57e4aff2410",
+    "runtime/diagnose_2.log": "4b32d75a0b93e563385a63068e7e3235d45b214fc6c3eea1f900577c8a17b494"
+  },
+  "review_execution": "Read-only filesystem/CPU archive analysis; no model forwards, GPU use, optimizer steps, or source changes by reviewer. Only this evaluation review artifact was added."
+}

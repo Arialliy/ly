@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN",
+  "checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "protocol_sha256": "585b39e881d78bb44144a6244fa346b6072a3c4241f20b8673375950cf2a18c3",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/cohorts.py": "543e9603e423dd2fdd3d0e88a3956a3dea7d5dcb099672a145aedcfcc12cb92f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/evaluate.py": "87c26c981bb4fc6beb48a7af85018c732ca2668def148b4e0574995a2411433e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/launch.py": "94c2bc31fa85735c991ade0e9a6aedc7eb4622f1c49711e58b67c9b56f667275",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/run_diagnostic.py": "d374094a67b27aa9888f2fb965da1e70463768edf38c2bd856ab9b4cd1187e6a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/runtime.py": "28a69241daec9db97d5fa8ef777ce3f9829f6a717c8925febdba7ed79edd2a57",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/trace.py": "681e4e94bc46f2453414c83d47080180c67be14eeeed29a47989a08fdb85d178",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/trace_smoke.py": "0f6496d9eb3fcc2593a449610829c9b26b96de373fe453a02c5afe4860a841bd"
+  },
+  "cohort_receipt_sha256": "0f4b072348718d401ce6e49ba2bcf8036ffe817777b50e2c84bee38f39669951",
+  "checks": {
+    "TRACE_SMOKE.json": "9465af92cd173765f96d25c24318c2d22e3b7222553a127f1a8bd3f02d8a5920",
+    "HEAD_JACOBIAN_CPU.json": "008a30c67ab70f20d119ab9fd8372d89e9578349b52f77541272bae47bc9cc0c",
+    "FIXTURE_RESULT.json": "d60864c2e5d9bfef5cd6c6370b758f69489e0d2fca75c42650bba1ae9674efab"
+  }
+}

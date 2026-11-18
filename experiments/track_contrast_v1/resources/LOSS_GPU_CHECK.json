@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "deterministic_algorithms": true,
+  "overlapping_gather_repeated_gradient_bit_identical": true,
+  "real_size_feature_shape": [
+    8,
+    8,
+    40,
+    128,
+    128
+  ],
+  "pairs": 128,
+  "loss": 3.2384796142578125,
+  "forward_backward_seconds": 0.17162485898006707,
+  "peak_gpu_allocated_bytes": 741148160,
+  "nonzero_gradient": true,
+  "stats": {
+    "pairs_requested": 128,
+    "pairs_used": 128,
+    "valid_negatives": 256,
+    "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+    "positive_cosine_mean": 0.04682845249772072,
+    "negative_cosine_mean": 0.020778615027666092
+  }
+}

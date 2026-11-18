@@ -1,0 +1,2272 @@
+{
+  "status": "PASS",
+  "threshold": 0.5,
+  "results": [
+    {
+      "sequence": "DJI_0028_2",
+      "status": "PASS",
+      "threshold": 0.5,
+      "source_annotation_count": 1280,
+      "duplicate_annotation_ids": {},
+      "duplicate_image_track_keys": {},
+      "counts": {
+        "gt_frames": 1280,
+        "matched_gt_frames": 221,
+        "components": 234,
+        "partial_boxes": 128,
+        "negative_x_boxes": 128,
+        "gt_frames_with_identical_other_track_box": 18,
+        "box_response_positive_but_point_unmatched": 127,
+        "unmatched_with_alternative_tied_peak_in_box": 82
+      },
+      "saturation": {
+        "components_with_tied_maxima": 194,
+        "components_with_max_exactly_1": 194,
+        "components_with_saturated_plateau": 194
+      },
+      "selected_track": {
+        "track_id": 3800006,
+        "gt_frames": 160,
+        "matched_frames": 154,
+        "longest_unmatched_frames": 4,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 175,
+            "end_source_frame": 178,
+            "frames": 4
+          },
+          {
+            "start_source_frame": 273,
+            "end_source_frame": 273,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 329,
+            "end_source_frame": 329,
+            "frames": 1
+          }
+        ]
+      },
+      "selected_positive_response_point_unmatched": [
+        {
+          "source_frame": 175,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 176,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 177,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 178,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 273,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 329,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        }
+      ],
+      "tracks": [
+        {
+          "track_id": 3800000,
+          "gt_frames": 160,
+          "matched_frames": 11,
+          "longest_unmatched_frames": 130,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 302,
+              "frames": 130
+            },
+            {
+              "start_source_frame": 309,
+              "end_source_frame": 309,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 314,
+              "end_source_frame": 316,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 318,
+              "end_source_frame": 332,
+              "frames": 15
+            }
+          ]
+        },
+        {
+          "track_id": 3800001,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 332,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 3800002,
+          "gt_frames": 160,
+          "matched_frames": 17,
+          "longest_unmatched_frames": 124,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 176,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 179,
+              "end_source_frame": 179,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 182,
+              "end_source_frame": 182,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 184,
+              "end_source_frame": 184,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 186,
+              "end_source_frame": 186,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 193,
+              "end_source_frame": 193,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 198,
+              "end_source_frame": 207,
+              "frames": 10
+            },
+            {
+              "start_source_frame": 209,
+              "end_source_frame": 332,
+              "frames": 124
+            }
+          ]
+        },
+        {
+          "track_id": 3800003,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 332,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 3800004,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 332,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 3800005,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 332,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 3800006,
+          "gt_frames": 160,
+          "matched_frames": 154,
+          "longest_unmatched_frames": 4,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 175,
+              "end_source_frame": 178,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 273,
+              "end_source_frame": 273,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 329,
+              "end_source_frame": 329,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 3800007,
+          "gt_frames": 160,
+          "matched_frames": 39,
+          "longest_unmatched_frames": 94,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 174,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 179,
+              "end_source_frame": 272,
+              "frames": 94
+            },
+            {
+              "start_source_frame": 274,
+              "end_source_frame": 291,
+              "frames": 18
+            },
+            {
+              "start_source_frame": 293,
+              "end_source_frame": 296,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 298,
+              "end_source_frame": 298,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 300,
+              "end_source_frame": 300,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 302,
+              "end_source_frame": 302,
+              "frames": 1
+            }
+          ]
+        }
+      ],
+      "row_and_component_csv_exact": true,
+      "maximum_cardinality_exhaustive_DP_all_frames": true,
+      "all_clips_summary_copy_exact": true,
+      "source_annotation_sha256": "823b219a6b94c075c3632e045abb23b1395661ef911a1cba9c96f483f2770025"
+    },
+    {
+      "sequence": "DJI_0028_4",
+      "status": "PASS",
+      "threshold": 0.5,
+      "source_annotation_count": 1280,
+      "duplicate_annotation_ids": {},
+      "duplicate_image_track_keys": {},
+      "counts": {
+        "gt_frames": 1280,
+        "matched_gt_frames": 354,
+        "components": 1313,
+        "partial_boxes": 0,
+        "negative_x_boxes": 0,
+        "gt_frames_with_identical_other_track_box": 0,
+        "box_response_positive_but_point_unmatched": 2,
+        "unmatched_with_alternative_tied_peak_in_box": 2
+      },
+      "saturation": {
+        "components_with_tied_maxima": 662,
+        "components_with_max_exactly_1": 687,
+        "components_with_saturated_plateau": 649
+      },
+      "selected_track": {
+        "track_id": 4400005,
+        "gt_frames": 160,
+        "matched_frames": 158,
+        "longest_unmatched_frames": 1,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 353,
+            "end_source_frame": 353,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 444,
+            "end_source_frame": 444,
+            "frames": 1
+          }
+        ]
+      },
+      "selected_positive_response_point_unmatched": [
+        {
+          "source_frame": 353,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        },
+        {
+          "source_frame": 444,
+          "boxmax": 1.0,
+          "tied_peak_inside_but_selected_outside": true
+        }
+      ],
+      "tracks": [
+        {
+          "track_id": 4400001,
+          "gt_frames": 160,
+          "matched_frames": 5,
+          "longest_unmatched_frames": 84,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 351,
+              "frames": 67
+            },
+            {
+              "start_source_frame": 354,
+              "end_source_frame": 355,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 358,
+              "end_source_frame": 359,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 361,
+              "end_source_frame": 444,
+              "frames": 84
+            }
+          ]
+        },
+        {
+          "track_id": 4400002,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 444,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 4400003,
+          "gt_frames": 160,
+          "matched_frames": 30,
+          "longest_unmatched_frames": 76,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 360,
+              "frames": 76
+            },
+            {
+              "start_source_frame": 370,
+              "end_source_frame": 370,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 372,
+              "end_source_frame": 373,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 375,
+              "end_source_frame": 375,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 389,
+              "end_source_frame": 389,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 396,
+              "end_source_frame": 444,
+              "frames": 49
+            }
+          ]
+        },
+        {
+          "track_id": 4400004,
+          "gt_frames": 104,
+          "matched_frames": 104,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4400005,
+          "gt_frames": 160,
+          "matched_frames": 158,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 353,
+              "end_source_frame": 353,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 444,
+              "end_source_frame": 444,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4400006,
+          "gt_frames": 160,
+          "matched_frames": 1,
+          "longest_unmatched_frames": 142,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 426,
+              "frames": 142
+            },
+            {
+              "start_source_frame": 428,
+              "end_source_frame": 444,
+              "frames": 17
+            }
+          ]
+        },
+        {
+          "track_id": 4400007,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 444,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 4400008,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 285,
+              "end_source_frame": 444,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 4520004,
+          "gt_frames": 56,
+          "matched_frames": 56,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        }
+      ],
+      "row_and_component_csv_exact": true,
+      "maximum_cardinality_exhaustive_DP_all_frames": true,
+      "all_clips_summary_copy_exact": true,
+      "source_annotation_sha256": "b72c46c27c075510374b081fdd990c3c7136517f39b207c65159358721978c5e"
+    },
+    {
+      "sequence": "DJI_0032_5",
+      "status": "PASS",
+      "threshold": 0.5,
+      "source_annotation_count": 1748,
+      "duplicate_annotation_ids": {},
+      "duplicate_image_track_keys": {},
+      "counts": {
+        "gt_frames": 1748,
+        "matched_gt_frames": 1037,
+        "components": 10323,
+        "partial_boxes": 0,
+        "negative_x_boxes": 0,
+        "gt_frames_with_identical_other_track_box": 0,
+        "box_response_positive_but_point_unmatched": 48,
+        "unmatched_with_alternative_tied_peak_in_box": 2
+      },
+      "saturation": {
+        "components_with_tied_maxima": 2552,
+        "components_with_max_exactly_1": 2687,
+        "components_with_saturated_plateau": 2423
+      },
+      "selected_track": {
+        "track_id": 4801536,
+        "gt_frames": 160,
+        "matched_frames": 0,
+        "longest_unmatched_frames": 160,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 63,
+            "end_source_frame": 222,
+            "frames": 160
+          }
+        ]
+      },
+      "selected_positive_response_point_unmatched": [
+        {
+          "source_frame": 182,
+          "boxmax": 0.5606144666671753,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 184,
+          "boxmax": 0.9996942281723022,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 188,
+          "boxmax": 0.9997759461402893,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 189,
+          "boxmax": 0.9966680407524109,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 191,
+          "boxmax": 0.9625642895698547,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 192,
+          "boxmax": 0.9428614377975464,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 194,
+          "boxmax": 0.9996753931045532,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 195,
+          "boxmax": 0.9961732029914856,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 197,
+          "boxmax": 0.9973040819168091,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 198,
+          "boxmax": 0.9923776388168335,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 199,
+          "boxmax": 0.995165228843689,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 203,
+          "boxmax": 0.900293231010437,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 204,
+          "boxmax": 0.9993911981582642,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 205,
+          "boxmax": 0.9279837012290955,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 207,
+          "boxmax": 0.9971545934677124,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 208,
+          "boxmax": 0.997734785079956,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 211,
+          "boxmax": 0.9834535717964172,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 212,
+          "boxmax": 0.9771958589553833,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 213,
+          "boxmax": 0.9090011715888977,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 215,
+          "boxmax": 0.8955246806144714,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 216,
+          "boxmax": 0.9992782473564148,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 217,
+          "boxmax": 0.9986475110054016,
+          "tied_peak_inside_but_selected_outside": false
+        },
+        {
+          "source_frame": 218,
+          "boxmax": 0.9989751577377319,
+          "tied_peak_inside_but_selected_outside": false
+        }
+      ],
+      "tracks": [
+        {
+          "track_id": 4800504,
+          "gt_frames": 5,
+          "matched_frames": 5,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4800505,
+          "gt_frames": 2,
+          "matched_frames": 1,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 106,
+              "end_source_frame": 106,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800508,
+          "gt_frames": 5,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 83,
+              "end_source_frame": 84,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 86,
+              "end_source_frame": 87,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 122,
+              "end_source_frame": 122,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800511,
+          "gt_frames": 40,
+          "matched_frames": 35,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 90,
+              "end_source_frame": 90,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 92,
+              "end_source_frame": 92,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 95,
+              "end_source_frame": 95,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 99,
+              "end_source_frame": 100,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4800512,
+          "gt_frames": 1,
+          "matched_frames": 1,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4800514,
+          "gt_frames": 4,
+          "matched_frames": 2,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 110,
+              "end_source_frame": 111,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4800515,
+          "gt_frames": 17,
+          "matched_frames": 16,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 117,
+              "end_source_frame": 117,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800516,
+          "gt_frames": 1,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 63,
+              "end_source_frame": 63,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800519,
+          "gt_frames": 7,
+          "matched_frames": 7,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4800520,
+          "gt_frames": 18,
+          "matched_frames": 14,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 153,
+              "end_source_frame": 154,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 164,
+              "end_source_frame": 165,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4800530,
+          "gt_frames": 1,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 142,
+              "end_source_frame": 142,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800531,
+          "gt_frames": 16,
+          "matched_frames": 11,
+          "longest_unmatched_frames": 3,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 125,
+              "end_source_frame": 127,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 132,
+              "end_source_frame": 132,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 221,
+              "end_source_frame": 221,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800532,
+          "gt_frames": 10,
+          "matched_frames": 10,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4800534,
+          "gt_frames": 8,
+          "matched_frames": 4,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 155,
+              "end_source_frame": 156,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 158,
+              "end_source_frame": 158,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 206,
+              "end_source_frame": 206,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800535,
+          "gt_frames": 20,
+          "matched_frames": 19,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 200,
+              "end_source_frame": 200,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4800539,
+          "gt_frames": 2,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 207,
+              "end_source_frame": 208,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4800541,
+          "gt_frames": 6,
+          "matched_frames": 6,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4801001,
+          "gt_frames": 14,
+          "matched_frames": 13,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 193,
+              "end_source_frame": 193,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4801009,
+          "gt_frames": 45,
+          "matched_frames": 8,
+          "longest_unmatched_frames": 32,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 63,
+              "end_source_frame": 67,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 77,
+              "end_source_frame": 108,
+              "frames": 32
+            }
+          ]
+        },
+        {
+          "track_id": 4801017,
+          "gt_frames": 1,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 75,
+              "end_source_frame": 75,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4801084,
+          "gt_frames": 13,
+          "matched_frames": 13,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4801509,
+          "gt_frames": 1,
+          "matched_frames": 1,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4801517,
+          "gt_frames": 145,
+          "matched_frames": 106,
+          "longest_unmatched_frames": 8,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 63,
+              "end_source_frame": 64,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 69,
+              "end_source_frame": 69,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 73,
+              "end_source_frame": 73,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 76,
+              "end_source_frame": 77,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 116,
+              "end_source_frame": 116,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 131,
+              "end_source_frame": 137,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 139,
+              "end_source_frame": 145,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 147,
+              "end_source_frame": 150,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 186,
+              "end_source_frame": 193,
+              "frames": 8
+            },
+            {
+              "start_source_frame": 195,
+              "end_source_frame": 196,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 199,
+              "end_source_frame": 200,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 203,
+              "end_source_frame": 203,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 208,
+              "end_source_frame": 208,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4801536,
+          "gt_frames": 160,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 160,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 63,
+              "end_source_frame": 222,
+              "frames": 160
+            }
+          ]
+        },
+        {
+          "track_id": 4801583,
+          "gt_frames": 148,
+          "matched_frames": 56,
+          "longest_unmatched_frames": 64,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 75,
+              "end_source_frame": 96,
+              "frames": 22
+            },
+            {
+              "start_source_frame": 99,
+              "end_source_frame": 162,
+              "frames": 64
+            },
+            {
+              "start_source_frame": 172,
+              "end_source_frame": 174,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 210,
+              "end_source_frame": 210,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 219,
+              "end_source_frame": 220,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4802029,
+          "gt_frames": 26,
+          "matched_frames": 20,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 126,
+              "end_source_frame": 126,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 129,
+              "end_source_frame": 129,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 199,
+              "end_source_frame": 200,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 218,
+              "end_source_frame": 218,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 220,
+              "end_source_frame": 220,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4803451,
+          "gt_frames": 9,
+          "matched_frames": 8,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 171,
+              "end_source_frame": 171,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920504,
+          "gt_frames": 30,
+          "matched_frames": 21,
+          "longest_unmatched_frames": 3,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 80,
+              "end_source_frame": 82,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 135,
+              "end_source_frame": 135,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 137,
+              "end_source_frame": 139,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 142,
+              "end_source_frame": 143,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920505,
+          "gt_frames": 17,
+          "matched_frames": 4,
+          "longest_unmatched_frames": 8,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 66,
+              "end_source_frame": 66,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 72,
+              "end_source_frame": 72,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 98,
+              "end_source_frame": 105,
+              "frames": 8
+            },
+            {
+              "start_source_frame": 107,
+              "end_source_frame": 109,
+              "frames": 3
+            }
+          ]
+        },
+        {
+          "track_id": 4920507,
+          "gt_frames": 2,
+          "matched_frames": 2,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4920508,
+          "gt_frames": 13,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 8,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 85,
+              "end_source_frame": 85,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 88,
+              "end_source_frame": 89,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 114,
+              "end_source_frame": 121,
+              "frames": 8
+            },
+            {
+              "start_source_frame": 123,
+              "end_source_frame": 124,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920511,
+          "gt_frames": 26,
+          "matched_frames": 20,
+          "longest_unmatched_frames": 4,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 81,
+              "end_source_frame": 84,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 88,
+              "end_source_frame": 89,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920512,
+          "gt_frames": 21,
+          "matched_frames": 17,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 69,
+              "end_source_frame": 70,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 74,
+              "end_source_frame": 75,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920514,
+          "gt_frames": 33,
+          "matched_frames": 19,
+          "longest_unmatched_frames": 7,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 77,
+              "end_source_frame": 78,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 80,
+              "end_source_frame": 80,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 108,
+              "end_source_frame": 108,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 113,
+              "end_source_frame": 114,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 142,
+              "end_source_frame": 148,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 151,
+              "end_source_frame": 151,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920515,
+          "gt_frames": 44,
+          "matched_frames": 38,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 89,
+              "end_source_frame": 90,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 118,
+              "end_source_frame": 118,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 168,
+              "end_source_frame": 168,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 173,
+              "end_source_frame": 174,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920516,
+          "gt_frames": 106,
+          "matched_frames": 78,
+          "longest_unmatched_frames": 10,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 69,
+              "end_source_frame": 72,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 77,
+              "end_source_frame": 80,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 82,
+              "end_source_frame": 91,
+              "frames": 10
+            },
+            {
+              "start_source_frame": 111,
+              "end_source_frame": 111,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 120,
+              "end_source_frame": 120,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 125,
+              "end_source_frame": 125,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 155,
+              "end_source_frame": 155,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 161,
+              "end_source_frame": 162,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 164,
+              "end_source_frame": 164,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 166,
+              "end_source_frame": 167,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 169,
+              "end_source_frame": 169,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920519,
+          "gt_frames": 58,
+          "matched_frames": 46,
+          "longest_unmatched_frames": 5,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 90,
+              "end_source_frame": 91,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 107,
+              "end_source_frame": 109,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 111,
+              "end_source_frame": 111,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 113,
+              "end_source_frame": 117,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 119,
+              "end_source_frame": 119,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920520,
+          "gt_frames": 45,
+          "matched_frames": 18,
+          "longest_unmatched_frames": 21,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 107,
+              "end_source_frame": 127,
+              "frames": 21
+            },
+            {
+              "start_source_frame": 129,
+              "end_source_frame": 129,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 131,
+              "end_source_frame": 131,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 137,
+              "end_source_frame": 137,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 139,
+              "end_source_frame": 141,
+              "frames": 3
+            }
+          ]
+        },
+        {
+          "track_id": 4920530,
+          "gt_frames": 66,
+          "matched_frames": 38,
+          "longest_unmatched_frames": 7,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 108,
+              "end_source_frame": 111,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 116,
+              "end_source_frame": 117,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 122,
+              "end_source_frame": 122,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 139,
+              "end_source_frame": 141,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 143,
+              "end_source_frame": 143,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 162,
+              "end_source_frame": 165,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 195,
+              "end_source_frame": 201,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 203,
+              "end_source_frame": 204,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 206,
+              "end_source_frame": 207,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 209,
+              "end_source_frame": 210,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920531,
+          "gt_frames": 38,
+          "matched_frames": 10,
+          "longest_unmatched_frames": 17,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 139,
+              "end_source_frame": 139,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 141,
+              "end_source_frame": 157,
+              "frames": 17
+            },
+            {
+              "start_source_frame": 179,
+              "end_source_frame": 183,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 185,
+              "end_source_frame": 185,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 212,
+              "end_source_frame": 212,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 214,
+              "end_source_frame": 215,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 219,
+              "end_source_frame": 219,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920532,
+          "gt_frames": 51,
+          "matched_frames": 43,
+          "longest_unmatched_frames": 4,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 126,
+              "end_source_frame": 129,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 131,
+              "end_source_frame": 131,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 139,
+              "end_source_frame": 139,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 209,
+              "end_source_frame": 210,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4920533,
+          "gt_frames": 46,
+          "matched_frames": 28,
+          "longest_unmatched_frames": 6,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 142,
+              "end_source_frame": 142,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 144,
+              "end_source_frame": 145,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 153,
+              "end_source_frame": 154,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 169,
+              "end_source_frame": 170,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 172,
+              "end_source_frame": 177,
+              "frames": 6
+            },
+            {
+              "start_source_frame": 199,
+              "end_source_frame": 202,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 204,
+              "end_source_frame": 204,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920534,
+          "gt_frames": 44,
+          "matched_frames": 30,
+          "longest_unmatched_frames": 8,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 160,
+              "end_source_frame": 164,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 166,
+              "end_source_frame": 173,
+              "frames": 8
+            },
+            {
+              "start_source_frame": 186,
+              "end_source_frame": 186,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920535,
+          "gt_frames": 51,
+          "matched_frames": 51,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4920539,
+          "gt_frames": 33,
+          "matched_frames": 15,
+          "longest_unmatched_frames": 10,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 175,
+              "end_source_frame": 178,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 184,
+              "end_source_frame": 185,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 187,
+              "end_source_frame": 187,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 197,
+              "end_source_frame": 206,
+              "frames": 10
+            },
+            {
+              "start_source_frame": 209,
+              "end_source_frame": 209,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920541,
+          "gt_frames": 26,
+          "matched_frames": 25,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 175,
+              "end_source_frame": 175,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4920544,
+          "gt_frames": 16,
+          "matched_frames": 14,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 207,
+              "end_source_frame": 208,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4921001,
+          "gt_frames": 30,
+          "matched_frames": 16,
+          "longest_unmatched_frames": 7,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 186,
+              "end_source_frame": 192,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 194,
+              "end_source_frame": 195,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 217,
+              "end_source_frame": 221,
+              "frames": 5
+            }
+          ]
+        },
+        {
+          "track_id": 4921009,
+          "gt_frames": 1,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 109,
+              "end_source_frame": 109,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4921018,
+          "gt_frames": 26,
+          "matched_frames": 9,
+          "longest_unmatched_frames": 15,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 125,
+              "end_source_frame": 125,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 130,
+              "end_source_frame": 130,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 132,
+              "end_source_frame": 146,
+              "frames": 15
+            }
+          ]
+        },
+        {
+          "track_id": 4921517,
+          "gt_frames": 14,
+          "matched_frames": 10,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 138,
+              "end_source_frame": 138,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 211,
+              "end_source_frame": 212,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 220,
+              "end_source_frame": 220,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4921583,
+          "gt_frames": 12,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 12,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 63,
+              "end_source_frame": 74,
+              "frames": 12
+            }
+          ]
+        },
+        {
+          "track_id": 4922029,
+          "gt_frames": 42,
+          "matched_frames": 38,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 202,
+              "end_source_frame": 202,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 214,
+              "end_source_frame": 214,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 221,
+              "end_source_frame": 222,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4923712,
+          "gt_frames": 26,
+          "matched_frames": 15,
+          "longest_unmatched_frames": 3,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 200,
+              "end_source_frame": 201,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 203,
+              "end_source_frame": 205,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 213,
+              "end_source_frame": 213,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 217,
+              "end_source_frame": 218,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 220,
+              "end_source_frame": 222,
+              "frames": 3
+            }
+          ]
+        },
+        {
+          "track_id": 4923713,
+          "gt_frames": 26,
+          "matched_frames": 26,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4923714,
+          "gt_frames": 6,
+          "matched_frames": 6,
+          "longest_unmatched_frames": 0,
+          "unmatched_runs": []
+        },
+        {
+          "track_id": 4923951,
+          "gt_frames": 74,
+          "matched_frames": 44,
+          "longest_unmatched_frames": 13,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 175,
+              "end_source_frame": 175,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 179,
+              "end_source_frame": 179,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 181,
+              "end_source_frame": 182,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 194,
+              "end_source_frame": 194,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 197,
+              "end_source_frame": 209,
+              "frames": 13
+            },
+            {
+              "start_source_frame": 211,
+              "end_source_frame": 222,
+              "frames": 12
+            }
+          ]
+        }
+      ],
+      "row_and_component_csv_exact": true,
+      "maximum_cardinality_exhaustive_DP_all_frames": true,
+      "all_clips_summary_copy_exact": true,
+      "source_annotation_sha256": "7dc02e9dbaf1a0f06e36591cffcd8142bd7a555ab6cda6dfe94e6c39fdd0432b"
+    },
+    {
+      "sequence": "DJI_0047_3",
+      "status": "PASS",
+      "threshold": 0.5,
+      "source_annotation_count": 665,
+      "duplicate_annotation_ids": {},
+      "duplicate_image_track_keys": {},
+      "counts": {
+        "gt_frames": 665,
+        "matched_gt_frames": 196,
+        "components": 6052,
+        "partial_boxes": 0,
+        "negative_x_boxes": 0,
+        "gt_frames_with_identical_other_track_box": 0,
+        "box_response_positive_but_point_unmatched": 22,
+        "unmatched_with_alternative_tied_peak_in_box": 1
+      },
+      "saturation": {
+        "components_with_tied_maxima": 775,
+        "components_with_max_exactly_1": 927,
+        "components_with_saturated_plateau": 715
+      },
+      "selected_track": {
+        "track_id": 4621500,
+        "gt_frames": 160,
+        "matched_frames": 17,
+        "longest_unmatched_frames": 142,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 1,
+            "end_source_frame": 1,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 18,
+            "end_source_frame": 159,
+            "frames": 142
+          }
+        ]
+      },
+      "selected_positive_response_point_unmatched": [],
+      "tracks": [
+        {
+          "track_id": 4500500,
+          "gt_frames": 49,
+          "matched_frames": 16,
+          "longest_unmatched_frames": 14,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 0,
+              "end_source_frame": 6,
+              "frames": 7
+            },
+            {
+              "start_source_frame": 8,
+              "end_source_frame": 21,
+              "frames": 14
+            },
+            {
+              "start_source_frame": 29,
+              "end_source_frame": 31,
+              "frames": 3
+            },
+            {
+              "start_source_frame": 33,
+              "end_source_frame": 37,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 45,
+              "end_source_frame": 48,
+              "frames": 4
+            }
+          ]
+        },
+        {
+          "track_id": 4500501,
+          "gt_frames": 12,
+          "matched_frames": 9,
+          "longest_unmatched_frames": 1,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 97,
+              "end_source_frame": 97,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 99,
+              "end_source_frame": 99,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 101,
+              "end_source_frame": 101,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4500503,
+          "gt_frames": 86,
+          "matched_frames": 28,
+          "longest_unmatched_frames": 21,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 13,
+              "end_source_frame": 13,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 15,
+              "end_source_frame": 35,
+              "frames": 21
+            },
+            {
+              "start_source_frame": 40,
+              "end_source_frame": 40,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 45,
+              "end_source_frame": 45,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 47,
+              "end_source_frame": 51,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 54,
+              "end_source_frame": 54,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 56,
+              "end_source_frame": 71,
+              "frames": 16
+            },
+            {
+              "start_source_frame": 74,
+              "end_source_frame": 84,
+              "frames": 11
+            },
+            {
+              "start_source_frame": 159,
+              "end_source_frame": 159,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4501000,
+          "gt_frames": 113,
+          "matched_frames": 48,
+          "longest_unmatched_frames": 47,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 0,
+              "end_source_frame": 46,
+              "frames": 47
+            },
+            {
+              "start_source_frame": 59,
+              "end_source_frame": 60,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 108,
+              "end_source_frame": 108,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 126,
+              "end_source_frame": 129,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 134,
+              "end_source_frame": 135,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 144,
+              "end_source_frame": 147,
+              "frames": 4
+            },
+            {
+              "start_source_frame": 153,
+              "end_source_frame": 154,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 157,
+              "end_source_frame": 159,
+              "frames": 3
+            }
+          ]
+        },
+        {
+          "track_id": 4501001,
+          "gt_frames": 75,
+          "matched_frames": 15,
+          "longest_unmatched_frames": 36,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 0,
+              "end_source_frame": 4,
+              "frames": 5
+            },
+            {
+              "start_source_frame": 10,
+              "end_source_frame": 45,
+              "frames": 36
+            },
+            {
+              "start_source_frame": 47,
+              "end_source_frame": 63,
+              "frames": 17
+            },
+            {
+              "start_source_frame": 73,
+              "end_source_frame": 74,
+              "frames": 2
+            }
+          ]
+        },
+        {
+          "track_id": 4501002,
+          "gt_frames": 39,
+          "matched_frames": 9,
+          "longest_unmatched_frames": 30,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 6,
+              "end_source_frame": 35,
+              "frames": 30
+            }
+          ]
+        },
+        {
+          "track_id": 4501003,
+          "gt_frames": 117,
+          "matched_frames": 49,
+          "longest_unmatched_frames": 24,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 43,
+              "end_source_frame": 43,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 47,
+              "end_source_frame": 47,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 51,
+              "end_source_frame": 51,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 55,
+              "end_source_frame": 55,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 64,
+              "end_source_frame": 87,
+              "frames": 24
+            },
+            {
+              "start_source_frame": 96,
+              "end_source_frame": 101,
+              "frames": 6
+            },
+            {
+              "start_source_frame": 107,
+              "end_source_frame": 114,
+              "frames": 8
+            },
+            {
+              "start_source_frame": 116,
+              "end_source_frame": 121,
+              "frames": 6
+            },
+            {
+              "start_source_frame": 135,
+              "end_source_frame": 154,
+              "frames": 20
+            }
+          ]
+        },
+        {
+          "track_id": 4501005,
+          "gt_frames": 4,
+          "matched_frames": 0,
+          "longest_unmatched_frames": 4,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 156,
+              "end_source_frame": 159,
+              "frames": 4
+            }
+          ]
+        },
+        {
+          "track_id": 4620501,
+          "gt_frames": 10,
+          "matched_frames": 5,
+          "longest_unmatched_frames": 2,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 102,
+              "end_source_frame": 103,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 114,
+              "end_source_frame": 115,
+              "frames": 2
+            },
+            {
+              "start_source_frame": 117,
+              "end_source_frame": 117,
+              "frames": 1
+            }
+          ]
+        },
+        {
+          "track_id": 4621500,
+          "gt_frames": 160,
+          "matched_frames": 17,
+          "longest_unmatched_frames": 142,
+          "unmatched_runs": [
+            {
+              "start_source_frame": 1,
+              "end_source_frame": 1,
+              "frames": 1
+            },
+            {
+              "start_source_frame": 18,
+              "end_source_frame": 159,
+              "frames": 142
+            }
+          ]
+        }
+      ],
+      "row_and_component_csv_exact": true,
+      "maximum_cardinality_exhaustive_DP_all_frames": true,
+      "all_clips_summary_copy_exact": true,
+      "source_annotation_sha256": "e4d8220a7834c4cd2ac2c7c37d5b02bc1d68953ff9d9531e5d16e3b4b8c078a7"
+    }
+  ],
+  "aggregate_counts": {
+    "gt_frames": 4973,
+    "matched_gt_frames": 1808,
+    "components": 17922,
+    "partial_boxes": 128,
+    "negative_x_boxes": 128,
+    "gt_frames_with_identical_other_track_box": 18,
+    "box_response_positive_but_point_unmatched": 199,
+    "unmatched_with_alternative_tied_peak_in_box": 87
+  },
+  "code_sha256": "7fcfbb8a53513707ef6ccf27029d9d9b974b5d049854bba030e223322f7ae313",
+  "scope": "Independent full recomputation from original boxes and fused predictions, no imports from analysis code. No overlap-window result audit."
+}

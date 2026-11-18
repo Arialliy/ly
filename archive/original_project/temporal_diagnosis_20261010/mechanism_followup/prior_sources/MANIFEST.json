@@ -1,0 +1,285 @@
+{
+  "checked_date": "2026-10-10",
+  "files": [
+    {
+      "path": "DeepPro/README.md",
+      "bytes": 8645,
+      "sha256": "58505f280be693b75bd2a125299ee1349e349f4db688f5da0fa7aa13d1d42150"
+    },
+    {
+      "path": "DeepPro/data_utils/TestDataLoader.py",
+      "bytes": 7160,
+      "sha256": "03210e84ac9acfc3fd85ef5bcd2c787cfc126e2580e622fca9c3297c3e1c022e"
+    },
+    {
+      "path": "DeepPro/data_utils/TrainDataLoader.py",
+      "bytes": 8033,
+      "sha256": "ac94cf5bbfa2a4bcb76f5eeec0e047b999c76d1423afeb1a54136bf535ffa3d4"
+    },
+    {
+      "path": "DeepPro/networks/models/DeepPro-Plus.py",
+      "bytes": 3902,
+      "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668"
+    },
+    {
+      "path": "DeepPro/networks/models/DeepPro-Plus_forMovingScenes.py",
+      "bytes": 5615,
+      "sha256": "2eb1e1f03da754403c55aa2d4016310f50bc19a23dfcf1c4d7ae8598107c20eb"
+    },
+    {
+      "path": "DeepPro/networks/models/DeepPro.py",
+      "bytes": 6137,
+      "sha256": "ebd710ca3262bf6cace8d7f3a435e2761146c928c70c6d1fecaa5cc6d2a03473"
+    },
+    {
+      "path": "DeepPro/test.py",
+      "bytes": 10473,
+      "sha256": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b"
+    },
+    {
+      "path": "DeepPro/train.py",
+      "bytes": 13058,
+      "sha256": "51d77e855ee798ee5b6371a130f2cab5b823ffe22a192ea52383d879f95f988d"
+    },
+    {
+      "path": "DeepPro_tree.json",
+      "bytes": 64583,
+      "sha256": "e622b5f674f2a15ff35a6abe27d71e99cc322dabf977176df111177078d5d222"
+    },
+    {
+      "path": "LVNet/README.md",
+      "bytes": 4059,
+      "sha256": "2a5e969652dc58448e064cd0c89e120ce86be5cbacd1029e979260882f5ee068"
+    },
+    {
+      "path": "LVNet/model.py",
+      "bytes": 24906,
+      "sha256": "f90f7810145e08f0e32738792142e51aada0edcea783fc6e4bee51168e3de698"
+    },
+    {
+      "path": "LVNet_tree.json",
+      "bytes": 1496,
+      "sha256": "a459c2ee1f7bc4fc0ac71ab2804d5c7c2affd578d0f1f74639fe8d62d7945f0f"
+    },
+    {
+      "path": "MIST/README.md",
+      "bytes": 7053,
+      "sha256": "82ebcbf2542168f767425c843e8e140c97521e7e62471f8c05957bcba1ecf957"
+    },
+    {
+      "path": "MIST/configs/test_MISTNet_MIST.yaml",
+      "bytes": 268,
+      "sha256": "a6edcacf351c0afb8740cae798fc74eda2170c15afdb40958a02009c8987dca9"
+    },
+    {
+      "path": "MIST/configs/test_MISTNet_NUDTMIRSDT.yaml",
+      "bytes": 261,
+      "sha256": "9e0749b79c2ca29fd5ff1326b33b2a5a269d60f388a102d6ec197c2d092cbdae"
+    },
+    {
+      "path": "MIST/configs/train_MISTNet_MIST.yaml",
+      "bytes": 1083,
+      "sha256": "0b804d926b2bbf0c32f73e29f6012d801c4b17982f40eeebc5dceb33e8dae710"
+    },
+    {
+      "path": "MIST/configs/train_MISTNet_NUDTMIRSDT.yaml",
+      "bytes": 918,
+      "sha256": "6f5756a6ea5d4bf8d4642b26bf377096828992806142d74521907b5aea2e7c58"
+    },
+    {
+      "path": "MIST/deepmist/datasets/MISTDataset.py",
+      "bytes": 4164,
+      "sha256": "95fa436d3f8b9ebb66fc38c0dc0013548bb23c095d23016c12cb39e9f30825ee"
+    },
+    {
+      "path": "MIST/deepmist/datasets/NUDTMIRSDTDataset.py",
+      "bytes": 5807,
+      "sha256": "1ad694b4c27b4b724e0fedddde658fe2b85673cf9fec8c59b3d23d92e0e862f5"
+    },
+    {
+      "path": "MIST/deepmist/datasets/__init__.py",
+      "bytes": 1367,
+      "sha256": "969c68139f9d65d09cfa432ce2f0542917fd1506d18f08515e9d231d4fbc6eff"
+    },
+    {
+      "path": "MIST/deepmist/losses/__init__.py",
+      "bytes": 2482,
+      "sha256": "5a33a078d2d79bc0849eeb630a9e2a2975991415c61e826bb316190349c25290"
+    },
+    {
+      "path": "MIST/deepmist/losses/loss_basic.py",
+      "bytes": 2066,
+      "sha256": "5b4e481fb7286d4d9773f3093aec1335c5864b3239a447b4d34c340dc6c5aa25"
+    },
+    {
+      "path": "MIST/deepmist/losses/loss_sls_iou_sdm.py",
+      "bytes": 4548,
+      "sha256": "c3df2b5db96bde0e601bb760d849afa875e3f94fae5851f8b450681f058656fc"
+    },
+    {
+      "path": "MIST/deepmist/losses/loss_sufficiency.py",
+      "bytes": 1193,
+      "sha256": "49714653075e4152386821a2d089743bdbea890fc61d0caa18bc138c82f86dc0"
+    },
+    {
+      "path": "MIST/deepmist/models/multiframe/MISTNet/model_MISTNet.py",
+      "bytes": 9896,
+      "sha256": "487b42e3d48adf2fd9e19e29a688f2ad9c345c2afd23d24551e813cd3a233c60"
+    },
+    {
+      "path": "MIST/deepmist/utils/train_and_eval.py",
+      "bytes": 3410,
+      "sha256": "0bb37ae89bb1de8acd9bbd5979f1599368e1ebe868c42f4c0bd4d99b3052f664"
+    },
+    {
+      "path": "MIST/train.py",
+      "bytes": 15247,
+      "sha256": "f1b5fc444b1a24d50902735dd0908a2ea817e047d59ff5c36379ca52bde20640"
+    },
+    {
+      "path": "MIST_tree.json",
+      "bytes": 14276,
+      "sha256": "f10d019684e9885ebc75f9c993cce87bcb7446b450b62a1e763b5edd73e95415"
+    },
+    {
+      "path": "MTTU-Net/README.md",
+      "bytes": 2202,
+      "sha256": "68c638fca760dad8833e28b8582aade5a3cd618b5d1037e58341dc4b424776dc"
+    },
+    {
+      "path": "MTTU-Net/dataset_IDSMT.py",
+      "bytes": 4731,
+      "sha256": "aa7341cae86f61b035afd6fccd75bc9af2ac93b76764cd00498c07da45d8b7a4"
+    },
+    {
+      "path": "MTTU-Net/dataset_IRDST.py",
+      "bytes": 4577,
+      "sha256": "410e40b6dfcb133b1243ee6ca00e125dfd8944d414aac297e071091ee549977b"
+    },
+    {
+      "path": "MTTU-Net/metrics.py",
+      "bytes": 5027,
+      "sha256": "6ee7cb5635b411c62623f25d782819142618d93bf6d26d9c8ce37bad2ba7ddbd"
+    },
+    {
+      "path": "MTTU-Net/model/Config.py",
+      "bytes": 921,
+      "sha256": "8aceb3c534b293f5dbf5711ba2910b54301ff48c97844d5e947879cfff82d331"
+    },
+    {
+      "path": "MTTU-Net/model/MTTU_Net.py",
+      "bytes": 28238,
+      "sha256": "0f56355fa68bce698432dc43fe622c659cb2478994695ee26ec5b43b3d1f82e6"
+    },
+    {
+      "path": "MTTU-Net/test.py",
+      "bytes": 6140,
+      "sha256": "6cde4f9f2e10d2d05c62679c8274f0323ae63fad4f02cab6813a3f4a95f2e02c"
+    },
+    {
+      "path": "MTTU-Net/train.py",
+      "bytes": 10592,
+      "sha256": "a715b2af5e9c1f022cd0e576400ec57ffce2835d63ee387e993c91661fcfeefd"
+    },
+    {
+      "path": "MTTU-Net/utils.py",
+      "bytes": 5219,
+      "sha256": "40e04b699270b986ea31e97c9bae3f1145fc19333273e37bd9836360fe8abb66"
+    },
+    {
+      "path": "MTTU-Net/warmup_scheduler.py",
+      "bytes": 3780,
+      "sha256": "d7ebc3f9568ebd2da6b141d2923dba22c70d523099320e8aee5e769426b62493"
+    },
+    {
+      "path": "MTTU-Net_tree.json",
+      "bytes": 4303,
+      "sha256": "4c7a40486c72d51c3849c939ddb4e04b960c783f49ef8f7aa91e340d1c963c2e"
+    },
+    {
+      "path": "MTTU_metadata.json",
+      "bytes": 26265,
+      "sha256": "f938245269492d0323daac8891eca124e39affe7388a46ab99f2cae29acce863"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/IRDSTDataLoader.py",
+      "bytes": 3877,
+      "sha256": "7e11b36bd71391dcbec9df778185565972fdcdae236d03c7e13e04ced75bd634"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/MIRSDTDataLoader.py",
+      "bytes": 4845,
+      "sha256": "1c96824ae74f993bd392ec512136572cb18da8f26b7b245370138c4eed1a3467"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/README.md",
+      "bytes": 4358,
+      "sha256": "fd7721146b590bf93f6f3d9e6187d63aa125440e4581a976cee683cd3826460d"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/losses/loss_HPM.py",
+      "bytes": 4170,
+      "sha256": "0df365ae981f72c428a0b22e7974a5615bc94341b654fc4ff984de47b098ead0"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/losses/loss_OHEM.py",
+      "bytes": 3284,
+      "sha256": "05ef581ef9b86e8c507856132561e7163ec5e1540343d48c5397382dc48ac2d7"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/losses/loss_config.py",
+      "bytes": 1183,
+      "sha256": "6e9d56270a729fad100b858b416c1a8737e6266edf532385318ae94e31579bf6"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/losses/loss_fullySupervised.py",
+      "bytes": 5169,
+      "sha256": "a1127394d4729ee79a44cc5ced2f021d05820d63ebb027c04f4dba2b86a4da38"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM/train.py",
+      "bytes": 16568,
+      "sha256": "a665ad69d372fd4ec5da5337cf022d10255b708289faa09be9aae7eb20253114"
+    },
+    {
+      "path": "Multi-frame-infrared-small-target-detection-DTUM_tree.json",
+      "bytes": 54837,
+      "sha256": "ae5af7a970d503e384c46f1dd4a1b415855cf586a5cd4299dd13fa9366f30bd6"
+    },
+    {
+      "path": "RFR/README.md",
+      "bytes": 5232,
+      "sha256": "2a9d6285db43555b144a130aa8639a00680ac0754ca1f2c6a389412a9cbc79ac"
+    },
+    {
+      "path": "RFR/codes/dataset.py",
+      "bytes": 5900,
+      "sha256": "3a35cf8b955172c6d5c7370f6e755996b89b47bc09fb26613b2ba83672c2db53"
+    },
+    {
+      "path": "RFR/codes/loss.py",
+      "bytes": 2047,
+      "sha256": "d400dd5932b310f73f0aaf98251e67b49c5558e49ca0b6c762d32c4a35b67693"
+    },
+    {
+      "path": "RFR/codes/model/RFR_framework.py",
+      "bytes": 10231,
+      "sha256": "a569e5cd0599a8cf25efb67314ff8249ba7456f0363b8755cdee729b40028bda"
+    },
+    {
+      "path": "RFR/codes/test.py",
+      "bytes": 5646,
+      "sha256": "ffb4a880a6f463746f7e917c60814a54d0607d1a0472f72697a3881770f253ee"
+    },
+    {
+      "path": "RFR/codes/train.py",
+      "bytes": 7077,
+      "sha256": "47070d6e2efaafa708c1f92a9ce8aa25c174044a4b081d613a297017f9eb3684"
+    },
+    {
+      "path": "RFR_tree.json",
+      "bytes": 36992,
+      "sha256": "0b72a49cf9c540c810fcd548d54df00a26bd5ad65d033b57bcc9fe3926743dd0"
+    }
+  ]
+}

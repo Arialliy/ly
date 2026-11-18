@@ -1,0 +1,368 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-09T15:50:13.656412+00:00",
+  "dataset_root": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/data/NUDT-MIRSDT",
+  "official_repository": "https://github.com/TinaLRJ/DeepPro",
+  "official_commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "split_source": "datasets/NUDT-MIRSDT/test.txt",
+  "split_sha256": "eb039aa35aaabab2eae559b9d627e53d3fa114eb0410f343498f154c81a9d5d0",
+  "split_preserved_byte_for_byte": true,
+  "split_lines": 2000,
+  "unique_sequences": 20,
+  "sequence_order": [
+    "Sequence85",
+    "Sequence86",
+    "Sequence87",
+    "Sequence88",
+    "Sequence89",
+    "Sequence90",
+    "Sequence91",
+    "Sequence92",
+    "Sequence93",
+    "Sequence94",
+    "Sequence95",
+    "Sequence96",
+    "Sequence97",
+    "Sequence47",
+    "Sequence56",
+    "Sequence59",
+    "Sequence76",
+    "Sequence101",
+    "Sequence105",
+    "Sequence119"
+  ],
+  "frame_names_mapped_from_official_mat_stems": true,
+  "official_loader_uses_sequence_names_then_sorted_png_files": true,
+  "png_files": 6000,
+  "counts_by_kind": {
+    "images": 2000,
+    "masks": 2000,
+    "masks_centroid": 2000
+  },
+  "bytes_extracted": 37942858,
+  "dimensions_wh": {
+    "(300, 200)": 300,
+    "(313, 261)": 300,
+    "(334, 221)": 300,
+    "(329, 215)": 300,
+    "(275, 164)": 300,
+    "(303, 200)": 300,
+    "(354, 237)": 300,
+    "(315, 224)": 300,
+    "(298, 215)": 300,
+    "(347, 210)": 300,
+    "(280, 187)": 300,
+    "(287, 192)": 300,
+    "(320, 240)": 300,
+    "(320, 256)": 300,
+    "(283, 182)": 300,
+    "(300, 209)": 300,
+    "(233, 161)": 300,
+    "(257, 257)": 300,
+    "(291, 215)": 300,
+    "(379, 246)": 300
+  },
+  "modes": {
+    "L": 6000
+  },
+  "all_triples_paired": true,
+  "all_dimensions_match_within_triples": true,
+  "all_pngs_verified_and_decoded": true,
+  "all_archive_crcs_verified": true,
+  "all_sha256_recorded": true,
+  "unexpected_files_in_frame_folders": [],
+  "missing_official_test_frames": [],
+  "train_test_sequence_intersection": [],
+  "training_sequences_extracted": [],
+  "snr_le_3_sequence_list": [
+    "Sequence47",
+    "Sequence56",
+    "Sequence59",
+    "Sequence76",
+    "Sequence92",
+    "Sequence101",
+    "Sequence105",
+    "Sequence119"
+  ],
+  "snr_le_3_sequences": 8,
+  "snr_le_3_frames": 800,
+  "snr_subset_source": "https://github.com/TinaLRJ/DeepPro/blob/8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28/README.md#datasets",
+  "snr_values_not_reestimated": true,
+  "per_sequence": [
+    {
+      "sequence": "Sequence85",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(300, 200)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence86",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(313, 261)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence87",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(334, 221)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence88",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(329, 215)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence89",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(275, 164)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence90",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(303, 200)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence91",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(354, 237)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence92",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(315, 224)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence93",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(298, 215)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence94",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(347, 210)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence95",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(280, 187)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence96",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(287, 192)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence97",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(320, 240)": 100
+      },
+      "snr_le_3_official_subset": false,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence47",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(320, 256)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence56",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(283, 182)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence59",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(300, 209)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence76",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(233, 161)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence101",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(257, 257)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence105",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(291, 215)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    },
+    {
+      "sequence": "Sequence119",
+      "frames": 100,
+      "files": 300,
+      "first": "00001.png",
+      "last": "00100.png",
+      "dimensions_wh": {
+        "(379, 246)": 100
+      },
+      "snr_le_3_official_subset": true,
+      "pairings_complete": true,
+      "lexical_order_matches_split_frame_order": true
+    }
+  ],
+  "provenance": {
+    "source_url": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+    "official_public_form_used": true,
+    "range_only": true,
+    "http_206_and_content_range_verified": true,
+    "archive_bytes": 1027614117,
+    "existing_archive_manifest_sha256": "a04a519148b8edb9d37153578bfb370da09bc11b90e3a47289f93b7adb7ea971",
+    "central_directory_sha256": "90415d7ac5ef853f2b6bd4cb6d75d0431ce297e34a737906d515eaba9c9ded9c",
+    "central_directory_crc_authority": true,
+    "range_body_bytes_received": 45557179,
+    "public_form_upper_bound_bytes": 20000,
+    "total_network_upper_bound_bytes": 45577179,
+    "network_budget_bytes": 400000000,
+    "member_checksum_manifest": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/data_prep/FILE_CHECKSUMS.json"
+  }
+}

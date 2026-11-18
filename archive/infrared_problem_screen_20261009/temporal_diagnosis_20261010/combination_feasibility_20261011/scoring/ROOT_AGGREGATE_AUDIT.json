@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": [
+    "All 10 shared and 100 per-clip assignments uniquely exhaustive; ALL11 remains separate",
+    "All counts, gain/loss, union support, percentages, starts, and budget flags independently reproduced",
+    "All 16 frozen budget/loss-limit selections and feasible counts reproduced using actual-start lexicographic ties",
+    "Gain/loss/U Pareto fronts exactly reproduced; budget is not replaced by outside-box pixel cost",
+    "Selected object and track tables reproduce aggregate matches/gains/losses and original 700 successes"
+  ],
+  "issues": [],
+  "source_code_review": "Budget remains pooled U<=4015, each selected plan is whole-clip and costs five windows, annotations only used for hindsight scoring/selection, ranking matches preregistered rules.",
+  "input_probabilities_finite": {
+    "checked_in": "score_combinations.py per-window loading assertions",
+    "arrays": 22,
+    "values_per_array": 13107200,
+    "dtype": "float32",
+    "all_passed": true
+  },
+  "audited_sha256": {
+    "aggregate_combinations.py": "f53c2415f5356a66d804b99a565bc49e1e26b904f992ebea9b3578865675edba",
+    "SHARED_COMBINATIONS.csv": "1add9ab442becf89d5a7dea0aacce7b3a82ac38a1bb8479cbe1ef545ac36544c",
+    "PER_CLIP_COMBINATIONS.csv": "064cb531db5bc949c196f72f90357c6084cb4d02c37db6126817253e4fd95814",
+    "ALL11_REFERENCE.csv": "b4657761e64de921d101618d559e57fc7e0af3b7f07715e1b3e4946a0998f03c",
+    "TRADEOFF_SELECTIONS.csv": "97e33158bb4fbf821c3e55099c517dc0fe27ce4112354156f9958cb51153aebf",
+    "PARETO_GAIN_LOSS_U.csv": "eeab1972a6e55223580a0d3d2edbba3526becb464cf9008189d319694349ac2a",
+    "SELECTED_OBJECT_RESULTS.csv": "9f8661ad0803934853f0e4a0e066625dd180ae70cce5b2effa47f6b78ed92e97",
+    "SELECTED_TRACK_RESULTS.csv": "c79e725ced8c0cc251196c3bb381bca215a0d334c168084b39896c4274640710"
+  }
+}

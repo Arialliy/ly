@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-12T10:24:42.083787+00:00",
+  "reviewer": "ord_literature",
+  "scope": "Read-only closeout comparison of report numerical tables/selected set claims against completed CSVs; matching definition inspected against existing scorer; not new training, inference, raw-map rescoring, or independent-test claim. Implementation contributor reviewing claims, not zero-context experiment audit.",
+  "checks": [
+    {
+      "claim": "main_table_release_O",
+      "verified": true
+    },
+    {
+      "claim": "background_table_release_O",
+      "verified": true
+    },
+    {
+      "claim": "main_table_release_S",
+      "verified": true
+    },
+    {
+      "claim": "background_table_release_S",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R0_O",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R0_O",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R0_S",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R0_S",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R1_O",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R1_O",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R1_S",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R1_S",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R2_O",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R2_O",
+      "verified": true
+    },
+    {
+      "claim": "main_table_R2_S",
+      "verified": true
+    },
+    {
+      "claim": "background_table_R2_S",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_release_O",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_release_S",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R0_O",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R0_S",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R1_O",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R1_S",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R2_O",
+      "verified": true
+    },
+    {
+      "claim": "continuous_table_R2_S",
+      "verified": true
+    },
+    {
+      "claim": "R2_low_635_601",
+      "verified": true
+    },
+    {
+      "claim": "R2_extreme_613_576",
+      "verified": true
+    },
+    {
+      "claim": "R2_extreme_tracks_78_77",
+      "verified": true
+    },
+    {
+      "claim": "protected_partition_not_confused_with_all_lost",
+      "verified": true
+    },
+    {
+      "claim": "R2_actual_gain_loss_vs_R0",
+      "verified": true
+    },
+    {
+      "claim": "R2_actual_gain_loss_vs_R1",
+      "verified": true
+    },
+    {
+      "claim": "all_new_U_fail",
+      "verified": true
+    },
+    {
+      "claim": "conditional_gains_are_explicit",
+      "verified": true
+    },
+    {
+      "claim": "no_unique_mechanism_or_universal_rejection",
+      "verified": true
+    },
+    {
+      "claim": "current_prototype_stopped",
+      "verified": true
+    },
+    {
+      "claim": "matching_explained_as_peak_inside_GT_one_to_one_per_frame",
+      "verified": true
+    },
+    {
+      "claim": "diagnostic_scope_clear",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_SUMMARY.csv",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_COHORT_TRANSITIONS.csv",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_CONTINUOUS_MISS_SUMMARY.csv",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_WINDOW_DEPENDENCE.csv",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_TABLE_VALIDATION.json",
+      "verified": true
+    },
+    {
+      "claim": "decision_source_hash_TRAINING_AUDIT.json",
+      "verified": true
+    }
+  ],
+  "claim_checks_passed": 42,
+  "issues_found": [],
+  "supported": "Conditional R2 matching and miss-run improvements coexist with severe background and retention failures. Stop current prototype without rejecting all target-level temporal learning.",
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/REPORT.md": "e1c3313a6b79d95ad552b6b9ab7bc7f9b0eaf93453c46dd908f489403f47a030",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/DECISION.json": "ca721f5954714945bc4993192c5bfd186e246878c626c086408f814567b874e4",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/SUMMARY.csv": "766f1b794026fda448f2c7672eaab9b8829f9199c5a31569999d44dca3d0c132",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/SEQUENCE_SUMMARY.csv": "6bd657e36a5cdb733f56d7c39e63f9684420d4f2a1eecd84ddc4539575ed89d7",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/COHORT_TRANSITIONS.csv": "d483b0595deb348053889d3b3bba4e81a0afb00cb940023aa4129159d407aae0",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/CONTINUOUS_MISS_SUMMARY.csv": "9f2fad789f1720905738188a7cfcb3970e605de337ddafde467007650cb0eb97",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/WINDOW_DEPENDENCE.csv": "8387c1913a84edab50483dcea90d9fa007563faeebc26b96418b37690c556d4a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/evaluation/TABLE_VALIDATION.json": "b46ecfc1c9deb6ffdd7e82bdac9e42eb0480b54a15a8e26f4417439fd0dd614e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/analysis/analyze.py": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062"
+  }
+}

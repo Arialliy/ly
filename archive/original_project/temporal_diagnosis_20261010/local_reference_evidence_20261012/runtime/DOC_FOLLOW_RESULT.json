@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "gate": "fresh_agent_follows_document_verbatim",
+  "reviewer": "/root/lre_doc_gpu",
+  "completed_utc": "2026-10-11T20:23:31.436113+00:00",
+  "read_inputs": [
+    "/home/ly/.codex/skills/shared-references/compute-env-contract.md",
+    "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/runtime/INVOCATION.md"
+  ],
+  "command_verbatim": "python3 /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/code/launch_gpu.py --kind preflight --gpu 3",
+  "attempt_count": 1,
+  "exit_code": 0,
+  "gpu": 3,
+  "gpu_idle_before_mib": 0,
+  "launcher_status": "COMPLETE",
+  "immutable_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "environment_canonical_spec_declared": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+  "cuda_witness": "WITNESS_OK -14.546903610229492 NVIDIA GeForce RTX 5090",
+  "seed": 46,
+  "checks": [
+    {
+      "name": "zero_projection_exact_current",
+      "pass": true
+    },
+    {
+      "name": "zero_projection_exact_difference",
+      "pass": true
+    },
+    {
+      "name": "zero_projection_exact_relative",
+      "pass": true
+    },
+    {
+      "name": "real_training_crop_nonzero_full_vs_tiled",
+      "pass": true,
+      "shape": [
+        1,
+        1,
+        40,
+        96,
+        112
+      ],
+      "core": 32,
+      "halo": 16,
+      "max_logit_error": 2.9928982257843018e-05,
+      "max_probability_error": 7.510185241699219e-06,
+      "threshold05_disagreements": 0
+    },
+    {
+      "name": "disabled_correction_exact_after_nonzero_projection",
+      "pass": true
+    },
+    {
+      "name": "real_baseline_frozen_new_branch_finite_gradients",
+      "pass": true,
+      "gradients": {
+        "encoder.0.weight": 0.518673300743103,
+        "encoder.0.bias": 0.10729464143514633,
+        "encoder.2.weight": 0.58871990442276,
+        "encoder.2.bias": 0.4066719710826874,
+        "joint.0.weight": 4.664305686950684,
+        "joint.0.bias": 1.1620792150497437,
+        "output.weight": 20.060882568359375,
+        "output.bias": 30.73430061340332
+      }
+    }
+  ],
+  "checks_passed": 6,
+  "checks_total": 6,
+  "original_state_unchanged": true,
+  "deterministic_algorithms": true,
+  "formal_training_updates": 0,
+  "optimizer_steps_in_preflight": 0,
+  "data_source": "first frozen training-plan batch only; no development or confirmation input",
+  "new_parameters": 1529,
+  "peak_allocated_bytes": 1755284992,
+  "preflight_seconds": 1.3011729079880752,
+  "wall_seconds": 5.3521904945373535,
+  "source_edits_by_reviewer": [],
+  "divergences": [],
+  "failures": [],
+  "repairs_or_retries": [],
+  "formal_training_or_development_inference_started": false,
+  "evidence": {
+    "runtime/INVOCATION.md": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/runtime/INVOCATION.md",
+      "sha256": "f4bf805046ffcac9705c777304cd57b15e50d20b023c290d9a82212f07c86645"
+    },
+    "runtime/preflight.json": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/runtime/preflight.json",
+      "sha256": "ddb44e566492fb9175214c45e0333fd9b1f0003b3109210c5f099fa7ff465b36"
+    },
+    "runtime/preflight.log": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/runtime/preflight.log",
+      "sha256": "9c3a05821a5bfdeee05470ae76f15b0acf3ae12a17f012c58a65ff0105082b8e"
+    },
+    "checks/GPU_INTEGRATION.json": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/checks/GPU_INTEGRATION.json",
+      "sha256": "12eb9027b0f2596a11f3ee35cd3494cf0b6fef4f6d9843eda21749641ce5120b"
+    }
+  },
+  "scope": "Document-follow and implementation gate only; no detection-performance claim; no independent full source audit or full environment rebuild."
+}

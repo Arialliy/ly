@@ -1,0 +1,1112 @@
+{
+  "sample_id": 680,
+  "selection_reasons": [
+    "DJI_0067_2_first_competition_klt_success"
+  ],
+  "raw_source_relative_path": "data/stage1/DJI_0067_2/raw_frames.npy",
+  "crop_xyxy_exclusive": [
+    176,
+    214,
+    241,
+    279
+  ],
+  "raw_shape": [
+    160,
+    512,
+    640
+  ],
+  "display_grayscale_range": [
+    0,
+    255
+  ],
+  "crop_resampling": "nearest",
+  "heatmap_source": "heatmaps/0680.npy",
+  "heatmap_sha256": "d3941f15be6ba966b7945bced28bb40ca5e7b1da2f256957dd49aa29cabcbd31",
+  "heatmap_frame_index": 3,
+  "heatmap_fixed_color_range": [
+    -1,
+    1
+  ],
+  "frame_status": [
+    {
+      "frame": 64,
+      "t": 0,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 65,
+      "t": 1,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 66,
+      "t": 2,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 67,
+      "t": 3,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 68,
+      "t": 4,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 69,
+      "t": 5,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 70,
+      "t": 6,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    },
+    {
+      "frame": 71,
+      "t": 7,
+      "klt_valid": true,
+      "positions_outside_crop": []
+    }
+  ],
+  "original_alternative_path": {
+    "score": 3.3725264072418213,
+    "gap_per_frame": 0.0,
+    "hits_tol1": 2,
+    "hits_tol2": 2,
+    "positions": [
+      [
+        225,
+        244
+      ],
+      [
+        225,
+        244
+      ],
+      [
+        224,
+        244
+      ],
+      [
+        222,
+        244
+      ],
+      [
+        221,
+        244
+      ],
+      [
+        215,
+        245
+      ],
+      [
+        209,
+        246
+      ],
+      [
+        208,
+        246
+      ]
+    ],
+    "branch_frame": 1,
+    "branch_type": "unannotated_region"
+  },
+  "display_candidate": {
+    "score": 3.126669406890869,
+    "gap_per_frame": 0.03512239456176758,
+    "hits_tol1": 7,
+    "hits_tol2": 7,
+    "positions": [
+      [
+        216,
+        245
+      ],
+      [
+        216,
+        245
+      ],
+      [
+        216,
+        245
+      ],
+      [
+        216,
+        245
+      ],
+      [
+        216,
+        245
+      ],
+      [
+        215,
+        245
+      ],
+      [
+        209,
+        246
+      ],
+      [
+        208,
+        246
+      ]
+    ],
+    "branch_frame": 3,
+    "branch_type": "same_target"
+  },
+  "display_candidate_selection_reason": "Original alternative equals best. First different existing candidate with 7/7 GT hits at +1 px and gap/frame <=0.05, selected post hoc using GT for display; not model selection or a GT-constrained oracle.",
+  "display_candidate_selected_post_hoc_using_gt": true,
+  "display_candidate_is_gt_constrained_oracle": false,
+  "display_gt_boxes": "original, no dilation; evaluation tolerances are separate",
+  "figure": "0680_DJI_0067_2_f071.png",
+  "sample": {
+    "anchor": [
+      208,
+      246
+    ],
+    "template_std": 16.04945868927887,
+    "response_stds": [
+      0.15247009694576263,
+      0.14996103942394257,
+      0.1497543454170227,
+      0.1546909213066101,
+      0.15906399488449097,
+      0.15858390927314758,
+      0.15480919182300568
+    ],
+    "numerically_valid": true,
+    "separation_radius": 6,
+    "absolute_scr": 0.7387586646041701,
+    "signed_scr": -0.7387586646041701,
+    "ring_std": 21.554959429153158,
+    "weak_proxy": true,
+    "roi_gt_support": true,
+    "graph_gt_support": true,
+    "best_path_hits_tol1": 2,
+    "best_path_hits_tol2": 2,
+    "best_path_good_tol1": false,
+    "best_path_good_tol2": false,
+    "gt_path_gap_per_frame": 0.022162505558558872,
+    "wrong_path_gap_per_frame": 0.0,
+    "competition": {
+      "0.02": false,
+      "0.05": true,
+      "0.1": true
+    },
+    "lk_history_hits_tol2": 7,
+    "lk_all_valid": true,
+    "explicit_candidate_competition": true,
+    "lk_history_hits_tol1": 6,
+    "lk_path_good_tol1": true,
+    "lk_path_good_tol2": true,
+    "independent": {
+      "raw9": {
+        "history_hits_tol1": 2,
+        "history_hits_tol2": 2,
+        "previous_hit_tol1": true,
+        "previous_hit_tol2": true,
+        "previous_top6_contains_gt": true,
+        "previous_gt_wrong_gap": 0.1686878800392151,
+        "positions": [
+          [
+            230,
+            243
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            223,
+            244
+          ],
+          [
+            223,
+            244
+          ],
+          [
+            210,
+            246
+          ],
+          [
+            209,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ]
+      },
+      "rich17": {
+        "history_hits_tol1": 1,
+        "history_hits_tol2": 1,
+        "previous_hit_tol1": true,
+        "previous_hit_tol2": true,
+        "previous_top6_contains_gt": true,
+        "previous_gt_wrong_gap": 0.09715229272842407,
+        "positions": [
+          [
+            184,
+            250
+          ],
+          [
+            185,
+            250
+          ],
+          [
+            185,
+            250
+          ],
+          [
+            230,
+            243
+          ],
+          [
+            229,
+            243
+          ],
+          [
+            228,
+            243
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ]
+      }
+    },
+    "best_path": [
+      [
+        225,
+        244
+      ],
+      [
+        225,
+        244
+      ],
+      [
+        224,
+        244
+      ],
+      [
+        222,
+        244
+      ],
+      [
+        221,
+        244
+      ],
+      [
+        215,
+        245
+      ],
+      [
+        209,
+        246
+      ],
+      [
+        208,
+        246
+      ]
+    ],
+    "gt_compatible_oracle_path": [
+      [
+        221,
+        244
+      ],
+      [
+        221,
+        244
+      ],
+      [
+        220,
+        244
+      ],
+      [
+        220,
+        244
+      ],
+      [
+        216,
+        245
+      ],
+      [
+        215,
+        245
+      ],
+      [
+        209,
+        246
+      ],
+      [
+        208,
+        246
+      ]
+    ],
+    "gt_boxes": [
+      [
+        214,
+        241,
+        7,
+        5
+      ],
+      [
+        213,
+        242,
+        7,
+        5
+      ],
+      [
+        212,
+        243,
+        7,
+        5
+      ],
+      [
+        212,
+        242,
+        7,
+        5
+      ],
+      [
+        208,
+        243,
+        7,
+        5
+      ],
+      [
+        207,
+        243,
+        7,
+        5
+      ],
+      [
+        206,
+        243,
+        7,
+        5
+      ],
+      [
+        204,
+        243,
+        8,
+        5
+      ]
+    ],
+    "lk_path": [
+      [
+        221.3443145751953,
+        243.33836364746094
+      ],
+      [
+        216.81687927246094,
+        243.9371795654297
+      ],
+      [
+        214.77239990234375,
+        244.3248291015625
+      ],
+      [
+        210.69924926757812,
+        245.0714111328125
+      ],
+      [
+        209.5714111328125,
+        245.32763671875
+      ],
+      [
+        208.8622589111328,
+        245.63682556152344
+      ],
+      [
+        208.36456298828125,
+        245.7939453125
+      ],
+      [
+        208.0,
+        246.0
+      ]
+    ],
+    "lk_valid": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "alternative_path": {
+      "score": 3.3725264072418213,
+      "gap_per_frame": 0.0,
+      "hits_tol1": 2,
+      "hits_tol2": 2,
+      "positions": [
+        [
+          225,
+          244
+        ],
+        [
+          225,
+          244
+        ],
+        [
+          224,
+          244
+        ],
+        [
+          222,
+          244
+        ],
+        [
+          221,
+          244
+        ],
+        [
+          215,
+          245
+        ],
+        [
+          209,
+          246
+        ],
+        [
+          208,
+          246
+        ]
+      ],
+      "branch_frame": 1,
+      "branch_type": "unannotated_region"
+    },
+    "candidate_paths": [
+      {
+        "score": 3.3725264072418213,
+        "gap_per_frame": 0.0,
+        "hits_tol1": 2,
+        "hits_tol2": 2,
+        "positions": [
+          [
+            225,
+            244
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            224,
+            244
+          ],
+          [
+            222,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            215,
+            245
+          ],
+          [
+            209,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 3.2846782207489014,
+        "gap_per_frame": 0.012549706734716892,
+        "hits_tol1": 3,
+        "hits_tol2": 3,
+        "positions": [
+          [
+            207,
+            246
+          ],
+          [
+            207,
+            246
+          ],
+          [
+            207,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 3.132814407348633,
+        "gap_per_frame": 0.034244537353515625,
+        "hits_tol1": 3,
+        "hits_tol2": 3,
+        "positions": [
+          [
+            201,
+            247
+          ],
+          [
+            201,
+            247
+          ],
+          [
+            205,
+            247
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 3.127833843231201,
+        "gap_per_frame": 0.03495604544878006,
+        "hits_tol1": 4,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            221,
+            244
+          ],
+          [
+            219,
+            245
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            217,
+            245
+          ],
+          [
+            215,
+            245
+          ],
+          [
+            209,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 3.126669406890869,
+        "gap_per_frame": 0.03512239456176758,
+        "hits_tol1": 7,
+        "hits_tol2": 7,
+        "positions": [
+          [
+            216,
+            245
+          ],
+          [
+            216,
+            245
+          ],
+          [
+            216,
+            245
+          ],
+          [
+            216,
+            245
+          ],
+          [
+            216,
+            245
+          ],
+          [
+            215,
+            245
+          ],
+          [
+            209,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 3.066455364227295,
+        "gap_per_frame": 0.04372439906001091,
+        "hits_tol1": 2,
+        "hits_tol2": 2,
+        "positions": [
+          [
+            230,
+            243
+          ],
+          [
+            231,
+            243
+          ],
+          [
+            228,
+            243
+          ],
+          [
+            224,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            215,
+            245
+          ],
+          [
+            209,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 2.895563840866089,
+        "gap_per_frame": 0.06813747435808182,
+        "hits_tol1": 1,
+        "hits_tol2": 1,
+        "positions": [
+          [
+            229,
+            243
+          ],
+          [
+            229,
+            243
+          ],
+          [
+            229,
+            243
+          ],
+          [
+            228,
+            243
+          ],
+          [
+            222,
+            244
+          ],
+          [
+            217,
+            245
+          ],
+          [
+            214,
+            245
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 2.8133292198181152,
+        "gap_per_frame": 0.07988528162240982,
+        "hits_tol1": 3,
+        "hits_tol2": 3,
+        "positions": [
+          [
+            202,
+            247
+          ],
+          [
+            202,
+            247
+          ],
+          [
+            201,
+            247
+          ],
+          [
+            202,
+            247
+          ],
+          [
+            207,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 2.71905255317688,
+        "gap_per_frame": 0.09335337579250336,
+        "hits_tol1": 5,
+        "hits_tol2": 6,
+        "positions": [
+          [
+            213,
+            246
+          ],
+          [
+            213,
+            247
+          ],
+          [
+            210,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 1,
+        "branch_type": "same_target"
+      },
+      {
+        "score": 2.6252520084381104,
+        "gap_per_frame": 0.10675345361232758,
+        "hits_tol1": 1,
+        "hits_tol2": 1,
+        "positions": [
+          [
+            225,
+            244
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            224,
+            244
+          ],
+          [
+            222,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            220,
+            241
+          ],
+          [
+            214,
+            245
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 2.4168829917907715,
+        "gap_per_frame": 0.13652046024799347,
+        "hits_tol1": 3,
+        "hits_tol2": 3,
+        "positions": [
+          [
+            202,
+            247
+          ],
+          [
+            202,
+            247
+          ],
+          [
+            205,
+            249
+          ],
+          [
+            207,
+            252
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 3,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 2.278549909591675,
+        "gap_per_frame": 0.15628232061862946,
+        "hits_tol1": 1,
+        "hits_tol2": 1,
+        "positions": [
+          [
+            225,
+            244
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            224,
+            244
+          ],
+          [
+            222,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            220,
+            249
+          ],
+          [
+            214,
+            245
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "unannotated_region"
+      },
+      {
+        "score": 2.23964262008667,
+        "gap_per_frame": 0.1618405133485794,
+        "hits_tol1": 1,
+        "hits_tol2": 1,
+        "positions": [
+          [
+            191,
+            249
+          ],
+          [
+            192,
+            249
+          ],
+          [
+            192,
+            249
+          ],
+          [
+            194,
+            248
+          ],
+          [
+            199,
+            247
+          ],
+          [
+            202,
+            247
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "other_annotated_object"
+      },
+      {
+        "score": 2.1257026195526123,
+        "gap_per_frame": 0.17811764776706696,
+        "hits_tol1": 2,
+        "hits_tol2": 3,
+        "positions": [
+          [
+            225,
+            244
+          ],
+          [
+            225,
+            244
+          ],
+          [
+            224,
+            244
+          ],
+          [
+            221,
+            244
+          ],
+          [
+            216,
+            245
+          ],
+          [
+            211,
+            240
+          ],
+          [
+            208,
+            246
+          ],
+          [
+            208,
+            246
+          ]
+        ],
+        "branch_frame": 5,
+        "branch_type": "unannotated_region"
+      }
+    ],
+    "best_score": 3.372526168823242,
+    "gt_compatible_score": 3.21738862991333,
+    "sample_id": 680,
+    "sequence": "DJI_0067_2",
+    "split": "dev",
+    "frame": 71,
+    "slots": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "track_id": 7702008,
+    "annotation_id": 873857,
+    "category_id": 2,
+    "release_matched": false,
+    "release_box_max": 1.6205436622840352e-05
+  },
+  "interpretation": "A diagnostic score-competition illustration, not proof of intrinsic correspondence ambiguity."
+}

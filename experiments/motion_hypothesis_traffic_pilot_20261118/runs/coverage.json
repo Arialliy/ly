@@ -1,0 +1,23 @@
+{
+  "DJI_0026_2": {
+    "frames": 9,
+    "targets": 31,
+    "any_center_peak": 31,
+    "center_peak_after_margin": 21,
+    "final_budget": 21
+  },
+  "DJI_0067_2": {
+    "frames": 9,
+    "targets": 647,
+    "any_center_peak": 634,
+    "center_peak_after_margin": 573,
+    "final_budget": 287
+  },
+  "all_dev": {
+    "frames": 18,
+    "targets": 678,
+    "any_center_peak": 665,
+    "center_peak_after_margin": 594,
+    "final_budget": 308
+  }
+}

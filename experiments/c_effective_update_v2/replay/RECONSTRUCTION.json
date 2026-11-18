@@ -1,0 +1,715 @@
+{
+  "status": "EXACT",
+  "method": "Enumerate FP32 y satisfying RN-even(y-x)==stored delta; verify whole old model SHA-256",
+  "new_optimizer_steps": 0,
+  "model_forward_calls": 0,
+  "gradient_calls": 0,
+  "max_combinations_per_endpoint": 2000000,
+  "max_seconds_per_endpoint": 45,
+  "checkpoint_sha256": "467436f2cce9491ea5a12ddad221e9231499950258deded1f562b9328660debc",
+  "endpoints": [
+    {
+      "pair_id": 5,
+      "condition": "full_F",
+      "expected_model_sha256": "78a02d971040621c5d6d3f0d9698c26c58a1f8daad894151c451c9625db24965",
+      "naive_hash": "f8df15f1cd316ae96b94f60c3379b72f685d803852ada9e819e99154ed59ce4b",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_05.npz",
+      "raw_sha256": "331d347b32cc7e7cacf8aef13103db08700fb8daec5619cab412aada759a5009",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.447707386949332e-07,
+          "lower": 1.3075359106551332e-07,
+          "upper": 1.3075364790893218e-07,
+          "ordered_lower": 3020711238,
+          "ordered_upper": 3020711242,
+          "count": 5
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.732332061190391e-06,
+          "lower": 1.261970396626566e-06,
+          "upper": 1.2619706240002415e-06,
+          "ordered_lower": 3047776505,
+          "ordered_upper": 3047776507,
+          "count": 3
+        }
+      ],
+      "combinations": 15,
+      "attempted": 12,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.02602246403694153
+    },
+    {
+      "pair_id": 5,
+      "condition": "no_keep",
+      "expected_model_sha256": "f6cb661cd3829a952e0103b45fd9615c1c3266c1f80c627ac18719fec0d6ee14",
+      "naive_hash": "ad1c1b29242d7df01135242bbceda212f335591ee2a2656d62d5bc369ac3e7cb",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_05.npz",
+      "raw_sha256": "331d347b32cc7e7cacf8aef13103db08700fb8daec5619cab412aada759a5009",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.447707386949332e-07,
+          "lower": 1.3075359106551332e-07,
+          "upper": 1.3075364790893218e-07,
+          "ordered_lower": 3020711238,
+          "ordered_upper": 3020711242,
+          "count": 5
+        }
+      ],
+      "combinations": 5,
+      "attempted": 4,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.008655469049699605
+    },
+    {
+      "pair_id": 5,
+      "condition": "no_track",
+      "expected_model_sha256": "250aba9a1ce95a58ef7c277e871b716250753689573f1131c201aa9f1bf5f33d",
+      "naive_hash": "e7d871517df193ffbea54776daf15ec40dc3323f3a832e070c4cd9b056e1cb20",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_05.npz",
+      "raw_sha256": "331d347b32cc7e7cacf8aef13103db08700fb8daec5619cab412aada759a5009",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.447707386949332e-07,
+          "lower": 1.3075359106551332e-07,
+          "upper": 1.3075364790893218e-07,
+          "ordered_lower": 3020711238,
+          "ordered_upper": 3020711242,
+          "count": 5
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 4.054443706991151e-06,
+          "lower": 1.5840819287404884e-06,
+          "upper": 1.5840823834878393e-06,
+          "ordered_lower": 3050609828,
+          "ordered_upper": 3050609832,
+          "count": 5
+        }
+      ],
+      "combinations": 25,
+      "attempted": 18,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.037852113018743694
+    },
+    {
+      "pair_id": 6,
+      "condition": "full_F",
+      "expected_model_sha256": "73fa46af860153d19b303a228b758727193a5a12d3f02da742d5e8747f6a9f34",
+      "naive_hash": "06cd150afdf682d4341195541feaefe1f27f00fa27a1c32f5d172b939388f049",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_06.npz",
+      "raw_sha256": "23b309cb0566fcee3077567f9c40e159cc03553a9d7aff1def2ff9710ee6e9ff",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 2.7003727609553607e-06,
+          "lower": 2.3001111060239054e-07,
+          "upper": 2.3001130955435656e-07,
+          "ordered_lower": 3027695865,
+          "ordered_upper": 3027695879,
+          "count": 15
+        }
+      ],
+      "combinations": 15,
+      "attempted": 15,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.03167843900155276
+    },
+    {
+      "pair_id": 6,
+      "condition": "no_keep",
+      "expected_model_sha256": "acf196ad7a93c0abeab201e63419d7cefe8befd7041e13a8813507af34436a49",
+      "naive_hash": "b813408ae3b5ef2e3b8d174c1ab5bcad62b5e44b76c88e1a54b9d71224631215",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_06.npz",
+      "raw_sha256": "23b309cb0566fcee3077567f9c40e159cc03553a9d7aff1def2ff9710ee6e9ff",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 2.6343184345023474e-06,
+          "lower": 1.639567841493772e-07,
+          "upper": 1.639569831013432e-07,
+          "ordered_lower": 3023047705,
+          "ordered_upper": 3023047719,
+          "count": 15
+        }
+      ],
+      "combinations": 15,
+      "attempted": 6,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.013239026011433452
+    },
+    {
+      "pair_id": 6,
+      "condition": "no_track",
+      "expected_model_sha256": "a443e2a471515d903a82e87f8f339bdd61d9e0743e07f6ed4ab004021535856d",
+      "naive_hash": "bc98cb6cb358f090cca5be3064484e15d0e823784a46590a35c8f96d2f4ec6ce",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_06.npz",
+      "raw_sha256": "23b309cb0566fcee3077567f9c40e159cc03553a9d7aff1def2ff9710ee6e9ff",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.970290890720207e-06,
+          "lower": 1.4999291124695446e-06,
+          "upper": 1.4999295672168955e-06,
+          "ordered_lower": 3049869612,
+          "ordered_upper": 3049869616,
+          "count": 5
+        }
+      ],
+      "combinations": 5,
+      "attempted": 1,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.002282229019328952
+    },
+    {
+      "pair_id": 8,
+      "condition": "full_F",
+      "expected_model_sha256": "a3f82403e13cdd96e61b3f864f4a62bb96a5e7a13205a15ffae5cd7f8f3066b2",
+      "naive_hash": "a70e3847ac6f5f01193d61b2dfea9dbc4d9ee8e9d8d909692589f60690b456eb",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_08.npz",
+      "raw_sha256": "915d187033d0a0383113668af3c7a230bc24f1180e245e054a386feaa7c9e5e0",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.294380791085132e-07,
+          "lower": 1.4608626486278808e-07,
+          "upper": 1.4608629328449751e-07,
+          "ordered_lower": 3021790179,
+          "ordered_upper": 3021790181,
+          "count": 3
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.6409123822522815e-06,
+          "lower": 1.1705507176884566e-06,
+          "upper": 1.170550945062132e-06,
+          "ordered_lower": 3046972369,
+          "ordered_upper": 3046972371,
+          "count": 3
+        }
+      ],
+      "combinations": 9,
+      "attempted": 2,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.004386255983263254
+    },
+    {
+      "pair_id": 8,
+      "condition": "no_keep",
+      "expected_model_sha256": "e98e69c8e6dae8a98ce7f2368e3c5c1ef837f0e0f6a2d200285c6ff5b76be583",
+      "naive_hash": "cb5948bfd19f6a1b62e255d63ab4d0527b87c396c833be216acfa2fa6c290040",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_08.npz",
+      "raw_sha256": "915d187033d0a0383113668af3c7a230bc24f1180e245e054a386feaa7c9e5e0",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.294380791085132e-07,
+          "lower": 1.4608626486278808e-07,
+          "upper": 1.4608629328449751e-07,
+          "ordered_lower": 3021790179,
+          "ordered_upper": 3021790181,
+          "count": 3
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.597473551053554e-06,
+          "lower": 1.127111886489729e-06,
+          "upper": 1.1271121138634044e-06,
+          "ordered_lower": 3046590277,
+          "ordered_upper": 3046590279,
+          "count": 3
+        }
+      ],
+      "combinations": 9,
+      "attempted": 1,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.0027328519499860704
+    },
+    {
+      "pair_id": 8,
+      "condition": "no_track",
+      "expected_model_sha256": "eabf5c60a57077634ff2b8ab680a6c40a99e5de5ef329aacbd0e9ededa57c47e",
+      "naive_hash": "6fc19a34808e4ef3e27434577f94cd01d2c15388387ff101155e68eb2c4452de",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_08.npz",
+      "raw_sha256": "915d187033d0a0383113668af3c7a230bc24f1180e245e054a386feaa7c9e5e0",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.294380791085132e-07,
+          "lower": 1.4608626486278808e-07,
+          "upper": 1.4608629328449751e-07,
+          "ordered_lower": 3021790179,
+          "ordered_upper": 3021790181,
+          "count": 3
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.872789420711342e-06,
+          "lower": 1.4024276424606796e-06,
+          "upper": 1.4024280972080305e-06,
+          "ordered_lower": 3049011980,
+          "ordered_upper": 3049011984,
+          "count": 5
+        }
+      ],
+      "combinations": 15,
+      "attempted": 5,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.010727502987720072
+    },
+    {
+      "pair_id": 9,
+      "condition": "full_F",
+      "expected_model_sha256": "db71f4002fe4dfc9eaec69b6d28c299f1708f361aadd0cdc6d195bf38e5f9eaa",
+      "naive_hash": "d0d8b063bdf1abc6e207ad6d40fb3165e48ebee20cff96241e1117e122ad4320",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_09.npz",
+      "raw_sha256": "898678fb9f38b3f19952255aba2a9b3b497786cd576446ee58497fe030d1158f",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.5757548175752163e-06,
+          "lower": 1.1053931530113914e-06,
+          "upper": 1.1053933803850668e-06,
+          "ordered_lower": 3046399237,
+          "ordered_upper": 3046399239,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.006428320950362831
+    },
+    {
+      "pair_id": 9,
+      "condition": "no_keep",
+      "expected_model_sha256": "ab5ba0a15b2af3b4c2ec4c667b0e18b9a60e0a3af310f63e2594c1a00ead33ea",
+      "naive_hash": "a49a1e03b603e6469c6eb0d921013993befa1f8a46139144ca229ab39559eea7",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_09.npz",
+      "raw_sha256": "898678fb9f38b3f19952255aba2a9b3b497786cd576446ee58497fe030d1158f",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.836447376670549e-06,
+          "lower": 1.3660857121067238e-06,
+          "upper": 1.3660859394803992e-06,
+          "ordered_lower": 3048692313,
+          "ordered_upper": 3048692315,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.0067666060058400035
+    },
+    {
+      "pair_id": 9,
+      "condition": "no_track",
+      "expected_model_sha256": "db71f4002fe4dfc9eaec69b6d28c299f1708f361aadd0cdc6d195bf38e5f9eaa",
+      "naive_hash": "d0d8b063bdf1abc6e207ad6d40fb3165e48ebee20cff96241e1117e122ad4320",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_09.npz",
+      "raw_sha256": "898678fb9f38b3f19952255aba2a9b3b497786cd576446ee58497fe030d1158f",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.5757548175752163e-06,
+          "lower": 1.1053931530113914e-06,
+          "upper": 1.1053933803850668e-06,
+          "ordered_lower": 3046399237,
+          "ordered_upper": 3046399239,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.006606880982872099
+    },
+    {
+      "pair_id": 10,
+      "condition": "full_F",
+      "expected_model_sha256": "3648c4d6defa8f90340ba26ff02c70e965d0888fafca010af533924bec2a8213",
+      "naive_hash": "85b833fb48f0cd45d0aaea11b976ec2365d117bba54936b9a4abceb22102f201",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_10.npz",
+      "raw_sha256": "91851c600e9645dd76271f2546d686e00a660e091721a0048b320717ab481ec3",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.2408729566668626e-06,
+          "lower": 7.705112921030377e-07,
+          "upper": 7.705115194767131e-07,
+          "ordered_lower": 3041842466,
+          "ordered_upper": 3041842470,
+          "count": 5
+        }
+      ],
+      "combinations": 5,
+      "attempted": 1,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.002242480986751616
+    },
+    {
+      "pair_id": 10,
+      "condition": "no_keep",
+      "expected_model_sha256": "a9c8e9d4d4072cf6f9cf119b5f9289be95ba8fd79488594a399ee881cc2059b5",
+      "naive_hash": "929ae15519fe5c40efc90b90d61d008a10b2630d39987360539ae757343d6fd1",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_10.npz",
+      "raw_sha256": "91851c600e9645dd76271f2546d686e00a660e091721a0048b320717ab481ec3",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.392800863366574e-06,
+          "lower": 9.224391988027492e-07,
+          "upper": 9.224394261764246e-07,
+          "ordered_lower": 3044515210,
+          "ordered_upper": 3044515214,
+          "count": 5
+        }
+      ],
+      "combinations": 5,
+      "attempted": 4,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.009025477978866547
+    },
+    {
+      "pair_id": 10,
+      "condition": "no_track",
+      "expected_model_sha256": "b8ac299679e63924fdb619eb5106a48a277710279ac1601b13c553fb45555077",
+      "naive_hash": "2d8168140fd1173428a43a324a317c51f32387878ddf531819113893f0ec0987",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_10.npz",
+      "raw_sha256": "91851c600e9645dd76271f2546d686e00a660e091721a0048b320717ab481ec3",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.5638258850667626e-06,
+          "lower": 1.0934642205029377e-06,
+          "upper": 1.0934644478766131e-06,
+          "ordered_lower": 3046294309,
+          "ordered_upper": 3046294311,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.006564078968949616
+    },
+    {
+      "pair_id": 11,
+      "condition": "full_F",
+      "expected_model_sha256": "1d4d669efeba235606859ef4eb5976bd5cbd8d8425d0263450c929c70d6ce9ad",
+      "naive_hash": "d00d8586172a29ef597dfd77d93741878a6a210b560e329d91f868924ca0544a",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_11.npz",
+      "raw_sha256": "9976369bdd89655bfa5f7d8ad503c0b5db2b77aff7efe5549e21a56a961ce69d",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -6.601268296435592e-07,
+          "lower": 3.153975001168874e-07,
+          "upper": 3.1539755696030625e-07,
+          "ordered_lower": 3030995943,
+          "ordered_upper": 3030995945,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.00644016097066924
+    },
+    {
+      "pair_id": 11,
+      "condition": "no_keep",
+      "expected_model_sha256": "7bda33dc2c3b0e56dca604dcdd363a2462919d0567e579f435483798e2e5ab97",
+      "naive_hash": "6978d98429666b6ddd38e1ac76c72f7b9aed5d810996a9505db736405185bf64",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_11.npz",
+      "raw_sha256": "9976369bdd89655bfa5f7d8ad503c0b5db2b77aff7efe5549e21a56a961ce69d",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -6.601268296435592e-07,
+          "lower": 3.153975001168874e-07,
+          "upper": 3.1539755696030625e-07,
+          "ordered_lower": 3030995943,
+          "ordered_upper": 3030995945,
+          "count": 3
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 1.6966475868684938e-06,
+          "lower": -7.737140208519122e-07,
+          "upper": -7.737139071650745e-07,
+          "ordered_lower": 1253068486,
+          "ordered_upper": 1253068488,
+          "count": 3
+        }
+      ],
+      "combinations": 9,
+      "attempted": 1,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.002274794038385153
+    },
+    {
+      "pair_id": 11,
+      "condition": "no_track",
+      "expected_model_sha256": "22d4dff7b731f1d838195bee8f28c5f9fc2f360ce0c0383fd153265708fd9307",
+      "naive_hash": "94a66a93bf3d4bfec3f63580c6dfd17b785c1f6a84ac05f2fae82744f7e65a84",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_11.npz",
+      "raw_sha256": "9976369bdd89655bfa5f7d8ad503c0b5db2b77aff7efe5549e21a56a961ce69d",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -6.601268296435592e-07,
+          "lower": 3.153975001168874e-07,
+          "upper": 3.1539755696030625e-07,
+          "ordered_lower": 3030995943,
+          "ordered_upper": 3030995945,
+          "count": 3
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.5657444641401526e-06,
+          "lower": 1.0953827995763277e-06,
+          "upper": 1.0953830269500031e-06,
+          "ordered_lower": 3046311185,
+          "ordered_upper": 3046311187,
+          "count": 3
+        }
+      ],
+      "combinations": 9,
+      "attempted": 7,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.01577676401939243
+    },
+    {
+      "pair_id": 12,
+      "condition": "full_F",
+      "expected_model_sha256": "1b8d0dccc7ead418df91cb7b629e709762a670abb8b71ed4011009379b99acd5",
+      "naive_hash": "af0257b5b7b5567c0a69f024f8ba60c832f602a65c87e7cb5e3327e747b4a872",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_12.npz",
+      "raw_sha256": "56d94c034707dde2b1f9325a17eaf2da3932851d9476e74fafd12a1b3108e335",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.642093121125072e-07,
+          "lower": 1.1131502475336674e-07,
+          "upper": 1.1131506738593089e-07,
+          "ordered_lower": 3018787861,
+          "ordered_upper": 3018787867,
+          "count": 7
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.932026629627217e-06,
+          "lower": 1.461664851376554e-06,
+          "upper": 1.4616653061239049e-06,
+          "ordered_lower": 3049533036,
+          "ordered_upper": 3049533040,
+          "count": 5
+        }
+      ],
+      "combinations": 35,
+      "attempted": 35,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.07369379996089265
+    },
+    {
+      "pair_id": 12,
+      "condition": "no_keep",
+      "expected_model_sha256": "8ee9031e7f0a7b38351073355cf78e7f2a713224ed486b2509a58f89e1fb7a67",
+      "naive_hash": "3486bbc95dbfa29326f3eb4c96b0df2147b5f58c2af7e16f074f5c6f45fd515d",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_12.npz",
+      "raw_sha256": "56d94c034707dde2b1f9325a17eaf2da3932851d9476e74fafd12a1b3108e335",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.646305218462658e-07,
+          "lower": 1.1089381501960816e-07,
+          "upper": 1.108938576521723e-07,
+          "ordered_lower": 3018728581,
+          "ordered_upper": 3018728587,
+          "count": 7
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 4.1513944779580925e-06,
+          "lower": 1.6810328133942676e-06,
+          "upper": 1.681033040767943e-06,
+          "ordered_lower": 3051462617,
+          "ordered_upper": 3051462619,
+          "count": 3
+        }
+      ],
+      "combinations": 21,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.0064413840300403535
+    },
+    {
+      "pair_id": 12,
+      "condition": "no_track",
+      "expected_model_sha256": "89a335b97455c82943c15dc8820493204526dd2714c35f74a3a5fcedb9f1f408",
+      "naive_hash": "e0ea27dbdcd276660a56a974ca4ff2330a2c6cb50b283437c572a0b399592bb9",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_12.npz",
+      "raw_sha256": "56d94c034707dde2b1f9325a17eaf2da3932851d9476e74fafd12a1b3108e335",
+      "ambiguous_coordinates": [
+        {
+          "index": 2488,
+          "initial": 9.75524358182156e-07,
+          "delta": -8.642093121125072e-07,
+          "lower": 1.1131502475336674e-07,
+          "upper": 1.1131506738593089e-07,
+          "ordered_lower": 3018787861,
+          "ordered_upper": 3018787867,
+          "count": 7
+        },
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 4.079554400959751e-06,
+          "lower": 1.6091927363959257e-06,
+          "upper": 1.6091929637696012e-06,
+          "ordered_lower": 3050830705,
+          "ordered_upper": 3050830707,
+          "count": 3
+        }
+      ],
+      "combinations": 21,
+      "attempted": 19,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.040983379003591835
+    },
+    {
+      "pair_id": 13,
+      "condition": "full_F",
+      "expected_model_sha256": "a3034fc593d49a3a177bdc6666fcf6168b24934de04782761f15e248e0bfab95",
+      "naive_hash": "a3034fc593d49a3a177bdc6666fcf6168b24934de04782761f15e248e0bfab95",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_13.npz",
+      "raw_sha256": "1c5ed75419b2638982adb69438a0634faa61d08839604d45f0ff2c64bb2668c2",
+      "status": "EXACT_NAIVE",
+      "ambiguous_coordinates": [],
+      "combinations": 1,
+      "attempted": 1
+    },
+    {
+      "pair_id": 13,
+      "condition": "no_keep",
+      "expected_model_sha256": "113cb4e50fe51612ffe89ffb945706dc31a28e0e5bfb4b074dfca5fdd0a45ff3",
+      "naive_hash": "113cb4e50fe51612ffe89ffb945706dc31a28e0e5bfb4b074dfca5fdd0a45ff3",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_13.npz",
+      "raw_sha256": "1c5ed75419b2638982adb69438a0634faa61d08839604d45f0ff2c64bb2668c2",
+      "status": "EXACT_NAIVE",
+      "ambiguous_coordinates": [],
+      "combinations": 1,
+      "attempted": 1
+    },
+    {
+      "pair_id": 13,
+      "condition": "no_track",
+      "expected_model_sha256": "a3034fc593d49a3a177bdc6666fcf6168b24934de04782761f15e248e0bfab95",
+      "naive_hash": "a3034fc593d49a3a177bdc6666fcf6168b24934de04782761f15e248e0bfab95",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_13.npz",
+      "raw_sha256": "1c5ed75419b2638982adb69438a0634faa61d08839604d45f0ff2c64bb2668c2",
+      "status": "EXACT_NAIVE",
+      "ambiguous_coordinates": [],
+      "combinations": 1,
+      "attempted": 1
+    },
+    {
+      "pair_id": 15,
+      "condition": "full_F",
+      "expected_model_sha256": "5cffe7e95168bab8f529f6c281640de801ba1fefd2278c22d2353f35af5cd3af",
+      "naive_hash": "f16470d93ea84ae57df25671ba9b34b1f0bf967e1e9474ae0623bbe4cd4f1842",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_15.npz",
+      "raw_sha256": "e61e099e7dc3c9575ad379c06a81a3d7d1bcc57b591c3ef01b3dc2adddbc2cf6",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 4.38619372289395e-06,
+          "lower": 1.915831944643287e-06,
+          "upper": 1.915832399390638e-06,
+          "ordered_lower": 3053490622,
+          "ordered_upper": 3053490624,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 3,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.0072097660158760846
+    },
+    {
+      "pair_id": 15,
+      "condition": "no_keep",
+      "expected_model_sha256": "53449be97d80a73baa58f793f14f2dddb8924b730ce03a41a6e7cc6f341f8e9e",
+      "naive_hash": "e8dd32b7aa8938d9f68dbc6816149f2dce8e0a314b82853683e6f596b9a914e0",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_15.npz",
+      "raw_sha256": "e61e099e7dc3c9575ad379c06a81a3d7d1bcc57b591c3ef01b3dc2adddbc2cf6",
+      "ambiguous_coordinates": [
+        {
+          "index": 14140,
+          "initial": -2.470361550876987e-06,
+          "delta": 3.4723293538263533e-06,
+          "lower": 1.0019676892625284e-06,
+          "upper": 1.0019679166362039e-06,
+          "ordered_lower": 3045489497,
+          "ordered_upper": 3045489499,
+          "count": 3
+        }
+      ],
+      "combinations": 3,
+      "attempted": 1,
+      "status": "EXACT_RECOVERED",
+      "seconds": 0.002295440004672855
+    },
+    {
+      "pair_id": 15,
+      "condition": "no_track",
+      "expected_model_sha256": "7583544ef0541d382e648e4efc2b0fb6c2c0517caa24b4ef6e07501a6db9441f",
+      "naive_hash": "7583544ef0541d382e648e4efc2b0fb6c2c0517caa24b4ef6e07501a6db9441f",
+      "raw_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/pairs/pair_15.npz",
+      "raw_sha256": "e61e099e7dc3c9575ad379c06a81a3d7d1bcc57b591c3ef01b3dc2adddbc2cf6",
+      "status": "EXACT_NAIVE",
+      "ambiguous_coordinates": [],
+      "combinations": 1,
+      "attempted": 1
+    }
+  ],
+  "exact_count": 27,
+  "total_count": 27,
+  "endpoints_npz_sha256": "0af649d3080e05fb12ec364390d139474b6ce05bfb36345527eea9bb2cecb0f0"
+}

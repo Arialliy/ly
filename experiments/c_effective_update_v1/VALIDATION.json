@@ -1,0 +1,46 @@
+{
+  "status": "PASS_FINAL_ARTIFACT_VALIDATION",
+  "created_unix": 1791836789.029314,
+  "checks": {
+    "frozen_files_unchanged": 39,
+    "reused_sources_unchanged": 150,
+    "retained_pairs_byte_identical": [
+      1,
+      4
+    ],
+    "completed_pairs": 16,
+    "completed_cohorts": 32,
+    "effect_table_rows": 96,
+    "gate_status": "TRIGGER_NOT_SUPPORTED",
+    "actual_nonzero_updates": 48,
+    "no_config_condition": true,
+    "evaluation/RESULT_REVIEW.json": "PASS_INDEPENDENT_RESULT_REVIEW",
+    "evaluation/NUMERICAL_FIX_REVIEW.json": "PASS_LIMITED_NUMERICAL_ASSERTION_AND_RESUME_AMENDMENT"
+  },
+  "failures": [],
+  "legacy_readonly_mount_mapping": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py"
+  },
+  "final_receipt_status": {
+    "pairs/SHARD_0.json": "COMPLETE",
+    "pairs/SHARD_1.json": "COMPLETE",
+    "pairs/SHARD_2.json": "COMPLETE",
+    "cohorts/SHARD_0.json": "COMPLETE",
+    "cohorts/SHARD_1.json": "COMPLETE",
+    "cohorts/SHARD_2.json": "COMPLETE",
+    "runtime/cohorts_0.json": "COMPLETE",
+    "runtime/cohorts_1.json": "COMPLETE",
+    "runtime/cohorts_2.json": "COMPLETE",
+    "runtime/diagnose_resume_0.json": "COMPLETE",
+    "runtime/diagnose_resume_1.json": "COMPLETE",
+    "runtime/diagnose_resume_2.json": "COMPLETE"
+  },
+  "active_freeze_sha256": "d1e544edc74f5f966c324c08cc543080e8b3f197dad0852a07df9a948766c2fe",
+  "initial_freeze_sha256": "3789abfde8fb33dc074329ec73993fd044a40f97bfafd59a51632b2c748f4ff6",
+  "notes": [
+    "Initial diagnose_0/1/2 failure logs retained; limited numerical-assertion amendment independently reviewed.",
+    "This is final file/receipt integrity verification, not a rerun of old numerical or integration tests.",
+    "The scientific gate remains unsupported; no actual ConFIG copies or paired 256-step training were executed."
+  ]
+}

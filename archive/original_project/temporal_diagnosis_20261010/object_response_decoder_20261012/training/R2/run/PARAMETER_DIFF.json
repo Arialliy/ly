@@ -1,0 +1,510 @@
+{
+  "query_embed": {
+    "changed": 3200,
+    "max_abs": 0.11483088880777359
+  },
+  "original.conv_in.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.4.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.4.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.5.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.5.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.6.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.6.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.7.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.7.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.norm1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.norm1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "raw_encoder.0.weight": {
+    "changed": 72,
+    "max_abs": 0.052874475717544556
+  },
+  "raw_encoder.0.bias": {
+    "changed": 8,
+    "max_abs": 0.08263882994651794
+  },
+  "raw_encoder.2.weight": {
+    "changed": 576,
+    "max_abs": 0.11228299140930176
+  },
+  "raw_encoder.2.bias": {
+    "changed": 8,
+    "max_abs": 0.019022740423679352
+  },
+  "project.weight": {
+    "changed": 512,
+    "max_abs": 0.08978307992219925
+  },
+  "project.bias": {
+    "changed": 32,
+    "max_abs": 0.02607196569442749
+  },
+  "layers.0.spatial_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.03027641773223877
+  },
+  "layers.0.spatial_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.01495314110070467
+  },
+  "layers.0.spatial_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.056917790323495865
+  },
+  "layers.0.spatial_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.010387703776359558
+  },
+  "layers.0.spatial_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.06974110007286072
+  },
+  "layers.0.spatial_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.1413329839706421
+  },
+  "layers.0.spatial_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05193139612674713
+  },
+  "layers.0.spatial_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.01461876928806305
+  },
+  "layers.0.spatial_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.04722756892442703
+  },
+  "layers.0.spatial_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.017919175326824188
+  },
+  "layers.0.temporal_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.05239593982696533
+  },
+  "layers.0.temporal_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.017564216628670692
+  },
+  "layers.0.temporal_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.09434022009372711
+  },
+  "layers.0.temporal_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.014932384714484215
+  },
+  "layers.0.temporal_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.08104341477155685
+  },
+  "layers.0.temporal_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.14450642466545105
+  },
+  "layers.0.temporal_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.06660185009241104
+  },
+  "layers.0.temporal_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.016755446791648865
+  },
+  "layers.0.temporal_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.04314045608043671
+  },
+  "layers.0.temporal_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.02164594829082489
+  },
+  "layers.0.ffn_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.048043131828308105
+  },
+  "layers.0.ffn_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.03656475991010666
+  },
+  "layers.0.ffn.0.weight": {
+    "changed": 2048,
+    "max_abs": 0.1211424171924591
+  },
+  "layers.0.ffn.0.bias": {
+    "changed": 64,
+    "max_abs": 0.052750565111637115
+  },
+  "layers.0.ffn.2.weight": {
+    "changed": 2048,
+    "max_abs": 0.08289527148008347
+  },
+  "layers.0.ffn.2.bias": {
+    "changed": 32,
+    "max_abs": 0.01956479251384735
+  },
+  "layers.1.spatial_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.06871664524078369
+  },
+  "layers.1.spatial_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.02387325093150139
+  },
+  "layers.1.spatial_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.0799829363822937
+  },
+  "layers.1.spatial_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.026961736381053925
+  },
+  "layers.1.spatial_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.07749160379171371
+  },
+  "layers.1.spatial_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.14204752445220947
+  },
+  "layers.1.spatial_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05013062059879303
+  },
+  "layers.1.spatial_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.014850061386823654
+  },
+  "layers.1.spatial_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05162158980965614
+  },
+  "layers.1.spatial_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.020166415721178055
+  },
+  "layers.1.temporal_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.04649937152862549
+  },
+  "layers.1.temporal_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.020413756370544434
+  },
+  "layers.1.temporal_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.0659521073102951
+  },
+  "layers.1.temporal_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.020202703773975372
+  },
+  "layers.1.temporal_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.07911404967308044
+  },
+  "layers.1.temporal_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.14515751600265503
+  },
+  "layers.1.temporal_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.06990712881088257
+  },
+  "layers.1.temporal_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.017439737915992737
+  },
+  "layers.1.temporal_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05653838813304901
+  },
+  "layers.1.temporal_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.016542404890060425
+  },
+  "layers.1.ffn_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.06268632411956787
+  },
+  "layers.1.ffn_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.03248823434114456
+  },
+  "layers.1.ffn.0.weight": {
+    "changed": 2048,
+    "max_abs": 0.11106770485639572
+  },
+  "layers.1.ffn.0.bias": {
+    "changed": 64,
+    "max_abs": 0.07491527497768402
+  },
+  "layers.1.ffn.2.weight": {
+    "changed": 2048,
+    "max_abs": 0.11792414635419846
+  },
+  "layers.1.ffn.2.bias": {
+    "changed": 32,
+    "max_abs": 0.01975836604833603
+  },
+  "presence_head.weight": {
+    "changed": 32,
+    "max_abs": 0.08019419014453888
+  },
+  "presence_head.bias": {
+    "changed": 1,
+    "max_abs": 0.01899506151676178
+  },
+  "mask_head.weight": {
+    "changed": 1056,
+    "max_abs": 0.07306405901908875
+  },
+  "mask_head.bias": {
+    "changed": 33,
+    "max_abs": 0.03394467011094093
+  }
+}

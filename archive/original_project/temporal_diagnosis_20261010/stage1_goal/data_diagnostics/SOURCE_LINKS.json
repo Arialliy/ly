@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-09T20:15:43.209759+00:00",
+  "records": [
+    {
+      "sequence": "DJI_0028_2",
+      "raw_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/real_motion_stage2/selected_raw/raw_frames.npy",
+      "annotation_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/real_motion_stage2/selected_raw/annotations.json",
+      "use": "old development diagnostics only, never train/calibrate/confirm",
+      "annotation_sha256": "823b219a6b94c075c3632e045abb23b1395661ef911a1cba9c96f483f2770025"
+    },
+    {
+      "sequence": "DJI_0028_4",
+      "raw_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/raw_frames.npy",
+      "annotation_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/annotations.json",
+      "use": "old development diagnostics only, never train/calibrate/confirm",
+      "annotation_sha256": "b72c46c27c075510374b081fdd990c3c7136517f39b207c65159358721978c5e"
+    },
+    {
+      "sequence": "DJI_0032_5",
+      "raw_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/raw_frames.npy",
+      "annotation_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/annotations.json",
+      "use": "old development diagnostics only, never train/calibrate/confirm",
+      "annotation_sha256": "7dc02e9dbaf1a0f06e36591cffcd8142bd7a555ab6cda6dfe94e6c39fdd0432b"
+    },
+    {
+      "sequence": "DJI_0047_3",
+      "raw_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/raw_frames.npy",
+      "annotation_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/annotations.json",
+      "use": "old development diagnostics only, never train/calibrate/confirm",
+      "annotation_sha256": "e4d8220a7834c4cd2ac2c7c37d5b02bc1d68953ff9d9531e5d16e3b4b8c078a7"
+    }
+  ]
+}

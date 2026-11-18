@@ -1,0 +1,336 @@
+{
+  "shared": {
+    "total": 10,
+    "budget_feasible": 5,
+    "high_min_loss": 54,
+    "high_min_loss_choice": {
+      "choice_0026": "C03",
+      "choice_0067": "C03",
+      "small_matched": 720,
+      "gained": 74,
+      "lost": 54,
+      "unmatched_components": 3967,
+      "positive_pixels_outside_boxes": 38641,
+      "positive_pixels": 99357,
+      "component_count": 7339,
+      "matched_count": 3372
+    },
+    "zero_loss_max_M": 700,
+    "zero_loss_choice": {
+      "choice_0026": "C09",
+      "choice_0067": "C09",
+      "small_matched": 700,
+      "gained": 0,
+      "lost": 0,
+      "unmatched_components": 4015,
+      "positive_pixels_outside_boxes": 38368,
+      "positive_pixels": 98381,
+      "component_count": 7276,
+      "matched_count": 3261
+    }
+  },
+  "per_clip": {
+    "total": 100,
+    "budget_feasible": 50,
+    "high_min_loss": 52,
+    "high_min_loss_choice": {
+      "choice_0026": "C08",
+      "choice_0067": "C03",
+      "small_matched": 721,
+      "gained": 73,
+      "lost": 52,
+      "unmatched_components": 3935,
+      "positive_pixels_outside_boxes": 38729,
+      "positive_pixels": 99438,
+      "component_count": 7297,
+      "matched_count": 3362
+    },
+    "zero_loss_max_M": 707,
+    "zero_loss_choice": {
+      "choice_0026": "C08",
+      "choice_0067": "C09",
+      "small_matched": 707,
+      "gained": 7,
+      "lost": 0,
+      "unmatched_components": 3949,
+      "positive_pixels_outside_boxes": 38474,
+      "positive_pixels": 98456,
+      "component_count": 7215,
+      "matched_count": 3266
+    }
+  },
+  "U_budget": 4015,
+  "threshold": 0.5,
+  "match_floor_intervals": [
+    {
+      "signature": [
+        "shared",
+        "C09",
+        "C09",
+        700,
+        0
+      ],
+      "from_": 683,
+      "to": 700,
+      "choice": {
+        "choice_0026": "C09",
+        "choice_0067": "C09",
+        "small_matched": 700,
+        "gained": 0,
+        "lost": 0,
+        "unmatched_components": 4015,
+        "positive_pixels_outside_boxes": 38368,
+        "positive_pixels": 98381,
+        "component_count": 7276,
+        "matched_count": 3261
+      }
+    },
+    {
+      "signature": [
+        "shared",
+        "C03",
+        "C03",
+        720,
+        54
+      ],
+      "from_": 701,
+      "to": 720,
+      "choice": {
+        "choice_0026": "C03",
+        "choice_0067": "C03",
+        "small_matched": 720,
+        "gained": 74,
+        "lost": 54,
+        "unmatched_components": 3967,
+        "positive_pixels_outside_boxes": 38641,
+        "positive_pixels": 99357,
+        "component_count": 7339,
+        "matched_count": 3372
+      }
+    },
+    {
+      "signature": [
+        "shared",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "from_": 721,
+      "to": 721,
+      "choice": {
+        "choice_0026": "",
+        "choice_0067": "",
+        "small_matched": "",
+        "gained": "",
+        "lost": "",
+        "unmatched_components": "",
+        "positive_pixels_outside_boxes": "",
+        "positive_pixels": "",
+        "component_count": "",
+        "matched_count": ""
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C09",
+        707,
+        0
+      ],
+      "from_": 683,
+      "to": 707,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C09",
+        "small_matched": 707,
+        "gained": 7,
+        "lost": 0,
+        "unmatched_components": 3949,
+        "positive_pixels_outside_boxes": 38474,
+        "positive_pixels": 98456,
+        "component_count": 7215,
+        "matched_count": 3266
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C06",
+        709,
+        38
+      ],
+      "from_": 708,
+      "to": 709,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C06",
+        "small_matched": 709,
+        "gained": 47,
+        "lost": 38,
+        "unmatched_components": 3998,
+        "positive_pixels_outside_boxes": 39060,
+        "positive_pixels": 99734,
+        "component_count": 7330,
+        "matched_count": 3332
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C03",
+        721,
+        52
+      ],
+      "from_": 710,
+      "to": 721,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C03",
+        "small_matched": 721,
+        "gained": 73,
+        "lost": 52,
+        "unmatched_components": 3935,
+        "positive_pixels_outside_boxes": 38729,
+        "positive_pixels": 99438,
+        "component_count": 7297,
+        "matched_count": 3362
+      }
+    }
+  ],
+  "loss_limit_intervals": [
+    {
+      "signature": [
+        "shared",
+        "C09",
+        "C09",
+        700,
+        0
+      ],
+      "from_": 0,
+      "to": 53,
+      "choice": {
+        "choice_0026": "C09",
+        "choice_0067": "C09",
+        "small_matched": 700,
+        "gained": 0,
+        "lost": 0,
+        "unmatched_components": 4015,
+        "positive_pixels_outside_boxes": 38368,
+        "positive_pixels": 98381,
+        "component_count": 7276,
+        "matched_count": 3261
+      }
+    },
+    {
+      "signature": [
+        "shared",
+        "C03",
+        "C03",
+        720,
+        54
+      ],
+      "from_": 54,
+      "to": 70,
+      "choice": {
+        "choice_0026": "C03",
+        "choice_0067": "C03",
+        "small_matched": 720,
+        "gained": 74,
+        "lost": 54,
+        "unmatched_components": 3967,
+        "positive_pixels_outside_boxes": 38641,
+        "positive_pixels": 99357,
+        "component_count": 7339,
+        "matched_count": 3372
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C09",
+        707,
+        0
+      ],
+      "from_": 0,
+      "to": 37,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C09",
+        "small_matched": 707,
+        "gained": 7,
+        "lost": 0,
+        "unmatched_components": 3949,
+        "positive_pixels_outside_boxes": 38474,
+        "positive_pixels": 98456,
+        "component_count": 7215,
+        "matched_count": 3266
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C06",
+        709,
+        38
+      ],
+      "from_": 38,
+      "to": 51,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C06",
+        "small_matched": 709,
+        "gained": 47,
+        "lost": 38,
+        "unmatched_components": 3998,
+        "positive_pixels_outside_boxes": 39060,
+        "positive_pixels": 99734,
+        "component_count": 7330,
+        "matched_count": 3332
+      }
+    },
+    {
+      "signature": [
+        "per_clip",
+        "C08",
+        "C03",
+        721,
+        52
+      ],
+      "from_": 52,
+      "to": 70,
+      "choice": {
+        "choice_0026": "C08",
+        "choice_0067": "C03",
+        "small_matched": 721,
+        "gained": 73,
+        "lost": 52,
+        "unmatched_components": 3935,
+        "positive_pixels_outside_boxes": 38729,
+        "positive_pixels": 99438,
+        "component_count": 7297,
+        "matched_count": 3362
+      }
+    }
+  ],
+  "exact_M_L_groups": 10,
+  "near_pairs": 55,
+  "max_exact_M_L_U_span": 14,
+  "max_exact_M_L_outside_span": 320,
+  "max_near_U_absolute_difference": 20,
+  "max_near_outside_absolute_difference": 320,
+  "sources": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/combination_feasibility_20261011/SHARED_COMBINATIONS.csv": "1add9ab442becf89d5a7dea0aacce7b3a82ac38a1bb8479cbe1ef545ac36544c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/combination_feasibility_20261011/PER_CLIP_COMBINATIONS.csv": "064cb531db5bc949c196f72f90357c6084cb4d02c37db6126817253e4fd95814"
+  },
+  "limits": [
+    "Post hoc developer clips only; not deployable policy or independent confirmation.",
+    "Exact and within-one comparisons describe existing points, not a new success threshold.",
+    "No new model inference, fusion, threshold scoring, or training."
+  ]
+}

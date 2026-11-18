@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "control": "official5_probmean",
+      "sequence": "DJI_0026_2",
+      "status": "PASS",
+      "curve_rows": 23
+    },
+    {
+      "control": "official5_probmean",
+      "sequence": "DJI_0067_2",
+      "status": "PASS",
+      "curve_rows": 23
+    },
+    {
+      "control": "symmetric5_probmax",
+      "sequence": "DJI_0026_2",
+      "status": "PASS",
+      "curve_rows": 23
+    },
+    {
+      "control": "symmetric5_probmax",
+      "sequence": "DJI_0067_2",
+      "status": "PASS",
+      "curve_rows": 23
+    }
+  ],
+  "runtime_exited_zero_cpu_only": true,
+  "checks_description": "Output hashes, current script against launch hash, CSV/NPZ counts, per-frame matching conservation, threshold and object alignment; no threshold selected."
+}

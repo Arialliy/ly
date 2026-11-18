@@ -1,0 +1,1392 @@
+[
+  {
+    "sequence": "DJI_0028_4",
+    "track_id": "4400003",
+    "n": 7,
+    "ids": 1,
+    "clips": {
+      "DJI_0028_4": 7
+    },
+    "group_counts": {
+      "flip": 7
+    },
+    "original_probability_gap_median": 0.9868541807204281,
+    "original_logit_gap_median": 17.300118923187256,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 6,
+        "membership": 1
+      },
+      "anchor_a": {
+        "feature": 6,
+        "membership": 1
+      },
+      "anchor_b": {
+        "feature": 3,
+        "slot": 2,
+        "membership": 2
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 2,
+        "slot": 1,
+        "feature": 4
+      },
+      "b_peak_logit": {
+        "feature": 6,
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 4,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 1.9731215692701793,
+        "median": 1.410723368326823,
+        "positive_count": 5
+      },
+      "feature": {
+        "mean": 11.627795545827773,
+        "median": 16.101832270622253,
+        "positive_count": 6
+      },
+      "membership": {
+        "mean": 2.246648365543002,
+        "median": -1.1193851431210837,
+        "positive_count": 3
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 5,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 3,
+      "feature": 6,
+      "membership": 2
+    },
+    "halo": {
+      "both_complete": 7,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 0,
+      "both_low": 7,
+      "pair_probability_range_median": 2.5354728450110997e-06,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 7
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4800531",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9997400333547262,
+    "original_logit_gap_median": 22.21812915802002,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 1
+      },
+      "anchor_a": {
+        "membership": 1
+      },
+      "anchor_b": {
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.86399777730306,
+        "median": 2.86399777730306,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": 0.8638740380605061,
+        "median": 0.8638740380605061,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 18.490258296330765,
+        "median": 18.490258296330765,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 1,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 1,
+      "both_low": 0,
+      "pair_probability_range_median": 0.06709104776382446,
+      "a_response_gain": 1,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4801009",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9144763562653679,
+    "original_logit_gap_median": 11.064125061035156,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 1
+      },
+      "anchor_a": {
+        "membership": 1
+      },
+      "anchor_b": {
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 1
+      },
+      "b_peak_logit": {
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.9749957521756487,
+        "median": 2.9749957521756487,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": 0.32049359877904254,
+        "median": 0.32049359877904254,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 7.7686380942662545,
+        "median": 7.7686380942662545,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 0
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 0,
+      "crosses_half": 1,
+      "strong_flip": 1,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9930517825996503,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4801517",
+    "n": 15,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 15
+    },
+    "group_counts": {
+      "flip": 15
+    },
+    "original_probability_gap_median": 0.9959801053628325,
+    "original_logit_gap_median": 17.23313570022583,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 9,
+        "slot": 4,
+        "feature": 2
+      },
+      "anchor_a": {
+        "membership": 9,
+        "slot": 4,
+        "feature": 2
+      },
+      "anchor_b": {
+        "membership": 9,
+        "slot": 3,
+        "feature": 3
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 4,
+        "feature": 7,
+        "slot": 4
+      },
+      "b_peak_logit": {
+        "membership": 8,
+        "feature": 5,
+        "slot": 2
+      }
+    },
+    "all_anchor_dominant_agree": 14,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 1.424162200424406,
+        "median": -0.6642874677975972,
+        "positive_count": 6
+      },
+      "feature": {
+        "mean": 6.984892512692345,
+        "median": 7.701085110505422,
+        "positive_count": 13
+      },
+      "membership": {
+        "mean": 9.724140591753853,
+        "median": 11.30801620086034,
+        "positive_count": 11
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 4,
+      "feature": 8,
+      "membership": 9
+    },
+    "remove_term_high_to_low": {
+      "slot": 4,
+      "feature": 6,
+      "membership": 6
+    },
+    "halo": {
+      "both_complete": 10,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 12,
+      "both_low": 3,
+      "pair_probability_range_median": 0.0005757808685302734,
+      "a_response_gain": 12,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 3
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4801583",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9995365460636094,
+    "original_logit_gap_median": 16.74760150909424,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 1
+      },
+      "anchor_a": {
+        "membership": 1
+      },
+      "anchor_b": {
+        "feature": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 0,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 1.0243623455365498,
+        "median": 1.0243623455365498,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": 7.421087523301441,
+        "median": 7.421087523301441,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 8.302146871884663,
+        "median": 8.302146871884663,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 1,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 0
+    },
+    "halo": {
+      "both_complete": 1,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 1,
+      "both_low": 0,
+      "pair_probability_range_median": 0.0005047917366027832,
+      "a_response_gain": 1,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4803451",
+    "n": 2,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 2
+    },
+    "group_counts": {
+      "flip": 2
+    },
+    "original_probability_gap_median": 0.9822446642792784,
+    "original_logit_gap_median": 11.980891227722168,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 2
+      },
+      "anchor_a": {
+        "membership": 2
+      },
+      "anchor_b": {
+        "membership": 2
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 2
+      },
+      "b_peak_logit": {
+        "membership": 2
+      }
+    },
+    "all_anchor_dominant_agree": 2,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 3.551374812920888,
+        "median": 3.551374812920888,
+        "positive_count": 2
+      },
+      "feature": {
+        "mean": -0.6896194020907084,
+        "median": -0.6896194020907084,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 9.11913486321767,
+        "median": 9.11913486321767,
+        "positive_count": 2
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 2
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 2,
+      "crosses_half": 2,
+      "strong_flip": 2,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9921553838535146,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4920504",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9922459844058835,
+    "original_logit_gap_median": 18.793153285980225,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 1
+      },
+      "anchor_a": {
+        "membership": 1
+      },
+      "anchor_b": {
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 5.515289386113484,
+        "median": 5.515289386113484,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": 1.6530871589978535,
+        "median": 1.6530871589978535,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 11.624776740868885,
+        "median": 11.624776740868885,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 0
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 1,
+      "crosses_half": 1,
+      "strong_flip": 1,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9395597964568196,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4920505",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9999377384574473,
+    "original_logit_gap_median": 22.655552864074707,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 1
+      },
+      "anchor_a": {
+        "membership": 1
+      },
+      "anchor_b": {
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.872004191080729,
+        "median": 2.872004191080729,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": 0.48808352152506507,
+        "median": 0.48808352152506507,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 19.29546515146891,
+        "median": 19.29546515146891,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 1,
+      "crosses_half": 1,
+      "strong_flip": 1,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9998106967541389,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4921018",
+    "n": 1,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 1
+    },
+    "group_counts": {
+      "flip": 1
+    },
+    "original_probability_gap_median": 0.9989411153201218,
+    "original_logit_gap_median": 17.456790447235107,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 1
+      },
+      "anchor_a": {
+        "feature": 1
+      },
+      "anchor_b": {
+        "feature": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "feature": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": -3.3162255287170406,
+        "median": -3.3162255287170406,
+        "positive_count": 0
+      },
+      "feature": {
+        "mean": 13.398714542388914,
+        "median": 13.398714542388914,
+        "positive_count": 1
+      },
+      "membership": {
+        "mean": 7.374302387237548,
+        "median": 7.374302387237548,
+        "positive_count": 1
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 1,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 1,
+      "membership": 0
+    },
+    "halo": {
+      "both_complete": 1,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 1,
+      "both_low": 0,
+      "pair_probability_range_median": 0.0001633167266845703,
+      "a_response_gain": 1,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4923712",
+    "n": 5,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 5
+    },
+    "group_counts": {
+      "flip": 5
+    },
+    "original_probability_gap_median": 0.9965999918276793,
+    "original_logit_gap_median": 14.491316318511963,
+    "dominant_anchors": {
+      "symmetric": {
+        "slot": 1,
+        "feature": 3,
+        "membership": 1
+      },
+      "anchor_a": {
+        "slot": 1,
+        "feature": 2,
+        "membership": 2
+      },
+      "anchor_b": {
+        "slot": 1,
+        "membership": 2,
+        "feature": 2
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 1,
+        "feature": 4
+      },
+      "b_peak_logit": {
+        "slot": 1,
+        "membership": 3,
+        "feature": 1
+      }
+    },
+    "all_anchor_dominant_agree": 3,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 1.636375812689463,
+        "median": -1.380130688349406,
+        "positive_count": 2
+      },
+      "feature": {
+        "mean": 8.060095171133677,
+        "median": 8.365598996480305,
+        "positive_count": 4
+      },
+      "membership": {
+        "mean": 4.706887666384379,
+        "median": 6.4706798394521075,
+        "positive_count": 4
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 1,
+      "feature": 2,
+      "membership": 0
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 3,
+      "membership": 3
+    },
+    "halo": {
+      "both_complete": 0,
+      "crosses_half": 3,
+      "strong_flip": 2,
+      "both_high": 2,
+      "both_low": 0,
+      "pair_probability_range_median": 0.777460590004921,
+      "a_response_gain": 2,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4923713",
+    "n": 2,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 2
+    },
+    "group_counts": {
+      "flip": 2
+    },
+    "original_probability_gap_median": 0.9806906534358859,
+    "original_logit_gap_median": 10.608225345611572,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 2
+      },
+      "anchor_a": {
+        "membership": 2
+      },
+      "anchor_b": {
+        "slot": 1,
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 1,
+        "membership": 1
+      },
+      "b_peak_logit": {
+        "slot": 1,
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 1,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 4.494279901186625,
+        "median": 4.494279901186625,
+        "positive_count": 1
+      },
+      "feature": {
+        "mean": -5.182375152905782,
+        "median": -5.182375152905782,
+        "positive_count": 0
+      },
+      "membership": {
+        "mean": 11.29632035891215,
+        "median": 11.29632035891215,
+        "positive_count": 2
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 1,
+      "feature": 0,
+      "membership": 2
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 0,
+      "membership": 2
+    },
+    "halo": {
+      "both_complete": 0,
+      "crosses_half": 2,
+      "strong_flip": 2,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9929426364833489,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0032_5",
+    "track_id": "4923951",
+    "n": 5,
+    "ids": 1,
+    "clips": {
+      "DJI_0032_5": 5
+    },
+    "group_counts": {
+      "flip": 5
+    },
+    "original_probability_gap_median": 0.9665292529389262,
+    "original_logit_gap_median": 8.222213745117188,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 1,
+        "slot": 3,
+        "membership": 1
+      },
+      "anchor_a": {
+        "feature": 2,
+        "slot": 2,
+        "membership": 1
+      },
+      "anchor_b": {
+        "feature": 1,
+        "slot": 3,
+        "membership": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 2,
+        "slot": 3
+      },
+      "b_peak_logit": {
+        "feature": 2,
+        "slot": 2,
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 4,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 5.451118338108063,
+        "median": 6.884358803431192,
+        "positive_count": 4
+      },
+      "feature": {
+        "mean": 4.474336647987365,
+        "median": 2.2016621033350625,
+        "positive_count": 5
+      },
+      "membership": {
+        "mean": -0.027720773220062354,
+        "median": 0.04762436946233117,
+        "positive_count": 3
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 4,
+      "feature": 3,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 3,
+      "feature": 0,
+      "membership": 0
+    },
+    "halo": {
+      "both_complete": 4,
+      "crosses_half": 5,
+      "strong_flip": 3,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9252222632057965,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4500503",
+    "n": 28,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 28
+    },
+    "group_counts": {
+      "flip": 28
+    },
+    "original_probability_gap_median": 0.9865679331938395,
+    "original_logit_gap_median": 17.182096242904663,
+    "dominant_anchors": {
+      "symmetric": {
+        "slot": 1,
+        "membership": 22,
+        "feature": 5
+      },
+      "anchor_a": {
+        "slot": 1,
+        "membership": 24,
+        "feature": 3
+      },
+      "anchor_b": {
+        "slot": 1,
+        "membership": 22,
+        "feature": 5
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 13,
+        "membership": 11,
+        "feature": 4
+      },
+      "b_peak_logit": {
+        "membership": 26,
+        "feature": 2
+      }
+    },
+    "all_anchor_dominant_agree": 25,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": -0.21818579236666358,
+        "median": -0.09353490670522054,
+        "positive_count": 13
+      },
+      "feature": {
+        "mean": 2.5692075689633684,
+        "median": 1.131641149520874,
+        "positive_count": 20
+      },
+      "membership": {
+        "mean": 13.59419332941373,
+        "median": 15.601773579915363,
+        "positive_count": 28
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 2,
+      "feature": 5,
+      "membership": 23
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 6,
+      "membership": 22
+    },
+    "halo": {
+      "both_complete": 21,
+      "crosses_half": 16,
+      "strong_flip": 14,
+      "both_high": 11,
+      "both_low": 1,
+      "pair_probability_range_median": 0.8838522583246231,
+      "a_response_gain": 11,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 1
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4501000",
+    "n": 5,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 5
+    },
+    "group_counts": {
+      "flip": 5
+    },
+    "original_probability_gap_median": 0.9972012587531935,
+    "original_logit_gap_median": 19.661386489868164,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 5
+      },
+      "anchor_a": {
+        "membership": 5
+      },
+      "anchor_b": {
+        "membership": 5
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 1,
+        "feature": 2,
+        "slot": 2
+      },
+      "b_peak_logit": {
+        "membership": 5
+      }
+    },
+    "all_anchor_dominant_agree": 5,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.233883182207743,
+        "median": 3.117080450057983,
+        "positive_count": 3
+      },
+      "feature": {
+        "mean": 3.71317667166392,
+        "median": 5.274807532628377,
+        "positive_count": 4
+      },
+      "membership": {
+        "mean": 13.355960051218668,
+        "median": 10.233895540237427,
+        "positive_count": 5
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 1,
+      "feature": 1,
+      "membership": 4
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 1,
+      "membership": 4
+    },
+    "halo": {
+      "both_complete": 5,
+      "crosses_half": 3,
+      "strong_flip": 3,
+      "both_high": 2,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9344318062067032,
+      "a_response_gain": 2,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4501001",
+    "n": 3,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 3
+    },
+    "group_counts": {
+      "flip": 3
+    },
+    "original_probability_gap_median": 0.9999947394733226,
+    "original_logit_gap_median": 25.755552291870117,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 3
+      },
+      "anchor_a": {
+        "feature": 3
+      },
+      "anchor_b": {
+        "feature": 3
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 1,
+        "membership": 1,
+        "feature": 1
+      },
+      "b_peak_logit": {
+        "feature": 3
+      }
+    },
+    "all_anchor_dominant_agree": 3,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 0.3565155665079753,
+        "median": 0.5247151056925454,
+        "positive_count": 2
+      },
+      "feature": {
+        "mean": 25.39308993021647,
+        "median": 25.280600229899086,
+        "positive_count": 3
+      },
+      "membership": {
+        "mean": 4.255292574564615,
+        "median": 0.393680731455485,
+        "positive_count": 2
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 3,
+      "membership": 1
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 2,
+      "membership": 0
+    },
+    "halo": {
+      "both_complete": 3,
+      "crosses_half": 0,
+      "strong_flip": 0,
+      "both_high": 3,
+      "both_low": 0,
+      "pair_probability_range_median": 2.8848648071289062e-05,
+      "a_response_gain": 3,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4501002",
+    "n": 3,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 3
+    },
+    "group_counts": {
+      "flip": 3
+    },
+    "original_probability_gap_median": 0.9506259858608246,
+    "original_logit_gap_median": 34.05920886993408,
+    "dominant_anchors": {
+      "symmetric": {
+        "slot": 1,
+        "feature": 2
+      },
+      "anchor_a": {
+        "slot": 1,
+        "feature": 2
+      },
+      "anchor_b": {
+        "slot": 1,
+        "feature": 2
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 1,
+        "feature": 2
+      },
+      "b_peak_logit": {
+        "feature": 2,
+        "membership": 1
+      }
+    },
+    "all_anchor_dominant_agree": 3,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 7.979806800683339,
+        "median": 10.16353662808736,
+        "positive_count": 3
+      },
+      "feature": {
+        "mean": 10.185848673184712,
+        "median": 13.074576218922932,
+        "positive_count": 2
+      },
+      "membership": {
+        "mean": 10.046619633833567,
+        "median": 10.821087916692097,
+        "positive_count": 3
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 2,
+      "feature": 2,
+      "membership": 2
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 0,
+      "membership": 1
+    },
+    "halo": {
+      "both_complete": 0,
+      "crosses_half": 1,
+      "strong_flip": 1,
+      "both_high": 2,
+      "both_low": 0,
+      "pair_probability_range_median": 0.00011146068572998047,
+      "a_response_gain": 2,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4501003",
+    "n": 7,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 7
+    },
+    "group_counts": {
+      "flip": 7
+    },
+    "original_probability_gap_median": 0.9999663497546862,
+    "original_logit_gap_median": 27.25497817993164,
+    "dominant_anchors": {
+      "symmetric": {
+        "slot": 2,
+        "membership": 4,
+        "feature": 1
+      },
+      "anchor_a": {
+        "slot": 2,
+        "membership": 4,
+        "feature": 1
+      },
+      "anchor_b": {
+        "slot": 2,
+        "membership": 3,
+        "feature": 2
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 2,
+        "membership": 3,
+        "feature": 2
+      },
+      "b_peak_logit": {
+        "slot": 2,
+        "membership": 4,
+        "feature": 1
+      }
+    },
+    "all_anchor_dominant_agree": 6,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 7.842247345617838,
+        "median": 5.5776203473409005,
+        "positive_count": 6
+      },
+      "feature": {
+        "mean": 5.068618029356002,
+        "median": 4.920868794123331,
+        "positive_count": 6
+      },
+      "membership": {
+        "mean": 13.815099648066928,
+        "median": 9.177424172560373,
+        "positive_count": 7
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 3,
+      "feature": 2,
+      "membership": 4
+    },
+    "remove_term_high_to_low": {
+      "slot": 1,
+      "feature": 2,
+      "membership": 4
+    },
+    "halo": {
+      "both_complete": 6,
+      "crosses_half": 5,
+      "strong_flip": 5,
+      "both_high": 2,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9989063525406436,
+      "a_response_gain": 2,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  },
+  {
+    "sequence": "DJI_0047_3",
+    "track_id": "4621500",
+    "n": 9,
+    "ids": 1,
+    "clips": {
+      "DJI_0047_3": 9
+    },
+    "group_counts": {
+      "flip": 9
+    },
+    "original_probability_gap_median": 0.999891734222615,
+    "original_logit_gap_median": 23.1956205368042,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 6,
+        "slot": 2,
+        "feature": 1
+      },
+      "anchor_a": {
+        "membership": 6,
+        "slot": 2,
+        "feature": 1
+      },
+      "anchor_b": {
+        "membership": 6,
+        "slot": 2,
+        "feature": 1
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "slot": 4,
+        "membership": 2,
+        "feature": 3
+      },
+      "b_peak_logit": {
+        "membership": 6,
+        "slot": 2,
+        "feature": 1
+      }
+    },
+    "all_anchor_dominant_agree": 9,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.7891624084225404,
+        "median": 1.9937860171000161,
+        "positive_count": 6
+      },
+      "feature": {
+        "mean": 3.7579801921491267,
+        "median": 3.450002034505208,
+        "positive_count": 8
+      },
+      "membership": {
+        "mean": 15.683736706221543,
+        "median": 18.879241148630776,
+        "positive_count": 9
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 2,
+      "feature": 0,
+      "membership": 6
+    },
+    "remove_term_high_to_low": {
+      "slot": 3,
+      "feature": 1,
+      "membership": 6
+    },
+    "halo": {
+      "both_complete": 3,
+      "crosses_half": 9,
+      "strong_flip": 9,
+      "both_high": 0,
+      "both_low": 0,
+      "pair_probability_range_median": 0.9906410612165928,
+      "a_response_gain": 0,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 0
+    }
+  }
+]

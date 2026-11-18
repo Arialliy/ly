@@ -1,0 +1,14 @@
+{
+  "no_new_training": true,
+  "no_model_forward": true,
+  "endpoint_rows": 6,
+  "retention_rows": 3,
+  "gain_loss_identities_passed": true,
+  "retention_partition_passed": true,
+  "two_U_ratio_denominators_explicit": true,
+  "scope": "Recomputed tables from existing completed results, not an independent rescore of predictions.",
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/SUMMARY.csv": "3db3e323c44e95873e7b4993c5c721b73ca6768ea32c8e4b61850e16ad2ed6cb",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/WINDOW_DEPENDENCE.csv": "203d0fc71576f88ff20872535e789993be097c314e76040b9ce67c4edff3a967"
+  }
+}

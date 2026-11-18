@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "frames": 640,
+  "objects": 32594,
+  "independent_component_backend": "cv2.connectedComponentsWithStats, 8 connectivity",
+  "independent_box_rasterization": "explicit half-open inequality at pixel centers",
+  "independent_neighborhood": "coordinate-distance boolean selection",
+  "checked_fields": [
+    "component_count",
+    "all_sorted_component_areas",
+    "positive_pixels",
+    "positive_pixels_outside_boxes",
+    "center_proxy_background_pixels",
+    "each_object_center_proxy_hit",
+    "each_object_box_pixel_hit"
+  ],
+  "elapsed_seconds": 12.92617392539978,
+  "source_script_sha256": "b8b92fad16684b31b6a8d5901238cf9c0b607b399203b2565e9597e565346c18",
+  "verifier_sha256": "16e6182c02aba14cb789083df943573980562d0b561571bd71e6dc09428a0bb7",
+  "summary_sha256": "12e3374af248f1bd00be6f404ee147b9cd816e69ab509c1cb5550ae1471e6248"
+}

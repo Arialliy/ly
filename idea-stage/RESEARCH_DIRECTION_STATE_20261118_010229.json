@@ -1,0 +1,76 @@
+{
+  "updated_at": "2026-11-18T01:02:29.856643+08:00",
+  "user_latest_instruction": "使用skill，继续调研",
+  "venue_constraint": "none; user deferred ICME",
+  "withdrawn_directions": [
+    {
+      "direction": "动静转换/停走偏差/缺失观测下的证据积累",
+      "status": "withdrawn_by_user",
+      "reason": "用户要求足够创新性，拒绝通过收窄已有方向继续推荐",
+      "historical_report": "MOTION_TRANSITION_RESEARCH.md"
+    }
+  ],
+  "active_mainline": null,
+  "proposed_method_candidate": "run02:L1",
+  "recommended_candidate_ids": [
+    "run02:L1"
+  ],
+  "diagnostic_reserve_ids": [
+    "run02:S3"
+  ],
+  "screened_candidate_ids": [
+    "run02:S1",
+    "run02:S2",
+    "run02:S3",
+    "run02:V1",
+    "run02:V2",
+    "run02:V3",
+    "run02:L1",
+    "run02:L2",
+    "run02:L3"
+  ],
+  "selection_status": "one_priority_mechanism_candidate_and_one_diagnostic_reserve; no validated_mainline",
+  "empirical_status": "no_new_training_or_empirical_pilot; logical_claim_audits_only",
+  "pilot_stage": "pending; literature_and_jury_complete",
+  "next_direction_constraints": [
+    "重要且普遍的问题",
+    "实质新机制或新规律",
+    "明确最接近工作与可核查差异",
+    "不以附加模块或评测切片构成主贡献",
+    "不要求沿用DeepProPlus"
+  ],
+  "authoritative_report": "IDEA_REPORT_20261118_010141.md",
+  "candidate_pool": "FRESH_CANDIDATES_20261118_run02.json",
+  "review": "REVIEW_20261118_run02.md",
+  "novelty_verdicts": {
+    "S1": "PROCEED WITH CAUTION",
+    "S2": "PROCEED WITH CAUTION",
+    "S3": "PROCEED WITH CAUTION",
+    "V1": "PROCEED WITH CAUTION",
+    "V2": "PROCEED WITH CAUTION",
+    "V3": "PROCEED WITH CAUTION",
+    "L1": "PROCEED",
+    "L2": "PROCEED WITH CAUTION",
+    "L3": "PROCEED WITH CAUTION"
+  },
+  "ranking": [
+    "L1",
+    "S3",
+    "L3",
+    "S1",
+    "S2",
+    "V1",
+    "V3",
+    "L2",
+    "V2"
+  ],
+  "claim_withdrawals": {
+    "S3": "Per-pixel monotonicity does not prevent new spatial structure.",
+    "L1": "Per-frame histogram-preserving shuffling cannot change max/any-alarm.",
+    "L2": "Pair identity does not change ordinary per-example ERM."
+  },
+  "review_status": "same-family provisional; not empirical_validation",
+  "previous_state": "RESEARCH_DIRECTION_STATE_before_run02_20261118_010229.json",
+  "previous_report": "IDEA_REPORT_20261118_002800.md",
+  "gpu_hours_used_this_run": 0
+}

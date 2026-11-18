@@ -1,0 +1,376 @@
+{
+  "status": "annotation_candidates_only",
+  "started_utc": "2026-10-09T16:17:15.309360+00:00",
+  "completed_utc": "2026-10-09T16:17:29.082884+00:00",
+  "rule_sha256": "99d2eeefdf413cb4c30f667721e000dd438775f2b4aad43eacec27fcfa14efd7",
+  "script_sha256": "0a06328e00b57e0547da2a43f7b8403991e25f34aecf1d16a1069d74a302fa2c",
+  "source_images": 34111,
+  "source_sequences": 85,
+  "development_sequences": 40,
+  "counts": {
+    "source_duplicate_track_frame_keys": 277,
+    "development_duplicate_track_frame_keys": 277,
+    "source_annotations": 456796,
+    "annotations_excluded_by_manifest": 87631,
+    "annotations_in_development_sequences": 369165,
+    "rejected_annotation_box_outside_primary_scale": 130456,
+    "eligible_primary_annotations_after_duplicate_filter": 237732,
+    "eligible_12px_annotations_after_duplicate_filter": 169784,
+    "rejected_annotation_box_outside_image": 423,
+    "rejected_annotation_duplicate_track_frame_before_eligibility_filter": 554,
+    "tracks_with_primary_size_annotations": 2402,
+    "remaining_duplicate_track_frame_keys_after_pre_filter": 0
+  },
+  "run_counts": {
+    "primary_16px_runs_total": 8677,
+    "nested_12px_contiguous_runs_total": 7689,
+    "nested_12px_contiguous_runs_120_to_159": 128,
+    "primary_16px_runs_120_stratum": 192,
+    "nested_12px_contiguous_runs_at_least_160": 296,
+    "primary_16px_runs_160_stratum": 456,
+    "nested_12px_contiguous_runs_below_120": 7265,
+    "primary_16px_runs_shorter_than_120": 8029
+  },
+  "window_counts": {
+    "evaluated_120": 3273,
+    "evaluated_120_12px": 1739,
+    "no_event_120": 3046,
+    "evaluated_160": 54535,
+    "evaluated_160_12px": 33369,
+    "no_event_160": 52996,
+    "artifact_rejected_120": 74,
+    "raw_center_step_jump_120": 47,
+    "passing_120": 227,
+    "passing_120_12px": 86,
+    "passing_160": 1534,
+    "passing_160_12px": 1206,
+    "artifact_rejected_160": 723,
+    "raw_center_step_jump_160": 356,
+    "box_side_jump_120": 27,
+    "box_side_jump_160": 367,
+    "event_windows_rejected_by_artifact_guard_160": 5
+  },
+  "tracks_with_120plus_continuous_16px_frames": 609,
+  "passing_sequence_counts": {
+    "160": 16,
+    "120": 5
+  },
+  "passing_track_counts": {
+    "160": 47,
+    "120": 15
+  },
+  "event_tag_window_counts": {
+    "120:acceleration": 121,
+    "160:acceleration": 410,
+    "160:deceleration": 380,
+    "160:turn": 992,
+    "120:deceleration": 31,
+    "120:turn": 91,
+    "160:low_to_moving": 103,
+    "160:moving_to_low": 21,
+    "160:moving_low_moving": 14
+  },
+  "event_tag_window_counts_nested_12px": {
+    "120:acceleration": 32,
+    "160:acceleration": 293,
+    "160:deceleration": 348,
+    "160:turn": 799,
+    "120:deceleration": 6,
+    "120:turn": 48,
+    "160:low_to_moving": 92,
+    "160:moving_to_low": 19,
+    "160:moving_low_moving": 12
+  },
+  "event_representative_count": 77,
+  "fps_metadata_values_by_eligible_run": {
+    "15": 648
+  },
+  "per_sequence_counts": {
+    "DJI_0022_1": {
+      "annotations": 2080,
+      "eligible_annotations_16px": 1430,
+      "eligible_annotations_12px": 650,
+      "runs_120_stratum": 11
+    },
+    "DJI_0024_2": {
+      "annotations": 1920,
+      "eligible_annotations_16px": 1252,
+      "eligible_annotations_12px": 955,
+      "runs_160_stratum": 6,
+      "runs_120_stratum": 1
+    },
+    "DJI_0026_2": {
+      "annotations": 4755,
+      "eligible_annotations_16px": 2677,
+      "eligible_annotations_12px": 1859,
+      "runs_120_stratum": 17,
+      "passing_windows_120": 13
+    },
+    "DJI_0028_2": {
+      "annotations": 2960,
+      "eligible_annotations_16px": 1212,
+      "eligible_annotations_12px": 1110,
+      "runs_120_stratum": 3,
+      "runs_160_stratum": 3,
+      "passing_windows_160": 7
+    },
+    "DJI_0028_4": {
+      "annotations": 4690,
+      "eligible_annotations_16px": 2932,
+      "eligible_annotations_12px": 2504,
+      "runs_160_stratum": 5,
+      "passing_windows_160": 39,
+      "runs_120_stratum": 1
+    },
+    "DJI_0028_5": {
+      "annotations": 4627,
+      "eligible_annotations_16px": 2369,
+      "eligible_annotations_12px": 2043,
+      "runs_160_stratum": 4
+    },
+    "DJI_0032_5": {
+      "annotations": 4218,
+      "eligible_annotations_16px": 1866,
+      "eligible_annotations_12px": 1086,
+      "runs_160_stratum": 2,
+      "passing_windows_160": 3,
+      "runs_120_stratum": 1
+    },
+    "DJI_0047_3": {
+      "annotations": 1137,
+      "eligible_annotations_16px": 1042,
+      "eligible_annotations_12px": 932,
+      "runs_120_stratum": 1,
+      "runs_160_stratum": 1,
+      "passing_windows_160": 10
+    },
+    "DJI_0051_3": {
+      "annotations": 1200,
+      "eligible_annotations_16px": 600,
+      "eligible_annotations_12px": 600,
+      "runs_160_stratum": 1,
+      "passing_windows_160": 295
+    },
+    "DJI_0067_2": {
+      "annotations": 42088,
+      "eligible_annotations_16px": 32193,
+      "eligible_annotations_12px": 24403,
+      "runs_160_stratum": 33,
+      "passing_windows_160": 59,
+      "runs_120_stratum": 20,
+      "passing_windows_120": 17
+    },
+    "DJI_0071_2": {
+      "annotations": 14721,
+      "eligible_annotations_16px": 2437,
+      "eligible_annotations_12px": 197,
+      "runs_160_stratum": 2,
+      "runs_120_stratum": 6
+    },
+    "DJI_0075_3": {
+      "annotations": 38205,
+      "eligible_annotations_16px": 26280,
+      "eligible_annotations_12px": 18378,
+      "runs_160_stratum": 85,
+      "runs_120_stratum": 17,
+      "passing_windows_160": 56
+    },
+    "DJI_0077_2": {
+      "annotations": 17065,
+      "eligible_annotations_16px": 7581,
+      "eligible_annotations_12px": 2378,
+      "runs_160_stratum": 20,
+      "runs_120_stratum": 6
+    },
+    "DJI_0083_2": {
+      "annotations": 15492,
+      "eligible_annotations_16px": 14123,
+      "eligible_annotations_12px": 11423,
+      "runs_120_stratum": 14,
+      "runs_160_stratum": 20,
+      "passing_windows_120": 45
+    },
+    "DJI_0085_2": {
+      "annotations": 13243,
+      "eligible_annotations_16px": 7217,
+      "eligible_annotations_12px": 3136,
+      "runs_160_stratum": 15,
+      "runs_120_stratum": 1,
+      "passing_windows_160": 12
+    },
+    "DJI_0089_2": {
+      "annotations": 3705,
+      "eligible_annotations_16px": 2546,
+      "eligible_annotations_12px": 1299,
+      "runs_160_stratum": 4
+    },
+    "DJI_0095_3": {
+      "annotations": 1913,
+      "eligible_annotations_16px": 408,
+      "eligible_annotations_12px": 187
+    },
+    "DJI_0133_2": {
+      "annotations": 5812,
+      "eligible_annotations_16px": 5806,
+      "eligible_annotations_12px": 5758,
+      "runs_120_stratum": 3
+    },
+    "DJI_0135_1": {
+      "annotations": 20034,
+      "eligible_annotations_16px": 17288,
+      "eligible_annotations_12px": 15249,
+      "runs_160_stratum": 50,
+      "passing_windows_160": 13,
+      "runs_120_stratum": 13,
+      "passing_windows_120": 36
+    },
+    "DJI_0137_3": {
+      "annotations": 10702,
+      "eligible_annotations_16px": 5193,
+      "eligible_annotations_12px": 2374,
+      "runs_160_stratum": 11,
+      "runs_120_stratum": 3
+    },
+    "DJI_0139_2": {
+      "annotations": 27576,
+      "eligible_annotations_16px": 19530,
+      "eligible_annotations_12px": 17368,
+      "runs_160_stratum": 27,
+      "passing_windows_160": 257,
+      "runs_120_stratum": 9
+    },
+    "DJI_0167_1": {
+      "annotations": 10685,
+      "eligible_annotations_16px": 6411,
+      "eligible_annotations_12px": 5363,
+      "runs_160_stratum": 14,
+      "passing_windows_160": 52
+    },
+    "DJI_0171_2": {
+      "annotations": 10439,
+      "eligible_annotations_16px": 7062,
+      "eligible_annotations_12px": 6312,
+      "runs_160_stratum": 15,
+      "passing_windows_160": 267,
+      "runs_120_stratum": 4
+    },
+    "DJI_0179_2": {
+      "annotations": 15483,
+      "eligible_annotations_16px": 8261,
+      "eligible_annotations_12px": 7604,
+      "runs_120_stratum": 4,
+      "runs_160_stratum": 20,
+      "passing_windows_160": 126
+    },
+    "DJI_0183_2": {
+      "annotations": 7829,
+      "eligible_annotations_16px": 4251,
+      "eligible_annotations_12px": 3701,
+      "runs_120_stratum": 5,
+      "runs_160_stratum": 1,
+      "passing_windows_160": 35
+    },
+    "DJI_0227_1": {
+      "annotations": 6588,
+      "eligible_annotations_16px": 4075,
+      "eligible_annotations_12px": 2487,
+      "runs_120_stratum": 4,
+      "runs_160_stratum": 9,
+      "passing_windows_160": 3
+    },
+    "DJI_0265_1": {
+      "annotations": 493,
+      "eligible_annotations_16px": 436,
+      "eligible_annotations_12px": 405
+    },
+    "DJI_0273_3": {
+      "annotations": 870,
+      "eligible_annotations_16px": 796,
+      "eligible_annotations_12px": 615,
+      "runs_120_stratum": 3
+    },
+    "DJI_0275_3": {
+      "annotations": 4855,
+      "eligible_annotations_16px": 3977,
+      "eligible_annotations_12px": 2320,
+      "runs_120_stratum": 5,
+      "runs_160_stratum": 7
+    },
+    "DJI_0279_2": {
+      "annotations": 2566,
+      "eligible_annotations_16px": 1532,
+      "eligible_annotations_12px": 511,
+      "runs_160_stratum": 2
+    },
+    "DJI_0279_4": {
+      "annotations": 1557,
+      "eligible_annotations_16px": 1122,
+      "eligible_annotations_12px": 460,
+      "runs_160_stratum": 3,
+      "runs_120_stratum": 1
+    },
+    "DJI_0291_2": {
+      "annotations": 1255,
+      "eligible_annotations_16px": 932,
+      "eligible_annotations_12px": 647,
+      "runs_120_stratum": 5
+    },
+    "DJI_0317_2": {
+      "annotations": 7261,
+      "eligible_annotations_16px": 6931,
+      "eligible_annotations_12px": 5997,
+      "runs_160_stratum": 12
+    },
+    "DJI_0331_3": {
+      "annotations": 49901,
+      "eligible_annotations_16px": 30964,
+      "eligible_annotations_12px": 17133,
+      "runs_120_stratum": 33,
+      "passing_windows_120": 116,
+      "runs_160_stratum": 72,
+      "passing_windows_160": 300
+    },
+    "DJI_0337_3": {
+      "annotations": 4025,
+      "eligible_annotations_16px": 2052,
+      "eligible_annotations_12px": 614,
+      "runs_120_stratum": 1,
+      "runs_160_stratum": 5
+    },
+    "DJI_0341_2": {
+      "annotations": 1908,
+      "eligible_annotations_16px": 600,
+      "runs_160_stratum": 1
+    },
+    "DJI_0341_5": {
+      "annotations": 1256
+    },
+    "DJI_0343_3": {
+      "annotations": 2631,
+      "eligible_annotations_16px": 1449,
+      "eligible_annotations_12px": 1449,
+      "runs_160_stratum": 3
+    },
+    "DJI_0343_5": {
+      "annotations": 1120,
+      "eligible_annotations_16px": 839,
+      "eligible_annotations_12px": 277,
+      "runs_160_stratum": 3
+    },
+    "DJI_0351_2": {
+      "annotations": 300,
+      "eligible_annotations_16px": 60
+    }
+  },
+  "selected_candidate_id": "DJI_0028_2__3800006__00173__00332",
+  "limits": [
+    "Image-coordinate motion is not physical motion; camera motion and actual stop/restart remain unverified.",
+    "Annotated presence is not verified continuous visibility.",
+    "Prescreen labels are annotation candidates, not established events or model failures.",
+    "No model prediction, score, mask, or error is used to choose candidates.",
+    "Rectangular segmentation is not verified pixel segmentation.",
+    "Exact sequence exclusion does not establish different capture scene or camera trajectory."
+  ],
+  "no_images_downloaded": true,
+  "no_model_outputs_used": true
+}

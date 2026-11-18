@@ -1,0 +1,36 @@
+{
+  "status": "PASS_STATIC_REVIEW_WITH_INTERPRETATION_BOUND",
+  "review_scope": "Independent read-only code review; no root-owned source edits and no GPU launch. Runtime/inference CPU checks already recorded separately.",
+  "checks": {
+    "original_four_detection_windows_and_targets_unchanged": "data.batch_data hashes both against historical512-entry log; train.loss_terms passes logits[:4] only to unchanged common_loss.",
+    "equal_auxiliary_exposure": "All groups forward eight windows; auxiliary4 copy source and starts, deterministic grid changes crop only. A retains same keep loss on all8.",
+    "B_C_assignment_control": "Same anchors, same endpoint multiset and category/size rule; complete two-cycles. No target descriptor depends on teacher response.",
+    "invalid_swap_unit": "prepare marks both members of a swap unit invalid if either lacks local/global negatives; region loss zeroes these rows with unchanged requested-pair denominator.",
+    "background_exclusion": "Historical masks remove every valid annotated box regardless of strict-small status or ignore/crowd, with2pxmargin and9pxcore. Training annotation audit reports no invalid boxes.",
+    "reliable_keep": "Original actual component matching; ambiguous/overlap/out-of-core/ignored/missed observations forbidden. MSE only on reliable targets and selected valid background; no entire-image teacher target.",
+    "calibration_train_only": "Uses training cache entries,8discarded det updates, bothB/C cosine and gradient statistics; same fixed temperature/lambdas for all groups. Formal train calls load_model() afresh.",
+    "original_model_state": "Original forward;14,593TPro/headparameters; allBNbuffers and frontend protected via exacthash and evalmode checks.",
+    "evaluation_schema": "RUN trainable_parameters alias now added and matches infer/evaluate contract;2048fixedcheckpoint,protocolhash,model/checkpoint identities align."
+  },
+  "resolved_findings": [
+    {
+      "finding": "RUN initially exposed trainable_parameter_count but infer/evaluate require trainable_parameters.",
+      "resolution": "Root added trainable_parameters alias; verified in current train.py."
+    }
+  ],
+  "interpretation_bounds": [
+    "B exchanges real endpoints with matched category/size/gap pool and preserves marginal descriptor exposure, but actual B time gap may differ from1/4 and B may cross videos. Do not claim pairwise time interval or scene is independently matched.",
+    "No visibility/occlusion fields exist. Continuous annotated observations are not a verified unoccluded-track ground truth.",
+    "Global negatives are hardest within deterministic globally sampled auxiliary crops; not exhaustive full-image maxima.",
+    "Half of historical entries have no common positive pairs; retain finite zero auxiliary loss and report actual active coverage."
+  ],
+  "source_sha256": {
+    "code/data.py": "8ad5232591c3538879b1806178da3b15b1e778dfd18d28e3293a06fa59b9397e",
+    "code/prepare.py": "fa45c75a9e824c16b9f858dd36962312e4a33c7fd066ef70aad9898cba16f2a6",
+    "code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "code/calibrate.py": "d1230cc844038fcc8c74417c43108b4f22db577fccaf95bf44749e394995e5eb",
+    "train_modules/track_pair_sampler.py": "1a18f94522c10b39c0e1619a23caf807c31bc023f0ac3b1cd10c1c431fb08905",
+    "train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02"
+  }
+}

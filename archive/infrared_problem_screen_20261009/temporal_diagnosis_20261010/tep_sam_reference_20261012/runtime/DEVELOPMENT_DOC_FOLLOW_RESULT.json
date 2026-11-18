@@ -1,0 +1,1483 @@
+{
+  "status": "PASS_DEVELOPMENT_DOC_FOLLOW_INFERENCE_ONLY",
+  "validator": "fresh development document-follow agent",
+  "started_utc": "2026-10-11T19:55:39.774232+00:00",
+  "source_skill": "/home/ly/.codex/skills/run-experiment/SKILL.md",
+  "source_contract": "/home/ly/.codex/skills/shared-references/compute-env-contract.md",
+  "provider_ledger": "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md",
+  "documentation": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DEVELOPMENT_COMPUTE.md",
+  "hashes_before": {
+    "/home/ly/.codex/skills/run-experiment/SKILL.md": "8325128eab14c7f82213d44c8e78e98f44ca680baa9c78f3bee8766f8e9f464a",
+    "/home/ly/.codex/skills/shared-references/compute-env-contract.md": "27aee2eee75a705a7d3ed72086b05ae2aa499104489376596ecb5b683807eeb5",
+    "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md": "6abd2f1f7e6220c14086558c5a2ac27107636dd9bdf9b17b161fc376c83aaa96",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DEVELOPMENT_COMPUTE.md": "5acda779e00b8808fdc791f0862c018e30487012b198a1dc13182fa4207efe34",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh": "26c5491fafdb8d0d23ac8ebd6e7fcfa2bd2a03d5a7fc49997f0d8c3886344594",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/PROTOCOL.json": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/native_check/COMPLETE.json": "bb7244523404892711ee36cb43c823307f152c85a8d90bdd0bfbbbc1d4ef68ed",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DOC_FOLLOW_GPU3_RESULT.json": "24c01ce5f0b62bc2959105743cf808534d79fa3bc9c7e93e462ff60aa5aba254",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/WARM_REUSE.json": "7d2858a0483b76595c958604b2901db48b2826e185a9f8e4fd95f87a604017af"
+  },
+  "environment_spec": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/env-spec.json",
+    "canonical_sha256": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+    "warm_reused": true
+  },
+  "root_authorization": "User allocated physical GPUs 2 and 3; root reviewed native PASS and authorized independent parallel invocation with permitted device substitution.",
+  "invocation_workdir": "/home/ly",
+  "science_parameters_changed": false,
+  "environment_changed": false,
+  "training": false,
+  "prediction_scoring": false,
+  "confirmation_data_accessed": false,
+  "external_notifications_sent": false,
+  "retries": 0,
+  "repairs": 0,
+  "jobs": [
+    {
+      "sequence": "DJI_0026_2",
+      "selected_physical_gpu": 2,
+      "exact_command": "bash /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh DJI_0026_2 2",
+      "invocation_argv": [
+        "bash",
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh",
+        "DJI_0026_2",
+        "2"
+      ],
+      "invocation_count": 1,
+      "started_utc": "2026-10-11T19:55:39.774342+00:00",
+      "exit_code": 0,
+      "resource_receipt_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/RESOURCE_RUN_DJI_0026_2.json",
+      "log_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/inference_DJI_0026_2.log",
+      "complete_receipt_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/predictions/DJI_0026_2/COMPLETE.json",
+      "host_launcher_pid": 3710326,
+      "finished_utc": "2026-10-11T19:56:33.669684+00:00",
+      "wall_seconds_observed": 53.89534780202666,
+      "physical_gpu_memory_before_mib": 0,
+      "physical_gpu_peak_sampled_mib": 3994,
+      "physical_gpu_memory_after_mib": 0,
+      "resource_receipt_sha256": "a320a4b2e5222130c79d0a11d51364d749aa01e9adda7799aeeb9bff09075ecd",
+      "resource_receipt": {
+        "status": "LAUNCHING",
+        "timestamp_utc": "2026-10-11T19:55:40.038195+00:00",
+        "user_allocated_physical_gpus": [
+          2,
+          3
+        ],
+        "selected_physical_gpu": 2,
+        "memory_before_mib": 0,
+        "sequence": "DJI_0026_2",
+        "seed": 46,
+        "batch_size": 1,
+        "fp32": true,
+        "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+        "native_receipt_sha256": "bb7244523404892711ee36cb43c823307f152c85a8d90bdd0bfbbbc1d4ef68ed",
+        "protocol_sha256": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+        "frozen_science_inputs_verified": 23,
+        "inference_code_changed": false,
+        "container_cuda_visible_devices": "2",
+        "gpu_access": "all CUDA devices mounted; visibility bound to one user-allocated physical GPU; no other GPU accessed by torch"
+      },
+      "complete_receipt_sha256": "fabfe46e8729d87399437b43aa8d34cda56741a1775bacdf73df96b37e08cf6f",
+      "complete_receipt": {
+        "forward_calls": 160,
+        "forward_seconds_total": 11.64044142398052,
+        "forward_seconds": [
+          0.49048880400368944,
+          0.06983840797329322,
+          0.06988849700428545,
+          0.0699474280118011,
+          0.06996408698614687,
+          0.07000502897426486,
+          0.070106529048644,
+          0.06999280099989846,
+          0.06999451899901032,
+          0.06998728500911966,
+          0.07001847203355283,
+          0.06993195100221783,
+          0.06992716598324478,
+          0.06989206199068576,
+          0.06998484896030277,
+          0.07003107998752967,
+          0.0700011890148744,
+          0.07003631698898971,
+          0.06997673696605489,
+          0.06999474699841812,
+          0.07000966899795458,
+          0.07000643399078399,
+          0.06999789999099448,
+          0.07028223399538547,
+          0.07004760002018884,
+          0.07006345200352371,
+          0.0700640800059773,
+          0.07004996703471988,
+          0.07002351497067139,
+          0.07001751102507114,
+          0.07006460102275014,
+          0.06997032999061048,
+          0.0699120739591308,
+          0.07001665595453233,
+          0.07000236201565713,
+          0.06994489300996065,
+          0.06995523598743603,
+          0.06993635499384254,
+          0.0699668190209195,
+          0.06992788700154051,
+          0.07015081500867382,
+          0.07005141797708347,
+          0.07005797798046842,
+          0.06992332503432408,
+          0.07001029700040817,
+          0.07004658301593736,
+          0.07008116802899167,
+          0.07020063197705895,
+          0.07006775599438697,
+          0.07009466696763411,
+          0.0700919940136373,
+          0.07004380802391097,
+          0.0700322850025259,
+          0.07001536502502859,
+          0.07006480597192422,
+          0.07003652496496215,
+          0.07107324799289927,
+          0.07006112701492384,
+          0.07012579101137817,
+          0.07014877902111039,
+          0.07017649000044912,
+          0.07012040098197758,
+          0.07001932396087795,
+          0.0699639369850047,
+          0.0700920099625364,
+          0.07008704799227417,
+          0.07012390403542668,
+          0.07011190301273018,
+          0.07012857997324318,
+          0.07033762003993616,
+          0.07012030499754474,
+          0.07016578398179263,
+          0.07011372200213373,
+          0.07014624995645136,
+          0.07015966001199558,
+          0.0701326770358719,
+          0.0701506810146384,
+          0.0701096429838799,
+          0.07009742502123117,
+          0.07061625004280359,
+          0.07010155403986573,
+          0.07007462898036465,
+          0.07004680199315771,
+          0.07004528102697805,
+          0.07010283699491993,
+          0.07005951297469437,
+          0.07009656605077907,
+          0.07017182203708217,
+          0.07012143399333581,
+          0.07016151101561263,
+          0.0701410019537434,
+          0.07017187896417454,
+          0.07051814399892464,
+          0.0701502250158228,
+          0.07028278801590204,
+          0.07009564497275278,
+          0.07000459404662251,
+          0.07007696805521846,
+          0.0700034589972347,
+          0.06999119598185644,
+          0.0700672299717553,
+          0.0701070330105722,
+          0.07005422102520242,
+          0.07015298999613151,
+          0.07015440799295902,
+          0.07010175997857004,
+          0.07010819501010701,
+          0.0702132589649409,
+          0.07009903399739414,
+          0.07006821397226304,
+          0.07006034097867087,
+          0.07011139194946736,
+          0.07005739101441577,
+          0.07030801096698269,
+          0.07017251197248697,
+          0.07015339902136475,
+          0.07010058400919661,
+          0.07007148099364713,
+          0.07007204403635114,
+          0.07007154799066484,
+          0.07009377598296851,
+          0.07005001901416108,
+          0.07020214496878907,
+          0.07015888800378889,
+          0.07015802100067958,
+          0.0701543380273506,
+          0.07013849803479388,
+          0.07014222699217498,
+          0.0701460000127554,
+          0.070136496971827,
+          0.07011680997675285,
+          0.07012454100186005,
+          0.07011990301543847,
+          0.07012285199016333,
+          0.07009242899948731,
+          0.07011026702821255,
+          0.07010672200703993,
+          0.07004163501551375,
+          0.0700725779752247,
+          0.07009238901082426,
+          0.07010979601182044,
+          0.07010318496031687,
+          0.07008714001858607,
+          0.07035695400554687,
+          0.07004273700295016,
+          0.07007130200508982,
+          0.07006372400792316,
+          0.07016703399131075,
+          0.07011999696260318,
+          0.0701771110179834,
+          0.07016959204338491,
+          0.07016396400285885,
+          0.0734533189679496,
+          0.07013444299809635,
+          0.07012796500930563,
+          0.07019250595476478,
+          0.07132442202419043,
+          0.07065722701372579,
+          0.0701120900339447,
+          0.07008397200843319
+        ],
+        "raw_main_shapes": [
+          [
+            1,
+            1,
+            1024,
+            1024
+          ]
+        ],
+        "raw_aux_shapes": [
+          [
+            1,
+            1,
+            256,
+            256
+          ]
+        ],
+        "exact_0_5_pixels_main_aux": [
+          567,
+          182
+        ],
+        "main_range": [
+          0.0,
+          1.0
+        ],
+        "aux_range": [
+          0.0,
+          1.0
+        ],
+        "probabilities_sha256": "2736a1d509847f4b79021aa925e47f619873103fd07e8039309f805211a494d5",
+        "auxiliary_probabilities_sha256": "21d52a1590430d20a2202cc5a8709a5547aa2e2bbb4557abcb35dc9db27f9604",
+        "status": "COMPLETE",
+        "protocol_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/PROTOCOL.json",
+        "protocol_sha256": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+        "raw_sha256": "64c9e897141c52d71c75f0b0acb96dcd5b968a48234a1ee5b8c96e239d6bc6fd",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "repository_commit": "c5165cfa9139e7d72f1fc962ddc398d31d59093e",
+        "auxiliary_head_trained_parameters_loaded": true,
+        "sequence": "DJI_0026_2",
+        "checkpoint_sha256": "1125ea28b4dfe0745be1f33500f4e5463f1cbd8e837a3c1c733b34bb0de9e6f0",
+        "parameters": 95576030,
+        "state_unchanged": true,
+        "wall_seconds_loop": 37.87764966202667,
+        "allocated_peak_bytes": 3304986624,
+        "reserved_peak_bytes": 3504340992,
+        "dtype": "float32",
+        "batch_size": 1,
+        "seed": 46,
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "source_before": {
+          "tracked_file_count": 53,
+          "hashes_verified": true
+        },
+        "source_after": {
+          "tracked_file_count": 53,
+          "hashes_verified": true
+        },
+        "input_protocol": "author seqwin-test 7 frames centered, clamp to selected clip boundaries, RGB/ImageNet normalized, full-frame resize1024square",
+        "main_protocol": "author infer bilinear1024 logits, sigmoid, area to original512x640",
+        "auxiliary_protocol": "project diagnostic adapter: author postprocess_masks of auxiliary256 logits, sigmoid, area to original512x640",
+        "annotation_use": "none in input or prompt; missing masks are zero placeholders ignored by model",
+        "diagnostic_threshold": ">=0.5",
+        "native_threshold": ">0.5",
+        "native_receipt": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/native_check/COMPLETE.json"
+      },
+      "log_sha256": "7e154b7d57cd216ee6037f7f231661897e09d59569a33646c1951b8713cfa8e7",
+      "frame_access_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/predictions/DJI_0026_2/FRAME_ACCESS.json",
+      "frame_access_sha256": "f23989310d687e4c2b3e65a0f045a69fa395675eb8d4499146a45dca2d5eb5c7",
+      "artifact_headers": {
+        "probabilities.npz": {
+          "probabilities.npy": {
+            "descr": "<f4",
+            "fortran_order": false,
+            "shape": [
+              160,
+              512,
+              640
+            ]
+          },
+          "frame_indices.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          },
+          "source_frames.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          }
+        },
+        "auxiliary_probabilities.npz": {
+          "probabilities.npy": {
+            "descr": "<f4",
+            "fortran_order": false,
+            "shape": [
+              160,
+              512,
+              640
+            ]
+          },
+          "frame_indices.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          },
+          "source_frames.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          }
+        }
+      },
+      "time_and_memory": {
+        "forward_calls": 160,
+        "forward_seconds_total": 11.64044142398052,
+        "wall_seconds_loop": 37.87764966202667,
+        "allocated_peak_bytes": 3304986624,
+        "reserved_peak_bytes": 3504340992,
+        "allocated_peak_gib": 3.0780086517333984,
+        "reserved_peak_gib": 3.263671875
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "selected_physical_gpu": 3,
+      "exact_command": "bash /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh DJI_0067_2 3",
+      "invocation_argv": [
+        "bash",
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh",
+        "DJI_0067_2",
+        "3"
+      ],
+      "invocation_count": 1,
+      "started_utc": "2026-10-11T19:55:39.774988+00:00",
+      "exit_code": 0,
+      "resource_receipt_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/RESOURCE_RUN_DJI_0067_2.json",
+      "log_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/inference_DJI_0067_2.log",
+      "complete_receipt_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/predictions/DJI_0067_2/COMPLETE.json",
+      "host_launcher_pid": 3710327,
+      "finished_utc": "2026-10-11T19:56:35.727148+00:00",
+      "wall_seconds_observed": 55.95216928195441,
+      "physical_gpu_memory_before_mib": 0,
+      "physical_gpu_peak_sampled_mib": 3977,
+      "physical_gpu_memory_after_mib": 0,
+      "resource_receipt_sha256": "2fbd7ad51f6659bfc6cb6a7d24b4e2b9c9d926de675ab4eb4a728368ca4bdaad",
+      "resource_receipt": {
+        "status": "LAUNCHING",
+        "timestamp_utc": "2026-10-11T19:55:40.039574+00:00",
+        "user_allocated_physical_gpus": [
+          2,
+          3
+        ],
+        "selected_physical_gpu": 3,
+        "memory_before_mib": 0,
+        "sequence": "DJI_0067_2",
+        "seed": 46,
+        "batch_size": 1,
+        "fp32": true,
+        "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+        "native_receipt_sha256": "bb7244523404892711ee36cb43c823307f152c85a8d90bdd0bfbbbc1d4ef68ed",
+        "protocol_sha256": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+        "frozen_science_inputs_verified": 23,
+        "inference_code_changed": false,
+        "container_cuda_visible_devices": "3",
+        "gpu_access": "all CUDA devices mounted; visibility bound to one user-allocated physical GPU; no other GPU accessed by torch"
+      },
+      "complete_receipt_sha256": "ecc0a28c15a383deaab0a20be2d80903efebf3b61f3a78ff59025b8d11ff15ed",
+      "complete_receipt": {
+        "forward_calls": 160,
+        "forward_seconds_total": 11.543564490100835,
+        "forward_seconds": [
+          0.5306063020252623,
+          0.06910806498490274,
+          0.06901221995940432,
+          0.06896769802551717,
+          0.06895182398147881,
+          0.06898652500240132,
+          0.06963143800385296,
+          0.06927702901884913,
+          0.06932355900062248,
+          0.0692343910341151,
+          0.06915080797625706,
+          0.06903958204202354,
+          0.06892398197669536,
+          0.06896523799514398,
+          0.06898864702088758,
+          0.06901178898988292,
+          0.06900460697943345,
+          0.06914500298444182,
+          0.06907556601800025,
+          0.06904369196854532,
+          0.0690533239976503,
+          0.06901245302287862,
+          0.06904506497085094,
+          0.06903926801169291,
+          0.06905374600319192,
+          0.06916743202600628,
+          0.06897672801278532,
+          0.06903803104069084,
+          0.06906270602485165,
+          0.0691476880456321,
+          0.06942483404418454,
+          0.06910254602553323,
+          0.06913132697809488,
+          0.06910207099281251,
+          0.0691410189610906,
+          0.06914080696878955,
+          0.06914971699006855,
+          0.06902974797412753,
+          0.06915779801784083,
+          0.06929327896796167,
+          0.06919121998362243,
+          0.06905254296725616,
+          0.0690266489982605,
+          0.06922342296456918,
+          0.06907003599917516,
+          0.06909355404786766,
+          0.06912492198171094,
+          0.06910609803162515,
+          0.06902408599853516,
+          0.06951093795942143,
+          0.06978229898959398,
+          0.0690253060311079,
+          0.06905073102097958,
+          0.06925912498263642,
+          0.0692013319930993,
+          0.06948752398602664,
+          0.06919944297987968,
+          0.0693225990398787,
+          0.06934372399700806,
+          0.06938996497774497,
+          0.06933962099719793,
+          0.069368427968584,
+          0.06925215001683682,
+          0.06933040299918503,
+          0.0693115689791739,
+          0.06920819799415767,
+          0.06929481402039528,
+          0.0691678500152193,
+          0.06924407201586291,
+          0.0694973940262571,
+          0.06913524400442839,
+          0.06925799901364371,
+          0.06927232001908123,
+          0.0692875170498155,
+          0.06924267299473286,
+          0.06942561100004241,
+          0.06920152000384405,
+          0.06950965902069584,
+          0.06928175501525402,
+          0.06934416497824714,
+          0.06939670897554606,
+          0.06933283398393542,
+          0.06930127501254901,
+          0.06920681102201343,
+          0.06934968300629407,
+          0.06927613698644564,
+          0.06931295699905604,
+          0.06928023899672553,
+          0.06934423703933135,
+          0.06928973703179508,
+          0.06936553202103823,
+          0.06930826097959653,
+          0.06936691800365224,
+          0.06932629097718745,
+          0.06964758498361334,
+          0.0693986119586043,
+          0.06942938902648166,
+          0.06930049799848348,
+          0.06934212398482487,
+          0.06918883498292416,
+          0.06918811198556796,
+          0.06916914600878954,
+          0.06921301601687446,
+          0.06935960700502619,
+          0.06946780398720875,
+          0.06934570899466053,
+          0.06936595699517056,
+          0.06938240199815482,
+          0.0691805660026148,
+          0.06929809099528939,
+          0.06942588504170999,
+          0.06942627299576998,
+          0.0695585940266028,
+          0.06939981499454007,
+          0.06934722303412855,
+          0.06930886901682243,
+          0.06929052097257227,
+          0.06917721999343485,
+          0.06922536599449813,
+          0.06928149104351178,
+          0.06922877801116556,
+          0.06926390598528087,
+          0.06924184301169589,
+          0.0692031029611826,
+          0.06925727700581774,
+          0.0692334109917283,
+          0.06935636699199677,
+          0.06936846295138821,
+          0.069320451002568,
+          0.06937277800170705,
+          0.06933418702101335,
+          0.06941247201757506,
+          0.06943602301180363,
+          0.06941508100135252,
+          0.06938156497199088,
+          0.06936801498522982,
+          0.06934001803165302,
+          0.06936423201113939,
+          0.06937514099990949,
+          0.06939261499792337,
+          0.06931306299520656,
+          0.0692032870138064,
+          0.06938057899242267,
+          0.0692304169642739,
+          0.06945960898883641,
+          0.06933555199066177,
+          0.06936730397865176,
+          0.06950554001377895,
+          0.06948958901921287,
+          0.06946216098731384,
+          0.0693762120208703,
+          0.06941158097470179,
+          0.06950088200392202,
+          0.0693002839689143,
+          0.06929868302540854,
+          0.06935596198309213,
+          0.06951355299679562,
+          0.0692923060269095,
+          0.06933074799599126,
+          0.06941908999579027
+        ],
+        "raw_main_shapes": [
+          [
+            1,
+            1,
+            1024,
+            1024
+          ]
+        ],
+        "raw_aux_shapes": [
+          [
+            1,
+            1,
+            256,
+            256
+          ]
+        ],
+        "exact_0_5_pixels_main_aux": [
+          709,
+          832
+        ],
+        "main_range": [
+          0.0,
+          1.0
+        ],
+        "aux_range": [
+          0.0,
+          1.0
+        ],
+        "probabilities_sha256": "7cac5df1517bc85b71b0e3e84928820a2a0771b0ddf312c827c99b7a19b13a4e",
+        "auxiliary_probabilities_sha256": "f3417895f7f9fa629ae8f2d7059539033bdd303979e8baa5ef309bde6a93c3c0",
+        "status": "COMPLETE",
+        "protocol_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/PROTOCOL.json",
+        "protocol_sha256": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+        "raw_sha256": "91469dd0b2854d662822e37cc35542a5a7fc17cbde991485537a344c76b196bc",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "repository_commit": "c5165cfa9139e7d72f1fc962ddc398d31d59093e",
+        "auxiliary_head_trained_parameters_loaded": true,
+        "sequence": "DJI_0067_2",
+        "checkpoint_sha256": "1125ea28b4dfe0745be1f33500f4e5463f1cbd8e837a3c1c733b34bb0de9e6f0",
+        "parameters": 95576030,
+        "state_unchanged": true,
+        "wall_seconds_loop": 39.57723354204791,
+        "allocated_peak_bytes": 3304986624,
+        "reserved_peak_bytes": 3504340992,
+        "dtype": "float32",
+        "batch_size": 1,
+        "seed": 46,
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "source_before": {
+          "tracked_file_count": 53,
+          "hashes_verified": true
+        },
+        "source_after": {
+          "tracked_file_count": 53,
+          "hashes_verified": true
+        },
+        "input_protocol": "author seqwin-test 7 frames centered, clamp to selected clip boundaries, RGB/ImageNet normalized, full-frame resize1024square",
+        "main_protocol": "author infer bilinear1024 logits, sigmoid, area to original512x640",
+        "auxiliary_protocol": "project diagnostic adapter: author postprocess_masks of auxiliary256 logits, sigmoid, area to original512x640",
+        "annotation_use": "none in input or prompt; missing masks are zero placeholders ignored by model",
+        "diagnostic_threshold": ">=0.5",
+        "native_threshold": ">0.5",
+        "native_receipt": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/native_check/COMPLETE.json"
+      },
+      "log_sha256": "2ec52ee31afc55a7ebcca18b6cee6aec1fa344a97bbb1ade80f0322e05da8491",
+      "frame_access_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/predictions/DJI_0067_2/FRAME_ACCESS.json",
+      "frame_access_sha256": "0ef5e45da5c79b7544679a45b6f13897266a65358ccc6dce0a051107d24aef45",
+      "artifact_headers": {
+        "probabilities.npz": {
+          "probabilities.npy": {
+            "descr": "<f4",
+            "fortran_order": false,
+            "shape": [
+              160,
+              512,
+              640
+            ]
+          },
+          "frame_indices.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          },
+          "source_frames.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          }
+        },
+        "auxiliary_probabilities.npz": {
+          "probabilities.npy": {
+            "descr": "<f4",
+            "fortran_order": false,
+            "shape": [
+              160,
+              512,
+              640
+            ]
+          },
+          "frame_indices.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          },
+          "source_frames.npy": {
+            "descr": "<i8",
+            "fortran_order": false,
+            "shape": [
+              160
+            ]
+          }
+        }
+      },
+      "time_and_memory": {
+        "forward_calls": 160,
+        "forward_seconds_total": 11.543564490100835,
+        "wall_seconds_loop": 39.57723354204791,
+        "allocated_peak_bytes": 3304986624,
+        "reserved_peak_bytes": 3504340992,
+        "allocated_peak_gib": 3.0780086517333984,
+        "reserved_peak_gib": 3.263671875
+      }
+    }
+  ],
+  "telemetry": [
+    {
+      "timestamp_utc": "2026-10-11T19:55:39.774206+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:39.830936+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:41.937406+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 1,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:44.007957+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 917,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 4
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 917,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:46.078204+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 65
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 39
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:48.148232+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 51
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 49
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:50.223500+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:52.293361+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 68
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:54.365830+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 43
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 58
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:56.435855+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 18
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 59
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:55:58.507866+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:00.580163+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 65
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 39
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:02.649094+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 45
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 63
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:04.720051+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 52
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:06.789543+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 38
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:08.860998+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 12
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 52
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:10.929912+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 60
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:13.005528+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 1
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:15.073587+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 43
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 24
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:17.146152+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 68
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:19.214807+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 56
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 68
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:21.284140+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 37
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:23.353057+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 25
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:25.426372+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:27.491622+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:29.567850+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3994,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:31.616043+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:33.669643+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 3977,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-11T19:56:35.725949+00:00",
+      "devices": [
+        {
+          "physical_gpu": 2,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        },
+        {
+          "physical_gpu": 3,
+          "memory_used_mib": 0,
+          "memory_total_mib": 32607,
+          "utilization_gpu_percent": 0
+        }
+      ]
+    }
+  ],
+  "doc_vs_reality_divergences": [],
+  "hashes_after": {
+    "/home/ly/.codex/skills/run-experiment/SKILL.md": "8325128eab14c7f82213d44c8e78e98f44ca680baa9c78f3bee8766f8e9f464a",
+    "/home/ly/.codex/skills/shared-references/compute-env-contract.md": "27aee2eee75a705a7d3ed72086b05ae2aa499104489376596ecb5b683807eeb5",
+    "/home/ly/small_object_ideas_20260928/.aris/compute/local_docker.md": "6abd2f1f7e6220c14086558c5a2ac27107636dd9bdf9b17b161fc376c83aaa96",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DEVELOPMENT_COMPUTE.md": "5acda779e00b8808fdc791f0862c018e30487012b198a1dc13182fa4207efe34",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_development.sh": "26c5491fafdb8d0d23ac8ebd6e7fcfa2bd2a03d5a7fc49997f0d8c3886344594",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/PROTOCOL.json": "9c73da144a4a4743c2cc36b6c57a33298cacf5b15468a03e0214f56e18b73374",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/native_check/COMPLETE.json": "bb7244523404892711ee36cb43c823307f152c85a8d90bdd0bfbbbc1d4ef68ed",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DOC_FOLLOW_GPU3_RESULT.json": "24c01ce5f0b62bc2959105743cf808534d79fa3bc9c7e93e462ff60aa5aba254",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/WARM_REUSE.json": "7d2858a0483b76595c958604b2901db48b2826e185a9f8e4fd95f87a604017af"
+  },
+  "tracked_inputs_unchanged": true,
+  "finished_utc": "2026-10-11T19:56:35.728664+00:00",
+  "outcome": "Two authorized one-shot full-frame development invocations completed; predictions not scored.",
+  "independent_artifact_checks": [
+    {
+      "name": "DJI_0026_2: exited successfully",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: complete and one forward per frame",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: FP32 batch1 seed46",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: checkpoint and model state",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: source receipts unchanged",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: 160 frame-access records",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz hash agrees",
+      "passed": true,
+      "sha256": "2736a1d509847f4b79021aa925e47f619873103fd07e8039309f805211a494d5"
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz: probabilities.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz: frame_indices.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz frame indices",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz: source_frames.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: probabilities.npz frozen shape/dtype",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz hash agrees",
+      "passed": true,
+      "sha256": "21d52a1590430d20a2202cc5a8709a5547aa2e2bbb4557abcb35dc9db27f9604"
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz: probabilities.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz: frame_indices.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz frame indices",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz: source_frames.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0026_2: auxiliary_probabilities.npz frozen shape/dtype",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: exited successfully",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: complete and one forward per frame",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: FP32 batch1 seed46",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: checkpoint and model state",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: source receipts unchanged",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: 160 frame-access records",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz hash agrees",
+      "passed": true,
+      "sha256": "7cac5df1517bc85b71b0e3e84928820a2a0771b0ddf312c827c99b7a19b13a4e"
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz: probabilities.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz: frame_indices.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz frame indices",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz: source_frames.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: probabilities.npz frozen shape/dtype",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz hash agrees",
+      "passed": true,
+      "sha256": "f3417895f7f9fa629ae8f2d7059539033bdd303979e8baa5ef309bde6a93c3c0"
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz: probabilities.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz: frame_indices.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz frame indices",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz: source_frames.npy npy format",
+      "passed": true
+    },
+    {
+      "name": "DJI_0067_2: auxiliary_probabilities.npz frozen shape/dtype",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/USER_REQUEST.txt",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/ARTIFACT_PROVENANCE.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/ARTIFACT_PROVENANCE_SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/EVALUATION_PROTOCOL.md",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/evaluation_code/evaluate_reference.py",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/evaluation_preflight/PREFLIGHT_COMPLETE.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/TIME_ACCESS.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/TIME_ACCESS_CHECK.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/tep_common.py",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/infer_full_frames.py",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/native_config.yaml",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/SOURCE_HASHES.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/COMPUTE.md",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/launch_native_check.sh",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/WARM_REUSE.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/raw_frames.npy",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/annotations.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/FRAME_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/raw_frames.npy",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/annotations.json",
+      "passed": true
+    },
+    {
+      "name": "frozen science input unchanged: /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/FRAME_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "documentation/launcher/prerequisite hashes unchanged",
+      "passed": true
+    }
+  ],
+  "independent_artifact_checks_total": 60,
+  "failed_checks": [],
+  "verified_utc": "2026-10-11T19:57:15.042488+00:00",
+  "postrun_physical_gpu_memory_mib": {
+    "2": 0,
+    "3": 0
+  },
+  "postrun_own_containers_running": false,
+  "artifact_validation_scope": "File hashes, NPY headers, frame indices and execution receipts only; no pixel scoring or comparative evaluation.",
+  "direct_agent_file_writes": [
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tep_sam_reference_20261012/runtime/DEVELOPMENT_DOC_FOLLOW_RESULT.json"
+  ]
+}

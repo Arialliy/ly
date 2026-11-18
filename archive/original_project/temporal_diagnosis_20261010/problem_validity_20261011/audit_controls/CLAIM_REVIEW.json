@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "root_report_sha256": "aa1334d348cacd9d285e5110d7a930f317d59b4cbf9302d305a715b0f82a1864",
+  "checked_total_valid_objects": 21270,
+  "protected": 422,
+  "protected_losses": {
+    "official5_probmean": 0,
+    "symmetric5_probmax": 0
+  },
+  "extra_opportunity_original_internal_slot": 59,
+  "extra_opportunity_success_internal_slot": 77,
+  "symmetric_track_net_states": {
+    "gain": 14,
+    "zero": 103,
+    "loss": 13
+  },
+  "small_opportunities_all_six": 157,
+  "evidence_object_window_rows": 500,
+  "positive_pixels_outside_boxes": [
+    38368,
+    38641
+  ],
+  "plan_sha256": "fad0b5c0fa09662439158d642b1474e45f4aa56472cdc74c3564f940f1940484",
+  "local_link_checks": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/problem_validity_20261011/REPORT.md": 20,
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/CVPR2027_RESEARCH_PLAN.md": 5
+  },
+  "ratio_checks": {
+    "opportunities_per_all": 0.020961538461538462,
+    "opportunities_per_final_misses": 0.02422222222222222,
+    "original_input_loss_per_all": 0.0009615384615384616,
+    "absolute_gain_percentage_points": 0.38461538461538464,
+    "relative_gain_baseline_matches": 2.857142857142857
+  },
+  "inputs_sha256": {
+    "OBJECTS.csv": "e867369e7756bf83ab483cbc618122d7b505ac29db7a6e0ff87975b9aebb4400",
+    "WINDOWS.csv": "642829d527ce23301628f64c01eb16abbdba53d96b1207470787c62a88ca5c53",
+    "control_summary/OBJECTS.csv": "bc26057ffd5dc91f53e960a0804bec391dd80869e6e1fb8d95a63933af5a79be",
+    "control_summary/TRACKS.csv": "5262aa6c82dd19e23e4aa8faf6ba8961ddfd507198fbb9d49d713144d33571a2",
+    "REPORT.md": "aa1334d348cacd9d285e5110d7a930f317d59b4cbf9302d305a715b0f82a1864",
+    "PROTOCOL.md": "15fdd8218026c2496b6515d0db175741184f9868153bb9e42f7b6ee257dec2cc",
+    "evidence_context/WINDOW_EVIDENCE.csv": "6d39b5fbba9eb5a593fef27ee4fc130b0a57bd554788cce7b7b8d6401ad55f62",
+    "evidence_context/OBJECT_CONTEXT.csv": "b7dc0bf6a2f4ff4b949424d0cafb5bccfd87ba087b516fd465239aaf115698c9",
+    "../stage1_goal/CVPR2027_RESEARCH_PLAN.md": "fad0b5c0fa09662439158d642b1474e45f4aa56472cdc74c3564f940f1940484"
+  },
+  "wording_suggestions": {
+    "unmatched_component_term": "RESOLVED",
+    "route_specific_controls": "RESOLVED"
+  },
+  "latest_revision_scope": "Text-only verification of the two accepted plan edits; root report hash unchanged; no numerical experiment rerun."
+}

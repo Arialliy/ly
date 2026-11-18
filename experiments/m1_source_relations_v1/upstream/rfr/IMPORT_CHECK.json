@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "python": "3.11.12",
+  "torch": "2.7.0+cu128",
+  "cuda_toolkit": "12.8",
+  "lazy_import_without_torch": true,
+  "sys_path_unchanged": true,
+  "fresh_parameter_storage_and_initialization": true,
+  "previous_m1_imported": false,
+  "global_DCN2_imported": false,
+  "native_extension": "experiments/m1_source_relations_v1/upstream/rfr/dcn/_rfr_dcn.cpython-311-x86_64-linux-gnu.so",
+  "pda_parameters": 102548,
+  "cpu_forward_error": "Not implemented on the CPU",
+  "cuda_forward_backward_tested": false
+}

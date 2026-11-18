@@ -1,0 +1,40 @@
+{
+  "status": "ALL_FIXED_INFERENCES_COMPLETE_SCORES_LAUNCHED",
+  "gpu": 3,
+  "jobs": [
+    {
+      "condition": "R0",
+      "sequence": "DJI_0026_2",
+      "exit_code": 0
+    },
+    {
+      "condition": "R0",
+      "sequence": "DJI_0067_2",
+      "exit_code": 0
+    },
+    {
+      "condition": "R0",
+      "kind": "score_launch",
+      "exit_code": 0,
+      "stdout": "859fddd66c3c60e8c680ab6be3ccc702291290acb4939de6504eb59139fa39dc\n \n",
+      "stderr": ""
+    },
+    {
+      "condition": "R2",
+      "sequence": "DJI_0026_2",
+      "exit_code": 0
+    },
+    {
+      "condition": "R2",
+      "sequence": "DJI_0067_2",
+      "exit_code": 0
+    },
+    {
+      "condition": "R2",
+      "kind": "score_launch",
+      "exit_code": 0,
+      "stdout": "fb8450eb4b90bf4f07181aae3efeef6a2b1163c59d7d3de9536158229112bd33\n \n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "figures": [
+    "DJI_0026_2_track400006_frame072_ann805208.png",
+    "DJI_0026_2_track400007_frame058_ann805083.png",
+    "DJI_0026_2_track400008_frame098_ann805444.png",
+    "DJI_0026_2_track520005_frame156_ann805940.png",
+    "DJI_0067_2_track7700514_frame045_ann871417.png",
+    "DJI_0067_2_track7700519_frame003_ann867655.png",
+    "DJI_0067_2_track7700533_frame088_ann875413.png",
+    "DJI_0067_2_track7701568_frame021_ann869314.png",
+    "DJI_0067_2_track7700051_frame080_ann874661.png",
+    "DJI_0067_2_track7700052_frame080_ann874662.png",
+    "DJI_0067_2_track7700054_frame080_ann874664.png",
+    "DJI_0067_2_track7700055_frame080_ann874665.png",
+    "DJI_0067_2_track7700501_frame001_ann867462.png",
+    "DJI_0067_2_track7702006_frame114_ann877979.png",
+    "DJI_0067_2_track7701069_frame091_ann875774.png",
+    "DJI_0067_2_track7701510_frame098_ann876372.png"
+  ],
+  "extra_csv": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/failure_attribution_20261011/conditions/ALL_VISUAL_SAMPLE_INDEX.csv",
+  "script_sha256": "a27c58a2ed06e657b8b2949dac8824f318aec6a72a413985bcbe83ae72f2abb4",
+  "limits": "Green boxes at neighboring times in atlas use fixed current coordinates. No human visibility label implied. Raw traces are 8-bit image values, not radiometry."
+}

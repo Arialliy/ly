@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETE",
+  "records": [
+    {
+      "sequence": "DJI_0026_2",
+      "all_arrays_exact": false,
+      "checks": {
+        "scores/matched": true,
+        "scores/box_max": false,
+        "scores/peak_x": true,
+        "scores/peak_y": true,
+        "scores/component_area": true,
+        "scores/frame_counts": true,
+        "scores/coverage": true,
+        "scores/strict_small": true,
+        "scores/offsets": true,
+        "scores/plans": true,
+        "scores/threshold": true,
+        "areas/O_areas": true,
+        "areas/O_unmatched": true,
+        "areas/O_offsets": true,
+        "areas/S_areas": true,
+        "areas/S_unmatched": true,
+        "areas/S_offsets": true
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "all_arrays_exact": false,
+      "checks": {
+        "scores/matched": true,
+        "scores/box_max": false,
+        "scores/peak_x": true,
+        "scores/peak_y": true,
+        "scores/component_area": true,
+        "scores/frame_counts": true,
+        "scores/coverage": true,
+        "scores/strict_small": true,
+        "scores/offsets": true,
+        "scores/plans": true,
+        "scores/threshold": true,
+        "areas/O_areas": true,
+        "areas/O_unmatched": true,
+        "areas/O_offsets": true,
+        "areas/S_areas": true,
+        "areas/S_unmatched": true,
+        "areas/S_offsets": true
+      }
+    }
+  ]
+}

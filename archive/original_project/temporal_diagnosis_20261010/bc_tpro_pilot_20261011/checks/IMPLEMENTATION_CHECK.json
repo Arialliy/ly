@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "device": "cpu",
+  "torch": "2.7.0+cu128",
+  "tested_source_sha256": {
+    "bc_tpro.py": "5603fe22da26e80534cb8f4a3c11676a06b906460dc2ffec66a8542589f83972",
+    "test_bc_tpro.py": "302964d3191dedcccab711d1c514e1a398dd9b8fe0ca20eb485320991ee17d5c"
+  },
+  "model_config": {
+    "version": 1,
+    "channels": 32,
+    "rank": 4,
+    "length": 40,
+    "new_module_seed": 20261011,
+    "reference_offset": 40,
+    "reference_directions": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "stem_spatial_radius": 9,
+    "stem_temporal_radius": 8,
+    "raw_center_exclusion_radius": 23,
+    "recommended_inference_halo": 64,
+    "reference_temporal_kernel": 3,
+    "association": "shared_LayerNorm32_linear_QK_tanh_QKt_over_T_sqrt_r",
+    "value": "(F-stopgrad(B))/sqrt(T)",
+    "gamma_initial": 0.0,
+    "reference_lambda": 1.0,
+    "reference_reduction": "channel_pixel_mean_per_window_then_equal_window_mean",
+    "zero_context_correction": "zero"
+  },
+  "checks": [
+    {
+      "name": "attachment_preserves_cpu_rng",
+      "pass": true
+    },
+    {
+      "name": "only_single_TPro_attached",
+      "pass": true
+    },
+    {
+      "name": "all_original_state_names_and_values_preserved",
+      "pass": true
+    },
+    {
+      "name": "same_initial_state_for_two_variants",
+      "pass": true
+    },
+    {
+      "name": "gamma_zero_query_key_nonzero",
+      "pass": true
+    },
+    {
+      "name": "real_model_output_tuple_contract",
+      "pass": true
+    },
+    {
+      "name": "gamma_zero_exact_full_output_0",
+      "pass": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "gamma_zero_exact_single_output_0",
+      "pass": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "gamma_zero_exact_full_output_1",
+      "pass": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "gamma_zero_exact_single_output_1",
+      "pass": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "eval_does_not_cache_aux_graph",
+      "pass": true
+    },
+    {
+      "name": "equal_background_zero_relative_value",
+      "pass": true
+    },
+    {
+      "name": "equal_associations_cancel_nonzero_probe_value",
+      "pass": true
+    },
+    {
+      "name": "nonzero_probe_is_informative",
+      "pass": true
+    },
+    {
+      "name": "shared_generator_has_no_background_parameter_copy",
+      "pass": true
+    },
+    {
+      "name": "factorized_apply_matches_explicit_algebra",
+      "pass": true,
+      "max_abs_error": 4.470348358154297e-08
+    },
+    {
+      "name": "ring_no_raw_center_region_leak",
+      "pass": true
+    },
+    {
+      "name": "ring_has_eight_center_samples",
+      "pass": true
+    },
+    {
+      "name": "declared_ring_source_is_used",
+      "pass": true
+    },
+    {
+      "name": "valid_count_normalization_at_boundaries",
+      "pass": true
+    },
+    {
+      "name": "no_context_no_reflection_or_wrap",
+      "pass": true
+    },
+    {
+      "name": "auxiliary_mask_does_not_mutate_detection_mask",
+      "pass": true
+    },
+    {
+      "name": "auxiliary_RF_excludes_space_and_time",
+      "pass": true
+    },
+    {
+      "name": "auxiliary_RF_keeps_outside_temporal_neighborhood",
+      "pass": true
+    },
+    {
+      "name": "auxiliary_boundary_is_invalid",
+      "pass": true
+    },
+    {
+      "name": "detection_loss_cannot_train_reference",
+      "pass": true
+    },
+    {
+      "name": "reference_loss_cannot_train_backbone_or_dynamic_branch",
+      "pass": true
+    },
+    {
+      "name": "gamma_has_nonzero_first_step_gradient",
+      "pass": true,
+      "gradient": 2.6438130589667708e-05
+    },
+    {
+      "name": "association_zero_detection_gradient_at_gamma_zero",
+      "pass": true
+    },
+    {
+      "name": "reference_learns_at_gamma_zero",
+      "pass": true
+    },
+    {
+      "name": "initial_gradients_finite",
+      "pass": true
+    },
+    {
+      "name": "reference_valid_positions_exist",
+      "pass": true
+    },
+    {
+      "name": "reference_cache_consumed",
+      "pass": true
+    },
+    {
+      "name": "query_key_trainable_once_gamma_opens",
+      "pass": true
+    },
+    {
+      "name": "reference_still_no_detection_gradient",
+      "pass": true
+    },
+    {
+      "name": "tested_sources_unchanged_during_checks",
+      "pass": true
+    }
+  ],
+  "ring_count_histogram_112": {
+    "0": 0,
+    "1": 324,
+    "2": 2880,
+    "3": 6904,
+    "4": 0,
+    "5": 2240,
+    "6": 0,
+    "7": 0,
+    "8": 196
+  },
+  "reference_stats": {
+    "reference_loss": 0.8060389161109924,
+    "reference_loss_per_window": [
+      0.8060389161109924
+    ],
+    "reference_valid_positions_per_window": [
+      205927
+    ],
+    "reference_empty_windows": 0,
+    "reference_valid_fraction": 0.4104093611240387,
+    "reference_target_abs_mean_per_window": [
+      0.7977500557899475
+    ],
+    "reference_relative_l1_per_window": [
+      1.010390281677246
+    ],
+    "reference_relative_l1": 1.010390281677246
+  },
+  "original_parameter_count": 70913,
+  "candidate_parameter_count": 72418,
+  "single_parameter_count": 72418,
+  "seconds": 12.706074756977614
+}

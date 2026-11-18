@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "synthetic_diagnostics_only": true,
+  "overlapping_boxes_can_gain_after_fusion_without_single_window_actual_match": {
+    "window_a": {
+      "matched_by_track": {
+        "1": 1,
+        "2": 0
+      },
+      "peaks": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 2,
+        "matched_count": 1,
+        "component_count": 1,
+        "unmatched_components": 0,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 0,
+        "components_multiple_gt": 1,
+        "gt_multiple_components": 0,
+        "ambiguous_gt_count": 2,
+        "positive_pixels": 1,
+        "positive_pixels_outside_boxes": 0
+      }
+    },
+    "window_b": {
+      "matched_by_track": {
+        "1": 1,
+        "2": 0
+      },
+      "peaks": [
+        [
+          4.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 2,
+        "matched_count": 1,
+        "component_count": 1,
+        "unmatched_components": 0,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 0,
+        "components_multiple_gt": 0,
+        "gt_multiple_components": 0,
+        "ambiguous_gt_count": 0,
+        "positive_pixels": 1,
+        "positive_pixels_outside_boxes": 0
+      }
+    },
+    "fusion": {
+      "matched_by_track": {
+        "1": 1,
+        "2": 1
+      },
+      "peaks": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          4.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 2,
+        "matched_count": 2,
+        "component_count": 2,
+        "unmatched_components": 0,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 0,
+        "components_multiple_gt": 1,
+        "gt_multiple_components": 1,
+        "ambiguous_gt_count": 2,
+        "positive_pixels": 2,
+        "positive_pixels_outside_boxes": 0
+      }
+    }
+  },
+  "nonoverlapping_box_can_lose_after_adding_window": {
+    "window_a": {
+      "matched_by_track": {
+        "1": 1
+      },
+      "peaks": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 1,
+        "matched_count": 1,
+        "component_count": 1,
+        "unmatched_components": 0,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 0,
+        "components_multiple_gt": 0,
+        "gt_multiple_components": 0,
+        "ambiguous_gt_count": 0,
+        "positive_pixels": 1,
+        "positive_pixels_outside_boxes": 0
+      }
+    },
+    "window_b": {
+      "matched_by_track": {
+        "1": 0
+      },
+      "peaks": [
+        [
+          2.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 1,
+        "matched_count": 0,
+        "component_count": 1,
+        "unmatched_components": 1,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 1,
+        "components_multiple_gt": 0,
+        "gt_multiple_components": 0,
+        "ambiguous_gt_count": 0,
+        "positive_pixels": 2,
+        "positive_pixels_outside_boxes": 2
+      }
+    },
+    "fusion": {
+      "matched_by_track": {
+        "1": 0
+      },
+      "peaks": [
+        [
+          2.5,
+          0.5
+        ]
+      ],
+      "stats": {
+        "gt_count": 1,
+        "matched_count": 0,
+        "component_count": 1,
+        "unmatched_components": 1,
+        "unmatched_components_with_edge": 0,
+        "components_no_peak_in_gt": 1,
+        "components_multiple_gt": 0,
+        "gt_multiple_components": 0,
+        "ambiguous_gt_count": 0,
+        "positive_pixels": 3,
+        "positive_pixels_outside_boxes": 2
+      }
+    }
+  },
+  "implication": "Nonoverlap is necessary for the actual-match union upper bound; the bound does not imply attainability or monotonicity.",
+  "helper_sha256": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062"
+}

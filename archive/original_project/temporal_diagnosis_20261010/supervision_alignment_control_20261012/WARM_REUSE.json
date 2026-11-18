@@ -1,0 +1,7 @@
+{
+  "environment_spec": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/env-spec.json",
+  "canonical_sha256": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "decision": "warm reuse unchanged validated environment; no packages installed",
+  "checked_utc": "2026-10-11T16:26:31.135889+00:00"
+}

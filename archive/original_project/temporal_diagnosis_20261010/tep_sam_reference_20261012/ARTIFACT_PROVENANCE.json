@@ -1,0 +1,127 @@
+{
+  "stage": "TEP-SAM frozen NUDT reference, no training",
+  "created_utc": "2026-10-11T19:42:38.925914+00:00",
+  "repository": {
+    "url": "https://github.com/cdh8285/TEP-SAM",
+    "commit": "c5165cfa9139e7d72f1fc962ddc398d31d59093e",
+    "commit_date": "2026-05-26T18:35:28+08:00",
+    "branch_at_fetch": "main",
+    "author_code_modified": false,
+    "tracked_files": 53,
+    "source_manifest": "ARTIFACT_PROVENANCE_SOURCE_MANIFEST.json"
+  },
+  "checkpoint": {
+    "dataset": "NUDT-MIRSDT",
+    "author_readme_url": "https://github.com/cdh8285/TEP-SAM/blob/c5165cfa9139e7d72f1fc962ddc398d31d59093e/README.md",
+    "author_download_url": "https://drive.google.com/file/d/1_hbtkHZiVZeT-h9chdUagmAPfsTBlqoa/view?usp=sharing",
+    "path": "weights/model_NUDT-MIRSDT_SAM1-B.pth",
+    "download_status": "complete",
+    "url": "https://drive.usercontent.google.com/download?id=1_hbtkHZiVZeT-h9chdUagmAPfsTBlqoa&export=download&confirm=t&uuid=fed5a9e2-4c6b-4f7e-b229-4703b9ef3f5e",
+    "resolved_url": "https://drive.usercontent.google.com/download?id=1_hbtkHZiVZeT-h9chdUagmAPfsTBlqoa&export=download&confirm=t&uuid=fed5a9e2-4c6b-4f7e-b229-4703b9ef3f5e",
+    "content_type": "application/octet-stream",
+    "content_disposition": "attachment; filename=\"model_NUDT-MIRSDT_SAM1-B.pth\"",
+    "started_utc": "2026-10-11T19:41:19.691357+00:00",
+    "size_bytes": 382496611,
+    "sha256": "1125ea28b4dfe0745be1f33500f4e5463f1cbd8e837a3c1c733b34bb0de9e6f0",
+    "finished_utc": "2026-10-11T19:41:30.726764+00:00"
+  },
+  "other_weights": {
+    "TSIRMT": "not_downloaded_not_compared",
+    "SAM_pretrained": "not_required_by_author_test_constructor_or_strict_full_checkpoint; not_downloaded"
+  },
+  "native_loading": {
+    "entry": "test.py",
+    "config": "configs/sam-vit-b-token-NUDT-MIRSDT.yaml",
+    "strict": true,
+    "unwrap_order": [
+      "state_dict if present",
+      "model if present"
+    ],
+    "cpu_load_validation": "PASS; runtime/CPU_STRICT_LOAD.json",
+    "sam_checkpoint_config_key_unused_by_test": true,
+    "README_generic_config_path_missing": true,
+    "checkpoint_state_keys": 472,
+    "parameters": 95576030,
+    "missing_keys": [],
+    "unexpected_keys": []
+  },
+  "native_input": {
+    "layout": "B,T,C,H,W",
+    "window_length": 7,
+    "center_offsets": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "sequence_boundary": "clamp within sequence, repeat boundary frame",
+    "color": "PIL.convert(RGB)",
+    "resize": [
+      1024,
+      1024
+    ],
+    "resize_mode": "torchvision Resize default bilinear on PIL",
+    "image_normalization": {
+      "ToTensor": "uint8 / 255",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "config_data_norm_unused_by_test": true,
+    "crop": null,
+    "mask_binarization": "all nonzero pixels to 1",
+    "GT_resize": "nearest; gt_orig retained"
+  },
+  "native_output": {
+    "infer_returns": "raw logits B,1,1024,1024; docstring binary wording is inaccurate",
+    "decoder_native_grid": [
+      256,
+      256
+    ],
+    "postprocess": "bilinear logits to 1024 with align_corners=False; then sigmoid; then area probability resize to original H,W",
+    "threshold": "strict > 0.5",
+    "boxes": "None; no annotation input to model"
+  },
+  "auxiliary_output": {
+    "name": "image_encoder.prompt_generator.middle_mask_decoder",
+    "returned_as": "third result from image_encoder.forward; discarded by infer",
+    "output": "raw logits B,1,256,256",
+    "train_supervision": "BCEWithLogitsLoss + Dice vs gt_middle, both coefficient 1",
+    "availability": "PASS; 16 checkpoint state keys including BatchNorm buffers; strict load accepted all",
+    "capture": "read-only forward hook on image_encoder, single infer call",
+    "native_evaluation": "none provided",
+    "project_coordinate_transform": "auxiliary 256x256 logits -> bilinear 1024x1024 align_corners=False -> sigmoid -> area probability resize to original H,W; single preregistered project diagnostic, no alternate-order comparison"
+  },
+  "native_metric_caveats": {
+    "IoU_print_name": "mean per-frame IoU",
+    "nIoU_print_name": "pooled intersection over pooled union",
+    "PD": "8-connected components, greedy centroid distance < 3 pixels",
+    "FA": "sum unmatched component areas / all pixels; implementation uses area-value list membership, may discard equal-area unmatched components",
+    "project_evaluation": "must retain project component-peak matching and U independently; no author code fix in this stage"
+  },
+  "native_check_scope": "Sequence85 full 100 frames, author native test.py, run check only; not complete published-test inference verification",
+  "source_references": {
+    "strict_load": "author_source/test.py:22-28",
+    "predict_sigmoid_area_threshold": "author_source/test.py:57-80",
+    "sequence_rgb_and_binarize": "author_source/datasets/sequence_folders.py:155-166",
+    "test_resize_normalization": "author_source/datasets/seqwin.py:116-129",
+    "test_boundaries": "author_source/datasets/seqwin.py:135-149",
+    "model_logits_postprocess": "author_source/models/sam_withToken.py:254-302",
+    "auxiliary_definition": "author_source/models/mmseg/models/sam/image_encoder_token.py:261-269",
+    "auxiliary_forward": "author_source/models/mmseg/models/sam/image_encoder_token.py:297-307",
+    "auxiliary_training_supervision": "author_source/models/sam_withToken.py:304-318",
+    "native_pd_fa": "author_source/test_utils/metric_new.py:9-67",
+    "native_iou": "author_source/test_utils/metric_new.py:68-85",
+    "native_niou": "author_source/test_utils/metric_new.py:112-131"
+  }
+}

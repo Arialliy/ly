@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "pytest_exit_code": 0,
+  "tests": 29,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/reference/M1_v13_evidence_bank_reference/evidence_bank.py": "035925964a651df6e02a9d48a3748f8e774aa9522a461f69762ca75340de443c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/reference/M1_v13_evidence_bank_reference/test_evidence_bank.py": "2a65b0bbbc685b26322ba8b2f6b7873d5af194f7563e19f3ea4bd585cecaa23c"
+  },
+  "source_unchanged": true,
+  "junit_sha256": "b2f321c66512acf85a0ef606aeb88f2b76956ab01bcda1d31cad07d4f945b4e1",
+  "scope": "Unmodified supplied CPU core tests with substitute operators; native DCN, detector training and full-frame costs are checked separately"
+}

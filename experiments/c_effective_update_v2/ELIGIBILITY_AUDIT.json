@@ -1,0 +1,487 @@
+{
+  "status": "QUALIFIED_POOL_EXHAUSTED_WITH_TWO_ADDITIONAL_PAIRS",
+  "uses_intervention_effects_for_selection": false,
+  "uses_development": false,
+  "uses_confirmation": false,
+  "new_teacher_forwards": 0,
+  "new_optimizer_steps": 0,
+  "eligible_remaining_entries": [
+    25,
+    32,
+    63,
+    230,
+    235
+  ],
+  "candidate_pairs": [
+    {
+      "entries": [
+        25,
+        32
+      ],
+      "source_relation": "cross_source",
+      "sources": [
+        [
+          "DJI_0043_2",
+          "DJI_0057_1"
+        ],
+        [
+          "DJI_0217_2",
+          "DJI_0323_2"
+        ]
+      ],
+      "weak_track_counts": [
+        12,
+        1
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": true,
+      "reason": "qualified"
+    },
+    {
+      "entries": [
+        25,
+        63
+      ],
+      "source_relation": "mixed_source",
+      "sources": [
+        [
+          "DJI_0043_2",
+          "DJI_0057_1"
+        ],
+        [
+          "DJI_0057_1",
+          "DJI_0115_2"
+        ]
+      ],
+      "weak_track_counts": [
+        12,
+        1
+      ],
+      "overlapping_source_frame_count": 44,
+      "qualifies_preferred_relation": false,
+      "reason": "overlapping original frames"
+    },
+    {
+      "entries": [
+        25,
+        230
+      ],
+      "source_relation": "cross_source",
+      "sources": [
+        [
+          "DJI_0043_2",
+          "DJI_0057_1"
+        ],
+        [
+          "DJI_0115_2",
+          "DJI_0217_2"
+        ]
+      ],
+      "weak_track_counts": [
+        12,
+        2
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": true,
+      "reason": "qualified"
+    },
+    {
+      "entries": [
+        25,
+        235
+      ],
+      "source_relation": "mixed_source",
+      "sources": [
+        [
+          "DJI_0043_2",
+          "DJI_0057_1"
+        ],
+        [
+          "DJI_0030_9",
+          "DJI_0057_1"
+        ]
+      ],
+      "weak_track_counts": [
+        12,
+        2
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": false,
+      "reason": "mixed sources retained as separate class; not needed when strict same/cross candidates exist"
+    },
+    {
+      "entries": [
+        32,
+        63
+      ],
+      "source_relation": "cross_source",
+      "sources": [
+        [
+          "DJI_0217_2",
+          "DJI_0323_2"
+        ],
+        [
+          "DJI_0057_1",
+          "DJI_0115_2"
+        ]
+      ],
+      "weak_track_counts": [
+        1,
+        1
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": true,
+      "reason": "qualified"
+    },
+    {
+      "entries": [
+        32,
+        230
+      ],
+      "source_relation": "mixed_source",
+      "sources": [
+        [
+          "DJI_0217_2",
+          "DJI_0323_2"
+        ],
+        [
+          "DJI_0115_2",
+          "DJI_0217_2"
+        ]
+      ],
+      "weak_track_counts": [
+        1,
+        2
+      ],
+      "overlapping_source_frame_count": 29,
+      "qualifies_preferred_relation": false,
+      "reason": "overlapping original frames"
+    },
+    {
+      "entries": [
+        32,
+        235
+      ],
+      "source_relation": "cross_source",
+      "sources": [
+        [
+          "DJI_0217_2",
+          "DJI_0323_2"
+        ],
+        [
+          "DJI_0030_9",
+          "DJI_0057_1"
+        ]
+      ],
+      "weak_track_counts": [
+        1,
+        2
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": true,
+      "reason": "qualified"
+    },
+    {
+      "entries": [
+        63,
+        230
+      ],
+      "source_relation": "mixed_source",
+      "sources": [
+        [
+          "DJI_0057_1",
+          "DJI_0115_2"
+        ],
+        [
+          "DJI_0115_2",
+          "DJI_0217_2"
+        ]
+      ],
+      "weak_track_counts": [
+        1,
+        2
+      ],
+      "overlapping_source_frame_count": 52,
+      "qualifies_preferred_relation": false,
+      "reason": "overlapping original frames"
+    },
+    {
+      "entries": [
+        63,
+        235
+      ],
+      "source_relation": "mixed_source",
+      "sources": [
+        [
+          "DJI_0057_1",
+          "DJI_0115_2"
+        ],
+        [
+          "DJI_0030_9",
+          "DJI_0057_1"
+        ]
+      ],
+      "weak_track_counts": [
+        1,
+        2
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": false,
+      "reason": "mixed sources retained as separate class; not needed when strict same/cross candidates exist"
+    },
+    {
+      "entries": [
+        230,
+        235
+      ],
+      "source_relation": "cross_source",
+      "sources": [
+        [
+          "DJI_0115_2",
+          "DJI_0217_2"
+        ],
+        [
+          "DJI_0030_9",
+          "DJI_0057_1"
+        ]
+      ],
+      "weak_track_counts": [
+        2,
+        2
+      ],
+      "overlapping_source_frame_count": 0,
+      "qualifies_preferred_relation": true,
+      "reason": "qualified"
+    }
+  ],
+  "strict_same_cross_candidates": 5,
+  "maximum_disjoint_additional_pairs": 2,
+  "selected_pairs": [
+    {
+      "pair_id": 16,
+      "update_index": 230,
+      "observer_index": 25,
+      "update_sources": [
+        "DJI_0115_2",
+        "DJI_0217_2"
+      ],
+      "observer_sources": [
+        "DJI_0043_2",
+        "DJI_0057_1"
+      ],
+      "source_relation": "cross_source",
+      "is_reused": false,
+      "old_pair_id": null,
+      "reuse_update_from_pair_id": 11,
+      "reuse_observer_from_pair_id": null,
+      "observer_cohort_was_v1_update_pair_id": 2,
+      "reuse_mode": "new_pair_saved_update_endpoint",
+      "new_optimizer_steps": 0,
+      "update_C_pairs": 38,
+      "observer_C_pairs": 128,
+      "structural_zero_track_update": false,
+      "overlapping_source_frames": [],
+      "role_selection_sha256": "6a1c20635f88af0636a8f77ae71d4bb2e63518ce88f5a21f4ae6665f4385b5c9",
+      "selection_reason": "Global metadata-only matching: maximize additional trusted weak tracks, then weak-source coverage; minimize track repetition; seed46 hash breaks ties and assigns roles. No common-entry or within-new-entry reuse. Saved update endpoint is reused; this observer response has not previously been evaluated."
+    },
+    {
+      "pair_id": 17,
+      "update_index": 235,
+      "observer_index": 32,
+      "update_sources": [
+        "DJI_0030_9",
+        "DJI_0057_1"
+      ],
+      "observer_sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "source_relation": "cross_source",
+      "is_reused": false,
+      "old_pair_id": null,
+      "reuse_update_from_pair_id": 5,
+      "reuse_observer_from_pair_id": null,
+      "observer_cohort_was_v1_update_pair_id": 7,
+      "reuse_mode": "new_pair_saved_update_endpoint",
+      "new_optimizer_steps": 0,
+      "update_C_pairs": 128,
+      "observer_C_pairs": 128,
+      "structural_zero_track_update": false,
+      "overlapping_source_frames": [],
+      "role_selection_sha256": "8b8868b42ab129019dfbb86a8afe8bb09118d98d020a8c6b16f35e848c8d2a4b",
+      "selection_reason": "Global metadata-only matching: maximize additional trusted weak tracks, then weak-source coverage; minimize track repetition; seed46 hash breaks ties and assigns roles. No common-entry or within-new-entry reuse. Saved update endpoint is reused; this observer response has not previously been evaluated."
+    }
+  ],
+  "unselected_qualified_entries": [
+    63
+  ],
+  "old_common_weak_tracks": 34,
+  "all_selected_weak_tracks": 39,
+  "new_weak_tracks": [
+    {
+      "source": "DJI_0043_2",
+      "video_id": 86,
+      "track_id": 8601509
+    },
+    {
+      "source": "DJI_0043_2",
+      "video_id": 86,
+      "track_id": 8601510
+    },
+    {
+      "source": "DJI_0043_2",
+      "video_id": 86,
+      "track_id": 8601562
+    },
+    {
+      "source": "DJI_0043_2",
+      "video_id": 86,
+      "track_id": 8601623
+    },
+    {
+      "source": "DJI_0217_2",
+      "video_id": 83,
+      "track_id": 8421501
+    }
+  ],
+  "old_common_weak_sources": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0115_2",
+    "DJI_0323_2"
+  ],
+  "all_selected_weak_sources": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0323_2"
+  ],
+  "winning_metadata_score": {
+    "negative_new_track_count": -5,
+    "negative_selected_weak_source_count": -5,
+    "maximum_track_entry_repetition": 1,
+    "sum_squared_track_entry_repetitions": 17,
+    "tie_hash": "81bdea6213da5afdb82ed91259d5d18468cd820ba2ac3fb2de5deec4c6ac887d"
+  },
+  "all_maximum_size_disjoint_matchings": [
+    {
+      "pairs": [
+        [
+          25,
+          230
+        ],
+        [
+          32,
+          235
+        ]
+      ],
+      "metadata_score": [
+        -5,
+        -5,
+        1,
+        17,
+        "81bdea6213da5afdb82ed91259d5d18468cd820ba2ac3fb2de5deec4c6ac887d"
+      ],
+      "new_weak_track_count": 5,
+      "selected_weak_sources": [
+        "DJI_0030_9",
+        "DJI_0043_2",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ]
+    },
+    {
+      "pairs": [
+        [
+          25,
+          32
+        ],
+        [
+          230,
+          235
+        ]
+      ],
+      "metadata_score": [
+        -5,
+        -5,
+        1,
+        17,
+        "99acde8f8fe242eac606db18aea3ed020cf2fc07aaff1adcbf94133d90cf1fd4"
+      ],
+      "new_weak_track_count": 5,
+      "selected_weak_sources": [
+        "DJI_0030_9",
+        "DJI_0043_2",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ]
+    },
+    {
+      "pairs": [
+        [
+          25,
+          230
+        ],
+        [
+          32,
+          63
+        ]
+      ],
+      "metadata_score": [
+        -5,
+        -4,
+        1,
+        16,
+        "2148305c91c48e0c8cbac57c9bb71f6af43bd153f210889904231888f570c3fb"
+      ],
+      "new_weak_track_count": 5,
+      "selected_weak_sources": [
+        "DJI_0043_2",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ]
+    },
+    {
+      "pairs": [
+        [
+          32,
+          63
+        ],
+        [
+          230,
+          235
+        ]
+      ],
+      "metadata_score": [
+        -1,
+        -4,
+        1,
+        6,
+        "d4d0a7d815771b75b4433df7fad321db027a9a715567b8c9b28a6425b2560c0f"
+      ],
+      "new_weak_track_count": 1,
+      "selected_weak_sources": [
+        "DJI_0030_9",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ]
+    }
+  ],
+  "unknown_eligibility_entry_count": 224,
+  "existing_prediction_search": "Read-only filename inventory under experiments and archive/infrared_problem_screen_20261009 found no additional npz/npy prediction/teacher/runs assets for any of the eight training source names. Old C caches store selected keep pixels only, and v2 risk caches store ROI coordinates, so neither certifies every target bbox peak.",
+  "limits": [
+    "Nine pairs are the available qualified paired workload, not a statistical sufficiency guarantee.",
+    "The two added pairs create new cross-source observer measurements of old update endpoints, not new optimizer interventions.",
+    "The 224 entries lacking exact teacher peak data remain qualification-unknown, not weak-negative; no further screening is performed to fill the quota.",
+    "All extra selected entries are outside the original common14 and unique within the added set; repeated source frames and tracks across other entries remain possible.",
+    "Weak targets have audited video-scoped identity; reliable keep objects can include identity-uncertain labels and are flagged separately.",
+    "Cross-source and same-source effects must be summarized separately. Two cross-source pairs do not establish broad transfer.",
+    "Old7 per-track numerical effects require read-only endpoint replay; do not manufacture them from aggregate means."
+  ],
+  "pair_plan_sha256": "692a6ac81beed2d1a74938667e076333fd7e080e8dfed7c17c2bf75d387db717"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "row_count": 66,
+  "array_and_table_comparisons": 756,
+  "recovery_rows": 99,
+  "source_hashes_unchanged": 16,
+  "endpoint_all_array_equality": [
+    {
+      "sequence": "DJI_0026_2",
+      "mode": "O",
+      "threshold": 0.4,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "mode": "O",
+      "threshold": 0.5,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "mode": "S",
+      "threshold": 0.4,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "mode": "S",
+      "threshold": 0.5,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "mode": "O",
+      "threshold": 0.4,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "mode": "O",
+      "threshold": 0.5,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "mode": "S",
+      "threshold": 0.4,
+      "all_arrays_equal": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "mode": "S",
+      "threshold": 0.5,
+      "all_arrays_equal": true
+    }
+  ],
+  "S044_vs_S05": {
+    "gained": 7,
+    "lost": 0,
+    "low_cohort_gained": 6
+  },
+  "exploratory_supplement_fixed_nine_new_thresholds": true
+}

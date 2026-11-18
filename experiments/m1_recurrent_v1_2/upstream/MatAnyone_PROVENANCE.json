@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED_SOURCE_REFERENCE_ONLY",
+  "retrieved_at_utc": "2026-10-14T11:15:58.956956+00:00",
+  "official_repository": "https://github.com/pq-yang/MatAnyone",
+  "commit": "e5ddc534c1fff9bb9e54cf476095d29071b7cb4f",
+  "commit_date": "2026-03-04T23:52:40+08:00",
+  "branch_at_retrieval": "main",
+  "repository_clean": true,
+  "source_modified": false,
+  "dependencies_installed": false,
+  "model_executed": false,
+  "weights_downloaded": false,
+  "license": "S-Lab License 1.0; exact LICENSE preserved",
+  "source_sha256": {
+    "LICENSE": "dec3847228f2b16bb699a93c46be8c6c4131b90bb4181a14735f1e0006269903",
+    "README.md": "cf9fa7343e59411edc485db95afc5eb7289e40f371c94ac6ab5c1c1a7d580687",
+    "matanyone/model/matanyone.py": "1bef4c6b16f7856d43a013cd2d4e4b36c610b3be705b66d75b3841d2211f12bd",
+    "matanyone/model/big_modules.py": "ec61d1d727f7f1ecc7994943132c0a4cc43c89ab70869ccc9cf066479568f39d",
+    "matanyone/config/model/base.yaml": "e585eb2b4b5f708ac56e47d938e31a14f3438e98f0a1e2a5a4d2e1fb07b79f4e",
+    "matanyone/model/train_wrapper.py": "8c8ae118ceb539b2bcba4e13e55e6bd1337c5d5af6a673c8aa012762e9319bfa",
+    "matanyone/model/losses.py": "796f6a59a9d764a64cf403b154182359300ded2dffcd89e0dd037e8c3256ccf8",
+    "matanyone/inference/memory_manager.py": "a137e51d4f54ac29e84f87aec4515947d915b35e084e5d86e187d87cbce8dde4",
+    "inference_matanyone.py": "a6843e1ae87954710e1b629b45d9136b01a036d3922bace4fb7877ee40d6d557"
+  },
+  "paper": {
+    "title": "MatAnyone: Stable Video Matting with Consistent Memory Propagation",
+    "venue": "CVPR 2025",
+    "pages": "7299–7308",
+    "official_landing": "https://openaccess.thecvf.com/content/CVPR2025/html/Yang_MatAnyone_Stable_Video_Matting_with_Consistent_Memory_Propagation_CVPR_2025_paper.html",
+    "official_pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_MatAnyone_Stable_Video_Matting_with_Consistent_Memory_Propagation_CVPR_2025_paper.pdf",
+    "pdf_file": "MatAnyone_CVPR2025.pdf",
+    "pdf_sha256": "ebee69bbf4c08d15936ae7135fab94011fe1d04d8fd6c45273f3eae090579c14",
+    "text_file": "MatAnyone_CVPR2025.txt",
+    "text_sha256": "5470c0bfd8f8cdb2e98c35f1b29eabdbbd92525fb4e73945690376ae8191cd74",
+    "read_sections": [
+      "3 Methodology",
+      "3.1 Consistent Memory Propagation",
+      "3.3 Practical Inference Strategy"
+    ]
+  },
+  "upstream_api": {
+    "UncertPred_inputs": [
+      "last_frame_feat",
+      "cur_frame_feat",
+      "last_mask",
+      "mem_val_diff"
+    ],
+    "default_pixel_dim": 256,
+    "default_value_dim": 256,
+    "input_channels": 769,
+    "conv_widths": [
+      769,
+      64,
+      32,
+      1
+    ],
+    "conv_kernels": [
+      1,
+      3,
+      3
+    ],
+    "conv_bias": [
+      false,
+      false,
+      false
+    ],
+    "BN_after_conv": [
+      1,
+      2
+    ],
+    "train_override": "all children eval; parameters retain requires_grad",
+    "diff": "current memory-matched readout minus stored prior memory value",
+    "explicit_detach_in_read_memory_UncertPred_TrainWrapper": false,
+    "fusion": "U*new_readout+(1-U)*old_memory",
+    "coefficient_direction": "U weights new readout; user retention g corresponds to 1-U",
+    "uncertainty_predictor_zero_initialization": false
+  },
+  "adaptation_boundary": "User [A,X,R-A], small widths, absent mask/BN, retention direction, zero-init gate, and detection-only supervision are custom adaptation; not exact MatAnyone UncertPred or full reproduction. Reference package is independently supplied; audit it separately."
+}

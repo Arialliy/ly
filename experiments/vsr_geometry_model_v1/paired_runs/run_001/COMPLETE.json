@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE",
+  "end_unix": 1794942696.2409813,
+  "seeds": [
+    46,
+    137,
+    829
+  ],
+  "updates_per_head_per_seed": 240,
+  "patches_per_seed": {
+    "train": 96,
+    "evaluation": 32
+  },
+  "peak_cuda_bytes": 883113984,
+  "patch_metrics_sha256": "d8317e87688e10ace584a1ebef4b73056ad6f758376ea0976f4c16fbf94abfc8",
+  "sequence_metrics_sha256": "94b4800241c93655f2143ce20ebd95f30df2e1bb35b89568687fdc932947bd2a"
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "sequence": "DJI_0026_2",
+    "condition": "gaussian_softiou_approx",
+    "parameters": 70913,
+    "O_seconds": 4.951954137068242,
+    "S_seconds": 5.015136871079449,
+    "inference_elapsed_seconds": 33.56423537898809,
+    "peak_cuda_allocated_GiB": 3.8379592895507812,
+    "tiling_checks": [
+      {
+        "yx": [
+          0,
+          0
+        ],
+        "max_logit_error": 5.054473876953125e-05,
+        "max_probability_error": 5.513429641723633e-06,
+        "threshold05_disagreements": 0
+      },
+      {
+        "yx": [
+          176,
+          224
+        ],
+        "max_logit_error": 2.765655517578125e-05,
+        "max_probability_error": 3.5762786865234375e-06,
+        "threshold05_disagreements": 0
+      },
+      {
+        "yx": [
+          352,
+          448
+        ],
+        "max_logit_error": 3.6716461181640625e-05,
+        "max_probability_error": 6.258487701416016e-06,
+        "threshold05_disagreements": 0
+      }
+    ]
+  },
+  {
+    "sequence": "DJI_0067_2",
+    "condition": "gaussian_softiou_approx",
+    "parameters": 70913,
+    "O_seconds": 5.581300286052283,
+    "S_seconds": 5.625295556092169,
+    "inference_elapsed_seconds": 32.88187462295173,
+    "peak_cuda_allocated_GiB": 3.8379592895507812,
+    "tiling_checks": [
+      {
+        "yx": [
+          0,
+          0
+        ],
+        "max_logit_error": 3.814697265625e-05,
+        "max_probability_error": 7.092952728271484e-06,
+        "threshold05_disagreements": 0
+      },
+      {
+        "yx": [
+          176,
+          224
+        ],
+        "max_logit_error": 6.67572021484375e-05,
+        "max_probability_error": 1.0401010513305664e-05,
+        "threshold05_disagreements": 0
+      },
+      {
+        "yx": [
+          352,
+          448
+        ],
+        "max_logit_error": 1.239776611328125e-05,
+        "max_probability_error": 2.86102294921875e-06,
+        "threshold05_disagreements": 0
+      }
+    ]
+  }
+]

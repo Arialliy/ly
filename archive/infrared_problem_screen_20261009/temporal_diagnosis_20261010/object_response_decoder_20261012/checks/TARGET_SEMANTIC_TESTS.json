@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "semantic_tests": 16,
+  "environment": "deeppro-official-eval:20261009",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "cpu_only": true,
+  "no_gpu_or_optimizer_steps": true,
+  "elapsed_seconds_unittest": 0.166,
+  "coverage": [
+    "legacy valid and union equality",
+    "all categories and sizes",
+    "missing observation unknown",
+    "empty crop negative eligibility",
+    "excluded guard core intersection",
+    "ignore and crowd exclusion",
+    "zero support no fallback and no negative",
+    "original float bbox and crop origin",
+    "numeric alias provenance",
+    "canonical key collision failure",
+    "two-object overlapping supports",
+    "packed cache digest roundtrip"
+  ],
+  "source_sha256": {
+    "targets.py": "79013f3650ae0ca18b447fc5fa4631e073ee81c2ee0ce84600d88879af23f06e",
+    "test_targets.py": "981c7c9547393b1498692d821d208dec96d4d8d2f33ff82ec6fbd30d59e950fd"
+  },
+  "full_plan_receipt": "data_audit/frozen_target_receipts/MANIFEST.json",
+  "full_plan_receipt_sha256": "1888036b714c4eb44150ada4bd6e80467e5b4c24d2b98a864830a51c97d354ce"
+}

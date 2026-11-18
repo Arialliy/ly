@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "detail_rows": 10400,
+  "numeric_columns_preserved": true,
+  "peak_summary_rows": 42,
+  "manual_rows": 144,
+  "counts": {
+    "O": {
+      "all": 5200,
+      "low_all_05": 4342,
+      "extreme_all_001": 4170,
+      "low_nonextreme": 172,
+      "both_fixed_success": 646,
+      "extra_only": 104,
+      "high_unmatched": 49,
+      "matched_at_05": 700
+    },
+    "S": {
+      "all": 5200,
+      "low_all_05": 4342,
+      "extreme_all_001": 4170,
+      "low_nonextreme": 172,
+      "both_fixed_success": 646,
+      "extra_only": 104,
+      "high_unmatched": 49,
+      "matched_at_05": 720
+    }
+  },
+  "source_sha256": {
+    "analysis/LOW_RESPONSE_OBJECTS.csv": "9181b5c07b93f697826d44d0df748b28a6a9a394ff7228fb88b332a1c68785bc",
+    "visual/PEAK_REVIEW.csv": "fcaeebbb7e0c5e2903212bd17fbc7725786186727bd92b9aaba7e8edc349631f",
+    "assemble_results.py": "0ec16a97e7f0e7ce6d2cbc5625b843f2769536d0d7e2a19ebc31fb869b57ea1f"
+  }
+}

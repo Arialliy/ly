@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "old_experiment_artifact_hashes_unchanged": 359,
+  "closeout_links_valid": 4,
+  "new_structure_training": "PAUSED_BY_USER",
+  "core_mechanism_established": false,
+  "new_training_runs": 0,
+  "new_inference_jobs": 0,
+  "new_diagnostics": 0,
+  "scope": "Document/table-only closeout; existing frozen experiment untouched."
+}

@@ -1,0 +1,640 @@
+{
+  "status": "complete",
+  "condition": "N0",
+  "variant": "N0",
+  "mode": "current",
+  "steps": 512,
+  "seed": 46,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "fresh Adam on evidence parameters only",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "precision": "FP32_no_AMP_no_TF32",
+  "bn_policy": "original_entire_state_and_affine_frozen_eval; evidence_no_BN",
+  "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "initial_checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "reference_checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "old_log_sha256": "5cc2f455d6d6cd551247969ea9b10e7e6eb37f76f3af88beb910f995dabf78e7",
+  "initial_model_state_sha256": "92a314aa9e9551ccadfd9cd8b5f2ab71a96f665864b86a60724d3deabff7aa27",
+  "original_initial_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "branch_initial_sha256": "68f78a14f307cb5591ad08a7e1c413bdbac5db35a964fc435b783fbc9a0c897a",
+  "label_config": {
+    "version": 1,
+    "condition": "gaussian_softiou_approx",
+    "center": "original_float_bbox_geometric_center",
+    "pixel_coordinates": "x=j+0.5,y=i+0.5; half-open original bbox",
+    "sigma_x": "original_bbox_width/6",
+    "sigma_y": "original_bbox_height/6",
+    "support": "truncate outside original bbox; no minimum sigma or peak normalization",
+    "quantization": "floor(255*Gaussian) to uint8",
+    "target": "quantized>0 cast float32; max union over positive boxes",
+    "positive_objects": "all valid non-ignore non-crowd boxes fully inside crop core9; no size/class filter",
+    "valid_domain": "old_background_mask union full_positive_box_rects, then excluded-object bbox+2px overrides",
+    "excluded_objects": "all valid ignore/crowd or non-full-core boxes; original float box+2px",
+    "crop_core_margin": 9,
+    "outside_positive_box_guard_margin": 2,
+    "loss": "unchanged official SoftLoUloss on gathered valid pixels per window; four-window mean",
+    "smooth": 0.0,
+    "empty_target_window": "retain official loss1 and zero gradient; log occurrence",
+    "alignment_limit": "approximate mask generator and masked domain; not exact author training reproduction"
+  },
+  "effective_supervision_config": {
+    "positive_window": "unchanged masked official SoftLoUloss, internal sigmoid, smooth0",
+    "empty_window": "replace constant1 with old top1pct softplus background loss, coefficient1",
+    "empty_domain_assertion": "valid equals old background mask",
+    "outer_reduction": "four windows equal mean",
+    "label_config_scope": "frozen historical label generation; its old empty-loss note is superseded here"
+  },
+  "frozen_plan_config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "model_config": {
+    "original_frozen": true,
+    "original_bn": "eval",
+    "readout": "z0 + delta_z",
+    "evidence": {
+      "mode": "current",
+      "delays": [
+        1,
+        4
+      ],
+      "inner_radius": 5,
+      "outer_radius": 7,
+      "annulus_count": 104,
+      "annulus_offsets": [
+        [
+          -7,
+          -7
+        ],
+        [
+          -7,
+          -6
+        ],
+        [
+          -7,
+          -5
+        ],
+        [
+          -7,
+          -4
+        ],
+        [
+          -7,
+          -3
+        ],
+        [
+          -7,
+          -2
+        ],
+        [
+          -7,
+          -1
+        ],
+        [
+          -7,
+          0
+        ],
+        [
+          -7,
+          1
+        ],
+        [
+          -7,
+          2
+        ],
+        [
+          -7,
+          3
+        ],
+        [
+          -7,
+          4
+        ],
+        [
+          -7,
+          5
+        ],
+        [
+          -7,
+          6
+        ],
+        [
+          -7,
+          7
+        ],
+        [
+          -6,
+          -7
+        ],
+        [
+          -6,
+          -6
+        ],
+        [
+          -6,
+          -5
+        ],
+        [
+          -6,
+          -4
+        ],
+        [
+          -6,
+          -3
+        ],
+        [
+          -6,
+          -2
+        ],
+        [
+          -6,
+          -1
+        ],
+        [
+          -6,
+          0
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          -6,
+          2
+        ],
+        [
+          -6,
+          3
+        ],
+        [
+          -6,
+          4
+        ],
+        [
+          -6,
+          5
+        ],
+        [
+          -6,
+          6
+        ],
+        [
+          -6,
+          7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -6
+        ],
+        [
+          -5,
+          6
+        ],
+        [
+          -5,
+          7
+        ],
+        [
+          -4,
+          -7
+        ],
+        [
+          -4,
+          -6
+        ],
+        [
+          -4,
+          6
+        ],
+        [
+          -4,
+          7
+        ],
+        [
+          -3,
+          -7
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          -3,
+          6
+        ],
+        [
+          -3,
+          7
+        ],
+        [
+          -2,
+          -7
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -2,
+          6
+        ],
+        [
+          -2,
+          7
+        ],
+        [
+          -1,
+          -7
+        ],
+        [
+          -1,
+          -6
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          -1,
+          7
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          0,
+          -6
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          -7
+        ],
+        [
+          1,
+          -6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          -7
+        ],
+        [
+          2,
+          -6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          -7
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          4,
+          -6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          5,
+          -6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          6,
+          -5
+        ],
+        [
+          6,
+          -4
+        ],
+        [
+          6,
+          -3
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          6,
+          -1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          7,
+          -6
+        ],
+        [
+          7,
+          -5
+        ],
+        [
+          7,
+          -4
+        ],
+        [
+          7,
+          -3
+        ],
+        [
+          7,
+          -2
+        ],
+        [
+          7,
+          -1
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "s_min": 0.0210595036274995,
+      "channels": [
+        "I",
+        "D1",
+        "mu1",
+        "s1",
+        "E1",
+        "m1",
+        "D4",
+        "mu4",
+        "s4",
+        "E4",
+        "m4"
+      ],
+      "spatial_padding": "replicate",
+      "temporal_missing": "all five channels zero",
+      "median": "average of both central order statistics",
+      "mad": "median(abs(neighbor difference - same local median))",
+      "statistics_chunk_frames": 8,
+      "branch_spatial_radius": 9,
+      "encoder": "Conv2d(11,8,3,p1),ReLU,Conv2d(8,8,3,p1),ReLU",
+      "joint": "Conv2d(16,8,1),ReLU",
+      "output": "Conv2d(8,1,1)",
+      "zero_initialized": [
+        "output.weight",
+        "output.bias"
+      ],
+      "temporal_statistic_input": "normalized raw image, detached",
+      "clipping": null
+    }
+  },
+  "training_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "torch_version": "2.7.0+cu128",
+  "device": "cuda:0",
+  "parameter_count": 72442,
+  "new_parameters": 1529,
+  "trainable_parameters": 1529,
+  "source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "criterion_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+  "label_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+  "protocol": "frozen_original_positive_masked_official_SoftIoU_empty_old_top1pct",
+  "loss_reduction": "unchanged official per positive window; empty old top1 negative; four-window equal mean",
+  "checkpoint_selection": "fixed final update512; snapshots0/128/256/384/512 never selected by validation",
+  "snapshots": [
+    {
+      "step": 0,
+      "path": "snapshot_000.pth",
+      "sha256": "d7fefc544353785dbb5b5f235423833a167cebb7f0e0e04ffdefe667fd738591",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "92a314aa9e9551ccadfd9cd8b5f2ab71a96f665864b86a60724d3deabff7aa27"
+    },
+    {
+      "step": 128,
+      "path": "snapshot_128.pth",
+      "sha256": "a4063db69a95ee3c7a23ae0840c6f8c1d8717e746bfa45378d43047386e6cad2",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "f0c9c8703abfee62c9598253f79f655019ccd5ce877e43ad58c05e4d4f2fd09d"
+    },
+    {
+      "step": 256,
+      "path": "snapshot_256.pth",
+      "sha256": "1be8cfef600db293ec129bea170ee3c7d4ceff71c6d66387225f60c5bd4fb4e5",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "86c0f73677c44758ba7096a22ca2203c573cd81066da82046cad1ac945f958cf"
+    },
+    {
+      "step": 384,
+      "path": "snapshot_384.pth",
+      "sha256": "ecc38cbe32f175c203e0e8885749d40aebb8b37b5236d7cb667b0c1c9fb7dbee",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "ea6b427d69315d494585075e6ff72c38401ac52c8baf9b54ed4c152e3e47f7ec"
+    },
+    {
+      "step": 512,
+      "path": "snapshot_512.pth",
+      "sha256": "bd12f9cdc22811d7ccf1eab666cca65e1e53f4ae33994fe0c60c0fe5bc1b7cb0",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "3b13cef13be851a299d8b67e55b0eb9cfca4196dc00efabcaed14509fc7b1910"
+    }
+  ],
+  "telemetry_rule": {
+    "steps": "step 1 and every 16th update, before optimizer.step",
+    "target_queries": "first at most 8 valid positive-label pixels per window, flattened T/H/W ascending",
+    "background_queries": "top at most 8 old-detector logits among frozen valid background pixels per window; ties flat index ascending",
+    "selection_uses_new_logits": false,
+    "model_receives_labels": false,
+    "values": "actual mode input I,D1,mu1,s1,E1,m1,D4,mu4,s4,E4,m4; old logit and signed delta",
+    "limitation": "sampled training telemetry; neighboring target pixels need not be distinct objects"
+  },
+  "model_labels_access": false,
+  "train_source_sha256": "96362e07c45e1d435e2f890fd0a2aaca03581e2d7f741dbedfa07cc0a41e5342",
+  "module_source_sha256": "f87efd3f00c5167672045c83880c693e892cf906b58103f6327a55bba2502f2a",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "label_source_sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+  "top1_loss_source_sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+  "common_loss_source_sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b",
+  "prior_train_source_sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11",
+  "batch_source_sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "final_step": 512,
+  "duration_seconds": 112.7542812100146,
+  "counts": {
+    "pure_negative_windows": 385,
+    "valid_pixels": 978568892,
+    "positive_pixels": 9360858
+  },
+  "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "original_final_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "frozen_original_unchanged": true,
+  "final_checkpoint_sha256": "bd12f9cdc22811d7ccf1eab666cca65e1e53f4ae33994fe0c60c0fe5bc1b7cb0",
+  "final_model_state_sha256": "3b13cef13be851a299d8b67e55b0eb9cfca4196dc00efabcaed14509fc7b1910",
+  "cumulative_input_sha256": "9522ab5edb31968d008ea822c9971d02c685f5a5d99437f528e98ccc4e93356b",
+  "cumulative_label_sha256": "e7dc82a236220fdad0232ffe5b0653e91e4d4149cfad4b825d41456c64a727a6",
+  "train_log_sha256": "187e523003c8f093100343333cc3a3cb6963734a5f60a0316204c3eeb6a62b09",
+  "parameter_diff_sha256": "66b9cacba9925bcbea539da761bf5f2633505d58d5449fac54eef98f5fcee66d",
+  "telemetry_sha256": "5867c643320d4f63cf5fb583a4f6fb266e4b42ed6f66183f2473451dad3ea742",
+  "telemetry_seconds": 0.15984751709038392,
+  "max_cuda_memory_allocated_bytes": 3719797760,
+  "max_cuda_memory_reserved_bytes": 5645533184
+}

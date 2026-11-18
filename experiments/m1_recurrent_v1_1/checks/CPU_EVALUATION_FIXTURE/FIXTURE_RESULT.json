@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "test_only": true,
+  "meaning": "Archived History/release score aliases only. No2176 prediction/training evidence. Validates summary and pair routing.",
+  "evaluate_source_sha256": "10a9db0a41826f3bb8a46bfb852b65d08f8cc76c8d9088dfb0cada6f92fa7a4c",
+  "summary_sha256": "e0633d24c030db265ce8b0e278dfb796073da155b65c4144bd696d30fe2926bd",
+  "common_rows": 18,
+  "low_unique_gain_fixture": 9,
+  "matched_change_rows_fixture": 25
+}

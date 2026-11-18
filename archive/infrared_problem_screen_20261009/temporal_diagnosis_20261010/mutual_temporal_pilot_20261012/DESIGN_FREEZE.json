@@ -1,0 +1,8 @@
+{
+  "frozen_utc": "2026-10-11T18:00:28.432173+00:00",
+  "protocol_sha256": "40aaf074c6a09301e11617e974afb3f785f807396e7e1993c2c7f9ae76cfbcbc",
+  "radius_rule_sha256": "033f5b260742ca5752162aa37b943202cbb91b8d60b5e7d3da289ba75ba388d8",
+  "radius_result_sha256": "2984460762608dab58d5bf0dc0867ceb3eb7a2008e1e23c0f17c1dab637fa222",
+  "training_not_started": true,
+  "implementation_code_freeze": "to follow after preflight before formal training"
+}

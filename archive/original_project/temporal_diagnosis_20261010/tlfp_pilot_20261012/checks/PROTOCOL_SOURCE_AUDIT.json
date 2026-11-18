@@ -1,0 +1,210 @@
+{
+  "status": "SOURCE_AND_NEW_PROTOCOL_REVIEW_PASS",
+  "created_utc": "2026-10-12T11:24:01.947004+00:00",
+  "scope": "read-only source, frozen tables, training-plan and historical-log audit; no model run, training or GPU",
+  "sources": {
+    "user_plan": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/USER_PLAN.md",
+      "sha256": "56b42a30ff7a85dbefe294464224af7031e074be0312ee05739b7151ab0740c0"
+    },
+    "historical_pilot_protocol": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/PILOT_PROTOCOL.md",
+      "sha256": "1ffeb711f07fe5d60a8af18decf9253ae8c98cae93b63a4877e95f859ca225af"
+    },
+    "historical_protected_objects": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/summary/development/OBJECTS.csv",
+      "sha256": "e4d9e522c06bdc4d87fdd4fe3a6da6c06600d412023aea9a06c05c3ce5df7ea4"
+    },
+    "historical_protected_summarizer": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/summarize_development.py",
+      "sha256": "865a4c38568201f35ceee8268e424db2660ed8d9e45646001cb7c7edacfba86e"
+    },
+    "current_cohorts": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv",
+      "sha256": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961"
+    },
+    "fixed_train_plan": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+      "sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c"
+    },
+    "input_validation_helpers": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/train_supervision.py",
+      "sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11"
+    },
+    "batch_source": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py",
+      "sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+    },
+    "label_source": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+      "sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5"
+    },
+    "common_loss_source": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/code/train_mutual.py",
+      "sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b"
+    },
+    "negative_top1_source": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py",
+      "sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1"
+    },
+    "branch_only_training_reference": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/code/train_evidence.py",
+      "sha256": "96362e07c45e1d435e2f890fd0a2aaca03581e2d7f741dbedfa07cc0a41e5342"
+    },
+    "exact_exposure_reference_log": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run/TRAIN.jsonl",
+      "sha256": "5cc2f455d6d6cd551247969ea9b10e7e6eb37f76f3af88beb910f995dabf78e7"
+    },
+    "mutual_effective_protocol": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/EFFECTIVE_PROTOCOL.md",
+      "sha256": "423ea412dbd52505e994710893fa55ac190a6c11e49b40d1578c6bb4a04617df"
+    },
+    "previous_branch_protocol": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/PROTOCOL.md",
+      "sha256": "a51d1ff730af2eeeb79a9701267ee17278128426cf8d2cdb3b8769ae66c7d19a"
+    },
+    "previous_evaluation_protocol": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/EVALUATION_PROTOCOL.md",
+      "sha256": "e87be9feb2b24624e74f6b090491670ae18b8dc6c8f5c8c37c3405a52210f4d4"
+    },
+    "spatial_adapter": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/framewise_adapter.py",
+      "sha256": "fa470abf8d058c91baf3d35623e54fbea860c3b38cc3e9800071d4a181765803"
+    },
+    "spatial_reference": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/haar_reference.py",
+      "sha256": "ddd951b66c954ade79816bd57ee3d8654b468b1c71128065bc9e1214a26759e4"
+    },
+    "frozen_model_source": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668"
+    },
+    "latest_user_request": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/USER_REQUEST.txt",
+      "sha256": "ec42328b0c808c4e0d3abed5ba6c6f02900fc5d319b3cb0f54ccac489f358d90"
+    }
+  },
+  "supervision": {
+    "positive_window": "unchanged masked official SoftLoUloss on valid pixels; one internal sigmoid; smooth=0",
+    "empty_window": "unchanged historical top1pct mean(softplus(logit)) on old background; assert valid == background",
+    "outer_reduction": "equal mean of 4 windows; no extra pair or auxiliary term",
+    "positive_negative_logging": "positive-window SoftIoU and empty-window negative contributions are separable across windows; SoftIoU is not an additive pixel-positive/pixel-negative loss and must not be falsely split",
+    "label": "bbox-centered Gaussian sigma=w/6,h/6, truncated bbox, floor(255*g)>0 float32, max union; all valid fully core9-contained non-ignore/non-crowd boxes; exclusions override",
+    "label_config_empty_note": "legacy LABEL_CONFIG empty-target constant1 note is superseded only by EFFECTIVE_SUPERVISION, unchanged target generator"
+  },
+  "exposure": {
+    "seed": 46,
+    "updates": 512,
+    "batch_shape": [
+      4,
+      1,
+      40,
+      128,
+      128
+    ],
+    "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+    "sequences": [
+      "DJI_0030_9",
+      "DJI_0043_2",
+      "DJI_0057_1",
+      "DJI_0113_3",
+      "DJI_0115_2",
+      "DJI_0217_2",
+      "DJI_0309_1",
+      "DJI_0323_2"
+    ],
+    "window_exposures": 2048,
+    "empty_windows": 385,
+    "all_empty_batches": 16,
+    "comparison_required": "each update input_sha256 and label_sha256 exactly equal frozen E0 rows; same S/T streams",
+    "first_input_sha256": "de415ab59a3e3840fd9173b319465bc9fdd595ec8cb8b4bd67c773f9368a3004",
+    "first_label_sha256": "0b1ad48a914554b95b8c089cafc8437fb4691723e6a8552010d574dbc3818272"
+  },
+  "training_reference": {
+    "optimizer": "fresh Adam only new parameters; lr=1e-4, wd=1e-4, betas=.9/.999, eps=1e-8",
+    "precision": "deterministic FP32, AMP/TF32 off",
+    "original": "all 70913 old parameters and all buffers frozen; original eval; downstream autograd retained",
+    "snapshots": "new user plan overrides historical snapshot cadence: 0/64/128/256/512; 512 only main result"
+  },
+  "retention": {
+    "historical_predicate": "strict small targets, original all available windows matched and original O fused matched",
+    "historical_rate_rule": "100 * added_fused_losses <= protected_count",
+    "historical_denominator": 463,
+    "historical_sequence_counts": {
+      "DJI_0028_2": 61,
+      "DJI_0028_4": 266,
+      "DJI_0032_5": 89,
+      "DJI_0047_3": 47
+    },
+    "current_sequences": [
+      "DJI_0026_2",
+      "DJI_0067_2"
+    ],
+    "overlap_sequences": [],
+    "overlap_members": 0,
+    "current_646_definition": "release matched under both fixed O and S fused outputs, distinct predicate and sources",
+    "current_646_integer_tolerance": null,
+    "status_in_current_two_clip_scope": "historical463 constraint NOT_EVALUATED; report646 four states and same-arrangement release gains/losses, no fabricated <=6 rule",
+    "recommendation": "preserve old rule without retargeting denominator; do not expand this fixed two-clip experiment to old four clips automatically; tradeoffs remain explicit and do not automatically trigger positive extension"
+  },
+  "geometry": {
+    "original_spatial_radius": 9,
+    "new_reference_max_spatial_reach": 9,
+    "full_radius_upper_bound": 18,
+    "inference_halo": 20,
+    "valid_label_margin_preserved": 9,
+    "boundary_limit": "supervised crop pixels within distance9..17 can depend on crop padding via new branch; do not claim all supervised pixels are full-image equivalent",
+    "phase_limit": "frozen crop starts may be odd; keep exact crops and decompose relative to each crop origin; inference tiles keep full-image absolute even Haar phase, not arbitrary tile-local phase; shared S/T train/inference phase exposure is a limitation",
+    "no_silent_fix": "do not widen mask margin to18, shift crops to even, change label support or alter exposure SHA",
+    "frozen_plan_crop_phase_pair_counts": {
+      "odd_odd": 235,
+      "even_odd": 256,
+      "odd_even": 255,
+      "even_even": 278
+    },
+    "frozen_plan_crop_phase_scope": "1024 crop pairs; each reused for two real windows, total2048 windows"
+  },
+  "new_protocol_review": {
+    "utc": "2026-10-12T11:31:23.705241+00:00",
+    "status": "PASS",
+    "files_sha256": {
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/PROTOCOL.md": "4d7548affa5c794c8f7cfb99497edc30078fc191d287d3fab2cdf36a46697f82",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/USER_REQUEST.txt": "ec42328b0c808c4e0d3abed5ba6c6f02900fc5d319b3cb0f54ccac489f358d90",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/train_tlfp.py": "209a740cf0a814b3f0b2be03e280d933b0ab8eec945905223aefd2d843456a13",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/infer_tlfp.py": "b04b7c320fbf9126a9e49c84addb19bf23fb1c77e32830ca0f60f1b616ef8bde",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/launch.py": "8331f430044d4182fbcb88b5daac497b9f4099040d3828d2e65756fb607cdb50",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/preflight.py": "fb6318dc23d425f99ee4f97c0029dc5c9e486d85b887cd5293fc5c8eb04d05a9",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/temporal_lfp.py": "3bd17eab01c9430b5d149cb66e8ec492ff8468757b7524be956b3570e1e0f7af",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/test_temporal_lfp.py": "9a737d7c89b914f6f2341c4350723a83143a6779a46b7edb0dfe9162bd0699f8",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/checks/TEMPORAL_CPU_TESTS.json": "a87fc448a18bda5d5cb7595beadc6fec5fe2fd0376e2383ce886fe350551f1be",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/evaluate.py": "c029eac54ed4e6538e65759dea25c6ff852a755151a753d49b50a49ccb4b3451",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/verify_identity.py": "b0cda81315af03aeba42df9eac1775bc48eed4f9617c39e51069fff23e41974c",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/PREFLIGHT_RUN.json": "82c35e03c3cda36dcb9e0155be9f7d49fefcbef166d9438d71d06ac40bab6dab"
+    },
+    "checks": {
+      "exact_two_formal_configurations_S_T": true,
+      "fixed_seed46_steps512_final512_snapshots0_64_128_256_512": true,
+      "single_optimizer_step_in_each_frozen_plan_entry": true,
+      "historical_common_loss_and_build_targets_imported_not_copied_or_redefined": true,
+      "per_step_input_and_label_SHA_verified_against_E0": true,
+      "optimizer_only_new_adapter_original_eval_frozen_state_checked": true,
+      "positive_vs_empty_window_loss_logging_does_not_modify_objective": true,
+      "RF18_halo20_original_label_core9_limit_documented": true,
+      "crop_phase_exposure_preserved_and_limit_documented": true,
+      "Conv3d_slotconcatConv2d_explicit_axis_mapping_and_nonzero_gradient_test_recorded": true,
+      "CPU37tests_PASS_receipt_matches_current_module_test_reference_hashes": true,
+      "no_new_dev_outputs_used_for_protocol_selection_release_only_preflight": true,
+      "T_Tcurrent_Tbypass_one_checkpoint_one_script_unconditional": true,
+      "current_only_replaces_guide_no_highband_or_original_sequence_change": true,
+      "fixed05_fivewindow_O_S_component_matching_U4015": true,
+      "bypass_probability_tolerance_and_exact_decision_match_budget_checks_prespecified": true,
+      "old463_1pct_scope_NA_no_six_frame_rule": true,
+      "no_automatic_additional_training_seeds_controls_or_sources": true,
+      "prior_negative_routes_unchanged": true
+    },
+    "passed_checks": 19,
+    "optimizer_step_call_count": 1,
+    "implementation_gate_scope": "CPU37 receipt observed; actual GPU preflight and fresh environment witness remain root-run gates and are not falsely asserted completed here",
+    "formal_training_or_new_detector_results_read": false
+  }
+}

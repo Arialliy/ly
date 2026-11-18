@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "report_sha256": "cc48cd745da7dc95e58b9d457cbd63624846b05e01407b4897c173b138375d05",
+  "relative_links": [
+    {
+      "target": "USER_REQUEST.txt",
+      "exists": true
+    },
+    {
+      "target": "INTERPRETATION_SCOPE.json",
+      "exists": true
+    },
+    {
+      "target": "A_PROTOCOL.json",
+      "exists": true
+    },
+    {
+      "target": "A_FREEZE.json",
+      "exists": true
+    },
+    {
+      "target": "A_CPU_FREEZE.json",
+      "exists": true
+    },
+    {
+      "target": "probe_protocol.md",
+      "exists": true
+    },
+    {
+      "target": "B_FREEZE.json",
+      "exists": true
+    },
+    {
+      "target": "MODULE_CHAIN_REVIEW.md",
+      "exists": true
+    },
+    {
+      "target": "MODULE_CHAIN_REVIEW.json",
+      "exists": true
+    },
+    {
+      "target": "A_BRANCH_CHAIN_AUDIT.json",
+      "exists": true
+    },
+    {
+      "target": "A_DETECTION_OBJECTS.csv",
+      "exists": true
+    },
+    {
+      "target": "A_DETECTION_SUMMARY.csv",
+      "exists": true
+    },
+    {
+      "target": "A_PROTECTION.csv",
+      "exists": true
+    },
+    {
+      "target": "A_LOGIT_REGIONS.csv",
+      "exists": true
+    },
+    {
+      "target": "A_LOGIT_SUMMARY.csv",
+      "exists": true
+    },
+    {
+      "target": "A_PIXEL_CHANGES.csv",
+      "exists": true
+    },
+    {
+      "target": "geometry/COVERAGE.csv",
+      "exists": true
+    },
+    {
+      "target": "geometry/SAMPLE_PROPOSAL.json",
+      "exists": true
+    },
+    {
+      "target": "PROBE_IMPLEMENTATION_REVIEW_FROZEN.json",
+      "exists": true
+    },
+    {
+      "target": "probe_readout/SUMMARY.csv",
+      "exists": true
+    },
+    {
+      "target": "probe_readout/TRACKS.csv",
+      "exists": true
+    },
+    {
+      "target": "probe_readout/PREDICTIONS.csv",
+      "exists": true
+    },
+    {
+      "target": "probe_readout/MODELS.json",
+      "exists": true
+    },
+    {
+      "target": "probe_readout/HARD_NEGATIVE_SELECTION.csv",
+      "exists": true
+    },
+    {
+      "target": "REPORT_INPUT_AUDIT.json",
+      "exists": true
+    },
+    {
+      "target": "A_INDEPENDENT_NUMERIC_AUDIT.json",
+      "exists": true
+    },
+    {
+      "target": "PROBE_NUMERIC_REVIEW.json",
+      "exists": true
+    },
+    {
+      "target": "PRIOR_CLOSEOUT_PRESERVATION.json",
+      "exists": true
+    }
+  ],
+  "reviews": {
+    "A": "Source and independent numeric reviewer found no substantive issue; scope note added for40frameconditions/942regions and energy-only norm audit.",
+    "B": "Readout reviewer found no substantive issue; train input matrix rank wording clarified."
+  },
+  "complete_phase_not_successful_method": true
+}

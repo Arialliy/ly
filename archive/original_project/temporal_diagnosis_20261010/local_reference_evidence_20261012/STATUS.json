@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE_CLOSED_NOT_SELECTED",
+  "seed": 46,
+  "steps": 512,
+  "conditions": [
+    "N0",
+    "N1",
+    "N2"
+  ],
+  "gpu_preflight": "PASS",
+  "freeze": "6aeec454ecb1bd34ab9e6a059770b1640de6df60af61acbe69e238fc4a542e57",
+  "training_complete": [
+    "N0",
+    "N1",
+    "N2"
+  ],
+  "training_audit": "PASS_258",
+  "next": "O/S fixed score and N2-vs-N1 decision",
+  "main_table": "evaluation/SUMMARY.csv",
+  "main_validation": "PASS_27366",
+  "conditional_trigger": "S finite positive under predeclared budget; no retrospective minimum recovery threshold",
+  "diagnostic": "same N2checkpoint fullframe mu/s roll256,320; no training",
+  "finished_utc": "2026-10-11T20:45:20.498110+00:00",
+  "main_inference_complete": 6,
+  "diagnostic_inference_complete": 2,
+  "active_jobs": [],
+  "report": "REPORT.md",
+  "decision": "DECISION.json",
+  "new_structure_training": "NO_EXTENSION_OF_THIS_VERSION"
+}

@@ -1,0 +1,1134 @@
+{
+  "utc": "2026-10-11T12:15:53.873841+00:00",
+  "excludes": [
+    "root ARTIFACT_SHA256.json",
+    "__pycache__"
+  ],
+  "files": [
+    {
+      "path": "COVERAGE_DIAGNOSTIC.json",
+      "bytes": 674,
+      "sha256": "24af073d17c42d27a969690aec83dc2e38d72d9c65ac79a2b9fddeccc2303184"
+    },
+    {
+      "path": "FINAL_VALIDATION.json",
+      "bytes": 10089,
+      "sha256": "3aa05ad26714c3bb56ae319b8f303bbf37f741f407c395f319d4752581fe6ebf"
+    },
+    {
+      "path": "MANIFEST.md",
+      "bytes": 2413,
+      "sha256": "86b8ab449702a33c047f79c38ee02a18de31d4397b76a598f06d7113c4d1f879"
+    },
+    {
+      "path": "ONE_REPLACEMENT_FREEZE.json",
+      "bytes": 177,
+      "sha256": "245d496f25f2e60098b38167c31e3e9939cca5cf78395b1d8def11be6b257450"
+    },
+    {
+      "path": "ONE_REPLACEMENT_PROTOCOL.md",
+      "bytes": 1610,
+      "sha256": "8c60fad05d5ed162eee1ea3750aacf159c00458c8bd45eecc937652fa0a41f6e"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 4164,
+      "sha256": "c56054469d9f1ed219eb0b1df51cc251046b580a25ad875a0e127ad9485519ac"
+    },
+    {
+      "path": "PROTOCOL_FREEZE.json",
+      "bytes": 238,
+      "sha256": "a4c9231bc89c2a8eb18e257feae323e131ba70c9571415a7ad529c1106a3c554"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 12027,
+      "sha256": "a844da9769b434704c02e14ed7b5daa87353bdcbd25754f799202a94fbe76c44"
+    },
+    {
+      "path": "ROUTE_DECISION.md",
+      "bytes": 5560,
+      "sha256": "aaedfe052a19a4e1b71ecf278a2733aa4cfb6791e7b82a9d11686411746946fd"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 996,
+      "sha256": "d29ad1bc427f231c8151ae88d5e3d82e495bb40c9ea4d3d9a690c1369c5a191a"
+    },
+    {
+      "path": "audit/ALL_WINDOW_FAILURE_RESPONSE_BINS.csv",
+      "bytes": 1801,
+      "sha256": "dbf7f015d0ce2ddc8d031fd6bf1fd1a5416762ee79313a4fa2196fafd64bd08d"
+    },
+    {
+      "path": "audit/ALL_WINDOW_FAILURE_RESPONSE_CDF.csv",
+      "bytes": 4588,
+      "sha256": "b0e777ea66aa1f93d14c82c7783b83c565320ca74bbefad5793a0bca27db51ff"
+    },
+    {
+      "path": "audit/ARTIFACT_SHA256.json",
+      "bytes": 1311,
+      "sha256": "c2fa15a473cfd2accdf2ec685b387fbcc23a015475361ef92f0ffc2796cfe721"
+    },
+    {
+      "path": "audit/AUDIT.json",
+      "bytes": 19013,
+      "sha256": "01d616c245c2056c6666a6c67f8b0380e244f89b8eded6c4b0a8c9ac196a5043"
+    },
+    {
+      "path": "audit/CLAIM_REVIEW.json",
+      "bytes": 6158,
+      "sha256": "ff5e2c718e67f297da9a6e3e63a649c885f0cb53256bc4bf2314fe453dbffddf"
+    },
+    {
+      "path": "audit/CLAIM_REVIEW.md",
+      "bytes": 3430,
+      "sha256": "19f03f5ded7003121fcd94e9e2619d40177b615380d3e1dda54d692acdaa0439"
+    },
+    {
+      "path": "audit/FIVE_RAW_TRACE_CHECK.csv",
+      "bytes": 763,
+      "sha256": "690c38034ac527c1e5e7131aabc784f8e497552d55e5b910ddcab2c535625a6b"
+    },
+    {
+      "path": "audit/GROUP_EVENT_COUNTS.csv",
+      "bytes": 247,
+      "sha256": "81b604bc63834e28115828c8c7bd7ed35b9217ef5f6dc5addc42b0c329d3bc22"
+    },
+    {
+      "path": "audit/INDEPENDENT_EVENTS.csv",
+      "bytes": 155923,
+      "sha256": "29cc906cfdfdffc7a8e9244448e186bc8bbc021edfcbb9c455fb13705d0a37f3"
+    },
+    {
+      "path": "audit/INDEPENDENT_OBJECT_JOIN.csv",
+      "bytes": 722260,
+      "sha256": "8f7168b3eecb448663b35ab3fae0e1609ec0eb56acf3a2e17cc92fb644eaac4c"
+    },
+    {
+      "path": "audit/REPORT.md",
+      "bytes": 5605,
+      "sha256": "5859b418488438fd032f24ef7b066e0d117801356e0311270fe9a102099b2797"
+    },
+    {
+      "path": "audit/RUNTIME.json",
+      "bytes": 761,
+      "sha256": "0b776c5bfbe2c997e4ffd9fbe29e42b7a755282e2a81a9bc11550f0f819b5d74"
+    },
+    {
+      "path": "audit/container.log",
+      "bytes": 2157,
+      "sha256": "1d1c8c6b2a678bc6e105140ce93cf427c75229ff886a77870d8775330e014d9d"
+    },
+    {
+      "path": "audit/cross_audit.py",
+      "bytes": 12231,
+      "sha256": "f5c3d9a83222743ed7c5b6d39bfeb7ee6698738f4a5d99971e4c00d372d26dea"
+    },
+    {
+      "path": "audit/review_claims.py",
+      "bytes": 7156,
+      "sha256": "e8e2dce2ed6a96e143c872df1a8342aa53e0a5292cfb383bd197e2ac7cc56ae9"
+    },
+    {
+      "path": "conditions/ALL_VISUAL_SAMPLE_INDEX.csv",
+      "bytes": 5782,
+      "sha256": "edf06f91f7bef2fdef9fe69bc77f8137bf0c23c893e2a0164cf112d6aa4c9099"
+    },
+    {
+      "path": "conditions/ARTIFACT_SHA256.json",
+      "bytes": 2628,
+      "sha256": "7cb8ba8d9a2da8afd774a6e1e4fead984ef37a32502866a4e1cb3e2631e5371c"
+    },
+    {
+      "path": "conditions/CATEGORICAL_CONDITIONS.csv",
+      "bytes": 7796,
+      "sha256": "899c3c237244edca18cacd2992ced2f7e07ded7c129fa99f09f6e1ae2c26740f"
+    },
+    {
+      "path": "conditions/CONDITION_STRATA.csv",
+      "bytes": 10357,
+      "sha256": "7d89810bdbde737b56b59a6bccb261ada1cc84a07efd3d80993fa3b0cd050624"
+    },
+    {
+      "path": "conditions/CONTINUOUS_CONDITIONS.csv",
+      "bytes": 23553,
+      "sha256": "34baff02a37fa344f0de50f8eefaff2ae842da591d6c6bcfb9b0523979f65945"
+    },
+    {
+      "path": "conditions/FAILURE_CONDITIONS.md",
+      "bytes": 12583,
+      "sha256": "02c813e0db847f39eab99bbfc2ba288b969a11da0d7ecef31742c9c05420e657"
+    },
+    {
+      "path": "conditions/GROUP_COUNTS.csv",
+      "bytes": 270,
+      "sha256": "919377e0fafdf7284291db498e260b0a68ddf8ad516e247e2e43dc2a583e4ca8"
+    },
+    {
+      "path": "conditions/INDEPENDENT_AUDIT.json",
+      "bytes": 1404,
+      "sha256": "eb91cf7b825af96cc46c47038361d7421f243ebf0aa862d993a3b7d0e2dd3476"
+    },
+    {
+      "path": "conditions/LATEST_ACCESS_CHANGE.csv",
+      "bytes": 1763,
+      "sha256": "f79b208331d655d49ce9ad48c9d75b7970feea0fd9793f89196510f265cff700"
+    },
+    {
+      "path": "conditions/OBJECT_CONDITIONS.csv",
+      "bytes": 5008682,
+      "sha256": "e9b44c8b9e3267c7e20b65e2979b715d004fc667c6bcc4f34a2f6dfb68fb0107"
+    },
+    {
+      "path": "conditions/OBSERVATION_EVENTS.csv",
+      "bytes": 81460,
+      "sha256": "57a702e2db3ff26b7ee1988a6587abf10b907b0c6f1081fa52cf9c25ead410e1"
+    },
+    {
+      "path": "conditions/RUN_RECORD.json",
+      "bytes": 1163,
+      "sha256": "bca1d657bde9dcaebd3d338ff6de0a73411c7f80d75af3801c5e12003a21ca6b"
+    },
+    {
+      "path": "conditions/SAMPLE_SELECTION.json",
+      "bytes": 12142,
+      "sha256": "a2a793ca78b1fd846d371025b9babe65ea86a5c32f7a44d77ef6e22ccd346516"
+    },
+    {
+      "path": "conditions/SEQUENCE_CONTINUOUS_CONDITIONS.csv",
+      "bytes": 16516,
+      "sha256": "d5b1f1bb3aaf39bf51ad68133049f526a68c0582e3cca435aa3c9ba1d8b73a8d"
+    },
+    {
+      "path": "conditions/STABLE_CONTROLS.csv",
+      "bytes": 32654,
+      "sha256": "792e718a6785d24d1007064735a5cfb62b23702514194bc4688663aa33067e56"
+    },
+    {
+      "path": "conditions/STABLE_CONTROL_PROTOCOL.json",
+      "bytes": 794,
+      "sha256": "8f2910d33ec265813507b3de2c43dfddfc24fa95ea38739feaf69cbf7eeb3414"
+    },
+    {
+      "path": "conditions/STABLE_PAIRED_DIFFERENCES.csv",
+      "bytes": 4043,
+      "sha256": "6eff8e866af1cc05bb3f873230ee339229734797c127fcde353348e1949f1ae1"
+    },
+    {
+      "path": "conditions/SUMMARY.json",
+      "bytes": 5869,
+      "sha256": "5a846e095f865dc9b832779be34a9a563ff8ef5c2da2f830d422492569d5f6cb"
+    },
+    {
+      "path": "conditions/SUPPLEMENTAL_SAMPLE_SELECTION.json",
+      "bytes": 2210,
+      "sha256": "db3a5e16dac3aae299fbb4bf6e0881b36f411335c3cc13a76e63004686f78ac7"
+    },
+    {
+      "path": "conditions/SUPPLEMENTAL_VISUAL_SAMPLE_INDEX.csv",
+      "bytes": 1697,
+      "sha256": "41d2e9baba2818a90d939fbed5bfbb7c53a36fcafb5e8a31cf5d38fe7ff42ba6"
+    },
+    {
+      "path": "conditions/TRACK_CONCENTRATION.json",
+      "bytes": 2802,
+      "sha256": "47726325fc792ab8486413f7b4598eb8949b4b4d30b710483946c50e31d0e5e0"
+    },
+    {
+      "path": "conditions/TRACK_CONDITIONS.csv",
+      "bytes": 19752,
+      "sha256": "e5dc2cbeb98b347238b659661e413bcbccd545f10a9b19a1bfad4e0f8a8facd0"
+    },
+    {
+      "path": "conditions/VISUAL_SAMPLE_INDEX.csv",
+      "bytes": 4338,
+      "sha256": "88837d0ba029d24bb74d10cfd2a394c4530ca11e8eab7129c81c80d2ee30f9fb"
+    },
+    {
+      "path": "conditions/WINDOW_CONDITIONS.csv",
+      "bytes": 3814615,
+      "sha256": "8f387631e28b7219efa06a629cf40548736eaebe0aeba6acbe2d78af6617e5b8"
+    },
+    {
+      "path": "conditions/audit_conditions.py",
+      "bytes": 3627,
+      "sha256": "ab9e3abe8befe5c22348204365b0aee07c783681c55f6ba71064cf7b7891cc75"
+    },
+    {
+      "path": "conditions/build_conditions.py",
+      "bytes": 20239,
+      "sha256": "6480fc1dc33c9179bcbe7af07e7b687ab626e0d99a8033c949cf11a5c292dad8"
+    },
+    {
+      "path": "conditions/summarize_strata.py",
+      "bytes": 4229,
+      "sha256": "862f9a9fd19d06085099239d8bfa983dd6d8ecc3f699a9d7eb19c76b5866fdd7"
+    },
+    {
+      "path": "conditions/supplement_category_samples.py",
+      "bytes": 3027,
+      "sha256": "dc551994a47e7d20f12bfdd3ded1a41f93ea790066a73849e0800dcf0f9c97a7"
+    },
+    {
+      "path": "metrics/ADAPTED_METRIC_PROTOCOL.md",
+      "bytes": 2714,
+      "sha256": "275163a90fc74eafd721205e0950b63dc74706c35f5ff15999c1ba8eb0e45b0b"
+    },
+    {
+      "path": "metrics/ARTIFACT_SHA256.json",
+      "bytes": 2483,
+      "sha256": "2c219b8ee8d162b570ed0030393853189bf1cb616087b4ade23cc85503116269"
+    },
+    {
+      "path": "metrics/COMPONENTS.csv",
+      "bytes": 732929,
+      "sha256": "be476653ccaea677c4d6f2ce35359df4cfe4ad0d793224fe1b5755a45324b0ea"
+    },
+    {
+      "path": "metrics/COMPONENT_AREA_SUMMARY.csv",
+      "bytes": 1891,
+      "sha256": "7010cd50a9a016f4455a5f86e1acd2c9386ada96fd0ded5d847c8f547c6e5308"
+    },
+    {
+      "path": "metrics/FIVE_CASE_FUSION_PROXY.csv",
+      "bytes": 1762,
+      "sha256": "2aa97200a17c2dfc91ba42d1ea98c8bc6b841cd53289261f16fff62227b97b16"
+    },
+    {
+      "path": "metrics/FIVE_CASE_WINDOW_PROXY.csv",
+      "bytes": 907,
+      "sha256": "cf2f3d2ba639dcf7ef64372c003f689758c319d6d0f52194464a6c2ef3227e98"
+    },
+    {
+      "path": "metrics/FRAME_METRICS.csv",
+      "bytes": 57131,
+      "sha256": "8a628f55755a1ee4d214e7ccfc45005906403f90e036773c9e369be38d610fff"
+    },
+    {
+      "path": "metrics/INPUT_LINEAGE_CHECK.json",
+      "bytes": 1776,
+      "sha256": "094b5f76616fa114afa66dd7709013cffe6fc95a26ad958cba0437591eff42c4"
+    },
+    {
+      "path": "metrics/MAX_MONOTONICITY_CHECK.csv",
+      "bytes": 323,
+      "sha256": "c14a22c70efb5dd6c06a3bbd23be095856a80aabf76bc0991babcdd19f975975"
+    },
+    {
+      "path": "metrics/METRIC_AUDIT.md",
+      "bytes": 10320,
+      "sha256": "38d99add2d6bd670b102d37869225cb6d0f0f4eaa8bf00dbe091b1dea0ddd7e5"
+    },
+    {
+      "path": "metrics/OBJECT_METRICS.csv",
+      "bytes": 4676319,
+      "sha256": "aa846aafce78086dc08fc840ba6e54de1a205d2730448a1e6c13b82930dccfc7"
+    },
+    {
+      "path": "metrics/POINT_GROUP_METRIC_EXCHANGES.csv",
+      "bytes": 2856,
+      "sha256": "fec2778fd668f471cff187f0a960a32f8e9ffd1952eec6dba3c7cac99227b92b"
+    },
+    {
+      "path": "metrics/PROTOCOL_FREEZE.json",
+      "bytes": 176,
+      "sha256": "6d9c964cd33d4b268cdb1e42d0675bc9ba92833f387d5adfc8a708c3fbfc6cd6"
+    },
+    {
+      "path": "metrics/RAW_VERIFICATION.json",
+      "bytes": 864,
+      "sha256": "41a2ca23fd3560ce868f231060bffb66c1076e0d59fcc300134fd837d592725f"
+    },
+    {
+      "path": "metrics/RUNTIME.json",
+      "bytes": 871,
+      "sha256": "2e63e59d80c913bf1e938d32ab266d501365e2859242e8642c4d2f4a0c09429b"
+    },
+    {
+      "path": "metrics/SOURCE_AUDIT.json",
+      "bytes": 1554,
+      "sha256": "f652c1e4c3ae8fecd2e6e000f9e6094840fc89640399766fbc047dab5f6e919f"
+    },
+    {
+      "path": "metrics/SUMMARY.json",
+      "bytes": 29074,
+      "sha256": "12e3374af248f1bd00be6f404ee147b9cd816e69ab509c1cb5550ae1471e6248"
+    },
+    {
+      "path": "metrics/TOTALS.csv",
+      "bytes": 1693,
+      "sha256": "5bc48000e22a170d9a0b0fdaa7fb4df1f4d07888a81baf9079051024c804787e"
+    },
+    {
+      "path": "metrics/VERIFY_RUNTIME.json",
+      "bytes": 865,
+      "sha256": "3dc60fc1182698edfcfd8488246cfcf1fdbd96418629b1ecb8b49ec002e75d7a"
+    },
+    {
+      "path": "metrics/compute_metrics.py",
+      "bytes": 13384,
+      "sha256": "b8b92fad16684b31b6a8d5901238cf9c0b607b399203b2565e9597e565346c18"
+    },
+    {
+      "path": "metrics/container.log",
+      "bytes": 460,
+      "sha256": "f5590133cc630b208874913a4ccaa9615a800475b778be60583823e1a4bf7286"
+    },
+    {
+      "path": "metrics/official_remote_ShootingRules.py",
+      "bytes": 2284,
+      "sha256": "888d4a26ff2877dc64550bc919fa60bf18e04e0af795aa8e8c304aa0b1e5c4e2"
+    },
+    {
+      "path": "metrics/official_remote_data_utils_TestDataLoader.py",
+      "bytes": 7160,
+      "sha256": "03210e84ac9acfc3fd85ef5bcd2c787cfc126e2580e622fca9c3297c3e1c022e"
+    },
+    {
+      "path": "metrics/official_remote_test.py",
+      "bytes": 10473,
+      "sha256": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b"
+    },
+    {
+      "path": "metrics/official_remote_write_results.py",
+      "bytes": 5462,
+      "sha256": "47984378234a8f6e1ec3e18d83a50af8b93cce52645f1e04042afe52f04654ef"
+    },
+    {
+      "path": "metrics/verify_container.log",
+      "bytes": 808,
+      "sha256": "c252a6e7a596e7794bc9f0185e4f75278d1e1a2769b971faf23d4813073875a4"
+    },
+    {
+      "path": "metrics/verify_raw.py",
+      "bytes": 4059,
+      "sha256": "16e6182c02aba14cb789083df943573980562d0b561571bd71e6dc09428a0bb7"
+    },
+    {
+      "path": "one_replacement/ARTIFACT_SHA256.json",
+      "bytes": 1354,
+      "sha256": "89ccc1fa68ca0a7b98e27a84853b41d352f4eac8380ca6b71d157bb1afa8a7a0"
+    },
+    {
+      "path": "one_replacement/DJI_0026_2_scores.npz",
+      "bytes": 17043,
+      "sha256": "9736cafd60a97a2e1b9e658f771d90bf74affe4149e00415a067fb3ec965e724"
+    },
+    {
+      "path": "one_replacement/DJI_0067_2_scores.npz",
+      "bytes": 291078,
+      "sha256": "f096ab1b57a17b60befea5c78300894312d8ae375e0d39b1624ee0cf11d66206"
+    },
+    {
+      "path": "one_replacement/INTERMEDIATE_FUSION_TRACE.json",
+      "bytes": 2846,
+      "sha256": "375be68c23e508532aae511db9f7f7a868c1d5379ed919817c89f93801ec5d26"
+    },
+    {
+      "path": "one_replacement/METRICS.csv",
+      "bytes": 1394,
+      "sha256": "bb73cb90fcfa70af7997eb264ce9db5ab265700789681e1c8a49a25702b8a613"
+    },
+    {
+      "path": "one_replacement/OBJECTS.csv",
+      "bytes": 3686158,
+      "sha256": "d4077b32333c29f83e86fc2d2737a0cb7725444e83f6491e4c1cf47c5950ba14"
+    },
+    {
+      "path": "one_replacement/REPORT.md",
+      "bytes": 4526,
+      "sha256": "0a3ae3003679904601dc661ea62cdb4f92e97d1765e8a9fe3842f4d581b6dff2"
+    },
+    {
+      "path": "one_replacement/RUNTIME.json",
+      "bytes": 932,
+      "sha256": "1061b09e68d5fdb5833f3a10beff8fe3bbe0f6a50ce5d223afefdff02d49eec6"
+    },
+    {
+      "path": "one_replacement/STEP_CHANGES.csv",
+      "bytes": 13435,
+      "sha256": "4cfc4341f34acd0b3bbe537345c2a9a00b145204da29dcc043d2b151c13368c9"
+    },
+    {
+      "path": "one_replacement/SUMMARY.json",
+      "bytes": 15655,
+      "sha256": "726909c186af2099c750ca69a1fe67a2824d8caf452ecc21cd73c10c794f3e37"
+    },
+    {
+      "path": "one_replacement/TABLE_CHECK.json",
+      "bytes": 121,
+      "sha256": "50f7fb0fc8e98fb64073bfc2fbc78bb14b19aadd9279a4e9d34c5952ab78d9f7"
+    },
+    {
+      "path": "one_replacement/TRACE_RUNTIME.json",
+      "bytes": 827,
+      "sha256": "27674b128474369d36bd44e7da7143176df825416249cb9fe6c2ca669af21856"
+    },
+    {
+      "path": "one_replacement/container.log",
+      "bytes": 14381,
+      "sha256": "4cf6f886da9f4c64382ecc685d339848969ba2e881375eb730901efa08449367"
+    },
+    {
+      "path": "one_replacement/score_replacements.py",
+      "bytes": 8537,
+      "sha256": "7fa01c8bab8871db8528a0514121507716227aea21c2acdc20e6af99ad36c937"
+    },
+    {
+      "path": "one_replacement/trace.log",
+      "bytes": 2488,
+      "sha256": "ebeb66c0379601128eee86798c3ad5a89972b5027a9040fa3c43f9910058d84c"
+    },
+    {
+      "path": "one_replacement/trace_intermediate.py",
+      "bytes": 2271,
+      "sha256": "a1e126e598fd6d3768dfdd0811ecc4601f8e9c31336b18daeff5388c049fd4a4"
+    },
+    {
+      "path": "stages/ARTIFACT_SHA256.json",
+      "bytes": 3749,
+      "sha256": "d429e6e0d8db6a78a8c9f4eec4f8e58d746227684aa14f36a557e67e250f2ed5"
+    },
+    {
+      "path": "stages/COMPONENT_MAPPING.csv",
+      "bytes": 26952,
+      "sha256": "32610a5a2e0412bec5fd2f7d3a5a8267a1af3dcb8bfead7777833d3332b49aab"
+    },
+    {
+      "path": "stages/ERROR_STAGE_TABLE.csv",
+      "bytes": 2729490,
+      "sha256": "b6bf0a3685888016e55c8661bb7d2df0f8fc8ebcd9e35ce63b917b3428cad24b"
+    },
+    {
+      "path": "stages/FOCUS_COMPONENTS.csv",
+      "bytes": 27278,
+      "sha256": "7f5a4850294784877439b5169a6fa786e7aa039cb0ab82ed3ba9fa097c7428e8"
+    },
+    {
+      "path": "stages/FRAME_COUNTS.csv",
+      "bytes": 36324,
+      "sha256": "d2e74bc33ff49b384bb58ac412fdc07b8ac8393a3a7279376ccfbffef63c94ec"
+    },
+    {
+      "path": "stages/FUSION_LOSSES.csv",
+      "bytes": 5767,
+      "sha256": "98cf4d53bb29cfcce44e7119df9323479e870f6c4b214eb665bca0da6100b282"
+    },
+    {
+      "path": "stages/OBSERVATION_EVENTS.csv",
+      "bytes": 187060,
+      "sha256": "7bbdc9aa779e3640e6d76b863a2b6febed28b3e17640da63b818d24f55e1c35c"
+    },
+    {
+      "path": "stages/REPORT.md",
+      "bytes": 8168,
+      "sha256": "1aba504cabbbaace286e1cbb7cf011005b221b31f2d3ca2538674e1df1cbd661"
+    },
+    {
+      "path": "stages/RUNTIME.json",
+      "bytes": 2956,
+      "sha256": "f87a198a1b7a01ba3238eef7279586af47c8b8a4d34c98a9f2025cf2c009ebff"
+    },
+    {
+      "path": "stages/SUMMARY.json",
+      "bytes": 12468,
+      "sha256": "11331ad39d9af81a0fe9c4f2d4952b75e5d02babe9fe699e8ebe706b2f6d7177"
+    },
+    {
+      "path": "stages/VERIFICATION.json",
+      "bytes": 1829,
+      "sha256": "1cbd0a16116e76558459abe30586b8fad735013334d64957b6c7b30fdfa85c99"
+    },
+    {
+      "path": "stages/WINDOW_ACCESS.csv",
+      "bytes": 2151930,
+      "sha256": "ef29221de84101c66c62f729e0ca1172d75dd5a18b83b2108beeac16c5aef44f"
+    },
+    {
+      "path": "stages/attribute_stages.py",
+      "bytes": 16958,
+      "sha256": "cf0be078028ab139f4dd743ce78411c2c8f5a3dbcab1905ef2b3204e2d8ce9f8"
+    },
+    {
+      "path": "stages/deeppro_failure_stage_audit_20261011.log",
+      "bytes": 11882,
+      "sha256": "81080b3d84a24171b9bba2b5e2b8665bb8b24dd3d3c2e7e78e282e614016e016"
+    },
+    {
+      "path": "stages/deeppro_failure_stage_figures_20261011.log",
+      "bytes": 3147,
+      "sha256": "b11e13272f997e08614deba1f689edc641c8ebdce224045210ddb93ef117fd5c"
+    },
+    {
+      "path": "stages/deeppro_failure_stage_verification_20261011.log",
+      "bytes": 1401,
+      "sha256": "05d35beba156d35ecde621b59d4af2564bc6e8f8b1536922096e8ad13f2352e0"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0026_2_frame_147_track_400005.pdf",
+      "bytes": 26612,
+      "sha256": "e862a1c31cae93cf352ef8e188321e956140d3fcdad83d622050c8258631f895"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0026_2_frame_147_track_400005.png",
+      "bytes": 109836,
+      "sha256": "19d046d4af06a0588a4b2c557983869cd57f8b41b81c9e495b40b517731d39f0"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0026_2_frame_147_track_400005_crop.npz",
+      "bytes": 11012,
+      "sha256": "da3cb782b1835ba4f47f80428c759d6c40cc232a4a946ca3d24709f48c0c65db"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_142_track_7701917.pdf",
+      "bytes": 28645,
+      "sha256": "8e1800d02626738302c35a08c9ca3e045289f1ffb8194871b3325aed299caf35"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_142_track_7701917.png",
+      "bytes": 123142,
+      "sha256": "ccb8e6397c6bf5a1b68aeb66f792db4a5aa6be35c77c86283c270472660b10c7"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_142_track_7701917_crop.npz",
+      "bytes": 11392,
+      "sha256": "044072ab55c9832de0aeb5bef3985b7b54b0b0ce595a0ab9c3f0445c23e93941"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_144_track_7701917.pdf",
+      "bytes": 29319,
+      "sha256": "84d1f0195d2107fb977a14cbaa2bf02e31fe4556189483780e2010a59f3524b9"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_144_track_7701917.png",
+      "bytes": 124525,
+      "sha256": "3d0ad9598f679dbcbdc3f2e4b38a24642cac4ca558bb23dd1dd6eee03ee27044"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_144_track_7701917_crop.npz",
+      "bytes": 10989,
+      "sha256": "20dbaf9a2cb61e769d469e5072852f728bcb65efed6d75fc0b1b66fa20dd9bfe"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_74_track_7701908.pdf",
+      "bytes": 28773,
+      "sha256": "41f1c6f88e7aabf3ecde5aeaa784d267f373e479c09bbf10e900ca02495e559f"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_74_track_7701908.png",
+      "bytes": 118375,
+      "sha256": "251d4f2a3401be638931c65cc3ce760951a0beb5b488e0dc44c5857736f9adda"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_74_track_7701908_crop.npz",
+      "bytes": 12555,
+      "sha256": "9eaec8958010f196370bfce701ff036a013fe4f029aed014e2aa6dbc8ff97a7c"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_75_track_7701908.pdf",
+      "bytes": 28757,
+      "sha256": "e28acd4aed3630bc330b1a2a01227a9093f470eb0719f9aa41fa83dd364a34ca"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_75_track_7701908.png",
+      "bytes": 117746,
+      "sha256": "ee271e37cd0b557c30efec1f2eab629f8ef1bdad818399588434f547483fb2b3"
+    },
+    {
+      "path": "stages/fusion_trace_figures/DJI_0067_2_frame_75_track_7701908_crop.npz",
+      "bytes": 12585,
+      "sha256": "be3e4abdffb073f1954147285eaa9b04bc9b5820779faa287575a0e0b70a4f77"
+    },
+    {
+      "path": "stages/fusion_trace_figures/MANIFEST.json",
+      "bytes": 4268,
+      "sha256": "c3da38e53086676468e24fbe2aa6027a313b27de2e974da85fca9d9213a6c4d1"
+    },
+    {
+      "path": "stages/plot_fusion_traces.py",
+      "bytes": 4193,
+      "sha256": "ed37cd77de494a25226e82c73b681b8df756e3b0d6e49f4e2f659fcef87d9889"
+    },
+    {
+      "path": "stages/verify_stages.py",
+      "bytes": 3696,
+      "sha256": "c7cbc38b1ae24abe2b34f70a1b762ea8a21aac4bb4d9d6e48027f8e853bf79fc"
+    },
+    {
+      "path": "verify_delivery.py",
+      "bytes": 4720,
+      "sha256": "f36f97a617ddca799863289829205758dd0abc34a0eb7a63a64673465278c80a"
+    },
+    {
+      "path": "visuals/ALL_FAILURE_FIGURES.json",
+      "bytes": 1338,
+      "sha256": "a11fc742b1c5045ed098a95bae682cdefdc017eea28b3ee14142fb194aba25e0"
+    },
+    {
+      "path": "visuals/ALL_FAILURE_REVIEW.csv",
+      "bytes": 19295,
+      "sha256": "815535a906b09084e1734abfbafb76e106e7465387f4594224cea4c4e3fb6476"
+    },
+    {
+      "path": "visuals/ALL_FAILURE_REVIEW.md",
+      "bytes": 7523,
+      "sha256": "c51b4069628e2ad984fa5ed61062dd04c53e7fb7068af63a0eb3d531a1cadc24"
+    },
+    {
+      "path": "visuals/ALL_FAILURE_REVIEW_RECORD.json",
+      "bytes": 8505,
+      "sha256": "0eef3dc43796e6425524df645e90514dcafce588f65da57d90efd1fec4e7ff52"
+    },
+    {
+      "path": "visuals/ALL_FAILURE_REVIEW_VALIDATION.json",
+      "bytes": 638,
+      "sha256": "4b073e4a1bda50dc2709d64487cd6ab8aa4de7fc8d7cccf87be5bcfc838ae1c8"
+    },
+    {
+      "path": "visuals/DJI_0026_2_all_transitions_01.png",
+      "bytes": 65798,
+      "sha256": "c9be4086aeffef5b3f571f38ea283aa96e8d965d54d168d18e944e25fd08ffaf"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400005_frame147_ann805870.png",
+      "bytes": 134018,
+      "sha256": "82e460191ac5ef9301154f17896484fc536111bf5003c51ade8c6e125697f668"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400006_frame072_ann805208.png",
+      "bytes": 129237,
+      "sha256": "8720482c74ca6b4b27dbd2bd127c4fde7b24b85d0ffb5cb56b52bb702a4e1c1f"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400007_frame058_ann805083.png",
+      "bytes": 126300,
+      "sha256": "00077fcaad0eeaf354708e6c9ab3225f79353855fa4c415ec146afa5d7f217a4"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400008_frame080_ann805282.png",
+      "bytes": 137451,
+      "sha256": "d80e9563a7f6c52d1168afd3071ba4339685d48142d0291298d89f797ffc9ba1"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400008_frame082_ann805300.png",
+      "bytes": 141281,
+      "sha256": "7b87fffe03f2a9bad43dca2d3764064068c9b673988a4bd1bc2e34ad8a9c9b1d"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400008_frame090_ann805372.png",
+      "bytes": 145106,
+      "sha256": "fc0374a13a941cf23ae9bad9d57c9333a1bf84da667eae28f001ffe5794033b7"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400008_frame098_ann805444.png",
+      "bytes": 136182,
+      "sha256": "4e35a7b620e9d340f7a953cf28fb1b3aac69abb7a8f7b07ff358854131fc381c"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track400008_frame127_ann805705.png",
+      "bytes": 139333,
+      "sha256": "48495d4528f85b9f2cfd446b2e97cc3c6e58e4aee33924193b040baf1754e9be"
+    },
+    {
+      "path": "visuals/DJI_0026_2_track520005_frame156_ann805940.png",
+      "bytes": 132855,
+      "sha256": "202a6d9f5f0df32e89978974b452b774a9090c42796aa2e314830f5f6a7090d4"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_01.png",
+      "bytes": 165092,
+      "sha256": "97a8d32e6ec84b6092e5568fa8b87abc0fda7e01b96a598c21afe2dceacbeb8a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_02.png",
+      "bytes": 160571,
+      "sha256": "75e4d3671801312bbfaad3e476dd06728662b39f7cc7706e335fd311cc4964a4"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_03.png",
+      "bytes": 166485,
+      "sha256": "b28095f31231867beda273e6d166507192973fa40201ef5664d6e02f74b05949"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_04.png",
+      "bytes": 154176,
+      "sha256": "9f47196c6b21821b8fab81c409eb9fd7376bb2398d7d4fcd20280e2329e49c92"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_05.png",
+      "bytes": 165739,
+      "sha256": "fab867ccfbb376fc34fd496466cf76aef4c9b668fa8a49520a773feb78d0c31f"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_06.png",
+      "bytes": 166328,
+      "sha256": "5ae1d3d248bd324de0432939ffd3b5c989068e53ff0600f28b4cd53e453c9ab1"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_07.png",
+      "bytes": 164525,
+      "sha256": "ca788b27d975f38f8be9b02df1aabde22414076f7567a2bf001b94d19ffd16f2"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_08.png",
+      "bytes": 162320,
+      "sha256": "ff5f7b663a441d75b8fdd7eb20a79cd433804b6cd16d40d3cc478c990155079a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_09.png",
+      "bytes": 158287,
+      "sha256": "9953b1167252e1c57a5c4deb895fee25f879df7acf1494a0db6a33d5fb831a64"
+    },
+    {
+      "path": "visuals/DJI_0067_2_all_transitions_10.png",
+      "bytes": 139022,
+      "sha256": "ea1c2c59de27318c7a4e74dd3ec7d4610a388096a3a04971dec6c8e4941f2ccf"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700051_frame080_ann874661.png",
+      "bytes": 140322,
+      "sha256": "7b3f2f56ee6d38b9db191539e99e3d4945f5d4bcccf2a3e5b5acd88abd4995d2"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700052_frame080_ann874662.png",
+      "bytes": 145286,
+      "sha256": "039de29486865bfef4e335ed9e573201d1ab95f0f31092b7dcb498a5ebe00ce7"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700054_frame080_ann874664.png",
+      "bytes": 138430,
+      "sha256": "2df068acb5534c7c28cdecefeed14a639f27eabc9ed9bb3828d4305de2bae51e"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700055_frame080_ann874665.png",
+      "bytes": 133141,
+      "sha256": "0997a7e90c4d0941bc922235ce4ea3a2a624894df645da2973df60419a272ef1"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700501_frame001_ann867462.png",
+      "bytes": 153819,
+      "sha256": "740d5b749a13a349fd0c0c2622da725149291a8deeac406e2ff444ba776a2eba"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700508_frame131_ann879552.png",
+      "bytes": 167532,
+      "sha256": "25da45b69ec4c080902a2f090129fdc40760386251d4c5026d0eb3f7062316a9"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700511_frame091_ann875688.png",
+      "bytes": 157962,
+      "sha256": "f9133b6f38c5d48e9f68a28974e38402039c82a7bd78d735938a9c39da9a0c13"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700514_frame043_ann871238.png",
+      "bytes": 169118,
+      "sha256": "151dce2d080b2edf906e6efe94922c68ac5c1b444bc7906f3e8746bc888a2c3a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700514_frame045_ann871417.png",
+      "bytes": 170809,
+      "sha256": "65214cd850ab015c0a8b5876046fba9eb2237354acbe598a19ac3e0a79f33d6e"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700514_frame055_ann872312.png",
+      "bytes": 166718,
+      "sha256": "96a4d8a2dc23a4a95a38ac8f3dff4eadd17fcfb5a957883c63101de37645e5c4"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700519_frame003_ann867655.png",
+      "bytes": 160491,
+      "sha256": "f2725dddec49e5549471ae7f545e07b18cc5468f5ee5637968deb7eedf220c0a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700521_frame037_ann870703.png",
+      "bytes": 176839,
+      "sha256": "63f4ac8fac4b9f152a31eeca14cb6eb0368a2a78c36e04bf0e9bc4525343aede"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700525_frame037_ann870705.png",
+      "bytes": 167486,
+      "sha256": "30f58848a1f21fb54bf22ae28518273de34fbe28bf9f5e37d8d404edc240b805"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700525_frame055_ann872319.png",
+      "bytes": 161542,
+      "sha256": "45ff36f1b75828006939a51cebac2856700eda765e922f712d723d2dd9733878"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700526_frame046_ann871515.png",
+      "bytes": 177722,
+      "sha256": "1c30b3fd071fe9d58533b4a1e09caa682e69ccba0ae854038d6b58e9bce93ea5"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700526_frame063_ann873054.png",
+      "bytes": 178345,
+      "sha256": "00e08c89b609fcca677b79f044603eec6b40e1a008b6b9d860a314451c0b2569"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700533_frame088_ann875413.png",
+      "bytes": 150200,
+      "sha256": "d01f1e79ee0874816b7573f86664d7584b0e5228b6c5aca5d85e328c3b87206d"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700539_frame117_ann878221.png",
+      "bytes": 169252,
+      "sha256": "5e9c18ed94e88f9458b9fa3fec7f94fe6a5838d2be51229b5682dc34f0f02e17"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700539_frame132_ann879661.png",
+      "bytes": 181879,
+      "sha256": "8c767c4d80f6bbbb97899f22e2597a903d93dc8d0e23ad8f0dc156af401340fb"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700542_frame117_ann878224.png",
+      "bytes": 170469,
+      "sha256": "80dab9b1e8e8a29e69505ad0bdb558c5332a64936f3268b84fbd707accb7a380"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700542_frame132_ann879664.png",
+      "bytes": 168669,
+      "sha256": "6ecd48a4f32ee52adfc82ac677a43b395a353e091c4cb0bd16968876976d2b93"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700545_frame102_ann876779.png",
+      "bytes": 155389,
+      "sha256": "0281f6c648416e5072d7afabe2fa3b7152ca61415768f78a393980cee18b6905"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7700546_frame135_ann879951.png",
+      "bytes": 166385,
+      "sha256": "cb763297a685be3d4ada1332bb018f9bdb2d8ecde7bef70153b655536065388b"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701069_frame091_ann875774.png",
+      "bytes": 158592,
+      "sha256": "4d5ba475b34421452ebea349a2fb8080824981f7d3ccd87c8fec62e929a29c77"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701071_frame110_ann877555.png",
+      "bytes": 168948,
+      "sha256": "17b1e45b91c0eb69751bd672805ca4006d07e6d43fe59813854f248e4d64413a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701510_frame098_ann876372.png",
+      "bytes": 132773,
+      "sha256": "31caa06f970908f74bb209cfedafe324b721ace92522dd310e51cf8aa35d967a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701568_frame021_ann869314.png",
+      "bytes": 171387,
+      "sha256": "e78b2e32b8d6b40485471e85f5fa1062fe6cafe35ca83321e0ad5fc5661f3772"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701616_frame106_ann877175.png",
+      "bytes": 160222,
+      "sha256": "bb88ce6e9e169a0388897f2455386f43d082fab306f89bac82fbeaaff542c672"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701617_frame141_ann880579.png",
+      "bytes": 159481,
+      "sha256": "1dc71279834552d5f8d6fdc202f233c54bbc5e6b41b3c3c48ad011cb6955a4c4"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701625_frame113_ann877852.png",
+      "bytes": 173858,
+      "sha256": "dab0069f257894facd477b12290b3fe2ccecd6b4162ff76ff491bb863f32a396"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701898_frame060_ann872811.png",
+      "bytes": 185815,
+      "sha256": "dcc3d5bf06bbcf2fcaf93eeb8cc8c146af72fa8d2b4938d92ba58a84cbae19ea"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701898_frame106_ann877188.png",
+      "bytes": 176776,
+      "sha256": "638d66b68bb134817acc8d71c7d761e98b9212bf528fca586e753f866e19b613"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701902_frame107_ann877286.png",
+      "bytes": 159615,
+      "sha256": "994c2170f4dc5cd756e2c5db7e370be6fcb564547bf93d5fa7e19d1bebcb6233"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701908_frame032_ann870288.png",
+      "bytes": 164090,
+      "sha256": "655dd94de4142fef995604b2b76bc17b8306572a02db0b181ea0cf1ac08903b1"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701908_frame053_ann872174.png",
+      "bytes": 164369,
+      "sha256": "36f34a85b2be07fdc7e7ac637bf7a1963a0adb27312229870c5a570e07bd31d3"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701908_frame064_ann873182.png",
+      "bytes": 174050,
+      "sha256": "2220470003d734abfc8450ac2eb6a1653a8a9179f06d5859209466df31d547e2"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701908_frame074_ann874123.png",
+      "bytes": 170846,
+      "sha256": "50b536f0fe4b3782893989308775bfb02dd2b824af04db5ee149efa8066dcf8e"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701908_frame075_ann874218.png",
+      "bytes": 168665,
+      "sha256": "a15b05642e783f206e19d162b3f52f1e113e3eab028d6d04c1257262e03a51f2"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701917_frame087_ann875356.png",
+      "bytes": 164794,
+      "sha256": "4cf8ff536715697896f2dfaf2f3a26f028f96204fd8faaa2294a3c8dd3e9233d"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701917_frame142_ann880643.png",
+      "bytes": 165502,
+      "sha256": "ba4d5c3a0b8558b9422f1707ca6ef44d7401cb704bbf5ce2fe184b86138bebf6"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701917_frame144_ann880830.png",
+      "bytes": 169978,
+      "sha256": "da57efc15dbc3569a311710d72d1e36ac17fe200d7b57f4bf8b7d5915a73deaf"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7701931_frame086_ann875295.png",
+      "bytes": 168333,
+      "sha256": "d5cf1a214a7e04f72f76b5eb7c58d3e47458c253f3308478187e1b07bdd839a9"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702001_frame072_ann873946.png",
+      "bytes": 169445,
+      "sha256": "028b25407520cf4c6d84c2045ba79fabbb6f365150208d2a3462f8b89d18b530"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702001_frame112_ann877781.png",
+      "bytes": 163074,
+      "sha256": "bd35d13a79850e077be28e24bf800c916677961aba1ce38a9e521b2dbd05240f"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702006_frame114_ann877979.png",
+      "bytes": 173184,
+      "sha256": "978b8eb8627a9f7915da42acef1e1386c2720fd8db60a118cfe3734add0a2acc"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702010_frame120_ann878582.png",
+      "bytes": 171838,
+      "sha256": "893099da091d9aeed32c0c2948547c0b70a154f8ea0af890acd431a26d41be41"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702011_frame052_ann872101.png",
+      "bytes": 185435,
+      "sha256": "01e784867cd11da7419860fa43de03e9e554386d6ab238323500118080984c5a"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702011_frame067_ann873480.png",
+      "bytes": 165942,
+      "sha256": "c32e3b2cb37671786a504a305faf01db859afad04332e71248d0dacdbc837f83"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702012_frame109_ann877498.png",
+      "bytes": 174205,
+      "sha256": "94293a222d9a462d2b220995ec69f846ee49c6c8fb1a7e6ac280b3a7cd0fa292"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702014_frame095_ann876153.png",
+      "bytes": 166710,
+      "sha256": "258b1bf99339e168154410d186a44cb0d5707f9d2d4a7f51f1dd913e9ce182c8"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702014_frame104_ann877021.png",
+      "bytes": 162140,
+      "sha256": "7330cfa69fbff8ee41f467927322694949ddf67bc54eb50377847e1c440dc4ca"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702017_frame034_ann870490.png",
+      "bytes": 168386,
+      "sha256": "25703bb4da35f32eec37c925d352905b87dfeae3095320d771a1eecfa5c42b20"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702017_frame035_ann870580.png",
+      "bytes": 172334,
+      "sha256": "1042ade4ed6ad50ef4d0739cfb649c82aabf44b71c29addad857817e9e3f7cb1"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702017_frame078_ann874523.png",
+      "bytes": 172700,
+      "sha256": "f0ff3273173987dd3521e3d18a174ab407d744bf5015f413759fe21a0d17b528"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702522_frame094_ann876060.png",
+      "bytes": 175498,
+      "sha256": "b65a0b42fa0a04728975fe645e5388008dc2d33c52e87f59972ad8a36fc86f08"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7702522_frame121_ann878675.png",
+      "bytes": 158654,
+      "sha256": "f803e9643e2e81908cb728a3a2d1e455a101e273aa20d1aa1b784d1e22ac2d1f"
+    },
+    {
+      "path": "visuals/DJI_0067_2_track7821902_frame106_ann877190.png",
+      "bytes": 145439,
+      "sha256": "5cb06f0ae26ab23b42b54678d085222ae4d303601de940c2f43fa75b4e690650"
+    },
+    {
+      "path": "visuals/EXCHANGE_VISUAL_REVIEW.csv",
+      "bytes": 26528,
+      "sha256": "9b8d6dd765f23c0618610b2883d32eb59fe38f64146e761c3147a37c920066e1"
+    },
+    {
+      "path": "visuals/EXTRA_FIGURES.json",
+      "bytes": 689,
+      "sha256": "5657b5854d2600c718d8a33047188335b3bfee6282e8bfbf1519c885570d44f0"
+    },
+    {
+      "path": "visuals/FIGURES.json",
+      "bytes": 3236,
+      "sha256": "8b7260929ff4ba3a0d40cb0a8a3d46e4b94d18fdfbb16c15ff17cf4e34c4b030"
+    },
+    {
+      "path": "visuals/ROOT_EXCHANGE_REVIEW.md",
+      "bytes": 2734,
+      "sha256": "9d7cc84220ac97b16190fcf3afcf833c84ee13ac9f110c7a0edf85b30d6dc77c"
+    },
+    {
+      "path": "visuals/ROOT_VISUAL_REVIEW.json",
+      "bytes": 1693,
+      "sha256": "29cb1e01866a7999c0eb054510362f3a4fe726f569ac98a38d62d8a9e361b2d9"
+    },
+    {
+      "path": "visuals/SELECTION.json",
+      "bytes": 215653,
+      "sha256": "1e1f54126e2658d22fcf814c52039964fdc8f2f35dfc40f52bdc0718ab6619ce"
+    },
+    {
+      "path": "visuals/STABLE_REFERENCE_REVIEW.csv",
+      "bytes": 2148,
+      "sha256": "f4ef930a530be85194c35163c84cc85a8e9f520fae4c4fba3d7baf1ef5153af9"
+    },
+    {
+      "path": "visuals/STABLE_VISUAL_SELECTION.csv",
+      "bytes": 354,
+      "sha256": "bfb9a8b921aa384f90040a60404cf62c481299281e912452c6964302eeef0b23"
+    },
+    {
+      "path": "visuals/STABLE_VISUAL_SELECTION.json",
+      "bytes": 1394,
+      "sha256": "cd1108687f9960eb2a8bfc238fc2da260193806afe791830cf8ffcf28e1ff06e"
+    },
+    {
+      "path": "visuals/build_visuals.py",
+      "bytes": 9349,
+      "sha256": "a27c58a2ed06e657b8b2949dac8824f318aec6a72a413985bcbe83ae72f2abb4"
+    },
+    {
+      "path": "visuals/index.html",
+      "bytes": 15057,
+      "sha256": "8486eb79801ddcc5ead15c4f861e31ffce57bfded23db378dceced5e9ec07e27"
+    },
+    {
+      "path": "visuals/write_all_failure_review.py",
+      "bytes": 11073,
+      "sha256": "fc4bc8e35f3a4406d4cccb3f503eb1b56b9f6d19f907958f71cc817dbea69e2d"
+    }
+  ]
+}

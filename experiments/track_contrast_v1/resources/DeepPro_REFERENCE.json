@@ -1,0 +1,16 @@
+{
+  "name": "DeepPro",
+  "repository": "https://github.com/TinaLRJ/DeepPro",
+  "requested_raw_url": "https://raw.githubusercontent.com/TinaLRJ/DeepPro/main/networks/models/DeepPro-Plus.py",
+  "commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "commit_url": "https://github.com/TinaLRJ/DeepPro/commit/8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "local_source": "DeepPro_source.py",
+  "source_path": "networks/models/DeepPro-Plus.py",
+  "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "git_blob_sha1": "df176c869927d52dab2477357ebd0ca8972a202c",
+  "pinned_blob_verified": true,
+  "README.md": {
+    "local_file": "DeepPro_README.md",
+    "sha256": "58505f280be693b75bd2a125299ee1349e349f4db688f5da0fa7aa13d1d42150"
+  }
+}

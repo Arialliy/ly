@@ -1,0 +1,47 @@
+{
+  "figure": "training_diagnostics",
+  "source_files": [
+    {
+      "path": "results/tlfp_pilot_20261012/training/S/run/TRAIN.jsonl",
+      "sha256": "a676c8fe88d3d5d4bb6af0eeab78b9d9abe710350299aca3b408257dff4f5a9e"
+    },
+    {
+      "path": "results/tlfp_pilot_20261012/training/S/run/RUN.json",
+      "sha256": "ee2178176f488d34e9310deeae89db2b19be0168d3120692e0d17e6ab30c54d2"
+    },
+    {
+      "path": "results/tlfp_pilot_20261012/training/T/run/TRAIN.jsonl",
+      "sha256": "4df8d58446665ae7bc7e245fbcbea3d284e8835d565f47af46ae5ff447a9d742"
+    },
+    {
+      "path": "results/tlfp_pilot_20261012/training/T/run/RUN.json",
+      "sha256": "b97da2ab4b27b9c8219c17bcde41c79c680780bb35fbe7b3dd62208e37757a26"
+    }
+  ],
+  "script": {
+    "path": "visualizations/scripts/training_diagnostics.py",
+    "sha256": "8976f37a414280459119b21df4c10269a4f0cd1c2e1030b7ed32f5faf8bc807f"
+  },
+  "shared_script": {
+    "path": "visualizations/scripts/plot_common.py",
+    "sha256": "6f373ec98011d4c6349958cf66a2dee85f0a6475850d309f48209d7dfc89069b"
+  },
+  "outputs": [
+    "training_diagnostics.png",
+    "training_diagnostics.pdf"
+  ],
+  "raster_dpi": 300,
+  "pdf_vector_text_and_geometry": true,
+  "seed": 46,
+  "optimizer_updates_per_run": 512,
+  "telemetry_samples_per_run": {
+    "S": 34,
+    "T": 34
+  },
+  "x_definition": "logged step minus one; forward and module states are BEFORE that optimizer update",
+  "x_max_in_telemetry": 511,
+  "final512_checkpoint_state_is_not_plotted_as_telemetry": true,
+  "line_segments_connect_recorded_samples_no_smoothing_or_interpolation_of_unrecorded_states": true,
+  "gate_saturation_definition": "fraction with spatial sigmoid gate <0.01 or >0.99",
+  "not_detection_performance_or_causal_evidence": true
+}

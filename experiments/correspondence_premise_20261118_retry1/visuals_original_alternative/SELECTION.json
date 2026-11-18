@@ -1,0 +1,80 @@
+{
+  "seed": 46,
+  "rng": "Python random.Random.sample",
+  "population": 772,
+  "sort_key": "sample_id",
+  "random_count": 3,
+  "targeted_rule": "first competition[0.05]=true with lk_path_good_tol2=false/true, scope all then each dev",
+  "targeted_scopes": [
+    "all",
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "deduplicated": true,
+  "limit": 12,
+  "selected_ids": [
+    78,
+    409,
+    40,
+    340,
+    386,
+    635,
+    680
+  ],
+  "checks": [
+    {
+      "criterion": "all_first_competition_klt_failure",
+      "sample_id": 340
+    },
+    {
+      "criterion": "all_first_competition_klt_success",
+      "sample_id": 386
+    },
+    {
+      "criterion": "DJI_0026_2_first_competition_klt_failure",
+      "sample_id": null
+    },
+    {
+      "criterion": "DJI_0026_2_first_competition_klt_success",
+      "sample_id": null
+    },
+    {
+      "criterion": "DJI_0067_2_first_competition_klt_failure",
+      "sample_id": 635
+    },
+    {
+      "criterion": "DJI_0067_2_first_competition_klt_success",
+      "sample_id": 680
+    }
+  ],
+  "reasons": {
+    "78": [
+      "seed46_uniform_sample_without_replacement"
+    ],
+    "409": [
+      "seed46_uniform_sample_without_replacement"
+    ],
+    "40": [
+      "seed46_uniform_sample_without_replacement"
+    ],
+    "340": [
+      "all_first_competition_klt_failure"
+    ],
+    "386": [
+      "all_first_competition_klt_success"
+    ],
+    "635": [
+      "DJI_0067_2_first_competition_klt_failure"
+    ],
+    "680": [
+      "DJI_0067_2_first_competition_klt_success"
+    ]
+  },
+  "prevalence_use": false,
+  "source_hashes": {
+    "SAMPLES.jsonl": "fb137c842b697498f8fdfe9cb62662431372feaf1b69d4aed730b4418ee7589b",
+    "RESULTS.json": "13a4d19774007ebe56b285d5fe08ac5c4d0a1c383e46373fdcd8d3927852e404",
+    "visualize.py": "03625167222c0c4eb5306c7a2f5239d79b1c614aecdc920760b04ab0e4925ab2"
+  },
+  "confirmation_loaded": false
+}

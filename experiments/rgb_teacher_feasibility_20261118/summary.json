@@ -1,0 +1,125 @@
+{
+  "frames": "0 through 159, matched by numeric filename and thermal annotation frame_id/mot_frame_id",
+  "time_evidence": "Index pairing only. Camera timestamps and synchronization error were not measured.",
+  "track_unit": "Distinct thermal track_id within source. Each usable row has a distinct (track_id, image_id).",
+  "sources": [
+    {
+      "source": "DJI_0043_2",
+      "role": "train",
+      "stage_split": "train",
+      "paired_numeric_indices": 160,
+      "decoded_specs": {
+        "00": {
+          "640x512 RGB": 160
+        },
+        "01": {
+          "640x512 L": 160
+        }
+      },
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 11664,
+      "ir_pedestrian_ignored_or_crowd": 0,
+      "ir_pedestrian_tracks": 92,
+      "ir_frames_with_pedestrian": 160,
+      "ir_pedestrian_boxes_area_lt_256_px2": 11664
+    },
+    {
+      "source": "DJI_0057_1",
+      "role": "train",
+      "stage_split": "train",
+      "paired_numeric_indices": 160,
+      "decoded_specs": {
+        "00": {
+          "640x512 RGB": 160
+        },
+        "01": {
+          "640x512 L": 160
+        }
+      },
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 320,
+      "ir_pedestrian_ignored_or_crowd": 0,
+      "ir_pedestrian_tracks": 2,
+      "ir_frames_with_pedestrian": 160,
+      "ir_pedestrian_boxes_area_lt_256_px2": 320
+    },
+    {
+      "source": "DJI_0115_2",
+      "role": "train",
+      "stage_split": "train",
+      "paired_numeric_indices": 160,
+      "decoded_specs": {
+        "00": {
+          "640x512 RGB": 160
+        },
+        "01": {
+          "640x512 L": 160
+        }
+      },
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 480,
+      "ir_pedestrian_ignored_or_crowd": 0,
+      "ir_pedestrian_tracks": 3,
+      "ir_frames_with_pedestrian": 160,
+      "ir_pedestrian_boxes_area_lt_256_px2": 480
+    },
+    {
+      "source": "DJI_0217_2",
+      "role": "train",
+      "stage_split": "train",
+      "paired_numeric_indices": 160,
+      "decoded_specs": {
+        "00": {
+          "640x512 RGB": 160
+        },
+        "01": {
+          "640x512 L": 160
+        }
+      },
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 320,
+      "ir_pedestrian_ignored_or_crowd": 0,
+      "ir_pedestrian_tracks": 2,
+      "ir_frames_with_pedestrian": 160,
+      "ir_pedestrian_boxes_area_lt_256_px2": 280
+    },
+    {
+      "source": "DJI_0067_2",
+      "role": "development",
+      "stage_split": "calibration",
+      "paired_numeric_indices": 160,
+      "decoded_specs": {
+        "00": {
+          "640x512 RGB": 160
+        },
+        "01": {
+          "640x512 L": 160
+        }
+      },
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 5891,
+      "ir_pedestrian_ignored_or_crowd": 0,
+      "ir_pedestrian_tracks": 70,
+      "ir_frames_with_pedestrian": 160,
+      "ir_pedestrian_boxes_area_lt_256_px2": 5889
+    }
+  ],
+  "role_totals": {
+    "train": {
+      "paired_numeric_indices": 640,
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 12784,
+      "ir_pedestrian_tracks": 99,
+      "ir_pedestrian_boxes_area_lt_256_px2": 12744
+    },
+    "development": {
+      "paired_numeric_indices": 160,
+      "ir_pedestrian_boxes_excluding_ignore_crowd": 5891,
+      "ir_pedestrian_tracks": 70,
+      "ir_pedestrian_boxes_area_lt_256_px2": 5889
+    }
+  },
+  "split_wide_train_label_files_listed_only": [
+    "instances_00_train2017.json",
+    "instances_01_train2017.json",
+    "instances_train2017.json"
+  ],
+  "asset_inventory_observation": "The source-local stage JSONs contain only modality 01. A filename search of these source IDs in the project found no separately identifiable RGB pedestrian predictions or modality-00 labels by clip. Split-wide annotation contents were not inspected.",
+  "rgb_box_counts_and_teacher_coverage": null,
+  "registration": "Ying et al. describe homography alignment and cropping, residual disparity across depth, and unequal label coverage under poor visibility. No local per-person spatial agreement or RGB omission rate was measured.",
+  "primary_source": "https://arxiv.org/html/2406.14482v2#S3.SS1"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-12T18:54:18.304680+00:00",
+  "official_repository": "https://github.com/Intellindust-AI-Lab/DEIM",
+  "official_commit": "09d35d53d39ee3145a1e61e3a989b28b9468d1dd",
+  "criterion_sha256": "380a7d86b71ba9a3cbbdb670b4c11a3f2bfd2e367ffe87db7ef8e9ba30806dd2",
+  "provenance_record": "experiments/track_contrast_v2/resources/DEIM_REFERENCE.json",
+  "provenance_record_sha256": "e831818fec671650ff6da3ea99f56daba0bac6dddae2f872bbe301e7c86fc9dd",
+  "methods_executed_unmodified": {
+    "loss_labels_mal": {
+      "line": 111,
+      "source_text_sha256": "456e24562e031f857f2494a65610a4ff3e1ee850ea6718fd1160640a9b9738d6"
+    },
+    "_get_src_permutation_idx": {
+      "line": 217,
+      "source_text_sha256": "d1adde82b9b90b91f51e99dfc8e71771d960eaaef4c628b65e608041210ce217"
+    }
+  },
+  "provided_checker_run": {
+    "receipt": "runtime/loss_cpu_final.json",
+    "result": "resources/OFFICIAL_KERNEL_REFERENCE.json",
+    "result_sha256": "132bb8f6196d6d68d0dd5af545358faad9cc56d723ddcf2f6b81d2da9fee3e51",
+    "cases": [
+      {
+        "batch": 1,
+        "queries": 1,
+        "value_and_gradient": "passed"
+      },
+      {
+        "batch": 1,
+        "queries": 7,
+        "value_and_gradient": "passed"
+      },
+      {
+        "batch": 2,
+        "queries": 11,
+        "value_and_gradient": "passed"
+      }
+    ],
+    "reported_git_commit": null
+  },
+  "checkout_provenance_note": "The supplied checker returned git_commit=null. This is a pinned source snapshot, not an asserted local DEIM git checkout. Commit and Git-blob provenance are inherited from the independently verified v2 official archive and current matching file hash.",
+  "scope": "Only all-background original MAL value/gradient at gamma=2 and mal_alpha=None under matched reduction. No full MAL or DEIM performance reproduction.",
+  "borrowed": "Detached sigmoid(q_minus)^2 negative confidence weighting",
+  "custom": "Per-existing-segment gradient-budget normalization; float64 detached log-space numerical adaptation; original DeepPro loss reduction adapter",
+  "reference_original_sha256": {
+    "README.md": "30259903f064b69f043c99d5917cbc2f84d590de761c5d0e91254b59df79ec1c",
+    "MANIFEST.json": "7d2c47ffbfb374c10e1787a20af8c15e7247964e263f32bfdf90c2f28bb81a27",
+    "readout_weighting.py": "00a3c49a45e57b71773427d60c07055657d1a7e2586e56a455c693ce0c4c6018",
+    "VALIDATION.json": "96044d21094da8b5e8c23020489ea695d594ab59944978c47b24c1f310408368",
+    "test_readout_weighting.py": "0c0a4c464263ab8983813dfbe0e509347007fad721dd9f4a760d716582d6fbec",
+    "SOURCE_MAP.md": "fb745c6b149b1d905a391a7eef375ed944d29d2ed57aa580392a81dc0707a1de",
+    "check_official_kernel.py": "4284cf674a1bf0d8361d35b275af01f2bcf9e7d6a4a312340a66edf12975aea6",
+    "TEST_RESULTS.xml": "fb8060f3d6be0aaa58b1e7ea2ad4c2414882e9446c63a7de7c4690de421357bd"
+  },
+  "local_loss_sha256": "472167291a3569b292ade769fecfe32c6434153bd21d2cf8bbf1219719d4625b",
+  "validation": "resources/LOSS_VALIDATION.json"
+}

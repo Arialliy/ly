@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "condition": "HL",
+  "step": 128,
+  "checkpoint_sha256": "31e79339e8c2c951342589720337f2ecd91d35a5ab1e0ba9925a008a2f2f1f71",
+  "observation_plan_sha256": "78d7df1dd56d2913a899df2dc9d9b81c83fa44f6d309b191ae8ab5db4471e849",
+  "model_state_unchanged": true,
+  "training_updates": 0,
+  "scope": "Sixteen training crop windows, each40x128x128. Counts are window-target-frame instances, not distinct full-scene target frames or officialPd/Fa. All valid intersecting GT used for crop matching, core nonoverlap strict-small objects for recovery analysis.",
+  "frozen_sampling": true,
+  "windows": 16,
+  "sequence_count": 8,
+  "object_instance_count": 1464,
+  "csv_sha256": {
+    "OBJECTS.csv": "4c68cef3e1f1e89ab4700e68677cedbfb1372abe89585abb2eb2d1ca5d7bf2ac",
+    "SUMMARY.csv": "b363f0e973c63c44a2997fffdf9d383a6e31974e78242e410c0b11e454ee3415",
+    "FRAMES.csv": "c224501e20730b48484560ff531e66bc5b2d1fb48154723e7e8d2bed914d00b5"
+  }
+}

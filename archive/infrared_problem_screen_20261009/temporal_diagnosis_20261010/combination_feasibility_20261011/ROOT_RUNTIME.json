@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "name": "deeppro-combination-aggregate-20261011",
+      "status": "exited",
+      "exit_code": 0,
+      "started": "2026-10-11T12:35:15.269566104Z",
+      "finished": "2026-10-11T12:35:17.256092358Z",
+      "image": "deeppro-official-eval:20261009",
+      "command": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/combination_feasibility_20261011/aggregate_combinations.py"
+      ],
+      "cpus": 2.0,
+      "memory_bytes": 8589934592
+    },
+    {
+      "name": "deeppro-combination-crosscheck-20261011",
+      "status": "exited",
+      "exit_code": 0,
+      "started": "2026-10-11T12:36:49.720200805Z",
+      "finished": "2026-10-11T12:36:52.98909644Z",
+      "image": "deeppro-official-eval:20261009",
+      "command": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/combination_feasibility_20261011/cross_check.py"
+      ],
+      "cpus": 2.0,
+      "memory_bytes": 8589934592
+    },
+    {
+      "name": "deeppro-combination-aggregate-final-20261011",
+      "status": "exited",
+      "exit_code": 0,
+      "started": "2026-10-11T12:39:01.212475597Z",
+      "finished": "2026-10-11T12:39:03.395185367Z",
+      "image": "deeppro-official-eval:20261009",
+      "command": [
+        "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/combination_feasibility_20261011/aggregate_combinations.py"
+      ],
+      "cpus": 2.0,
+      "memory_bytes": 8589934592
+    }
+  ],
+  "notes": [
+    "Second aggregation only corrected two plot label offsets and replaced a pending-audit metadata label; numerical outputs unchanged.",
+    "Subdirectory CPU run logs and validations are recorded in their own RUNTIME files."
+  ]
+}

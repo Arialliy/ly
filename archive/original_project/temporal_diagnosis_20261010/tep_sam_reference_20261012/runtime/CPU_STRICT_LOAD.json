@@ -1,0 +1,84 @@
+{
+  "strict_load": "PASS",
+  "checkpoint_sha256": "1125ea28b4dfe0745be1f33500f4e5463f1cbd8e837a3c1c733b34bb0de9e6f0",
+  "state_keys": 472,
+  "parameters": 95576030,
+  "parameter_tensors": 456,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "auxiliary_keys": {
+    "image_encoder.prompt_generator.middle_mask_decoder.0.weight": [
+      32,
+      16,
+      3,
+      3
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.0.bias": [
+      32
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.1.weight": [
+      32
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.1.bias": [
+      32
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.1.running_mean": [
+      32
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.1.running_var": [
+      32
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.1.num_batches_tracked": [],
+    "image_encoder.prompt_generator.middle_mask_decoder.3.weight": [
+      16,
+      32,
+      3,
+      3
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.3.bias": [
+      16
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.4.weight": [
+      16
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.4.bias": [
+      16
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.4.running_mean": [
+      16
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.4.running_var": [
+      16
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.4.num_batches_tracked": [],
+    "image_encoder.prompt_generator.middle_mask_decoder.6.weight": [
+      1,
+      16,
+      1,
+      1
+    ],
+    "image_encoder.prompt_generator.middle_mask_decoder.6.bias": [
+      1
+    ]
+  },
+  "auxiliary_nonzero": {
+    "image_encoder.prompt_generator.middle_mask_decoder.0.weight": 4608,
+    "image_encoder.prompt_generator.middle_mask_decoder.0.bias": 32,
+    "image_encoder.prompt_generator.middle_mask_decoder.1.weight": 32,
+    "image_encoder.prompt_generator.middle_mask_decoder.1.bias": 32,
+    "image_encoder.prompt_generator.middle_mask_decoder.1.running_mean": 32,
+    "image_encoder.prompt_generator.middle_mask_decoder.1.running_var": 32,
+    "image_encoder.prompt_generator.middle_mask_decoder.1.num_batches_tracked": 1,
+    "image_encoder.prompt_generator.middle_mask_decoder.3.weight": 4608,
+    "image_encoder.prompt_generator.middle_mask_decoder.3.bias": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.4.weight": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.4.bias": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.4.running_mean": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.4.running_var": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.4.num_batches_tracked": 1,
+    "image_encoder.prompt_generator.middle_mask_decoder.6.weight": 16,
+    "image_encoder.prompt_generator.middle_mask_decoder.6.bias": 1
+  },
+  "model_dtype": "torch.float32",
+  "cuda_visible": false
+}

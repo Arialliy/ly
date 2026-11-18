@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "name": "共同有效批次验证：固定逐轨迹、来源平衡门控",
+  "fixed_old_common_pair_ids": [
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15
+  ],
+  "maximum_added_pairs": 9,
+  "maximum_new_adam_steps": 27,
+  "registered_pair_ids": [
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    17
+  ],
+  "actual_planned_new_adam_steps": 0,
+  "noise_source": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/c_effective_update_v1/OPERATOR_CHECK.json",
+  "noise_source_sha256": "f5f6ae949afabe3a4dc22b22be519c757461f2800cd99ac9766f232e6d0a1856",
+  "noise_floors": {
+    "weak_logit": {
+      "epsilon": 1.4274778358843545e-05,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 1.4274778358843545e-05,
+      "baseline_abs_scale": 14.96818999240273,
+      "available_pairs_roles": 19
+    },
+    "weak_margin": {
+      "epsilon": 2.366682982066739e-06,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 2.366682982066739e-06,
+      "baseline_abs_scale": 2.481646974603613,
+      "available_pairs_roles": 19
+    },
+    "weak_probability_margin": {
+      "epsilon": 9.5367431640625e-07,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 9.5367431640625e-07,
+      "baseline_abs_scale": 1.0,
+      "available_pairs_roles": 19
+    },
+    "hardbg_logit": {
+      "epsilon": 1.2333662158982073e-05,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 1.2333662158982073e-05,
+      "baseline_abs_scale": 12.932782132016786,
+      "available_pairs_roles": 32
+    },
+    "reliable_logit": {
+      "epsilon": 6.002691959430121e-06,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 6.002691959430121e-06,
+      "baseline_abs_scale": 6.294278724051399,
+      "available_pairs_roles": 32
+    },
+    "reliable_peak_shift": {
+      "epsilon": 9.5367431640625e-07,
+      "max_repeat_abs_difference": 0.0,
+      "numerical_floor": 9.5367431640625e-07,
+      "baseline_abs_scale": 1.0,
+      "available_pairs_roles": 32
+    }
+  },
+  "metric_epsilons": {
+    "q_positive": 1.4274778358843545e-05,
+    "q_negative": 1.2333662158982073e-05,
+    "margin": 2.366682982066739e-06,
+    "reliable_q_positive": 6.002691959430121e-06,
+    "reliable_peak_shift": 9.5367431640625e-07
+  },
+  "aggregation": {
+    "paired_objects": "Match unchanged object_key and source_object_frame_key before calculating each scalar before/after/delta/advantage. Preserve original float32 margin readout.",
+    "within_pair_track": "Equal arithmetic mean across duplicate window contexts of a physical object-frame; equal arithmetic mean across frames within trusted track.",
+    "across_pairs_track": "Equal arithmetic mean of each pair-specific track estimate, so repeated pairs do not give a trajectory extra weight.",
+    "source": "Equal arithmetic mean of trusted tracks within source; equal-source median across sources.",
+    "background": "No track identity: duplicate absolute ROI/frame contexts averaged, unique ROI/frame estimates equally averaged per source; across pairs equal-pair source mean, then equal-source median.",
+    "uncertain_reliable": "Never discard: duplicate physical object-frame contexts averaged, objects/frames equally averaged per source and pair, then source median. Report separately; excluded from trusted-trajectory support.",
+    "subsets": "common_old_7 and all_qualified_9 reported separately; source_relation separate. all_relations_descriptive is never a trigger."
+  },
+  "benefit": {
+    "at_track_and_all_relation_balanced_levels": {
+      "own_delta_q_positive": "strictly > old epsilon weak_logit",
+      "own_delta_margin": "strictly > old epsilon weak_margin",
+      "margin_advantage_vs_full": "strictly > 2 * old epsilon weak_margin",
+      "q_positive_advantage_vs_full": ">= -2 * old epsilon weak_logit"
+    },
+    "pair_chain": "For one removal/relation/cost, both update and observer of the same pair each need at least one qualifying weak trajectory and a source-balanced deterioration for the same cost. Cost sources and benefit sources are explicitly recorded; a shared-network update can protect another source in the same pair.",
+    "all_data_required": "Every qualified weak trajectory, including negative effects, enters the relation-level source-balanced estimate in both roles; positive subsets cannot replace it.",
+    "repeatability": "At least 2 distinct supporting weak trajectories and at least 2 supporting observer sources; supporting observer sources strictly exceed half of all eligible weak observer sources for that relation.",
+    "full_not_helping_required": false
+  },
+  "costs": {
+    "hard_background_logit": {
+      "cohort": "background",
+      "metric": "mean_logit",
+      "harm_sign": 1,
+      "threshold": 2.4667324317964146e-05
+    },
+    "reliable_target_logit": {
+      "cohort": "reliable_trusted",
+      "metric": "q_positive",
+      "harm_sign": -1,
+      "threshold": 1.2005383918860242e-05
+    },
+    "reliable_target_position": {
+      "cohort": "reliable_trusted",
+      "metric": "peak_shift",
+      "harm_sign": 1,
+      "threshold": 1.0000019073486328
+    }
+  },
+  "cost_scope": "Cost is relative to full_F, same named cost and same relation/removal at both roles. Within each pair/role include all eligible cost sources in an equal-source median. Cost and benefit may belong to different sources within the same pair but cannot be assembled across different pairs. Trusted reliable source means use all trusted reliable tracks. Uncertain reliable objects remain separate diagnostics and cannot supply track evidence.",
+  "stage_one": "ConFIG single-step permitted only if a complete repeatable benefit/cost chain AND all-qualified source-balanced benefit pass within one relation. No pooling of removals, costs or source relations.",
+  "candidate": {
+    "same_frozen_manifest": true,
+    "benefit": "Same absolute/relative weak benefit and cross-pair/source repeatability in a stage-one-supported relation.",
+    "cost_avoidance": "In both roles of a supported relation, candidate source-balanced cost versus full <= old cost threshold, and candidate improvement over supported removal > that threshold; same-pair benefit and cost avoidance must cover >=2 observer sources and a strict majority of eligible observer sources.",
+    "new_cost_veto": "Any effective relation/role with a source-balanced deterioration above a fixed cost threshold and strict majority of observable sources above threshold blocks 256 steps. Unavailable reliable cost cannot clear that path.",
+    "optimizer_rules": "Reuse v1 fixed official ConFIG, norm matching, coordinate semantics and fallback rules; require nonzero finite actual Adam delta. No new tuning."
+  },
+  "execution": "Read-only endpoint replay must verify initial state, saved historical delta and exact endpoints/old scalar readouts. Historical Adam updates remain one per copy. If replay provenance fails, stop as EXECUTION_ISSUE.",
+  "missing": "Missing is unavailable, never zero. Required weak eligibility at both roles; missing cost cannot support or clear cost path. Uncertain track IDs are not trusted trajectories.",
+  "stop": "No supported chain: stop this bounded round, no ConFIG, no 256-step branches, no third sampling round. Coverage is a limitation, not proof of no conflict or ineffectiveness.",
+  "interpretation": "Predeclared descriptive direction/coverage gate, not a statistical significance test. ROI/peak readouts are proxies, not actual component detection; no development or confirmation data."
+}

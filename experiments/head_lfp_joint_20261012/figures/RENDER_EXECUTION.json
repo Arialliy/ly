@@ -1,0 +1,39 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "2",
+    "--memory",
+    "4g",
+    "--user",
+    "1004:1004",
+    "--entrypoint",
+    "python",
+    "-e",
+    "MPLCONFIGDIR=/tmp/mpl",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code:/work:ro",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012/figures:/work/experiments/head_lfp_joint_20261012/figures:rw",
+    "-w",
+    "/work",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "experiments/head_lfp_joint_20261012/figures/plot_results.py"
+  ],
+  "exit_code": 0,
+  "started_utc": "2026-10-12T13:28:41.974866+00:00",
+  "ended_utc": "2026-10-12T13:28:43.804011+00:00",
+  "gpu_used": false,
+  "new_training_inference_scoring": false,
+  "layout_rerender": {
+    "exit_code": 0,
+    "change": "annotation zorder3 to6, so budget line cannot overwrite count labels",
+    "same_cpu_command": true
+  }
+}

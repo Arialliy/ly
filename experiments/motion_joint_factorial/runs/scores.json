@@ -1,0 +1,1044 @@
+{
+  "methods": {
+    "original": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 69137,
+        "ignored_candidates": 692,
+        "candidate_oracle_tp": 278,
+        "candidate_oracle_recall": 0.9174917491749175,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 35.290096282958984
+          },
+          "1": {
+            "tp": 13,
+            "fp": 7,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 20.02381706237793
+          },
+          "5": {
+            "tp": 34,
+            "fp": 38,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 10.108953475952148
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 51,
+          "fp": 73,
+          "fn": 252,
+          "recall": 0.16831683168316833,
+          "fp_per_frame": 9.125,
+          "ignored_candidates": 65,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 13,
+          "fp": 7,
+          "fn": 290,
+          "recall": 0.0429042904290429,
+          "fp_per_frame": 0.875,
+          "ignored_candidates": 7,
+          "logit_threshold": 20.02381706237793
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 33031,
+        "ignored_candidates": 223,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 20.933420181274414
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.84242820739746
+          },
+          "5": {
+            "tp": 9,
+            "fp": 14,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.5,
+            "logit_threshold": -3.913313388824463
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 8,
+          "fp": 13,
+          "fn": 5,
+          "recall": 0.6153846153846154,
+          "fp_per_frame": 3.25,
+          "ignored_candidates": 2,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 11,
+          "recall": 0.15384615384615385,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 20.02381706237793
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 36106,
+        "ignored_candidates": 469,
+        "candidate_oracle_tp": 265,
+        "candidate_oracle_recall": 0.9137931034482759,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.290096282958984
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.290096282958984
+          },
+          "5": {
+            "tp": 21,
+            "fp": 15,
+            "fn": 269,
+            "recall": 0.07241379310344828,
+            "fp_per_frame": 3.75,
+            "logit_threshold": 14.641349792480469
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 43,
+          "fp": 60,
+          "fn": 247,
+          "recall": 0.1482758620689655,
+          "fp_per_frame": 15.0,
+          "ignored_candidates": 63,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 11,
+          "fp": 5,
+          "fn": 279,
+          "recall": 0.03793103448275862,
+          "fp_per_frame": 1.25,
+          "ignored_candidates": 7,
+          "logit_threshold": 20.02381706237793
+        }
+      }
+    },
+    "A": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 50599,
+        "ignored_candidates": 561,
+        "candidate_oracle_tp": 278,
+        "candidate_oracle_recall": 0.9174917491749175,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 4,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 38.37100601196289
+          },
+          "1": {
+            "tp": 9,
+            "fp": 8,
+            "fn": 294,
+            "recall": 0.0297029702970297,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 23.96633529663086
+          },
+          "5": {
+            "tp": 36,
+            "fp": 39,
+            "fn": 267,
+            "recall": 0.1188118811881188,
+            "fp_per_frame": 4.875,
+            "logit_threshold": 12.750801086425781
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 177,
+          "fp": 3432,
+          "fn": 126,
+          "recall": 0.5841584158415841,
+          "fp_per_frame": 429.0,
+          "ignored_candidates": 258,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 9,
+          "fp": 8,
+          "fn": 294,
+          "recall": 0.0297029702970297,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 6,
+          "logit_threshold": 23.96633529663086
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 25181,
+        "ignored_candidates": 234,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 24.347389221191406
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 20.87282371520996
+          },
+          "5": {
+            "tp": 9,
+            "fp": 12,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.0,
+            "logit_threshold": 8.868535995483398
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 13,
+          "fp": 965,
+          "fn": 0,
+          "recall": 1.0,
+          "fp_per_frame": 241.25,
+          "ignored_candidates": 116,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 11,
+          "recall": 0.15384615384615385,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 23.96633529663086
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 25418,
+        "ignored_candidates": 327,
+        "candidate_oracle_tp": 265,
+        "candidate_oracle_recall": 0.9137931034482759,
+        "froc": {
+          "0.5": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 286,
+            "recall": 0.013793103448275862,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 39.309024810791016
+          },
+          "1": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.75,
+            "logit_threshold": 38.37100601196289
+          },
+          "5": {
+            "tp": 22,
+            "fp": 18,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.5,
+            "logit_threshold": 17.19642448425293
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 164,
+          "fp": 2467,
+          "fn": 126,
+          "recall": 0.5655172413793104,
+          "fp_per_frame": 616.75,
+          "ignored_candidates": 142,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 7,
+          "fp": 6,
+          "fn": 283,
+          "recall": 0.02413793103448276,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 6,
+          "logit_threshold": 23.96633529663086
+        }
+      }
+    },
+    "B": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 51286,
+        "ignored_candidates": 568,
+        "candidate_oracle_tp": 279,
+        "candidate_oracle_recall": 0.9207920792079208,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 36.430442810058594
+          },
+          "1": {
+            "tp": 13,
+            "fp": 7,
+            "fn": 290,
+            "recall": 0.0429042904290429,
+            "fp_per_frame": 0.875,
+            "logit_threshold": 21.260292053222656
+          },
+          "5": {
+            "tp": 34,
+            "fp": 38,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 11.3243408203125
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 196,
+          "fp": 4112,
+          "fn": 107,
+          "recall": 0.6468646864686468,
+          "fp_per_frame": 514.0,
+          "ignored_candidates": 280,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 13,
+          "fp": 7,
+          "fn": 290,
+          "recall": 0.0429042904290429,
+          "fp_per_frame": 0.875,
+          "ignored_candidates": 7,
+          "logit_threshold": 21.260292053222656
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 26449,
+        "ignored_candidates": 225,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.941600799560547
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 18.913808822631836
+          },
+          "5": {
+            "tp": 9,
+            "fp": 13,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.25,
+            "logit_threshold": 6.748690128326416
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 13,
+          "fp": 1104,
+          "fn": 0,
+          "recall": 1.0,
+          "fp_per_frame": 276.0,
+          "ignored_candidates": 113,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 11,
+          "recall": 0.15384615384615385,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 21.260292053222656
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 24837,
+        "ignored_candidates": 343,
+        "candidate_oracle_tp": 266,
+        "candidate_oracle_recall": 0.9172413793103448,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 36.430442810058594
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 36.430442810058594
+          },
+          "5": {
+            "tp": 22,
+            "fp": 18,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.5,
+            "logit_threshold": 14.713968276977539
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 183,
+          "fp": 3008,
+          "fn": 107,
+          "recall": 0.6310344827586207,
+          "fp_per_frame": 752.0,
+          "ignored_candidates": 167,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 11,
+          "fp": 5,
+          "fn": 279,
+          "recall": 0.03793103448275862,
+          "fp_per_frame": 1.25,
+          "ignored_candidates": 7,
+          "logit_threshold": 21.260292053222656
+        }
+      }
+    },
+    "C": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 52989,
+        "ignored_candidates": 594,
+        "candidate_oracle_tp": 287,
+        "candidate_oracle_recall": 0.9471947194719472,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 35.53105545043945
+          },
+          "1": {
+            "tp": 12,
+            "fp": 8,
+            "fn": 291,
+            "recall": 0.039603960396039604,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 20.028947830200195
+          },
+          "5": {
+            "tp": 34,
+            "fp": 39,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 4.875,
+            "logit_threshold": 10.17616081237793
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 155,
+          "fp": 3197,
+          "fn": 148,
+          "recall": 0.5115511551155115,
+          "fp_per_frame": 399.625,
+          "ignored_candidates": 201,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 12,
+          "fp": 8,
+          "fn": 291,
+          "recall": 0.039603960396039604,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 6,
+          "logit_threshold": 20.028947830200195
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 27320,
+        "ignored_candidates": 218,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 11,
+            "recall": 0.15384615384615385,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 21.76484489440918
+          },
+          "1": {
+            "tp": 3,
+            "fp": 4,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 18.418546676635742
+          },
+          "5": {
+            "tp": 9,
+            "fp": 14,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.5,
+            "logit_threshold": 5.339732646942139
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 13,
+          "fp": 815,
+          "fn": 0,
+          "recall": 1.0,
+          "fp_per_frame": 203.75,
+          "ignored_candidates": 55,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 11,
+          "recall": 0.15384615384615385,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 20.028947830200195
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 25669,
+        "ignored_candidates": 376,
+        "candidate_oracle_tp": 274,
+        "candidate_oracle_recall": 0.9448275862068966,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.53105545043945
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 35.53105545043945
+          },
+          "5": {
+            "tp": 22,
+            "fp": 19,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 4.75,
+            "logit_threshold": 13.7672758102417
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 142,
+          "fp": 2382,
+          "fn": 148,
+          "recall": 0.4896551724137931,
+          "fp_per_frame": 595.5,
+          "ignored_candidates": 146,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 10,
+          "fp": 6,
+          "fn": 280,
+          "recall": 0.034482758620689655,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 6,
+          "logit_threshold": 20.028947830200195
+        }
+      }
+    },
+    "D": {
+      "all_dev": {
+        "frames": 8,
+        "targets": 303,
+        "candidates": 59327,
+        "ignored_candidates": 889,
+        "candidate_oracle_tp": 300,
+        "candidate_oracle_recall": 0.9900990099009901,
+        "froc": {
+          "0.5": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 297,
+            "recall": 0.019801980198019802,
+            "fp_per_frame": 0.375,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 14,
+            "fp": 8,
+            "fn": 289,
+            "recall": 0.0462046204620462,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 17.2835750579834
+          },
+          "5": {
+            "tp": 34,
+            "fp": 40,
+            "fn": 269,
+            "recall": 0.11221122112211221,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 8.353572845458984
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 79,
+          "fp": 739,
+          "fn": 224,
+          "recall": 0.2607260726072607,
+          "fp_per_frame": 92.375,
+          "ignored_candidates": 103,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 14,
+          "fp": 8,
+          "fn": 289,
+          "recall": 0.0462046204620462,
+          "fp_per_frame": 1.0,
+          "ignored_candidates": 7,
+          "logit_threshold": 17.2835750579834
+        }
+      },
+      "DJI_0026_2": {
+        "frames": 4,
+        "targets": 13,
+        "candidates": 27952,
+        "ignored_candidates": 343,
+        "candidate_oracle_tp": 13,
+        "candidate_oracle_recall": 1.0,
+        "froc": {
+          "0.5": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 10,
+            "recall": 0.23076923076923078,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 17.756820678710938
+          },
+          "1": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 9,
+            "recall": 0.3076923076923077,
+            "fp_per_frame": 1.0,
+            "logit_threshold": 15.466323852539062
+          },
+          "5": {
+            "tp": 9,
+            "fp": 14,
+            "fn": 4,
+            "recall": 0.6923076923076923,
+            "fp_per_frame": 3.5,
+            "logit_threshold": 3.543689250946045
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 10,
+          "fp": 137,
+          "fn": 3,
+          "recall": 0.7692307692307693,
+          "fp_per_frame": 34.25,
+          "ignored_candidates": 13,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 10,
+          "recall": 0.23076923076923078,
+          "fp_per_frame": 0.5,
+          "ignored_candidates": 0,
+          "logit_threshold": 17.2835750579834
+        }
+      },
+      "DJI_0067_2": {
+        "frames": 4,
+        "targets": 290,
+        "candidates": 31375,
+        "ignored_candidates": 546,
+        "candidate_oracle_tp": 287,
+        "candidate_oracle_recall": 0.9896551724137931,
+        "froc": {
+          "0.5": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "1": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 285,
+            "recall": 0.017241379310344827,
+            "fp_per_frame": 0.5,
+            "logit_threshold": 32.816314697265625
+          },
+          "5": {
+            "tp": 22,
+            "fp": 20,
+            "fn": 268,
+            "recall": 0.07586206896551724,
+            "fp_per_frame": 5.0,
+            "logit_threshold": 11.842905044555664
+          }
+        },
+        "fixed_probability_0.5": {
+          "tp": 69,
+          "fp": 602,
+          "fn": 221,
+          "recall": 0.23793103448275862,
+          "fp_per_frame": 150.5,
+          "ignored_candidates": 90,
+          "logit_threshold": 0.0
+        },
+        "at_pooled_primary_threshold": {
+          "tp": 11,
+          "fp": 6,
+          "fn": 279,
+          "recall": 0.03793103448275862,
+          "fp_per_frame": 1.5,
+          "ignored_candidates": 7,
+          "logit_threshold": 17.2835750579834
+        }
+      }
+    }
+  },
+  "frames": [
+    {
+      "sequence": "DJI_0026_2",
+      "index": 19,
+      "targets": 4
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 59,
+      "targets": 3
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 99,
+      "targets": 3
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "index": 139,
+      "targets": 3
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 19,
+      "targets": 69
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 59,
+      "targets": 70
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 99,
+      "targets": 76
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "index": 139,
+      "targets": 75
+    }
+  ],
+  "threshold_protocol": "FROC swept on each reported subset with tied scores grouped; separate fixed logit >= 0.0",
+  "matching": "5x5 local maxima; 2px Chebyshev NMS; maximum-cardinality 1-to-1 to 1px-expanded boxes; ignore-only predictions excluded",
+  "contrasts": {
+    "all_dev": {
+      "B-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 4,
+          "5": -2
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 19,
+          "fp": 680
+        }
+      },
+      "D-C": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 2,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -76,
+          "fp": -2458
+        }
+      },
+      "C-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 3,
+          "5": -2
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -22,
+          "fp": -235
+        }
+      },
+      "D-B": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -117,
+          "fp": -3373
+        }
+      },
+      "(D-C)-(B-A)": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": -2,
+          "5": 2
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -95,
+          "fp": -3138
+        }
+      },
+      "D-original": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 28,
+          "fp": 666
+        }
+      }
+    },
+    "DJI_0026_2": {
+      "B-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 0,
+          "fp": 139
+        }
+      },
+      "D-C": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -3,
+          "fp": -678
+        }
+      },
+      "C-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 0,
+          "fp": -150
+        }
+      },
+      "D-B": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -3,
+          "fp": -967
+        }
+      },
+      "(D-C)-(B-A)": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -3,
+          "fp": -817
+        }
+      },
+      "D-original": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 1,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 2,
+          "fp": 124
+        }
+      }
+    },
+    "DJI_0067_2": {
+      "B-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 19,
+          "fp": 541
+        }
+      },
+      "D-C": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -73,
+          "fp": -1780
+        }
+      },
+      "C-A": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 1,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -22,
+          "fp": -85
+        }
+      },
+      "D-B": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -114,
+          "fp": -2406
+        }
+      },
+      "(D-C)-(B-A)": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": -1,
+          "1": 0,
+          "5": 0
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": -92,
+          "fp": -2321
+        }
+      },
+      "D-original": {
+        "delta_tp_at_fp_budgets": {
+          "0.5": 0,
+          "1": 0,
+          "5": 1
+        },
+        "fixed_probability_0.5_delta": {
+          "tp": 26,
+          "fp": 542
+        }
+      }
+    }
+  }
+}

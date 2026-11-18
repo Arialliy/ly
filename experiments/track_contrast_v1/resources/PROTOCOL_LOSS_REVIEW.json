@@ -1,0 +1,49 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_INPUT_LIMITATION",
+  "reviewed_utc": "2026-10-12T16:03:47.946299+00:00",
+  "reviewer": "gim_setup independent protocol versus integration implementation review",
+  "scope": "loss, keep, numerical calibration, frozen layers and formal restart; no development evaluation read",
+  "checks": [
+    "Original conv_out1 F bbox arithmetic mean then L2 normalization; no projection and no added trainable state.",
+    "One positive plus exactly two shared background negatives; incomplete pairs zero, sum divided by all requested pairs; complete swap units jointly disabled by prepare.py.",
+    "Fixed teacher selection; same-frame same-area local and auxiliary global-crop maxima; all-task/ignore/crowd expansion and core exclusion inherited from frozen background masks.",
+    "Actual frozen component matcher, no box-max proxy; only unambiguous matched nonoverlapping core-contained targets; missed/unreliable GT forbidden with two-pixel expansion.",
+    "Background keep q <= 0.1, at most 1024/window, floor(count/2) hard plus remaining uniform without replacement; sparse teacher probabilities detached.",
+    "Keep reduction fixed 0.5 targetmean plus 0.5 bgmean per window, absent groups zero, mean all eight windows.",
+    "Original detection loss only first four windows and original label/input hash checks; all ABC have same eight-window exposure.",
+    "Eight deterministic training-only det warmup updates are discarded; temperature from B/C raw-cosine triplet population std median; shared lambdas from eight gradient-norm medians.",
+    "CALIBRATION.json medians and coefficients independently recomputed with standard-library arithmetic; all required gradient norms finite and positive.",
+    "Contrast pathway reaches original TPro and conv_out1, not conv_out2; formal training reloads release into a fresh model and Adam optimizer; frontend parameters and BN running state remain frozen."
+  ],
+  "calibration_recomputed": {
+    "temperature": 0.47569116950035095,
+    "lambda_temporal": 0.10885460558865433,
+    "lambda_keep": 5.75443767610971
+  },
+  "input_limitation": {
+    "finding": "Legacy base.build_batch skips invalid boxes when constructing background masks; it does not make the entire slot background-invalid. Keep helper independently forbids an invalid-box slot.",
+    "resolution": "PROTOCOL.md corrected before formal freeze to explicitly scope background guarantees to this fingerprint-locked, all-valid-box dataset. Root reports sampler and independent evaluation audit confirm zero invalid training boxes; cache audit separately checks full validity. No training source or cached arrays were changed.",
+    "affected_actual_samples_reported_by_root": 0,
+    "new_invalid_box_datasets_supported": false
+  },
+  "artifacts_sha256": {
+    "PROTOCOL.md": "9544f7284947d1c429aa0a59e3c23567d908e33f002756d8a1f1ab6fc99b19d3",
+    "code/data.py": "8ad5232591c3538879b1806178da3b15b1e778dfd18d28e3293a06fa59b9397e",
+    "code/runtime.py": "f4c9a387b33440b5d71aebbbbd66c6c84edca37b31313e0377e479d693bd159c",
+    "code/prepare.py": "fa45c75a9e824c16b9f858dd36962312e4a33c7fd066ef70aad9898cba16f2a6",
+    "code/calibrate.py": "d1230cc844038fcc8c74417c43108b4f22db577fccaf95bf44749e394995e5eb",
+    "code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "CALIBRATION.json": "07015bf62f61e5c1a66405594be65a8e6a6112b5d2cd2a80e6f49a0edbc1cf29",
+    "resources/LOSS_TESTS.xml": "75fe74e86fd4d129e8a01741206e4d31527cdcbde2e723e8c36bc76254822fc2",
+    "resources/LOSS_GPU_CHECK.json": "5bc3ca60462eb0868377a49f7a9cc81525757ce647d20e87bbbfe0abe46d7a53"
+  },
+  "telemetry": {
+    "source": "code/telemetry.py",
+    "output": "runtime/GPU_TELEMETRY.jsonl",
+    "interval_seconds": 30,
+    "training_source_fingerprints_include_telemetry": false,
+    "read_only": true
+  }
+}

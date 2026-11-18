@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-11T17:18:12.666890+00:00",
+  "files": {
+    "CLOSURE_CHECK.json": "8ac271dab7ccc72572111b96a5b31870eeb26c2819bb45115f3fcbba8ad97b73",
+    "ENDPOINT_COMPARISON.csv": "d9a4585269eea8125dbef4399f1a078df76cf73d1373e7e964be71d7486f6461",
+    "NEXT_ADAPTATION_TEST.md": "54b46074da50b79e4faf6939d748a1207b1f026aec9896423235a4490bbd3ae7",
+    "REPORT.md": "65cd9a5094181ee19c915c4d47bf5cebf10bad53c564fedc95ef894e2efeb7c4",
+    "RETENTION_646.csv": "3e503268f924ad582962973fa4155ad239c2623c54a9bde4e7a140241b790bca",
+    "SCOPE.json": "b78cc8c2f008ec2918b4e6f152c6265707df2e8142cb9411ebeb8d063cd7820d",
+    "STATUS.json": "5095612455b3938902de58a4aef47a5c2be435a1cbfedcbcf240026866242075",
+    "TABLE_CHECK.json": "35662d2379e6ddbcd06405338f3de99ed88c9ff5492bf30a296b9be98a4cb679",
+    "code/summarize_existing.py": "9d24bce03dd4838d68030b28a21b7b44aa964212e9457a1bb29762259d38d42b",
+    "parts/FINAL_REVIEW.json": "5b01fd4f1b0e9be3885d7435928d0578c8893e4e9c0882fdb2475bb3015b15ca",
+    "parts/PROCESS_CHECKPOINTS.csv": "5597734dddfc981c7c8a545e9b2e32fad557c348545f48cafdfc8e5e9853c41a",
+    "parts/PROCESS_EMPTY_BATCHES.csv": "443e346b265d1aacddb6e1a91fb26223a14ac069bcee305e28bdc0ae5ffc645d",
+    "parts/PROCESS_PARAMETERS.csv": "adcfa66b970155f318b2c13ee5746e1ee172d10ffb27ce9c91592ce8c381ef5e",
+    "parts/PROCESS_PARAMETER_GROUPS.csv": "b711a7b1e9e2e97a088f5977fd6c0095bdee32d9f40ad4fcbd879c891dc2be8a",
+    "parts/PROCESS_TRAINING_BINS.csv": "085657e1faffccdcc6fddb000a258f30e6497c528d36765a5fbf4fe1e377ecea",
+    "parts/PROCESS_TRAINING_STEPS.csv": "225881bf53a3d2dff1eddb1ee04e77eb63cbb2edf28589dd32e6c5d00c504dd9",
+    "parts/exposure.json": "f8344015550ed764384146660f5a4f7c2e8f0ab5ad206702a715685fcb79f96c",
+    "parts/exposure.md": "c2e055a4d997c87ce262a27fd8b0dc9159749021df7c178e6d00098aeac6c51d",
+    "parts/exposure_sources.csv": "dd98c5bb6db8768fc5c4cd6ab1e68a8efe758bed1c7463938c85d39b75dd612c",
+    "parts/exposure_windows.csv": "3536b910fe5e94c0cc970bb6e6c49f5cb6eeaefc5c6fe91538e96a310bfdbeff",
+    "parts/process.json": "8dce09097696aa6143ddc238a5845d5372587317d81f1e3f4b405a6992ebb50b",
+    "parts/process.md": "acc6542a518bcf9dc02c2c625481c5995a2e5fad9f67d0e1c3ed26a9de58f89f",
+    "parts/process_checkpoint_diff.json": "7d0570ef9180cbd72d296f06f659fca9c527ba59a39e168cd299b2d754621c17",
+    "parts/process_checkpoint_receipt.json": "2af3698d4118226504c6874556548a1f2302ee189c70c310a7358f0195cd6a3a",
+    "parts/process_checkpoint_receipt_command_error.json": "000776e35038a03a6fd2a0f74128c10e655746d702f95a2131203fb88ddb91b2",
+    "parts/process_checkpoint_receipt_safe_load_error.json": "fe5fef51624aea9ff576d4299459a62009a185f99c0351644552870c5d1e649d",
+    "parts/supervision.json": "96c94079a7ae02ec57ad8be19564028721b61e03d79feaf69d091cbff23ab13e",
+    "parts/supervision.md": "88229ab241ee83f675eb31a0b7349c09f41aa2670dde988be0606b2869ad1356"
+  },
+  "current_research_documents": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/RESEARCH_OBJECTIVE_CURRENT.md": "756cc5fc983bfeaf8ef0139f87d91da34e73df8845181960c2f1b48825342870",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/RESEARCH_STATUS_CURRENT.json": "9ba084c15c39497a47869a5f56317a55235c70be5f98c34afa4774ca3a2cd823",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/CVPR2027_RESEARCH_PLAN (1).md": "e007688cee49c5b723a7af5f6385548397c7db0d85b16d59ee2a42a992dbb39f"
+  },
+  "scope": "Read-only adaptation comparison and current research goal update; historical experiment artifacts unchanged."
+}

@@ -1,0 +1,174 @@
+{
+  "checked_utc": "2026-10-12T13:02:02.431625+00:00",
+  "status": "PASS",
+  "stage1_original_jpeg_checks": [
+    {
+      "sequence": "DJI_0030_9",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0113_3",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0217_2",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0309_1",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "split": "train",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "split": "calibration",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "split": "calibration",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0051_3",
+      "split": "confirmation",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0075_3",
+      "split": "confirmation",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0139_2",
+      "split": "confirmation",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    },
+    {
+      "sequence": "DJI_0343_3",
+      "split": "confirmation",
+      "compared_original_jpegs": 160,
+      "all_exact": true
+    }
+  ],
+  "stage1_original_jpeg_count": 2240,
+  "vt_annotation_statistics": [
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_00_test2017.json",
+      "images": 12590,
+      "annotations": 180251,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_00_train2017.json",
+      "images": 34111,
+      "annotations": 431201,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_01_test2017.json",
+      "images": 12590,
+      "annotations": 189101,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_01_train2017.json",
+      "images": 34111,
+      "annotations": 456796,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_test2017.json",
+      "images": 12590,
+      "annotations": 211182,
+      "categories": 7
+    },
+    {
+      "file": "data/public/VT-Tiny-MOT/annotations/instances_train2017.json",
+      "images": 34111,
+      "annotations": 496700,
+      "categories": 7
+    }
+  ],
+  "stage1_subset_annotation_checks": [
+    {
+      "partition": "train2017",
+      "annotations_equal_field_for_field": 70276,
+      "image_records_equal_field_for_field": 2240
+    }
+  ],
+  "stage1_annotation_count": 70276,
+  "nudt": {
+    "sequences": 120,
+    "file_counts_by_role": {
+      "images": 12000,
+      "masks": 12000,
+      "masks_centroid": 12000,
+      "Mix": 12000
+    },
+    "trajectory_preview_pngs": 120,
+    "official_train_list_entries": 8000,
+    "official_test_list_entries": 2000,
+    "official_train_sequences": 80,
+    "official_test_sequences": 20,
+    "archive_sequences_not_in_these_two_lists": [
+      "Sequence100",
+      "Sequence102",
+      "Sequence103",
+      "Sequence104",
+      "Sequence106",
+      "Sequence107",
+      "Sequence108",
+      "Sequence109",
+      "Sequence110",
+      "Sequence111",
+      "Sequence112",
+      "Sequence113",
+      "Sequence114",
+      "Sequence115",
+      "Sequence116",
+      "Sequence117",
+      "Sequence118",
+      "Sequence120",
+      "Sequence98",
+      "Sequence99"
+    ],
+    "original_test_subset_pngs_exactly_equal": 6000
+  }
+}

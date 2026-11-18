@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE",
+  "pid": 1019985,
+  "start_unix": 1791968019.3270638,
+  "worker_sha256": "fb7f6b93bc50599c1a658875b9300f9982a078919aa578722f6cbf8bf3a62187",
+  "protocol_sha256": "d32c0161db33c34bccc8442f48bbd5d484b1c26812dea4f6a02217b1242105dd",
+  "train_continuation": "COMPLETE",
+  "train_revision": "COMPLETE",
+  "infer_continuation": "COMPLETE",
+  "infer_revision": "COMPLETE",
+  "score_continuationhistory": "COMPLETE",
+  "score_continuationcurrent": "COMPLETE",
+  "score_revisionhistory": "COMPLETE",
+  "score_revisioncurrent": "COMPLETE",
+  "score_summary": "COMPLETE",
+  "end_unix": 1791969617.3034606,
+  "result_decision": "FAIL_RECOVERY_OBJECTIVE_STOP_THIS_ROUND",
+  "report_completed_unix": 1791974305.1481385,
+  "result_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/RESULTS.md": "e642265c4604ce3db42d9c6f932d82f48b034e41fbe006185b3230f6935a7115",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/RESULTS.json": "6368fd924f310eb06d77ec14a4ec97127ad806995b7f4985c0f2ff792bef510b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/analysis/trace_summary/SUMMARY.json": "dab3b75e16951070f03c3c5e1bafb4e6f8cd5d60c87fcc06ef9bcebb627531a1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/analysis/TRAINING_ARTIFACT_CHECK.json": "2ac104d2cb97ab779a39ce9147e995ddbcb7df3d10a9ddff47eb889053131b15"
+  }
+}

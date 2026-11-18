@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-09T17:55:02.170823+00:00",
+  "status": "frozen before new outputs",
+  "reason": "Natural overlap showed different outputs for the same annotated frame; selected isolated track also has long low-response interval. Test whether this survives natural rewindowing.",
+  "intervention": "Change only start of real contiguous40-frame windows. No resampling/reversal/repetition/intensity edits/training. Same checkpoint seed46 native resolution spatial executor.",
+  "all_sequences": [
+    "DJI_0028_2",
+    "DJI_0028_4",
+    "DJI_0032_5",
+    "DJI_0047_3"
+  ],
+  "new_starts": [
+    12,
+    24,
+    48,
+    60,
+    84,
+    96
+  ],
+  "reuse_original_starts": [
+    0,
+    36,
+    72,
+    108,
+    120
+  ],
+  "common_contexts": "Use all11 windows starts0:12:120. Analyze individual outputs, not deployable GT-selected fusion.",
+  "primary": "For each same GT/frame with >=2 real contexts, no GT overlap and no matching ambiguity: point match disagreement and boxmax threshold crossing at0.1,0.5,0.9. Report selected tracks and alltracks.",
+  "secondary": "Quantify original matched/unmatched frames remaining or changing across windows, continuous raw probability. Treat any-context/oracle selection only as diagnostic upper envelope.",
+  "interpretation": "Joint intervention on surrounding content and within-window position. Does not isolate temporal mixer vs temporal padding vs content. Extra inference compute is not a new-method gain.",
+  "visibility": "No continuous target visibility proof; frames with overlap/truncation flagged."
+}

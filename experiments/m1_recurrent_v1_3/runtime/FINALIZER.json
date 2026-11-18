@@ -1,0 +1,14 @@
+{
+  "status": "WAITING_FOR_EVALUATED",
+  "pid": 1041144,
+  "start_unix": 1791983512.6183527,
+  "script_sha256": "7c6bcc71d4b962e474950937986ba7ee179dc879da1008f27a1e31019d64674f",
+  "protocol_sha256": "ffd7e09f92708bed1899a50bd268e72c17e646915ad17b90030b17b8ce8b3acd",
+  "analysis_source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/analysis/aggregate_trace.py": "775594afe9ed9f299e5ac582f4c6c771847ce76574185558b57d7ecac444c91e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/analysis/finish_when_evaluated.py": "7c6bcc71d4b962e474950937986ba7ee179dc879da1008f27a1e31019d64674f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/analysis/render_results.py": "45e2fb52cc50733f1876e179179a771fb5c6cae0224f452eac8d307bb602f52a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/analysis/run_pair.py": "da5208fe2245f07dc97607097c1ff2fdae41f5f6853adcc8172b7b5522a86f9d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/analysis/verify_training_artifacts.py": "7b1610818ea21651434032cba2adad7c6eb3e3973c9cf6d8edc358ec8e1ac982"
+  }
+}

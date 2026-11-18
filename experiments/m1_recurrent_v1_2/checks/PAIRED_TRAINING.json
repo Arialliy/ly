@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "steps_each": 128,
+  "endpoint": 2176,
+  "matching_fields": [
+    "initial_checkpoint_sha256",
+    "initial_model_state_sha256",
+    "original_state_sha256",
+    "source_sha256",
+    "settings",
+    "cache_sha256",
+    "trainable_parameter_names",
+    "trainable_parameters",
+    "exposure_digest_sha256"
+  ],
+  "runs_sha256": {
+    "V12Current": "1e17d657a0ee8b482f63795df5cfcdb41a54a563d16ed6ab4df345449483de2e",
+    "V12History": "24f44624ea1189f24f86f3f083b8607e12475a0a07292956d72ef206b714b0c2"
+  },
+  "exposure_digest_sha256": "b7cb235bd98cb01e9d39b425b5d05b512f632031e895b49e339fd5222b04aac9"
+}

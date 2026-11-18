@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE",
+  "completed_unix": 1791832655.6164074,
+  "code_review_and_fix_complete": true,
+  "reference_cpu_tests_passed": 30,
+  "local_cpu_tests_passed": 37,
+  "new_training": {
+    "D": 256,
+    "N": 256
+  },
+  "main_step": 2304,
+  "F_reused": true,
+  "gpus_used": [
+    0,
+    1,
+    2
+  ],
+  "all_task_gpu_jobs_finished": true,
+  "conclusion": "D/N add no target recovery or continuity improvement over F; N reduces O outside/unmatched area by one pixel. No expanded training justified by this screen.",
+  "artifact_sha256": {
+    "RESULTS.md": "a26ea6264f63cea4e0f1241a7ee5c600ef3a235fe11fa4d307a0e44069e1bd4d",
+    "RESULT_TABLES.md": "1de67bc4fc5b7fea1b11eea1d808d70f09204c7543cd1e9c988c51e73b2ffcc6",
+    "PROTOCOL_FREEZE.json": "ba1b345cc4d1dcd14acbad74e5fbf9db719cb2b6658c7618caca6d98bd63428e",
+    "VALIDATION.json": "9a27979d91c628e5b926ce7dcd2ddd0c2c88c041555b2f3556d64ddc8d72b918",
+    "evaluation/FINAL_REPORT_REVIEW.json": "c5a0d513b3575ac2101056e9bcb2dae86a549215d846230e2e066bdf31d690f8",
+    "evaluation/RESULT_REVIEW.json": "f2890152e5745638b480440577fa95ca6bdf1629ae3a05bf8d18ab1d5e42cc28",
+    "evaluation/DIRECTION.json": "f413cdda455821aff2f23fa990f82d05bdbff81876c7ac7fbb15c126e8278692",
+    "evaluation/SUMMARY_COMPLETE.json": "342c853663a751557b66e8129c40395ed13eb4c519d3029dc347ed64948d9390",
+    "evaluation/TRAINING_LOG_REVIEW.json": "6a239d359db96c9406e2fbbf46d7a83ed77dddd4b0f04bc16f9dc630c04bd5aa",
+    "evaluation/PREFLIGHT_INTERPRETATION.json": "449bccc2273bf64062ab78c7e8bec0888140f41080c4fb454a0c473862ec50ce",
+    "evaluation/ENDPOINT_TRAIN_DIAGNOSTICS.json": "a670801d90ef41e9093c145c1132176ba40a758060d97c43535d461c49e20653",
+    "training/D/run/RUN.json": "6eb03fe56a39b4d44ea943f26e0ede9f8fee81380c43d7a9b31814810e6c36e0",
+    "training/N/run/RUN.json": "57795b1245ec64bc1907b570ca70eb0a7c77af506c65f606ea026d5ba19da4f0"
+  },
+  "runtime_receipt_sha256": {
+    "final_validation.json": "82435859c246bb46e95c731856a4f11d3757a2482ec4ad25907d21dc10c3a82d",
+    "freeze.json": "800c9ace304d466545144d95f57ae40fd6ad81a014ecb63560bbc91582923070",
+    "infer_D_0026.json": "7aea29042b7eb8b2f7c4a6f58e8eabdd4890e1bba00de2dccf0998fcdfdaaf88",
+    "infer_D_0067.json": "ba03abaa5e780f017b55957f66d749e635f517edc7201020eaec112cb97e846b",
+    "infer_N_0026.json": "63935d4ca74cef6a2d47c611d8d4876eab5af1cf95b0790652f453d32c67cbb1",
+    "infer_N_0067.json": "a32eb07ca2c5f80d495b2335fea2f553129a8fe23eaa29ae82c6ee37bda0dc59",
+    "loss_cpu_final.json": "fbd5819a77e5b5b2612ae27009773309901cbcb32da1a6a9ae6bb9583bbfc0bf",
+    "loss_cpu_validation.json": "d1c4d03b7dd4f38caac8347f5927d238b52b1cf045ef8e7bc6d0dac4549014be",
+    "reference_import.json": "1fbab92fac720f4d35aba57dc6a988fa3bc789d053e2d858527a1eb11b8cd353",
+    "score_D.json": "0c37aa09fe6a952ee7418824f91963d273f72bde931618f1dd402250a1ee5d84",
+    "score_N_0026.json": "c50fec6498f94319b0db80eb94a16fb0450b68ba371bec1b29da2a801eda6d72",
+    "score_N_0067.json": "45ff99bd1f5bdd5db073492df22d45b6b99928f93c7e36e913a90d0d782e6ad6",
+    "summary.json": "84a2b88eced7006d9d483af6f9416945c52a65dbf557b8ac5b3531c88d44e778",
+    "train_D.json": "549c65993fd6a0c78d2fcf5ed3d936ad977440fdc6011a491ee190bb1c774204",
+    "train_N.json": "e76d8a730f21d2b5e3a43ccb02ae4951774b65d4957a022bdb2f3210ff8d9d45",
+    "weighting_preflight.json": "74b807d62baba77ff6b4cae64822342cfc7e59ef5d82e1b8af8d95083c6d8a21"
+  }
+}

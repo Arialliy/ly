@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-11-18T02:14:56.590881+08:00",
+  "venue_constraint": "none; user deferred ICME",
+  "withdrawn_directions": [
+    {
+      "direction": "动静转换/停走偏差/缺失观测下的证据积累",
+      "status": "withdrawn_by_user",
+      "reason": "用户要求足够创新性，拒绝通过收窄已有方向继续推荐",
+      "historical_report": "MOTION_TRANSITION_RESEARCH.md"
+    }
+  ],
+  "shelved_directions": [
+    {
+      "idea": "correspondence ambiguity and path-moment propagation",
+      "evidence": "../experiments/correspondence_premise_20261118_retry1/RESULTS.md"
+    }
+  ],
+  "active_mainline": null,
+  "recommended_candidate_ids": [
+    "run03:rgb_teacher_omissions"
+  ],
+  "diagnostic_reserve_ids": [
+    "run03:display_annotation_omissions"
+  ],
+  "previous_candidate_screen": "run02:L1 cheap block baselines explain much of the discrepancy in the two dev clips; do not recommend building a joint alarm model yet",
+  "selection_status": "priority given to testing whether distinct people persistently lack supervision under domain-appropriate teachers; no new method validated",
+  "previous_state": "RESEARCH_DIRECTION_STATE_20261118_010229.json",
+  "previous_report": "IDEA_REPORT_20261118_010141.md",
+  "authoritative_report": "IDEA_REPORT_20261118_021000.md",
+  "review_record": "../.aris/traces/idea-creator/2026-11-18_run03/review_record.json",
+  "empirical_status": "completed fixed-teacher count pilot, domain-adapted teacher replication, region alarm baseline and two data audits; no new training or human annotation study"
+}

@@ -1,0 +1,65 @@
+{
+  "repository": "https://github.com/wzzheng/StreamVGGT",
+  "commit": "05682bcb05683c4c71522e9cb618fc8ca349063c",
+  "commit_url": "https://github.com/wzzheng/StreamVGGT/commit/05682bcb05683c4c71522e9cb618fc8ca349063c",
+  "commit_date_utc": "2025-10-22T14:06:55Z",
+  "commit_message": "Update results.png",
+  "retrieved_utc": "2026-10-14T13:07:26.051431+00:00",
+  "purpose": "Unmodified source excerpts for reading only; no imports, weights or dependencies installed",
+  "git_tree_source": "https://api.github.com/repos/wzzheng/StreamVGGT/git/trees/05682bcb05683c4c71522e9cb618fc8ca349063c?recursive=1",
+  "license": "CC-BY-NC-SA-4.0, exact upstream LICENSE.txt preserved",
+  "local_changes": [],
+  "venue_evidence": {
+    "repository_about": "[ICLR 2026] Streaming 4D Visual Geometry Transformer",
+    "repository_url": "https://github.com/wzzheng/StreamVGGT",
+    "official_program": "https://iclr.cc/Downloads/2026",
+    "official_program_paper_link": "https://iclr.cc/virtual/2026/poster/10011495",
+    "paper_version": "https://arxiv.org/html/2507.11539v2",
+    "paper_title_v2": "Streaming Visual Geometry Transformer",
+    "paper_v2_date": "2026-03-31",
+    "openreview": "https://openreview.net/forum?id=5APgTKsnx8",
+    "openreview_access": "Browser verification screen; not used as decision evidence"
+  },
+  "files": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/README.md",
+      "retrieval_url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/README.md",
+      "bytes": 7734,
+      "sha256": "176d4190b3e77d30ca25ecbf85d0a7522e3fed4b781a32cc26884b4c81f63144",
+      "git_blob_sha1": "1912bb7dc6cd8aaf7f34a6f69a3f2c382871d608",
+      "matches_official_git_tree": true
+    },
+    "LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/LICENSE.txt",
+      "retrieval_url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/LICENSE.txt",
+      "bytes": 20983,
+      "sha256": "e0eb0aae5e2658b11ad65864bca446e7ed1d59a461ff02395b9e637bf41052e4",
+      "git_blob_sha1": "cf42a77899618d04eee0a269341b968c83c29e48",
+      "matches_official_git_tree": true
+    },
+    "src/streamvggt/layers/attention.py": {
+      "url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/layers/attention.py",
+      "retrieval_url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/layers/attention.py",
+      "bytes": 3919,
+      "sha256": "9e93c86005709195cc54da2cc417c1edcdcd7b32d3ad0b2427c27b8085df917b",
+      "git_blob_sha1": "b25b9c0d52481d63076f1bc5b776c8690c3445d8",
+      "matches_official_git_tree": true
+    },
+    "src/streamvggt/layers/block.py": {
+      "url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/layers/block.py",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/wzzheng/StreamVGGT@05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/layers/block.py?download=1",
+      "bytes": 9982,
+      "sha256": "d10b39e357042d627133bfeb8cf12e6561e20c68e19c33c85a41eb5acfc22585",
+      "git_blob_sha1": "2450405388160bdf423fef7500dcd746c2e0069c",
+      "matches_official_git_tree": true
+    },
+    "src/streamvggt/models/aggregator.py": {
+      "url": "https://raw.githubusercontent.com/wzzheng/StreamVGGT/05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/models/aggregator.py",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/wzzheng/StreamVGGT@05682bcb05683c4c71522e9cb618fc8ca349063c/src/streamvggt/models/aggregator.py",
+      "bytes": 15175,
+      "sha256": "3cf86125bdeb0d54a48c3c39d336bdfd37b0bc3c7388c18e20d390f700b0da20",
+      "git_blob_sha1": "c2e651840b9c2c50a40a365965ec696fc96eb32b",
+      "matches_official_git_tree": true
+    }
+  }
+}

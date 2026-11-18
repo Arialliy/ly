@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "execution": "CPU synthetic score fixtures only; no real confirmation outcomes read",
+  "checks": [
+    "exact rational budget and tie-breaking",
+    "no-feasible-point failure",
+    "immutable calibration",
+    "official threshold remains 0.5",
+    "object/frame alignment after reordering",
+    "label mismatch rejection",
+    "longest missed run breaks at annotation gaps",
+    "gain/loss counts",
+    "fused-only cannot pass stage1",
+    "four descriptive tables and aggregate results"
+  ]
+}

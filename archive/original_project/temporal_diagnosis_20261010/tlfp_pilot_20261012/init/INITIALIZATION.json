@@ -1,0 +1,13 @@
+{
+  "seed": 46,
+  "files": {
+    "S.pth": "ddea6e70af7578a2be85b037554a144c1155f4e6951a5fd5842c5b4016cf6f2a",
+    "COMMON_SPATIAL.pth": "89ed76fc53c0e3fbe97de91c1203d33924a22980e7237d9a4b05eeef8aa2f2e8",
+    "T.pth": "4d91b5cbca55c526f791bf6e173eab67d98cd44ea663450d218acbc9b73a0a6c"
+  },
+  "S_parameters": 100,
+  "T_parameters": 296,
+  "common_center_sigma_scale_equal": true,
+  "neighbor_kernels_zero": true,
+  "trained_weights_used": false
+}

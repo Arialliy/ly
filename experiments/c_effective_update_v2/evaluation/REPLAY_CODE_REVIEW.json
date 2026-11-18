@@ -1,0 +1,93 @@
+{
+  "status": "PASS_STATIC_EXECUTION_CONTRACT",
+  "reviewer": "/root/endpoint_recover",
+  "scope": "Final static review of exact archived-endpoint replay and added object-level readouts; no optimizer or numeric tests rerun",
+  "reviewed_sha256": {
+    "code/replay_effect.py": "cbb928eec28a6cb2974007394e3d11a43df136e1f507e63eae3cd30726245252",
+    "code/measure_detail.py": "483d3c4a47ecccd482e8e9beed1b42304cfc22affea44692082284cc4436cd55",
+    "code/manifest_data.py": "698d6efff484b3fdde0cb6a022eacdde61424ea534c3486e6a95c8d1f148c2ef",
+    "code/effect_common.py": "8ddd92b8bc65549342ff6d8fffa29db391bdc270b467736876a1842f3c13b7a2",
+    "code/runtime.py": "9a9e28b2eb7bafea2633adf013a98a4721fc16833ae2768023e45ace2342292a",
+    "replay/endpoints.npz": "0af649d3080e05fb12ec364390d139474b6ce05bfb36345527eea9bb2cecb0f0",
+    "replay/RECONSTRUCTION.json": "3950b5c1844454940ca62d43294cad0895a53a79b2d4395b2961d12b069b23a6",
+    "replay/ENDPOINT_AUDIT.json": "eb88a28dd75f149a82edf82ec2f6571e8a4eb58ae4465e20be7fd6cf0e7c0205"
+  },
+  "checks": [
+    {
+      "check": "Syntax of runner, readout, metadata, common helpers and runtime",
+      "result": "PASS"
+    },
+    {
+      "check": "Exact archive endpoint by historical update pair and condition replaces naive theta+delta",
+      "result": "PASS"
+    },
+    {
+      "check": "Each endpoint retains initial vector, FP32 difference and full old-model SHA assertions",
+      "result": "PASS"
+    },
+    {
+      "check": "CPU endpoint audit validates 27 archive endpoints against old complete-model SHA and old FP32 delta bytes",
+      "result": "PASS",
+      "evidence": "replay/ENDPOINT_AUDIT.json"
+    },
+    {
+      "check": "Each condition reloads F2304 full state before parameter substitution, without accumulation",
+      "result": "PASS"
+    },
+    {
+      "check": "Runner invokes neither backward/autograd.grad nor optimizer.step; forward/risk/measurement run under no_grad",
+      "result": "PASS"
+    },
+    {
+      "check": "Original complete Adam state hash, initial model hash, parameter order, old initial RNG and inputs/cohort hashes are verified",
+      "result": "PASS"
+    },
+    {
+      "check": "Frozen frontend, BN, RNG and untouched optimizer/None gradients checked before COMPLETE",
+      "result": "PASS"
+    },
+    {
+      "check": "Every old baseline, old update readout and unchanged-pair observer readout must exactly reproduce prior stored metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "Legacy aggregate readouts reused unchanged; detail only adds original fixed-cohort per-object values and positions",
+      "result": "PASS"
+    },
+    {
+      "check": "Weak margin preserves FP32 qpositive-qnegative before Python conversion; qnegative retains original fixed ROI risk result",
+      "result": "PASS"
+    },
+    {
+      "check": "Source/video-scoped track identities, uncertain reliable identities and scoped background reference IDs retained",
+      "result": "PASS"
+    },
+    {
+      "check": "negative_reference_indices no longer overwrites scoped negative_reference_ids",
+      "result": "PASS"
+    },
+    {
+      "check": "Runner writes only new pair/shard outputs and aborts if a destination already exists",
+      "result": "PASS"
+    },
+    {
+      "check": "Freeze manifest verified before and after each shard; root must include endpoint archive and review sources in final freeze",
+      "result": "PASS"
+    }
+  ],
+  "resolved_findings": [
+    "Naive FP32 initial+delta replaced by exact whole-model-hash-verified archive endpoints.",
+    "Scoped negative_reference_ids preserved by separate negative_reference_indices field."
+  ],
+  "remaining_blockers": [],
+  "review_execution": {
+    "model_forward_calls": 0,
+    "gradient_calls": 0,
+    "new_optimizer_steps": 0,
+    "endpoint_recovery_repeated": false
+  },
+  "limits": [
+    "Static PASS does not claim GPU replay completed; exact baseline/endpoint readout assertions remain runtime gates.",
+    "Pair-selection and source-balanced scientific decision code are outside this runner/readout review."
+  ]
+}

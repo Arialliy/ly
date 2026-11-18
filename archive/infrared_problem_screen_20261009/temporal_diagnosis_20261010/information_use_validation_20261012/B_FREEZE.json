@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_BEFORE_FEATURE_EXTRACTION_AND_READOUT",
+  "frozen_utc": "2026-10-11T18:59:29.057713+00:00",
+  "code_sha256": {
+    "code/probe_geometry.py": "2a9d8fc48f7dafbe73aa69e56a1389609a652ec6cdad3bd9e876cec4b4456ed9",
+    "code/probe_readout.py": "cdfa1106d448a4600afa77ca198e1baebe0be492f53dff216066a0a7df34edc8",
+    "code/extract_probe_features.py": "d4490503b569a84eb9bddb56bd5240cea48ac040538525ea5c81ee8f9f3a4a42"
+  },
+  "samples_sha256": "5303454a5e0c852a32dd693aef042a1e62b516f9d198b7469bf9f2bf5e3e86bf",
+  "sample_proposal_sha256": "5303454a5e0c852a32dd693aef042a1e62b516f9d198b7469bf9f2bf5e3e86bf",
+  "protocol_sha256": "1746483869fae2f9c794ac80f3bf6600f1320fa9273a7fe4f5bc6ae78511071c",
+  "coverage_sha256": "165470985769a7782072f6e977a5bde7722d60ebdca7fd4f5f7f3b94689811e5",
+  "preparation_check_sha256": "f4a5c90443582d2477c4461eb80a4fa1a80b9fd54b9974f414669399c36f01ce",
+  "feature_model": "released_DeepPro_Plus_layer1",
+  "feature_model_updates": false,
+  "probe_fit_authorized": true,
+  "probe_readout_sha256": "cdfa1106d448a4600afa77ca198e1baebe0be492f53dff216066a0a7df34edc8",
+  "seed": 46,
+  "readout_trials": {
+    "P0": 1,
+    "P1": 1,
+    "P2": 1
+  },
+  "scope_limit": "Only45train/19devreferenceedges,43train/18devtargetframes;train3/8sources;dev0026oneframe and0067seventeenframes;cannot establish lack of information for entire4342low group. P2 is annotated-box-exterior reference, feature contamination possible.",
+  "new_detector_training_authorized": false,
+  "old_negative_decisions_preserved": true
+}

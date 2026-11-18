@@ -1,0 +1,12 @@
+{
+  "sequence": "DJI_0026_2",
+  "center": 19,
+  "max_abs_error_per_map": {
+    "original": 0.0,
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "pixels_per_map": 327680
+}

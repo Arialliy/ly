@@ -1,0 +1,56 @@
+{
+  "status": "FROZEN_BEFORE_SUPPLEMENTAL_IMAGE_INSPECTION",
+  "primary_selection_unchanged": {
+    "VISUAL_SAMPLE_INDEX.csv": "88837d0ba029d24bb74d10cfd2a394c4530ca11e8eab7129c81c80d2ee30f9fb",
+    "SAMPLE_SELECTION.json": "a2a793ca78b1fd846d371025b9babe65ea86a5c32f7a44d77ef6e22ccd346516"
+  },
+  "reason": "Primary track-ID sampling lacked some already documented sequence/category/response strata; coverage supplement requested by root before supplemental image review.",
+  "procedure": "For each missing (sequence,category,response layer), choose lowest track_id, then source-frame sorted item floor(n/2); retain original 12 unchanged.",
+  "role": "Exploratory category coverage only; no random prevalence or independent confirmation claim.",
+  "input_objects_sha256": "e9b44c8b9e3267c7e20b65e2979b715d004fc667c6bcc4f34a2f6dfb68fb0107",
+  "script_sha256": "dc551994a47e7d20f12bfdd3ded1a41f93ea790066a73849e0800dcf0f9c97a7",
+  "supplement_count": 4,
+  "total_count": 16,
+  "selected_strata": [
+    {
+      "sequence": "DJI_0067_2",
+      "category": "car",
+      "response_layer": "low_box_lt_0.5",
+      "population_frames": 183,
+      "population_tracks": 23,
+      "selected_track": 7700501,
+      "annotation_id": 867462
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "category": "cyclist",
+      "response_layer": "high_box_ge_0.5",
+      "population_frames": 10,
+      "population_tracks": 5,
+      "selected_track": 7702006,
+      "annotation_id": 877979
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "category": "cyclist",
+      "response_layer": "low_box_lt_0.5",
+      "population_frames": 976,
+      "population_tracks": 33,
+      "selected_track": 7701069,
+      "annotation_id": 875774
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "category": "pedestrian",
+      "response_layer": "low_box_lt_0.5",
+      "population_frames": 1950,
+      "population_tracks": 51,
+      "selected_track": 7701510,
+      "annotation_id": 876372
+    }
+  ],
+  "outputs_sha256": {
+    "SUPPLEMENTAL_VISUAL_SAMPLE_INDEX.csv": "41d2e9baba2818a90d939fbed5bfbb7c53a36fcafb5e8a31cf5d38fe7ff42ba6",
+    "ALL_VISUAL_SAMPLE_INDEX.csv": "edf06f91f7bef2fdef9fe69bc77f8137bf0c23c893e2a0164cf112d6aa4c9099"
+  }
+}

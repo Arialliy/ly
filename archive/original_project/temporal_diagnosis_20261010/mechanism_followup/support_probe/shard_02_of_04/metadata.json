@@ -1,0 +1,113 @@
+{
+  "status": "COMPLETE",
+  "created_utc": "2026-10-09T19:35:02.820315+00:00",
+  "purpose": "GT-conditioned internal shared-support ablation of a frozen DeepPro checkpoint.\n\nDropping exclusive projected terms is a potentially out-of-distribution internal\nintervention, not a naturally occurring context, deployable gain, or evidence that\na label is visible. Original model, windows, frames, and weights stay frozen.\n",
+  "cohort_total": 1417,
+  "shard_total": 354,
+  "selected_total": 354,
+  "shard_index": 2,
+  "num_shards": 4,
+  "limit": 0,
+  "wrapper_sha256": "80b249869c6779d53a45bb8a29018a8c72747ba8a2c2b6d5e705af6f0803e588",
+  "frozen_dependency_sha256": "fa2004b402add5a028f45af101c0604dd225b3e69168bc9f3acaef02bfebb238",
+  "input_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/result_stratification/context/same_gt_frame_choices.csv": "7bb93565a3cfcf0ccac1aa7b97bf2398ce01e77171e1ff8768ccb35bb833accd",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/window_offset_experiment/analysis/DJI_0028_2/per_context_all_tracks.csv": "cd028f9928981ee10cc33757eb555b7915cdc53481d31e7f741c23f8b8264db1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/window_offset_experiment/analysis/DJI_0028_4/per_context_all_tracks.csv": "9751a49f08fc582085ecb59f5892eb9ced08d2c6e63f335230510a264e27e8d3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/window_offset_experiment/analysis/DJI_0032_5/per_context_all_tracks.csv": "3dc41a8e74c2495884d90b722bee165603456aa17835f54a4359cc560b7becce",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/window_offset_experiment/analysis/DJI_0047_3/per_context_all_tracks.csv": "b0f656df28e7cb7708ef05d69927f4be95dc8877375700abd8ddfd2fc4ba7b19",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_2/LAUNCH_TILED.json": "5637ec263e121e42f3c0e2bf13751779dbf69370b4ba4bf9367202e404e7920e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/LAUNCH_TILED.json": "04bec2c27466ecd9c06a454e96dfcca1ddc7ce414b2065579ddd66096845a462",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0032_5/LAUNCH_TILED.json": "a55e59674aa14e07951c6975e5bfe2ee7ab36a13731370128ed75c24d62952b3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0047_3/LAUNCH_TILED.json": "69d7f859078588afff78d1f5819f55558e4a86db5fdb395a3ed2bbe283f9e4ac"
+  },
+  "raw_inputs_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/real_motion_stage2/selected_raw/raw_frames.npy": "7a9f0f8b24adec5e254d3c3d2c6a156b141a026721617fba4191d84b7e2cec0c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/raw_frames.npy": "0b19d81ba7dee62a1b0248298ffb867b393993c3c1389d9f97d552a8929977e6",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0032_5__4801536__00063__00222/raw_frames.npy": "3477d3e4690e385f2aa832ba3acfc4d92029288029347863fa35091b2ef9ef32",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0047_3__4621500__00000__00159/raw_frames.npy": "68405aec2cf82a19c8bbf37e337d1645e915be09ebfb2ce0822e2f0fa1e00463"
+  },
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "layer_source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/basic.py": "000d204655d38ba503a2ad01fc2544fd5136c95dc3fda48dc95f5d059e7827c7",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/TPro.py": "90e35e9578ae4e167de5277c2bd88a004dd1ce3bc38feacc8f80200e7aefce87"
+  },
+  "checkpoint_epoch": 21,
+  "receptive_radius_tyx": [
+    8,
+    9,
+    9
+  ],
+  "seed": 46,
+  "tf32": false,
+  "deterministic_algorithms": true,
+  "device": "cuda:0",
+  "torch": "2.7.0+cu128",
+  "numpy": "2.2.5",
+  "python": "3.11.12 | packaged by conda-forge | (main, Apr 10 2025, 22:23:25) [GCC 13.3.0]",
+  "command": [
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mechanism_followup/run_support_probe_frozen.py",
+    "--shard-index",
+    "2",
+    "--num-shards",
+    "4",
+    "--progress-every",
+    "50"
+  ],
+  "lambda_values": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "projection": "q_shared=sum_shared(w*F)/sqrt40+bias; q_exclusive=sum_exclusive(w*F)/sqrt40; q_lambda=q_shared+lambda*q_exclusive",
+  "global_shared": "Same shared absolute-frame frontend features computed once on real union window plus up to 8 real frames either side; each original output row retains its own coefficients and bias.",
+  "dependency_safe_shared": "Ssafe={u in intersection: u-8>=shared_first and u+8<=shared_last}; use unified global frontend features at these times and each original row weight+bias. Every feature temporal dependency is inside shared raw frames. Empty Ssafe yields eligible=0 and blank responses, not zeros.",
+  "replay_probability_tolerance": 0.0001,
+  "logit_endpoint_tolerance": {
+    "atol": 0.0001,
+    "rtol": 0.0001
+  },
+  "fixed_peak_rule": "Original probability argmax, first row-major tie; tie counts recorded.",
+  "limitations": [
+    "Exclusive-term deletion is a potentially out-of-distribution internal activation ablation, not a natural input intervention.",
+    "Ordinary shared features can depend on nonshared raw frames within radius 8; only safe_shared features restrict all temporal dependencies to common raw content.",
+    "safe_shared is still an out-of-distribution projection subset; eligibility and whether the current frame lies in Ssafe must accompany subgroup results.",
+    "Strong internal response does not establish physical target visibility or deployable detection gain.",
+    "GT boxes and prior extreme responses select diagnostic windows; no labels are model input.",
+    "No full-frame false-alarm or point-matching evaluation; strong response alone is not a new detection.",
+    "Four development clips and target frames within tracks are not independent random samples."
+  ],
+  "completed": 354,
+  "elapsed_seconds": 10.76681557999109,
+  "maximum_errors": {
+    "a_replay_abs_error": 1.341104507446289e-06,
+    "a_projection_vs_official_max_abs_error": 7.152557373046875e-07,
+    "b_replay_abs_error": 2.9802322387695312e-06,
+    "b_projection_vs_official_max_abs_error": 5.960464477539062e-07,
+    "a_shared_exclusive_reconstruction_max_abs_error": 3.5762786865234375e-07,
+    "a_global_shared_interior_max_abs_error": 1.52587890625e-05,
+    "a_endpoint_4_max_abs_probability_error": 3.516674041748047e-06,
+    "a_endpoint_4_max_abs_logit_error": 3.814697265625e-05,
+    "a_endpoint_6_max_abs_probability_error": 2.4437904357910156e-06,
+    "a_endpoint_6_max_abs_logit_error": 3.0517578125e-05,
+    "b_shared_exclusive_reconstruction_max_abs_error": 3.5762786865234375e-07,
+    "b_global_shared_interior_max_abs_error": 1.52587890625e-05,
+    "b_endpoint_4_max_abs_probability_error": 4.708766937255859e-06,
+    "b_endpoint_4_max_abs_logit_error": 4.57763671875e-05,
+    "b_endpoint_6_max_abs_probability_error": 4.351139068603516e-06,
+    "b_endpoint_6_max_abs_logit_error": 4.57763671875e-05
+  },
+  "replay_threshold_disagreements": {
+    "a_replay_threshold_disagreement_0_1": 0,
+    "a_replay_threshold_disagreement_0_5": 0,
+    "a_replay_threshold_disagreement_0_9": 0,
+    "b_replay_threshold_disagreement_0_1": 0,
+    "b_replay_threshold_disagreement_0_5": 0,
+    "b_replay_threshold_disagreement_0_9": 0
+  },
+  "result_sha256": "8e57641c118c5744fd1761b3343312c6403d5f391cc202d20f7b1842d43d3780",
+  "selected_pairs_sha256": "ca0c39d92d6bf08f746eb716138296113b45b46fdf28dbd7ae27514f7dea7eee"
+}

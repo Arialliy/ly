@@ -1,0 +1,384 @@
+{
+  "status": "PASS_IMPLEMENTATION_CHECKS_ONLY",
+  "scope": "finite_reference_integration_only",
+  "device": "cuda",
+  "torch_version": "2.7.0+cu128",
+  "cuda_version": "12.8",
+  "seed": 46,
+  "dtype": "float32",
+  "amp": false,
+  "tf32": false,
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "loader_sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "original_state_initial_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "source_modules": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/basic.py": "000d204655d38ba503a2ad01fc2544fd5136c95dc3fda48dc95f5d059e7827c7",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/TPro.py": "90e35e9578ae4e167de5277c2bd88a004dd1ce3bc38feacc8f80200e7aefce87"
+  },
+  "code_sha256": {
+    "haar_reference.py": "ddd951b66c954ade79816bd57ee3d8654b468b1c71128065bc9e1214a26759e4",
+    "framewise_adapter.py": "fa470abf8d058c91baf3d35623e54fbea860c3b38cc3e9800071d4a181765803",
+    "check_deeppro_integration.py": "ff69bd7a1e8770838e51cb9daa854cee5eee7ff0fddd4c3f0214abeba8e4cef3"
+  },
+  "input": {
+    "split": "TRAIN",
+    "sequence": "DJI_0309_1",
+    "window_start_index": 9,
+    "window_length": 40,
+    "original_plan_crop_yx": [
+      333,
+      383
+    ],
+    "actual_crop_yx": [
+      332,
+      382
+    ],
+    "crop_hw": [
+      97,
+      101
+    ],
+    "raw_sha256": "4c07e20f3e954585c37445bd042d8b613b9a13d0eca19462d77e30eb70d53446",
+    "normalized_tensor_sha256": "5079ee2e7c5495ee115e77f310e14ce4ec1ca40b0d6a1d091f5d1d04b2bcd911"
+  },
+  "no_dev_data": true,
+  "detector_training_run": false,
+  "detector_metrics_evaluated": false,
+  "formal_checkpoint_written": false,
+  "original_before_vs_after_parameter_freeze": [
+    {
+      "shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": false,
+      "max_abs_error": 1.52587890625e-05,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": false,
+      "max_abs_error": 3.24249267578125e-05,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    }
+  ],
+  "zero_gate_feature_layout": {
+    "before_stride": [
+      12540160,
+      391880,
+      9797,
+      101,
+      1
+    ],
+    "after_stride": [
+      12540160,
+      391880,
+      9797,
+      101,
+      1
+    ],
+    "same_values": true,
+    "same_stride": true
+  },
+  "zero_gate_original_outputs": [
+    {
+      "shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": false,
+      "max_abs_error": 1.52587890625e-05,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": false,
+      "max_abs_error": 3.24249267578125e-05,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    }
+  ],
+  "zero_gate_identical_freeze_state_outputs": [
+    {
+      "shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        8,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": true,
+      "max_abs_error": 0.0,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": true,
+      "max_abs_error": 0.0,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true
+    }
+  ],
+  "original_parameters": 70913,
+  "new_parameters": 100,
+  "first_backward": {
+    "objective": "mean(raw_logits ** 2); gradient witness only",
+    "value": 294.620361328125,
+    "scale_grad": -5.07126522064209,
+    "operator": {
+      "sigma": {
+        "finite": true,
+        "abs_sum": 0.0
+      },
+      "attention.weight": {
+        "finite": true,
+        "abs_sum": 0.0
+      }
+    }
+  },
+  "one_sgd_update_gradient_witness": {
+    "steps": 1,
+    "lr": 0.0001,
+    "weight_decay": 0,
+    "scale_after": 0.0005071265040896833,
+    "second_backward_operator": {
+      "sigma": {
+        "finite": true,
+        "abs_sum": 0.00013894139556214213
+      },
+      "attention.weight": {
+        "finite": true,
+        "abs_sum": 0.40704503655433655
+      }
+    },
+    "original_gradients_absent": true,
+    "not_a_detection_training_result": true
+  },
+  "active_gate_frame_chunk_checks": [
+    {
+      "shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": true,
+      "max_abs_error": 0.0,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true,
+      "frame_chunk": 1
+    },
+    {
+      "shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": true,
+      "max_abs_error": 0.0,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true,
+      "frame_chunk": 8
+    },
+    {
+      "shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "other_shape": [
+        1,
+        32,
+        40,
+        97,
+        101
+      ],
+      "finite": true,
+      "bitwise_value_equal": true,
+      "max_abs_error": 0.0,
+      "atol": 0.0002,
+      "rtol": 2e-05,
+      "passed": true,
+      "frame_chunk": 17
+    }
+  ],
+  "active_gate_changes_output": {
+    "scale": 0.25,
+    "gate_tanh": 0.24491865932941437,
+    "attention_probe": "seed46 CPU normal std0.02; diagnostic, not learned",
+    "attention_probe_sha256": "c1a55888eeb65a503439e9f97745f4cfb0d20d0e1ffaa1461b94243cf85114ec",
+    "max_abs_errors_vs_original": [
+      1.8732911348342896,
+      6.663944244384766
+    ]
+  },
+  "active_gate_spatial_tile_checks": {
+    "core_hw": [
+      47,
+      49
+    ],
+    "halo": 20,
+    "input_crop_hw": [
+      97,
+      101
+    ],
+    "absolute_origin_yx": [
+      332,
+      382
+    ],
+    "even_input_tile_starts": true,
+    "right_bottom_odd_global_boundary_preserved": true,
+    "original_frontend_radius": 9,
+    "reference_maximum_reach": 9,
+    "output_checks": [
+      {
+        "shape": [
+          1,
+          8,
+          40,
+          97,
+          101
+        ],
+        "other_shape": [
+          1,
+          8,
+          40,
+          97,
+          101
+        ],
+        "finite": true,
+        "bitwise_value_equal": false,
+        "max_abs_error": 3.635883331298828e-06,
+        "atol": 0.0002,
+        "rtol": 2e-05,
+        "passed": true
+      },
+      {
+        "shape": [
+          1,
+          40,
+          97,
+          101
+        ],
+        "other_shape": [
+          1,
+          40,
+          97,
+          101
+        ],
+        "finite": true,
+        "bitwise_value_equal": false,
+        "max_abs_error": 9.5367431640625e-06,
+        "atol": 0.0002,
+        "rtol": 2e-05,
+        "passed": true
+      }
+    ]
+  },
+  "original_state_final_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "original_parameters_and_all_bn_buffers_unchanged": true,
+  "original_eval_after_wrapper_train": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "max_cuda_memory_allocated_bytes": 1768730624,
+  "elapsed_seconds": 2.039817344979383
+}

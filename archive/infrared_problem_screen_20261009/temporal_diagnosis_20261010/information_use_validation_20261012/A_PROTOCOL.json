@@ -1,0 +1,112 @@
+{
+  "name": "A_same_trained_E2_residual_onoff",
+  "date": "2026-10-12",
+  "purpose": "Verify implementation/update/inference chain and actual finite residual contribution; not E2 revival or new training",
+  "checkpoint": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E2/run/final_model.pth",
+  "seed": 46,
+  "steps": 0,
+  "network_updates": false,
+  "conditions": {
+    "on": "Exact trained E2 mutual mode",
+    "off": "Same E2 trained original and added tensors; only aggregation.mode=off returns F unchanged"
+  },
+  "input": "Same two frozen development clips 160x512x640 uint8, normalization85.0799/47.4845",
+  "inference": {
+    "window_length": 40,
+    "starts": [
+      0,
+      24,
+      36,
+      60,
+      72,
+      96,
+      108,
+      120
+    ],
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ],
+    "tile_core": 128,
+    "tile_halo": 20,
+    "threshold": 0.5,
+    "fusion": "sigmoid per actual window raw logits, then pixelwise probability max",
+    "U_budget": 4015
+  },
+  "target_universe": {
+    "target_frames": 5200,
+    "target_tracks": 130,
+    "clips": 2,
+    "target_arrangement_rows": 10400,
+    "cohorts": "existing4342 low,4170 extreme,646 protection; unchanged"
+  },
+  "background": {
+    "grid": "reuse old local_tiles/global_tiles exactly, same pixel crop dimensions as target",
+    "exclusion": "all annotation bboxes with2px margin using old crop_indices",
+    "ranking": "published-checkpoint original fused logits; local and global maximum separately",
+    "tie_break": "smallest y then x",
+    "selected_per_target_arrangement": {
+      "hard_local": 1,
+      "hard_global": 1
+    },
+    "missing": "record missing; do not substitute; valid block count<20 retained as insufficient",
+    "not_selected_using_new_onoff": true
+  },
+  "logit_quantities": [
+    "max_on,max_off and difference of maxima",
+    "on/off at frozen release peak and at off peak; also on peak",
+    "region mean on/off and mean delta",
+    "region absolute-delta mean and fraction delta>0/<0",
+    "whole-frame and whole-clip pixel delta quantiles"
+  ],
+  "signed_delta_quantiles": [
+    0.01,
+    0.05,
+    0.5,
+    0.95,
+    0.99
+  ],
+  "absolute_delta_quantiles": [
+    0.5,
+    0.9,
+    0.99
+  ],
+  "logit_source": "actual paired model forward values FP32; never invert probabilities; raw perwindow values persisted",
+  "on_result_reuse": "Every new on probability map must be bitwise identical to cached old E2 map before cached scoring reuse; otherwise fail and review rather than silently reuse",
+  "residual": "Capture actual output_projection(Wo*DeltaF) and preaggregation F; sum channel squares on nonoverlapping tile cores; per frozen region/window Frobenius norms; object equal aggregation over legal covering windows",
+  "matching": "existing component peak/bbox one-to-one scorer unchanged, all validGT used for U, strictsmall for M",
+  "interpretation": [
+    "binary match totals alone insufficient",
+    "logit or residual change not necessarily detection improvement",
+    "final E2 still subject to old U/background/protection requirements",
+    "training/posthoc ablation does not establish broad causal or temporal root cause"
+  ],
+  "implementation_reuse": [
+    "old MODULE_TESTS137",
+    "TRAIN_LOSS_CHECK13",
+    "NETWORK_PREFLIGHT24",
+    "TRAINING_AUDIT216",
+    "old final scoring/source audits"
+  ],
+  "outputs": [
+    "A_REGIONS.csv",
+    "onoff/<sequence>/windows raw on/off logits",
+    "onoff/<sequence>/RESIDUAL_REGION_WINDOWS.csv",
+    "predictions/E2_off/<sequence> probability caches",
+    "A_evaluation scoring",
+    "A_LOGIT_REGIONS.csv",
+    "A_LOGIT_SUMMARY.csv",
+    "A_DETECTION_SUMMARY.csv",
+    "A_BRANCH_CHAIN_AUDIT.json"
+  ]
+}

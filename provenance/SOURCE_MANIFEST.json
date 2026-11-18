@@ -1,0 +1,394 @@
+{
+  "created_utc": "2026-10-12T12:13:50.930127+00:00",
+  "canonical_project_root": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009",
+  "source_content_changed": false,
+  "source_file_count": 55,
+  "source_bytes": 445065,
+  "files": [
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/README.md",
+      "path": "sources/official_deeppro/README.md",
+      "role": "official_source",
+      "bytes": 8645,
+      "sha256": "58505f280be693b75bd2a125299ee1349e349f4db688f5da0fa7aa13d1d42150"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/ShootingRules.py",
+      "path": "sources/official_deeppro/ShootingRules.py",
+      "role": "official_source",
+      "bytes": 2284,
+      "sha256": "888d4a26ff2877dc64550bc919fa60bf18e04e0af795aa8e8c304aa0b1e5c4e2"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/attribution/core.py",
+      "path": "sources/official_deeppro/attribution/core.py",
+      "role": "official_source",
+      "bytes": 217,
+      "sha256": "aa029cc84dd4e2bb784153011fcf1a20c483e23131c8193024c5f56d269507ac"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/attribution/utils.py",
+      "path": "sources/official_deeppro/attribution/utils.py",
+      "role": "official_source",
+      "bytes": 243,
+      "sha256": "f40f0a64c92f4c6a12698cbd8e17c4cf8a1c97a968c2377591b06e0399546771"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/data_utils/TestDataLoader.py",
+      "path": "sources/official_deeppro/data_utils/TestDataLoader.py",
+      "role": "official_source",
+      "bytes": 7160,
+      "sha256": "03210e84ac9acfc3fd85ef5bcd2c787cfc126e2580e622fca9c3297c3e1c022e"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/data_utils/TrainDataLoader.py",
+      "path": "sources/official_deeppro/data_utils/TrainDataLoader.py",
+      "role": "official_source",
+      "bytes": 8033,
+      "sha256": "ac94cf5bbfa2a4bcb76f5eeec0e047b999c76d1423afeb1a54136bf535ffa3d4"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "path": "sources/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+      "role": "official_checkpoint_model_snapshot",
+      "bytes": 3902,
+      "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/__init__.py",
+      "path": "sources/official_deeppro/networks/__init__.py",
+      "role": "official_source",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/TPro.py",
+      "path": "sources/official_deeppro/networks/layers/TPro.py",
+      "role": "official_source",
+      "bytes": 3813,
+      "sha256": "90e35e9578ae4e167de5277c2bd88a004dd1ce3bc38feacc8f80200e7aefce87"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/__init__.py",
+      "path": "sources/official_deeppro/networks/layers/__init__.py",
+      "role": "official_source",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/layers/basic.py",
+      "path": "sources/official_deeppro/networks/layers/basic.py",
+      "role": "official_source",
+      "bytes": 8268,
+      "sha256": "000d204655d38ba503a2ad01fc2544fd5136c95dc3fda48dc95f5d059e7827c7"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/losses/HAM_loss.py",
+      "path": "sources/official_deeppro/networks/losses/HAM_loss.py",
+      "role": "official_source",
+      "bytes": 2933,
+      "sha256": "cb8e07c2cc5a51d767ca5499c4134292fdbeba4e715c8e936e1a1570cca5271d"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/losses/HAM_loss_MultiFrame.py",
+      "path": "sources/official_deeppro/networks/losses/HAM_loss_MultiFrame.py",
+      "role": "official_source",
+      "bytes": 3228,
+      "sha256": "4a98c9ceeecc273068381262cf0a0688aa87b72f3b183a237da16e547f0de889"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/losses/HPM_loss_MultiFrame.py",
+      "path": "sources/official_deeppro/networks/losses/HPM_loss_MultiFrame.py",
+      "role": "official_source",
+      "bytes": 3232,
+      "sha256": "9c7b4bb994ffec7c324e59f2971eb27380d704ee2b347068aeb731dcfa064d0a"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/models/DeepPro-Plus.py",
+      "path": "sources/official_deeppro/networks/models/DeepPro-Plus.py",
+      "role": "official_source",
+      "bytes": 3902,
+      "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/models/DeepPro-Plus_forMovingScenes.py",
+      "path": "sources/official_deeppro/networks/models/DeepPro-Plus_forMovingScenes.py",
+      "role": "official_source",
+      "bytes": 5615,
+      "sha256": "2eb1e1f03da754403c55aa2d4016310f50bc19a23dfcf1c4d7ae8598107c20eb"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/models/DeepPro.py",
+      "path": "sources/official_deeppro/networks/models/DeepPro.py",
+      "role": "official_source",
+      "bytes": 6137,
+      "sha256": "ebd710ca3262bf6cace8d7f3a435e2761146c928c70c6d1fecaa5cc6d2a03473"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/models/__init__.py",
+      "path": "sources/official_deeppro/networks/models/__init__.py",
+      "role": "official_source",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/test.py",
+      "path": "sources/official_deeppro/test.py",
+      "role": "official_source",
+      "bytes": 10473,
+      "sha256": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/tools_forSatVideoIRSTD/seg2centroid_txt.py",
+      "path": "sources/official_deeppro/tools_forSatVideoIRSTD/seg2centroid_txt.py",
+      "role": "official_source",
+      "bytes": 3693,
+      "sha256": "7136020ac73f7fe1bb1253ca7140cfeaaf3eda20c519d34c83b7422440b65bac"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/train.py",
+      "path": "sources/official_deeppro/train.py",
+      "role": "official_source",
+      "bytes": 13058,
+      "sha256": "51d77e855ee798ee5b6371a130f2cab5b823ffe22a192ea52383d879f95f988d"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/write_results.py",
+      "path": "sources/official_deeppro/write_results.py",
+      "role": "official_source",
+      "bytes": 5462,
+      "sha256": "47984378234a8f6e1ec3e18d83a50af8b93cce52645f1e04042afe52f04654ef"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/analysis/analyze.py",
+      "path": "sources/temporal_diagnosis_20261010/analysis/analyze.py",
+      "role": "current_transitive_dependency",
+      "bytes": 26488,
+      "sha256": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/code/train_mutual.py",
+      "path": "sources/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/code/train_mutual.py",
+      "role": "current_transitive_dependency",
+      "bytes": 20078,
+      "sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/check_deeppro_integration.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/check_deeppro_integration.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 13565,
+      "sha256": "ff69bd7a1e8770838e51cb9daa854cee5eee7ff0fddd4c3f0214abeba8e4cef3"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/check_upstream_lfp.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/check_upstream_lfp.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 9426,
+      "sha256": "614f8163928ab19da679b3af01cb2f5b713fbc5dafb6241f30e424c40cac9a1d"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/framewise_adapter.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/framewise_adapter.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 6154,
+      "sha256": "fa470abf8d058c91baf3d35623e54fbea860c3b38cc3e9800071d4a181765803"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/haar_reference.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/haar_reference.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 6971,
+      "sha256": "ddd951b66c954ade79816bd57ee3d8654b468b1c71128065bc9e1214a26759e4"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/load_official_lfp.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/load_official_lfp.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 2682,
+      "sha256": "43f3a10daf60ed8325847b256852444faf0590d9b994816bcd23eff5150be0da"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/run_reference_checks.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/run_reference_checks.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 4183,
+      "sha256": "c657aa454a83e16a722963ee0dd2367e6f453b1a82a8a38ecf54d0ad41812323"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/test_adapter.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/test_adapter.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 5042,
+      "sha256": "33a20737dcf8f1a1f4dff41e0652aa78b1a11589496eb0db147cc75591894320"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/test_haar_reference.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/test_haar_reference.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 6460,
+      "sha256": "de8108072e14044dcf63d586f0f92d699802d853641419ba445fb5df41ef7f0b"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/test_upstream_loader.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/test_upstream_loader.py",
+      "role": "spatial_reference_and_tests",
+      "bytes": 1612,
+      "sha256": "acb8d0efe5fbeb582b8618212a14847669ae92a358fdccbb95549a3d1e9d8e19"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/upstream/NS_FPN.py",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/upstream/NS_FPN.py",
+      "role": "borrowed_author_source_reference_only",
+      "bytes": 11232,
+      "sha256": "4c293334e05c98256d91b535242316ac4e3c725e02cd4ba7ba81aa86f310409f"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/upstream/PROVENANCE.json",
+      "path": "sources/temporal_diagnosis_20261010/route_closeout_20261012/upstream/PROVENANCE.json",
+      "role": "borrowed_source_provenance",
+      "bytes": 502,
+      "sha256": "83a77028c1a52ba3b834d1257cb084a22040fa2dd48eba304d92be1f78ab38b0"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/score_pilot.py",
+      "path": "sources/temporal_diagnosis_20261010/stage1_goal/pilot/score_pilot.py",
+      "role": "current_transitive_dependency",
+      "bytes": 8582,
+      "sha256": "a94b312d59abe746fa4b193ea31da1f76ef62ef3e1f27bd32e027085d93f96c8"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+      "path": "sources/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+      "role": "current_transitive_dependency",
+      "bytes": 5876,
+      "sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/train_supervision.py",
+      "path": "sources/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/train_supervision.py",
+      "role": "current_transitive_dependency",
+      "bytes": 19674,
+      "sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/checks/training_audit.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/checks/training_audit.py",
+      "role": "current_checks",
+      "bytes": 21894,
+      "sha256": "807b60b72bb33ece4e59f59607c8c04a618c18d12868f6b580f178f85c8a081b"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/infer_tlfp.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/infer_tlfp.py",
+      "role": "current_code",
+      "bytes": 7856,
+      "sha256": "b04b7c320fbf9126a9e49c84addb19bf23fb1c77e32830ca0f60f1b616ef8bde"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/launch.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/launch.py",
+      "role": "current_code",
+      "bytes": 4240,
+      "sha256": "8331f430044d4182fbcb88b5daac497b9f4099040d3828d2e65756fb607cdb50"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/preflight.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/preflight.py",
+      "role": "current_code",
+      "bytes": 6435,
+      "sha256": "fb6318dc23d425f99ee4f97c0029dc5c9e486d85b887cd5293fc5c8eb04d05a9"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/prepare_init.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/prepare_init.py",
+      "role": "current_code",
+      "bytes": 1596,
+      "sha256": "1e924abee0e1689fb1e3e601f260262ecaa0e9531ed1c2f279b0245dda794a12"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/temporal_lfp.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/temporal_lfp.py",
+      "role": "current_code",
+      "bytes": 11921,
+      "sha256": "3bd17eab01c9430b5d149cb66e8ec492ff8468757b7524be956b3570e1e0f7af"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/test_temporal_lfp.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/test_temporal_lfp.py",
+      "role": "current_code",
+      "bytes": 12378,
+      "sha256": "9a737d7c89b914f6f2341c4350723a83143a6779a46b7edb0dfe9162bd0699f8"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/train_tlfp.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/train_tlfp.py",
+      "role": "current_code",
+      "bytes": 19156,
+      "sha256": "209a740cf0a814b3f0b2be03e280d933b0ab8eec945905223aefd2d843456a13"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/evaluate.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/evaluate.py",
+      "role": "current_evaluation_code",
+      "bytes": 23654,
+      "sha256": "c029eac54ed4e6538e65759dea25c6ff852a755151a753d49b50a49ccb4b3451"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/launch_score.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/launch_score.py",
+      "role": "current_evaluation_code",
+      "bytes": 2862,
+      "sha256": "d1ac4832513b4555d64f3baf155cc4dfaac459fe786df38d24272f651c7d0765"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/mechanism_tables.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/mechanism_tables.py",
+      "role": "current_evaluation_code",
+      "bytes": 6777,
+      "sha256": "d27449049c1446edb2e2a64344be66c69bd2b4bbb88e85414f9bb4ae71cd0adc"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/trajectory_tables.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/trajectory_tables.py",
+      "role": "current_evaluation_code",
+      "bytes": 7245,
+      "sha256": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/validate_tables.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/validate_tables.py",
+      "role": "current_evaluation_code",
+      "bytes": 13435,
+      "sha256": "d7d6fa2a02f2595b1f751ade055504d6fa37de4434a2553377d947474cf3909a"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/verify_identity.py",
+      "path": "sources/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/verify_identity.py",
+      "role": "current_evaluation_code",
+      "bytes": 8858,
+      "sha256": "b0cda81315af03aeba42df9eac1775bc48eed4f9617c39e51069fff23e41974c"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py",
+      "path": "sources/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py",
+      "role": "current_transitive_dependency",
+      "bytes": 6742,
+      "sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py",
+      "path": "sources/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py",
+      "role": "current_transitive_dependency",
+      "bytes": 23205,
+      "sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation_code/evaluate.py",
+      "path": "sources/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation_code/evaluate.py",
+      "role": "current_transitive_dependency",
+      "bytes": 17986,
+      "sha256": "ab79c37291505a66e9bc6e6ff79d9e54d5302c8213541263aeadc3373ae8e723"
+    }
+  ]
+}

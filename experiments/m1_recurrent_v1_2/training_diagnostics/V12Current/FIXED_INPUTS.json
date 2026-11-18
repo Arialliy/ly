@@ -1,0 +1,1292 @@
+{
+  "status": "COMPLETE",
+  "condition": "V12Current",
+  "rows": [
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 5,
+      "loss_terms": {
+        "det": 0.5640747547149658,
+        "keep": 0.00025201361859217286,
+        "C": 0.42113617062568665,
+        "base": 0.6113675236701965,
+        "frame": 4.364633560180664,
+        "gap": 2.5610404014587402
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.657186985015869,
+        "background_logit_mean": -14.206954956054688,
+        "logit_margin_mean": 7.54976749420166,
+        "probability_margin_mean": 0.09019205719232559,
+        "evidence_mean": 0.0901927575469017,
+        "target_logit_above_zero_fraction": 0.0729166641831398,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.04925535465526612,
+        "candidate_rms": 0.038117814359403354,
+        "updated_state_rms": 0.03495426179687801,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "7d31ba9290481a985d0b0a0f0e7762b95e631eef76495815419b902685672e29",
+      "label_sha256": "6992f18a443d9f62a67ff011c45bd009c32e513afa9e13631ef0910467195a56",
+      "auxiliary_input_sha256": "4a1913323a6c3975aa52e37223386321d6f1e04b9b2113c59cb92f86a4cf3a38"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 6,
+      "loss_terms": {
+        "det": 0.8430774211883545,
+        "keep": 0.0002155712281819433,
+        "C": 0.9883376955986023,
+        "base": 0.9519030451774597,
+        "frame": 9.889654159545898,
+        "gap": 7.620673179626465
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.849858283996582,
+        "background_logit_mean": -13.665026664733887,
+        "logit_margin_mean": 5.8151679039001465,
+        "probability_margin_mean": 0.23240572214126587,
+        "evidence_mean": 0.23240695893764496,
+        "target_logit_above_zero_fraction": 0.22773972153663635,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.04964287052143972,
+        "candidate_rms": 0.03880029971501838,
+        "updated_state_rms": 0.035522498121451376,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "6f4f840eb556a86d0b2d1bf38d2f1230550d08c31073b84f8f51ae08e582aa07",
+      "label_sha256": "fa82b4ab6b5631f08ac683ab477ef2070e08249207783ccf79b2f433d5abbe7a",
+      "auxiliary_input_sha256": "0f0374bd4f33e680deccbcdddc66c6191bf9f3e15edc9a9647bb7da38256cf22"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 18,
+      "loss_terms": {
+        "det": 0.3087044656276703,
+        "keep": 7.251856004586443e-05,
+        "C": 0.5567871332168579,
+        "base": 0.3697305917739868,
+        "frame": 1.8804612159729004,
+        "gap": 1.1202726364135742
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -7.476958274841309,
+        "background_logit_mean": -14.039918899536133,
+        "logit_margin_mean": 6.562959671020508,
+        "probability_margin_mean": 0.030737467110157013,
+        "evidence_mean": 0.030738497152924538,
+        "target_logit_above_zero_fraction": 0.0243055559694767,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.04915744836947107,
+        "candidate_rms": 0.037363588680428474,
+        "updated_state_rms": 0.03470644960462645,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "dc88b424d5b15cd7e08bc96d08334a47267dbc5cf9b3c8332a4984a613aa2203",
+      "label_sha256": "87d15d11ebdf79f427b8e7861792f194f9e9c48d78c1dab400c430c52cb03763",
+      "auxiliary_input_sha256": "fe3fcc46bc2bae03008f792afd66717fd94af6dbb28a7fa9faa42496ca7789c1"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 25,
+      "loss_terms": {
+        "det": 0.7346853017807007,
+        "keep": 0.00024170984397642314,
+        "C": 1.176649808883667,
+        "base": 0.8641600012779236,
+        "frame": 5.774590969085693,
+        "gap": 3.6769962310791016
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.848708152770996,
+        "background_logit_mean": -13.54308032989502,
+        "logit_margin_mean": -0.305627703666687,
+        "probability_margin_mean": 0.01953805238008499,
+        "evidence_mean": 0.019539613276720047,
+        "target_logit_above_zero_fraction": 0.017942583188414574,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.049874857404746224,
+        "candidate_rms": 0.03942962842291562,
+        "updated_state_rms": 0.03611071335061618,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "0f553cff0c3dd53bf48645268eec0447138f17aeefe0e601c521462cb4c8c6fb",
+      "label_sha256": "be230bdcad8c03963affc6b4249373077cd2d676d401fec090396cff283d706b",
+      "auxiliary_input_sha256": "4dc3c808a0ce85e938975284b0f9203137f8f52b2f96534847fc6c99310dcc07"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 30,
+      "loss_terms": {
+        "det": 0.809546709060669,
+        "keep": 0.00019781631999649107,
+        "C": 0.4578685760498047,
+        "base": 0.8605261445045471,
+        "frame": 7.730441093444824,
+        "gap": 5.576079845428467
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -8.513627052307129,
+        "background_logit_mean": -14.156513214111328,
+        "logit_margin_mean": 5.642885684967041,
+        "probability_margin_mean": 0.0534890741109848,
+        "evidence_mean": 0.05348983779549599,
+        "target_logit_above_zero_fraction": 0.032786883413791656,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.04949470718801484,
+        "candidate_rms": 0.03805272439683991,
+        "updated_state_rms": 0.0351087318871469,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "094b36633f5bc50855f8066ae4131074fc6b1334271b16b21623bb1009302545",
+      "label_sha256": "98e07521fb79dbe0812824ac9d1f6e669ec3fb835c9489c07daf8800e1e26bb0",
+      "auxiliary_input_sha256": "262739d1e5eca27f7a995b5ca6d10122fac6e71084eb9f9aa743d8ac3ff36c10"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 32,
+      "loss_terms": {
+        "det": 0.5936287045478821,
+        "keep": 0.00042482270509935915,
+        "C": 0.488929808139801,
+        "base": 0.6492955684661865,
+        "frame": 5.513182163238525,
+        "gap": 3.047839879989624
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.679684638977051,
+        "background_logit_mean": -14.142074584960938,
+        "logit_margin_mean": 6.4623894691467285,
+        "probability_margin_mean": 0.12366268038749695,
+        "evidence_mean": 0.12366336584091187,
+        "target_logit_above_zero_fraction": 0.12352941185235977,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.04962026546679664,
+        "candidate_rms": 0.038368532587113605,
+        "updated_state_rms": 0.03529119752600899,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "968bd9260245cdea3ef7fd31f721779a72ed877367449d09527ea5c8a278e2ca",
+      "label_sha256": "6c9b5cf0e6a16a16fa892b4eb22a506f8f19a6ccc7d61e69390c96e8f81e7313",
+      "auxiliary_input_sha256": "b4b7892d9515099ddad007fe84e6c8f057f2a5216881ba2fad3c6d01182ab168"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 51,
+      "loss_terms": {
+        "det": 0.7954190969467163,
+        "keep": 0.000568538554944098,
+        "C": 1.0585604906082153,
+        "base": 0.9139199256896973,
+        "frame": 13.437701225280762,
+        "gap": 9.985322952270508
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.352282524108887,
+        "background_logit_mean": -13.49358081817627,
+        "logit_margin_mean": 3.141298532485962,
+        "probability_margin_mean": 0.1597657948732376,
+        "evidence_mean": 0.1597677767276764,
+        "target_logit_above_zero_fraction": 0.1566390097141266,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.052223283530755095,
+        "candidate_rms": 0.04685137031471123,
+        "updated_state_rms": 0.03970677701877357,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "3edce8f297fb6341c1e1424085563a92347b0f9929bf5903fc2ded47b0d2fe51",
+      "label_sha256": "b495923e0cb18d868faad3a6e15f116f7fc7e16c57996c78db51c166086009ce",
+      "auxiliary_input_sha256": "5c63d901e98f2ca7a52bf3feea3fa38fb5fedb443fbeeac70124bc47fca0507d"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2048,
+      "additional_step": 0,
+      "plan_index": 7,
+      "loss_terms": {
+        "det": 0.4109104573726654,
+        "keep": 0.0002686277439352125,
+        "C": 0.9978471398353577,
+        "base": 0.521076500415802,
+        "frame": 4.5126776695251465,
+        "gap": 3.228288173675537
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.6121826171875,
+        "background_logit_mean": -13.890111923217773,
+        "logit_margin_mean": 5.277929782867432,
+        "probability_margin_mean": 0.20149463415145874,
+        "evidence_mean": 0.2016163170337677,
+        "target_logit_above_zero_fraction": 0.20045454800128937,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.5,
+        "retention_std": 0.0,
+        "retention_min": 0.5,
+        "retention_max": 0.5,
+        "aligned_rms": 0.049677617415631356,
+        "candidate_rms": 0.03997541040302717,
+        "updated_state_rms": 0.03597982937400412,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "9e9590d97c80a6d665bb715daa94ec3f97c65390b37d87eb82255f3138b40097",
+      "label_sha256": "c4104447f2908f3d74bfedc9474a737f7835a1b49361e1ad137fcf37c10a720c",
+      "auxiliary_input_sha256": "169901cb321c33cdc27f2d2db5cc38485cb244ab271c5ae26724cd14b1ea85d6"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 5,
+      "loss_terms": {
+        "det": 0.5643805861473083,
+        "keep": 0.00023497694928664714,
+        "C": 0.4213801324367523,
+        "base": 0.6116018891334534,
+        "frame": 4.375933647155762,
+        "gap": 2.5706746578216553
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.678157329559326,
+        "background_logit_mean": -14.213068008422852,
+        "logit_margin_mean": 7.534910678863525,
+        "probability_margin_mean": 0.08955992758274078,
+        "evidence_mean": 0.0895606204867363,
+        "target_logit_above_zero_fraction": 0.0694444477558136,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49989020133397133,
+        "retention_std": 1.8891230299841476e-05,
+        "retention_min": 0.49892038106918335,
+        "retention_max": 0.4999455213546753,
+        "aligned_rms": 0.04954830464536502,
+        "candidate_rms": 0.03811733078193923,
+        "updated_state_rms": 0.035384340615156065,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "7d31ba9290481a985d0b0a0f0e7762b95e631eef76495815419b902685672e29",
+      "label_sha256": "6992f18a443d9f62a67ff011c45bd009c32e513afa9e13631ef0910467195a56",
+      "auxiliary_input_sha256": "4a1913323a6c3975aa52e37223386321d6f1e04b9b2113c59cb92f86a4cf3a38"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 6,
+      "loss_terms": {
+        "det": 0.8433980941772461,
+        "keep": 0.00021639819897245616,
+        "C": 0.9888763427734375,
+        "base": 0.9522870779037476,
+        "frame": 9.911916732788086,
+        "gap": 7.637329578399658
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.881285667419434,
+        "background_logit_mean": -13.673328399658203,
+        "logit_margin_mean": 5.792042255401611,
+        "probability_margin_mean": 0.23185651004314423,
+        "evidence_mean": 0.23185771703720093,
+        "target_logit_above_zero_fraction": 0.22431506216526031,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998913285078521,
+        "retention_std": 1.7362843157955256e-05,
+        "retention_min": 0.4992907643318176,
+        "retention_max": 0.49994587898254395,
+        "aligned_rms": 0.04996951074837736,
+        "candidate_rms": 0.03879956840598711,
+        "updated_state_rms": 0.035982614595753554,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "6f4f840eb556a86d0b2d1bf38d2f1230550d08c31073b84f8f51ae08e582aa07",
+      "label_sha256": "fa82b4ab6b5631f08ac683ab477ef2070e08249207783ccf79b2f433d5abbe7a",
+      "auxiliary_input_sha256": "0f0374bd4f33e680deccbcdddc66c6191bf9f3e15edc9a9647bb7da38256cf22"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 18,
+      "loss_terms": {
+        "det": 0.30884039402008057,
+        "keep": 6.825767195550725e-05,
+        "C": 0.5571709275245667,
+        "base": 0.36988380551338196,
+        "frame": 1.88474440574646,
+        "gap": 1.1234667301177979
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -7.494602680206299,
+        "background_logit_mean": -14.049359321594238,
+        "logit_margin_mean": 6.554756164550781,
+        "probability_margin_mean": 0.030467821285128593,
+        "evidence_mean": 0.030468842014670372,
+        "target_logit_above_zero_fraction": 0.0243055559694767,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998930176204969,
+        "retention_std": 1.5167252162942862e-05,
+        "retention_min": 0.49893927574157715,
+        "retention_max": 0.4999476671218872,
+        "aligned_rms": 0.04942733878287172,
+        "candidate_rms": 0.037360406722715,
+        "updated_state_rms": 0.035110805338044636,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "dc88b424d5b15cd7e08bc96d08334a47267dbc5cf9b3c8332a4984a613aa2203",
+      "label_sha256": "87d15d11ebdf79f427b8e7861792f194f9e9c48d78c1dab400c430c52cb03763",
+      "auxiliary_input_sha256": "fe3fcc46bc2bae03008f792afd66717fd94af6dbb28a7fa9faa42496ca7789c1"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 25,
+      "loss_terms": {
+        "det": 0.7350664138793945,
+        "keep": 0.00023534106730949134,
+        "C": 1.1769436597824097,
+        "base": 0.8645364046096802,
+        "frame": 5.792636871337891,
+        "gap": 3.6926774978637695
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.87960147857666,
+        "background_logit_mean": -13.555182456970215,
+        "logit_margin_mean": -0.3244197964668274,
+        "probability_margin_mean": 0.019317733123898506,
+        "evidence_mean": 0.01931927539408207,
+        "target_logit_above_zero_fraction": 0.017942583188414574,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998910082837168,
+        "retention_std": 1.864044885413121e-05,
+        "retention_min": 0.4989144504070282,
+        "retention_max": 0.4999472498893738,
+        "aligned_rms": 0.05027262710711247,
+        "candidate_rms": 0.03943031804886359,
+        "updated_state_rms": 0.0366177702989225,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "0f553cff0c3dd53bf48645268eec0447138f17aeefe0e601c521462cb4c8c6fb",
+      "label_sha256": "be230bdcad8c03963affc6b4249373077cd2d676d401fec090396cff283d706b",
+      "auxiliary_input_sha256": "4dc3c808a0ce85e938975284b0f9203137f8f52b2f96534847fc6c99310dcc07"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 30,
+      "loss_terms": {
+        "det": 0.809911847114563,
+        "keep": 0.0001943722745636478,
+        "C": 0.4581901431083679,
+        "base": 0.8609064221382141,
+        "frame": 7.750701427459717,
+        "gap": 5.59243631362915
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -8.537814140319824,
+        "background_logit_mean": -14.162344932556152,
+        "logit_margin_mean": 5.6245293617248535,
+        "probability_margin_mean": 0.05308069288730621,
+        "evidence_mean": 0.0530814453959465,
+        "target_logit_above_zero_fraction": 0.032786883413791656,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49989357966741504,
+        "retention_std": 1.61999010650712e-05,
+        "retention_min": 0.49907445907592773,
+        "retention_max": 0.4999430179595947,
+        "aligned_rms": 0.04977274800342936,
+        "candidate_rms": 0.03804914107248993,
+        "updated_state_rms": 0.035524050107051924,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "094b36633f5bc50855f8066ae4131074fc6b1334271b16b21623bb1009302545",
+      "label_sha256": "98e07521fb79dbe0812824ac9d1f6e669ec3fb835c9489c07daf8800e1e26bb0",
+      "auxiliary_input_sha256": "262739d1e5eca27f7a995b5ca6d10122fac6e71084eb9f9aa743d8ac3ff36c10"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 32,
+      "loss_terms": {
+        "det": 0.5939452648162842,
+        "keep": 0.0003923497861251235,
+        "C": 0.48932185769081116,
+        "base": 0.649467945098877,
+        "frame": 5.533690929412842,
+        "gap": 3.0565638542175293
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.7042365074157715,
+        "background_logit_mean": -14.14906120300293,
+        "logit_margin_mean": 6.444825172424316,
+        "probability_margin_mean": 0.12242353707551956,
+        "evidence_mean": 0.12242420762777328,
+        "target_logit_above_zero_fraction": 0.12352941185235977,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.499892880166114,
+        "retention_std": 1.892844745329813e-05,
+        "retention_min": 0.4987722337245941,
+        "retention_max": 0.4999428391456604,
+        "aligned_rms": 0.04991299229768427,
+        "candidate_rms": 0.03836673932257912,
+        "updated_state_rms": 0.035721511935750336,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "968bd9260245cdea3ef7fd31f721779a72ed877367449d09527ea5c8a278e2ca",
+      "label_sha256": "6c9b5cf0e6a16a16fa892b4eb22a506f8f19a6ccc7d61e69390c96e8f81e7313",
+      "auxiliary_input_sha256": "b4b7892d9515099ddad007fe84e6c8f057f2a5216881ba2fad3c6d01182ab168"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 51,
+      "loss_terms": {
+        "det": 0.7955960035324097,
+        "keep": 0.0005487824091687799,
+        "C": 1.0586963891983032,
+        "base": 0.9139978885650635,
+        "frame": 13.478273391723633,
+        "gap": 10.02550220489502
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.380685806274414,
+        "background_logit_mean": -13.505934715270996,
+        "logit_margin_mean": 3.1252501010894775,
+        "probability_margin_mean": 0.15964500606060028,
+        "evidence_mean": 0.15964695811271667,
+        "target_logit_above_zero_fraction": 0.1566390097141266,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998695597900375,
+        "retention_std": 5.212024567227707e-05,
+        "retention_min": 0.4975881576538086,
+        "retention_max": 0.49994874000549316,
+        "aligned_rms": 0.0528782362489078,
+        "candidate_rms": 0.04689587745754685,
+        "updated_state_rms": 0.040547290147523694,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "3edce8f297fb6341c1e1424085563a92347b0f9929bf5903fc2ded47b0d2fe51",
+      "label_sha256": "b495923e0cb18d868faad3a6e15f116f7fc7e16c57996c78db51c166086009ce",
+      "auxiliary_input_sha256": "5c63d901e98f2ca7a52bf3feea3fa38fb5fedb443fbeeac70124bc47fca0507d"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2080,
+      "additional_step": 32,
+      "plan_index": 7,
+      "loss_terms": {
+        "det": 0.41100046038627625,
+        "keep": 0.0002545213501434773,
+        "C": 0.9977248907089233,
+        "base": 0.5210720300674438,
+        "frame": 4.523398399353027,
+        "gap": 3.236011505126953
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.639162063598633,
+        "background_logit_mean": -13.900025367736816,
+        "logit_margin_mean": 5.260863304138184,
+        "probability_margin_mean": 0.20103643834590912,
+        "evidence_mean": 0.20115584135055542,
+        "target_logit_above_zero_fraction": 0.20045454800128937,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998892678286677,
+        "retention_std": 2.3354915974020415e-05,
+        "retention_min": 0.49911215901374817,
+        "retention_max": 0.49994558095932007,
+        "aligned_rms": 0.05003647693606562,
+        "candidate_rms": 0.03997898798781633,
+        "updated_state_rms": 0.03647950182323623,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "9e9590d97c80a6d665bb715daa94ec3f97c65390b37d87eb82255f3138b40097",
+      "label_sha256": "c4104447f2908f3d74bfedc9474a737f7835a1b49361e1ad137fcf37c10a720c",
+      "auxiliary_input_sha256": "169901cb321c33cdc27f2d2db5cc38485cb244ab271c5ae26724cd14b1ea85d6"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 5,
+      "loss_terms": {
+        "det": 0.5643208026885986,
+        "keep": 0.0002402790414635092,
+        "C": 0.4213024973869324,
+        "base": 0.6115641593933105,
+        "frame": 4.372936248779297,
+        "gap": 2.5682947635650635
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.673149108886719,
+        "background_logit_mean": -14.21043872833252,
+        "logit_margin_mean": 7.537288188934326,
+        "probability_margin_mean": 0.08966618031263351,
+        "evidence_mean": 0.08966688066720963,
+        "target_logit_above_zero_fraction": 0.0694444477558136,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49984302347548365,
+        "retention_std": 2.5021905574342456e-05,
+        "retention_min": 0.4985829293727875,
+        "retention_max": 0.4999185800552368,
+        "aligned_rms": 0.04993990409434561,
+        "candidate_rms": 0.0381354123816709,
+        "updated_state_rms": 0.03580573386052622,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "7d31ba9290481a985d0b0a0f0e7762b95e631eef76495815419b902685672e29",
+      "label_sha256": "6992f18a443d9f62a67ff011c45bd009c32e513afa9e13631ef0910467195a56",
+      "auxiliary_input_sha256": "4a1913323a6c3975aa52e37223386321d6f1e04b9b2113c59cb92f86a4cf3a38"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 6,
+      "loss_terms": {
+        "det": 0.8433942794799805,
+        "keep": 0.00022101393551565707,
+        "C": 0.9888320565223694,
+        "base": 0.9523049592971802,
+        "frame": 9.909843444824219,
+        "gap": 7.636510848999023
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.879137992858887,
+        "background_logit_mean": -13.67066764831543,
+        "logit_margin_mean": 5.791529178619385,
+        "probability_margin_mean": 0.23188309371471405,
+        "evidence_mean": 0.23188428580760956,
+        "target_logit_above_zero_fraction": 0.22602739930152893,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998445313121337,
+        "retention_std": 2.30814435452158e-05,
+        "retention_min": 0.4990546703338623,
+        "retention_max": 0.49991941452026367,
+        "aligned_rms": 0.050381717480335535,
+        "candidate_rms": 0.03881876602245913,
+        "updated_state_rms": 0.036424088201503904,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "6f4f840eb556a86d0b2d1bf38d2f1230550d08c31073b84f8f51ae08e582aa07",
+      "label_sha256": "fa82b4ab6b5631f08ac683ab477ef2070e08249207783ccf79b2f433d5abbe7a",
+      "auxiliary_input_sha256": "0f0374bd4f33e680deccbcdddc66c6191bf9f3e15edc9a9647bb7da38256cf22"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 18,
+      "loss_terms": {
+        "det": 0.30882492661476135,
+        "keep": 6.975494034122676e-05,
+        "C": 0.5571061968803406,
+        "base": 0.3698699176311493,
+        "frame": 1.8840086460113525,
+        "gap": 1.1230013370513916
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -7.491572856903076,
+        "background_logit_mean": -14.046015739440918,
+        "logit_margin_mean": 6.554441928863525,
+        "probability_margin_mean": 0.030514704063534737,
+        "evidence_mean": 0.030515726655721664,
+        "target_logit_above_zero_fraction": 0.0243055559694767,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49984684338915614,
+        "retention_std": 2.019171055597015e-05,
+        "retention_min": 0.49860864877700806,
+        "retention_max": 0.49992263317108154,
+        "aligned_rms": 0.04980433574444894,
+        "candidate_rms": 0.037377966923089714,
+        "updated_state_rms": 0.03552013417410959,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "dc88b424d5b15cd7e08bc96d08334a47267dbc5cf9b3c8332a4984a613aa2203",
+      "label_sha256": "87d15d11ebdf79f427b8e7861792f194f9e9c48d78c1dab400c430c52cb03763",
+      "auxiliary_input_sha256": "fe3fcc46bc2bae03008f792afd66717fd94af6dbb28a7fa9faa42496ca7789c1"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 25,
+      "loss_terms": {
+        "det": 0.7350162267684937,
+        "keep": 0.00024204130750149488,
+        "C": 1.176908254623413,
+        "base": 0.8645209670066833,
+        "frame": 5.789449691772461,
+        "gap": 3.6903045177459717
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.876258850097656,
+        "background_logit_mean": -13.551505088806152,
+        "logit_margin_mean": -0.32475388050079346,
+        "probability_margin_mean": 0.019333934411406517,
+        "evidence_mean": 0.019335482269525528,
+        "target_logit_above_zero_fraction": 0.017942583188414574,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49984423170203396,
+        "retention_std": 2.4740362748194164e-05,
+        "retention_min": 0.4985654652118683,
+        "retention_max": 0.49992185831069946,
+        "aligned_rms": 0.05072231992231325,
+        "candidate_rms": 0.0394525029092563,
+        "updated_state_rms": 0.03708596892435914,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "0f553cff0c3dd53bf48645268eec0447138f17aeefe0e601c521462cb4c8c6fb",
+      "label_sha256": "be230bdcad8c03963affc6b4249373077cd2d676d401fec090396cff283d706b",
+      "auxiliary_input_sha256": "4dc3c808a0ce85e938975284b0f9203137f8f52b2f96534847fc6c99310dcc07"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 30,
+      "loss_terms": {
+        "det": 0.8099046349525452,
+        "keep": 0.00019833179248962551,
+        "C": 0.45814090967178345,
+        "base": 0.8609166741371155,
+        "frame": 7.747777462005615,
+        "gap": 5.59048318862915
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -8.534290313720703,
+        "background_logit_mean": -14.15958309173584,
+        "logit_margin_mean": 5.62529182434082,
+        "probability_margin_mean": 0.05313282832503319,
+        "evidence_mean": 0.05313359200954437,
+        "target_logit_above_zero_fraction": 0.032786883413791656,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49984759568359294,
+        "retention_std": 2.1527907597119952e-05,
+        "retention_min": 0.4987836480140686,
+        "retention_max": 0.4999154210090637,
+        "aligned_rms": 0.05015811249139735,
+        "candidate_rms": 0.03806753847851168,
+        "updated_state_rms": 0.035942579777420054,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "094b36633f5bc50855f8066ae4131074fc6b1334271b16b21623bb1009302545",
+      "label_sha256": "98e07521fb79dbe0812824ac9d1f6e669ec3fb835c9489c07daf8800e1e26bb0",
+      "auxiliary_input_sha256": "262739d1e5eca27f7a995b5ca6d10122fac6e71084eb9f9aa743d8ac3ff36c10"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 32,
+      "loss_terms": {
+        "det": 0.5938541293144226,
+        "keep": 0.00040409548091702163,
+        "C": 0.4892675578594208,
+        "base": 0.6494385004043579,
+        "frame": 5.529408931732178,
+        "gap": 3.055054187774658
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.699455261230469,
+        "background_logit_mean": -14.146188735961914,
+        "logit_margin_mean": 6.446733474731445,
+        "probability_margin_mean": 0.12263426929712296,
+        "evidence_mean": 0.12263495475053787,
+        "target_logit_above_zero_fraction": 0.12352941185235977,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998466708867069,
+        "retention_std": 2.5088587536250423e-05,
+        "retention_min": 0.49835923314094543,
+        "retention_max": 0.49991583824157715,
+        "aligned_rms": 0.05030516131108454,
+        "candidate_rms": 0.038386408796460714,
+        "updated_state_rms": 0.03614717239357379,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "968bd9260245cdea3ef7fd31f721779a72ed877367449d09527ea5c8a278e2ca",
+      "label_sha256": "6c9b5cf0e6a16a16fa892b4eb22a506f8f19a6ccc7d61e69390c96e8f81e7313",
+      "auxiliary_input_sha256": "b4b7892d9515099ddad007fe84e6c8f057f2a5216881ba2fad3c6d01182ab168"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 51,
+      "loss_terms": {
+        "det": 0.7955691814422607,
+        "keep": 0.0005641331663355231,
+        "C": 1.0586261749267578,
+        "base": 0.9140517711639404,
+        "frame": 13.473043441772461,
+        "gap": 10.021615982055664
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.378341674804688,
+        "background_logit_mean": -13.502583503723145,
+        "logit_margin_mean": 3.1242423057556152,
+        "probability_margin_mean": 0.15964621305465698,
+        "evidence_mean": 0.15964818000793457,
+        "target_logit_above_zero_fraction": 0.1566390097141266,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4998157376304474,
+        "retention_std": 6.883980060099646e-05,
+        "retention_min": 0.4968152344226837,
+        "retention_max": 0.4999239444732666,
+        "aligned_rms": 0.053460417478465104,
+        "candidate_rms": 0.046934649953358255,
+        "updated_state_rms": 0.04118036628864595,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "3edce8f297fb6341c1e1424085563a92347b0f9929bf5903fc2ded47b0d2fe51",
+      "label_sha256": "b495923e0cb18d868faad3a6e15f116f7fc7e16c57996c78db51c166086009ce",
+      "auxiliary_input_sha256": "5c63d901e98f2ca7a52bf3feea3fa38fb5fedb443fbeeac70124bc47fca0507d"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2112,
+      "additional_step": 64,
+      "plan_index": 7,
+      "loss_terms": {
+        "det": 0.410993754863739,
+        "keep": 0.00026037305360659957,
+        "C": 0.9976016283035278,
+        "base": 0.5210856199264526,
+        "frame": 4.522274017333984,
+        "gap": 3.2354869842529297
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.636894226074219,
+        "background_logit_mean": -13.896838188171387,
+        "logit_margin_mean": 5.259943962097168,
+        "probability_margin_mean": 0.20109352469444275,
+        "evidence_mean": 0.20121333003044128,
+        "target_logit_above_zero_fraction": 0.20045454800128937,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.49984180330181094,
+        "retention_std": 3.086599837119652e-05,
+        "retention_min": 0.4988236725330353,
+        "retention_max": 0.4999188184738159,
+        "aligned_rms": 0.0504660188914115,
+        "candidate_rms": 0.03999990357326673,
+        "updated_state_rms": 0.03694117467159063,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "9e9590d97c80a6d665bb715daa94ec3f97c65390b37d87eb82255f3138b40097",
+      "label_sha256": "c4104447f2908f3d74bfedc9474a737f7835a1b49361e1ad137fcf37c10a720c",
+      "auxiliary_input_sha256": "169901cb321c33cdc27f2d2db5cc38485cb244ab271c5ae26724cd14b1ea85d6"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 5,
+      "loss_terms": {
+        "det": 0.5637571215629578,
+        "keep": 0.0002830965968314558,
+        "C": 0.4206226170063019,
+        "base": 0.6111729145050049,
+        "frame": 4.345278263092041,
+        "gap": 2.545891761779785
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.624794006347656,
+        "background_logit_mean": -14.188505172729492,
+        "logit_margin_mean": 7.563711643218994,
+        "probability_margin_mean": 0.09087201952934265,
+        "evidence_mean": 0.09087273478507996,
+        "target_logit_above_zero_fraction": 0.0729166641831398,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996683518858075,
+        "retention_std": 4.570074754624146e-05,
+        "retention_min": 0.4974764585494995,
+        "retention_max": 0.49981802701950073,
+        "aligned_rms": 0.05149337132364105,
+        "candidate_rms": 0.038245605025938975,
+        "updated_state_rms": 0.03734692803662684,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "7d31ba9290481a985d0b0a0f0e7762b95e631eef76495815419b902685672e29",
+      "label_sha256": "6992f18a443d9f62a67ff011c45bd009c32e513afa9e13631ef0910467195a56",
+      "auxiliary_input_sha256": "4a1913323a6c3975aa52e37223386321d6f1e04b9b2113c59cb92f86a4cf3a38"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 6,
+      "loss_terms": {
+        "det": 0.8430672883987427,
+        "keep": 0.00024210137780755758,
+        "C": 0.9881275296211243,
+        "base": 0.9520226716995239,
+        "frame": 9.876322746276855,
+        "gap": 7.614249229431152
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.836684703826904,
+        "background_logit_mean": -13.64590072631836,
+        "logit_margin_mean": 5.809215545654297,
+        "probability_margin_mean": 0.23254932463169098,
+        "evidence_mean": 0.23255057632923126,
+        "target_logit_above_zero_fraction": 0.22773972153663635,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996711519753402,
+        "retention_std": 4.207753601313403e-05,
+        "retention_min": 0.49827101826667786,
+        "retention_max": 0.49982208013534546,
+        "aligned_rms": 0.05201034683654991,
+        "candidate_rms": 0.0389343900291811,
+        "updated_state_rms": 0.03803135971352354,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "6f4f840eb556a86d0b2d1bf38d2f1230550d08c31073b84f8f51ae08e582aa07",
+      "label_sha256": "fa82b4ab6b5631f08ac683ab477ef2070e08249207783ccf79b2f433d5abbe7a",
+      "auxiliary_input_sha256": "0f0374bd4f33e680deccbcdddc66c6191bf9f3e15edc9a9647bb7da38256cf22"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 18,
+      "loss_terms": {
+        "det": 0.3086164891719818,
+        "keep": 8.117178367683664e-05,
+        "C": 0.5563579201698303,
+        "base": 0.36964571475982666,
+        "frame": 1.8755896091461182,
+        "gap": 1.11696457862854
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -7.456902503967285,
+        "background_logit_mean": -14.017824172973633,
+        "logit_margin_mean": 6.5609211921691895,
+        "probability_margin_mean": 0.031046072021126747,
+        "evidence_mean": 0.031047126278281212,
+        "target_logit_above_zero_fraction": 0.0243055559694767,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.499675339908418,
+        "retention_std": 3.716888415322157e-05,
+        "retention_min": 0.4975140392780304,
+        "retention_max": 0.49983108043670654,
+        "aligned_rms": 0.05130416852295285,
+        "candidate_rms": 0.037484764864606106,
+        "updated_state_rms": 0.037026713469492246,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "dc88b424d5b15cd7e08bc96d08334a47267dbc5cf9b3c8332a4984a613aa2203",
+      "label_sha256": "87d15d11ebdf79f427b8e7861792f194f9e9c48d78c1dab400c430c52cb03763",
+      "auxiliary_input_sha256": "fe3fcc46bc2bae03008f792afd66717fd94af6dbb28a7fa9faa42496ca7789c1"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 25,
+      "loss_terms": {
+        "det": 0.7344579100608826,
+        "keep": 0.000276937207672745,
+        "C": 1.1765028238296509,
+        "base": 0.8641192317008972,
+        "frame": 5.756017684936523,
+        "gap": 3.664067268371582
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.827349662780762,
+        "background_logit_mean": -13.517589569091797,
+        "logit_margin_mean": -0.3097619414329529,
+        "probability_margin_mean": 0.01962750218808651,
+        "evidence_mean": 0.019629107788205147,
+        "target_logit_above_zero_fraction": 0.017942583188414574,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996709790344271,
+        "retention_std": 4.475173544022143e-05,
+        "retention_min": 0.4974100589752197,
+        "retention_max": 0.4998285174369812,
+        "aligned_rms": 0.05245726151989065,
+        "candidate_rms": 0.03958049788857262,
+        "updated_state_rms": 0.03877547848045773,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "0f553cff0c3dd53bf48645268eec0447138f17aeefe0e601c521462cb4c8c6fb",
+      "label_sha256": "be230bdcad8c03963affc6b4249373077cd2d676d401fec090396cff283d706b",
+      "auxiliary_input_sha256": "4dc3c808a0ce85e938975284b0f9203137f8f52b2f96534847fc6c99310dcc07"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 30,
+      "loss_terms": {
+        "det": 0.8095168471336365,
+        "keep": 0.00021983220358379185,
+        "C": 0.4575413465499878,
+        "base": 0.8605872988700867,
+        "frame": 7.712215423583984,
+        "gap": 5.563451766967773
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -8.491326332092285,
+        "background_logit_mean": -14.136922836303711,
+        "logit_margin_mean": 5.645596027374268,
+        "probability_margin_mean": 0.05385120213031769,
+        "evidence_mean": 0.053851980715990067,
+        "target_logit_above_zero_fraction": 0.032786883413791656,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996766999316745,
+        "retention_std": 3.941284319406897e-05,
+        "retention_min": 0.49779558181762695,
+        "retention_max": 0.499813973903656,
+        "aligned_rms": 0.05169635545958416,
+        "candidate_rms": 0.03817902802742828,
+        "updated_state_rms": 0.037483799934352684,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "094b36633f5bc50855f8066ae4131074fc6b1334271b16b21623bb1009302545",
+      "label_sha256": "98e07521fb79dbe0812824ac9d1f6e669ec3fb835c9489c07daf8800e1e26bb0",
+      "auxiliary_input_sha256": "262739d1e5eca27f7a995b5ca6d10122fac6e71084eb9f9aa743d8ac3ff36c10"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 32,
+      "loss_terms": {
+        "det": 0.5932144522666931,
+        "keep": 0.0004856338200625032,
+        "C": 0.48856526613235474,
+        "base": 0.6491916179656982,
+        "frame": 5.48884916305542,
+        "gap": 3.038490056991577
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.651149272918701,
+        "background_logit_mean": -14.122027397155762,
+        "logit_margin_mean": 6.470877170562744,
+        "probability_margin_mean": 0.12481999397277832,
+        "evidence_mean": 0.12482068687677383,
+        "target_logit_above_zero_fraction": 0.125,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996750266712017,
+        "retention_std": 4.55653607374366e-05,
+        "retention_min": 0.49704957008361816,
+        "retention_max": 0.4998159408569336,
+        "aligned_rms": 0.051864712641886315,
+        "candidate_rms": 0.03850278675670527,
+        "updated_state_rms": 0.03770788735360727,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "968bd9260245cdea3ef7fd31f721779a72ed877367449d09527ea5c8a278e2ca",
+      "label_sha256": "6c9b5cf0e6a16a16fa892b4eb22a506f8f19a6ccc7d61e69390c96e8f81e7313",
+      "auxiliary_input_sha256": "b4b7892d9515099ddad007fe84e6c8f057f2a5216881ba2fad3c6d01182ab168"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 51,
+      "loss_terms": {
+        "det": 0.7952815890312195,
+        "keep": 0.000656464952044189,
+        "C": 1.0582135915756226,
+        "base": 0.9142505526542664,
+        "frame": 13.404914855957031,
+        "gap": 9.96045970916748
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.336787223815918,
+        "background_logit_mean": -13.470253944396973,
+        "logit_margin_mean": 3.1334686279296875,
+        "probability_margin_mean": 0.15977585315704346,
+        "evidence_mean": 0.15977786481380463,
+        "target_logit_above_zero_fraction": 0.1566390097141266,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996200573816448,
+        "retention_std": 0.00012320508150120976,
+        "retention_min": 0.49429935216903687,
+        "retention_max": 0.49983346462249756,
+        "aligned_rms": 0.05568159708443861,
+        "candidate_rms": 0.04712398006457919,
+        "updated_state_rms": 0.04331893290410209,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "3edce8f297fb6341c1e1424085563a92347b0f9929bf5903fc2ded47b0d2fe51",
+      "label_sha256": "b495923e0cb18d868faad3a6e15f116f7fc7e16c57996c78db51c166086009ce",
+      "auxiliary_input_sha256": "5c63d901e98f2ca7a52bf3feea3fa38fb5fedb443fbeeac70124bc47fca0507d"
+    },
+    {
+      "condition": "V12Current",
+      "mode": "current_only",
+      "step": 2176,
+      "additional_step": 128,
+      "plan_index": 7,
+      "loss_terms": {
+        "det": 0.41087445616722107,
+        "keep": 0.0003033532702829689,
+        "C": 0.9971824288368225,
+        "base": 0.5211679935455322,
+        "frame": 4.505402088165283,
+        "gap": 3.224623203277588
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.597759246826172,
+        "background_logit_mean": -13.86849594116211,
+        "logit_margin_mean": 5.2707366943359375,
+        "probability_margin_mean": 0.20183032751083374,
+        "evidence_mean": 0.20195406675338745,
+        "target_logit_above_zero_fraction": 0.20136363804340363,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "state_update": {
+        "retention_mean": 0.4996661309987,
+        "retention_std": 5.5949614233335875e-05,
+        "retention_min": 0.49787455797195435,
+        "retention_max": 0.49982088804244995,
+        "aligned_rms": 0.05216003107539532,
+        "candidate_rms": 0.04012320493683059,
+        "updated_state_rms": 0.038604850049777775,
+        "calls": 156,
+        "meaning": "all noninitial update pixels; not target-only"
+      },
+      "input_sha256": "9e9590d97c80a6d665bb715daa94ec3f97c65390b37d87eb82255f3138b40097",
+      "label_sha256": "c4104447f2908f3d74bfedc9474a737f7835a1b49361e1ad137fcf37c10a720c",
+      "auxiliary_input_sha256": "169901cb321c33cdc27f2d2db5cc38485cb244ab271c5ae26724cd14b1ea85d6"
+    }
+  ],
+  "calibration_indices": [
+    5,
+    6,
+    18,
+    25,
+    30,
+    32,
+    51,
+    7
+  ],
+  "snapshots_sha256": {
+    "2048": "1ab200752224c1780f894b44015b5341535cf7851dfcbb0050f26ce4d9965324",
+    "2080": "560269bb20807ed65901504edca3ca10073fd8121258189064173fe96a9863ca",
+    "2112": "5b82332a9660fd6ffd9478bde55fdf6a8c301ca26521368e3ec0ae341c758a7b",
+    "2176": "857e9cca87296b0480277fba3a81b7bdd2864991b4774985f3a2118a6a32f7e4"
+  },
+  "training_run_sha256": "1e17d657a0ee8b482f63795df5cfcdb41a54a563d16ed6ab4df345449483de2e",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/evaluate.py": "16c3d048e688e58b1b81cd088d2b8dc04221d477d253b58f47166eaea7ea671f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/infer.py": "072685d22bd17332d1fff95db4eee89ea64cdd703f969f4979511840bd58dc8b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/launch.py": "f7d4d7e0abe4be457dcbda9358288e2fcc92e2ec57b17ed0bce9b33d224c2a8c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/reference_tests.py": "c58d1478a7e47c0f5fcfb2601d81bf1107d11d851852fa3fa86dc4ac22f70853",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision.py": "31a67f5bc9fbc063fb721530a1eca334f702d80687bef1b1a674b601e7429b98",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision_smoke.py": "3d75caa710be3de11bdff53611bd58998b868b1f6d81b85610d5a42365c5212a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/runtime.py": "d2b98787666026a81098ca2dad17e6f5da44f76842a0ebeebc221b123ffa73c0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/trace.py": "01129f0f58ce0a115e826c74d1b45399cbfc1fc623441264de712d6103fa2c61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train.py": "57c3a6ef73ee960e20eda7d3e4cd9769cd1b3c65f8bbe3994e8295da8be7fbc3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train_diagnostics.py": "9f25bd527134756a97aa358cba9e02188cc463a1caae4e8da056401b01c30051",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/state_update.py": "92626b129e9c0b1da865f3d77068390d11f7ac00ed417d535a036a5ad34e2852",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/test_state_update.py": "7c306fb521f5b95abb6a1da7cace4f1033a7090f7dc4a7727ee133973f9a4b0e"
+  },
+  "protocol_sha256": "34af43a3c198096a4461167e8c885c436b4b645e754e2290eda44f568936dc1e",
+  "all_model_state_unchanged": true,
+  "backward_calls": 0,
+  "optimizer_steps": 0,
+  "scope": "Existing training calibration inputs and fixed cached regions; no development matching",
+  "gate_statistics": "All noninitial update pixels; target/background readout uses original fixed cache",
+  "elapsed_seconds": 77.52913251298014
+}

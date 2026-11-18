@@ -1,0 +1,281 @@
+{
+  "status": "PASS",
+  "mode": "numeric_and_data_scope_audit",
+  "reviewed_results_sha256": "f31c9f2cbb852877ea88c63fd27c3f7153b4fe3f73f8c156019496b540c239bb",
+  "blockers": [],
+  "scope": "Existing artifacts only: sampling,identity coverage,cache counts,confirmation isolation evidence,low recovery set deduplication,local links,and stated limitations.",
+  "sampling": {
+    "status": "PASS",
+    "auxiliary_target_max_side": 16,
+    "historical_inheritance": "Original train_pilot.SequenceData strict crop-anchor eligibility excludes max(w,h)>16. This is the anchor scope, not a claim that every historical detection-positive bbox had max side <=16.",
+    "background_scope": "All annotated targets, including non-strict-small, are excluded by original background construction; verified in CACHE_AUDIT.",
+    "keep_scope": "All actual-matcher-reliable targets meeting full crop core and other exclusion rules; no max-side16 restriction.",
+    "entries": 512,
+    "entries_with_pairs": 256,
+    "pairs": 30476,
+    "formal_pairs_per_B_or_C": 121904,
+    "identities": 84,
+    "source_count": 6,
+    "source_counts": {
+      "DJI_0030_9": 11490,
+      "DJI_0043_2": 11773,
+      "DJI_0323_2": 6724,
+      "DJI_0057_1": 117,
+      "DJI_0115_2": 234,
+      "DJI_0217_2": 138
+    },
+    "top3_pairs": 29987,
+    "top3_percent": 98.39545872161702,
+    "ambiguous_tracks_removed": 34,
+    "selected_descriptor_size_or_ambiguous_id_violations": 0
+  },
+  "cache": {
+    "status": "PASS",
+    "background_regions": 50942,
+    "keep_coordinates": 12629572,
+    "cpu_replay_entries": 8,
+    "cpu_replay_windows": 64,
+    "evidence": "resources/CACHE_AUDIT.json"
+  },
+  "low_recovery": {
+    "status": "PASS",
+    "same_A_B_C_sets_within_arrangement": true,
+    "conditions": [
+      {
+        "condition": "A",
+        "arrangement": "O",
+        "recovered_low": 6,
+        "tracks": 6,
+        "extreme_recovered": 0
+      },
+      {
+        "condition": "A",
+        "arrangement": "S",
+        "recovered_low": 6,
+        "tracks": 5,
+        "extreme_recovered": 0
+      },
+      {
+        "condition": "B",
+        "arrangement": "O",
+        "recovered_low": 6,
+        "tracks": 6,
+        "extreme_recovered": 0
+      },
+      {
+        "condition": "B",
+        "arrangement": "S",
+        "recovered_low": 6,
+        "tracks": 5,
+        "extreme_recovered": 0
+      },
+      {
+        "condition": "C",
+        "arrangement": "O",
+        "recovered_low": 6,
+        "tracks": 6,
+        "extreme_recovered": 0
+      },
+      {
+        "condition": "C",
+        "arrangement": "S",
+        "recovered_low": 6,
+        "tracks": 5,
+        "extreme_recovered": 0
+      }
+    ],
+    "O_S_intersection": 4,
+    "O_S_union": 8,
+    "union_annotation_keys": [
+      [
+        "DJI_0067_2",
+        "7700514",
+        "9",
+        "868186"
+      ],
+      [
+        "DJI_0067_2",
+        "7700539",
+        "126",
+        "879092"
+      ],
+      [
+        "DJI_0067_2",
+        "7700544",
+        "138",
+        "880231"
+      ],
+      [
+        "DJI_0067_2",
+        "7702014",
+        "97",
+        "876349"
+      ],
+      [
+        "DJI_0067_2",
+        "7702017",
+        "1",
+        "867534"
+      ],
+      [
+        "DJI_0067_2",
+        "7702522",
+        "109",
+        "877505"
+      ],
+      [
+        "DJI_0067_2",
+        "7702522",
+        "128",
+        "879346"
+      ],
+      [
+        "DJI_0067_2",
+        "7821069",
+        "133",
+        "879825"
+      ]
+    ]
+  },
+  "confirmation_isolation": {
+    "status": "SUPPORTED_BY_CODE_AND_EXECUTION_ARTIFACT_SCOPE",
+    "training_sources": [
+      "DJI_0030_9",
+      "DJI_0043_2",
+      "DJI_0057_1",
+      "DJI_0113_3",
+      "DJI_0115_2",
+      "DJI_0217_2",
+      "DJI_0309_1",
+      "DJI_0323_2"
+    ],
+    "prediction_and_evaluation_sources": [
+      "DJI_0026_2",
+      "DJI_0067_2"
+    ],
+    "evidence": [
+      "SAMPLER_AUDIT.json source_sha256/checks",
+      "code/data.py inputs via frozen original train plan",
+      "code/runtime.py SEQS",
+      "VALIDATION.json prediction receipts",
+      "evaluation/OBJECT_COMPARISON.csv sequence domain"
+    ],
+    "qualification": "Code/receipts/source-domain evidence is not a complete operating-system file-read trace. Confirmation data or predictions were not opened in this review."
+  },
+  "limitations_review": {
+    "status": "PASS",
+    "supported_limits": [
+      "Unknown visibility and occlusion,continuous boxes do not establish visibility.",
+      "Background correctness depends on existing annotation coverage.",
+      "B actual time gaps and cross-source relationships are not held equal to C.",
+      "Concentrated pair coverage and repeated-window pair instances are not independent samples.",
+      "Single-seed2048-step development screening does not establish convergence,significance,or generalization."
+    ],
+    "cache_replay_note": "The8-entry teacher replay is sampled;ignore/crowd positive instances in that replay were zero."
+  },
+  "local_links": [
+    {
+      "label": "预登记协议",
+      "target": "PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "label": "冻结凭据",
+      "target": "PROTOCOL_FREEZE.json",
+      "exists": true
+    },
+    {
+      "label": "完整结果表",
+      "target": "RESULT_TABLES.md",
+      "exists": true
+    },
+    {
+      "label": "机器可读判定",
+      "target": "evaluation/DECISION.json",
+      "exists": true
+    },
+    {
+      "label": "执行验证",
+      "target": "VALIDATION.json",
+      "exists": true
+    },
+    {
+      "label": "逐目标比较",
+      "target": "evaluation/OBJECT_COMPARISON.csv",
+      "exists": true
+    },
+    {
+      "label": "保护与窗口保持",
+      "target": "evaluation/PROTECTED_AND_WINDOW_RETENTION.csv",
+      "exists": true
+    },
+    {
+      "label": "采样审计",
+      "target": "SAMPLER_AUDIT.md",
+      "exists": true
+    },
+    {
+      "label": "缓存独立审计",
+      "target": "resources/CACHE_AUDIT.md",
+      "exists": true
+    },
+    {
+      "label": "校准记录",
+      "target": "CALIBRATION.json",
+      "exists": true
+    },
+    {
+      "label": "计算记录",
+      "target": "COMPUTE.csv",
+      "exists": true
+    },
+    {
+      "label": "硬件情况",
+      "target": "runtime/HARDWARE_NOTE.md",
+      "exists": true
+    },
+    {
+      "label": "官方参考源码核验",
+      "target": "resources/REFERENCES.json",
+      "exists": true
+    },
+    {
+      "label": "A",
+      "target": "training/A/run/snapshot_2048.pth",
+      "exists": true
+    },
+    {
+      "label": "B",
+      "target": "training/B/run/snapshot_2048.pth",
+      "exists": true
+    },
+    {
+      "label": "C",
+      "target": "training/C/run/snapshot_2048.pth",
+      "exists": true
+    }
+  ],
+  "local_link_failures": [],
+  "source_sha256": {
+    "RESULTS.md": "f31c9f2cbb852877ea88c63fd27c3f7153b4fe3f73f8c156019496b540c239bb",
+    "PAIR_PLAN.json": "52d92a9ca409406f5784d4f6efc7b35979141c9d0fa8bfa5787d7705b01c656c",
+    "SAMPLER_AUDIT.json": "678efcdeb23d8b4d94998aecabbc5299268586ed654293c7587afbedce54319e",
+    "SAMPLER_AUDIT.md": "3a581d5674ed06a000cb75ef385ede2aff557c1dd7bfb37d9c733fe11ac96dd9",
+    "resources/CACHE_AUDIT.json": "669c9da5c6ac2e61597b9b5177a066ce0e6bd94c7505bce2dcb1ce53fed7df0f",
+    "resources/CACHE_AUDIT.md": "3a241539373aade23b9cdcd8bf3171b7d78680a3a5e27c71e946214dac3b4612",
+    "VALIDATION.json": "e6ba8fe657dceba424ff633b2c16b9b7d6e7b5f2979b1772a530bb82f62e88ed",
+    "PROTOCOL_FREEZE.json": "e7259dbf5b767a6bfa22c8be100f4b540ee1085097fda4c993d33fa466716fcb",
+    "evaluation/OBJECT_COMPARISON.csv": "09f0ec4ac1b2f29cca5009aa6a7d95b598a0535a68efad46fd0d1b305bbabe21",
+    "code/data.py": "8ad5232591c3538879b1806178da3b15b1e778dfd18d28e3293a06fa59b9397e",
+    "code/runtime.py": "f4c9a387b33440b5d71aebbbbd66c6c84edca37b31313e0377e479d693bd159c",
+    "train_modules/track_pair_sampler.py": "1a18f94522c10b39c0e1619a23caf807c31bc023f0ac3b1cd10c1c431fb08905",
+    "train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02"
+  },
+  "historical_anchor_source": {
+    "path": "archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py",
+    "sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+  },
+  "external_citations": "Outside this data audit; existing REFERENCES.json is linked and present, public sources not re-fetched.",
+  "frozen_files_modified": false,
+  "new_experiments_run": false
+}

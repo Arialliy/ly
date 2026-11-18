@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "rows": 31200,
+  "target_arrangement_rows": 10400,
+  "target_frames": 5200,
+  "counts": {
+    "target:valid1": 10400,
+    "hard_local:valid1": 10398,
+    "hard_global:valid1": 10400,
+    "hard_local:valid0": 2
+  },
+  "regions_sha256": "feefe6679780514eaa092eac9e0441488271170d3f8dab88a36855abeb457f64",
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/LOW_RESPONSE_OBJECTS.csv": "811f4e4167e2eb0a8b73bdafc999fdc641ad6ca5f2f5d92620832b3f9f6539c0",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/analysis/build_low_response_objects.py": "e1056086610a926e3f03ad78c6de67cc2fdf4a6136af0a830773e5d8522acec8",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/analysis/analyze.py": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0026_2/annotations.json": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/logits/DJI_0026_2/fused_O_logits.npy": "5dbc3667d37c3989e942a66b5d13c1dbfede83bcad61802be28affca1e182862",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/logits/DJI_0026_2/fused_S_logits.npy": "08b2909e111f75863cd0a9d0e3b25cdd09f3e1db91434abf3866de661e6b6c9d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data/DJI_0067_2/annotations.json": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/logits/DJI_0067_2/fused_O_logits.npy": "c28338886366ff369473fe81924701d4b60e3554f69381075ac0874770218320",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/logits/DJI_0067_2/fused_S_logits.npy": "77bfbb09efce3f624dac9e653cd3fa42fb962120e23720d9cc983002e72a1614"
+  },
+  "script_sha256": "a5d6431a9687ecac92c51ed814f5a8cbe2391ad85f0833cb8384e2c8e039db07",
+  "selection": "Original released logits only; same-size old local/global grids; all annotations plus2px excluded; maximum logit, ties y then x; invalid backgrounds retained as missing",
+  "model_response_for_new_onoff_seen": false
+}

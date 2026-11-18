@@ -1,0 +1,67 @@
+--- lambda0/code/train_pilot.py
++++ top1/code/train_pilot.py
+@@ -302,6 +302,7 @@
+ def train(args,sequences):
+     import torch
+     from losses import pilot_loss
++    from training_diagnostics import background_diagnostics
+     if not args.plan or not args.plan.is_file():raise ValueError('Training requires an existing shared --plan')
+     plan=json.loads(args.plan.read_text())
+     if plan['config']!=CONFIG or plan['steps']!=args.steps or plan['seed']!=args.seed:
+@@ -329,12 +330,15 @@
+         if isinstance(module,torch.nn.modules.batchnorm._BatchNorm):module.eval()
+     original_bn=bn_snapshot(model);bn_hash=buffer_hash(original_bn)
+     optimizer=torch.optim.Adam(model.parameters(),lr=args.lr,weight_decay=1e-4)
+-    metadata={'strategy':args.strategy,'steps':args.steps,'lr':args.lr,'seed':args.seed,
++    metadata={'strategy':'lambda0_background_top1pct', 'legacy_extra_reduction_argument':args.strategy,'steps':args.steps,'lr':args.lr,'seed':args.seed,
+               'optimizer':'fresh Adam','weight_decay':1e-4,'plan_sha256':plan_hash,
+               'selection_sha256':sha256(args.selection),'checkpoint_sha256':sha256(args.checkpoint),
+               'model_source_sha256':sha256(model_file),'train_source_sha256':sha256(Path(__file__)),
+               'loss_source_sha256':sha256(Path(__file__).with_name('losses.py')),
+-              'bn_initial_sha256':bn_hash,'config':CONFIG,'torch_version':str(torch.__version__),
++              'bn_initial_sha256':bn_hash,'frozen_plan_config':CONFIG,'torch_version':str(torch.__version__),
++              'effective_extra_lambda':0.0, 'positive_coefficient':1.0, 'negative_coefficient':1.0,
++              'effective_background_aggregation':'top_ceil_1pct_per_window_then_mean_four_windows',
++              'frozen_plan_extra_lambda_note':'Historical plan extra_lambda=1 is not optimized; effective extra_lambda is 0.',
+               'source_path':str(args.source.resolve()),'checkpoint_path':str(args.checkpoint.resolve()),
+               'status':'running','protocol':'weak_box_MIL_not_official_SoftIoU'}
+     save_json(args.output/'RUN.json',metadata)
+@@ -362,7 +366,7 @@
+                 if current_bn.keys()!=original_bn.keys() or any(not torch.equal(current_bn[k],v) for k,v in original_bn.items()):
+                     raise AssertionError('BN running buffers changed')
+                 counts['extra_disabled_n_lt_2']+=parts['extra_disabled_n_lt_2'];counts['extra_objects']+=parts['extra_objects']
+-                if step%16==0 or step==args.steps-1:
++                if True:  # Telemetry is persisted every update; no optimizer or sampling changes.
+                     row={'step':step+1,'loss':float(loss.detach()),'positive':float(parts['positive'].detach()),
+                          'negative':float(parts['negative'].detach()),'extra':float(parts['extra'].detach()),
+                          'grad_norm':float(grad_norm),'finite':True,'extra_objects':parts['extra_objects'],
+@@ -370,13 +374,18 @@
+                          'base_objects_per_window':parts['base_objects_per_window'],
+                          'background_pixels_per_window':parts['background_pixels_per_window'],
+                          'elapsed_seconds':time.perf_counter()-started}
+-                    line=json.dumps(row);log.write(line+'\n');print(line,flush=True)
++                    row.update(background_diagnostics(logits, background))
++                    row.update(weighted_positive=row['positive'], weighted_negative=row['negative'],
++                               positive_coefficient=1.0, negative_coefficient=1.0, effective_extra_lambda=0.0)
++                    line=json.dumps(row);log.write(line+'\n')
++                    if step%16==0 or step==args.steps-1: print(line,flush=True)
+                 del logits,loss,parts,x,background
+         if device.type=='cuda':torch.cuda.synchronize(device)
+         duration=time.perf_counter()-started
+         final_state={k:v.detach().cpu() for k,v in model.state_dict().items()}
+         if not all(torch.isfinite(v).all() for v in final_state.values()):raise FloatingPointError('Nonfinite final parameters')
+-        checkpoint={'model_state_dict':final_state,'step':args.steps,'strategy':args.strategy,
++        checkpoint={'model_state_dict':final_state,'step':args.steps,'strategy':'lambda0_background_top1pct',
++                    'effective_extra_lambda':0.0, 'background_top_fraction':0.01,
+                     'plan_sha256':plan_hash,'initial_checkpoint_sha256':metadata['checkpoint_sha256'],
+                     'protocol':'weak_box_MIL_not_official_SoftIoU'}
+         torch.save(checkpoint,args.output/'final_model.pth')
+@@ -384,6 +393,8 @@
+                         bn_final_sha256=buffer_hash(bn_snapshot(model)),
+                         final_checkpoint_sha256=sha256(args.output/'final_model.pth'),
+                         train_log_sha256=sha256(args.output/'TRAIN.jsonl'),
++                        max_cuda_memory_allocated_bytes=torch.cuda.max_memory_allocated(device) if device.type=='cuda' else 0,
++                        max_cuda_memory_reserved_bytes=torch.cuda.max_memory_reserved(device) if device.type=='cuda' else 0,
+                         final_step=args.steps,checkpoint_selection='fixed final step; no best checkpoint')
+         save_json(args.output/'RUN.json',metadata)
+     except BaseException as error:

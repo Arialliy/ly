@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "rows": 320,
+  "window": 7,
+  "offsets": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "boundary": "clamp to0..159; duplicate boundary frames, no frames outside selectedclip",
+  "deep_O": [
+    0,
+    36,
+    72,
+    108,
+    120
+  ],
+  "deep_S": [
+    0,
+    24,
+    60,
+    96,
+    120
+  ],
+  "relation": "For each currentframe all7 TEP input frames are contained in union of DeepPro40frame windows covering that same frame, separately forO andS. This proves access inclusion, not equal compute/pretraining/calibration.",
+  "boundary_frames_per_clip": 6,
+  "source_frame_numbering": "consecutive within each selected160frameclip",
+  "uses_annotations_for_temporal_filename_identity_only": true
+}

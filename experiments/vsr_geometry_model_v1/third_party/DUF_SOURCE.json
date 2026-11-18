@@ -1,0 +1,17 @@
+{
+  "architecture_project": "XPixelGroup/BasicSR",
+  "commit": "8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a",
+  "architecture_url": "https://raw.githubusercontent.com/XPixelGroup/BasicSR/8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a/basicsr/archs/duf_arch.py",
+  "source_sha256": "d8c93a2aa7bf31b3de100faa9d61fa7668076fe345084effa2a2992e39478eba",
+  "local_architecture_sha256": "10785143c54dbef7324021996524a86b6c133a654579892f025a9523fb32762d",
+  "local_changes": "Removed only BasicSR registry import and registry decorator to make the architecture standalone.",
+  "code_license_source": "https://raw.githubusercontent.com/XPixelGroup/BasicSR/8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a/LICENSE.txt",
+  "code_license_sha256": "5447872f21ddc29dc0dc060d5c885513c01c904e9da9931bba69898a6fb4d415",
+  "original_weights_repo": "https://github.com/yhjo09/VSR-DUF",
+  "conversion_details": "https://github.com/XPixelGroup/BasicSR/blob/8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a/docs/ModelZoo.md#duf",
+  "weights_name": "DUF_x2_16L_official-39537cb9.pth",
+  "weights_source": "https://drive.usercontent.google.com/download?id=1e91cEZOlUUk35keK9EnuK0F54QegnUKo&export=download&confirm=t",
+  "weights_index_url": "https://raw.githubusercontent.com/XPixelGroup/BasicSR/8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a/scripts/download_pretrained_models.py",
+  "weights_bytes": 6984412,
+  "weights_sha256": "39537cb9b3e899a8ed2b5c274f4ba372df4eec55558ebf9e86e0c595e61a5b08"
+}

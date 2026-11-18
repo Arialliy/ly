@@ -1,0 +1,111 @@
+{
+  "status": "COMPLETE",
+  "updated_utc": "2026-10-11T16:12:34.914376+00:00",
+  "baseline": "frozen checkpoint-adjacent DeepPro-Plus",
+  "insertion": "unique TPro merged temporal mappings before original norm1 BatchNorm3d",
+  "threshold": 0.5,
+  "pooled_U_budget": 4015,
+  "model_configurations_trained": 2,
+  "updates_each": 512,
+  "metrics_scope": "diagnostic one-to-one component peak-in-box matching, not official Pd/Fa",
+  "data_scope": "two previously reused development clips; 5200 strict-small target frames; 130 tracks",
+  "main_results": {
+    "release_O": {
+      "M": 700,
+      "unmatched_components": 4015,
+      "positive_pixels_outside_boxes": 38368,
+      "G_vs_release_same": 0,
+      "L_vs_release_same": 0,
+      "low_all_05_matched": 0,
+      "low_all_05_matched_tracks": 0,
+      "extreme_all_001_matched": 0
+    },
+    "release_S": {
+      "M": 720,
+      "unmatched_components": 3967,
+      "positive_pixels_outside_boxes": 38641,
+      "G_vs_release_same": 0,
+      "L_vs_release_same": 0,
+      "low_all_05_matched": 0,
+      "low_all_05_matched_tracks": 0,
+      "extreme_all_001_matched": 0
+    },
+    "lambda0_top1_O": {
+      "M": 877,
+      "unmatched_components": 8339,
+      "positive_pixels_outside_boxes": 48354,
+      "G_vs_release_same": 211,
+      "L_vs_release_same": 34,
+      "low_all_05_matched": 169,
+      "low_all_05_matched_tracks": 44,
+      "extreme_all_001_matched": 96
+    },
+    "lambda0_top1_S": {
+      "M": 913,
+      "unmatched_components": 8330,
+      "positive_pixels_outside_boxes": 48641,
+      "G_vs_release_same": 224,
+      "L_vs_release_same": 31,
+      "low_all_05_matched": 179,
+      "low_all_05_matched_tracks": 46,
+      "extreme_all_001_matched": 101
+    },
+    "single_dynamic_O": {
+      "M": 885,
+      "unmatched_components": 8394,
+      "positive_pixels_outside_boxes": 48501,
+      "G_vs_release_same": 219,
+      "L_vs_release_same": 34,
+      "low_all_05_matched": 177,
+      "low_all_05_matched_tracks": 45,
+      "extreme_all_001_matched": 101
+    },
+    "single_dynamic_S": {
+      "M": 920,
+      "unmatched_components": 8358,
+      "positive_pixels_outside_boxes": 48702,
+      "G_vs_release_same": 231,
+      "L_vs_release_same": 31,
+      "low_all_05_matched": 185,
+      "low_all_05_matched_tracks": 48,
+      "extreme_all_001_matched": 105
+    },
+    "bc_tpro_O": {
+      "M": 886,
+      "unmatched_components": 8479,
+      "positive_pixels_outside_boxes": 48868,
+      "G_vs_release_same": 221,
+      "L_vs_release_same": 35,
+      "low_all_05_matched": 177,
+      "low_all_05_matched_tracks": 45,
+      "extreme_all_001_matched": 100
+    },
+    "bc_tpro_S": {
+      "M": 917,
+      "unmatched_components": 8418,
+      "positive_pixels_outside_boxes": 49092,
+      "G_vs_release_same": 229,
+      "L_vs_release_same": 32,
+      "low_all_05_matched": 183,
+      "low_all_05_matched_tracks": 47,
+      "extreme_all_001_matched": 101
+    }
+  },
+  "frozen_acceptance": {
+    "single_dynamic_passes_U_budget_O": false,
+    "single_dynamic_passes_U_budget_S": false,
+    "bc_tpro_passes_U_budget_O": false,
+    "bc_tpro_passes_U_budget_S": false,
+    "independent_value_of_background_subtraction_supported": false,
+    "window_reliability_problem_solved_supported": false
+  },
+  "decision": "Retain fixed failed pilot; do not proceed to semantic ablation or unseen-source confirmation on this result. No threshold or hyperparameter search.",
+  "limitations": [
+    "One seed and final512-step checkpoint only",
+    "Custom weak-box adaptation, not original author training recipe",
+    "Context reference is not guaranteed target-free",
+    "Training ring context incomplete for most spatial positions",
+    "Same five windows do not imply same compute budget"
+  ],
+  "completed_utc": "2026-10-11T16:13:39.403816+00:00"
+}

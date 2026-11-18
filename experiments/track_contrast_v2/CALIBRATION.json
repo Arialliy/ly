@@ -1,0 +1,820 @@
+{
+  "status": "complete",
+  "uses_development": false,
+  "seed": 46,
+  "calibration_entry_indices": [
+    5,
+    6,
+    18,
+    25,
+    30,
+    32,
+    51,
+    7
+  ],
+  "initial_checkpoint_sha256": "c7eef7aadb3c2c076bc2a126473198b3dae450109bad32017fe1ad2441f79832",
+  "initial_optimizer_sha256": "c349583093e8720e0cd67e6c5be487bbae5c9867cf104da1f5dee57fb6ad6b68",
+  "no_parameter_updates": true,
+  "method": "common lambda = 0.25 * median C-v1 total gradient norm / max(median frame norm, median gap norm); actual C2048 parameters, no warmup, no dev sweep",
+  "gradient_norm_medians": {
+    "base": 0.48433924120773747,
+    "frame": 50.82928097088537,
+    "gap": 40.37969544727271
+  },
+  "weighted_gradient_ratios": {
+    "frame": 0.25,
+    "gap": 0.19860449860780982
+  },
+  "fixed_settings": {
+    "temperature": 0.47569116950035095,
+    "lambda_temporal": 0.10885460558865433,
+    "lambda_keep": 5.75443767610971,
+    "lambda_readout": 0.0023821861727945912
+  },
+  "measurements": [
+    {
+      "index": 5,
+      "losses": {
+        "det": 0.5616759061813354,
+        "keep": 0.0005427905707620084,
+        "C": 0.39165300130844116,
+        "base": 0.6074326038360596,
+        "frame": 3.9448747634887695,
+        "gap": 2.2497849464416504
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.991540253162384,
+        "negative_cosine_mean": 0.2891724109649658,
+        "cosine_margin_mean": 0.7023678421974182
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -5.90290641784668,
+        "background_logit_mean": -13.55539608001709,
+        "logit_margin_mean": 7.65248966217041,
+        "probability_margin_mean": 0.10540283471345901,
+        "evidence_mean": 0.10540542751550674,
+        "target_logit_above_zero_fraction": 0.078125,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.7913930690279379,
+        "det": 1.4853833115784136,
+        "keep": 0.1423255598327354,
+        "C": 1.2205613014838907,
+        "frame": 71.86236277165229,
+        "gap": 62.49874275150898
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.6762327948837393,
+          "conv_out1.": 0.40896246744715975,
+          "conv_out2.": 0.04197495739981146
+        },
+        "det": {
+          "TPro.": 1.27287882587664,
+          "conv_out1.": 0.7608460081106585,
+          "conv_out2.": 0.08518467522175853
+        },
+        "keep": {
+          "TPro.": 0.1221690380021518,
+          "conv_out1.": 0.07262734142911692,
+          "conv_out2.": 0.007520665679899305
+        },
+        "C": {
+          "TPro.": 0.9471949710259582,
+          "conv_out1.": 0.769799699625288,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 60.10915101181977,
+          "conv_out1.": 38.719961953996744,
+          "conv_out2.": 7.200950912473206
+        },
+        "gap": {
+          "TPro.": 52.03432533040264,
+          "conv_out1.": 34.010271293041384,
+          "conv_out2.": 6.467092043789014
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": 0.8909845715505043,
+        "frame_vs_det": 0.9194310477619617,
+        "frame_vs_keep": -0.9256795623031465,
+        "frame_vs_C": 0.7342005147230581,
+        "gap_vs_base": 0.8919182075784463,
+        "gap_vs_det": 0.9233214901000267,
+        "gap_vs_keep": -0.9298647950742873,
+        "gap_vs_C": 0.7220666748462222
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.03219889849424362,
+          "background_l2": 1.7066327018255834e-07,
+          "target_min": -0.00347222201526165,
+          "target_max": -1.5436802641488612e-05,
+          "background_min": 1.8236456789111344e-10,
+          "background_max": 5.645916445473631e-08
+        },
+        "gap": {
+          "target_l2": 0.05082797259092331,
+          "background_l2": 2.7565073423829745e-07,
+          "target_min": -0.020651748403906822,
+          "target_max": -6.939444574527442e-10,
+          "background_min": -8.196568423990414e-17,
+          "background_max": 1.4043794749341032e-07
+        }
+      }
+    },
+    {
+      "index": 6,
+      "losses": {
+        "det": 0.8426294326782227,
+        "keep": 0.0005391429294832051,
+        "C": 0.9519025087356567,
+        "base": 0.949350893497467,
+        "frame": 9.50307846069336,
+        "gap": 7.084166049957275
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8657306432723999,
+        "negative_cosine_mean": 0.6771512031555176,
+        "cosine_margin_mean": 0.18857944011688232
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.576636791229248,
+        "background_logit_mean": -13.079874992370605,
+        "logit_margin_mean": 5.503238201141357,
+        "probability_margin_mean": 0.2300274521112442,
+        "evidence_mean": 0.23003120720386505,
+        "target_logit_above_zero_fraction": 0.2226027399301529,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.7120906398167156,
+        "det": 0.7912769854610682,
+        "keep": 0.09160430895769313,
+        "C": 1.9911797874637613,
+        "frame": 48.99257717332481,
+        "gap": 47.2871480797445
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.613605747886651,
+          "conv_out1.": 0.36086779553298265,
+          "conv_out2.": 0.018316648771227795
+        },
+        "det": {
+          "TPro.": 0.6647020492808421,
+          "conv_out1.": 0.4269440711796797,
+          "conv_out2.": 0.044824251100551035
+        },
+        "keep": {
+          "TPro.": 0.08072056277265507,
+          "conv_out1.": 0.04303750579600882,
+          "conv_out2.": 0.004828380695518494
+        },
+        "C": {
+          "TPro.": 1.7286789798293587,
+          "conv_out1.": 0.9881629069644117,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 38.3284891701906,
+          "conv_out1.": 30.3836805702543,
+          "conv_out2.": 2.833988535530905
+        },
+        "gap": {
+          "TPro.": 36.16780828907384,
+          "conv_out1.": 30.345691008612064,
+          "conv_out2.": 2.6651555846379025
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": 0.3956996679791151,
+        "frame_vs_det": 0.6027881518997853,
+        "frame_vs_keep": -0.5127139773640421,
+        "frame_vs_C": 0.34633796793643196,
+        "gap_vs_base": 0.3615456351855885,
+        "gap_vs_det": 0.5854356197844952,
+        "gap_vs_keep": -0.5361940650871588,
+        "gap_vs_C": 0.35458376994249546
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.03826030343770981,
+          "background_l2": 1.812334176065633e-06,
+          "target_min": -0.0035740407183766365,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 1.5066457308421377e-06
+        },
+        "gap": {
+          "target_l2": 0.07324152439832687,
+          "background_l2": 9.649500043451553e-07,
+          "target_min": -0.026690363883972168,
+          "target_max": 5.4569682106375694e-12,
+          "background_min": -5.329070518200751e-15,
+          "background_max": 5.20630351275031e-07
+        }
+      }
+    },
+    {
+      "index": 18,
+      "losses": {
+        "det": 0.30359596014022827,
+        "keep": 0.00045998458517715335,
+        "C": 0.5005210041999817,
+        "base": 0.360726922750473,
+        "frame": 1.6606662273406982,
+        "gap": 0.9376910328865051
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9763335585594177,
+        "negative_cosine_mean": 0.4038906991481781,
+        "cosine_margin_mean": 0.5724428594112396
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.580557823181152,
+        "background_logit_mean": -13.372235298156738,
+        "logit_margin_mean": 6.7916765213012695,
+        "probability_margin_mean": 0.040580809116363525,
+        "evidence_mean": 0.04058437421917915,
+        "target_logit_above_zero_fraction": 0.02777777798473835,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.4125579473558602,
+        "det": 0.6553041894155972,
+        "keep": 0.07001263458235896,
+        "C": 1.7048969118409105,
+        "frame": 21.20645018807434,
+        "gap": 18.54164634125283
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.3593667105911322,
+          "conv_out1.": 0.20209448111535153,
+          "conv_out2.": 0.01474611637370999
+        },
+        "det": {
+          "TPro.": 0.5702486150033004,
+          "conv_out1.": 0.3207042547946944,
+          "conv_out2.": 0.037267663047611456
+        },
+        "keep": {
+          "TPro.": 0.06099551586582357,
+          "conv_out1.": 0.034146463952346155,
+          "conv_out2.": 0.00391599859245586
+        },
+        "C": {
+          "TPro.": 1.4760191910382745,
+          "conv_out1.": 0.8532530853688083,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 18.059580849192177,
+          "conv_out1.": 10.948148067774023,
+          "conv_out2.": 1.9243500245187255
+        },
+        "gap": {
+          "TPro.": 15.837711783483382,
+          "conv_out1.": 9.498648366390363,
+          "conv_out2.": 1.6538481547819388
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": 0.9031235113628244,
+        "frame_vs_det": 0.8953267842131162,
+        "frame_vs_keep": -0.8827082961181343,
+        "frame_vs_C": 0.7624963836146261,
+        "gap_vs_base": 0.9035370061088549,
+        "gap_vs_det": 0.9011873989114032,
+        "gap_vs_keep": -0.8902845214502538,
+        "gap_vs_C": 0.7591689430300554
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.013842176645994186,
+          "background_l2": 1.001464440264499e-07,
+          "target_min": -0.0008680499158799648,
+          "target_max": -0.00011634163092821836,
+          "background_min": 1.135518137851399e-10,
+          "background_max": 2.1876759959127412e-08
+        },
+        "gap": {
+          "target_l2": 0.020599765703082085,
+          "background_l2": 2.2510165820222028e-07,
+          "target_min": -0.005524655804038048,
+          "target_max": -1.406969957207238e-10,
+          "background_min": 1.1289698489813643e-16,
+          "background_max": 1.018977542344146e-07
+        }
+      }
+    },
+    {
+      "index": 25,
+      "losses": {
+        "det": 0.7321751117706299,
+        "keep": 0.0009305436979047954,
+        "C": 1.1336175203323364,
+        "base": 0.8609293699264526,
+        "frame": 5.490076541900635,
+        "gap": 3.3626058101654053
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.861762285232544,
+        "negative_cosine_mean": 0.8493464589118958,
+        "cosine_margin_mean": 0.012415826320648193
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.57888412475586,
+        "background_logit_mean": -13.091270446777344,
+        "logit_margin_mean": -0.4876132905483246,
+        "probability_margin_mean": 0.020220324397087097,
+        "evidence_mean": 0.020224593579769135,
+        "target_logit_above_zero_fraction": 0.015550239011645317,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.5337599609602315,
+        "det": 0.856145668932875,
+        "keep": 0.1014287038561002,
+        "C": 2.186946004118095,
+        "frame": 35.68678371660503,
+        "gap": 29.05106075496939
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.474850685344625,
+          "conv_out1.": 0.243023326585823,
+          "conv_out2.": 0.018872871725528356
+        },
+        "det": {
+          "TPro.": 0.7355730803127651,
+          "conv_out1.": 0.4351112098511734,
+          "conv_out2.": 0.050949828395772834
+        },
+        "keep": {
+          "TPro.": 0.08739990089130857,
+          "conv_out1.": 0.05116298633173571,
+          "conv_out2.": 0.005602510128196185
+        },
+        "C": {
+          "TPro.": 1.9175935278396834,
+          "conv_out1.": 1.0514598836453337,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 28.696828378919236,
+          "conv_out1.": 20.9877832574994,
+          "conv_out2.": 3.0905544749816727
+        },
+        "gap": {
+          "TPro.": 23.146039269057617,
+          "conv_out1.": 17.341558302623945,
+          "conv_out2.": 2.7377641938012394
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": 0.5133063048225444,
+        "frame_vs_det": 0.6576158329253418,
+        "frame_vs_keep": -0.5762201124074101,
+        "frame_vs_C": 0.1986310375863167,
+        "gap_vs_base": 0.5188559588193209,
+        "gap_vs_det": 0.6692522225276422,
+        "gap_vs_keep": -0.6033198190493352,
+        "gap_vs_C": 0.23566808018153007
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.029317064210772514,
+          "background_l2": 1.8852520611289947e-07,
+          "target_min": -0.005141148343682289,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 6.665831620011886e-08
+        },
+        "gap": {
+          "target_l2": 0.05185461789369583,
+          "background_l2": 4.6608147385995835e-07,
+          "target_min": -0.03045668825507164,
+          "target_max": 0.0,
+          "background_min": -9.71445146547012e-17,
+          "background_max": 2.347066754282423e-07
+        }
+      }
+    },
+    {
+      "index": 30,
+      "losses": {
+        "det": 0.8019241094589233,
+        "keep": 0.0010184088023379445,
+        "C": 0.41141319274902344,
+        "base": 0.8525687456130981,
+        "frame": 7.02396821975708,
+        "gap": 4.944588661193848
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9857523441314697,
+        "negative_cosine_mean": 0.31364041566848755,
+        "cosine_margin_mean": 0.6721119284629822
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -7.565273284912109,
+        "background_logit_mean": -13.533823013305664,
+        "logit_margin_mean": 5.968548774719238,
+        "probability_margin_mean": 0.07186194509267807,
+        "evidence_mean": 0.07186469435691833,
+        "target_logit_above_zero_fraction": 0.0450819656252861,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.44065107466952835,
+        "det": 1.057125741885279,
+        "keep": 0.15610314542089251,
+        "C": 1.3616294590630038,
+        "frame": 55.3378892395617,
+        "gap": 47.054715490220914
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.39509589534775946,
+          "conv_out1.": 0.1949937879723467,
+          "conv_out2.": 0.007072887596876204
+        },
+        "det": {
+          "TPro.": 0.9275808364669428,
+          "conv_out1.": 0.5039681348233543,
+          "conv_out2.": 0.05589941912451273
+        },
+        "keep": {
+          "TPro.": 0.13661301092094638,
+          "conv_out1.": 0.07502672634313416,
+          "conv_out2.": 0.008721673672074668
+        },
+        "C": {
+          "TPro.": 1.1564343441279583,
+          "conv_out1.": 0.7188145738015799,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 46.05316538535121,
+          "conv_out1.": 30.410927419932896,
+          "conv_out2.": 4.069820258814969
+        },
+        "gap": {
+          "TPro.": 38.80787570870497,
+          "conv_out1.": 26.42496730550074,
+          "conv_out2.": 3.13307129611818
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": 0.34651937393138565,
+        "frame_vs_det": 0.7291895478901824,
+        "frame_vs_keep": -0.7910966659686025,
+        "frame_vs_C": 0.623943638751445,
+        "gap_vs_base": 0.3607075653722969,
+        "gap_vs_det": 0.7043287522960954,
+        "gap_vs_keep": -0.7509261905250845,
+        "gap_vs_C": 0.5999825126026855
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.04132017120718956,
+          "background_l2": 1.8376498189809354e-07,
+          "target_min": -0.009374999441206455,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 6.260621887577145e-08
+        },
+        "gap": {
+          "target_l2": 0.05632469430565834,
+          "background_l2": 5.649616241498734e-07,
+          "target_min": -0.021373417228460312,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 3.0232632752813515e-07
+        }
+      }
+    },
+    {
+      "index": 32,
+      "losses": {
+        "det": 0.5931382179260254,
+        "keep": 0.001036722445860505,
+        "C": 0.44636669754981995,
+        "base": 0.6476930379867554,
+        "frame": 4.9893107414245605,
+        "gap": 2.640162467956543
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9831957221031189,
+        "negative_cosine_mean": 0.3465868830680847,
+        "cosine_margin_mean": 0.6366088390350342
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.041788578033447,
+        "background_logit_mean": -13.547751426696777,
+        "logit_margin_mean": 6.505964279174805,
+        "probability_margin_mean": 0.13626974821090698,
+        "evidence_mean": 0.1362721174955368,
+        "target_logit_above_zero_fraction": 0.13823530077934265,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.2855678458543736,
+        "det": 0.715842237624177,
+        "keep": 0.15823335805522207,
+        "C": 1.2850829201377496,
+        "frame": 52.66598476844593,
+        "gap": 33.7046754043245
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.25683967142704084,
+          "conv_out1.": 0.12412507376099444,
+          "conv_out2.": 0.013241745768012432
+        },
+        "det": {
+          "TPro.": 0.6117223605318729,
+          "conv_out1.": 0.3696350228581101,
+          "conv_out2.": 0.03994762406935313
+        },
+        "keep": {
+          "TPro.": 0.13447456640826846,
+          "conv_out1.": 0.08288665117112234,
+          "conv_out2.": 0.009175491723988783
+        },
+        "C": {
+          "TPro.": 1.0257696574550406,
+          "conv_out1.": 0.7741025264616663,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 43.22584480601742,
+          "conv_out1.": 29.590555122522485,
+          "conv_out2.": 5.443467642710273
+        },
+        "gap": {
+          "TPro.": 27.93277440950828,
+          "conv_out1.": 18.680751371556962,
+          "conv_out2.": 2.6066810492404517
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": -0.20940450739843144,
+        "frame_vs_det": 0.8267768833239398,
+        "frame_vs_keep": -0.8191833700761054,
+        "frame_vs_C": 0.6738446328308159,
+        "gap_vs_base": -0.3866824745090305,
+        "gap_vs_det": 0.7223185421520459,
+        "gap_vs_keep": -0.8002597944082747,
+        "gap_vs_C": 0.7233117478634313
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.04227506369352341,
+          "background_l2": 3.08492133171967e-07,
+          "target_min": -0.005208145827054977,
+          "target_max": -2.0854190552199725e-07,
+          "background_min": 1.969497065434922e-10,
+          "background_max": 1.2240043645306287e-07
+        },
+        "gap": {
+          "target_l2": 0.05258726328611374,
+          "background_l2": 5.610676225842326e-07,
+          "target_min": -0.022595565766096115,
+          "target_max": -8.916121313484737e-12,
+          "background_min": 8.038977944153751e-18,
+          "background_max": 2.868060278160556e-07
+        }
+      }
+    },
+    {
+      "index": 51,
+      "losses": {
+        "det": 0.7945431470870972,
+        "keep": 0.0011559540871530771,
+        "C": 1.0171841382980347,
+        "base": 0.9119201898574829,
+        "frame": 12.965831756591797,
+        "gap": 9.234851837158203
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8427437543869019,
+        "negative_cosine_mean": 0.6861299276351929,
+        "cosine_margin_mean": 0.15661382675170898
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.000683784484863,
+        "background_logit_mean": -12.823925018310547,
+        "logit_margin_mean": 2.823240280151367,
+        "probability_margin_mean": 0.1622481346130371,
+        "evidence_mean": 0.1622534841299057,
+        "target_logit_above_zero_fraction": 0.1576763540506363,
+        "background_logit_above_zero_fraction": 0.0
+      },
+      "gradient_norms": {
+        "base": 0.5280274077459466,
+        "det": 0.4551842675609223,
+        "keep": 0.12672929809349712,
+        "C": 1.5268998880935234,
+        "frame": 73.37500993148143,
+        "gap": 67.68981100528514
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.499517437330209,
+          "conv_out1.": 0.1709018036904445,
+          "conv_out2.": 0.009372653269895644
+        },
+        "det": {
+          "TPro.": 0.39120249616424907,
+          "conv_out1.": 0.23129298080993413,
+          "conv_out2.": 0.02562969874753567
+        },
+        "keep": {
+          "TPro.": 0.11207779582833792,
+          "conv_out1.": 0.058839033221805365,
+          "conv_out2.": 0.006070489852979994
+        },
+        "C": {
+          "TPro.": 1.098951365220869,
+          "conv_out1.": 1.0600609252015671,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 58.79371244893681,
+          "conv_out1.": 43.691166892666324,
+          "conv_out2.": 4.274739111794928
+        },
+        "gap": {
+          "TPro.": 53.333557441593356,
+          "conv_out1.": 41.46248204111088,
+          "conv_out2.": 4.2784047898767605
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": -0.17166524317152523,
+        "frame_vs_det": 0.5797269242462355,
+        "frame_vs_keep": -0.4782857134873931,
+        "frame_vs_C": -0.034505910929661286,
+        "gap_vs_base": -0.22238445383464361,
+        "gap_vs_det": 0.6270546963017452,
+        "gap_vs_keep": -0.5478214217675211,
+        "gap_vs_C": -0.020152306366913314
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.05685606598854065,
+          "background_l2": 3.2882329037420277e-07,
+          "target_min": -0.01171874813735485,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 1.5420580723457533e-07
+        },
+        "gap": {
+          "target_l2": 0.09830277413129807,
+          "background_l2": 1.0157821179745952e-06,
+          "target_min": -0.030155163258314133,
+          "target_max": 7.275791080729732e-12,
+          "background_min": -1.7763568394002505e-14,
+          "background_max": 5.336455615179148e-07
+        }
+      }
+    },
+    {
+      "index": 7,
+      "losses": {
+        "det": 0.4109649360179901,
+        "keep": 0.0005369331920519471,
+        "C": 0.9657717347145081,
+        "base": 0.5191833972930908,
+        "frame": 4.280336856842041,
+        "gap": 2.940053939819336
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8844056725502014,
+        "negative_cosine_mean": 0.7258917093276978,
+        "cosine_margin_mean": 0.15851396322250366
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.21147346496582,
+        "background_logit_mean": -13.096317291259766,
+        "logit_margin_mean": 4.884843826293945,
+        "probability_margin_mean": 0.2027578502893448,
+        "evidence_mean": 0.20292571187019348,
+        "target_logit_above_zero_fraction": 0.20363636314868927,
+        "background_logit_above_zero_fraction": 0.0009090909152291715
+      },
+      "gradient_norms": {
+        "base": 0.33981109477613103,
+        "det": 0.23967444856793352,
+        "keep": 0.08058095406306762,
+        "C": 1.330224733217737,
+        "frame": 27.76601066364026,
+        "gap": 23.630524725658436
+      },
+      "gradient_pathway": {
+        "base": {
+          "TPro.": 0.2960871815386777,
+          "conv_out1.": 0.16644440518516607,
+          "conv_out2.": 0.010011046098739254
+        },
+        "det": {
+          "TPro.": 0.202472009691732,
+          "conv_out1.": 0.1273670625598991,
+          "conv_out2.": 0.015051842498409823
+        },
+        "keep": {
+          "TPro.": 0.06901869946320272,
+          "conv_out1.": 0.04136820457179708,
+          "conv_out2.": 0.004287298989837487
+        },
+        "C": {
+          "TPro.": 0.9329410377064096,
+          "conv_out1.": 0.9482187833129481,
+          "conv_out2.": 0.0
+        },
+        "frame": {
+          "TPro.": 22.11292483719638,
+          "conv_out1.": 16.671641573561594,
+          "conv_out2.": 2.0065568919371892
+        },
+        "gap": {
+          "TPro.": 18.097485415523252,
+          "conv_out1.": 15.113361189155704,
+          "conv_out2.": 1.5713160124558188
+        }
+      },
+      "gradient_cosines": {
+        "frame_vs_base": -0.4042726571888205,
+        "frame_vs_det": 0.7503007629504858,
+        "frame_vs_keep": -0.656968518784462,
+        "frame_vs_C": -0.08680901493457312,
+        "gap_vs_base": -0.3859235911515432,
+        "gap_vs_det": 0.681518491516208,
+        "gap_vs_keep": -0.5983825239039285,
+        "gap_vs_C": -0.1175090611637606
+      },
+      "readout_gradients": {
+        "frame": {
+          "target_l2": 0.01460266299545765,
+          "background_l2": 0.00016039742331486195,
+          "target_min": -0.0013020695187151432,
+          "target_max": 0.0,
+          "background_min": 0.0,
+          "background_max": 0.00015506996714975685
+        },
+        "gap": {
+          "target_l2": 0.023442674428224564,
+          "background_l2": 8.531058483640663e-06,
+          "target_min": -0.005790638737380505,
+          "target_max": 5.820766091346741e-11,
+          "background_min": -1.7763568394002505e-14,
+          "background_max": 8.463688573101535e-06
+        }
+      }
+    }
+  ]
+}

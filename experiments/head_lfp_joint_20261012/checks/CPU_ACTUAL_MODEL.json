@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "executed_tests": 6,
+  "tests": [
+    "test_LFP_gradients_traverse_frozen_TPro_when_gate_nonzero",
+    "test_exact_trainable_names_counts_and_optimizer_groups",
+    "test_initial_outputs_exact_and_strict_roundtrip",
+    "test_pair_has_independent_head_and_adapter_parameters",
+    "test_train_eval_both_freeze_all_original_BN",
+    "test_updates_only_whitelist_and_bypass_is_adapted_head"
+  ],
+  "unittest_reported_seconds": 1.327,
+  "exit_code": 0,
+  "scope": "actual released Plus70913 and untrained spatial100; small17x19 spatial with real40time; CPU; no detector training",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "command": "docker run --rm --network none --user 1004:1004 --cpus 2 --memory 8g -e PYTHONDONTWRITEBYTECODE=1 -e OMP_NUM_THREADS=2 -e MKL_NUM_THREADS=2 -e OPENBLAS_NUM_THREADS=2 -v /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:ro -v /home/ly/DeepProPlus_TLFP_Code:/home/ly/DeepProPlus_TLFP_Code:rw --entrypoint python sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92 /home/ly/DeepProPlus_TLFP_Code/experiments/head_lfp_joint_20261012/code/test_joint.py",
+  "source_sha256_at_CPU_run": {
+    "train_joint.py": "20148d1ade83eaa8ebe51e66163da62f7e2117725b64e02a4f2587d6a0f33da4",
+    "test_joint.py": "b2e109a86ae2682a111c8f09cd5580e04c7226b3a764433e005a5a075906ee03",
+    "preflight.py": "80ba65742f297c5499c137c20589628033f5e721fffb7fa0091b5be1a05aaad5",
+    "joint_adaptation.py": "51cb87a2c66bb12957f816732c78c2fb730a084bd54ad5fd6b86ad8d45a88518"
+  },
+  "source_sha256_current": {
+    "train_joint.py": "20148d1ade83eaa8ebe51e66163da62f7e2117725b64e02a4f2587d6a0f33da4",
+    "test_joint.py": "b2e109a86ae2682a111c8f09cd5580e04c7226b3a764433e005a5a075906ee03",
+    "preflight.py": "0d577e8237a5cbd933045276649bf432d95c4ed219489ff8146722449a1c9296",
+    "joint_adaptation.py": "51cb87a2c66bb12957f816732c78c2fb730a084bd54ad5fd6b86ad8d45a88518"
+  },
+  "post_CPU_change": "Only preflight.py changed: initialize official model imports before loss; seeded CUDA FP16 diagnostic added. CPU-tested joint_adaptation.py,train_joint.py,test_joint.py unchanged. preflight AST parsed; GPU execution pending."
+}

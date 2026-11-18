@@ -1,0 +1,40 @@
+{
+  "base_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "base_spec": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+  "python": "3.11.12",
+  "torch": "2.7.0+cu128",
+  "numpy": "2.2.5",
+  "overlay_packages": [
+    "pytorch-wavelets==1.3.0",
+    "PyWavelets==1.8.0",
+    "pytest==8.3.5",
+    "iniconfig==2.1.0",
+    "packaging==25.0",
+    "pluggy==1.5.0"
+  ],
+  "install_policy": "wheel-only pinned --no-deps into isolated dependencies/site; base image unchanged",
+  "test_seed": 46,
+  "numerics": "FP32 deterministic noAMP noTF32",
+  "resources": {
+    "cpus": 4,
+    "memory_gib": 20,
+    "shm_gib": 2,
+    "allowed_gpu": [
+      1,
+      2,
+      3
+    ],
+    "gpu_used_threshold_mib": 500
+  },
+  "runtime_network": "none",
+  "mounts": "original project including spatial reference/dependencies read-only; tlfp_pilot_20261012 read-write",
+  "environment": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "witness": "code/launch.py --kind preflight --gpu 3 --tag doc_follow",
+  "scope": "two512step trainings and fixed inference; same dependencies"
+}

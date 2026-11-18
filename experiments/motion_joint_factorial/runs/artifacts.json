@@ -1,0 +1,18 @@
+{
+  "release": "archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "release_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "weights_and_predictions": {
+    "runs/models/A.pt": "7ea2b2d8ad64e08ceeacce53c56f63c1fd46274321b46efecdffa131f0105f4f",
+    "runs/models/B.pt": "f20d82c834e33e0204022b848f0b2543c2e69829f2e79a1a9ed048cb885213cf",
+    "runs/models/C.pt": "6a6eb1fe9552b40cd44b772ca4a2c1b1f8010fc23d02d62030d3e3bfc42fb293",
+    "runs/models/D.pt": "c7882b2c8b67a72096e8ed08f780f89d9a0b8d9face682273ee24802492ad9d8",
+    "runs/predictions/DJI_0026_2_019.npz": "b41d27271a49a15e0a8d24e03de9b919c6211bf6801e81687812a9b412203f2d",
+    "runs/predictions/DJI_0026_2_059.npz": "221500c7466393821f133e9fc9c370d250af8be33f368e7e27e231dcadf2167f",
+    "runs/predictions/DJI_0026_2_099.npz": "25d108d6ff6d81b85ecd8a53b6932d91244df519ef4afddda6561ba0bfbe9aed",
+    "runs/predictions/DJI_0026_2_139.npz": "367a1fe894a9b9358b55739e641ac35920b528adec76d8c52c041605d039916c",
+    "runs/predictions/DJI_0067_2_019.npz": "919e8e7b4bc6ab74bef131bad8b23d78cae0455dd667010887d1e82757d693d3",
+    "runs/predictions/DJI_0067_2_059.npz": "33e1a222d03c8a20e096f43d668b6b48e9cc6046a3eb60f2adb1f8c02e7d2029",
+    "runs/predictions/DJI_0067_2_099.npz": "39b5d178dc2db51af82088a2948c40ad1f18ba2a380b6f49b8d77d757d837491",
+    "runs/predictions/DJI_0067_2_139.npz": "0f4890a9b70d68b2e15a20ae37edf254c10214d059da5fd23ec492ea14ff9880"
+  }
+}

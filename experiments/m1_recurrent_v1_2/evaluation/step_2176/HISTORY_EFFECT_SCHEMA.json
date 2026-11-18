@@ -1,0 +1,10 @@
+{
+  "R_hist": "Actual matched in V12HistoryHistory and missed in the stated reference",
+  "L_hist": "Actual missed in V12HistoryHistory and matched in the stated reference",
+  "independently_trained_control": "V12HistoryHistory versus V12CurrentCurrent: same capacity, budget, initialization and data",
+  "same_History_checkpoint": "V12HistoryHistory versus V12HistoryCurrent: same final weights; inference history intervention",
+  "deduplication": "Report O and S separately; set union/intersection by sequence/frame/annotation across arrangements, never sum O+S as unique objects",
+  "both_scopes": "All new gate instances use pixel scope; this run does not isolate pixel selection versus frame-uniform gating",
+  "cohorts": "Frozen4342/4170; these are target-frame response strata, not fully-undetected tracks or physical SNR bins",
+  "metric_boundary": "Same original actual-component matcher at0.5; M/U are diagnostics, not official Pd/Fa"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "COMPLETE",
+  "scope": "common",
+  "conditions": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "threshold": 0.5,
+  "plans": {
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ]
+  },
+  "frozen_strict_small_target_frames": 5200,
+  "frozen_tracks": 130,
+  "frozen_cohorts": {
+    "low_all_05": 4342,
+    "extreme_all_001": 4170,
+    "both_fixed_success": 646
+  },
+  "continuity": "Local and source frame both advance by one; missing labels or common-support holes break runs.",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C0/DJI_0026_2/COMPLETE.json": "9ab65d400682cd6a1dee5fb338a0008b8f567da26231d2e4e08be6280cc2729d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C0/DJI_0067_2/COMPLETE.json": "9051bb2a24e457c541075559287ed0ddf0bc80bc0372b040c9a7bd7105affa93",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C1/DJI_0026_2/COMPLETE.json": "fbb546035106ba3874cf49c4553603c1050c32ee94c0eb4396ed541459aa1a70",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C1/DJI_0067_2/COMPLETE.json": "0deac3878b75c9b3585b84d0dd26c02c0bfe6b9dbe30c5fcea3f1c37f7e6d570",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C2/DJI_0026_2/COMPLETE.json": "c2ca61136b32c577da9a55a33d0eda6b8fe5296a2de05d7f98c69606117a26cd",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/camera_motion_v1/evaluation/common/C2/DJI_0067_2/COMPLETE.json": "4515e789839d35c6337bb8eccdd3622e0ddc2b5cb6331d2cb3a2b0f85d17b633"
+  },
+  "code_sha256": "d59e05a66614928a2f3082436f44e244b7d3fa6475b822cbbe3fc4f9c3757787",
+  "output_sha256": {
+    "OBJECT_COMPARISON.csv": "ed119bc87d007d698838e5ea03a2ffc7348a0b3aa5e8633cea008289d3b9022f",
+    "CONTINUOUS_MISS_TRACKS.csv": "20915c10ad7d773f3dbdc042d3ff07d60c8f420288db11eaa4b79df229cf9657",
+    "RECOVERY_CONCENTRATION.csv": "ac86ee4db06ccb7ac068d45a25fd469399eb50133ee918c74628416159c2db9c",
+    "SUMMARY.csv": "65b631f2a011ed562f92e094efa6fdeb7ab23160dd91b2acc96b7f354f6502a5",
+    "PROTECTED_AND_WINDOW_RETENTION.csv": "1e460cbb70b3f58b2935d27a407ec7b8bfc16a29d39af12ea5c9654fea257085",
+    "SEQUENCE_SUMMARY.csv": "5928091b9db3279a4a4f11da2a9029eb1845bd475e877406352a10a45ec94c79",
+    "CONTINUOUS_MISS_SUMMARY.csv": "f30adbad901cdd6137b2de8379c1e602712a9f9c2d14e3fd23c8ef8a8fec8d28",
+    "FRAME_COUNTS.csv": "317b5a7bce9e07d28c2d3e3a66de4d37c30a7d9de3e84cb33233a2a3606200a7",
+    "ALL_GT_OBJECT_COMPARISON.csv": "f002f0149a11eb92d00021ab961c49142c24cb57abbc7216706736fba4668e9b",
+    "C0_MISS_SEGMENTS.csv": "8c3ca4b381587b6c745a78773bbefa122fdb28afbce272c7fc987e4a4b9f1ecd"
+  }
+}

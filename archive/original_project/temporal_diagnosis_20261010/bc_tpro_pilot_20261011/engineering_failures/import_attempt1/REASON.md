@@ -1,0 +1,1 @@
+两配置在导入旧training_diagnostics时找不到losses。发生于加载数据、创建RUN及任何模型前向或optimizer更新之前。仅修复受控导入别名；无新配方、无检查点选择。失败日志和容器保留。

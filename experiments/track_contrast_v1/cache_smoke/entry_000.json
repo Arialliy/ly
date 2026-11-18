@@ -1,0 +1,207 @@
+{
+  "index": 0,
+  "input_sha256": "de415ab59a3e3840fd9173b319465bc9fdd595ec8cb8b4bd67c773f9368a3004",
+  "label_sha256": "0b1ad48a914554b95b8c089cafc8437fb4691723e6a8552010d574dbc3818272",
+  "auxiliary_input_sha256": "b36e46ccde785de6b4ea0ccbadc86ec5bb9e2dc7fddc319fd4d132d31d28ce48",
+  "aux_entry": {
+    "step": 0,
+    "pairs": [
+      {
+        "sequence": "DJI_0309_1",
+        "anchor_frame": 33,
+        "selected_annotation_id": 1181628,
+        "selected_track_id": 3103000,
+        "starts": [
+          9,
+          17
+        ],
+        "crop_yx": [
+          320,
+          64
+        ],
+        "stratum": "interior",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      },
+      {
+        "sequence": "DJI_0057_1",
+        "anchor_frame": 93,
+        "selected_annotation_id": 865525,
+        "selected_track_id": 2521501,
+        "starts": [
+          62,
+          86
+        ],
+        "crop_yx": [
+          64,
+          192
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    ],
+    "extra_specs": [],
+    "random_pairs": [
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "pairs": 0,
+  "pairs_with_two_negatives": 0,
+  "keep_stats": [
+    {
+      "match": {
+        "actual_matched_annotations": 40,
+        "reliable_annotations_before_forbidden_overlap": 40,
+        "reliable_pixels": 1870,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 1870,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 479302,
+        "seed": 46
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 40,
+        "reliable_annotations_before_forbidden_overlap": 40,
+        "reliable_pixels": 1816,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 1816,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 479388,
+        "seed": 47
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 40,
+        "reliable_annotations_before_forbidden_overlap": 40,
+        "reliable_pixels": 2050,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 2050,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 479010,
+        "seed": 48
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 40,
+        "reliable_annotations_before_forbidden_overlap": 40,
+        "reliable_pixels": 1989,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 1989,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 479103,
+        "seed": 49
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 0,
+        "reliable_annotations_before_forbidden_overlap": 0,
+        "reliable_pixels": 0,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 0,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 484000,
+        "seed": 50
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 0,
+        "reliable_annotations_before_forbidden_overlap": 0,
+        "reliable_pixels": 0,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 0,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 484000,
+        "seed": 51
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 0,
+        "reliable_annotations_before_forbidden_overlap": 0,
+        "reliable_pixels": 0,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 0,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 484000,
+        "seed": 52
+      }
+    },
+    {
+      "match": {
+        "actual_matched_annotations": 0,
+        "reliable_annotations_before_forbidden_overlap": 0,
+        "reliable_pixels": 0,
+        "forbidden_pixels": 0,
+        "unlocatable_annotation_slots": []
+      },
+      "selection": {
+        "target_pixels": 0,
+        "background_pixels": 1024,
+        "background_hard_pixels": 512,
+        "background_uniform_pixels": 512,
+        "reliable_background_candidates": 484000,
+        "seed": 53
+      }
+    }
+  ],
+  "sources": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/PAIR_PLAN.json": "afdc9b9d10b39b9ae992a10748076788b20d2971d727282e7063f6f32db1bdee",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/prepare.py": "fa45c75a9e824c16b9f858dd36962312e4a33c7fd066ef70aad9898cba16f2a6",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/data.py": "8ad5232591c3538879b1806178da3b15b1e778dfd18d28e3293a06fa59b9397e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/analysis/analyze.py": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062"
+  },
+  "sha256": "dffc2ebcf1fa7dc5b3c393e458dd2860be7c2bf84e64ed1188653e8689c0c3be"
+}

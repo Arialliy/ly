@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "prior_schema": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/analysis/TRACK_SCHEMA.json",
+  "prior_schema_sha256": "c109210e34fc64a4629f19ad6cee08a57e515dcc7bbd33f26682aa8b36616127",
+  "full_observation_scope": "Exactly all 5200 frozen strict-small target frames, 130 tracks, two clips per arrangement. No filtering by new match or recovery.",
+  "continuity": "Both local frame and source frame must increase by exactly one. Missing labels, frame gaps and original selection holes break runs.",
+  "cohort_continuity": "Cohort rows are separately filtered; excluded rows create local/source gaps and break runs. Cohort longest runs are not complete physical trajectory lengths.",
+  "release_segments": "All maximal release-miss segments within the full frozen observation range, separately for O/S. The same segment boundaries are used for every new condition.",
+  "quantiles": "Linear interpolation; tracks with observations and zero misses have longest miss 0. No-observation track/cohort combinations omitted.",
+  "artifact_sha256": {
+    "CONTINUOUS_MISS_TRACKS.csv": "b591145a1e103bc68612bd287f091c093be37d8542749e306f034a52b0c9659a",
+    "CONTINUOUS_MISS_SUMMARY.csv": "3f5dca14241fbfb82901063317edc7929e0c2c590d4ab36b6d2e286f95299f30",
+    "RELEASE_MISS_SEGMENTS.csv": "17838ee04c245198795f234ac1b9fa15bf0c0f0b8291abb88c807c161c9417c1"
+  }
+}

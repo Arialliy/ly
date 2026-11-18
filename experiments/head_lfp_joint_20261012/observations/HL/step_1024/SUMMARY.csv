@@ -1,0 +1,10 @@
+condition,step,sequence,core_strict_small_window_target_frames,matched,gain_vs_release,loss_vs_release,release_low_window_objects,release_low_recovered,unique_core_strict_target_frames,tracks,recovered_tracks,unmatched_components,outside_pixels,unmatched_component_area
+HL,1024,ALL,1170,1009,4,2,141,3,743,16,3,117,3056,1268
+HL,1024,DJI_0030_9,320,320,0,0,0,0,192,4,0,28,489,84
+HL,1024,DJI_0043_2,450,289,4,2,141,3,287,7,3,63,2492,1070
+HL,1024,DJI_0057_1,80,80,0,0,0,0,64,1,0,0,2,0
+HL,1024,DJI_0113_3,80,80,0,0,0,0,48,1,0,8,11,11
+HL,1024,DJI_0115_2,0,0,0,0,0,0,0,0,0,6,61,61
+HL,1024,DJI_0217_2,80,80,0,0,0,0,52,1,0,11,0,41
+HL,1024,DJI_0309_1,80,80,0,0,0,0,48,1,0,1,1,1
+HL,1024,DJI_0323_2,80,80,0,0,0,0,52,1,0,0,0,0

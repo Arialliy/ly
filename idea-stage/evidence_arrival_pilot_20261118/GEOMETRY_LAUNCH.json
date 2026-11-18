@@ -1,0 +1,41 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "2",
+    "--memory",
+    "4g",
+    "--user",
+    "1004:1004",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "PYTHONPATH=/home/ly/DeepProPlus_TLFP_Code/environment/site",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code:/home/ly/DeepProPlus_TLFP_Code:ro",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code/idea-stage/evidence_arrival_pilot_20261118:/home/ly/DeepProPlus_TLFP_Code/idea-stage/evidence_arrival_pilot_20261118:rw",
+    "-w",
+    "/home/ly/DeepProPlus_TLFP_Code/idea-stage/evidence_arrival_pilot_20261118",
+    "--entrypoint",
+    "/opt/conda/bin/python",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "geometry_controls.py"
+  ],
+  "start": 1794943302.2811882,
+  "sha256": {
+    "GEOMETRY_CONTROL.md": "d062a70f533cc559a779d35306e9a00cb8a41056d680d63d944ed208479ce958",
+    "geometry_controls.py": "0007260a7c32dfe961ff8303954d3138b447302960bfe39ed90a07af0ed9de5b",
+    "PROTOCOL.md": "6362406c68bcfd0255aa5eef4313b7a33b09db772f807753e292b7eaa7cd2b51",
+    "witness.py": "4206ef063b843159595165e86130adcb42c1981752313fffaabf218179ab1a1c",
+    "RESULTS.json": "5c9fb8e2451b2152a41b73a132fcfb620b56024e37351c6166a2deef54fd9308"
+  },
+  "end": 1794943306.4919267,
+  "exit_code": 0
+}

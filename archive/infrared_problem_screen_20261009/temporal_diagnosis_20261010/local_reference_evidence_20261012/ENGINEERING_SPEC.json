@@ -1,0 +1,164 @@
+{
+  "status": "ENGINEERING_SPEC_FIXED_BEFORE_TRAINING",
+  "date_local": "2026-10-12",
+  "seed": 46,
+  "variants": {
+    "N0": "current",
+    "N1": "difference",
+    "N2": "relative"
+  },
+  "baseline": {
+    "model": "frozen checkpoint-adjacent DeepPro-Plus",
+    "parameters": 70913,
+    "feature": "forward return[0], after conv_out1",
+    "feature_channels": 8,
+    "frozen": "all original parameters and BN affine/running state; eval, no_grad",
+    "TPro_changed": false
+  },
+  "evidence": {
+    "delays": [
+      1,
+      4
+    ],
+    "difference": "signed I[t]-I[t-delta] within same40-framewindow",
+    "missing_reference": "D,mu,s,E,m allzero; never copy time or access outside window",
+    "input_channels": [
+      "I",
+      "D1",
+      "mu1",
+      "s1",
+      "E1",
+      "m1",
+      "D4",
+      "mu4",
+      "s4",
+      "E4",
+      "m4"
+    ],
+    "current_mode": "I only; all10time channelszero",
+    "difference_mode": "I,D1,m1,D4,m4 only; other6channelszero",
+    "relative_mode": "all11channels",
+    "annulus": "Chebyshev square ring 5<max(abs(dy),abs(dx))<=7",
+    "inner_radius": 5,
+    "outer_radius": 7,
+    "samples": 104,
+    "spatial_padding": "replicate at physical image/crop boundary; identical in all N2 execution paths",
+    "median": "average of central two order statistics for even104 samples",
+    "dispersion": "median absolute deviation from same local median",
+    "s_min": 0.0210595036274995,
+    "s_min_rule": "one uint8 intensity quantum after unchanged original /47.4845 normalization",
+    "relative_term": "(D-mu)/max(s,s_min); no clipping",
+    "radius_rule": "ceil(training all-positive maximum-side q50=9 dividedby2)=5; ring thickness2 givesouter7",
+    "radius_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/TRAIN_ANNOTATION_SIZE_STATS.json",
+    "radius_source_sha256": "5c11fce2a2bdf3814bfb9ddeffe3b6b7d9efd025fede8d34c75bcdbf9de9cde0",
+    "purity_claim": false
+  },
+  "new_network": {
+    "encoder": [
+      "Conv2d11to8 k3p1",
+      "ReLU",
+      "Conv2d8to8 k3p1",
+      "ReLU"
+    ],
+    "joint_readout": [
+      "concat H0andQ:16channels",
+      "Conv2d16to8 k1",
+      "ReLU",
+      "Conv2d8to1 k1"
+    ],
+    "initialization": "only final output weight and bias zero; other layers standardsameinitializationseed46",
+    "new_parameters_expected": 1529,
+    "new_BN": false,
+    "extra_attention_recurrence_alignment": false,
+    "correction": "signed logit residual"
+  },
+  "spatial_dependency": {
+    "evidence_statistics_plus_encoder": 9,
+    "original_path": 9,
+    "joint_readout_added_radius": 0,
+    "training_old_valid_margin": 9,
+    "inference_core": 128,
+    "inference_halo": 16
+  },
+  "optimization": {
+    "steps": 512,
+    "snapshot_steps": [
+      0,
+      128,
+      256,
+      384,
+      512
+    ],
+    "only_evaluated_step": 512,
+    "optimizer": "Adam",
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "gradient_clipping": false,
+    "AMP": false,
+    "TF32": false,
+    "batch_shape": [
+      4,
+      1,
+      40,
+      128,
+      128
+    ],
+    "positive_loss": "existing masked official SoftLoU (internal sigmoid,smooth0)",
+    "empty_loss": "existing top1percent softplus background, coefficient1",
+    "outer_mean": "equal mean of4windows",
+    "data_plan": "../stage1_goal/pilot/TRAIN_PLAN.json",
+    "new_auxiliary_loss": false,
+    "teacher_or_pseudo_label": false
+  },
+  "evaluation": {
+    "threshold": ">=0.5",
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ],
+    "unique_starts": [
+      0,
+      24,
+      36,
+      60,
+      72,
+      96,
+      108,
+      120
+    ],
+    "U_budget": 4015,
+    "low_frames": 4342,
+    "extreme_frames": 4170,
+    "protected_frames": 646,
+    "all_small_frames": 5200,
+    "tracks": 130,
+    "development": [
+      "DJI_0026_2",
+      "DJI_0067_2"
+    ],
+    "confirmation_evaluation_this_screen": false
+  },
+  "decision": {
+    "primary_increment": "N2 vs N1; also N0 and released O/S",
+    "candidate_failure": "no budget-compliant recovery-preservation-background tradeoff or no independent advantage; do not searchparameters",
+    "positive": "freeze result then same-checkpoint preregistered location-mismatch diagnostic and decide subsequent pairedrepeat/newsource plan; no automatic newseedorconfirmation in this512step screen",
+    "old_E2_and_BC_closed": true,
+    "TEP_reference_failure_preserved": true,
+    "hypothesis_supported_before_test": false
+  }
+}

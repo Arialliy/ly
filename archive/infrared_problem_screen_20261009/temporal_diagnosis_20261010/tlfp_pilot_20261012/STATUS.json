@@ -1,0 +1,13 @@
+{
+  "status": "CLOSED_NO_MISS_RECOVERY_OR_TEMPORAL_INCREMENT",
+  "updated_utc": "2026-10-12T11:50:37.690551+00:00",
+  "training": "COMPLETE_TWO_FIXED_512_RUNS",
+  "inference": "COMPLETE_FOUR_OUTPUTS_TWO_CLIPS",
+  "evaluation": "COMPLETE_TABLE_VALIDATION_PASS",
+  "decision": "DECISION.json",
+  "report": "REPORT.md",
+  "active_training_jobs": [],
+  "active_inference_jobs": [],
+  "research_objective_retained": true,
+  "additional_training_authorized_for_this_pilot": false
+}

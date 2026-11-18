@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE_REFERENCE_IMPLEMENTATION_ONLY",
+  "updated_utc": "2026-10-12T10:59:25.568514+00:00",
+  "implementation_cpu_tests_passed": 56,
+  "finite_deeppro_integration": "PASS",
+  "fresh_agent_final_environment_follow": "PASS",
+  "independent_readonly_review": "PASS",
+  "artifact_checks_passed": 28,
+  "official_roundtrip_check": "CHECK_FAILED_RETAINED",
+  "official_failures": 10,
+  "formal_detector_training_runs": 0,
+  "new_detection_evaluation_runs": 0,
+  "diagnostic_sgd_steps": 1,
+  "detection_effectiveness": "UNEVALUATED",
+  "new_temporal_model": "NOT_IMPLEMENTED",
+  "prior_candidate_decisions": "UNCHANGED",
+  "active_own_gpu_jobs": 0,
+  "report": "REFERENCE_REPORT.md",
+  "validation": "VALIDATION.json",
+  "independent_review": "reference_checks/FINAL_REVIEW.json"
+}

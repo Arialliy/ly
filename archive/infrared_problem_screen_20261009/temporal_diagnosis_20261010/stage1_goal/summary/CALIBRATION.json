@@ -1,0 +1,173 @@
+{
+  "status": "frozen",
+  "created_utc": "2026-10-09T20:21:21.213338+00:00",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "calibration_sequences": [
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "budget": {
+    "reference_variant": "official",
+    "reference_threshold": 0.5,
+    "unmatched_components": 4015,
+    "frames": 320,
+    "U_per_frame": 12.546875
+  },
+  "threshold_grid": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.03,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    0.999,
+    0.9999,
+    0.99999,
+    0.999999,
+    1.0
+  ],
+  "variants": {
+    "official": {
+      "status": "frozen",
+      "threshold": 0.5,
+      "selected_calibration_counts": {
+        "threshold": 0.5,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 3261,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 700,
+        "components": 7276,
+        "unmatched_components": 4015,
+        "positive_pixels": 98381,
+        "positive_pixels_outside_boxes": 38368
+      },
+      "rule": "fixed official reference at 0.5",
+      "failure_reason": null
+    },
+    "paired_mean": {
+      "status": "calibration_failed",
+      "threshold": null,
+      "selected_calibration_counts": null,
+      "rule": "U/frames <= official calibration 0.5 budget; maximize strict-small matches, then minimize U, then maximize threshold",
+      "failure_reason": "No feasible point on the frozen grid; no added threshold"
+    },
+    "paired_max": {
+      "status": "calibration_failed",
+      "threshold": null,
+      "selected_calibration_counts": null,
+      "rule": "U/frames <= official calibration 0.5 budget; maximize strict-small matches, then minimize U, then maximize threshold",
+      "failure_reason": "No feasible point on the frozen grid; no added threshold"
+    },
+    "ohem": {
+      "status": "calibration_failed",
+      "threshold": null,
+      "selected_calibration_counts": null,
+      "rule": "U/frames <= official calibration 0.5 budget; maximize strict-small matches, then minimize U, then maximize threshold",
+      "failure_reason": "No feasible point on the frozen grid; no added threshold"
+    },
+    "random_pair_max": {
+      "status": "calibration_failed",
+      "threshold": null,
+      "selected_calibration_counts": null,
+      "rule": "U/frames <= official calibration 0.5 budget; maximize strict-small matches, then minimize U, then maximize threshold",
+      "failure_reason": "No feasible point on the frozen grid; no added threshold"
+    }
+  },
+  "source_fingerprints": {
+    "official": {
+      "DJI_0026_2": {
+        "curves.csv": "e22461db65383243953f7a61414fb49278c9f099a7578022ebd74e83b712b6ab",
+        "matches.npz": "973d4dba3d24d8e84ed0fdc87922aca7df93d687273cfa88f22d09cb7d147f1e",
+        "COMPLETE.json": "3c04f01c783f132b2a4c661405bf86ea17c0c11ed4f952f25703e8e5a2b9b639",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "prediction_sha256": "448537e1430853f5cbf72458c8c873bee3b21eed9e17a9ece110cc6f82784a8e"
+      },
+      "DJI_0067_2": {
+        "curves.csv": "daeadcca25edda3b9759f5e375d0fcce80fdc81bf636fc80a5eeda35680ffbfd",
+        "matches.npz": "c361b05a22ac7668428c34de200691a939ba7d846487aa7bb2d7a94dfb0debf3",
+        "COMPLETE.json": "dc3d5cf54f862ceae257c5ade9dad2141d8cb508f37887010960df3a67fda95c",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "prediction_sha256": "3c6d4fd13ba7106a6a1dbc452fa34543e6967bc14d4751727eb37c2562219074"
+      }
+    },
+    "paired_mean": {
+      "DJI_0026_2": {
+        "curves.csv": "df5a3d09ec63403dc9baceb59deefbceea13b602db66d168332872ba0000a740",
+        "matches.npz": "8511ff540ee985604caba53dbf235c495724e53a89f256111fa36ae09b45a954",
+        "COMPLETE.json": "4ace2efaa9948d5e59e86cf6db63937d0d4e8e6bd07e811b215e351fe956ce9e",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "prediction_sha256": "9d62dc3d6cfdbba3ba5bba2891aba5b8a1ea83bf61ae0d2b8e1583cbbcc7df45"
+      },
+      "DJI_0067_2": {
+        "curves.csv": "b1eabad706406a2ebe8409e31555996c2c731a9938d673be5ed91ce1ed78ad97",
+        "matches.npz": "dcfc5e7423a8988549e4478e5f2867b0d60718339d8253469d64e40b230f8cf1",
+        "COMPLETE.json": "961f1e90bdbd4e2b010e44cce2739727ac32005e725c8f3b9d7085ab6c36685f",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "prediction_sha256": "6ed0aa8de34fb662d6bb34ce853de1b7baa52fd6ae412bdeb05752e91cd3677a"
+      }
+    },
+    "paired_max": {
+      "DJI_0026_2": {
+        "curves.csv": "78ad5a9c159500b61950e8995205bef7cc6a578d566ff7738c5154e1bacdc6da",
+        "matches.npz": "75198e77acf03fe0218366c0ceffbe2a667c042586ce170a0a79be0a9cec963e",
+        "COMPLETE.json": "e1cfb614c66008869446b96e0fb4a11beaaf29a8bb6a663098cbf5773e75e886",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "prediction_sha256": "f29fd912151dc57660aa7e1a7ba9e8e1f34afe1aefaa2214083296882525cd0d"
+      },
+      "DJI_0067_2": {
+        "curves.csv": "5fc202cf6bf24ca25031df7e1e48203741ecc9c6b5911b114ae66cd34df88bb5",
+        "matches.npz": "f1d6ac9c348390edf14aba6354d3f9a8c5f193fa686e70739a29cfde9b34aa34",
+        "COMPLETE.json": "8530535ad2ad6265c2e0cc0266e67adf2c904002583ca860dd1be74b45305a26",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "prediction_sha256": "5a432fc9d2e6e55932d8f635944c525f975ac8638b190d000876a331550899a1"
+      }
+    },
+    "ohem": {
+      "DJI_0026_2": {
+        "curves.csv": "000e8805d3d380827d1c4f50d70f427d90911c098f5a1950d8c510990aa7dbef",
+        "matches.npz": "54f756b62c64d6d6f548bac76508870aabae209e8f0c799f2a358f849fa75b8e",
+        "COMPLETE.json": "dbdce26d22ea7d1f7cdfeea7401d8567363e0c8a79392b407ef7a5bdee7c0f39",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "prediction_sha256": "f51ebb8d009706af984ed819f3c79881ffaf8a35ad596bfefbe989369ed13d91"
+      },
+      "DJI_0067_2": {
+        "curves.csv": "64d23b45fad3d8b76605a5681657197827d1c0c332129ab8b40e61ea16a48053",
+        "matches.npz": "242ccb9db6fd0a57e0f75d8740b252ecf2f0fce459e4cb17f67e246fdeb4dcd1",
+        "COMPLETE.json": "1115f5cfed38c2d45d8bf84cdbf06ba055935c8ee64088de442143af0dcd2fc7",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "prediction_sha256": "2c6a6bbbf528106b95badf15e97170f010f818c5dc4e58aa7a882e163cd918d2"
+      }
+    },
+    "random_pair_max": {
+      "DJI_0026_2": {
+        "curves.csv": "967f8a9c9e2acfa9612e62e6de7b86dafe4409b03cad118444ffbbd4dad4b885",
+        "matches.npz": "66c9c9ec64df75d48b68395ff126e4fc3f00226286863c96ff9c80fb4501b76d",
+        "COMPLETE.json": "4ae5c982654ad15281d58e02d359eb9c325cb4ae0bf0804b80d290107d45c574",
+        "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+        "prediction_sha256": "55b642155f820c4529c73804d78d2bb077d723b3b1f2d8da3405266868aa0988"
+      },
+      "DJI_0067_2": {
+        "curves.csv": "e86d0a9861ab10e73d7a4b52eba3e140952b969b8d7bf6c19efdc28de1efb910",
+        "matches.npz": "b2facb0c74d515bb4e65773fa4ce30ab9e4b9e31537f1d0be07afb7659dcd6d1",
+        "COMPLETE.json": "f5e1f7786bd2701357f5d3c7842cb51c3c9e321a8d6404e5a7c16465fdcbc17a",
+        "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+        "prediction_sha256": "4d38d289d77b280b1992e6d57ae66965a5be0c4d7d62bd4595f63396227dbb2d"
+      }
+    }
+  },
+  "summary_script_sha256": "e9c5660a0928eba0896750692261c563a2ea07314f8219ebee33b79dc7c2c119",
+  "interpretation": "Diagnostic point matches and unmatched components; not official Pd/Fa. No confirmation outcomes read."
+}

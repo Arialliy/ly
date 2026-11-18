@@ -1,0 +1,69 @@
+{
+  "status": "COMPLETE",
+  "image": "sha256:8470a68886ff2f480d76858d930fb72d0e680e69276fc1d068fe8b6625b4cb9f",
+  "gpu": 1,
+  "start_unix": 1791977567.0427394,
+  "gpu_before": {
+    "0": [
+      15,
+      0
+    ],
+    "1": [
+      15,
+      0
+    ],
+    "2": [
+      15,
+      0
+    ]
+  },
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "m1_recurrent_v1_2_gpu_integration_retry",
+    "--network",
+    "none",
+    "--user",
+    "1008:1008",
+    "--cpus",
+    "4",
+    "--memory",
+    "20g",
+    "--shm-size",
+    "2g",
+    "--gpus",
+    "device=1",
+    "-e",
+    "CUDA_VISIBLE_DEVICES=0",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "MKL_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "PYTHONUNBUFFERED=1",
+    "-e",
+    "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "-e",
+    "PYTHONPATH=/home/md0/ly/DeepProPlus_TLFP_Code:/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code",
+    "-v",
+    "/home/md0/ly/DeepProPlus_TLFP_Code:/home/md0/ly/DeepProPlus_TLFP_Code:ro",
+    "-v",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:ro",
+    "-v",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2:/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2:rw",
+    "-w",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2",
+    "--entrypoint",
+    "python",
+    "sha256:8470a68886ff2f480d76858d930fb72d0e680e69276fc1d068fe8b6625b4cb9f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision_smoke.py"
+  ],
+  "exit_code": 0,
+  "end_unix": 1791977581.9871528
+}

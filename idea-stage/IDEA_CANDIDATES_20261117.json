@@ -1,0 +1,299 @@
+{
+  "generated": 12,
+  "after_exact_key_dedup": 12,
+  "mechanical_gate_dropped": 0,
+  "quality_gate": "not_applied_pending_fresh_jury",
+  "dedup_rule": "exact dedup_key; no quality pruning; V6 and I3 are related family but different method/diagnostic candidates retained",
+  "candidates": [
+    {
+      "id": "V1",
+      "dedup_key": "timestamp_conditioned_temporal_profile",
+      "title": "真实采样间隔条件化的时间轮廓",
+      "method": [
+        "保留原帧及采样间隔，不插值补帧",
+        "固定索引矩阵改共享k(时间差)，随机丢帧训练",
+        "同当前帧/观测数，比较真间隔、错间隔与连续采样"
+      ],
+      "hypothesis": "不等间隔被误当等间隔导致失败",
+      "pilot": "真实间隔提高留源弱目标分离，错间隔破坏收益；正确间隔无优势为负，仅极端合成丢帧有效为无信息",
+      "compute": "1–2 GPU小时；全量50–100 GPU小时；4–6周",
+      "risk": "MEDIUM",
+      "limits": "无实际时间戳只能研究帧间隔；连续时间方法近邻未穷尽",
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://doi.org/10.3390/app14146360",
+        "https://arxiv.org/abs/2601.14690"
+      ],
+      "so_what": "区分物理时间与帧编号依赖",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V2",
+      "dedup_key": "finite_dwell_interval_profile",
+      "title": "从脉冲异常改为有限驻留区间证据",
+      "method": [
+        "中心减邻域提取辐射对比",
+        "比较背景与有起止/平台期的目标区间模型",
+        "由区间存在概率读出逐帧，覆盖停留/重新运动"
+      ],
+      "hypothesis": "移动后停留的平台信号可能被脉冲假设吸收为背景",
+      "pilot": "约1 GPU小时真实停走加驻留长度干预；正：平台恢复且无前后拖尾；负：增强困难背景；无信息：真实样本不足",
+      "compute": "全量40–80 GPU小时；4–6周",
+      "risk": "HIGH",
+      "limits": "全窗静止无出生证据不可识别；序贯/有限时长检测已有",
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://www.mdpi.com/1424-8220/15/4/7267"
+      ],
+      "so_what": "明确时间轮廓可恢复停留的边界",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V3",
+      "dedup_key": "censored_visibility_evidence",
+      "title": "把遮挡当缺失观测，而非反目标证据",
+      "method": [
+        "局部对比构建每帧观测似然",
+        "显式可见/缺测/离场状态、限制缺测时长",
+        "仅重新可见时读出恢复，并计离场拖尾"
+      ],
+      "hypothesis": "缺测被累积成反证毁掉重现时历史",
+      "pilot": "1–2 GPU小时；受控遮挡1–4帧和人工核验真实事件；正：重现延迟下降且无拖尾；负：幽灵；null：无可见性标签",
+      "compute": "全量40–100 GPU小时；5–6周",
+      "risk": "HIGH",
+      "limits": "当前无遮挡字段，经典状态跟踪邻近",
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2602.01843",
+        "https://openaccess.thecvf.com/content/CVPR2023W/Anti-UAV/papers/Li_A_Global-Local_Tracking_Framework_Driven_by_Both_Motion_and_Appearance_CVPRW_2023_paper.pdf"
+      ],
+      "so_what": "区别恢复与延长旧输出",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V4",
+      "dedup_key": "effective_independent_temporal_evidence",
+      "title": "按有效独立观测数累积弱目标证据",
+      "method": [
+        "局部背景稳健估计时间噪声协方差",
+        "收缩协方差标准化时间对比，读取相对相关噪声的信号",
+        "同帧数比较真实、重复、相关噪声序列"
+      ],
+      "hypothesis": "相关噪声被当独立目标证据累计",
+      "pilot": "约1 GPU小时原始小块简单判别器；正：真实弱目标受益且复制帧不虚增；负：等效强度归一化；null：协方差不稳",
+      "compute": "全量40–90 GPU小时；4–6周",
+      "risk": "MEDIUM",
+      "limits": "去相关已有先例；不能用测试GT估计；有效观测数需预测收益",
+      "prior_work": [
+        "https://doi.org/10.1016/j.ijleo.2015.09.174",
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2511.09352"
+      ],
+      "so_what": "解释何时多帧多信息、何时重复噪声",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V5",
+      "dedup_key": "subpixel_flux_transfer_evidence",
+      "title": "用跨像素能量转移识别亚像素运动",
+      "method": [
+        "小孔径总对比能量与相邻像素增减",
+        "拟合亮斑移动的能量转移关系",
+        "真顺序/乱序/当前帧复制等容量比较"
+      ],
+      "hypothesis": "固定像素峰值闪烁而孔径能量及反向变化仍含信号",
+      "pilot": "1–2 GPU小时原始块探针/真实亚像素分层；正：分离增益依赖顺序；负：空间求和解释全部；null：只合成成立",
+      "compute": "全量60–120 GPU小时；5–6周",
+      "risk": "HIGH",
+      "limits": "自动增益、背景边缘、非点目标；近邻链接待进一步核验",
+      "prior_work": [
+        "https://opg.optica.org/ao/abstract.cfm?uri=ao-60-20-5873",
+        "https://doi.org/10.1364/OE.609228",
+        "https://www.mdpi.com/1424-8220/15/4/7267"
+      ],
+      "so_what": "检验脉冲之外廉价视频物理信号",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V6",
+      "dedup_key": "causal_latency_information_curve",
+      "title": "把未来信息收益换算成检出延迟",
+      "method": [
+        "固定当前帧逐步增加过去或未来观测",
+        "共享因果时间核替代全窗口，随机可用前缀训练",
+        "同误报事件预算比较延迟/持续漏检"
+      ],
+      "hypothesis": "部分离线增益依赖未来帧而非及时发现",
+      "pilot": "1–2 GPU小时前后文干预和小读出；正：过去证据可利用；负：未来贡献主导；null：干预分布偏移",
+      "compute": "全量50–100 GPU小时；4–6周",
+      "risk": "MEDIUM",
+      "limits": "序贯检测经典；因果化本身不新；需核对物理可见起点",
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2602.01843",
+        "https://arxiv.org/abs/2601.14690"
+      ],
+      "so_what": "发现时机而非仅离线分数",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V7",
+      "dedup_key": "recurrent_clutter_event_structure",
+      "title": "区分一次穿越与重复发生的背景亮斑",
+      "method": [
+        "记录局部弱事件间隔与复现形态",
+        "比较一次通过与重复背景事件模型",
+        "复现似然读出目标证据，空间容量不变"
+      ],
+      "hypothesis": "困难误报的重复结构不同于一次目标穿越",
+      "pilot": "约1 GPU小时预测/原始块来源留出；正：同单帧分数复现仍可分；负：只反映分数；null：40帧短",
+      "compute": "全量30–80 GPU小时；4–6周",
+      "risk": "HIGH",
+      "limits": "真目标可往返/闪烁；周期杂波已有",
+      "prior_work": [
+        "https://www.mdpi.com/2072-4292/15/5/1258",
+        "https://arxiv.org/abs/2606.15286"
+      ],
+      "so_what": "解释重复告警时间结构",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "id": "V8",
+      "dedup_key": "conditional_video_information_probe",
+      "title": "先量出图像之外的视频可用信息",
+      "method": [
+        "按当前帧对比/尺寸/背景难度匹配目标与困难背景",
+        "单帧、真实邻帧、复制帧同容量探针",
+        "来源留出与运动/驻留/缺测分层"
+      ],
+      "hypothesis": "区分未读出已有信息与当前数据缺少额外信息",
+      "pilot": "1–2 GPU小时同曝光/容量/终点；正：真邻帧独有优势；负：多探针无优势但不证明信息不存在；null：能力不足或匹配差",
+      "compute": "全量30–70 GPU小时；3–5周",
+      "risk": "MEDIUM",
+      "limits": "两个开发片段不足；仅新增历史移除不等于全单帧；非严格条件互信息估计",
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2606.27655",
+        "https://arxiv.org/abs/2602.01843"
+      ],
+      "so_what": "为图像或视频选择提供证据",
+      "generator_model": "gpt-6-astra",
+      "shard_id": "video_information_physical_mechanisms"
+    },
+    {
+      "dedup_key": "image_observation_consistent_center_set",
+      "title": "图像：监督所有与观测相容的目标位置",
+      "method": [
+        "用训练图像局部噪声和点扩散模型，枚举框内仍能解释观测的中心位置，保留位置集合。",
+        "轻量单帧模型最大化该集合内的预测概率总和，避免强迫选择一个热点。",
+        "保持背景监督和模型相同，对照单热点、固定高斯及等面积忽略区。"
+      ],
+      "hypothesis": "弱目标的监督冲突部分来自中心不可辨识，而非仅仅边界模糊。",
+      "pilot": "训练来源固定补丁；三种监督各512步；开发集中心误差、实际匹配、背景成本。",
+      "outcomes": {
+        "positive": "标签位移下稳定并改善原始开发定位",
+        "negative": "集合吸收背景导致虚警上升、定位恶化",
+        "null": "只对人工扰动有效"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2604.05363",
+        "https://arxiv.org/abs/2607.17148"
+      ],
+      "delta": "保留多个相容中心，而非生成单个软标签；需验证不等价于普通soft label",
+      "compute": "1–2 GPU小时，3–5天实现",
+      "risk": "PSF失配；等价于软标签/忽略区",
+      "so_what": "分辨信息不足与过度确定标签的限制",
+      "id": "I1",
+      "generator_model": "inherited",
+      "shard_id": "image_supervision_evaluation"
+    },
+    {
+      "dedup_key": "image_pixel_phase_balanced_detection",
+      "title": "图像：像素采样相位导致的检测盲点",
+      "method": [
+        "真实背景上以像素面积积分渲染同能量点目标，仅改变亚像素相位。",
+        "测量跨相位最差检出率，区分传感采样和网络步幅。",
+        "仅改变训练为相位均衡，对照平移增强及等样本随机相位。"
+      ],
+      "hypothesis": "系统性相位盲点被平均尺度指标掩盖",
+      "pilot": "固定背景/能量/PSF，4×4相位；单帧短训512步，整数移位和真实弱目标对照",
+      "outcomes": {
+        "positive": "相位盲点可重复，改善最差相位并迁移真实数据",
+        "negative": "只来自更多样本或增加虚警",
+        "null": "变化小于成像信息差异"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2505.19148",
+        "https://arxiv.org/abs/2609.18773"
+      ],
+      "delta": "孤立目标检测稳定性，而非多源解混和连续定位",
+      "compute": "1–2 GPU小时，3–4天实现",
+      "risk": "插值伪影、物理不可观测性",
+      "so_what": "将信息保留变为可控可证伪实验",
+      "id": "I2",
+      "generator_model": "inherited",
+      "shard_id": "image_supervision_evaluation"
+    },
+    {
+      "dedup_key": "video_latency_matched_first_discovery",
+      "title": "视频：在相同等待时间下比较首次发现",
+      "method": [
+        "输出标记最后可用帧，构建等待0/5/20帧的合法窗口。",
+        "统计首次标注后首次发现、未发现比例、连续未匹配告警段。",
+        "等等待与计算比较DeepPro和单帧。"
+      ],
+      "hypothesis": "离线优势可能依赖未来观测",
+      "pilot": "两个开发视频/发布权重/原匹配新增固定延迟推理，旧O/S保留",
+      "outcomes": {
+        "positive": "方法差距随等待改变且跨轨迹一致",
+        "negative": "仅窗口边缘分布解释",
+        "null": "排序和发现时间稳定"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2602.01843",
+        "https://arxiv.org/abs/2606.27655"
+      ],
+      "delta": "信息到达时间，而非最长漏检本身",
+      "compute": "0.5–1 GPU小时，2–3天实现",
+      "risk": "首次标注不是可见起点、未匹配非已验证虚警、纯评测贡献",
+      "so_what": "衡量视频增益要等多久",
+      "id": "I3",
+      "generator_model": "inherited",
+      "shard_id": "image_supervision_evaluation"
+    },
+    {
+      "dedup_key": "video_source_track_balanced_sampling",
+      "title": "视频泛化：训练单位从窗口改为独立轨迹",
+      "method": [
+        "按来源/轨迹/重复物理帧核算曝光。",
+        "仅改为先均匀来源再轨迹片段，匹配总步数/目标曝光。",
+        "训练来源内留一来源、来源等权评估。"
+      ],
+      "hypothesis": "长轨迹重复曝光主导优化导致帧增益不泛化",
+      "pilot": "两划分原采样/均衡各512步，确认集不动",
+      "outcomes": {
+        "positive": "多个留源改善",
+        "negative": "损害必要时间曝光",
+        "null": "独立来源少/短训无结论"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/1911.08731"
+      ],
+      "delta": "视频重复曝光统计单位；均衡方法本身不新",
+      "compute": "1–2 GPU小时，2–4天实现",
+      "risk": "来源与难度混杂，8来源区间宽",
+      "so_what": "分辨网络与有效监督多样性瓶颈",
+      "id": "I4",
+      "generator_model": "inherited",
+      "shard_id": "image_supervision_evaluation"
+    }
+  ]
+}

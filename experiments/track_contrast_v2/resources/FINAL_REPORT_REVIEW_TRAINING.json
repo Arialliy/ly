@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-12T18:13:59.649270+00:00",
+  "mode": [
+    "numeric-audit",
+    "claim-audit",
+    "verified-source-context-audit"
+  ],
+  "scope": "Training/readout/gradient/testing/source-attribution portions and explicitly unimplemented next-candidate wording in RESULTS.md. Full evaluation audit belongs to the evaluation contributor.",
+  "report_sha256": "e32d8be3fe38eb2a42bb60b27d07a6068465f874c0bb6815c31755df1f217c16",
+  "numeric_checks": [
+    {
+      "claim": "目标框均值logit变化",
+      "computed_FRAME_minus_CONT": 0.5139633462003719,
+      "computed_GAP_minus_CONT": 0.37657479334579946,
+      "displayed": [
+        0.513963,
+        0.376575
+      ],
+      "status": "PASS"
+    },
+    {
+      "claim": "背景框均值logit变化",
+      "computed_FRAME_minus_CONT": 0.644183560791264,
+      "computed_GAP_minus_CONT": 0.48976895227759876,
+      "displayed": [
+        0.644184,
+        0.489769
+      ],
+      "status": "PASS"
+    },
+    {
+      "claim": "目标−背景logit间隔变化",
+      "computed_FRAME_minus_CONT": -0.13022051139471014,
+      "computed_GAP_minus_CONT": -0.11319435242740328,
+      "displayed": [
+        -0.130221,
+        -0.113194
+      ],
+      "status": "PASS"
+    },
+    {
+      "claim": "sigmoid分数间隔变化",
+      "computed_FRAME_minus_CONT": 0.005911977886970732,
+      "computed_GAP_minus_CONT": 0.004486151245375408,
+      "displayed": [
+        0.005912,
+        0.004486
+      ],
+      "status": "PASS"
+    },
+    {
+      "claim": "原对比余弦间隔变化",
+      "computed_FRAME_minus_CONT": 0.004320647567510605,
+      "computed_GAP_minus_CONT": 0.003594137728214264,
+      "displayed": [
+        0.004321,
+        0.003594
+      ],
+      "status": "PASS"
+    }
+  ],
+  "fixed_batch_directions": {
+    "FRAME_vs_CONT_score_increased": 8,
+    "GAP_vs_CONT_score_increased": 8,
+    "FRAME_vs_CONT_logit_margin_decreased": 8,
+    "GAP_vs_CONT_logit_margin_decreased": 8,
+    "GAP_vs_FRAME_score_decreased": 8
+  },
+  "gradient_background_to_target_l2_medians": {
+    "frame": 6.832719568917562e-06,
+    "gap": 1.0501233615829657e-05
+  },
+  "calibration_weighted_gradient_ratios": {
+    "frame": 0.25,
+    "gap": 0.19860449860780982
+  },
+  "test_suite_results": {
+    "REFERENCE_TESTS.xml": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "INTEGRATION_TESTS.xml": {
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    }
+  },
+  "claim_evidence_matrix": [
+    {
+      "claim": "Actual logits, target ROI mean, maximum of valid background ROI means; direct gradients reach native TPro/conv_out1/conv_out2.",
+      "status": "supported",
+      "evidence": [
+        "train_modules/temporal_risk.py",
+        "CALIBRATION.json:measurements.gradient_pathway",
+        "resources/INTEGRATION_TESTS.xml"
+      ]
+    },
+    {
+      "claim": "Same fixed eight diagnostic batches and exposure weighting; sigmoid separation improves relative to CONT but logit separation decreases.",
+      "status": "supported",
+      "evidence": [
+        "training/*/run/TRAIN_DIAGNOSTICS.json:rows",
+        "resources/TRAINING_CHANGE_SUMMARY.json"
+      ],
+      "note": "Recomputed raw-row exposure weighted values and six-decimal report rounding independently in this review."
+    },
+    {
+      "claim": "New readout gradients align with detection and oppose keep at the C2048 calibration state.",
+      "status": "supported",
+      "evidence": [
+        "CALIBRATION.json:measurements.gradient_cosines"
+      ],
+      "note": "All 8 per-mode detection cosines positive and keep cosines negative. This is a local parameter-gradient observation, not proof of a specific target suppression or training-wide mechanism."
+    },
+    {
+      "claim": "Weak background derivative and keep conflict motivate a background-readout candidate.",
+      "status": "supported_as_hypothesis",
+      "evidence": [
+        "CALIBRATION.json:measurements.readout_gradients",
+        "RESULTS.md:final paragraph"
+      ],
+      "note": "Final report now explicitly states same-ROI peak/mean differences were not measured and negative-logit saturation is another possible source of weak gradients. Candidate is unimplemented and unvalidated."
+    },
+    {
+      "claim": "24 reference CPU tests and 20 CPU integration tests passed; one separate CUDA synthetic test was not run; actual 8-batch GPU calibration is complete.",
+      "status": "supported",
+      "evidence": [
+        "resources/REFERENCE_TESTS.xml",
+        "resources/INTEGRATION_TESTS.xml",
+        "runtime/calibrate.json",
+        "CALIBRATION.json"
+      ],
+      "note": "The ±1000 extreme gradient tests are CPU evidence only."
+    },
+    {
+      "claim": "89 identities/8 sources/72341 candidates/15591 segments/69602 covered observations with both backgrounds.",
+      "status": "supported",
+      "evidence": [
+        "resources/SEGMENT_CACHE_AUDIT.json"
+      ],
+      "note": "Counts are repeated training exposure units, not independent samples or verified visual visibility labels."
+    },
+    {
+      "claim": "DEIM provides a directly logits-connected classification-loss precedent; its code is not imported into training; soft-OR is not attributed to DEIM/SlotContrast/TrackMAE.",
+      "status": "supported",
+      "evidence": [
+        "resources/DEIM_REFERENCE.json",
+        "resources/DEIM_deim_criterion.py",
+        "train_modules/temporal_risk.py"
+      ],
+      "note": "Uses the earlier official CVF→author project→official GitHub verification and pinned blob hashes; no new source search needed."
+    },
+    {
+      "claim": "No expansion of current GAP to formal long training follows this direction screen.",
+      "status": "consistent",
+      "evidence": [
+        "RESULTS.md:opening and final paragraph",
+        "evaluation/DIRECTION.json"
+      ],
+      "note": "Proposal of a new background readout is not implementation authorization or evidence of benefit."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "TR-01",
+      "severity": "advisory",
+      "prior_issue": "Parameter-gradient anti-alignment could be read as established target-specific or training-wide keep suppression.",
+      "resolution": "Report revised to C2048 initial eight-batch local parameter-gradient conflict, rejects training-wide causal inference, and adds unmeasured same-ROI peak/mean and saturation caveats to the proposed next candidate.",
+      "status": "resolved"
+    }
+  ],
+  "unresolved_findings": [],
+  "safe_edit_suggestions": [],
+  "telemetry_status": "STOPPED via owned stop marker; no PID file; no C-v2 resource controls applied",
+  "no_invention_status": "No measurements, significance, causal explanation, or unimplemented experiment benefits fabricated.",
+  "next_owner": "root for integration; no additional training required by this review",
+  "source_sha256": {
+    "RESULTS.md": "e32d8be3fe38eb2a42bb60b27d07a6068465f874c0bb6815c31755df1f217c16",
+    "CALIBRATION.json": "934ea3d203a3c6f9ffdd26e173710eaba1926b2650b53bc09c652d86a9e7a98a",
+    "resources/TRAINING_CHANGE_SUMMARY.json": "d603b75e02c5603dc4ad68eb67649e1e916cac958afb8fb6d7d8c3404d89c7f6",
+    "resources/TRAINING_CONNECTION_REVIEW.json": "19e8b463d94596d34ddb08ddf80d069cd773966d248a4356b469abbc4fc4d874",
+    "resources/LOSS_VALIDATION.json": "e04c09b1f4e82cd2faf5c22f967493bc723fd52cceb5cb57ad01ebf58866222e",
+    "resources/REFERENCE_TESTS.xml": "210c1afb0ea96e31aa58c8a2846c8df15768f1496d9b967d984cc57a62619e9f",
+    "resources/INTEGRATION_TESTS.xml": "8c321c41e540f0f939ba1d7c7cd4a92253bb604e2d888afcd2d810b9ec33b3b6",
+    "resources/SEGMENT_CACHE_AUDIT.json": "b174067693385f2cb152b4cfc20bb2ed86b4dc4de1d4707f61943164a9b52894",
+    "resources/DEIM_REFERENCE.json": "e831818fec671650ff6da3ea99f56daba0bac6dddae2f872bbe301e7c86fc9dd",
+    "runtime/GPU_TELEMETRY_SUMMARY.json": "db509497c90ebdb3effcc3f6a243ed74a5cf842140f09113784f4fe65d86c86d",
+    "training/CONT/run/TRAIN_DIAGNOSTICS.json": "8193a173a9404076e3b195c7db6c0534038d09345bf719305df573ce40bf58a6",
+    "training/FRAME/run/TRAIN_DIAGNOSTICS.json": "e769260a6afbdca1ca0f95c66deef77cecc09fb0497a9660280b0958024e8489",
+    "training/GAP/run/TRAIN_DIAGNOSTICS.json": "fef0dad9a31e2d9ec9d9b976f8f5ca03d446fb0f927bb24222d66fe9c51a40bb"
+  }
+}

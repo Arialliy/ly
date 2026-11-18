@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-11T13:35:59.630549+00:00",
+  "checks": [
+    {
+      "name": "all_previous_combination_artifacts_unchanged",
+      "passed": true,
+      "detail": 95
+    },
+    {
+      "name": "independent_source_hashes_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shared_high_min_loss",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shared_zero_loss_max_M",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "per_clip_high_min_loss",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "per_clip_zero_loss_max_M",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exact_background_U_span",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exact_background_outside_span",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same720_same_small_match_set",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_claim_review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "review_wording_suggestions_resolved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_output_chosen_rows_exist_with_exact_metric_vector",
+      "passed": true,
+      "detail": 5216
+    },
+    {
+      "name": "all_local_report_links",
+      "passed": true,
+      "detail": 28
+    }
+  ],
+  "independent_area_checks": 693,
+  "independent_object_checks": 26000,
+  "note": "Deterministic queries on two development clips. No statistical-significance or deployability claim."
+}

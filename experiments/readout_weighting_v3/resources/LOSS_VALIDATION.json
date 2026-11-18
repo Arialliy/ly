@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "device": "CPU",
+  "torch_version": "2.2.0a0+81ea7a4",
+  "tests": {
+    "REFERENCE_TESTS.xml": {
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "INTEGRATION_TESTS.xml": {
+      "tests": 37,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "reference_tests_executed_locally": true,
+  "official_original_methods_executed": [
+    "loss_labels_mal",
+    "_get_src_permutation_idx"
+  ],
+  "official_scope": "All-background MAL only, gamma=2, mal_alpha=None, matched equal-mean reduction; not full MAL or detector reproduction.",
+  "official_commit": "09d35d53d39ee3145a1e61e3a989b28b9468d1dd",
+  "commit_evidence": "Pinned v2 DEIM_REFERENCE.json and verified criterion SHA256; the raw supplied checker git lookup is not used as author provenance.",
+  "source_sha256": {
+    "experiments/readout_weighting_v3/reference/DeepProPlus_C_readout_v3/readout_weighting.py": "00a3c49a45e57b71773427d60c07055657d1a7e2586e56a455c693ce0c4c6018",
+    "experiments/readout_weighting_v3/reference/DeepProPlus_C_readout_v3/test_readout_weighting.py": "0c0a4c464263ab8983813dfbe0e509347007fad721dd9f4a760d716582d6fbec",
+    "experiments/readout_weighting_v3/reference/DeepProPlus_C_readout_v3/check_official_kernel.py": "4284cf674a1bf0d8361d35b275af01f2bcf9e7d6a4a312340a66edf12975aea6",
+    "experiments/readout_weighting_v3/train_modules/readout_weighting.py": "472167291a3569b292ade769fecfe32c6434153bd21d2cf8bbf1219719d4625b",
+    "experiments/readout_weighting_v3/tests/test_readout_weighting.py": "5ca298de20990e7de26bc0f283482f7d11cca82fd06b0fec35fced514a80c698",
+    "experiments/readout_weighting_v3/resources/official_kernel.py": "d35d7e266cbe7a4ae0327249f825e5f7ae8785d7de8039cad48bdb818c26b3e4",
+    "experiments/track_contrast_v2/resources/DEIM_deim_criterion.py": "380a7d86b71ba9a3cbbdb670b4c11a3f2bfd2e367ffe87db7ef8e9ba30806dd2"
+  }
+}

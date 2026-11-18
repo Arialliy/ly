@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-12T15:18:42.892827+00:00",
+  "scope": "camera_motion_v1 only; no whole-package re-audit",
+  "checks": {
+    "PROTOCOL_FREEZE.json": "PASS",
+    "EVALUATION_FREEZE.json": "PASS",
+    "resource_hashes": "PASS",
+    "MOTION_MANIFEST.csv_rows": 1640,
+    "MOTION_AND_DETECTION.csv_rows": 10400,
+    "frozen_objects": 5200,
+    "compute_provenance": "PASS",
+    "utf8_and_report_links": "PASS",
+    "source_syntax": "PASS",
+    "motion/FINAL_CHECK.json_sha256": "fe0fbca5fef3f232617c28850623a585d86c23fe467996f5765c051a5f8788f4",
+    "evaluation/FINAL_CHECKS.json_sha256": "e887f605ee94c577c925df8cc64f102c9c3a9a88e8261833b7612ffacf0b068a",
+    "all_predictions_complete_frozen_release": "PASS"
+  },
+  "frozen_cohort_sha256": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961",
+  "deliverable_sha256": {
+    "PROTOCOL.md": "2030a043d13dfd59c9bbc89165370bc046fea83f53ea4daff8b85567ae1bec4c",
+    "MOTION_MANIFEST.csv": "fa07e3318a7a0af076f81e5cedb9daeb261aabdb9b5307c6409020e473fa11d8",
+    "MOTION_AND_DETECTION.csv": "54b4516b23f1e7c7917288f4ba568e1d5ce58a9ada966bc1deb5c5422b69959e",
+    "RESULTS.md": "d148b97a6b00b55691dceab9a962fbb763bd445f0d4af6b1d3f80e1e952993e3"
+  }
+}

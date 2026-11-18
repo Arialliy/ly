@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "pid": 1032842,
+  "start_unix": 1791977606.1840258,
+  "worker_sha256": "8daf3f67657f79166d8bb3cbb8d3f9dcbd56ec27f25996b7d40805af2d63fc90",
+  "protocol_sha256": "34af43a3c198096a4461167e8c885c436b4b645e754e2290eda44f568936dc1e",
+  "train_v12current": "COMPLETE",
+  "train_v12history": "COMPLETE",
+  "probe_v12current": "COMPLETE",
+  "probe_v12history": "COMPLETE",
+  "infer_v12current": "COMPLETE",
+  "infer_v12history": "COMPLETE",
+  "score_v12currentcurrent": "COMPLETE",
+  "score_v12historyhistory": "COMPLETE",
+  "score_v12historycurrent": "COMPLETE",
+  "score_summary": "COMPLETE",
+  "end_unix": 1791979463.1434326,
+  "decision": "NO_OBSERVED_HISTORY_RECOVERY",
+  "completed_unix": 1791979790.7175093,
+  "additional_steps_each": 128,
+  "report_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/RESULTS.json": "50192a87dbe5e47b2ae2116a7f11ce6326b9c431dd70d60abfda8d6714afc420",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/RESULTS.md": "edfd0d6c02b360d99488a677efcf7604907e465012e630b09cc4e2db7424352c"
+  },
+  "training_artifact_check_sha256": "ea10566a49347a6f4c0706db1c51ae27a635e0bfe4a461969cc987097d205a7f",
+  "trace_summary_sha256": "bae6c1a42b04e73c6c8cee95ff8b1e3405f95a5f2751d345bff907ea47cd9b74",
+  "evaluation_summary_sha256": "f452c19bd9f82adbcb716992cb4fc14900e9962cf9321054d56f0e5cf1b11b5d",
+  "no_further_training_launched": true,
+  "M2_added": false
+}

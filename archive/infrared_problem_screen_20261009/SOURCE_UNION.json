@@ -1,0 +1,252 @@
+{
+  "updated_utc": "2026-10-09T15:13:12.994794+00:00",
+  "entries": [
+    {
+      "dedup_key": "10.1109/TPAMI.2026.3683258",
+      "payload": {
+        "method": "DeepPro / DeepPro-Plus",
+        "title": "Probing Deep Into Temporal Profile Makes the Infrared Small Target Detector Much Better",
+        "venue": "IEEE TPAMI 48(8):10157-10175, August 2026",
+        "doi": "10.1109/TPAMI.2026.3683258",
+        "publication_evidence": [
+          "https://tinalrj.github.io/",
+          "https://pubmed.ncbi.nlm.nih.gov/41973585/",
+          "https://dblp.uni-trier.de/rec/journals/pami/LiAWYDWLGL26.html"
+        ],
+        "publisher_url": "https://ieeexplore.ieee.org/document/11479915/",
+        "publisher_access": "DOI resolves to publisher; direct article text failed SSL. Publication crosschecked via author and bibliographic sources.",
+        "paper": "https://arxiv.org/html/2506.12766v5",
+        "paper_version": "v5 2026-03-27; latest author manuscript; v2 failure wording crosschecked remains in v5",
+        "repo": "https://github.com/TinaLRJ/DeepPro",
+        "commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+        "code_status": "Actual source and train/test scripts present; no execution test performed",
+        "code_files": [
+          "networks/models/DeepPro.py",
+          "networks/models/DeepPro-Plus.py",
+          "networks/layers/TPro.py",
+          "train.py",
+          "test.py",
+          "data_utils/TestDataLoader.py"
+        ],
+        "weights": {
+          "status": "Actual checkpoint HTTP 200 verified without loading/executing",
+          "path": "log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro_DataL40/checkpoints/best_model.pth",
+          "bytes": 811632,
+          "sha256": "4a4d5da12a337553972d507b2320ec26da0116d2018e2f30c7b540bbd7001546",
+          "other_weights": "DeepPro-Plus NUDT, HiNo, RGBT, SatVideo also present in Git tree"
+        },
+        "native_task": "Multiframe dense binary segmentation/confidence map for all T frames, not native bounding-box detector. RGBT-Tiny has box labels and requires special evaluation rules.",
+        "mechanism": "Default 40-frame clips. TPro applies learned full T-by-T mixing to temporal profiles at fixed spatial locations; no recurrent state across clips. Inference windows overlap 10% and repeated frame outputs are unioned. Full-window temporal mixing is acausal by inspection.",
+        "own_verified_failures": [
+          {
+            "source_section": "IV-G and Fig.17, HTML lines 445-451",
+            "failure": "Pedestrian partly obscured by trees is missed; incomplete temporal signal becomes a narrow spike. Authors give two possible reasons: incomplete signal and missing such training examples.",
+            "status": "Reported own failure; causal attribution not established"
+          },
+          {
+            "source_section": "IV-G and Fig.17, HTML lines 445-451",
+            "failure": "Three temporarily stationary pedestrians are missed. Fixed spatial temporal profile stays near a plateau for over 40 frames.",
+            "status": "Reported own failure; image-coordinate residence/static appearance, not proof about arbitrary world-stationary objects"
+          },
+          {
+            "source_section": "IV-C2 Table V and Appendix E-C1/F",
+            "failure": "Longer contiguous windows have limited benefit: DeepPro T40 Pd59.17/Fa1.76 vs T80 Pd60.21/Fa3.61 (Fa units 1e-5) on HiNo. Authors explicitly discuss extracting useful longer history as future work.",
+            "status": "Measured tradeoff on this dataset only; does not establish mechanism generality"
+          }
+        ],
+        "existing_obvious_extensions": "DeepPro+S and DeepPro-Plus already add spatial computations; Plus theoretical spatial RF19x19 and STD residual blocks. Simply adding a spatial branch is not a defensible novelty claim.",
+        "figure_observation": "Fig17 viewed: stationary m2-m4 remain visually visible in magnified spatial crops; this is visual inspection only and does not prove a single-frame model recovers them. Paper does not explicitly assign Fig17 to base versus Plus in the caption, although preceding real-world experiment uses Plus.",
+        "candidate_improvement": {
+          "status": "Hypothesis, not validated or novelty-cleared",
+          "problem": "Preserve detection evidence across motion-to-dwell transitions that outlast a fixed 40-frame clip, while correctly deleting stale evidence after a target leaves.",
+          "minimal_method": "Use DeepPro-Plus as encoder; maintain sparse target evidence states seeded by a valid motion event. Retrieve last reliable target event and pre-arrival local background, compare current local appearance to both, and update a survival/exit decision. Store event evidence rather than blindly enlarging a contiguous dense time window.",
+          "must_beat": [
+            "DeepPro-Plus T40/T80",
+            "single-frame detector OR/max fusion",
+            "EMA/previous-mask propagation",
+            "simple Kalman/track memory with timeout",
+            "augmentation-only with stop/restart and partial occlusion",
+            "TDCNet AAAI2026 stationary/extremely-slow strong control; match data and evaluation task before comparing"
+          ],
+          "metrics": [
+            "missed-frame run length during dwell",
+            "time to reacquire after visible return",
+            "false persistence duration after true exit",
+            "event-conditioned recall at fixed false events per minute",
+            "first detection latency with equal future-frame budget"
+          ]
+        },
+        "boundaries": [
+          "No claim that all IRSTD benchmarks are saturated.",
+          "No claim that CHAL or HomoDiff share these failures without testing.",
+          "Occlusion hypothesis separate from stationary failure; do not assume absent target can be detected from no observations.",
+          "RGBT-Tiny failure cases are pedestrians, not proof of identical failure for 1-3 pixel aerial targets.",
+          "Novelty relative to general tracking and static/dynamic background models unresolved.",
+          "README includes stale under-peer-review sentence; author homepage and formal issue metadata confirm published status.",
+          "Parent parallel evidence: TDCNet AAAI2026 supplement §5.3 reports AP50=96.27 on 250 stationary/extremely slow frames. This disproves a field-wide inability claim. TDCNet must be a strong control; attach the parent verified source in final synthesis.",
+          "Stationary misses are source-verified; stop-to-dwell transition continuous miss duration is a proposed evaluation and has not been measured or reported in this source."
+        ]
+      },
+      "source_shard": "deeppro_extraction",
+      "additional_extractions": []
+    },
+    {
+      "dedup_key": "arxiv:2511.09352",
+      "payload": {
+        "id": "tdcnet_aaai2026",
+        "title": "Spatio-Temporal Context Learning with Temporal Difference Convolution for Moving Infrared Small Target Detection",
+        "authors": [
+          "Houzhang Fang",
+          "Shukai Guo",
+          "Qiuhuan Chen",
+          "Yi Chang",
+          "Luxin Yan"
+        ],
+        "venue": "AAAI 2026, pp.3840–3848",
+        "status": "published proceedings; official AAAI PDF and author code verified",
+        "paper": "https://ojs.aaai.org/index.php/AAAI/article/download/37385/41347",
+        "fulltext": "https://arxiv.org/html/2511.09352v2",
+        "code": "https://github.com/IVPLabs/TDCNet",
+        "data_weights": "Author README links Google Drive and Baidu Netdisk for weights and IRSTD-UAV; links seen, downloads not tested",
+        "data": "IRSTD-UAV: 17 real video sequences, 15106 frames; IRDST: real videos",
+        "evidence": [
+          {
+            "location": "Supplement §5.4/Table5",
+            "inter_frame_interval_skipped": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ],
+            "AP50": [
+              93.83,
+              91.28,
+              89.62,
+              86.73,
+              83.12
+            ],
+            "recall": [
+              96.27,
+              93.85,
+              92.43,
+              91.87,
+              90.25
+            ],
+            "interpretation": "Measured loss as frames become more separated. Cannot isolate egomotion: target displacement and temporal horizon change too."
+          },
+          {
+            "location": "Supplement §3.2",
+            "fact": "IRSTD-UAV divides each sequence into 50-frame segments, shuffles and splits 8:2. This is not a held-out-video evaluation; no empirical inflation claim is made."
+          },
+          {
+            "location": "Author README IRSTD-UAV section",
+            "fact": "Released recipe instructs background alignment before train/test with GIM and background_alignment.py."
+          },
+          {
+            "location": "Supplement §5.3/Table4",
+            "fact": "Static/very slow test exists: 5 sequences ×50 frames; AP50 96.27, recall97.20. Thus do not claim static targets were ignored."
+          }
+        ],
+        "measured_metrics": "P/R/F1/AP50 at box IoU0.5; FPS/parameters/FLOPs; temporal-length, slow/static, and frame-interval ablations",
+        "not_measured_in_read_sections": "Consecutive miss duration, recovery after corrupted support frames, time to first reliable detection, controlled separation of camera and target motion, held-out-scene generalization for IRSTD-UAV",
+        "remaining_problem": "After increased temporal separation, detection loses recall despite high ordinary-set scores; identify which support correspondence failures generate sustained missed detections, then remedy them."
+      },
+      "source_shard": "temporal_evidence",
+      "additional_extractions": []
+    },
+    {
+      "dedup_key": "doi:10.1109/TIP.2026.3689420",
+      "payload": {
+        "id": "mist_tip2026",
+        "title": "MIST: A Benchmark and Baseline for Multi-frame Infrared Small Target Detection in Complex Motion",
+        "authors": [
+          "Rui Gao",
+          "Meihong Zhang",
+          "Gongyang Li",
+          "Guanyi Li",
+          "Kai Zhao",
+          "Xianchao Zhang",
+          "Dan Zeng"
+        ],
+        "venue": "IEEE Transactions on Image Processing 2026, vol35 pp5196–5211",
+        "doi": "10.1109/TIP.2026.3689420",
+        "status": "Author README records TIP acceptance 2026-04-27; bibliographic record confirms publication",
+        "paper_metadata": "https://pubmed.ncbi.nlm.nih.gov/42090523/",
+        "code": "https://github.com/ShuCvlab/MIST",
+        "author_result_table": "https://raw.githubusercontent.com/ShuCvlab/MIST/main/assets/benchmark_results.png",
+        "data_weights": "Official README links MIST data and pretrained model weights on Google Drive; downloads not tested",
+        "data": "Targets generated by synthetic engine and blended into real backgrounds; 78 train/42 test sequences, 11-sequence MIST-Hard; not fully real captured target videos",
+        "evidence": [
+          {
+            "location": "Official README dataset note",
+            "fact": "MIST-Hard combines SCR<=1, highly irregular trajectories, and speeds>7pixels/frame."
+          },
+          {
+            "location": "Official benchmark TableII image, visually read",
+            "method": "MISTNet",
+            "NUDT_MIRSDT": {
+              "IoU": 86.85,
+              "Pd": 99.19,
+              "Fa_1e6": 2.77
+            },
+            "MIST": {
+              "IoU": 70.48,
+              "Pd": 94.83,
+              "Fa_1e6": 2.49
+            },
+            "MIST_Hard": {
+              "IoU": 61.14,
+              "Pd": 90.15,
+              "Fa_1e6": 2.41
+            },
+            "interpretation": "Hard subset is measurably harder even for proposed baseline; cross-column comparisons are not a train-on-one/test-on-another transfer experiment."
+          }
+        ],
+        "measured_metrics": "IoU/nIoU/Pd/Fa; challenging subset; speed/model complexity",
+        "not_measured_or_not_verified": "Full article inaccessible in bounded search; no claims about absent full-paper evaluations. README/table do not establish recovery behavior or isolated abrupt-motion cause. Hard subset changes contrast and motion together.",
+        "remaining_problem": "Complex-motion/low-contrast sequences remain less reliable; usable controlled data and released model support diagnostic screening, but real-sequence corroboration is required."
+      },
+      "source_shard": "temporal_evidence",
+      "additional_extractions": []
+    },
+    {
+      "dedup_key": "arxiv:2509.16888",
+      "payload": {
+        "id": "rethinking_eval_neurips2025",
+        "title": "Rethinking Evaluation of Infrared Small Target Detection",
+        "authors": [
+          "Youwei Pang",
+          "Xiaoqi Zhao",
+          "Lihe Zhang",
+          "Huchuan Lu",
+          "Georges El Fakhri",
+          "Xiaofeng Liu",
+          "Shijian Lu"
+        ],
+        "venue": "NeurIPS 2025",
+        "status": "Author arXiv comments and official NeurIPS-hosted slides verified; proceedings landing page not retrieved in bounded search",
+        "fulltext": "https://arxiv.org/html/2509.16888v2",
+        "official_slides": "https://neurips.cc/media/neurips-2025/Slides/121695.pdf",
+        "code": "https://github.com/lartpang/PyIRSTDMetrics",
+        "evidence": [
+          {
+            "location": "§3–5",
+            "fact": "Separates target localization and segmentation with hIoU/error taxonomy; cross-dataset evaluation. Main evaluation concentrates on single-frame segmentation methods."
+          },
+          {
+            "location": "AppendixD.5/Table6",
+            "fact": "Explicitly evaluates three multi-frame methods; hIoU 0.552/0.546/0.591, target localization IoU 0.683/0.669/0.719. These are not evidence about CHAL/TDCNet failures."
+          }
+        ],
+        "measured_metrics": "Mask matching, localization/segmentation errors and cross-dataset transfer; multi-frame aggregate extension",
+        "what_metrics_conceal": "Inference from metric definitions: framewise pooled scores are unchanged if identical per-frame errors are reordered, hence cannot distinguish isolated misses from one long blind interval. Paper does not itself demonstrate temporal burst failures.",
+        "remaining_problem": "Reuse established spatial error taxonomy and add event-aligned sequence diagnosis rather than claim a new generic metric."
+      },
+      "source_shard": "temporal_evidence",
+      "additional_extractions": []
+    }
+  ],
+  "entry_count": 4,
+  "scope": "Canonical-ID union of four extracted papers; no local model evaluation"
+}

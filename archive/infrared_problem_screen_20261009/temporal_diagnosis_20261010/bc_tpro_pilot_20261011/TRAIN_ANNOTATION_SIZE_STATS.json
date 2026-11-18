@@ -1,0 +1,283 @@
+{
+  "scope": "only eight frozen training annotation JSONs; no calibration or confirmation annotation/raw-frame/output read",
+  "quantile_rule": "nearest rank ceil(p*n), object-frame weighted",
+  "all_valid_max_side": {
+    "n": 16707,
+    "min": 3,
+    "q50": 9,
+    "q90": 13,
+    "q95": 15,
+    "q99": 19,
+    "max": 23
+  },
+  "positive_max_side": {
+    "n": 16707,
+    "min": 3,
+    "q50": 9,
+    "q90": 13,
+    "q95": 15,
+    "q99": 19,
+    "max": 23
+  },
+  "small_positive_max_side": {
+    "n": 16251,
+    "min": 3,
+    "q50": 9,
+    "q90": 13,
+    "q95": 14,
+    "q99": 16,
+    "max": 16
+  },
+  "per_sequence": [
+    {
+      "sequence": "DJI_0030_9",
+      "annotation_sha256": "456703b6d2510f4ca1d3902af598356329e67699f4d35c592d2b5de34fd73ee8",
+      "all_valid_max_side": {
+        "n": 2240,
+        "min": 7,
+        "q50": 10,
+        "q90": 15,
+        "q95": 16,
+        "q99": 16,
+        "max": 16
+      },
+      "positive_max_side": {
+        "n": 2240,
+        "min": 7,
+        "q50": 10,
+        "q90": 15,
+        "q95": 16,
+        "q99": 16,
+        "max": 16
+      },
+      "small_positive_max_side": {
+        "n": 2240,
+        "min": 7,
+        "q50": 10,
+        "q90": 15,
+        "q95": 16,
+        "q99": 16,
+        "max": 16
+      }
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "annotation_sha256": "5980f23f6d44b40316a22c23681a53231a2420ccaf1114b54371688da5fbb5de",
+      "all_valid_max_side": {
+        "n": 11758,
+        "min": 3,
+        "q50": 8,
+        "q90": 12,
+        "q95": 13,
+        "q99": 14,
+        "max": 23
+      },
+      "positive_max_side": {
+        "n": 11758,
+        "min": 3,
+        "q50": 8,
+        "q90": 12,
+        "q95": 13,
+        "q99": 14,
+        "max": 23
+      },
+      "small_positive_max_side": {
+        "n": 11724,
+        "min": 3,
+        "q50": 8,
+        "q90": 12,
+        "q95": 13,
+        "q99": 14,
+        "max": 16
+      }
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "annotation_sha256": "74147cfd998f03906ae992364dfbce42fe1685f3b2ab817595154b8ad111a1ca",
+      "all_valid_max_side": {
+        "n": 480,
+        "min": 6,
+        "q50": 9,
+        "q90": 19,
+        "q95": 20,
+        "q99": 21,
+        "max": 21
+      },
+      "positive_max_side": {
+        "n": 480,
+        "min": 6,
+        "q50": 9,
+        "q90": 19,
+        "q95": 20,
+        "q99": 21,
+        "max": 21
+      },
+      "small_positive_max_side": {
+        "n": 320,
+        "min": 6,
+        "q50": 8,
+        "q90": 10,
+        "q95": 11,
+        "q99": 11,
+        "max": 11
+      }
+    },
+    {
+      "sequence": "DJI_0113_3",
+      "annotation_sha256": "f8242786d6b6ea689c6c7653deb21997a29ffa7bf606a927640b14562454e249",
+      "all_valid_max_side": {
+        "n": 160,
+        "min": 9,
+        "q50": 10,
+        "q90": 10,
+        "q95": 10,
+        "q99": 10,
+        "max": 10
+      },
+      "positive_max_side": {
+        "n": 160,
+        "min": 9,
+        "q50": 10,
+        "q90": 10,
+        "q95": 10,
+        "q99": 10,
+        "max": 10
+      },
+      "small_positive_max_side": {
+        "n": 160,
+        "min": 9,
+        "q50": 10,
+        "q90": 10,
+        "q95": 10,
+        "q99": 10,
+        "max": 10
+      }
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "annotation_sha256": "50dc9aae381bca0f7202875f1e58db3d345d6e6f12033b3360623b413fd82432",
+      "all_valid_max_side": {
+        "n": 629,
+        "min": 9,
+        "q50": 14,
+        "q90": 18,
+        "q95": 19,
+        "q99": 20,
+        "max": 20
+      },
+      "positive_max_side": {
+        "n": 629,
+        "min": 9,
+        "q50": 14,
+        "q90": 18,
+        "q95": 19,
+        "q99": 20,
+        "max": 20
+      },
+      "small_positive_max_side": {
+        "n": 471,
+        "min": 9,
+        "q50": 13,
+        "q90": 16,
+        "q95": 16,
+        "q99": 16,
+        "max": 16
+      }
+    },
+    {
+      "sequence": "DJI_0217_2",
+      "annotation_sha256": "8865fba60d47f9b3e1d53ce5c8e196869e2356cd781b8ff93ea4f0ed91bf3b5f",
+      "all_valid_max_side": {
+        "n": 480,
+        "min": 6,
+        "q50": 16,
+        "q90": 18,
+        "q95": 18,
+        "q99": 19,
+        "max": 19
+      },
+      "positive_max_side": {
+        "n": 480,
+        "min": 6,
+        "q50": 16,
+        "q90": 18,
+        "q95": 18,
+        "q99": 19,
+        "max": 19
+      },
+      "small_positive_max_side": {
+        "n": 376,
+        "min": 6,
+        "q50": 15,
+        "q90": 16,
+        "q95": 16,
+        "q99": 16,
+        "max": 16
+      }
+    },
+    {
+      "sequence": "DJI_0309_1",
+      "annotation_sha256": "4705847cbddf5fa227f77253079b60920c3c2fd7e32e28fc7dbc8dcb00406523",
+      "all_valid_max_side": {
+        "n": 160,
+        "min": 6,
+        "q50": 7,
+        "q90": 8,
+        "q95": 8,
+        "q99": 9,
+        "max": 9
+      },
+      "positive_max_side": {
+        "n": 160,
+        "min": 6,
+        "q50": 7,
+        "q90": 8,
+        "q95": 8,
+        "q99": 9,
+        "max": 9
+      },
+      "small_positive_max_side": {
+        "n": 160,
+        "min": 6,
+        "q50": 7,
+        "q90": 8,
+        "q95": 8,
+        "q99": 9,
+        "max": 9
+      }
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "annotation_sha256": "c27cc3bcf0c93ae4ae7fb027b5fa1c4c0d59fcdfa4a749baefe9ab83d78b103d",
+      "all_valid_max_side": {
+        "n": 800,
+        "min": 8,
+        "q50": 10,
+        "q90": 12,
+        "q95": 12,
+        "q99": 12,
+        "max": 12
+      },
+      "positive_max_side": {
+        "n": 800,
+        "min": 8,
+        "q50": 10,
+        "q90": 12,
+        "q95": 12,
+        "q99": 12,
+        "max": 12
+      },
+      "small_positive_max_side": {
+        "n": 800,
+        "min": 8,
+        "q50": 10,
+        "q90": 12,
+        "q95": 12,
+        "q99": 12,
+        "max": 12
+      }
+    }
+  ],
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "pre_TPro_spatial_rf_radius": 9
+}

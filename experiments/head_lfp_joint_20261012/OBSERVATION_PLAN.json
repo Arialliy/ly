@@ -1,0 +1,184 @@
+{
+  "policy": "First occurrence of each of eight training sequences in the frozen annotation-only512-step plan; use both starts of that pair. Select before training, no development objects. No response-driven crop selection.",
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "pairs": [
+    {
+      "entry_index": 5,
+      "pair_index": 1,
+      "pair": {
+        "sequence": "DJI_0030_9",
+        "anchor_frame": 24,
+        "selected_annotation_id": 821933,
+        "selected_track_id": 7800013,
+        "starts": [
+          8,
+          16
+        ],
+        "crop_yx": [
+          136,
+          0
+        ],
+        "stratum": "interior",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 6,
+      "pair_index": 1,
+      "pair": {
+        "sequence": "DJI_0043_2",
+        "anchor_frame": 18,
+        "selected_annotation_id": 835321,
+        "selected_track_id": 8601523,
+        "starts": [
+          1,
+          13
+        ],
+        "crop_yx": [
+          50,
+          192
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": false,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 0,
+      "pair_index": 1,
+      "pair": {
+        "sequence": "DJI_0057_1",
+        "anchor_frame": 93,
+        "selected_annotation_id": 865525,
+        "selected_track_id": 2521501,
+        "starts": [
+          62,
+          86
+        ],
+        "crop_yx": [
+          64,
+          473
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 4,
+      "pair_index": 1,
+      "pair": {
+        "sequence": "DJI_0113_3",
+        "anchor_frame": 126,
+        "selected_annotation_id": 1020166,
+        "selected_track_id": 2203000,
+        "starts": [
+          108,
+          116
+        ],
+        "crop_yx": [
+          147,
+          477
+        ],
+        "stratum": "interior",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 1,
+      "pair_index": 0,
+      "pair": {
+        "sequence": "DJI_0115_2",
+        "anchor_frame": 122,
+        "selected_annotation_id": 1020850,
+        "selected_track_id": 6801502,
+        "starts": [
+          94,
+          118
+        ],
+        "crop_yx": [
+          78,
+          275
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": false,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 2,
+      "pair_index": 0,
+      "pair": {
+        "sequence": "DJI_0217_2",
+        "anchor_frame": 140,
+        "selected_annotation_id": 1137460,
+        "selected_track_id": 8301500,
+        "starts": [
+          108,
+          120
+        ],
+        "crop_yx": [
+          215,
+          292
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 0,
+      "pair_index": 0,
+      "pair": {
+        "sequence": "DJI_0309_1",
+        "anchor_frame": 33,
+        "selected_annotation_id": 1181628,
+        "selected_track_id": 3103000,
+        "starts": [
+          9,
+          17
+        ],
+        "crop_yx": [
+          333,
+          383
+        ],
+        "stratum": "interior",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    },
+    {
+      "entry_index": 1,
+      "pair_index": 1,
+      "pair": {
+        "sequence": "DJI_0323_2",
+        "anchor_frame": 49,
+        "selected_annotation_id": 1193400,
+        "selected_track_id": 8620001,
+        "starts": [
+          16,
+          28
+        ],
+        "crop_yx": [
+          88,
+          305
+        ],
+        "stratum": "boundary",
+        "target_centered_crop": true,
+        "sampling_attempts": 1
+      }
+    }
+  ],
+  "snapshots": [
+    0,
+    128,
+    512,
+    1024,
+    2048
+  ],
+  "scope": "Sixteen training crop windows, each40x128x128. Counts are window-target-frame instances, not distinct full-scene target frames or officialPd/Fa. All valid intersecting GT used for crop matching, core nonoverlap strict-small objects for recovery analysis.",
+  "hard_background": "Per slot frozen release argmax within unchanged training negative mask (excludes all boxes+2px, coremargin9). Compare that same coordinate and actual current mask maximum at each checkpoint.",
+  "main_evaluation": false
+}

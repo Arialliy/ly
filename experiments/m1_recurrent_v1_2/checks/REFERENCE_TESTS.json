@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "status": "PASS",
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "source": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/test_state_update.py",
+  "scope": "Supplied CPU core tests; no detector performance claim"
+}

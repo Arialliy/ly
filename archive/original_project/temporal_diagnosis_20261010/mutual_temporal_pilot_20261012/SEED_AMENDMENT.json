@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-10-11T18:08:23.741370+00:00",
+  "authority": "user latest explicit instruction: seed是固定的",
+  "seed": 46,
+  "additional_seeds": false,
+  "overrides": "PROTOCOL.md section 去留: seed47/48 confirmation clause only; original launch-frozen protocol remains for audit",
+  "current_training_changes": false,
+  "inference_changes": false,
+  "positive_next_stage": "Only if frozen detection and mechanism criteria pass: fixed-seed validation on new sources; no claim of across-seed robustness."
+}

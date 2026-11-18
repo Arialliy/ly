@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "scope": "All fixed 5200 strict target frames and 130 tracks per arrangement; no filtering by new recoveries.",
+  "isolation": "A hit is isolated only for pattern 0,1,0 on the same track with both local and source frame numbers consecutive. Both observed neighbors must exist; boundaries and missing-label/source-frame gaps are ineligible.",
+  "coverage": "Matched observed strict frames divided by observed strict frames, separately per track; not physical unobserved trajectory coverage.",
+  "sums": "O/S are separate arrangements; do not add their recovered counts without deduplicating target frame IDs.",
+  "artifact_sha256": {
+    "TRACK_COVERAGE.csv": "58e3587759cc32221a2921d6b70ee584b22ca19ad76ed076d2271b8b9ed98b76",
+    "COVERAGE_AND_ISOLATION_SUMMARY.csv": "a0922676ca2c7554bf1df35d3bea517a346c205c122aa1bbf016f4a74753efdf",
+    "ISOLATED_HIT_OBJECTS.csv": "82d5fbe08cc612a0476eb525af1b38b3d6f4dbbabf3865e5dd01c106cfce4a7b"
+  }
+}

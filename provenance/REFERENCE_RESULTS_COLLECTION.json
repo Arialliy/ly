@@ -1,0 +1,89 @@
+{
+  "status": "COMPLETE",
+  "files": [
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+      "path": "results/references/deeppro_plus_release.pth",
+      "bytes": 937131,
+      "mode": "hardlink",
+      "sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv",
+      "path": "results/references/COHORTS.csv",
+      "bytes": 860333,
+      "mode": "hardlink",
+      "sha256": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json",
+      "path": "results/references/DATA_SELECTION.json",
+      "bytes": 191895,
+      "mode": "hardlink",
+      "sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+      "path": "results/references/TRAIN_PLAN.json",
+      "bytes": 1055697,
+      "mode": "hardlink",
+      "sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/COMPLETE.json",
+      "path": "results/references/release_evaluation/DJI_0026_2/COMPLETE.json",
+      "bytes": 395184,
+      "mode": "hardlink",
+      "sha256": "e05dd11d3b6079ef2f2244fa4f1663819dc27a9aafb65d967dce1df540f51234"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/scores.npz",
+      "path": "results/references/release_evaluation/DJI_0026_2/scores.npz",
+      "bytes": 15505,
+      "mode": "hardlink",
+      "sha256": "9117b233c9246e0499eab94916c0b6f6d468a0f0f57d180333dc65661c5f9f04"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/component_areas.npz",
+      "path": "results/references/release_evaluation/DJI_0026_2/component_areas.npz",
+      "bytes": 4737,
+      "mode": "hardlink",
+      "sha256": "d08f947a097cd49c1d0131d129e36b2696e7e2406b4f82ef3fa34c16687d37ea"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/FRAME_COUNTS.csv",
+      "path": "results/references/release_evaluation/DJI_0026_2/FRAME_COUNTS.csv",
+      "bytes": 17982,
+      "mode": "hardlink",
+      "sha256": "b5d508f7c2d757db4d6b9880657370b060aaa121d19f7d926c3dd3635c4edea6"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/COMPLETE.json",
+      "path": "results/references/release_evaluation/DJI_0067_2/COMPLETE.json",
+      "bytes": 4114190,
+      "mode": "hardlink",
+      "sha256": "0bed3b35fc1f5b24713a443b08b81a6228ace814fbd96e8993a25f15b429354c"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/scores.npz",
+      "path": "results/references/release_evaluation/DJI_0067_2/scores.npz",
+      "bytes": 149322,
+      "mode": "hardlink",
+      "sha256": "a31b419b0bb7e0496a7528515218f10370a091188ddbe9e42844ce2edf499be5"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/component_areas.npz",
+      "path": "results/references/release_evaluation/DJI_0067_2/component_areas.npz",
+      "bytes": 16075,
+      "mode": "hardlink",
+      "sha256": "702654feff0e6925dd42f31608010cb14015223c0ab8d233534e77e28c99f6ba"
+    },
+    {
+      "original": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/FRAME_COUNTS.csv",
+      "path": "results/references/release_evaluation/DJI_0067_2/FRAME_COUNTS.csv",
+      "bytes": 19798,
+      "mode": "hardlink",
+      "sha256": "264cd7ef053006fc2c798f9657307c33926f5ecdae56f11868752338c9ebc397"
+    }
+  ]
+}

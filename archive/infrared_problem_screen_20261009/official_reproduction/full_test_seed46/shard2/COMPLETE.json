@@ -1,0 +1,200 @@
+{
+  "status": "complete",
+  "seed": 46,
+  "official_checkpoint_training_seed": "unknown",
+  "source_commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "source_dirty": "",
+  "source_status_method": "host git-clean snapshot; all tracked SHA256 and file set verified before and after runtime",
+  "source_snapshot_sha256": "ded709b4a92d1ec60b9ad533ae7c691433e0789f032748ceccb327d74d652555",
+  "checkpoint_sha256": "e2ad2d5c9b39c3d428f57d8d50edefd6a09f8b45dff53fb9d31134272e5cc83e",
+  "loaded_checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "loaded_model_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+  "script_sha256": "5b9a91996797389e691c711e2f23df9662b3cf44b28960cb56486a51deccaf7c",
+  "source_file_sha256": {
+    "test.py": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b",
+    "ShootingRules.py": "888d4a26ff2877dc64550bc919fa60bf18e04e0af795aa8e8c304aa0b1e5c4e2",
+    "write_results.py": "47984378234a8f6e1ec3e18d83a50af8b93cce52645f1e04042afe52f04654ef",
+    "data_utils/TestDataLoader.py": "03210e84ac9acfc3fd85ef5bcd2c787cfc126e2580e622fca9c3297c3e1c022e"
+  },
+  "full_sequence_order": [
+    "Sequence85",
+    "Sequence86",
+    "Sequence87",
+    "Sequence88",
+    "Sequence89",
+    "Sequence90",
+    "Sequence91",
+    "Sequence92",
+    "Sequence93",
+    "Sequence94",
+    "Sequence95",
+    "Sequence96",
+    "Sequence97",
+    "Sequence47",
+    "Sequence56",
+    "Sequence59",
+    "Sequence76",
+    "Sequence101",
+    "Sequence105",
+    "Sequence119"
+  ],
+  "sequence_indices": [
+    2,
+    6,
+    10,
+    14,
+    18
+  ],
+  "sequences": [
+    "Sequence87",
+    "Sequence91",
+    "Sequence95",
+    "Sequence56",
+    "Sequence105"
+  ],
+  "windows": [
+    [
+      "Sequence87",
+      0,
+      39
+    ],
+    [
+      "Sequence87",
+      36,
+      75
+    ],
+    [
+      "Sequence87",
+      60,
+      99
+    ],
+    [
+      "Sequence91",
+      0,
+      39
+    ],
+    [
+      "Sequence91",
+      36,
+      75
+    ],
+    [
+      "Sequence91",
+      60,
+      99
+    ],
+    [
+      "Sequence95",
+      0,
+      39
+    ],
+    [
+      "Sequence95",
+      36,
+      75
+    ],
+    [
+      "Sequence95",
+      60,
+      99
+    ],
+    [
+      "Sequence56",
+      0,
+      39
+    ],
+    [
+      "Sequence56",
+      36,
+      75
+    ],
+    [
+      "Sequence56",
+      60,
+      99
+    ],
+    [
+      "Sequence105",
+      0,
+      39
+    ],
+    [
+      "Sequence105",
+      36,
+      75
+    ],
+    [
+      "Sequence105",
+      60,
+      99
+    ]
+  ],
+  "probabilities": [
+    {
+      "sequence": "Sequence87",
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/probabilities/Sequence87.npz",
+      "sha256": "e9d325291afc0407a2baacd7c6fef7200c1adeb2de293aa3533f5d9c6e6f6df4",
+      "shape": [
+        100,
+        221,
+        334
+      ]
+    },
+    {
+      "sequence": "Sequence91",
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/probabilities/Sequence91.npz",
+      "sha256": "a869dd7e222cdbdffba3ffc3848a44cee1064cdc9d0fd0903088c2a0c9218e4d",
+      "shape": [
+        100,
+        237,
+        354
+      ]
+    },
+    {
+      "sequence": "Sequence95",
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/probabilities/Sequence95.npz",
+      "sha256": "6bf829ef90707e56fbc590ae5efbc0284cdaa9292b798b0a1d0e1cc34aa76a42",
+      "shape": [
+        100,
+        187,
+        280
+      ]
+    },
+    {
+      "sequence": "Sequence56",
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/probabilities/Sequence56.npz",
+      "sha256": "7a13c6d8435b1e85e30f4c23037f433d2a3654bb80cba0e71ec43f80f0e79554",
+      "shape": [
+        100,
+        182,
+        283
+      ]
+    },
+    {
+      "sequence": "Sequence105",
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/full_test_seed46/shard2/probabilities/Sequence105.npz",
+      "sha256": "e82492a7f3f14d2fde48179cffd89814f8070a25d55c317e01e04f119a607d6f",
+      "shape": [
+        100,
+        215,
+        291
+      ]
+    }
+  ],
+  "gpu": "2",
+  "device": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.0+cu128",
+  "numpy": "2.2.5",
+  "elapsed_seconds_including_io_metrics_profile": 24.87280297279358,
+  "execution": "native full spatial frames, float32, original 40-frame windows and overlap maximum",
+  "arithmetic_policy": {
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": true
+  },
+  "max_gpu_allocated_bytes": 13378059776,
+  "max_gpu_reserved_bytes": 30060576768,
+  "training_performed": false
+}

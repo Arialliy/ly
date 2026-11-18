@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETE",
+  "checks": [
+    "DJI_0026_2: exact release O matched",
+    "DJI_0026_2: exact release O box_max",
+    "DJI_0026_2: exact release O peak_x",
+    "DJI_0026_2: exact release O peak_y",
+    "DJI_0026_2: exact release O component_area",
+    "DJI_0026_2: exact release O frame_counts",
+    "DJI_0026_2: exact release O component areas",
+    "DJI_0026_2: exact release O component unmatched",
+    "DJI_0026_2: exact release O component offsets",
+    "DJI_0067_2: exact release O matched",
+    "DJI_0067_2: exact release O box_max",
+    "DJI_0067_2: exact release O peak_x",
+    "DJI_0067_2: exact release O peak_y",
+    "DJI_0067_2: exact release O component_area",
+    "DJI_0067_2: exact release O frame_counts",
+    "DJI_0067_2: exact release O component areas",
+    "DJI_0067_2: exact release O component unmatched",
+    "DJI_0067_2: exact release O component offsets",
+    "single prediction summary matches release O exactly",
+    "all miss-run deltas versus O exactly zero"
+  ],
+  "check_count": 20,
+  "detector_forward_calls": 0,
+  "new_training_updates": 0,
+  "script_sha256": "03a688972dcb7d8809414633d1a166c54739ccab0b787ad7916f283e85896ff2"
+}

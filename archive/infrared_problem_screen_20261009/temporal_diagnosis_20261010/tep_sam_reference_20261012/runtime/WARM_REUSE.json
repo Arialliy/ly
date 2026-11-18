@@ -1,0 +1,22 @@
+{
+  "status": "WARM_REUSE_IMPORT_VALIDATED_GPU_NATIVE_PENDING",
+  "image": "deeppro-official-eval:20261009",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "env_spec_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/env-spec.json",
+  "env_spec_canonical_sha256": "de8a7eb93aac154354646ae9b59c7ba4086c2ad1d8a704894c9c1de86a4d6d86",
+  "pip_changes": false,
+  "source_read_only": true,
+  "cpu_imports": "PASS",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "torchvision": "0.22.0+cu128",
+    "Pillow": "11.0.0",
+    "numpy": "2.2.5",
+    "PyYAML": "6.0.2",
+    "tqdm": "4.67.1",
+    "skimage": "0.25.2",
+    "cv2": "4.12.0"
+  },
+  "original_requirement_pins_reproduced": false,
+  "compatibility_note": "Author test/model/dataset imports and strict state_dict load passed; actual native forward must still pass. Runtime torch version selected for installed RTX5090 compatibility."
+}

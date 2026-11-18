@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": {
+    "all_12_score_artifact_hashes": true,
+    "0067_O_all_five_fallback_exact_C0_scores": true,
+    "0067_O_common_has_zero_eligible_targets": true,
+    "paired_counts_and_scope_specific_budgets": true,
+    "motion_join_318_adjacent_926_pairs_10400_objects_1920_frame_condition_rows": true,
+    "evaluator_freeze_unchanged": true
+  },
+  "cohort_sha256": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961",
+  "evaluator_sha256": "d59e05a66614928a2f3082436f44e244b7d3fa6475b822cbbe3fc4f9c3757787"
+}

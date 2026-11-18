@@ -1,0 +1,27 @@
+{
+  "status": "frozen_before_support_probe_inference",
+  "motivating_result": "Membership term largest positive boxmax-logit Shapley for58/97 strong flips; not proof that common evidence is sufficient",
+  "cohort": 1417,
+  "hypotheses": [
+    "Missing useful evidence from successful context",
+    "Additional projected context suppresses common-feature response"
+  ],
+  "main_intervention": "Retain common-slot feature projection+bias; scale exclusive projection by lambda0,.25,.5,.75,1 separately within each original window",
+  "secondary": "Fix common features to one frontend pass on real union+halo, retaining each output row weights",
+  "dependency_safe_control": "Only common features at least8frames inside intersection, so no raw temporal dependencies outside common frames; report eligible and current-frame membership",
+  "measurements": [
+    "bboxmax logit/prob",
+    "fixed both original peaks",
+    "high/common -> low/full counts",
+    "low/common -> high/full counts",
+    "full reconstruction gate",
+    "stable positive/negative controls"
+  ],
+  "limits": [
+    "ordinary shared features include +/-8 raw context; not common raw frames only",
+    "internal deletion may be out of distribution and increase false positives",
+    "shared sufficiency is internal activation response, not proven physical observability",
+    "no method performance claim",
+    "following experiment follows observed main results and is exploratory"
+  ]
+}

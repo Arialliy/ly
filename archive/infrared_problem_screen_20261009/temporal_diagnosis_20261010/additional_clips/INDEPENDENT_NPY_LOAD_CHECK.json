@@ -1,0 +1,35 @@
+[
+  {
+    "candidate_id": "DJI_0028_4__4400005__00285__00444",
+    "status": "PASS",
+    "shape": [
+      160,
+      512,
+      640
+    ],
+    "numpy_version": "2.2.5",
+    "every_frame_pixel_hash_matches": true
+  },
+  {
+    "candidate_id": "DJI_0032_5__4801536__00063__00222",
+    "status": "PASS",
+    "shape": [
+      160,
+      512,
+      640
+    ],
+    "numpy_version": "2.2.5",
+    "every_frame_pixel_hash_matches": true
+  },
+  {
+    "candidate_id": "DJI_0047_3__4621500__00000__00159",
+    "status": "PASS",
+    "shape": [
+      160,
+      512,
+      640
+    ],
+    "numpy_version": "2.2.5",
+    "every_frame_pixel_hash_matches": true
+  }
+]

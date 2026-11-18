@@ -1,0 +1,38 @@
+{
+  "frozen_at_utc": "2026-10-11T14:59:02.651032+00:00",
+  "effective_extra_lambda": 0,
+  "negative_fraction": 0.01,
+  "only_optimization_change": "each window original unreduced F.softplus(logit) on same negative mask: top ceil(0.01*N) mean replaces full mean",
+  "outer_reduction": "same arithmetic mean of four window negative means; empty window remains differentiable zero",
+  "positive_coefficient": 1,
+  "negative_coefficient": 1,
+  "empty_background": "logits[window].sum()*0.0, same as lambda0",
+  "mask": "unchanged build_batch: all valid boxes of all categories and sizes incl ignored/crowd; each dilated by 2px; spatial loss core margin9",
+  "initialization": "same released best_model.pth, not lambda0 final_model.pth",
+  "seed": 46,
+  "steps": 512,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "fresh Adam",
+  "plan": "same original 512-entry frozen TRAIN_PLAN.json",
+  "bn": "eval running buffers, affine and other parameters trainable",
+  "precision": "FP32; TF32 false; deterministic torch; no AMP",
+  "selection": "fixed final update512; no intermediate checkpoint selection",
+  "telemetry": "all 512 updates; detached no_grad full mean, top1% mean, per-window N/k/fraction, positive, weighted positive/negative coefficients1",
+  "legacy_metadata": "frozen_plan_config.extra_lambda=1 is unchanged historical sampling-plan config; effective_extra_lambda=0 explicitly overrides actual loss meaning",
+  "sources_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/lambda0_control/code/losses.py": "61932eea834c909307d81cdb1bb5af8c13d33a450bba8b973c456fdf843fac2e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/lambda0_control/code/train_pilot.py": "ca37be9d9ecb68ca1e779c2ba7177d1f87e498d57ef272d99470f46e97b702af",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/lambda0_control/run/final_model.pth": "f6a1228155592d6683d07269e61a8078056ffce0c3916e1aebcaa268045f2562",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/lambda0_control/run/RUN.json": "766653f74b93e2a076c7e73e111903a342d63357a840fe3e33ddacc03cbe9ddd",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92"
+  },
+  "code_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/launch_training.py": "eed17f31daef3b55ca996fbbd6bf734019f8b985d671a5e32b6f090d9349315e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/training_diagnostics.py": "401fec264de5d334be95f2bb39da25708b1b2d79714ca76086e2861549745248",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+  },
+  "negative_boundary_tie_rule": "Pre-registered NEXT_INTERVENTION.json: among equal original pixel negative losses at cutoff retain earliest flattened indices. topk determines value cutoff only; above cutoff all kept and cutoff-equal cumsum fills k. Mask remains unchanged."
+}

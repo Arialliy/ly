@@ -1,0 +1,76 @@
+{
+  "status": "COMPLETE",
+  "conditions": [
+    "release",
+    "lambda0_top1",
+    "gaussian_softiou_approx"
+  ],
+  "plans": {
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ]
+  },
+  "threshold": 0.5,
+  "new_models_evaluated": [],
+  "small_target_frames": 5200,
+  "supervision_scope": "Common registered empty-window negative supervision; original E0, single E1, mutual E2; post-training E2 diagnostics. Not author-label or author-training reproduction.",
+  "object_comparison_rows": 10400,
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/training/run/RUN.json": "833dc1e10bbf8642f92e6f6c57dadc3ff819bd71a6b85a128d4a8dce479a3f2e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/COMPLETE.json": "e05dd11d3b6079ef2f2244fa4f1663819dc27a9aafb65d967dce1df540f51234",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/scores.npz": "9117b233c9246e0499eab94916c0b6f6d468a0f0f57d180333dc65661c5f9f04",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/component_areas.npz": "d08f947a097cd49c1d0131d129e36b2696e7e2406b4f82ef3fa34c16687d37ea",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0026_2/FRAME_COUNTS.csv": "b5d508f7c2d757db4d6b9880657370b060aaa121d19f7d926c3dd3635c4edea6",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/COMPLETE.json": "0bed3b35fc1f5b24713a443b08b81a6228ace814fbd96e8993a25f15b429354c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/scores.npz": "a31b419b0bb7e0496a7528515218f10370a091188ddbe9e42844ce2edf499be5",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/component_areas.npz": "702654feff0e6925dd42f31608010cb14015223c0ab8d233534e77e28c99f6ba",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/release/DJI_0067_2/FRAME_COUNTS.csv": "264cd7ef053006fc2c798f9657307c33926f5ecdae56f11868752338c9ebc397",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0026_2/COMPLETE.json": "5bedf281b12333fbb441031ec5722aa7183e2442ee0e63b7713cc47f6fad4472",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0026_2/scores.npz": "5aa9f759786ec99a5bb0e77390701e7d08a0db09e8dfea218a3c26c4555ba9a5",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0026_2/component_areas.npz": "0bfd450399eff0797f250b3968108cce955ebf27789e41b55566b4d1e36e05f0",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0026_2/FRAME_COUNTS.csv": "cdc9822552d17eafb69f1e2f4c045643da3cdbb1e73dd6f5a3cdbac3252dbb37",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0067_2/COMPLETE.json": "21f8932b927093d6d0a49bda0462ad07c661885677a874fb2d8cf7a00f51cc74",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0067_2/scores.npz": "0768a34a3c0ec20d02d3d446531396fd4005621ef2389ef5617824372a2bd9e1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0067_2/component_areas.npz": "e8f31dbc3ee3304135392ac3de3bc43b9d07de3b873b25b6f2c8fb92288c6344",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation/lambda0_top1/DJI_0067_2/FRAME_COUNTS.csv": "dffb363fca9aee93d0b311772ffc8dd628245717333566ed8eabbb2fa13e1bb1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0026_2/COMPLETE.json": "727c762c8af94a66ca6897714562199378f6fc0dcbb536554a3ae06f9eb6ff0a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0026_2/scores.npz": "745b92a0feea3e666a12d7fe82ea53c9a1168ee8d1a0b40c4812e32e226a4f5b",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0026_2/component_areas.npz": "077e6b2634a8816f9a3477f8795f083b74c15fe20a1e0d233b206d1187c88ea7",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0026_2/FRAME_COUNTS.csv": "17b215508386674db3fb8fe3590a7487be135520d0dc2559865825f4eb891596",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0067_2/COMPLETE.json": "594bc83294d1845810ab97b9e36a5cf5a54b679b5a650361656c723e15bc1cee",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0067_2/scores.npz": "f495a440b37cfb05774ed79557201efa32f6dc477e3e481d580be847de98f953",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0067_2/component_areas.npz": "419fb115fb493f98480fa34d5907fe45011736b377933c9f44fbb43b101b16f3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation/gaussian_softiou_approx/DJI_0067_2/FRAME_COUNTS.csv": "6ddcbd8366932545b9c51a0caf06ef84c86d7ef5454d27604f44eadb9c8e6404"
+  },
+  "script_sha256": "4e9079b25348433d2643ac8d5ecfc2949fd5f29cff4350319620e38d29a5e4ed",
+  "frozen_reference_anchor": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json",
+  "frozen_reference_anchor_sha256": "90ac75e886312af89153fc85ff47daf54d0c10cb027470b208836ae085111a41",
+  "frozen_reference_hashes_unchanged": true,
+  "scope": "Frozen component-peak diagnostic, not official Pd/Fa. O/S reliability only; cohorts frozen from release 11-window audit.",
+  "comparisons": [
+    "release",
+    "lambda0_top1"
+  ],
+  "cohort_counts": {
+    "low_all_05": 4342,
+    "extreme_all_001": 4170,
+    "both_fixed_success": 646,
+    "extra_only": 104,
+    "new_window_dependent": 73,
+    "release_O_only": 54,
+    "release_S_only": 74,
+    "candidate_window_mixed": 286
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1bb3dae531df2d37cb5c6206cb29c22a51bfdb1948b267fba3c2824d6713debc",
+  "name": "deeppro_stage1_train_paired_mean",
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-09T20:09:48.347633661Z",
+    "FinishedAt": "2026-10-09T20:13:59.716805789Z"
+  },
+  "observed_utc": "2026-10-09T20:15:23.938553+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "utc": "2026-10-11T12:15:53.812729+00:00",
+  "task": "Failure-stage ledger, descriptive failure conditions, visual review, official-metric boundary audit, fixed single-window replacement and route decision",
+  "deliverables": [
+    "stages/REPORT.md",
+    "conditions/FAILURE_CONDITIONS.md",
+    "ROUTE_DECISION.md"
+  ],
+  "overview": "REPORT.md",
+  "local_pipeline_failure_confirmed": true,
+  "content_vs_slot_cause": "unresolved",
+  "official_Pd_Fa_reproduced": false,
+  "new_method_gain_established": false,
+  "new_training_or_model_forward": false,
+  "confirmation_predictions_used": false,
+  "previous_frozen_delivery_unchanged": true,
+  "remaining_research": [
+    "Fix output specification and evaluation label provenance",
+    "Identify success-window evidence versus slot dependence",
+    "Validate specific conditions on predeclared source-separated development material",
+    "Investigate persistent low response separately from output-peak failures"
+  ]
+}

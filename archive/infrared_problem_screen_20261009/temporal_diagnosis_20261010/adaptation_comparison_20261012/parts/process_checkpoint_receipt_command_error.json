@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-10-11T17:11:34.606001+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--mount",
+    "type=bind,src=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,dst=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,readonly",
+    "--env",
+    "CUDA_VISIBLE_DEVICES=",
+    "deeppro-official-eval:20261009",
+    "python",
+    "-"
+  ],
+  "script_sha256": "ccd2230dd17b73fe6497dc4dc464a247a47d551f603150e7fd48a2f087496ac7",
+  "returncode": 126,
+  "stderr": "/opt/conda/bin/python: /opt/conda/bin/python: cannot execute binary file\n",
+  "gpu_requested": false,
+  "readonly_mount": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009"
+}

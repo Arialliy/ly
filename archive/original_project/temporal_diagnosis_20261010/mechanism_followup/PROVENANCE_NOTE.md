@@ -1,0 +1,5 @@
+# 报告入口更新的来源说明
+
+PROTOCOL.json冻结时引用的上轮REPORT.md已逐字保存于input_snapshots/result_stratification_REPORT_before_followup.md，其SHA256与冻结协议一致。完成本轮后，仅在原报告末尾追加后续工件链接，原统计正文未改。所有CSV、原概率、输入帧、官方源码和权重保持不变。
+
+第一轮与第二轮的协议分别在对应新推理前冻结；第二轮是基于第一轮结果追加的探索性消融。所有GPU运行已结束并保存日志。该目录不包含训练新方法或完整方法性能评估。

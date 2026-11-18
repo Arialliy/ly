@@ -1,0 +1,139 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-11T16:45:55.287047+00:00",
+  "condition": "gaussian_softiou_approx",
+  "research_decision": "FAILED_BACKGROUND_BUDGET_NOT_A_RELIABLE_TRAINING_BASELINE",
+  "primary_checkpoint_steps": 512,
+  "threshold": 0.5,
+  "U_budget": 4015,
+  "inference_arrangements": {
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ]
+  },
+  "small_target_frames": 5200,
+  "tracks": 130,
+  "clips": 2,
+  "summary": [
+    {
+      "condition": "release",
+      "arrangement": "O",
+      "M": 700,
+      "G_vs_release_same": 0,
+      "L_vs_release_same": 0,
+      "unmatched_components": 4015,
+      "positive_pixels_outside_boxes": 38368,
+      "unmatched_component_area_sum": 45232,
+      "low_all_05_matched": 0,
+      "low_all_05_G_vs_top1_same": 0,
+      "low_all_05_L_vs_top1_same": 169
+    },
+    {
+      "condition": "release",
+      "arrangement": "S",
+      "M": 720,
+      "G_vs_release_same": 0,
+      "L_vs_release_same": 0,
+      "unmatched_components": 3967,
+      "positive_pixels_outside_boxes": 38641,
+      "unmatched_component_area_sum": 45136,
+      "low_all_05_matched": 0,
+      "low_all_05_G_vs_top1_same": 0,
+      "low_all_05_L_vs_top1_same": 179
+    },
+    {
+      "condition": "lambda0_top1",
+      "arrangement": "O",
+      "M": 877,
+      "G_vs_release_same": 211,
+      "L_vs_release_same": 34,
+      "unmatched_components": 8339,
+      "positive_pixels_outside_boxes": 48354,
+      "unmatched_component_area_sum": 62305,
+      "low_all_05_matched": 169,
+      "low_all_05_G_vs_top1_same": 0,
+      "low_all_05_L_vs_top1_same": 0
+    },
+    {
+      "condition": "lambda0_top1",
+      "arrangement": "S",
+      "M": 913,
+      "G_vs_release_same": 224,
+      "L_vs_release_same": 31,
+      "unmatched_components": 8330,
+      "positive_pixels_outside_boxes": 48641,
+      "unmatched_component_area_sum": 62764,
+      "low_all_05_matched": 179,
+      "low_all_05_G_vs_top1_same": 0,
+      "low_all_05_L_vs_top1_same": 0
+    },
+    {
+      "condition": "gaussian_softiou_approx",
+      "arrangement": "O",
+      "M": 1568,
+      "G_vs_release_same": 917,
+      "L_vs_release_same": 49,
+      "unmatched_components": 19048,
+      "positive_pixels_outside_boxes": 326402,
+      "unmatched_component_area_sum": 341642,
+      "low_all_05_matched": 841,
+      "low_all_05_G_vs_top1_same": 709,
+      "low_all_05_L_vs_top1_same": 37
+    },
+    {
+      "condition": "gaussian_softiou_approx",
+      "arrangement": "S",
+      "M": 1656,
+      "G_vs_release_same": 996,
+      "L_vs_release_same": 60,
+      "unmatched_components": 19446,
+      "positive_pixels_outside_boxes": 336695,
+      "unmatched_component_area_sum": 353615,
+      "low_all_05_matched": 934,
+      "low_all_05_G_vs_top1_same": 797,
+      "low_all_05_L_vs_top1_same": 42
+    }
+  ],
+  "old_stable_646_still_matched_in_both": 586,
+  "checks": {
+    "label_preflight": 1071,
+    "train_runner": 29,
+    "training_audit": 72,
+    "table_validation": 659,
+    "independent_result_audit": 255,
+    "report_numeric_review": 32
+  },
+  "bc_first_version": "FAILED_STOP_EXTENSION",
+  "followup_decision": {
+    "automatic_structure_extension": false,
+    "automatic_bc_rerun": false,
+    "threshold_rescue": false,
+    "extended_training_rescue": false,
+    "parameter_scan": false,
+    "confirmation_experiment": false
+  },
+  "interpretation": [
+    "Higher diagnostic match count does not demonstrate solving the detection problem: U, outside-box foreground and unmatched component area all increase substantially.",
+    "Approximate Gaussian-derived binary targets plus official SoftIoU on a local valid domain is not exact author-label or from-scratch training reproduction.",
+    "The combined supervision change does not isolate label shape, loss or effective supervision domain as a cause.",
+    "These results neither establish an official-code bug nor establish a temporal mechanism as the cause of the observed failures.",
+    "Future research must address remaining failures of the released system with controlled background and retention, distinguishing those failures from degradation induced by our fine-tuning."
+  ],
+  "evaluation_scope": "Two development clips; component-peak diagnostic, not official Pd/Fa; O/S only, not a new all-11-window stability experiment.",
+  "report": "REPORT.md",
+  "report_sha256": "be3738dfed2c0be6ab7a91bbc137b4b919eb19aed923d55a7928ff43ad71d481",
+  "protocol_sha256": "5a5b74e5dda97b027f6daf108ff10f4b5470e0a85043caaba7612fb723d55b57",
+  "source_and_preregistered_code_unchanged": true,
+  "report_links_valid": true
+}

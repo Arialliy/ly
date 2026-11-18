@@ -1,0 +1,30 @@
+{
+  "start": "2026-11-17T18:13:07.007000+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "6g",
+    "--user",
+    "1004:1004",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "PYTHONPATH=/p/environment/site:/p/experiments/rgb_domain_control_20261118/runtime",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code:/p:ro",
+    "-v",
+    "/home/ly/DeepProPlus_TLFP_Code/experiments/rgb_domain_control_20261118:/p/experiments/rgb_domain_control_20261118:rw",
+    "--entrypoint",
+    "/opt/conda/bin/python",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "/p/experiments/rgb_domain_control_20261118/count_control.py"
+  ],
+  "end": "2026-11-17T18:13:23.007917+00:00",
+  "exit_code": 0
+}

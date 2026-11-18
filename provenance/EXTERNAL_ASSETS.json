@@ -1,0 +1,122 @@
+[
+  {
+    "role": "发布权重",
+    "exists": true,
+    "bundled_path": "results/references/deeppro_plus_release.pth",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth"
+  },
+  {
+    "role": "训练与开发原始数据",
+    "exists": true,
+    "bundled_path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/data",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/data",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/data"
+  },
+  {
+    "role": "训练计划",
+    "exists": true,
+    "bundled_path": "results/references/TRAIN_PLAN.json",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json"
+  },
+  {
+    "role": "数据划分",
+    "exists": true,
+    "bundled_path": "results/references/DATA_SELECTION.json",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json"
+  },
+  {
+    "role": "共同未训练初始化",
+    "exists": true,
+    "bundled_path": "results/tlfp_pilot_20261012/init",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/init",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/init"
+  },
+  {
+    "role": "当前S/T权重与日志",
+    "exists": true,
+    "bundled_path": "results/tlfp_pilot_20261012/training",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/training",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/training"
+  },
+  {
+    "role": "当前推理结果",
+    "exists": true,
+    "bundled_path": "results/tlfp_pilot_20261012/predictions",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/predictions"
+  },
+  {
+    "role": "当前评价表与缓存",
+    "exists": true,
+    "bundled_path": "results/tlfp_pilot_20261012/evaluation",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation"
+  },
+  {
+    "role": "冻结分层",
+    "exists": true,
+    "bundled_path": "results/references/COHORTS.csv",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv"
+  },
+  {
+    "role": "历史数据曝光核验",
+    "exists": true,
+    "bundled_path": "archive/original_project/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/training/E0/run"
+  },
+  {
+    "role": "发布预测缓存",
+    "exists": true,
+    "bundled_path": "archive/original_project/temporal_diagnosis_20261010/stage1_goal/predictions/official",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/stage1_goal/predictions/official"
+  },
+  {
+    "role": "旧评分参照及来源校验",
+    "exists": true,
+    "bundled_path": "archive/original_project/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/top1_background_control_20261011/evaluation"
+  },
+  {
+    "role": "冻结参照锚点",
+    "exists": true,
+    "bundled_path": "archive/original_project/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/bc_tpro_pilot_20261011/evaluation_preflight/SUMMARY_COMPLETE.json"
+  },
+  {
+    "role": "冻结协议与哈希",
+    "exists": true,
+    "bundled_path": "results/tlfp_pilot_20261012/PROTOCOL_FREEZE.json",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/PROTOCOL_FREEZE.json",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/archive/original_project/temporal_diagnosis_20261010/tlfp_pilot_20261012/PROTOCOL_FREEZE.json"
+  },
+  {
+    "role": "pytest等已安装隔离依赖",
+    "exists": true,
+    "bundled_path": "environment/site",
+    "included_in_package": true,
+    "historical_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/dependencies/site",
+    "path": "/home/ly/DeepProPlus_TLFP_Code/environment/site"
+  }
+]

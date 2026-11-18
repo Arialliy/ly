@@ -1,0 +1,584 @@
+{
+  "objects": 5200,
+  "sequences": {
+    "DJI_0026_2": 606,
+    "DJI_0067_2": 4594
+  },
+  "matrix_shape": [
+    5200,
+    11
+  ],
+  "matrix_state_counts": {
+    "-1": 42857,
+    "0": 12539,
+    "1": 1804
+  },
+  "all_candidate_box_below_05": 4342,
+  "loose_response_upper_bound": 858,
+  "single_window_any_match": 809,
+  "tighter_peak_matching_upper_bound": 809,
+  "response_above_but_no_single_window_match": 49,
+  "candidate_pool_max_net_gain": 109,
+  "candidate_pool_max_percentage_point_gain": 2.0961538461538463,
+  "support_only_not_actual_fusion": true,
+  "all_subsets": 2048,
+  "full_coverage_subset_count": 274,
+  "legal5": 10,
+  "shared5_support_max": 720,
+  "independent5_support_max": 721,
+  "shared5_max_support_preserving_all_original": 705,
+  "independent5_max_support_preserving_all_original": 711,
+  "replaceability": {
+    "loss": {
+      "count": 54,
+      "success_count_histogram": {
+        "1": 36,
+        "2": 18
+      },
+      "coverage_count_histogram": {
+        "2": 1,
+        "3": 40,
+        "4": 13
+      },
+      "sampled_success_run_count_histogram": {
+        "1": 51,
+        "2": 3
+      },
+      "sampled_span_histogram": {
+        "0": 36,
+        "12": 15,
+        "24": 3
+      },
+      "success_start_histogram": {
+        "12": 1,
+        "36": 14,
+        "48": 9,
+        "72": 22,
+        "84": 8,
+        "108": 18
+      },
+      "unique_success_start_histogram": {
+        "36": 5,
+        "72": 14,
+        "108": 17
+      },
+      "success_slot_histogram": {
+        "1": 2,
+        "3": 1,
+        "4": 2,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 2,
+        "10": 1,
+        "11": 2,
+        "12": 3,
+        "13": 3,
+        "14": 2,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 2,
+        "19": 3,
+        "20": 1,
+        "21": 1,
+        "22": 2,
+        "23": 3,
+        "24": 5,
+        "25": 4,
+        "26": 1,
+        "27": 2,
+        "28": 1,
+        "29": 1,
+        "30": 3,
+        "31": 3,
+        "32": 3,
+        "33": 3,
+        "34": 3,
+        "35": 3,
+        "36": 1
+      }
+    },
+    "gain_new_window_dependent": {
+      "count": 73,
+      "success_count_histogram": {
+        "1": 41,
+        "2": 32
+      },
+      "coverage_count_histogram": {
+        "3": 52,
+        "4": 21
+      },
+      "sampled_success_run_count_histogram": {
+        "1": 72,
+        "2": 1
+      },
+      "sampled_span_histogram": {
+        "0": 41,
+        "12": 31,
+        "24": 1
+      },
+      "success_start_histogram": {
+        "12": 10,
+        "24": 26,
+        "48": 5,
+        "60": 16,
+        "84": 17,
+        "96": 31
+      },
+      "unique_success_start_histogram": {
+        "24": 15,
+        "60": 12,
+        "96": 14
+      },
+      "success_slot_histogram": {
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 4,
+        "11": 5,
+        "12": 6,
+        "13": 4,
+        "14": 2,
+        "15": 3,
+        "17": 4,
+        "18": 2,
+        "19": 1,
+        "21": 3,
+        "22": 6,
+        "23": 7,
+        "24": 6,
+        "25": 3,
+        "26": 3,
+        "27": 4,
+        "28": 2,
+        "29": 3,
+        "30": 4,
+        "31": 3,
+        "32": 1,
+        "33": 4,
+        "34": 5,
+        "35": 3,
+        "36": 1,
+        "37": 2,
+        "38": 1,
+        "39": 2
+      }
+    },
+    "gain": {
+      "count": 74,
+      "success_count_histogram": {
+        "1": 42,
+        "2": 32
+      },
+      "coverage_count_histogram": {
+        "2": 1,
+        "3": 52,
+        "4": 21
+      },
+      "sampled_success_run_count_histogram": {
+        "1": 73,
+        "2": 1
+      },
+      "sampled_span_histogram": {
+        "0": 42,
+        "12": 31,
+        "24": 1
+      },
+      "success_start_histogram": {
+        "12": 10,
+        "24": 26,
+        "48": 5,
+        "60": 16,
+        "84": 17,
+        "96": 31,
+        "120": 1
+      },
+      "unique_success_start_histogram": {
+        "24": 15,
+        "60": 12,
+        "96": 14,
+        "120": 1
+      },
+      "success_slot_histogram": {
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 4,
+        "11": 5,
+        "12": 6,
+        "13": 4,
+        "14": 2,
+        "15": 3,
+        "17": 4,
+        "18": 2,
+        "19": 1,
+        "21": 3,
+        "22": 6,
+        "23": 7,
+        "24": 6,
+        "25": 3,
+        "26": 3,
+        "27": 5,
+        "28": 2,
+        "29": 3,
+        "30": 4,
+        "31": 3,
+        "32": 1,
+        "33": 4,
+        "34": 5,
+        "35": 3,
+        "36": 1,
+        "37": 2,
+        "38": 1,
+        "39": 2
+      }
+    },
+    "original_success": {
+      "count": 700,
+      "success_count_histogram": {
+        "1": 166,
+        "2": 159,
+        "3": 321,
+        "4": 54
+      },
+      "coverage_count_histogram": {
+        "1": 101,
+        "2": 113,
+        "3": 372,
+        "4": 114
+      },
+      "sampled_success_run_count_histogram": {
+        "1": 694,
+        "2": 6
+      },
+      "sampled_span_histogram": {
+        "0": 166,
+        "12": 154,
+        "24": 325,
+        "36": 55
+      },
+      "success_start_histogram": {
+        "0": 173,
+        "12": 156,
+        "24": 150,
+        "36": 157,
+        "48": 142,
+        "60": 127,
+        "72": 136,
+        "84": 123,
+        "96": 146,
+        "108": 184,
+        "120": 169
+      },
+      "unique_success_start_histogram": {
+        "0": 62,
+        "36": 5,
+        "72": 14,
+        "108": 17,
+        "120": 68
+      },
+      "success_slot_histogram": {
+        "0": 24,
+        "1": 28,
+        "2": 31,
+        "3": 38,
+        "4": 46,
+        "5": 48,
+        "6": 44,
+        "7": 50,
+        "8": 50,
+        "9": 41,
+        "10": 42,
+        "11": 40,
+        "12": 40,
+        "13": 37,
+        "14": 43,
+        "15": 43,
+        "16": 50,
+        "17": 50,
+        "18": 47,
+        "19": 54,
+        "20": 49,
+        "21": 41,
+        "22": 47,
+        "23": 45,
+        "24": 41,
+        "25": 40,
+        "26": 42,
+        "27": 42,
+        "28": 51,
+        "29": 48,
+        "30": 48,
+        "31": 48,
+        "32": 48,
+        "33": 38,
+        "34": 41,
+        "35": 40,
+        "36": 30,
+        "37": 25,
+        "38": 31,
+        "39": 22
+      }
+    }
+  },
+  "min_support_budget": [
+    {
+      "target": "original700",
+      "sequence": "pooled_shared_arrangement",
+      "target_count": 700,
+      "min_support_windows": 5,
+      "starts": "[0, 36, 72, 108, 120]",
+      "supported": 705
+    },
+    {
+      "target": "original700",
+      "sequence": "DJI_0026_2",
+      "target_count": 294,
+      "min_support_windows": 5,
+      "starts": "[0, 36, 72, 96, 120]",
+      "supported": 301
+    },
+    {
+      "target": "original700",
+      "sequence": "DJI_0026_2",
+      "target_count": 294,
+      "min_support_windows": 5,
+      "starts": "[0, 36, 72, 108, 120]",
+      "supported": 295
+    },
+    {
+      "target": "original700",
+      "sequence": "DJI_0067_2",
+      "target_count": 406,
+      "min_support_windows": 5,
+      "starts": "[0, 36, 72, 108, 120]",
+      "supported": 410
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "pooled_shared_arrangement",
+      "target_count": 774,
+      "min_support_windows": 8,
+      "starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "supported": 778
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "DJI_0026_2",
+      "target_count": 302,
+      "min_support_windows": 6,
+      "starts": "[0, 24, 60, 72, 96, 120]",
+      "supported": 302
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "DJI_0026_2",
+      "target_count": 302,
+      "min_support_windows": 6,
+      "starts": "[0, 36, 60, 72, 96, 120]",
+      "supported": 302
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "DJI_0067_2",
+      "target_count": 472,
+      "min_support_windows": 8,
+      "starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "supported": 476
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "pooled_shared_arrangement",
+      "target_count": 127,
+      "min_support_windows": 8,
+      "starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "supported": 778
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "DJI_0026_2",
+      "target_count": 9,
+      "min_support_windows": 6,
+      "starts": "[0, 24, 60, 72, 96, 120]",
+      "supported": 302
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "DJI_0026_2",
+      "target_count": 9,
+      "min_support_windows": 6,
+      "starts": "[0, 36, 60, 72, 96, 120]",
+      "supported": 302
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "DJI_0067_2",
+      "target_count": 118,
+      "min_support_windows": 8,
+      "starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "supported": 476
+    },
+    {
+      "target": "all809",
+      "sequence": "pooled_shared_arrangement",
+      "target_count": 809,
+      "min_support_windows": 11,
+      "starts": "[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",
+      "supported": 809
+    },
+    {
+      "target": "all809",
+      "sequence": "DJI_0026_2",
+      "target_count": 304,
+      "min_support_windows": 7,
+      "starts": "[0, 12, 48, 60, 72, 96, 120]",
+      "supported": 304
+    },
+    {
+      "target": "all809",
+      "sequence": "DJI_0067_2",
+      "target_count": 505,
+      "min_support_windows": 11,
+      "starts": "[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",
+      "supported": 505
+    }
+  ],
+  "mandatory": [
+    {
+      "target": "original700",
+      "sequence": "pooled_shared_arrangement",
+      "forced_by_single_success_starts": "[0, 36, 72, 108, 120]",
+      "count": 5
+    },
+    {
+      "target": "original700",
+      "sequence": "DJI_0026_2",
+      "forced_by_single_success_starts": "[0, 72, 120]",
+      "count": 3
+    },
+    {
+      "target": "original700",
+      "sequence": "DJI_0067_2",
+      "forced_by_single_success_starts": "[0, 36, 72, 108, 120]",
+      "count": 5
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "pooled_shared_arrangement",
+      "forced_by_single_success_starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "count": 8
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "DJI_0026_2",
+      "forced_by_single_success_starts": "[0, 60, 72, 96, 120]",
+      "count": 5
+    },
+    {
+      "target": "original700_plus_gain74",
+      "sequence": "DJI_0067_2",
+      "forced_by_single_success_starts": "[0, 24, 36, 60, 72, 96, 108, 120]",
+      "count": 8
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "pooled_shared_arrangement",
+      "forced_by_single_success_starts": "[24, 36, 60, 72, 96, 108]",
+      "count": 6
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "DJI_0026_2",
+      "forced_by_single_success_starts": "[60, 72, 96]",
+      "count": 3
+    },
+    {
+      "target": "loss54_plus_gain73",
+      "sequence": "DJI_0067_2",
+      "forced_by_single_success_starts": "[24, 36, 60, 72, 96, 108]",
+      "count": 6
+    },
+    {
+      "target": "all809",
+      "sequence": "pooled_shared_arrangement",
+      "forced_by_single_success_starts": "[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",
+      "count": 11
+    },
+    {
+      "target": "all809",
+      "sequence": "DJI_0026_2",
+      "forced_by_single_success_starts": "[0, 12, 48, 60, 72, 96, 120]",
+      "count": 7
+    },
+    {
+      "target": "all809",
+      "sequence": "DJI_0067_2",
+      "forced_by_single_success_starts": "[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]",
+      "count": 11
+    }
+  ],
+  "pairwise_incompatible_success_patterns": 17,
+  "budget_support": [
+    {
+      "windows_per_clip": 5,
+      "legal_shared_count": 10,
+      "max_pooled_shared_support": 720,
+      "best_shared_starts": "[[0, 24, 60, 96, 120]]",
+      "max_independent_per_clip_support": 721
+    },
+    {
+      "windows_per_clip": 6,
+      "legal_shared_count": 51,
+      "max_pooled_shared_support": 752,
+      "best_shared_starts": "[[0, 24, 48, 72, 96, 120]]",
+      "max_independent_per_clip_support": 756
+    },
+    {
+      "windows_per_clip": 7,
+      "legal_shared_count": 90,
+      "max_pooled_shared_support": 772,
+      "best_shared_starts": "[[0, 24, 48, 72, 96, 108, 120]]",
+      "max_independent_per_clip_support": 775
+    },
+    {
+      "windows_per_clip": 8,
+      "legal_shared_count": 77,
+      "max_pooled_shared_support": 784,
+      "best_shared_starts": "[[0, 24, 48, 60, 72, 96, 108, 120]]",
+      "max_independent_per_clip_support": 786
+    },
+    {
+      "windows_per_clip": 9,
+      "legal_shared_count": 36,
+      "max_pooled_shared_support": 795,
+      "best_shared_starts": "[[0, 12, 24, 48, 60, 72, 96, 108, 120]]",
+      "max_independent_per_clip_support": 796
+    },
+    {
+      "windows_per_clip": 10,
+      "legal_shared_count": 9,
+      "max_pooled_shared_support": 804,
+      "best_shared_starts": "[[0, 12, 24, 48, 60, 72, 84, 96, 108, 120]]",
+      "max_independent_per_clip_support": 804
+    },
+    {
+      "windows_per_clip": 11,
+      "legal_shared_count": 1,
+      "max_pooled_shared_support": 809,
+      "best_shared_starts": "[[0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120]]",
+      "max_independent_per_clip_support": 809
+    }
+  ]
+}

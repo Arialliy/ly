@@ -1,0 +1,55 @@
+{
+  "frozen_utc": "2026-10-11T18:04:00.185871+00:00",
+  "protocol_sha256": "40aaf074c6a09301e11617e974afb3f785f807396e7e1993c2c7f9ae76cfbcbc",
+  "design_freeze_sha256": "dc544785140bcd402e7b5671a749e7e050e41c4478da9c4945447399f116a532",
+  "code_sha256": {
+    "code/infer_mutual.py": "64cc6bf12f43259e5ae956dd933d592d1fd4fe685fb160b681132820b7eac75d",
+    "code/launch_jobs.py": "13724ae23e6313eb45773a2af13b40d2bbeb7982bfd7f93267aa6dfcc63cae53",
+    "code/module.py": "36935e1e85d2dd97229944d05b1a6bb81c6cb5b5707a9a320bcdaecef6ad784c",
+    "code/preflight.py": "0b7a7c19a4262a512d6fe1be610544b7e9a00492ecead0b68934942e4e2db6f4",
+    "code/run_inference_queue.py": "3ac8cf99a134a16ce93b91732bcc4289aadbd877ea35407a660f673359a012ae",
+    "code/test_module.py": "4aab3600a8b579070566ef9f3ff4310d5e8158237d9755d9bbb6869daf1209aa",
+    "code/test_train_mutual.py": "6afadfa18bf27151fb6d85383510db83e95cf0b4b758fb20029f6e662cd33fad",
+    "code/train_mutual.py": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b",
+    "evaluation_code/evaluate_mutual.py": "4e9079b25348433d2643ac8d5ecfc2949fd5f29cff4350319620e38d29a5e4ed",
+    "evaluation_code/provenance.py": "196d51c081d08311d7215b00c71aad6f3b37f9213c3686f79430950b763660df",
+    "evaluation_code/supplementary_tables.py": "202af412b3e9407d2031d4407bb0d5990ed54b48676648a2ea09a6f683096c60",
+    "evaluation_code/test_provenance.py": "84439de9a94ac5862de2cd7719d399e7175deefe8f27feb16128c3da475f3c71",
+    "evaluation_code/trajectory_tables.py": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165",
+    "evaluation_code/validate_tables.py": "422b0be0e71de31216f086f5026d1c4ca348d8fb6f5295a23aae2b11838573a8",
+    "evaluation_code/verify_identity.py": "71e950642e39a145339c00a3723bdbd6bd4c5f40797bc45e04f732c92d41a583"
+  },
+  "preflight_sha256": {
+    "checks/MODULE_TESTS.json": "a3d335a14b6570db29d7a0a5d2a712ffb93a1c84768f120b29b4f92ed4e8f506",
+    "checks/TRAIN_LOSS_CHECK.json": "c08dd110cb4d0b9faee61ce34784a434edb1d976e82f19b78bcc9420131ab442",
+    "checks/NETWORK_PREFLIGHT.json": "c0ab30df83c487feeab3d93bdeb97e8aba1cb57252d69869d35a4196075f12a6",
+    "checks/RUNNER_SOURCE_REVIEW.json": "a3164cf1d76b25da1cec46a13726a3b81554ccb305c062a21c6256f4b703866c"
+  },
+  "external_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/train_supervision.py": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/infer_with_windows.py": "7527aa474ec4e0fd4e85fd493dee871aa795238ff4ad703cde9956f113824625",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961"
+  },
+  "query_freeze_sha256": "3702329baf48ca15a5bda6c858e765af870a2f8346fb1ee9a35e7e28c0030d77",
+  "radius": 2,
+  "formal_variants": [
+    "E0",
+    "E1",
+    "E2"
+  ],
+  "formal_seed": 46,
+  "formal_steps": 512,
+  "intermediate_steps": [
+    0,
+    128,
+    256,
+    384
+  ],
+  "main_endpoint": 512,
+  "no_development_based_checkpoint_selection": true
+}

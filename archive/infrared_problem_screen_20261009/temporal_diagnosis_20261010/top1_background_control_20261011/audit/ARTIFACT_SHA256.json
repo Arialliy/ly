@@ -1,0 +1,8 @@
+{
+  "AUDIT_LAUNCH.json": "decb9df85181922289bb41f745ace595aaf59515f0eadb10e3478271dd9cb2ad",
+  "COMPLETED_AUDIT.json": "76ec3e49c4f97b953ed1367d3219dbc149468b3bc87eca27dc9378ae674acef3",
+  "LOSS_MASK_AUDIT.json": "606b9fb56339ddd0b9c97f96fb1e8d5c12981752767ef5c7917bc226111affc3",
+  "REPORT.md": "ff41adbae3f33ae276abc4d659a2bea5fd5259eef2192ce27e808b0c508ef7d9",
+  "audit_completed.py": "31ac85b1780f1de6a282ef50de27f040d31033d932a8f1baf1574b14e7aa99c0",
+  "audit_loss_and_mask.py": "fc4995f69e3d17bcca921cd464dd4e3815b783fef0d8931a70ee80ad574512f2"
+}

@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "scope": "Read-only recomputation from saved probe predictions; no fitting, feature extraction, threshold selection or new experiment",
+  "checks": 1084,
+  "summary_rows": 21,
+  "track_rows": 72,
+  "prediction_rows": 128,
+  "artifact_hashes": {
+    "TRACKS.csv": "12c6a6cf9820066f36b9d33c42b541b8b82dfd94c91573022838936b5bfb9faa",
+    "MODELS.json": "bdadd5bc7ff756cb823713d78215c8741e848ce5202e255f3a6aebf2ad5d43b0",
+    "PREDICTIONS.csv": "9ccdc4515cb8afa46104a0f635c14f55cb898058596fb489ac2edb0ad4c8c196",
+    "HARD_NEGATIVE_SELECTION.csv": "db8cf88b6ad53fc09acc87a59a1e47d98f118e9a7461d1389dfbdf1e902c8e56",
+    "SUMMARY.csv": "0d08dc43720fc7fa7ff82e1b061a5a7e1ee81b56d3bcd66e49f09ba301f83993"
+  },
+  "dev_failed_pair_ids": {
+    "P0": [
+      "DJI_0026_2:804831:+1",
+      "DJI_0067_2:880850:-1"
+    ],
+    "P1": [
+      "DJI_0026_2:804831:+1",
+      "DJI_0067_2:880850:-1"
+    ],
+    "P2": [
+      "DJI_0026_2:804831:+1",
+      "DJI_0067_2:880850:-1"
+    ]
+  },
+  "dev_failed_pair_ids_equal": true,
+  "AUROC_P1_minus_P0": 0.03601108033240996,
+  "AUROC_P1_minus_P2": 0.07479224376731297,
+  "solver": {
+    "P0": {
+      "optimizer_iterations": 37,
+      "function_evaluations": 37,
+      "gradient_inf_norm": 1.7133822135628578e-07,
+      "gradient_tolerance_satisfied": false,
+      "stopped_before_iteration_cap": true,
+      "train_matrix_rank": 30,
+      "finite": true
+    },
+    "P1": {
+      "optimizer_iterations": 34,
+      "function_evaluations": 34,
+      "gradient_inf_norm": 9.796182317590996e-08,
+      "gradient_tolerance_satisfied": false,
+      "stopped_before_iteration_cap": true,
+      "train_matrix_rank": 60,
+      "finite": true
+    },
+    "P2": {
+      "optimizer_iterations": 43,
+      "function_evaluations": 43,
+      "gradient_inf_norm": 8.181176905375231e-08,
+      "gradient_tolerance_satisfied": false,
+      "stopped_before_iteration_cap": true,
+      "train_matrix_rank": 60,
+      "finite": true
+    }
+  },
+  "limitations": [
+    "Only 18 dev target frames from 9 tracks; 19 reference edges, not independent target frames.",
+    "0026 has 1 dev frame/track/pair and fails pair ranking under every condition; 0067 supplies 17 frames/8 tracks/18 pairs.",
+    "P1 AUROC and BCE improve but fixed probe logit0 accuracy is lower; all conditions have identical 17/19 pair ranking successes.",
+    "P0 rank30 versus P1/P2 rank60; P1 versus P2 is essential reference control.",
+    "P2 annotation-excluded regions may contain target feature information due prior spatial mixing.",
+    "B features use released weights, not fine-tuned E2 weights used by A.",
+    "No claim of actual detection improvement, full low-cohort information sufficiency, or correspondence-caused failure.",
+    "Solver gradient threshold not met; no refit or optimization extension performed."
+  ]
+}

@@ -1,0 +1,653 @@
+   Target-Aware Invertible Encoder with Reconstruction Guidance for Infrared
+                             Small Target Detection
+
+                                 Shule Yan Zetian Zhang Xiao Ma Zexuan Ji*
+                                   Nanjing University of Science and Technology
+                            {yan shule, zhangzetian, maxiao, jizexuan}@njust.edu.cn
+
+
+
+                                                                 Original image                              Original   Rescale from s4   Rescale from s8   Rescale from s16
+                            Abstract                                         s2
+
+
+
+
+                                                                                  Downsacle operation
+Modern detectors typically deepen backbones and rely on                      s4
+                                                                                                        GT
+aggressive downsampling to harvest high-level semantics.                    s8
+                                                                                                                                             vanished           vanished
+But this severely degrades low-energy infrared tiny tar-                 s16
+
+gets via rescale-induced information loss. This work intro-
+duces InvDet, a target-aware invertible encoder that uni-
+                                                                                                        GT
+
+
+
+
+                                                                                  Upsacle operation
+fies information preservation and target-aware enhance-             Upsacle
+                                                                      x2                                                                                        vanished
+
+ment within a reconstruction-guided detection framework.              ···
+An invertible pathway reconstructs the input from feature           Upsacle
+                                                                      x2
+latents, exposing information loss as an optimizable quan-                                              GT
+
+tity. To decouple detection from irrelevant reconstruction,      Rescale image                                                               vanished           vanished
+
+a Target-Aware Reconstruction Modulation (TARM) mod-
+ule operates only in the inverse path, gating high-pass la-     Figure 1. Visualization of information degradation for various tar-
+                                                                gets under different rescaled layers. The target sizes decrease from
+tents and applying a mild gain to low-pass features without
+                                                                top to bottom, with the third row being a 2\times 2 pixel point. Only
+altering the forward detection distribution. In addition, a     simple targets with high contrast (second row) remain after 8\times 
+Geometry–Content Tolerance Metric (GCTM) is proposed            rescaling, while complex backgrounds (first row) and extremely
+to focus on truly informative regions and yields a pixel-       small targets (third row) vanish.
+wise weight map that gently regularizes the reconstruction
+branch. Our method achieves competitive accuracy on five
+public infrared benchmarks while exhibiting strong cross-       deep detectors typically employ deepened backbones and
+dataset generalization, providing a principled pathway to-      stacked downsampling layers (e.g., strided convolutions or
+ward detection-friendly representation learning for scale-      pooling), often reducing feature maps to 1/16 or 1/32 of
+challenged visual regimes.                                      the input resolution [9, 25]. While this design effectively
+                                                                expands the receptive field for high-level semantic extrac-
+                                                                tion in general object detection, it introduces a fundamental
+1. Introduction                                                 conflict for ISTD. Due to the weak contrast and small spa-
+                                                                tial coverage of infrared tiny targets, their subtle cues are
+Infrared small target detection (ISTD) is a critical com-
+                                                                vulnerable to rescale-induced information loss in deep net-
+ponent in vision-based defense systems, with applications
+                                                                work hierarchies. Successive downsampling operations act
+spanning maritime surveillance, traffic management, and
+                                                                as powerful low-pass filters, systematically attenuating and
+precision guidance [10, 13]. The intrinsic challenges of this
+                                                                dispersing these critical features into the dominant back-
+task stem from the physics of long-wave infrared imaging:
+                                                                ground clutter. As evidenced in Fig. 1, this information loss
+distant targets possess weak thermal signatures and often
+                                                                accumulates rapidly with increased downsampling, vanish-
+occupy a minimal number of pixels. These tiny, low-signal
+                                                                ing most targets after 16\times  rescaling. Consequently, subse-
+targets are easily obscured in complex background clutter,
+                                                                quent upsampling layers in the decoder are inherently un-
+such as cloud layers, urban landscapes, or thermal noise
+                                                                able to recover the original target signatures from the de-
+[33, 35].
+                                                                graded representation, which establishes a critical perfor-
+   To achieve robust feature representation, mainstream
+                                                                mance bottleneck in ISTD.
+  * Corresponding author.                                           Recognizing this issue, the ISTD field has evolved
+strategies to mitigate information loss along three fronts:      • We design the TARM module, which ensures a detection-
+(1) architectural refinements like dense skip connections          friendly inverse path by selectively enhancing target-
+[14, 27] and attention mechanisms [1, 40]; (2) improved            related information without distorting the forward feature
+metrics and losses, such as cascaded label-space modula-           distribution.
+tion [4], scale/location-sensitive loss [17], and TAM [31],      • We introduce the GCTM as metric and loss component
+which address IoU’s inadequacy to tiny targets; and (3)            that provides robust supervision for tiny targets by fusing
+joint paradigms that integrate low-level tasks (e.g., non-         geometric and appearance-based cues.
+uniformity correction [8], edge enhancement [22], or super-      • We validate our approach through comprehensive experi-
+resolution [7]) to construct a more informative feature            ments and ablations on five public benchmarks, demon-
+space. While beneficial, these strategies largely compen-          strating competitive performance with strong cross-
+sate for information loss after the fact, without resolving        dataset generalization.
+the fundamental ill-posedness caused by the non-injective
+[28] nature of downsampling.                                     2. Related Work
+    Inspired by the recent success of invertible models in im-
+age rescaling [29], we seek to reframe the problem. The          2.1. Infrared Small Target Detection
+core idea behind invertible rescaling is to model the down-      Early approaches to ISTD relied on hand-crafted priors.
+scaling and upscaling processes as a bijective transforma-       Filtering-based methods [5] enhance high-frequency com-
+tion. Crucially, the inverse pass can then reconstruct a high-   ponents, local-contrast-based techniques [3] exploit inten-
+quality HR image from the LR input along with a latent           sity differences between targets and surroundings, and low-
+variable drawn from a prior distribution. This invertible per-   rank-based models [24, 36] decompose scenes into a low-
+spective suggests a transformative approach for detection:       rank background with sparse outliers. While effective in
+to measure and directly mitigate rescale-induced informa-        controlled conditions, these methods struggle in complex,
+tion loss at its source, rather than attempting to compensate    dynamic backgrounds due to their fixed assumptions.
+for it post hoc with only architectural refinement or evalua-        Deep learning has shifted the paradigm to data-driven
+tion tweaks.                                                     feature learning. Many works formulate ISTD as a se-
+    Based on this insight and incorporating the latest ad-       mantic segmentation task[14, 23, 40], which can achieve
+vancements in ISTD field, we propose InvDet that uni-            high recall but often suffers from imprecise localization
+fies information preservation and target-aware enhancement       and is sensitive to label ambiguity for tiny targets. An-
+via a reconstruction-guided detection paradigm. Its core is      other line of research adapts object detection frameworks.
+an invertible encoder, enabling an inverse path that recon-      Anchor-based detectors [14, 20, 27, 30] require careful an-
+structs the input from forward-pass feature latents, making      chor design for tiny objects, while anchor-free detectors
+information loss directly observable. A pivotal gradient-        [2, 4, 6, 12, 16, 25, 32, 38] offer greater flexibility by pre-
+decoupled training strategy employs two separate optimiz-        dicting centers or keypoints directly. Recent advances focus
+ers: a detection optimizer updates the neck and prediction       on specialized architectures to preserve target information,
+heads, while a reconstruction optimizer updates the invert-      such as dense nested connections [14] and fusion modules
+ible encoder based on a modulated reconstruction loss. This      [30]. Furthermore, the inadequacy of IoU for tiny targets
+ensures clean gradient flow, allowing reconstruction to di-      has spurred the development of more tolerant metrics and
+rectly regularize feature extraction without interfering with    losses, including the Tolerance-Adjustable Measure (TAM)
+detection-specific components.                                   [31] and scale/location-sensitive losses [17]. Despite these
+    To tailor the invertible architecture for ISTD, TARM         innovations, a fundamental challenge persists: the progres-
+gates high-frequency latents and applies a target-focused        sive and irreversible loss of target information through suc-
+boost only during inverse reconstruction, prioritizing target    cessive downsampling, which existing methods mitigate but
+recovery without distorting forward-pass features. GCTM          do not fundamentally solve.
+supersedes IoU by combining scale-adaptive geometric
+consistency with appearance statistics, and generates a          2.2. Joint Low-Level and High-Level Vision Tasks
+pixel-wise weight map to focus the reconstruction loss on        There is growing interest in jointly optimizing low-level im-
+semantically meaningful regions.                                 age processing with high-level vision tasks to enhance ro-
+    Our main contributions are summarized as follows:            bustness under degraded conditions. In the visible domain,
+• We propose InvDet, the first detection framework to in-        works like IA-YOLO [19] and BAD-Net [15] integrate im-
+  tegrate an invertible encoder with a gradient-decoupled        age enhancement (e.g., dehazing[37]) with detection in an
+  training strategy, effectively addressing feature-level in-    end-to-end framework. In infrared imaging, UniCD [8]
+  formation loss via a principled, reconstruction-guided         presents a unified model for non-uniformity correction and
+  paradigm.                                                      UAV target detection, demonstrating that a properly bal-
+anced correction branch can significantly boost detection        {Ys }Stage
+                                                                       s=1 while preserving complete information through
+performance. Related paradigms also combine edge extrac-         bijective transformations. The detection path consumes
+tion [22] or super-resolution [7] with detection, leveraging     these features directly, performing multi-hop and multi-
+auxiliary low-level priors to construct more informative fea-    scale fusion (MMFB) to obtain fusion representations Ps :
+tures. These methods validate that providing cleaner, task-
+relevant inputs can benefit detection. However, they pre-                                \mathbf {P}_s = \text {MMFB}(\mathbf {Y}_s), \quad s = 1,2,3,4.                     (1)
+dominantly treat the low-level task as a separate, parallel
+                                                                 The MMFB captures multi-level contextual cues by fusing
+stream or a pre-processing stage, fusing its output with the
+                                                                 features across receptive fields and semantic hops, effec-
+detection backbone. In contrast, our InvDet framework in-
+                                                                 tively preserving local details and global structure. Then,
+trinsically couples the low-level (reconstruction) and high-
+                                                                 the fused features are processed through a decoder that per-
+level (detection) tasks by making them two views of the
+                                                                 forms iterative upsampling and refinement:
+same invertible transformation. The reconstruction is not
+a separate stream but a direct constraint on the feature ex-                    \mathbf {F}_s = \mathbf {P}_s + \text {UpSample}(\mathbf {P}_{s+1}), \quad s = 3,2,1,        (2)
+traction process itself, ensuring the features are detection-
+friendly by design.                                              where UpSample(·) denotes transposed convolution with
+                                                                 residual connections. The final feature map F1 is fed into
+2.3. Invertible and Reversible Representations                   the detection head, which consists of parallel branches for
+Invertible Neural Networks (INNs) [21] learn bijective           predicting target attributes.
+mappings, enabling exact inference and efficient gradient
+computation. A prominent application is image rescaling,         3.1. Invertible Encoder
+where IRN [29] pioneered an invertible framework that de-        The invertible encoder forms the mathematical founda-
+composes an image into a visually plausible low-resolution       tion of InvDet, providing a configurable architecture that
+version and a latent variable following a known distribu-        balances information preservation with computational effi-
+tion, allowing high-fidelity reconstruction. This concept has    ciency. As depicted in Fig. 2, the encoder supports flex-
+been extended to arbitrary-scale super-resolution [39] and       ible configuration of reversible depth and bijective trans-
+other image restoration tasks. The core strength of these        formation complexity. Specifically, the first Srev stages
+models is their built-in mechanism for information preser-       are implemented with InvBlocks to preserve complete in-
+vation, as any information lost in the forward pass would        put information under invertibility constraints. The later
+preclude accurate reconstruction. While INNs have been           stages use standard ConvBlocks to enhance semantic ab-
+explored for super-resolution and generative tasks, their ap-    straction. This hybrid setup balances fidelity and expres-
+plication to object detection, particularly for tiny objects,    siveness: early stages retain crucial small-target informa-
+remains largely unexplored. Directly applying an IRN-style       tion for reconstruction, while later stages focus on discrim-
+model as a detector’s backbone would compel it to recon-         inative detection cues.
+struct the entire scene, including background clutter, which        The architecture employs a flexible design where the re-
+is computationally inefficient and misaligned with the de-       versible depth Srev determines which stages participate in
+tection objective. Our work bridges this gap by adapting         both detection and reconstruction pathways. For stages s ≤
+the invertible rescaling principle specifically for detection.   Srev , the encoder employs orthogonal analysis/synthesis op-
+We introduce mechanisms like TARM to ensure the invert-          erators HaarDownsample H or HaarUpsample H−1 com-
+ible structure is target-aware, focusing its representational    bined with bijective coupling Invblocks, ensuring exact in-
+capacity on preserving information critical for localization     vertibility and enabling reconstruction guidance. Deeper
+and recognition, thereby making the powerful tool of invert-     stages s > Srev utilize conventional ConvDownsample and
+ible representations practical and effective for ISTD.           ConvBlocks to enrich semantic representations and enlarge
+                                                                 receptive fields, operating exclusively in the detection path-
+3. Methodology                                                   way without participating in the inverse reconstruction.
+                                                                    At each reversible stage of forward process, the Haar
+Overview. Our proposed InvDet framework addresses
+                                                                 transform H decomposes the input into distinct frequency
+the fundamental challenge of information loss in ISTD
+                                                                 components:
+through a novel invertible encoder architecture with target-
+                                                                                       (\mathrm {x}^{\text {l}}_s, \mathrm {x}^{\text {h}}_s) = \mathcal {H}(\mathbf {X}_{s-1}) (3)
+aware reconstruction guidance. As illustrated in Fig. 2, the
+model operates through two complementary pathways dur-           where xls and xhs contain low- and high-frequency com-
+ing training: a forward detection path (with black arrow)        ponents respectively. This orthogonal transformation pre-
+and an inverse reconstruction path(with red dashed arrows).      serves spatial information while halving resolution.
+   Given an input infrared image X ∈ RH×W ×1 , the in-              The decomposed frequency components then undergo
+vertible encoder extracts a hierarchy of multi-scale features    transformation through InvBlocks (with nblock
+                                                                                                            s   denoting the
+       Reconstruction
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Detection path          Reconstruction path
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Detection
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    Input
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Detection and Reconstruction path
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Low-frequency part modulation path
+                                                                                                    𝑋                                                                                                                                                                                                                                                                                                                                                                       𝑋
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         High-frequency part modulation path
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Head        HaarDownsample             HaarUpsample
+      A                 H                                                                                                                                                                                                                                                                                                                                                                                                                           A       H                          𝑌                𝑃
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  𝐹      (Analysis, ↓2)            (Synthesis, ↑2)
+
+      V                 D
+                                InvBlocks
+                               InvBlock
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    V       D
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     InvBlocks
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    InvBlock                                  +
+                                                                                                                                                                                                                                                      ×n                                                                                                                                                                                                                         ×n                                     ConvDownsample (Strided Conv, ↓2)
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                𝑌                                         Conv
+                                                  𝑋
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Upsample      1×1           3×3 Conv              3×3 Conv
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  𝐹   Conv           rate = 3              rate = 5
+                                                                                                                                                                                                                                                                                                                                                                                                          TARM
+
+
+
+
+      A                 H                                                                                                                                                                                                                                                                                                                                𝑌                                                                                      𝑌   A       H                          𝑌                𝑃
+
+      V                 D
+                                InvBlocks
+                               InvBlock
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    V       D
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     InvBlocks
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    InvBlock                                  +
+                                                                                                                                                                                                                                                      ×n                                                                                                                                                                                                                         ×n                                          𝒙𝒉𝒔                    𝒚𝒉𝒔
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                𝑌                                         Conv
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Upsample
+                            HP Soft-Gating                                                                                                                                                                                                                                                                                                                                                                                                                                                                        𝐹
+  𝑦                                                                                                                                                                                                                                                                                                                     𝑦                                                                                                                                                              𝑌                𝑃
+                        High-boost residual                                                                                                                                                                                                                                                                                                                                                                                                                         ConvBlock                                 +              𝒙𝒍𝒔                    𝒚𝒍𝒔
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ×n
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                𝑌                                         Conv               𝒙𝒉𝒔                    𝒚𝒉𝒔
+                             𝑾                                                                       𝒓                                                                                                                                                                                                                                                                                                                                                                                                  Upsample
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       𝑌                𝑃
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ConvBlock
+   𝑦                        LP micro-gain                                                                                                                                                                                                                                                                              𝑦                                                                                                                                                         ×n                                          𝒙𝒍𝒔                    𝒚𝒍𝒔
+
+  Target-aware reconstruction modulation                                                                                                                                                                                                                                                                                                                                                                                                                    Invertible encoder             MMFB             Decoder                  Legends
+
+
+Figure 2. Overview of the proposed InvDet, which has an invertible encoder with TARM and GCTM-inspired weight map. TARM is
+applied once at the configured reversible depth (parameter Srev ) to the corresponding latent. At inference time, only the efficient detection
+path is utilized.
+
+
+number of InvBlocks stacked in each stage). Each In-                                                                                                                                                                                                                                                                                                                                                                                                                                        gies, ensuring faithful reconstruction across architectural
+vBlock implements a bijective transformation using dense                                                                                                                                                                                                                                                                                                                                                                                                                                    choices.
+sub-networks ϕ, η, and ρ:                                                                                                                                                                                                                                                                                                                                                                                                                                                                       It is important to emphasize that while H and the cou-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            pling blocks are bijective, the inverse path deliberately ap-
+                                                                   \begin {aligned} \mathrm {y}^{\text {l}}_s &= \mathrm {x}^{\text {l}}_s + \phi (\mathrm {x}^{\text {h}}_s), \\ \Psi &= \eta (\mathrm {y}^{\text {l}}_s), \\ \mathrm {y}^{\text {h}}_s &= \mathrm {x}^{\text {h}}_s \odot \exp (\Psi ) + \rho (\mathrm {y}^{\text {l}}_s), \\ \mathbf {Y}_s &= [\mathrm {y}^{\text {l}}_s \Vert \mathrm {y}^{\text {h}}_s], \end {aligned}                                                plies TARM before synthesis, making Xrec a target-aware
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            proxy rather than an exact inverse of the forward mapping.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 (4)        Critically, the inverse path reuses the same parameters as
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            the forward InvBlocks, constituting an analytical inversion
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            rather than a separate decoder that introduces no additional
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            trainable weights or inference overhead.
+where ⊙ denotes element-wise multiplication. The scaling
+factor Ψ is constrained through a clamped activation in η                                                                                                                                                                                                                                                                                                                                                                                                                                   3.2. Target-Aware Reconstruction Modulation
+network to ensure numerical stability, preventing gradient
+explosion during training. The design ensures ysl primarily                                                                                                                                                                                                                                                                                                                                                                                                                                 TARM reshapes reconstruction from a uniform, image-wide
+preserves the low-frequency structure while ysh incorporates                                                                                                                                                                                                                                                                                                                                                                                                                                fidelity objective into a target-aware regime: foreground HP
+scaled and translated high-frequency information.                                                                                                                                                                                                                                                                                                                                                                                                                                           component are reconstructed with strict constraints, while
+   During backward reconstruction, the inverse transforma-                                                                                                                                                                                                                                                                                                                                                                                                                                  background is constrained to low-pass consistency. This
+tion of InvBlock recovers the original components:                                                                                                                                                                                                                                                                                                                                                                                                                                          strategic modulation addresses the fundamental limitation
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            that detailed background reconstruction not only provides
+                                   \begin {aligned} \mathrm {x}^{\text {h}}_s &= (\mathrm {y}^{\text {h}}_s - \rho (\mathrm {y}^{\text {l}}_s)) \odot \exp (-\Psi ), \\ \mathrm {x}^{\text {l}}_s &= \mathrm {y}^{\text {l}}_s - \phi (\mathrm {x}^{\text {h}}_s), \end {aligned}                                                                                                                                                                                                           negligible benefits for detection tasks but may actually in-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 (5)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            troduce additional noise that degrades performance.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               The two complementary signals jointly determine the
+The HaarUpsample H−1 maintains orthogonality while ac-                                                                                                                                                                                                                                                                                                                                                                                                                                      spatial and temporal application of modulation. Spatially, a
+commodating different tensor layouts and padding strate-                                                                                                                                                                                                                                                                                                                                                                                                                                    stage-aligned weight map Ws ∈ [0, 1] is generated through
+                                                                        IoU                                                                                             DotD                                                                    NWD                                                              TAM                                                                                    GCTM
+             GT [199 61 219 84]
+             GT [98 77 114 84]
+             GT [115 138 119 142]
+
+
+
+
+                                                                                                                                                Figure 3. Simulations of IoU, DotD, NWD, TAM, and GCTM.
+
+
+our GCTM, fusing geometric tolerance with appearance                                                                                                                                                                                                  3.3. Geometry-Content Tolerance Metric
+consistency. Temporally, a cosine ramp-up factor rs ∈ [0, 1]                                                                                                                                                                                          The GCTM addresses limitations in existing similarity mea-
+introduces modulation smoothly over training to preserve
+                                                                                                                                                                                                                                                      sures for ISTD. While IoU exhibits excessive sensitivity
+contextual continuity and prevent abrupt information loss:
+                                                                                                                                                                                                                                                      to tiny size, GCTM overcomes these limitations by fusing
+                                                                                                                                                                                                                                                      geometric consistency with appearance fidelity, providing
+                                                                                                                                                                                                                                                      a misalignment-tolerant similarity measure specifically de-
+      r_s = \tfrac {1}{2}\left (1-\cos (\pi \cdot \xi )\right ), \quad \xi = \mathrm {clip}\left (\frac {e-e_0}{\Delta e},\,0,\,1\right ),                                                                                                            signed for tiny targets.
+                                                                                      (6)                                                                                                                                                                The geometric consistency term follows TAM, formu-
+where e is the current epoch, e_0 the warm-up offset, \Delta e the                                                                                                                                                                                    lated as:
+ramp length, and \protect \mathrm  {clip}(\star ,0,1) saturates \star  to [0,1].
+   Given the inverse-path latent components ysl and ysh ,                                                                                                                                                                                                     \mathbb {S}_{\text {geo}} = \exp \left (-\left (\frac {d_c}{t_{\text {center}}}\right )^2 - \left (\frac {|A_{\text {pr}} - A_{\text {gt}}|}{t_{\text {area}}}\right )^2\right ),                                             (9)
+TARM produces the target-aware versions b                                     ysl and bysh                                                                                                                                                                          q
+through three coordinated operations, each element-wise                                                                                                                                                                                               with tcenter = wgt  2 + h2 and t
+                                                                                                                                                                                                                                                                                      area = Agt ensuring scale-
+                                                                                                                                                                                                                                                                               gt
+gated by Ws and rs . First, a LP micro-gain operation gen-
+                                                                                                                                                                                                                                                      appropriate sensitivity.
+tly amplifies target structures that enhanced reconstruction
+                                                                                                                                                                                                                                                         The content consistency term employs a radiometry-
+fidelity:
+                                                                                                                                                                                                                                                      aware denominator:
+                                                        \widehat {\mathrm {y}}^{\text {l}}_s = \mathrm {y}^{\text {l}}_s \odot \left (1 + \gamma r_s \sqrt {\mathbf {W}_s}\right ) ,                                                      (7)
+                                                                                                                                                                                                                                                          \mathbb {S}_{\text {gray}} = \frac {\mathrm {BC}(\mathcal {P}_{\text {gt}}, \mathcal {P}_{\text {pr}})}{t_{\text {gray}}}, \quad t_{\text {gray}} = \frac {\mathrm {LSNR}(\mathcal {P}_{\text {gt}})}{1 + H_{\text {bg}}} + \varepsilon ,  (10)
+where γ > 0 controls the gain strength. Second, the HP
+soft-gating and high-boost residual suppress background                                                                                                                                                                                               where BC ∈ [0, 1] is the Bhattacharyya coefficient, LSNR
+texture while preserving target edges:                                                                                                                                                                                                                is the local signal-to-noise ratio, and Hbg the background
+                                                                                                                                                                                                                                                      entropy.
+                    \widehat {\mathrm {y}}^{\text {h}}_s = \mathrm {y}^{\text {h}}_s \odot \mathbf {W}_s^{\theta r_s} + \delta \mathbf {W}_s \odot \left [\mathrm {HB}(\mathrm {y}^{\text {h}}_s) - \mathrm {y}^{\text {h}}_s\right ],    (8)             Geometry and content are blended through geometry-
+                                                                                                                                                                                                                                                      driven weighting:
+with θ > 0 controlling the gating strength and δ ≥ 0 scaling
+                                                                                                                                                                                                                                                          \text {GCTM} = \lambda \mathbb {S}_{\text {geo}} + (1-\lambda )\mathbb {S}_{\text {gray}}, \quad \lambda = \sigma (\mathbb {S}_{\text {geo}}/\tau ).  (11)
+the fixed depthwise high-boost filter HB(·).
+   Coordinated with spatial guidance Ws and the temporal                                                                                                                                                                                              Instance-level scores are rasterized via scale-adaptive Gaus-
+schedule rs , TARM effectively preserves detection-relevant                                                                                                                                                                                           sian masks to produce pixel-wise maps Wfull , downsam-
+information while reallocating reconstruction fidelity from                                                                                                                                                                                           pled to multi-scale Ws for TARM guidance.
+‘everywhere equal’ to ‘strict on targets and low-pass else-                                                                                                                                                                                              As validated in Fig. 3, GCTM provides smooth tol-
+where’. The modulated latent b   ysl and b
+                                         ysh are used exclu-                                                                                                                                                                                          erance to minor misalignments while decisively down-
+sively for reconstruction path without perturbing the for-                                                                                                                                                                                            weighting appearance-inconsistent predictions, striking an
+ward detection path.                                                                                                                                                                                                                                  optimal balance for infrared small target detection.
+ Ø           IRSTD-1K                                                   Ø        NUAA-SIRST                                                 Ø           NUDT-SIRST
+
+             1200                               0.7                            300     286                               0.6                            1000    951    900                0.6
+                                                                                                                                                                                                                     Point Targets
+                              962                                                                    236                                                 900
+             1000                               0.6                            250                                       0.5                                                              0.5
+                                                                                                                                                         800
+                                                0.5                                                                                                      700
+             800                                                               200                                       0.4                                                              0.4
+
+
+
+
+                                                                   Frequence
+
+
+
+
+                                                                                                                                            Frequence
+ Frequence
+
+
+
+
+                                                                                                                               Proportion
+
+
+
+
+                                                                                                                                                                                                Proportion
+                                                      Proportion
+                                                                                                                                                         600
+                                                0.4
+             600                                                               150                                       0.3                             500    0.51                      0.3
+                     419                                                               0.53
+                              0.65              0.3                                                                                                      400
+                                                                                                                                                                       0.48
+                                                                                                     0.44
+             400                                                               100                                       0.2                             300                              0.2
+                                                0.2
+                                                                                                                                                         200
+             200                       97                                      50                                        0.1                                                              0.1
+                                                                                                                                                                                                                     Spot Targets
+                     0.28
+                                                0.1                                                             11                                       100                    10
+                                       0.07
+               0                                0                               0                                        0                                 0                              0
+                     Point    Spot   Extended                                          Point       Spot       Extended                                         Point   Spot   Extended
+
+
+
+
+ Ø           IRSTD                                                        Ø          DUAB
+
+
+
+
+                                                                                                                                                                                                                  Extended Targets
+
+
+
+
+                                                                                              Figure 4. Statistics of infrared targets in the dataset.
+
+Table 1. Comparisons of different methods on datasets (%). The best results are marked in blue; the second-best ones are marked in yellow.
+
+                                                                                                                                                                                                                     DUAB
+                               IRSTD-1K                            NUAA-SIRST                               NUDT-SIRST                                         IRSTD
+Method                                                                                                                                                                                   Point                       Spot         Extended
+                             Rec Pre            F1                 Rec Pre                      F1          Rec Pre              F1                      Rec Pre        F1    Rec Pre                        F1   Rec Pre   F1   Rec Pre   F1
+MDFAcGAN 55.5 80.6 65.7 72.6 89.3 80.1 61.9 88.0 72.6                                                                                                   41.1 44.3 42.6 67.3 61.5 64.3 84.6 61.6 71.3 99.0 53.6 69.5
+ACM       51.4 74.6 60.9 20.2 24.8 22.2 57.6 81.9 67.7                                                                                                  25.8 26.3 26.1 24.6 32.8 28.1 40.8 45.0 42.8 84.6 81.3 82.9
+ObjectBox 90.1 70.1 78.9 89.4 71.9 79.7 57.4 80.9 67.2                                                                                                  81.9 58.5 68.3 56.8 70.6 63.0 59.7 31.8 41.5 76.4 71.3 73.8
+YOLO-FR   78.1 75.0 76.5 12.5 19.8 15.3 53.2 82.6 64.7                                                                                                  95.9 58.6 73.5 91.5 63.9 75.2 85.4 35.0 49.7 74.4 70.7 72.5
+UIU-Net   56.8 82.6 67.3 65.8 80.8 72.5 63.3 90.1 74.4                                                                                                  78.9 80.8 79.8 22.4 25.4 23.8 69.0 79.8 74.0 70.8 71.9 71.3
+DNA-Net   51.7 75.1 61.3 76.0 93.5 83.9 59.7 84.9 70.1                                                                                                  73.9 80.8 77.2 77.1 81.1 79.1 78.5 78.7 78.6 97.4 96.4 96.9
+RDIAN     26.0 37.8 30.8 53.6 65.9 59.1 36.4 51.8 42.8                                                                                                  77.1 82 79.4 63.7 66.1 64.9 48.7 58.1 53.0 54.4 53.8 54.1
+OSCAR     50.0 66.4 57.0 74.9 84.5 79.4 70.2 95.3 80.9                                                                                                  95.4 85.9 90.4 98.0 62.2 76.1 94.9 68.3 79.4 95.8 83.6 89.3
+MA-Net    92.8 70.8 80.3 91.3 62.7 74.3 96.1 75.7 84.7                                                                                                  97.1 99.5 98.3 99.5 96.9 98.2 95.6 87.6 91.4 99.5 93.3 96.3
+Ours                         81.5 87.5 84.4 82.9 92.4 87.4 82.8 89.8 86.2 98.9 96.8 97.8 98.9 88.6 93.5 99.1 88.5 93.5 97.9 98.5 98.2
+
+
+4. Experiment and Discussion                                                                                                                                   they occupy only a few pixels and are easily confused
+                                                                                                                                                               with structured clutter. These factors explain higher miss
+4.1. Dataset and Evaluation Metrics                                                                                                                            rates on point targets and spurious responses on interfer-
+Evaluation is conducted on five public benchmarks for in-                                                                                                      ence points; our reconstruction-guided, content-aware de-
+frared small target detection: IRSTD-1K [34], NUAA-                                                                                                            sign (TARM+GCTM) specifically addresses these issues.
+SIRST [3], NUDT-SIRST [14], IRSTD [18], and DUAB
+[11]. Official training/testing splits and identical pre-                                                                                                      4.2. Comparisons With State-of-the-Art Methods
+processing are used across all methods. We report Recall                                                                                                       To validate the proposed framework, we compared it to sev-
+(Rec), Precision (Pre), and F1; mAP trends are consistent                                                                                                      eral state-of-the-art (SOTA) deep learning based detection
+and omitted due to space.                                                                                                                                      methods, including MDvsFA-cGAN[26] (2019), ACM[3]
+   Figure 4 summarizes target-size statistics. To decou-                                                                                                       (2021), ObjectBox[32] (2022),YOLO-FR[20] (2023), UIU-
+ple scale effects from semantics, DUAB is stratified post                                                                                                      Net[27] (2022), DNA-Net[14] (2023), RDIAN[23] (2023)
+hoc by target area into point/spot/extended for analysis                                                                                                       and OSCAR[4] (2023), MA-Net[31] (2025). All the net-
+only (no class-specific training). This reflects imaging                                                                                                       works were retrained by the same training set for fair com-
+physics: long-range dispersion yields small bright cores                                                                                                       parisons.
+with ambiguous boundaries; range variation causes large                                                                                                            As summarized in Table 1, our method achieves compet-
+scale shifts so that extended targets at close range become                                                                                                    itive F1-scores on the five benchmarks: IRSTD-1K (84.4%,
+spot-like at mid range and point-like at long range, where                                                                                                     +4.1 over the second best), NUAA-SIRST (87.4%, +3.5),
+and NUDT-SIRST (86.2%, +1.5). On the DUAB dataset                         1K: 75.5%). Cross-dataset feature visualizations in the
+with its fine-grained target categorization, our approach                 supplementary material (Sec. 9.2) further confirm that
+attains the best F1 on spot (93.5%, +2.1) and extended                    the invertible encoder develops consistent, dataset-agnostic
+(98.2%, +1.3) targets.                                                    LP/HP/\protect \mathbf  {W}_s patterns across domains.
+    On IRSTD and DUAB-Point, MA-Net achieves higher                           Qualitative results in Fig. 5 demonstrate that InvDet ef-
+F1 (98.3 vs. 97.8 and 98.2 vs. 93.5, respectively), consistent            fectively reduces false alarms in regions of structured clut-
+with their larger data scale (IRSTD: 32k+; DUAB: 12k+)                    ter (e.g., sea surfaces, sky layers, urban edges) while accu-
+which may favor stronger in-domain fitting. To examine                    rately delineating weak and dim targets. In contrast, several
+whether InvDet’s advantage stems from generalizable rep-                  methods either miss faint targets entirely or produce spuri-
+resentation rather than dataset-specific fitting, we conduct              ous detections on bright interference points. These observa-
+cross-dataset evaluation: each model trained on dataset A                 tions align with the reconstruction-guided feature preserva-
+is evaluated on dataset B without fine-tuning.                            tion and the background suppression imposed by TARM.
+
+Table 2. Cross-dataset generalization (F1 %). Bold: in-domain.            4.3. Ablation Study
+Subscripts: retention rate (%) . Mean retention: 84.9%.
+                                                                          Table 3 jointly examines reversible depth Srev and per-stage
+Train \ Test    IRSTD-1K NUAA-SIRST NUDT-SIRST Mean                       InvBlock counts nblocks  together with runtime/complexity.
+IRSTD-1K     84.4              77.8 89.1       74.3 86.1     78.8         A moderate configuration yields the best F1 on each dataset
+NUAA-SIRST 74.3 88.0             87.4          75.3 87.4     79.0         (e.g., IRSTD-1K: Srev =2, [2, 2, 2, 2]; NUAA-SIRST:
+NUDT-SIRST 63.7 75.5           72.6 83.1         86.2        74.2         Srev =4, [2, 2, 2, 2]; NUDT-SIRST: Srev =2, [3, 3, 3, 3]).
+                                                                          Too shallow a reversible depth under-utilizes reconstruc-
+   As shown in Table 2, InvDet achieves a mean cross-                     tion guidance: [1, 1, 1, 1] achieves 83.2% on IRSTD-1K
+domain F1 retention of 84.9%. Real→real transfer is par-                  versus 84.4% for [2, 2, 2, 2], as fewer InvBlocks limit
+ticularly strong (88–89% retention between IRSTD-1K and                   the expressiveness of the bijective coupling. Conversely,
+NUAA-SIRST despite 2× resolution difference), while the                   over-deepening ([4, 4, 4, 4]) increases parameters to 122 M
+synthetic→real gap is bounded (NUDT-SIRST→IRSTD-                          without consistent gains, suggesting diminishing returns
+
+  MDvsFA-cGAN      ACM         ObjectBox      YOLO-FR       UIU-Net       DNA-Net        RDIAN         OSCAR         MA-Net     InvDet (Ours)
+
+
+
+
+Figure 5. Qualitative results achieved by different detection methods. For better visualization, the target areas are enlarged. The correctly
+detected targets and false alarm detections are highlighted by green and red boxes, respectively, while ground truths are highlighted in blue.
+Table 3. InvDet ablation on IRSTD-1k, NUAA-SIRST, and NUDT-SIRST with runtime/complexity per configuration. The best results are
+marked in blue; the second-best ones are marked in yellow.
+
+                          IRSTD-1k            NUAA-SIRST              NUDT-SIRST                  Runtime / Complexity
+          Srev nblock
+                s
+                        Rec. Prec.    F1    Rec. Prec.      F1    Rec. Prec.     F1 E2E FPS FWD FPS FLOPs (G) Params (M)
+             [1,1,1,1] 78.77 88.12 83.18 83.65 94.42 88.71 85.91 91.43 88.58              72.06    115.24       31.95    33.42
+             [2,2,2,2] 81.51 87.50 84.40 82.89 92.37 87.37 82.84 89.78 86.17              50.30     72.72       46.63    62.93
+           2
+             [3,3,3,3] 79.45 86.89 83.00 83.27 95.22 88.84 86.97 90.92 88.90              41.45     57.58       61.32    92.44
+             [4,4,4,4] 81.51 86.86 84.10 81.75 89.96 85.66 86.33 89.96 88.11              42.92     51.74       76.00    121.95
+             [1,1,1,1] 81.51 86.86 84.11 80.23 90.95 85.25 87.08 90.63 88.82              78.55    126.49       31.95     33.42
+             [2,2,2,2] 79.79 85.66 82.62 85.55 93.36 89.29 84.85 86.78 85.81              57.59    81.17        46.63    62.93
+           4
+             [3,3,3,3] 77.74 86.31 81.80 84.41 92.89 88.45 79.87 85.10 82.40              39.77    55.91        61.32    92.44
+             [4,4,4,4] 79.45 83.15 81.26 77.95 90.71 83.84 83.47 88.34 85.84              37.91    47.74        76.00    121.95
+
+
+Epoch          X             LP                HP                Ws            |LP-LP’|           HP’             Xrec       |Xrec-X|
+ early
+ middle
+ late
+
+
+
+
+                                  Figure 6. Visualisation of crucial features within the reconstruction path.
+
+
+from additional reversible capacity. Crucially, forward-only              5. Conclusion
+throughput (inference) remains high because the inverse
+path is disabled at test time; increasing nblock s   mainly               This work proposes InvDet, a detection framework for in-
+affects FLOPs/Params, while larger Srev impacts only                      frared small targets that addresses rescale-induced informa-
+training-time E2E FPS. A more comprehensive ablation                      tion loss through a principled, invertible architecture. By
+(training strategies, TARM internals, and noise robustness)               reconstructing the input from feature latents, InvDet trans-
+is provided in the supplementary material (Sec. 10).                      forms information degradation into an observable, optimiz-
+                                                                          able signal. The TARM selectively modulates latent compo-
+4.4. Discussion on Crucial features evolution                             nents to ensure that only target-relevant structures are em-
+                                                                          phasized in reconstruction, preventing background interfer-
+Figure 6 visualizes early/mid/late LP, HP, Ws , |LP − LP′ |,              ence. Complemented by the GCTM, reconstruction is softly
+HP′ , Xrec , and |Xrec − X|. The LP branch raises tar-                    regularized in a geometry-aware and content-aware manner.
+get baselines where Ws is high; the HP branch suppresses
+background texture and sharpens boundaries via the high-                      Extensive experiments demonstrate InvDet’s competitive
+                                                                          performance across a wide spectrum of benchmarks and tar-
+boost residual. Weight maps become more concentrated as
+                                                                          get scales. Importantly, the invertible pathway is disabled
+training proceeds (cosine ramp-up), aligning with true tar-               at inference, preserving runtime efficiency. This work pro-
+gets and reducing spurious responses. The reconstructed                   vides a solution for the convergence between reversible rep-
+proxy preserves target radiometry and edges while allocat-                resentation learning and task-specific goals in ISTD, espe-
+ing low-pass fidelity to background, explaining the recall                cially in the case of extreme size constraints or signal degra-
+gains without precision degradation observed in Table 1.                  dation.
+References                                                                 lenges, and opportunities for hgcdte infrared materials and
+                                                                           detectors. Applied Physics Reviews, 2(4), 2015. 1
+ [1] Abdulkarim Atrash, Seyda Ertekin, Omur Ugur, Omar
+                                                                      [14] Boyang Li, Chao Xiao, Longguang Wang, Yingqian Wang,
+     Moured, Yufan Chen, and Jiaming Zhang. Ty-rist: Tacti-
+                                                                           Zaiping Lin, Miao Li, Wei An, and Yulan Guo. Dense nested
+     cal yolo tricks for real-time infrared small target detection.
+                                                                           attention network for infrared small target detection. IEEE
+     In Proceedings of the IEEE/CVF International Conference
+                                                                           Transactions on Image Processing, 32:1745–1758, 2023. 2,
+     on Computer Vision, pages 2201–2210, 2025. 2
+                                                                           6, 4
+ [2] Y. H. Chen, L. Y. Li, X. Liu, and X. F. Su. A multi-task
+     framework for infrared small target detection and segmenta-      [15] Chengyang Li, Heng Zhou, Yang Liu, Caidong Yang,
+     tion. Ieee Transactions on Geoscience and Remote Sensing,             Yongqiang Xie, Zhongbo Li, and Liping Zhu. Detection-
+     60, 2022. 2                                                           friendly dehazing: Object detection in real-world hazy
+                                                                           scenes. IEEE Transactions on Pattern Analysis and Machine
+ [3] Yimian Dai, Yiquan Wu, Fei Zhou, and Kobus Barnard.
+                                                                           Intelligence, 45(7):8284–8295, 2023. 2
+     Asymmetric contextual modulation for infrared small target
+     detection. In Proceedings of the IEEE/CVF Winter Confer-         [16] Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, and
+     ence on Applications of Computer Vision, pages 950–959,               Piotr Dollár. Focal loss for dense object detection. In 2017
+     2021. 2, 6, 4                                                         IEEE International Conference on Computer Vision (ICCV),
+                                                                           pages 2999–3007, 2017. 2
+ [4] Y. M. Dai, X. Li, F. Zhou, Y. L. Qian, Y. H. Chen, and J.
+     Yang. One-stage cascade refinement networks for infrared         [17] Qiankun Liu, Rui Liu, Bolun Zheng, Hongkui Wang, and
+     small target detection. Ieee Transactions on Geoscience and           Ying Fu. Infrared small target detection with scale and loca-
+     Remote Sensing, 61, 2023. 2, 6                                        tion sensitivity. In Proceedings of the IEEE/CVF Conference
+                                                                           on Computer Vision and Pattern Recognition, pages 17490–
+ [5] Suyog D Deshpande, Meng Hwa Er, Ronda Venkateswarlu,
+                                                                           17499, 2024. 2
+     and Philip Chan. Max-mean and max-median filters for de-
+     tection of small targets. In Signal and Data Processing of       [18] Songtao Liu and Di Huang. Receptive field block net for
+     Small Targets 1999, pages 74–83. SPIE, 1999. 2                        accurate and fast object detection. In Proceedings of the Eu-
+ [6] Kaiwen Duan, Song Bai, Lingxi Xie, Honggang Qi, Qing-                 ropean conference on computer vision (ECCV), pages 385–
+     ming Huang, and Qi Tian. Centernet: Keypoint triplets for             400, 2018. 6, 4
+     object detection. In 2019 IEEE/CVF International Confer-         [19] Wenyu Liu, Gaofeng Ren, Runsheng Yu, Shi Guo, Jianke
+     ence on Computer Vision (ICCV), pages 6568–6577, 2019.                Zhu, and Lei Zhang. Image-adaptive yolo for object detec-
+     2                                                                     tion in adverse weather conditions. In Proceedings of the
+ [7] Linyu Fan, Yingying Wang, Guoliang Hu, Feifei Li, Yuhang              AAAI conference on artificial intelligence, pages 1792–1800,
+     Dong, Hui Zheng, Changqing Lin, Yue Huang, and Xinghao                2022. 2
+     Ding. Diffusion-based continuous feature representation for      [20] Xingang Mou, Shuai Lei, and Xiao Zhou. Yolo-fr: A yolov5
+     infrared small-dim target detection. IEEE Transactions on             infrared small target detection algorithm based on feature re-
+     Geoscience and Remote Sensing, 62:1–17, 2024. 2, 3                    assembly sampling method. Sensors, 23(5), 2023. 2, 6
+ [8] Houzhang Fang, Xiaolin Wang, Zengyang Li, Lu Wang,               [21] Stefan T Radev, Ulf K Mertens, Andreas Voss, Lynton Ardiz-
+     Qingshan Li, Yi Chang, and Luxin Yan. Detection-friendly              zone, and Ullrich Köthe. Bayesflow: Learning complex
+     nonuniformity correction: A union framework for infrared              stochastic models with invertible neural networks. IEEE
+     uav target detection. In Proceedings of the Computer Vision           transactions on neural networks and learning systems, 33
+     and Pattern Recognition Conference, pages 11898–11907,                (4):1452–1466, 2020. 3
+     2025. 2                                                          [22] Jingnan Song, Mingliang Zhou, Jun Luo, Huayan Pu, Yong
+ [9] Jianjun Feng, Shule Yan, Hairui Sang, Hao Chen, Shaoqiu               Feng, Xuekai Wei, and Weijia Jia. Boundary-aware feature
+     Xu, Nian Cai, and Yinghong Zhou. Ssod-yolo: Mamba-                    fusion with dual-stream attention for remote sensing small
+     driven feature extraction with adaptive feature enhancement           object detection. IEEE Transactions on Geoscience and Re-
+     for small-object detection in space. IEEE Aerospace and               mote Sensing, 2024. 2, 3
+     Electronic Systems Magazine, 41(3):46–64, 2026. 1                [23] Heng Sun, Junxiang Bai, Fan Yang, and Xiangzhi Bai.
+[10] W. D. Hu, Q. Li, X. S. Chen, and W. Lu. Recent progress on            Receptive-field and direction induced attention network for
+     advanced infrared photodetectors. Acta Physica Sinica, 68             infrared dim small target detection with a large-scale dataset
+     (12), 2019. 1                                                         irdst. IEEE Transactions on Geoscience and Remote Sens-
+[11] Bingwei Hui, Zhiyong Song, Hongqi Fan, P Zhong, W Hu,                 ing, 61:1–13, 2023. 2, 6
+     X Zhang, J Lin, H Su, W Jin, and Y Zhang. A dataset for in-      [24] Yang Sun, Jungang Yang, and Wei An. Infrared dim and
+     frared image dim-small aircraft target detection and tracking         small target detection via multiple subspace learning and
+     under ground/air background. Sci. Data Bank, 5:12, 2019. 6,           spatial-temporal patch-tensor model. IEEE Transactions on
+     4                                                                     Geoscience and Remote Sensing, 59(5):3737–3752, 2020. 2
+[12] Hei Law and Jia Deng. Cornernet: Detecting objects as            [25] Zhi Tian, Chunhua Shen, Hao Chen, and Tong He. Fcos:
+     paired keypoints. In Proceedings of the European confer-              Fully convolutional one-stage object detection. In 2019
+     ence on computer vision (ECCV), pages 734–750, 2018. 2                IEEE/CVF International Conference on Computer Vision
+[13] W. Lei, J. Antoszewski, and L. Faraone. Progress, chal-               (ICCV), pages 9626–9635, 2019. 1, 2
+[26] Huan Wang, Luping Zhou, and Lei Wang. Miss detection vs.                network for video super-resolution. In Proceedings of the
+     false alarm: Adversarial learning for small object segmen-              AAAI conference on artificial intelligence, pages 5981–5988,
+     tation in infrared images. In Proceedings of the IEEE/CVF               2019. 3
+     International Conference on Computer Vision, pages 8509–           [40] Zhen Zuo, Xiaozhong Tong, Junyu Wei, Shaojing Su, Peng
+     8518, 2019. 6                                                           Wu, Runze Guo, and Bei Sun. Affpn: Attention fusion fea-
+[27] Xin Wu, Danfeng Hong, and Jocelyn Chanussot. Uiu-net: U-                ture pyramid network for small infrared target detection. Re-
+     net in u-net for infrared small object detection. IEEE Trans-           mote Sensing, 14(14):3412, 2022. 2
+     actions on Image Processing, 32:364–376, 2022. 2, 6
+[28] Mingqing Xiao, Shuxin Zheng, Chang Liu, Yaolong Wang,
+     Di He, Guolin Ke, Jiang Bian, Zhouchen Lin, and Tie-Yan
+     Liu. Invertible image rescaling. In European conference on
+     computer vision, pages 126–144. Springer, 2020. 2
+[29] Mingqing Xiao, Shuxin Zheng, Chang Liu, Zhouchen Lin,
+     and Tie-Yan Liu. Invertible rescaling network and its ex-
+     tensions. International Journal of Computer Vision, 131(1):
+     134–159, 2023. 2, 3
+[30] Hai Xu, Sheng Zhong, Tianxu Zhang, and Xu Zou. Multi-
+     scale multi-level residual feature fusion for real-time infrared
+     small target detection. IEEE Transactions on Geoscience
+     and Remote Sensing, 2023. 2
+[31] Shule Yan, Runyu Chen, Hairui Sang, Yinghong Zhou, Jin-
+     liang Long, Nian Cai, Shaoqiu Xu, and Jian Chen. Multihop
+     anchor-free network with tolerance-adjustable measure for
+     infrared tiny target detection. IEEE Transactions on Instru-
+     mentation and Measurement, 74:1–11, 2025. 2, 6
+[32] Mohsen Zand, Ali Etemad, and Michael Greenspan. Ob-
+     jectbox: From centers to boxes for anchor-free object detec-
+     tion. In Computer Vision–ECCV 2022: 17th European Con-
+     ference, Tel Aviv, Israel, October 23–27, 2022, Proceedings,
+     Part X, pages 390–406. Springer, 2022. 2, 6
+[33] Dingwen Zhang, Junwei Han, Gong Cheng, and Ming-
+     Hsuan Yang. Weakly supervised object localization and de-
+     tection: A survey. IEEE Transactions on Pattern Analysis
+     and Machine Intelligence, 44(9):5866–5885, 2022. 1
+[34] Mingjin Zhang, Rui Zhang, Yuxiang Yang, Haichen Bai,
+     Jing Zhang, and Jie Guo. Isnet: Shape matters for infrared
+     small target detection. In Proceedings of the IEEE/CVF con-
+     ference on computer vision and pattern recognition, pages
+     877–886, 2022. 6, 4
+[35] Peng Zhang, Gong Cheng, Chunbo Lang, Xingxing Xie, and
+     Junwei Han. Nirnet: Noise incentive robust network in re-
+     mote sensing object detection under cloud corruption. IEEE
+     Transactions on Geoscience and Remote Sensing, 63:1–13,
+     2025. 1
+[36] Tao Zhang, Ying Fu, and Cheng Li. Deep spatial adap-
+     tive network for real image demosaicing. In Proceedings of
+     the AAAI Conference on Artificial Intelligence, pages 3326–
+     3334, 2022. 2
+[37] Xu Zhang, Jiaqi Ma, Guoli Wang, Qian Zhang, Huan Zhang,
+     and Lefei Zhang. Perceive-ir: Learning to perceive degrada-
+     tion better for all-in-one image restoration. IEEE Transac-
+     tions on Image Processing, 35:2018–2033, 2026. 2
+[38] Xingyi Zhou, Jiacheng Zhuo, and Philipp Krähenbühl.
+     Bottom-up object detection by grouping extreme and center
+     points. In 2019 IEEE/CVF Conference on Computer Vision
+     and Pattern Recognition (CVPR), pages 850–859, 2019. 2
+[39] Xiaobin Zhu, Zhuangzi Li, Xiao-Yu Zhang, Changsheng Li,
+     Yaqi Liu, and Ziyu Xue. Residual invertible spatio-temporal
+

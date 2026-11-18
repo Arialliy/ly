@@ -1,0 +1,162 @@
+{
+  "status": "complete",
+  "condition": "E1",
+  "variant": "E1",
+  "steps": 512,
+  "seed": 46,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "fresh Adam",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "precision": "FP32_no_AMP_no_TF32",
+  "bn_policy": "eval_running_stats_affine_trainable",
+  "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "old_log_sha256": "4c974ddc52942ceb2c268bbdbbdc5bd74f4149fe1798a8621bddb015b8dbc728",
+  "initial_model_state_sha256": "d0f21d7d585ad16ea86385dae4fee0698d221424ddf23dc095d1704c928894f8",
+  "initial_original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "original_train_source_sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "label_config": {
+    "version": 1,
+    "condition": "gaussian_softiou_approx",
+    "center": "original_float_bbox_geometric_center",
+    "pixel_coordinates": "x=j+0.5,y=i+0.5; half-open original bbox",
+    "sigma_x": "original_bbox_width/6",
+    "sigma_y": "original_bbox_height/6",
+    "support": "truncate outside original bbox; no minimum sigma or peak normalization",
+    "quantization": "floor(255*Gaussian) to uint8",
+    "target": "quantized>0 cast float32; max union over positive boxes",
+    "positive_objects": "all valid non-ignore non-crowd boxes fully inside crop core9; no size/class filter",
+    "valid_domain": "old_background_mask union full_positive_box_rects, then excluded-object bbox+2px overrides",
+    "excluded_objects": "all valid ignore/crowd or non-full-core boxes; original float box+2px",
+    "crop_core_margin": 9,
+    "outside_positive_box_guard_margin": 2,
+    "loss": "unchanged official SoftLoUloss on gathered valid pixels per window; four-window mean",
+    "smooth": 0.0,
+    "empty_target_window": "retain official loss1 and zero gradient; log occurrence",
+    "alignment_limit": "approximate mask generator and masked domain; not exact author training reproduction"
+  },
+  "effective_supervision_config": {
+    "positive_window": "unchanged masked official SoftLoUloss, internal sigmoid, smooth0",
+    "empty_window": "replace constant1 with old top1pct softplus background loss, coefficient1",
+    "empty_domain_assertion": "valid equals old background mask",
+    "outer_reduction": "four windows equal mean",
+    "label_config_scope": "frozen historical label generation; its old empty-loss note is superseded here"
+  },
+  "frozen_plan_config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "mode": "single",
+  "radius": 2,
+  "descriptor_dim": 8,
+  "value_projection": "identity",
+  "output_projection": "zero_initialized_32x32_no_bias",
+  "temporal_chunk_size": 2,
+  "checkpoint_chunks": true,
+  "module_insertion": "layer1 output forward hook, before original permute/TPro",
+  "parameter_count": 72194,
+  "new_parameters": 1281,
+  "branch_initial_sha256": "6c2ad887b0ff9e548e0ac62215816e18400c151ff0de1f4357b73746a5355346",
+  "train_source_sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b",
+  "label_source_sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "top1_loss_source_sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+  "module_source_sha256": "36935e1e85d2dd97229944d05b1a6bb81c6cb5b5707a9a320bcdaecef6ad784c",
+  "prior_train_source_sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11",
+  "training_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "torch_version": "2.7.0+cu128",
+  "device": "cuda:0",
+  "source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "criterion_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+  "label_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+  "protocol": "positive_masked_official_SoftIoU_empty_old_top1pct",
+  "loss_reduction": "unchanged official per positive window; empty window old top1 negative; four-window equal mean",
+  "checkpoint_selection": "fixed final update512; snapshots0/128/256/384/512 never selected by validation",
+  "snapshots": [
+    {
+      "step": 0,
+      "path": "snapshot_000.pth",
+      "sha256": "9033814c50853fce1bab14a4a9eb34516bb42b0ab2fecee108f7a222d08d62d8",
+      "model_state_sha256": "d0f21d7d585ad16ea86385dae4fee0698d221424ddf23dc095d1704c928894f8"
+    },
+    {
+      "step": 128,
+      "path": "snapshot_128.pth",
+      "sha256": "f2eeaadc3a7dc420f8cc2a24828ce3947fe4c38515daba244547fa3f2f7b7c4b",
+      "model_state_sha256": "41a6dd428bb7bfd71a41602dc02a9eca006181375e5facf24d03aa435bceb39f"
+    },
+    {
+      "step": 256,
+      "path": "snapshot_256.pth",
+      "sha256": "ff5ee82133458bf8b0147bdd8aebbf20ab1dd50deedd80fc64db58c54d15022d",
+      "model_state_sha256": "effcca62f39be11004ade2cc2d769b300ad4aac969e2d6f9466fe649e72fe55d"
+    },
+    {
+      "step": 384,
+      "path": "snapshot_384.pth",
+      "sha256": "85dcf165f374a7f769ce7440c0a04a405a34b1d010ce9e7e845c1310ebf4904b",
+      "model_state_sha256": "fb85eae1174046e925260c236c76d89926d5dead4f824c39b875364e1342ca0e"
+    },
+    {
+      "step": 512,
+      "path": "snapshot_512.pth",
+      "sha256": "8e995109bdd0c4f487f96d31e818a0c9d162d87d09394c59a6343be13612a107",
+      "model_state_sha256": "044fb7a7209be30179cf5f410fc9a364e9111bd9701faa67c1ca6ca2d69a1f7f"
+    }
+  ],
+  "final_step": 512,
+  "duration_seconds": 544.541406503995,
+  "counts": {
+    "pure_negative_windows": 385,
+    "valid_pixels": 978568892,
+    "positive_pixels": 9360858
+  },
+  "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "final_checkpoint_sha256": "8e995109bdd0c4f487f96d31e818a0c9d162d87d09394c59a6343be13612a107",
+  "final_model_state_sha256": "044fb7a7209be30179cf5f410fc9a364e9111bd9701faa67c1ca6ca2d69a1f7f",
+  "cumulative_input_sha256": "9522ab5edb31968d008ea822c9971d02c685f5a5d99437f528e98ccc4e93356b",
+  "cumulative_label_sha256": "e7dc82a236220fdad0232ffe5b0653e91e4d4149cfad4b825d41456c64a727a6",
+  "train_log_sha256": "278cf8a4d98bf2c3fd78694f9b9edb266c2e5df9b15f4e87cbec269e09b678a9",
+  "parameter_diff_sha256": "5af4df8c9aa4bb84df77c68f801b7d0e36acb58719844e64d91cb810c2abf90a",
+  "max_cuda_memory_allocated_bytes": 7471782400,
+  "max_cuda_memory_reserved_bytes": 10468982784
+}

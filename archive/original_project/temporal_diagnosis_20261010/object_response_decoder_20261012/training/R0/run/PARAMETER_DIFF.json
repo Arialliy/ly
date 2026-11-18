@@ -1,0 +1,510 @@
+{
+  "query_embed": {
+    "changed": 3200,
+    "max_abs": 0.15751361846923828
+  },
+  "original.conv_in.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_in.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.conv3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.bn3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.0.shortcut.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.conv3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.bn3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.layer1.1.shortcut.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.3.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.3.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.4.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.4.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.5.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.5.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.6.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.6.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.7.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.QK_heads.7.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.norm1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.norm1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.TPro.conv.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.0.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.0.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.1.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out1.1.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out2.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "original.conv_out2.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "raw_encoder.0.weight": {
+    "changed": 72,
+    "max_abs": 0.057971835136413574
+  },
+  "raw_encoder.0.bias": {
+    "changed": 8,
+    "max_abs": 0.0967463031411171
+  },
+  "raw_encoder.2.weight": {
+    "changed": 576,
+    "max_abs": 0.11616753041744232
+  },
+  "raw_encoder.2.bias": {
+    "changed": 8,
+    "max_abs": 0.02515440061688423
+  },
+  "project.weight": {
+    "changed": 512,
+    "max_abs": 0.08333789557218552
+  },
+  "project.bias": {
+    "changed": 32,
+    "max_abs": 0.03788042068481445
+  },
+  "layers.0.spatial_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.04030489921569824
+  },
+  "layers.0.spatial_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.025055594742298126
+  },
+  "layers.0.spatial_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.06509097665548325
+  },
+  "layers.0.spatial_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.025830209255218506
+  },
+  "layers.0.spatial_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05014762282371521
+  },
+  "layers.0.spatial_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.14133282005786896
+  },
+  "layers.0.spatial_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.047498125582933426
+  },
+  "layers.0.spatial_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.01888347417116165
+  },
+  "layers.0.spatial_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.05339889973402023
+  },
+  "layers.0.spatial_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.018048293888568878
+  },
+  "layers.0.temporal_norm.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_norm.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.q_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.q_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.k_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.k_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.v_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.v_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.out_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.temporal_attention.out_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.0.ffn_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.08060014247894287
+  },
+  "layers.0.ffn_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.03680442273616791
+  },
+  "layers.0.ffn.0.weight": {
+    "changed": 2048,
+    "max_abs": 0.1207006424665451
+  },
+  "layers.0.ffn.0.bias": {
+    "changed": 64,
+    "max_abs": 0.0613078773021698
+  },
+  "layers.0.ffn.2.weight": {
+    "changed": 2048,
+    "max_abs": 0.10939379036426544
+  },
+  "layers.0.ffn.2.bias": {
+    "changed": 32,
+    "max_abs": 0.015205945819616318
+  },
+  "layers.1.spatial_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.07019531726837158
+  },
+  "layers.1.spatial_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.031380102038383484
+  },
+  "layers.1.spatial_attention.q_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.10715318471193314
+  },
+  "layers.1.spatial_attention.q_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.03498479723930359
+  },
+  "layers.1.spatial_attention.k_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.08076205849647522
+  },
+  "layers.1.spatial_attention.k_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.14204619824886322
+  },
+  "layers.1.spatial_attention.v_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.06632708013057709
+  },
+  "layers.1.spatial_attention.v_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.022242076694965363
+  },
+  "layers.1.spatial_attention.out_proj.weight": {
+    "changed": 1024,
+    "max_abs": 0.048814743757247925
+  },
+  "layers.1.spatial_attention.out_proj.bias": {
+    "changed": 32,
+    "max_abs": 0.015518561005592346
+  },
+  "layers.1.temporal_norm.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_norm.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.q_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.q_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.k_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.k_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.v_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.v_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.out_proj.weight": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.temporal_attention.out_proj.bias": {
+    "changed": 0,
+    "max_abs": 0.0
+  },
+  "layers.1.ffn_norm.weight": {
+    "changed": 32,
+    "max_abs": 0.09774601459503174
+  },
+  "layers.1.ffn_norm.bias": {
+    "changed": 32,
+    "max_abs": 0.05185554176568985
+  },
+  "layers.1.ffn.0.weight": {
+    "changed": 2048,
+    "max_abs": 0.1478579342365265
+  },
+  "layers.1.ffn.0.bias": {
+    "changed": 64,
+    "max_abs": 0.09145504236221313
+  },
+  "layers.1.ffn.2.weight": {
+    "changed": 2048,
+    "max_abs": 0.14679448306560516
+  },
+  "layers.1.ffn.2.bias": {
+    "changed": 32,
+    "max_abs": 0.021159924566745758
+  },
+  "presence_head.weight": {
+    "changed": 32,
+    "max_abs": 0.09592517465353012
+  },
+  "presence_head.bias": {
+    "changed": 1,
+    "max_abs": 0.022098496556282043
+  },
+  "mask_head.weight": {
+    "changed": 1056,
+    "max_abs": 0.07203121483325958
+  },
+  "mask_head.bias": {
+    "changed": 33,
+    "max_abs": 0.039455439895391464
+  }
+}

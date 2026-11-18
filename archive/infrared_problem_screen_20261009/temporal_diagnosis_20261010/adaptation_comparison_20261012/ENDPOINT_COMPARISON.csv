@@ -1,0 +1,7 @@
+condition,step,arrangement,threshold,M,G_vs_release_same,L_vs_release_same,unmatched_components,positive_pixels_outside_boxes,unmatched_component_area_sum,low_all_05_matched,extreme_all_001_matched,both_fixed_success_matched,U_ratio_to_same_arrangement_release,U_ratio_to_frozen_4015_budget,A_ratio_to_same_arrangement_release,passes_U_budget
+release,0,O,0.5,700,0,0,4015,38368,45232,0,0,646,1.0,1.0,1.0,True
+release,0,S,0.5,720,0,0,3967,38641,45136,0,0,646,1.0,0.9880448318804483,1.0,True
+lambda0_top1,512,O,0.5,877,211,34,8339,48354,62305,169,96,623,2.076961394769614,2.076961394769614,1.260268974145121,False
+lambda0_top1,512,S,0.5,913,224,31,8330,48641,62764,179,101,623,2.09982354423998,2.074719800747198,1.2587924743148469,False
+gaussian_softiou_approx,512,O,0.5,1568,917,49,19048,326402,341642,841,721,611,4.744209215442092,4.744209215442092,8.507141367806506,False
+gaussian_softiou_approx,512,S,0.5,1656,996,60,19446,336695,353615,934,810,599,4.901941013360222,4.843337484433375,8.713413213943738,False

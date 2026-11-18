@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "scope": "One read-only CPU checkpoint verification; no model/forward/optimizer step",
+  "source_sha256": "2382dfba9937db2d7d4bed53911a136ed8d30ccbee8f6624d045c1b36c6ea64d",
+  "protocol_sha256": "d32c0161db33c34bccc8442f48bbd5d484b1c26812dea4f6a02217b1242105dd",
+  "identical_initial_checkpoint": true,
+  "identical_128_ordered_exposures": true,
+  "identical_RUN_fields": [
+    "initial_checkpoint_sha256",
+    "initial_model_state_sha256",
+    "original_state_sha256",
+    "source_sha256",
+    "frozen_v1_source_sha256",
+    "settings",
+    "cache_sha256",
+    "trainable_parameter_names",
+    "trainable_parameters",
+    "parameters",
+    "exposure_digest_sha256"
+  ],
+  "conditions": {
+    "Continuation": {
+      "run_sha256": "a162f554e37073b4f2f66af83c02015263243121281ef3267f17b67ee455c78a",
+      "checkpoint_sha256": "c409006206a95096b74da5f9b954831e4aa53587f69a605cf12720b5b2f5d785",
+      "logged_steps": 128,
+      "first_step": 2049,
+      "last_step": 2176,
+      "optimizer_state_count": 53,
+      "optimizer_steps_unique": [
+        2176.0
+      ],
+      "optimizer_param_groups_unchanged": true,
+      "optimizer_moment_shapes_match_ordered_parameter_names": true,
+      "frozen_base_tensor_count": 100,
+      "all_frozen_base_tensors_exact_initial": true,
+      "all_model_and_moment_tensors_finite": true,
+      "changed_trainable_tensor_count": 53,
+      "exposure_digest_sha256": "b7cb235bd98cb01e9d39b425b5d05b512f632031e895b49e339fd5222b04aac9"
+    },
+    "Revision": {
+      "run_sha256": "9bec6937912e25389d1c539f6124c84359570f6cf1d4dfda87020e67c36244a3",
+      "checkpoint_sha256": "b4622c1731c2f68496bd5064e6e890ccc624c06aa6b8c69934a228adffa867d1",
+      "logged_steps": 128,
+      "first_step": 2049,
+      "last_step": 2176,
+      "optimizer_state_count": 53,
+      "optimizer_steps_unique": [
+        2176.0
+      ],
+      "optimizer_param_groups_unchanged": true,
+      "optimizer_moment_shapes_match_ordered_parameter_names": true,
+      "frozen_base_tensor_count": 100,
+      "all_frozen_base_tensors_exact_initial": true,
+      "all_model_and_moment_tensors_finite": true,
+      "changed_trainable_tensor_count": 53,
+      "exposure_digest_sha256": "b7cb235bd98cb01e9d39b425b5d05b512f632031e895b49e339fd5222b04aac9"
+    }
+  }
+}

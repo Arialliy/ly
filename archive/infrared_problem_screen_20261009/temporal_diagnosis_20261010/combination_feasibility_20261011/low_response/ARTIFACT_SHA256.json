@@ -1,0 +1,31 @@
+{
+  "files": {
+    "GEOMETRY_AUDIT.json": "219532eaad144b0ef81ef76ddaa6a54efe5629a0e362d4cc844d670c987587ca",
+    "INDEPENDENT_VALIDATION.json": "b7e4634838a5d544bc0ace1ae02a5a358ba25eeebc63be3a803ef4802ecac365",
+    "LOW_COHORT.csv": "79c796a405e98edc95eaf522bacb3ea047e106749eeabaab6d40cac961ad6d28",
+    "LOW_RECOVERY_OBJECTS.csv": "6adf3918ef0cb4ed116b2f1ae7647db13902adca4dae284d9b47847c6c5041a1",
+    "PEAK_BOUND_CHECK.json": "add96e9a21f2b28f47bb67d31c9356c5e5a107af91187c6923284beb62ca2663",
+    "REPORT.md": "a1bfa1c8bb3aa4dfc118f90a80b8e69a824fa7969755e113d78a603a52dd985a",
+    "RUNTIME.json": "8745384add416e83fcae127ea0dfa878d0750112b7e76465056a4b0d556d38c4",
+    "SUMMARY.json": "0b8c9a008f439eea60c0770c8c90f408a460485dd527b1b2a9b49cdd92bd8c38",
+    "THRESHOLD_CURVES.csv": "b5ec3157b526bee518cbfaa6c2ba4f72d0e6a56c9867d1e8a79d8054fb5795b6",
+    "analyze_low_response.py": "4a809637977de3c542c906acee85c31d1eead666449cf72a21ea52668eaf4c39",
+    "supplement/ARTIFACT_SHA256.json": "ddeb01eb65502c5dee2fa81802a54eccf37652fb5ae4f9c88c8f58d4e0b4d642",
+    "supplement/LOW_RECOVERY_OBJECTS.csv": "be56337c292593e30253fd117dd41a6b9d8577e51ee5669e4aea9b70af858af9",
+    "supplement/O_DJI_0026_2_scores.npz": "80449b2c0458517a895ddf129755e8587864110ae8878e15b4d04d408dad3fdf",
+    "supplement/O_DJI_0067_2_scores.npz": "0f2fcf70b97fc51983def8c5e216d4da1615e3bb22665465a8a5cd94e186953a",
+    "supplement/REPORT.md": "d7152a648ea4d74230ea30b56e0b9de86f2b72c070a02714bc054002ec03e3a1",
+    "supplement/RUNTIME.json": "f86a9d4168c70096c98be846d8a96cb17ed11394ab1816579bd4d557c04d3209",
+    "supplement/SUMMARY.json": "d13000ecd4142d36e7b66d3b55de7c0d0980e954e730989d8fe8cd9e26e8c55b",
+    "supplement/S_DJI_0026_2_scores.npz": "c28eae9a3e5256f580ec3b2e4443d2697e422907ea86300aed4dd0f68108b9cf",
+    "supplement/S_DJI_0067_2_scores.npz": "4a97da2fc9046713f94d3b21607a2dc3975e9f68a5cf159e833d91d4ab9767c0",
+    "supplement/THRESHOLD_CURVES.csv": "da571a601a127650f94fc6ce26e23f59c9f1869faf4beb3aaf967c5ff555871b",
+    "supplement/VALIDATION.json": "fc31fd8bc3efbacbf6ce590500b0087470b27a7e0d4f91534c1bff95fb3ee0e2",
+    "supplement/score_supplement.py": "a674a03b7bf5898cc753a4266de942460e756ac8523fcb822b2f742f973e2ff9",
+    "supplement/verify_supplement.py": "643404c6cf88db01cd293054548604f062a1c787c48ab48d990d246aa25d2df5",
+    "verify_independent.py": "ef2a27ab95924ac183fd458e22c418f949b04e3c095ffaeb2ea90dec00401805",
+    "verify_peak_bound.py": "0860a28e8932c05426ab79e4e198cdd5de4ca90103906ceab26560c0f9c9186c"
+  },
+  "file_count": 25,
+  "markdown_links_checked": 19
+}

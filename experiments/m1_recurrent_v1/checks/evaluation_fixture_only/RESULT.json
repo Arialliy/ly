@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "purpose": "software integration fixture only",
+  "M1_model_executed": false,
+  "all_three_aliases_use": "archived release predictions",
+  "matcher_and_cohort_pipeline": "original reused functions",
+  "summary_rows": 6,
+  "unique_recovery_rows": 12,
+  "formal_outputs_written": false
+}

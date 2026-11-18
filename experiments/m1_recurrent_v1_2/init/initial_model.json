@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "checkpoint_sha256": "4f3d30191d29f8a118cf8e53657c1dff9c057e96246027327cf715ca6ed95654",
+  "model_state_sha256": "539e2ac54ff671e3ef959117941af13fba3ef26f37f298957aeaeeccde02866e",
+  "gate_state_sha256": "ac970cdc3a716a91d736293a5a8021c5f76000ebf4407ec28623438374bdf74d",
+  "initial_checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "reference_sha256": "92626b129e9c0b1da865f3d77068390d11f7ac00ed417d535a036a5ad34e2852",
+  "seed": 46,
+  "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "installation": {
+    "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/state_update.py",
+    "scope": "pixel",
+    "gate_seed": 46,
+    "gate_initial_retention": 0.5,
+    "first_frame": "M0=X0 unchanged",
+    "old_state_keys_and_values_unchanged": true,
+    "old_parameter_objects_unchanged": true,
+    "added_parameter_names": [
+      "adapter.recurrent_cell.state_update.gate_net.0.weight",
+      "adapter.recurrent_cell.state_update.gate_net.0.bias",
+      "adapter.recurrent_cell.state_update.gate_net.2.weight",
+      "adapter.recurrent_cell.state_update.gate_net.2.bias",
+      "adapter.recurrent_cell.state_update.gate_net.4.weight",
+      "adapter.recurrent_cell.state_update.gate_net.4.bias"
+    ],
+    "added_parameter_tensors": 6,
+    "added_parameters": 2017,
+    "initial_output_equal_to_old_model_claimed": false,
+    "update": "state_update(aligned=PDA(previous,X), candidate=TSFM(aligned,X), current=X, scope=pixel)"
+  }
+}

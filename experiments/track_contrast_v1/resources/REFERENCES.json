@@ -1,0 +1,122 @@
+{
+  "retrieved_utc": "2026-10-12T15:54:36.498912+00:00",
+  "references": [
+    {
+      "name": "SlotContrast",
+      "repository": "https://github.com/martius-lab/slotcontrast",
+      "requested_raw_url": "https://raw.githubusercontent.com/martius-lab/slotcontrast/main/slotcontrast/losses.py",
+      "commit": "55ec66dc02eeade630805789ef4a6c5df06f21ff",
+      "commit_url": "https://github.com/martius-lab/slotcontrast/commit/55ec66dc02eeade630805789ef4a6c5df06f21ff",
+      "local_source": "SlotContrast_source.py",
+      "source_path": "slotcontrast/losses.py",
+      "sha256": "cc6d29b184094a76201632d3691634872baa0c0892cf7cd0bb93b24c2f07aa2b",
+      "git_blob_sha1": "e562a4fdc9177948c32cdfa97f50364c38f9d276",
+      "pinned_blob_verified": true,
+      "README.md": {
+        "local_file": "SlotContrast_README.md",
+        "sha256": "1556ff1135a07cb7c57737efb99ff7a2af45adb01d965574e185429b49de2ee2"
+      },
+      "LICENSE": {
+        "local_file": "SlotContrast_LICENSE",
+        "sha256": "0c24c6fb9ecb548220b6a4355f3c57282b83c9f55efc3872324ed87a2d6329c2"
+      },
+      "verified_behavior": "Slot_Slot_Contrastive_Loss L2-normalizes slots, uses adjacent-frame dot-product logits divided by temperature (.1 default), and identity correspondence cross-entropy; batch_contrast concatenates objects across batch.",
+      "borrowed": "Normalized object descriptors and explicit temporal contrastive supervision.",
+      "not_transferred": "Slot index as target correspondence, slot network, implicit other-object negatives, reconstruction decoder. Our bbox IDs and explicit background candidates replace those assumptions.",
+      "source_lines": [
+        176,
+        202
+      ],
+      "venue_evidence": "Official repository README states CVPR2025 Oral; this audit verifies code, not infrared efficacy."
+    },
+    {
+      "name": "S2MVP",
+      "repository": "https://github.com/UESTC-nnLab/S2MVP",
+      "requested_raw_url": "https://raw.githubusercontent.com/UESTC-nnLab/S2MVP/main/mmdet/models/detectors/single_stage.py",
+      "commit": "71732e12813189510f1847f7e80fefa97a7edf4d",
+      "commit_url": "https://github.com/UESTC-nnLab/S2MVP/commit/71732e12813189510f1847f7e80fefa97a7edf4d",
+      "local_source": "S2MVP_source.py",
+      "source_path": "mmdet/models/detectors/single_stage.py",
+      "sha256": "c2a0f38bc260267dc3f62f8e34ea689398b0e99b55091594be3c8225cbe8d528",
+      "git_blob_sha1": "e3f5702a2dfd8045f2a83b0d086ba67d516df8ea",
+      "pinned_blob_verified": true,
+      "README.md": {
+        "local_file": "S2MVP_README.md",
+        "sha256": "4aecf5743bcf0efa1d29e0371fd4f3dd76930df0abba23f33f1103185fe19997"
+      },
+      "LICENSE": {
+        "local_file": "S2MVP_LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      "verified_behavior": "single_stage.py augments detector loss with target-aware auxiliary reconstruction; build_target_obj filters bbox width/height <=64 and constructs object maps.",
+      "borrowed": "Concept of object-directed auxiliary supervision for weak infrared targets.",
+      "not_transferred": "Semisupervised pseudolabeling, ConvGRU/prototype system, FCOS or bbox<=64 rule.",
+      "source_lines": [
+        325,
+        342,
+        427,
+        473
+      ],
+      "venue_evidence": "Official README supplies TGRS2025 volume63 pages1-15 DOI10.1109/TGRS.2025.3525648."
+    },
+    {
+      "name": "TrackMAE",
+      "repository": "https://github.com/rvandeghen/TrackMAE",
+      "requested_raw_url": "https://raw.githubusercontent.com/rvandeghen/TrackMAE/main/engine_for_pretraining_cotracker.py",
+      "commit": "eb339b3a9b4e4165b83694eb691774c38a8e156e",
+      "commit_url": "https://github.com/rvandeghen/TrackMAE/commit/eb339b3a9b4e4165b83694eb691774c38a8e156e",
+      "local_source": "TrackMAE_source.py",
+      "source_path": "engine_for_pretraining_cotracker.py",
+      "sha256": "f3b7092eaa4115846978ac275877f7176d4385bfb1ea90a18e00c0683a5fedfb",
+      "git_blob_sha1": "f2f57c44f63479cf1eb3908427fa087c7b7b0bda",
+      "pinned_blob_verified": true,
+      "README.md": {
+        "local_file": "TrackMAE_README.md",
+        "sha256": "af4d3a9c67b3e0198b6f13ffb83836822e3230d5cb873769ad633486d3b4687c"
+      },
+      "LICENSE": {
+        "local_file": "TrackMAE_LICENSE",
+        "sha256": "bc7ca44dd8437387c9e28deb791014ca4697504eaaaef05f387008635b11cdf4"
+      },
+      "verified_behavior": "Pretraining engine derives trajectory displacement targets from CoTracker tracks; model outputs pixel and trajectory predictions with separate MSE terms and a configured coefficient.",
+      "borrowed": "Separation of temporal target construction from model prediction and explicit temporal learning objectives.",
+      "not_transferred": "CoTracker-generated training targets, ViT/MAE network, pixel reconstruction, pretrained weights.",
+      "source_lines": [
+        102,
+        156
+      ],
+      "venue_evidence": "Official repository README identifies CVPR2026 and arXiv2603.27268."
+    },
+    {
+      "name": "DeepPro",
+      "repository": "https://github.com/TinaLRJ/DeepPro",
+      "requested_raw_url": "https://raw.githubusercontent.com/TinaLRJ/DeepPro/main/networks/models/DeepPro-Plus.py",
+      "commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+      "commit_url": "https://github.com/TinaLRJ/DeepPro/commit/8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+      "local_source": "DeepPro_source.py",
+      "source_path": "networks/models/DeepPro-Plus.py",
+      "sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+      "git_blob_sha1": "df176c869927d52dab2477357ebd0ca8972a202c",
+      "pinned_blob_verified": true,
+      "README.md": {
+        "local_file": "DeepPro_README.md",
+        "sha256": "58505f280be693b75bd2a125299ee1349e349f4db688f5da0fa7aa13d1d42150"
+      },
+      "verified_behavior": "Original detector.forward returns conv_out1 feature tensor and conv_out2 logits; conv_out1 reduces32to8channels and includes BN+ReLU.",
+      "borrowed": "Frozen original detector definition and its existing F/logits interface.",
+      "not_transferred": "No detector output replacement, inference auxiliary modules or changed normalization.",
+      "source_lines": [
+        12,
+        36
+      ]
+    }
+  ],
+  "local_deeppro_verification": {
+    "local_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/networks/models/DeepPro-Plus.py",
+    "local_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "public_pinned_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "byte_identical": true,
+    "newline_normalized_identical": true
+  },
+  "implementation_boundary": "Sources archived and read for design reference; no external networks or training code imported into this experiment. Loss modules are local implementations; actual component matching reuses the frozen local matcher."
+}

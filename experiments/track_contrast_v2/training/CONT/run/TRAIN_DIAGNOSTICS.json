@@ -1,0 +1,255 @@
+{
+  "indices": [
+    5,
+    6,
+    18,
+    25,
+    30,
+    32,
+    51,
+    7
+  ],
+  "uses_development": false,
+  "rows": [
+    {
+      "index": 5,
+      "losses": {
+        "det": 0.5644139051437378,
+        "keep": 0.00041661408613435924,
+        "C": 0.3880097270011902,
+        "base": 0.6090478897094727,
+        "frame": 3.9837915897369385,
+        "gap": 2.2916531562805176
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9915077686309814,
+        "negative_cosine_mean": 0.28416740894317627,
+        "cosine_margin_mean": 0.7073403596878052
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.006503582000732,
+        "background_logit_mean": -13.437189102172852,
+        "logit_margin_mean": 7.430685520172119,
+        "probability_margin_mean": 0.09820041805505753,
+        "evidence_mean": 0.0982031598687172,
+        "target_logit_above_zero_fraction": 0.071180559694767,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 6,
+      "losses": {
+        "det": 0.8455196619033813,
+        "keep": 0.0005002048565074801,
+        "C": 0.9531226754188538,
+        "base": 0.9521498084068298,
+        "frame": 9.503968238830566,
+        "gap": 7.1142120361328125
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8659080266952515,
+        "negative_cosine_mean": 0.6787388324737549,
+        "cosine_margin_mean": 0.18716919422149658
+      },
+      "readout": {
+        "observations_with_multiplicity": 1168,
+        "target_logit_mean": -7.679522514343262,
+        "background_logit_mean": -12.984903335571289,
+        "logit_margin_mean": 5.305380344390869,
+        "probability_margin_mean": 0.2253517210483551,
+        "evidence_mean": 0.2253555953502655,
+        "target_logit_above_zero_fraction": 0.22174657881259918,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 18,
+      "losses": {
+        "det": 0.3048641085624695,
+        "keep": 0.0003412298974581063,
+        "C": 0.4969174563884735,
+        "base": 0.36091944575309753,
+        "frame": 1.6751515865325928,
+        "gap": 0.9554702639579773
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9760538339614868,
+        "negative_cosine_mean": 0.3992880582809448,
+        "cosine_margin_mean": 0.576765775680542
+      },
+      "readout": {
+        "observations_with_multiplicity": 576,
+        "target_logit_mean": -6.644898414611816,
+        "background_logit_mean": -13.256693840026855,
+        "logit_margin_mean": 6.611794948577881,
+        "probability_margin_mean": 0.03720931336283684,
+        "evidence_mean": 0.03721306845545769,
+        "target_logit_above_zero_fraction": 0.0243055559694767,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 25,
+      "losses": {
+        "det": 0.734601616859436,
+        "keep": 0.0008693874697200954,
+        "C": 1.1352704763412476,
+        "base": 0.8631839156150818,
+        "frame": 5.4790143966674805,
+        "gap": 3.3694190979003906
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8626594543457031,
+        "negative_cosine_mean": 0.852493405342102,
+        "cosine_margin_mean": 0.010166049003601074
+      },
+      "readout": {
+        "observations_with_multiplicity": 1672,
+        "target_logit_mean": -13.557233810424805,
+        "background_logit_mean": -12.965296745300293,
+        "logit_margin_mean": -0.5919361710548401,
+        "probability_margin_mean": 0.018527831882238388,
+        "evidence_mean": 0.018532490357756615,
+        "target_logit_above_zero_fraction": 0.015550239011645317,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 30,
+      "losses": {
+        "det": 0.8047305345535278,
+        "keep": 0.0007441366324201226,
+        "C": 0.4079607129096985,
+        "base": 0.8534210324287415,
+        "frame": 7.033300399780273,
+        "gap": 4.957652568817139
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.9854987859725952,
+        "negative_cosine_mean": 0.30921870470046997,
+        "cosine_margin_mean": 0.6762800812721252
+      },
+      "readout": {
+        "observations_with_multiplicity": 976,
+        "target_logit_mean": -7.6147003173828125,
+        "background_logit_mean": -13.414145469665527,
+        "logit_margin_mean": 5.799445629119873,
+        "probability_margin_mean": 0.06714165955781937,
+        "evidence_mean": 0.06714458763599396,
+        "target_logit_above_zero_fraction": 0.04303278401494026,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 32,
+      "losses": {
+        "det": 0.594343900680542,
+        "keep": 0.0007820697501301765,
+        "C": 0.4436175525188446,
+        "base": 0.6471341252326965,
+        "frame": 4.997441291809082,
+        "gap": 2.6612067222595215
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.983043909072876,
+        "negative_cosine_mean": 0.3430010676383972,
+        "cosine_margin_mean": 0.6400428414344788
+      },
+      "readout": {
+        "observations_with_multiplicity": 680,
+        "target_logit_mean": -7.080227851867676,
+        "background_logit_mean": -13.429061889648438,
+        "logit_margin_mean": 6.348834037780762,
+        "probability_margin_mean": 0.13026027381420135,
+        "evidence_mean": 0.1302628219127655,
+        "target_logit_above_zero_fraction": 0.13235294818878174,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 51,
+      "losses": {
+        "det": 0.7957271337509155,
+        "keep": 0.0012259014183655381,
+        "C": 1.0149651765823364,
+        "base": 0.9132651686668396,
+        "frame": 12.947015762329102,
+        "gap": 9.266024589538574
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8442223072052002,
+        "negative_cosine_mean": 0.6863033771514893,
+        "cosine_margin_mean": 0.15791893005371094
+      },
+      "readout": {
+        "observations_with_multiplicity": 1928,
+        "target_logit_mean": -10.019118309020996,
+        "background_logit_mean": -12.748512268066406,
+        "logit_margin_mean": 2.729393482208252,
+        "probability_margin_mean": 0.16108360886573792,
+        "evidence_mean": 0.1610889732837677,
+        "target_logit_above_zero_fraction": 0.1566390097141266,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    },
+    {
+      "index": 7,
+      "losses": {
+        "det": 0.41177141666412354,
+        "keep": 0.0005229497328400612,
+        "C": 0.9624869227409363,
+        "base": 0.5195518732070923,
+        "frame": 4.29168701171875,
+        "gap": 2.9629273414611816
+      },
+      "contrast": {
+        "pairs_requested": 128,
+        "pairs_used": 128,
+        "valid_negatives": 256,
+        "reduction": "sum_complete_pairs_divided_by_all_requested_pairs",
+        "positive_cosine_mean": 0.8858029842376709,
+        "negative_cosine_mean": 0.7244943976402283,
+        "cosine_margin_mean": 0.16130858659744263
+      },
+      "readout": {
+        "observations_with_multiplicity": 2200,
+        "target_logit_mean": -8.260043144226074,
+        "background_logit_mean": -13.023207664489746,
+        "logit_margin_mean": 4.763165473937988,
+        "probability_margin_mean": 0.19976063072681427,
+        "evidence_mean": 0.19991718232631683,
+        "target_logit_above_zero_fraction": 0.202727273106575,
+        "background_logit_above_zero_fraction": 0.0
+      }
+    }
+  ]
+}

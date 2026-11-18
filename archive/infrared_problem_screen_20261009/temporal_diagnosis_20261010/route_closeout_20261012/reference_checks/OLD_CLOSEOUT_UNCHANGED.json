@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "file": "COMPARISONS.csv",
+      "unchanged": true
+    },
+    {
+      "file": "PRIOR_CVPR2027_RESEARCH_PLAN (1).md",
+      "unchanged": true
+    },
+    {
+      "file": "DECISION.json",
+      "unchanged": true
+    },
+    {
+      "file": "TABLE_REVIEW.json",
+      "unchanged": true
+    },
+    {
+      "file": "CLOSEOUT.md",
+      "unchanged": true
+    },
+    {
+      "file": "CLOSEOUT_CHECK.json",
+      "unchanged": true
+    },
+    {
+      "file": "PRIOR_CVPR2027_RESEARCH_PLAN.md",
+      "unchanged": true
+    }
+  ],
+  "note": "Only legacy files resident in this folder compared to historical manifest. Old global stage1 status evolved in later historical work and is not asserted unchanged."
+}

@@ -1,0 +1,583 @@
+{
+  "status": "COMPLETE",
+  "arm": "V12History",
+  "checkpoint_step": 2176,
+  "checkpoint_sha256": "43493fc7889c78b305a6b4f3e460976afcb8b9693f91af781d4a740f0294ead0",
+  "shared_initial_checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "initial_and_final_inference_model_state_sha256": "bb2419460bb1b41e5c01695fe8ffa2d863d7b1c89fe71cd1eb11f64f36a897ad",
+  "raw_roi_rows": 25940,
+  "unique_strict_target_frames": 5200,
+  "sequences": [
+    "DJI_0026_2",
+    "DJI_0067_2"
+  ],
+  "plans": {
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ]
+  },
+  "groups": [
+    "strict_all",
+    "low_all_05",
+    "extreme_all_001",
+    "both_fixed_success",
+    "m1_low_common_recovered"
+  ],
+  "phases": [
+    "all_offsets",
+    "t0",
+    "t1_39"
+  ],
+  "mode_labels": {
+    "History": "V12HistoryHistory",
+    "HistoryCurrent": "V12HistoryCurrent",
+    "HistoryOff": "same original H/head"
+  },
+  "after_tsfm_field_semantics": "bare TSFM candidate R before state update",
+  "after_update_field_semantics": "(1-g)*R+g*A actual recursive state; t0 X and no gate",
+  "retention_semantics": "old aligned-state coefficient in[0,1]; ROI/frame distribution summaries, undefined at t0; average per-ROI/frame quantiles are not pooled pixel quantiles",
+  "mean_order": "overlap windows per target-frame/arrangement/kind/phase -> equal available O/S arrangement means -> equal target-frame group statistics",
+  "background_weighting": "Target-paired fixed references; repeated physical background ROIs are not independent samples",
+  "relative_scale": "delta_RMS/sqrt((history_RMS^2+current_RMS^2)/2), undefined at denominator <=1e-12; no zero fill",
+  "scope": "Within-arm same-final-weight HC effects; independent trained Current is not present. Internal changes do not alone prove detection benefit.",
+  "unchanged_aggregation_sha256": "0ca390f3dfece255ed6c2de933706df20bf39b592ff2e3ceb36b7a3ebc78475d",
+  "aggregation_loader_sha256": "18d83cd2b7872985b5810ec2f07e79fd9b77fdd12188fcca586853c02bd83700",
+  "reference_and_identity_checks": [
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 0,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_000.npz",
+          "reference_sha256": "a6760b4f16481eab8e885962a8759dee628fd9a33fa083b8a7c46a2dad884f73",
+          "probability_absmax": 5.0961971282958984e-06,
+          "probability_mean_abs": 4.548931109627851e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 7.773633114993572e-08,
+        "injected_H_projection": 5.629990482702851e-07,
+        "head_piecewise_secant": 9.238719940185547e-06
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 24,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_024.npz",
+          "reference_sha256": "a5cb2cd800e06baa5c7183176add769f6db39a8971c4f2f20b54c14d7d0d383d",
+          "probability_absmax": 5.0067901611328125e-06,
+          "probability_mean_abs": 4.437419725613424e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 8.067581802606583e-08,
+        "injected_H_projection": 5.60496118851006e-07,
+        "head_piecewise_secant": 1.0450370609760284e-05
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 36,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_036.npz",
+          "reference_sha256": "0f69e9b79390cbfa247f10a312c638d9242f173db74c4f17cdf2708a39423174",
+          "probability_absmax": 4.500150680541992e-06,
+          "probability_mean_abs": 4.945492248634528e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 7.922062650322914e-08,
+        "injected_H_projection": 6.377231329679489e-07,
+        "head_piecewise_secant": 1.0019168257713318e-05
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 60,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_060.npz",
+          "reference_sha256": "98b12b95cff9585a60acce5d39421d016adee1da4644f0ee8be3b47e1ccb39c8",
+          "probability_absmax": 5.066394805908203e-06,
+          "probability_mean_abs": 4.2481012265170505e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 7.814378477633e-08,
+        "injected_H_projection": 5.901092663407326e-07,
+        "head_piecewise_secant": 1.0913703590631485e-05
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 72,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_072.npz",
+          "reference_sha256": "db2a966f108ea08ee2eac9e3aab3a9eece8ab725dfa34311583f7151a19713a3",
+          "probability_absmax": 6.020069122314453e-06,
+          "probability_mean_abs": 4.1866955763270196e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 6.961636245250702e-08,
+        "injected_H_projection": 5.956535460427403e-07,
+        "head_piecewise_secant": 9.63662751019001e-06
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 96,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_096.npz",
+          "reference_sha256": "f2b933d684f38c4b3db2255c03bb010a4b72b62869e2f439bc5a8ffb7f992412",
+          "probability_absmax": 5.9604644775390625e-06,
+          "probability_mean_abs": 4.170485964746921e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 7.807830115780234e-08,
+        "injected_H_projection": 5.627516657114029e-07,
+        "head_piecewise_secant": 1.138937659561634e-05
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 108,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_108.npz",
+          "reference_sha256": "1ed8551e6cf4b5779d9a854103ad88e544cbc7355fe4b3ad9f1c949b8dc023e8",
+          "probability_absmax": 7.3909759521484375e-06,
+          "probability_mean_abs": 6.806316938780156e-11,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 9.313225746154785e-08,
+        "injected_H_projection": 5.627225618809462e-07,
+        "head_piecewise_secant": 1.156865619122982e-05
+      }
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "window_start": 120,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_120.npz",
+          "reference_sha256": "cbd16a3162bade5b191cb06572a1c40f78ed31aa26654c9dfa6a0d63d37a503e",
+          "probability_absmax": 8.821487426757812e-06,
+          "probability_mean_abs": 2.3547813885336067e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 9.115319699048996e-08,
+        "injected_H_projection": 9.239302016794682e-07,
+        "head_piecewise_secant": 1.0621733963489532e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 0,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_000.npz",
+          "reference_sha256": "c12def99344f88ac805e3123c60f872e98058fe5bc9bb2e276379c5821b2e8f2",
+          "probability_absmax": 9.506940841674805e-06,
+          "probability_mean_abs": 3.8644313654803633e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.7334241420030594e-07,
+        "injected_H_projection": 8.877541404217482e-07,
+        "head_piecewise_secant": 1.470278948545456e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 24,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_024.npz",
+          "reference_sha256": "2b49ebe34f92d491cd075e4e8ecafe6eed88b88c93c41257921b87020e1ec0ae",
+          "probability_absmax": 1.0192394256591797e-05,
+          "probability_mean_abs": 3.8745829678370826e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4959368854761124e-07,
+        "injected_H_projection": 9.199429769068956e-07,
+        "head_piecewise_secant": 1.041637733578682e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 36,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_036.npz",
+          "reference_sha256": "04ad7b5ea25106d5c22ab86b50d20e0552ceb61c57beb0f65c3a3326a7f3dcb8",
+          "probability_absmax": 8.463859558105469e-06,
+          "probability_mean_abs": 4.331957124842356e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4959368854761124e-07,
+        "injected_H_projection": 9.158684406429529e-07,
+        "head_piecewise_secant": 1.0782154276967049e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 60,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_060.npz",
+          "reference_sha256": "b5624c19eafd79d2a51d644d6c7c12c7e26d0d98c0a05222369a3bc9cbda48f1",
+          "probability_absmax": 1.537799835205078e-05,
+          "probability_mean_abs": 4.3368520481001095e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4828401617705822e-07,
+        "injected_H_projection": 9.348150342702866e-07,
+        "head_piecewise_secant": 1.253560185432434e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 72,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_072.npz",
+          "reference_sha256": "39256ceabe0009ddcf9031a4db2a1859a914365824291d54ff285409fc04296a",
+          "probability_absmax": 9.834766387939453e-06,
+          "probability_mean_abs": 4.195611100260173e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4546094462275505e-07,
+        "injected_H_projection": 8.857750799506903e-07,
+        "head_piecewise_secant": 1.0382384061813354e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 96,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_096.npz",
+          "reference_sha256": "cb179cbac3ff1faa1a1087c9f20c4687c562f8a73fbe224a358fb0fc7ba556cf",
+          "probability_absmax": 1.043081283569336e-05,
+          "probability_mean_abs": 4.3035783452554494e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4260876923799515e-07,
+        "injected_H_projection": 9.311115718446672e-07,
+        "head_piecewise_secant": 1.4046207070350647e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 108,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_108.npz",
+          "reference_sha256": "0003886068419475fe1c5810383af760ae8245c6b26484a99f6bbb07ccac554b",
+          "probability_absmax": 1.2755393981933594e-05,
+          "probability_mean_abs": 4.306647735588068e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.4319084584712982e-07,
+        "injected_H_projection": 9.741634130477905e-07,
+        "head_piecewise_secant": 1.3626180589199066e-05
+      }
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "window_start": 120,
+      "checks": {
+        "off_release": {
+          "reference_path": "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_120.npz",
+          "reference_sha256": "47c65269cf07957d99b17e88e23470e6d2a9cd2f0672921a4855a5c9f3692c73",
+          "probability_absmax": 1.1920928955078125e-05,
+          "probability_mean_abs": 4.676953756656283e-10,
+          "threshold_05_pixel_differences": 0,
+          "exact_probability_equal": false,
+          "absolute_tolerance": 2e-05,
+          "cross_runtime_release": true
+        }
+      },
+      "identity_errors": {
+        "residual_projection": 1.862645149230957e-07,
+        "injected_H_projection": 9.377909009344876e-07,
+        "head_piecewise_secant": 1.642853021621704e-05
+      }
+    }
+  ],
+  "input_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/analysis/aggregate_trace.py": "0ca390f3dfece255ed6c2de933706df20bf39b592ff2e3ceb36b7a3ebc78475d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/COMPLETE.json": "0f4b072348718d401ce6e49ba2bcf8036ffe817777b50e2c84bee38f39669951",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/training/History/run/snapshot_2048.pth": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/PROTOCOL_FREEZE.json": "34af43a3c198096a4461167e8c885c436b4b645e754e2290eda44f568936dc1e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/evaluate.py": "16c3d048e688e58b1b81cd088d2b8dc04221d477d253b58f47166eaea7ea671f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/infer.py": "072685d22bd17332d1fff95db4eee89ea64cdd703f969f4979511840bd58dc8b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/launch.py": "f7d4d7e0abe4be457dcbda9358288e2fcc92e2ec57b17ed0bce9b33d224c2a8c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/reference_tests.py": "c58d1478a7e47c0f5fcfb2601d81bf1107d11d851852fa3fa86dc4ac22f70853",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision.py": "31a67f5bc9fbc063fb721530a1eca334f702d80687bef1b1a674b601e7429b98",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision_smoke.py": "3d75caa710be3de11bdff53611bd58998b868b1f6d81b85610d5a42365c5212a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/runtime.py": "d2b98787666026a81098ca2dad17e6f5da44f76842a0ebeebc221b123ffa73c0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/trace.py": "01129f0f58ce0a115e826c74d1b45399cbfc1fc623441264de712d6103fa2c61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train.py": "57c3a6ef73ee960e20eda7d3e4cd9769cd1b3c65f8bbe3994e8295da8be7fbc3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train_diagnostics.py": "9f25bd527134756a97aa358cba9e02188cc463a1caae4e8da056401b01c30051",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/state_update.py": "92626b129e9c0b1da865f3d77068390d11f7ac00ed417d535a036a5ad34e2852",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/test_state_update.py": "7c306fb521f5b95abb6a1da7cace4f1033a7090f7dc4a7727ee133973f9a4b0e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/PROTOCOL_FREEZE.json": "92b105d7de19fa1ffa9d723f91fe4dcab4da20b2f1263baef6a6d8a2c24f563e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/cohorts.py": "543e9603e423dd2fdd3d0e88a3956a3dea7d5dcb099672a145aedcfcc12cb92f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/evaluate.py": "87c26c981bb4fc6beb48a7af85018c732ca2668def148b4e0574995a2411433e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/launch.py": "94c2bc31fa85735c991ade0e9a6aedc7eb4622f1c49711e58b67c9b56f667275",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/run_diagnostic.py": "477684e1d2255ed8e4a10aaf8fbf1493d894457e696ccfc5c3cc38b25d7c31d0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/runtime.py": "28a69241daec9db97d5fa8ef777ce3f9829f6a717c8925febdba7ed79edd2a57",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/trace.py": "681e4e94bc46f2453414c83d47080180c67be14eeeed29a47989a08fdb85d178",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/trace_smoke.py": "0f6496d9eb3fcc2593a449610829c9b26b96de373fe453a02c5afe4860a841bd",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/checks/PAIRED_TRAINING.json": "2bfca7300d9235b91b1d154afa3b0ac64fbac641fe65a501299fa124fa03486d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12Current/RUN.json": "1e17d657a0ee8b482f63795df5cfcdb41a54a563d16ed6ab4df345449483de2e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12Current/snapshot_2176.pth": "857e9cca87296b0480277fba3a81b7bdd2864991b4774985f3a2118a6a32f7e4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/deeppro_c_v2_reference/temporal_risk.py": "6e8343c7d61e5a7d18358369bf546ef6cab0079a917019a653f8636c091dc187",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/evaluate.py": "8bc75424db80e077897384543ace13e665e4bac9ca2be82949d085f310c06381",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/finalize_preflight.py": "fbee317a1e0b97ed84ed5ea4692546c6be6044202b2477792c4fb1b867c3a4b4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/freeze.py": "7c98c24586c74af4bd2618539996c308c02051ab385f212955a84849357de6d2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/infer.py": "b9bab33dad64c159026fe736b5077ea2ed94ece1fc0972ab00e100676237ee76",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/preflight.py": "394afeabbda9055f41f5eed1780ba9cb3e2e162f1613023184a029eed3334bc2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/spatial_preflight.py": "e0065378102caf9e371fd84311eb37c1993ccb6e9a3ef50cbe91c903e3d5a207",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/train.py": "c9ce7425ede1e4160e12494b15f476c7f9b7268f5f804971c5ce197d7dc81810",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/COMPATIBILITY.patch": "4313358e0c9df8705ed194a917883fe077a44bedbca02d1ca5f2e54fc080fe61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/PROVENANCE.json": "29c1af8054c5129b75912fd05b29dc6c9ee038ad6da9a08fe0acd72cbf53fb73",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/RFR_framework.py": "60de85347a49c80202f68e1f5eb8f48624feb5dd1f13fed79653bbc053a888a8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/__init__.py": "5e21022a298927b8bca3e667f366653fb742b7b5eb3a469b451429fa72368684",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/DCN2.cpython-310-x86_64-linux-gnu.so": "93aba2d218912d868c9e9073ec73fff1b4088a845cdd99109aead3f554ecc7ca",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/demo_test.py": "e7d4b037438a576fae21966b3a7139bd018654280d8666a04a2407a8bded4892",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/__init__.py": "0887595259879953855020ece5fb72281eeb5059848664d31e5bf608951d139b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_conv_func.py": "8ca9de19888b2a6ea128f5df67c583c815d700c229b38b979e5b95dbf5112232",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_psroi_pooling_func.py": "525e0b338eb7da4e850073426f43efb5434b89fb3f080598cc5fe32ea316617c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/ewrfdwe.py": "6bc053d035dc4bdf46900845f8c8d5132e3ec2da8b0d3b85030ceb8dc70950e4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/modulated_deform_conv_func.py": "65822c7460288caee1ce7ac889466c31563c1fae534b0f1f4b1f9b9685fad360",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/__init__.py": "c09d9f941c0c08cf5e0b9731c02b3c6f300d7062cfa5345a48d16d2c367c3ed2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_conv.py": "71a8f12c07008356e3c54ac7f1122242fa5ecad5d5214250b587bc0ceff6ff88",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_psroi_pooling.py": "8d8c07fc12b828493475785189897a7ba86d99670b1ee0c351ddeeee6c8b3a72",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/modulated_deform_conv.py": "57b931f2df45c68df3c516f60abbad532d27e959ebbbedb6b52a4df29bd985b9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/setup.py": "eeacd9f5c86d4b950f08e2096c6a5a8afed346207fa0f9a9158b0244c15301d4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_conv_cpu.h": "18a346cb8f7f485efbe527c4ac5d87409e80818720e4fe27956135f310756e9b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_cpu.cpp": "a398e4e4be3150109eafbd52e82893ce1a37fcc404054c1943b4aaf21c3e82f0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.cpp": "88e1b3b000fc26c42773154e6f6dc03ee2c47eff31cc4e409a3eddf574c7481d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.h": "07373eb682e0d9b64faec164f8f79243e4094e77db1e14301dedadc53e7c9616",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_conv_cpu.h": "f52f5cd028581ef734edef2c254c5fde2c21474eb64cb082e3150464564a5bbe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_cpu.cpp": "6e89c316b105a63328fbf703272b04f8911011a0d4ef0f977c5ab9e4cf8a2565",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.cu": "0927a61530a6d0eea6aa8bbb66b9bb96f193a4328fcf05b915f6a667cc2be0c3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.h": "f69d7d5ba3ac48c31ee03e0cd8d9abdb8e45b66af6af059f99f18cda9487bb05",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_im2col_cuda.cuh": "74eb890d36b01740fd04890e5c91960bca8ee99d5059f24e44d383002f91e81f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.cu": "f5316fa8abd4b7e9bd1a0dafd45d5a5d1d1ba1b3470a2dae8cf7b520867a5b3f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.h": "1f9a470d3a73c374d2533b55b35f59573be65ea53d4dcc21e9ca28970d70df0b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.cu": "f796390de3d1d574d2da90cb439d26e5a2c3d2a41f2b39c4424a97e9ae515a97",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.h": "c08a0bbf426e393a9f7a38b037edf354975bfcc988c2c31af0a6a5d55601a42c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_im2col_cuda.cuh": "f5f892cb4abfc43eec960d6d1cf134a5bd2e5d1d14d273bee6bab2a37cec8f06",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_conv.h": "b8e0ee8596f50a3f7ad2e4b73f48709763e3e40f2efbbe4c4badfa7d1f701622",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_psroi_pooling.h": "951384e5ecc6d7f00ca59f8205da3db46ed1e630a12b3e40629836e47ecb2774",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/modulated_deform_conv.h": "9cf510f1e5c0b71da1660bdaedbe7e5c81fd3ab707bc23bf56bddb65aa454ebe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/vision.cpp": "e78cf167a244886b4f41b693b12f9e2dbca4e66ff2dc5bdb3689c429574a4173",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/test.py": "f82e40efffe67e5b4afa1c28fc12ba1d4eab9e93203f6e178659e1e8a4268d91",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/utils.py": "540a4b05409d8fad9221b581fcc5ec67fc7a4aa89baedb5df522e5f176a671a9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/rfr_cell.py": "12bcca91ccca9c252993a68fc60561148bcc6502f0e853a483f0ec4b5053a52d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/smoke_dcn.py": "9cb6da18de331d373368f382ec2738cff559701d0c65b36fcb000235b5cd42b0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/common.py": "85a2fc37be9b63cc08a0f50fb4a1688a83a5743d7a57a384f8175224cb4dd7ec",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/data.py": "f0cd35b67e8b77de104b7a3cf9700bf76e4611b97c2084e87748b7702bcac26d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/runtime.py": "a23ac23fb704010482089f9c092ea41493c47a41d132e8956edd2fbc42f747ce",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/train_modules/temporal_risk.py": "b3e7f813b60ea24873ff77b03d7a2573acbb4ec7a009900048823c4613735a01",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/models/adapters/window_recurrent_adapter.py": "e20f90267e1b7037fd2506f2f8425941f3c9ad7978e2aca828e15d4fd43c5087",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12Current/TRAIN.jsonl": "a928a8f79e5966258309145fa709dab3f85f159bbe46a5bc7e181ef57a11d490",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12History/RUN.json": "24f44624ea1189f24f86f3f083b8607e12475a0a07292956d72ef206b714b0c2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12History/snapshot_2176.pth": "43493fc7889c78b305a6b4f3e460976afcb8b9693f91af781d4a740f0294ead0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/training/V12History/TRAIN.jsonl": "949e557a14d8e3c1a242f8ae35d559b4fa04e3823f97d1c9c7398d7e92b0bedf",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/init/initial_model.pth": "4f3d30191d29f8a118cf8e53657c1dff9c057e96246027327cf715ca6ed95654",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/ALL_VALID_TARGETS.csv": "b804d5127634a46f72c4f6e84506ed51be81536f1f618461479363a11ca6b3a5",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/COMMON_RECOVERED_9.csv": "750e93255b4f5eb7430f17978fe493fdb6a28323200302750901a64a92f6772a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/FIXED_HARD_BACKGROUND.csv": "81fe21580eb9fbc34b03354286ba3a8719051d017637634d3b2997223d0b5a0d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/REGIONS.csv": "372a3d486983330ab105edcb17bed63fc20a85ec97c633b864fc360a7ee25269",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/cohorts/STRICT_COHORTS.csv": "a06ce7c8f3ee20a83860e381cbc7e987970bca2b0bc1596400098c74cf216138",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/COMPLETE.json": "fd3507e68e08be4fbe015fc1409065f451d259631c596c72233220dbdf92c567",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_000.npz": "6cf810bf4ca6138e815d4e883dd0ab3e2c0b2e7c8e433c58fe3ca93546be426f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_000.npz": "9eb6689ce06ce4da9f0149678fda2ff135c579c4bae7a35692139a4d2d077ce8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_000_frame.csv.gz": "ff298957de473639a434bc6c28c2fc695d2b845efe4fff51b77f8a462428b400",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_000_roi.csv.gz": "041f11d9c4ec4f45026157ef547f1a986398dd717ca4fce41131e1c9f2474db7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_000.npz": "a6760b4f16481eab8e885962a8759dee628fd9a33fa083b8a7c46a2dad884f73",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_024.npz": "fbbd58c31d52b292439b6b4ff87b7c44eca2b3e16a56c854455949d48eeb53ee",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_024.npz": "6dae302eb9ab5e766b7c71c55b9f265a5335675576b50b91220d310cfe5afa61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_024_frame.csv.gz": "39c910e3cff4ebaae96cbecdf637043259e57b7beedf1b87bf8095a20f18c1b0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_024_roi.csv.gz": "e069ab22c5e14bd5318d95f92cffef066b8657324eeb710378815de9a1afb7da",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_024.npz": "a5cb2cd800e06baa5c7183176add769f6db39a8971c4f2f20b54c14d7d0d383d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_036.npz": "c5a3c40c9dc0ad27574f4e574cb67d0c48de6273b43eb3cbfb285f97cc4bbfb3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_036.npz": "32cf60d169b3c262f7c6d3fddda71161abb59c2fa9652548f9250c2216a5c068",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_036_frame.csv.gz": "a8157b40e47b4eb8c8c50e7df713f71792ba43957f37bba5dd231fb78dc73e4f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_036_roi.csv.gz": "308f6249e664ebe4e3f34fdb785db50525eb60fcbdc99e34a68d8faaea9dd16d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_036.npz": "0f69e9b79390cbfa247f10a312c638d9242f173db74c4f17cdf2708a39423174",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_060.npz": "9c99dedd85cbc878bbdbe2aeb3ca611fa1395e3ce962274808605796e2b56517",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_060.npz": "6174b1d49b68a178866af233c76594c3d9fadc5d260545feaffd360527c2d847",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_060_frame.csv.gz": "c2147563fda6885a528ec762d4ff381491775f0cf55a9cf70e6b7c40dbe69af7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_060_roi.csv.gz": "a814c18b278ba869ceb53cafe9446f235bdc3340fc87f81ae9e84390f9fedfee",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_060.npz": "98b12b95cff9585a60acce5d39421d016adee1da4644f0ee8be3b47e1ccb39c8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_072.npz": "fcbb4f02e6a5c6805edc3fea795194d54f061382f9f609350adf8959997a6beb",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_072.npz": "ceef193f4499b87f52c3d77b4582c63a34cbf900c6c1fa5ce7c04edc277ccdc5",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_072_frame.csv.gz": "e9aad92f48fce31584d764b5a6632c0f4cf72c05e402f8a1704e8520dd568e39",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_072_roi.csv.gz": "ee20a73d9d6dc86b73478c7b6ab1da16a4bcc8e7a4ad621e6f103ff350784925",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_072.npz": "db2a966f108ea08ee2eac9e3aab3a9eece8ab725dfa34311583f7151a19713a3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_096.npz": "305e0c94af9f6147ef33ae9e26adfc5a18b6a47ae719013a0ded9cc87dc6a44a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_096.npz": "9aaac8e5613442e46874ef416491a99d91bd7133bcf4aa57636d4a1a1f132eb7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_096_frame.csv.gz": "d15031cba2c07af8901acaa7364bcd22f554686eb56c99416b20cefc762c4b43",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_096_roi.csv.gz": "aee09fd72575dee421063e5f827ee79f22a672baac8e84f83bc1581197aa05a4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_096.npz": "f2b933d684f38c4b3db2255c03bb010a4b72b62869e2f439bc5a8ffb7f992412",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_108.npz": "9b06537783bdbdc6eab348486137aa82b2ef043d248cad10bdfb31ec733bdfb2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_108.npz": "9e6819936e4e498950a21eb149c24089fa60f290dc5e9f1f259273d839da56b0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_108_frame.csv.gz": "03a6d4079aca63bb26ae4cf385b651aba321f588435c2995a7ab60123a068646",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_108_roi.csv.gz": "a6587c98a361f58bbee1d54c2b7c99fb6060618f482f064acad3c33cd0c92c33",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_108.npz": "1ed8551e6cf4b5779d9a854103ad88e544cbc7355fe4b3ad9f1c949b8dc023e8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0026_2/windows/window_120.npz": "0c6861608efff9b37ef248f59c561536bb0cc4d7d36a32e76ade14ca9d8c27a8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0026_2/windows/window_120.npz": "5f8a9a307e6f8778b213a1a8df9b440fe187e9e6339fe297a7e0eb5db0cd91af",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_120_frame.csv.gz": "0657396051c043ceb000de8f52b404eef3607c7835e050be5fd5fbf1e7280148",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0026_2/window_120_roi.csv.gz": "781b7d742d7ea739625a23e29a97d9f786d306f227ffd915bbdfffaace62ef9e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0026_2/windows/window_120.npz": "cbd16a3162bade5b191cb06572a1c40f78ed31aa26654c9dfa6a0d63d37a503e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/COMPLETE.json": "ec3f07882680999982fb72437152258c96d0e6f99e77a7e97a2ad0c5247341ba",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_000.npz": "993e326fdeec9434062a7f371b253a5f3db6cb890cce9b651f9e3ef175a3dad1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_000.npz": "6ae85d37ce87968cba3ab042c5e7c864f689835485486316ee23c54058a3c189",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_000_frame.csv.gz": "fc734e3796f490a800ec2083398f7133ab078bc9cb286e00cdbebafdec80a2e7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_000_roi.csv.gz": "bc84c591972cb660406a63f9a9d494ed0f867ea57e2979d7287e80f33a0213df",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_000.npz": "c12def99344f88ac805e3123c60f872e98058fe5bc9bb2e276379c5821b2e8f2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_024.npz": "b1fae7fe0e83a7c656793d2afdeff0f2fb1303f9f9c186fdc575f1ed5d0c1ddb",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_024.npz": "355927746c46cf65e8e8c6dcc7b76481213d5fc7e2ef5c3f8deed71cb92c8d71",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_024_frame.csv.gz": "0e4efd8a9721946f28631b7f937afaf2ff93407b0bd997514812e4ee3dcbc604",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_024_roi.csv.gz": "6b3c26f52f5f61970d7b1c991434671138452d3fc31546d63bae4b970b8aa895",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_024.npz": "2b49ebe34f92d491cd075e4e8ecafe6eed88b88c93c41257921b87020e1ec0ae",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_036.npz": "52f7f9a6f7253facae2e982a7896ad05e214c1825003c33211847d88e4af278a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_036.npz": "739601e609a918b758e7d1e032572b7f6411883d1cfe9e87d471eb8237d9a6bd",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_036_frame.csv.gz": "12acd08ec70e7e49c3d2335c5ae269c6dbee975da92ba951829127cc872f9bc9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_036_roi.csv.gz": "f6afee165f1285735327b8b911dc66dafb56f2558f3047351527b7f19cfd4ea9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_036.npz": "04ad7b5ea25106d5c22ab86b50d20e0552ceb61c57beb0f65c3a3326a7f3dcb8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_060.npz": "b654e27c357dfed2db73a037ece42b2b2a2479f76b0855e8a27dd9c13aaa3edc",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_060.npz": "dc952104e213ed6cce4b78823d16bb5fffb92d617fbd98dd5527f295236dec9b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_060_frame.csv.gz": "35bfa3612495065b5477692b91a3072435259153488127a0a74c98031832c6ea",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_060_roi.csv.gz": "28bacf822ba5cd22441ed0f9e2db3255ba63027c386ebc472ba72834b4c1ce4d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_060.npz": "b5624c19eafd79d2a51d644d6c7c12c7e26d0d98c0a05222369a3bc9cbda48f1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_072.npz": "9548ff759245d82cc6f5bbe260712dd80b492467a08cc33a44251f68f07c38da",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_072.npz": "eb34827eb610dde23814112162d44e29925eb5e96f990e5dbb0ec1acec7f36cf",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_072_frame.csv.gz": "1ec733776defb371de9173cefdce6ecc2322cbc600a1b4faa11866051dcd64b7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_072_roi.csv.gz": "0067204309d58aba82d5cba5cf1abea8d72715dfb9aa94b1f13d92ca97361e47",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_072.npz": "39256ceabe0009ddcf9031a4db2a1859a914365824291d54ff285409fc04296a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_096.npz": "ca2bf37e7bb608eefaa6b9467a3949dd49ce3517df3b5e9e0f4b619e30f6b093",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_096.npz": "23447c2a9f691d04c62ca5ff1689086575bcc7808507f101325546d918798536",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_096_frame.csv.gz": "f8e423d4e09b83d63b6ac90d03552cd95c6e26bd10725607d84a02a1b2ff4944",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_096_roi.csv.gz": "6accf5a2cb849dc93ebd4551b9d7ad9fbbd2944a9a8d0dad1c6d444aed978afa",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_096.npz": "cb179cbac3ff1faa1a1087c9f20c4687c562f8a73fbe224a358fb0fc7ba556cf",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_108.npz": "4048908c1ebf264f3ff196c7cf2235fabf0dd8a7bcc2ca593b34e05b9f128105",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_108.npz": "714cc0fe95fe111d91dd34b04d053134747214167525938eb247bb8cf312d225",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_108_frame.csv.gz": "0b6dcb0a529df974f40bc87536f1cb0b159d486a75078222ebbdf48f40a96ade",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_108_roi.csv.gz": "64d8358532745847773bf317417302f7fc780c6c9b56df35ff848a084b01c4db",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_108.npz": "0003886068419475fe1c5810383af760ae8245c6b26484a99f6bbb07ccac554b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryCurrent/step_2176/DJI_0067_2/windows/window_120.npz": "7d3837214c6e90609d1e01a9ad7a35e82d74b85d794f6921e6ed5fe5ec8d5d4a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/predictions/V12HistoryHistory/step_2176/DJI_0067_2/windows/window_120.npz": "647ffb68f2cbbc5498e83a632ea64be692a2c09bd7521fc94734c43b7f4f6b0e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_120_frame.csv.gz": "8d6e9f33e1878ab9777a9babfe961d9e63dcae442580153b9aa7f16bf0afb8aa",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/traces/V12History/DJI_0067_2/window_120_roi.csv.gz": "301babde4d4dd6a597da58d61f3cccab87bf916f0d67a8a3019e9f2fd87596e8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/predictions/official/DJI_0067_2/windows/window_120.npz": "47c65269cf07957d99b17e88e23470e6d2a9cd2f0672921a4855a5c9f3692c73"
+  },
+  "output_sha256": {
+    "GLOBAL_RETENTION_SUMMARY.csv": "48e26760612844cb906b1c16224920e4dcb2b218a501f77a96d38062773fa7ae",
+    "OBJECT_FRAME_TRACE_MEANS.csv": "b618967fb29b4bced808bf15fbb77b9ba5ed8c111c9f6d72d3db82022b8819fe",
+    "PAIRED_MARGIN_OBJECT_MEANS.csv": "8449538162f3966b3776d13ebfbb9aabbbda1d617afdd48cee8c678989fc0dfb",
+    "PAIRED_MARGIN_SUMMARY.csv": "4858e503980958d118b99d78750c2de1191a083822d41a63e4b807f15869629d",
+    "STAGE_SUMMARY.csv": "2eafdf901c2855865e7c591e6b92bb7f013294d195160f159193ec15eeb1a49c",
+    "TIME_OFFSET_SUMMARY.csv": "e82b539bb604800922898fcdf80b34c0f0a15fff2165613b04062d067cf4ad39",
+    "TRACE_SUMMARY.md": "f95fbac1bffe50d93c1415f38528538059cac5b144f1fc1182ea8ef3a69dd0c3"
+  },
+  "created_unix": 1791979600.89123
+}

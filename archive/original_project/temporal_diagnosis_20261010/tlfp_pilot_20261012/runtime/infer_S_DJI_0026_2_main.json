@@ -1,0 +1,87 @@
+{
+  "status": "COMPLETE",
+  "gpu": 3,
+  "job": "infer_S_DJI_0026_2_main",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "start_unix": 1791805242.197574,
+  "gpu_before": {
+    "0": [
+      4931,
+      0
+    ],
+    "1": [
+      4931,
+      0
+    ],
+    "2": [
+      4911,
+      0
+    ],
+    "3": [
+      0,
+      0
+    ]
+  },
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "tlfp_infer_s_dji_0026_2_main",
+    "--network",
+    "none",
+    "--user",
+    "1004:1004",
+    "--cpus",
+    "4",
+    "--memory",
+    "20g",
+    "--shm-size",
+    "2g",
+    "--gpus",
+    "all",
+    "-e",
+    "CUDA_VISIBLE_DEVICES=3",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "MKL_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "PYTHONUNBUFFERED=1",
+    "-e",
+    "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "-e",
+    "MPLCONFIGDIR=/tmp/mpl",
+    "-e",
+    "PYTHONPATH=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/dependencies/site:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code",
+    "-v",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:ro",
+    "-v",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012:rw",
+    "-w",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012",
+    "--entrypoint",
+    "/opt/conda/bin/python",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/code/infer_tlfp.py",
+    "--condition",
+    "S",
+    "--sequence",
+    "DJI_0026_2"
+  ],
+  "code_sha256": {
+    "infer_tlfp.py": "b04b7c320fbf9126a9e49c84addb19bf23fb1c77e32830ca0f60f1b616ef8bde",
+    "launch.py": "8331f430044d4182fbcb88b5daac497b9f4099040d3828d2e65756fb607cdb50",
+    "preflight.py": "fb6318dc23d425f99ee4f97c0029dc5c9e486d85b887cd5293fc5c8eb04d05a9",
+    "prepare_init.py": "1e924abee0e1689fb1e3e601f260262ecaa0e9531ed1c2f279b0245dda794a12",
+    "temporal_lfp.py": "3bd17eab01c9430b5d149cb66e8ec492ff8468757b7524be956b3570e1e0f7af",
+    "test_temporal_lfp.py": "9a737d7c89b914f6f2341c4350723a83143a6779a46b7edb0dfe9162bd0699f8",
+    "train_tlfp.py": "209a740cf0a814b3f0b2be03e280d933b0ab8eec945905223aefd2d843456a13"
+  },
+  "exit_code": 0,
+  "end_unix": 1791805279.6606178
+}

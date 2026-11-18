@@ -1,0 +1,13 @@
+{
+  "gt_threshold_rows": 14919,
+  "chosen_component_rows": 5760,
+  "strong_flip_strict_half_le16_rows": 97,
+  "all_component_rows_match_saved_gt_choices": true,
+  "all_contingency_totals_reconcile": true,
+  "old_summary_point_disagreement_and_boxcrossings_recomputed_and_equal": true,
+  "all_44_saved_npz_cpu_counted": true,
+  "gpu_used": false,
+  "new_inference": false,
+  "installed_packages": false,
+  "environment": "deeppro-official-eval:20261009, --cpus 4, --memory 4g, CUDA_VISIBLE_DEVICES empty"
+}

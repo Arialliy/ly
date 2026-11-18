@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-11-17T15:44:49Z",
+  "report": "idea-stage/MOTION_TRANSITION_RESEARCH_20261117_234449.md",
+  "sha256": "6b9d566225b5258a67322cc7f3f9d0479c4d2ab026d2ffc96fd26bbef993a9e8",
+  "fixed_copy_identical": true,
+  "local_links": [
+    {
+      "link": "../sources/official_deeppro/networks/layers/TPro.py:20",
+      "exists": true
+    },
+    {
+      "link": "pilot_feasibility_20261117/README.md",
+      "exists": true
+    }
+  ],
+  "external_urls_count": 24,
+  "new_training_or_inference": false,
+  "confirmation_data_read": false,
+  "independent_review_status": "same-family provisional",
+  "version_scope": "New focused report; previous IDEA_REPORT and archived experiments unchanged."
+}

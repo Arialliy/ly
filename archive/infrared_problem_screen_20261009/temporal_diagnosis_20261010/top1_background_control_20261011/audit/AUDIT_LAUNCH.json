@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "docker_image": "deeppro-official-eval:20261009",
+  "docker_image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "cpu_limit": 2,
+  "memory_limit": "8g",
+  "uid_gid": "1004:1004",
+  "entrypoint": "python",
+  "script": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/audit/audit_completed.py",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "mounted": "/home/ly:/home/ly",
+  "completed_utc": "2026-10-11T15:07:45.602136+00:00"
+}

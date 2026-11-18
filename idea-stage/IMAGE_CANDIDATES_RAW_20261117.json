@@ -1,0 +1,102 @@
+{
+  "shard_id": "image_supervision_evaluation",
+  "generator_model": "inherited",
+  "candidates": [
+    {
+      "dedup_key": "image_observation_consistent_center_set",
+      "title": "图像：监督所有与观测相容的目标位置",
+      "method": [
+        "用训练图像局部噪声和点扩散模型，枚举框内仍能解释观测的中心位置，保留位置集合。",
+        "轻量单帧模型最大化该集合内的预测概率总和，避免强迫选择一个热点。",
+        "保持背景监督和模型相同，对照单热点、固定高斯及等面积忽略区。"
+      ],
+      "hypothesis": "弱目标的监督冲突部分来自中心不可辨识，而非仅仅边界模糊。",
+      "pilot": "训练来源固定补丁；三种监督各512步；开发集中心误差、实际匹配、背景成本。",
+      "outcomes": {
+        "positive": "标签位移下稳定并改善原始开发定位",
+        "negative": "集合吸收背景导致虚警上升、定位恶化",
+        "null": "只对人工扰动有效"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2604.05363",
+        "https://arxiv.org/abs/2607.17148"
+      ],
+      "delta": "保留多个相容中心，而非生成单个软标签；需验证不等价于普通soft label",
+      "compute": "1–2 GPU小时，3–5天实现",
+      "risk": "PSF失配；等价于软标签/忽略区",
+      "so_what": "分辨信息不足与过度确定标签的限制"
+    },
+    {
+      "dedup_key": "image_pixel_phase_balanced_detection",
+      "title": "图像：像素采样相位导致的检测盲点",
+      "method": [
+        "真实背景上以像素面积积分渲染同能量点目标，仅改变亚像素相位。",
+        "测量跨相位最差检出率，区分传感采样和网络步幅。",
+        "仅改变训练为相位均衡，对照平移增强及等样本随机相位。"
+      ],
+      "hypothesis": "系统性相位盲点被平均尺度指标掩盖",
+      "pilot": "固定背景/能量/PSF，4×4相位；单帧短训512步，整数移位和真实弱目标对照",
+      "outcomes": {
+        "positive": "相位盲点可重复，改善最差相位并迁移真实数据",
+        "negative": "只来自更多样本或增加虚警",
+        "null": "变化小于成像信息差异"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2505.19148",
+        "https://arxiv.org/abs/2609.18773"
+      ],
+      "delta": "孤立目标检测稳定性，而非多源解混和连续定位",
+      "compute": "1–2 GPU小时，3–4天实现",
+      "risk": "插值伪影、物理不可观测性",
+      "so_what": "将信息保留变为可控可证伪实验"
+    },
+    {
+      "dedup_key": "video_latency_matched_first_discovery",
+      "title": "视频：在相同等待时间下比较首次发现",
+      "method": [
+        "输出标记最后可用帧，构建等待0/5/20帧的合法窗口。",
+        "统计首次标注后首次发现、未发现比例、连续未匹配告警段。",
+        "等等待与计算比较DeepPro和单帧。"
+      ],
+      "hypothesis": "离线优势可能依赖未来观测",
+      "pilot": "两个开发视频/发布权重/原匹配新增固定延迟推理，旧O/S保留",
+      "outcomes": {
+        "positive": "方法差距随等待改变且跨轨迹一致",
+        "negative": "仅窗口边缘分布解释",
+        "null": "排序和发现时间稳定"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/2506.12766",
+        "https://arxiv.org/abs/2602.01843",
+        "https://arxiv.org/abs/2606.27655"
+      ],
+      "delta": "信息到达时间，而非最长漏检本身",
+      "compute": "0.5–1 GPU小时，2–3天实现",
+      "risk": "首次标注不是可见起点、未匹配非已验证虚警、纯评测贡献",
+      "so_what": "衡量视频增益要等多久"
+    },
+    {
+      "dedup_key": "video_source_track_balanced_sampling",
+      "title": "视频泛化：训练单位从窗口改为独立轨迹",
+      "method": [
+        "按来源/轨迹/重复物理帧核算曝光。",
+        "仅改为先均匀来源再轨迹片段，匹配总步数/目标曝光。",
+        "训练来源内留一来源、来源等权评估。"
+      ],
+      "hypothesis": "长轨迹重复曝光主导优化导致帧增益不泛化",
+      "pilot": "两划分原采样/均衡各512步，确认集不动",
+      "outcomes": {
+        "positive": "多个留源改善",
+        "negative": "损害必要时间曝光",
+        "null": "独立来源少/短训无结论"
+      },
+      "prior_work": [
+        "https://arxiv.org/abs/1911.08731"
+      ],
+      "delta": "视频重复曝光统计单位；均衡方法本身不新",
+      "compute": "1–2 GPU小时，2–4天实现",
+      "risk": "来源与难度混杂，8来源区间宽",
+      "so_what": "分辨网络与有效监督多样性瓶颈"
+    }
+  ]
+}

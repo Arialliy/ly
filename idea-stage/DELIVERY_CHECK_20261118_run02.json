@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-18T01:02:29.856643+08:00",
+  "historical_assets_preserved": {
+    "idea-stage/IDEA_REPORT_20261117_231921.md": true,
+    "idea-stage/IDEA_REPORT_20261118_002800.md": true,
+    "idea-stage/MOTION_TRANSITION_RESEARCH_20261117_234449.md": true,
+    "idea-stage/MOTION_TRANSITION_RESEARCH.md": true,
+    "experiments/head_lfp_joint_20261012/runtime/WORKFLOW.json": true,
+    "AGENTS.md": true
+  },
+  "all_preserved": true,
+  "input_count": 9,
+  "unique_count": 9,
+  "all_candidates_reviewed": true,
+  "report_latest_matches": true,
+  "all_six_traces_present": true,
+  "trace_completeness": {
+    "001-sensor": true,
+    "002-video": true,
+    "003-learning": true,
+    "004-jury": true,
+    "005-s3-check": true,
+    "006-l2-check": true
+  },
+  "state_latest_matches": true,
+  "gpu_hours_used": 0,
+  "pilots_executed": false,
+  "active_mainline_committed": false
+}

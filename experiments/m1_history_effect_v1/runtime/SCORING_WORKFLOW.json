@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "pid": 1018257,
+  "start_unix": 1791966954.0047581,
+  "worker_source_sha256": "d29f4745ef1d6f14ec7f87f8daf4e4f531a2e2cf9a67da7eeae9b5b0451ad1ee",
+  "freeze_sha256": "92b105d7de19fa1ffa9d723f91fe4dcab4da20b2f1263baef6a6d8a2c24f563e",
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/launch.py",
+      "--tag",
+      "score_history_current",
+      "evaluate.py",
+      "--condition",
+      "HistoryCurrent"
+    ],
+    [
+      "/usr/bin/python3",
+      "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/launch.py",
+      "--tag",
+      "score_history_off",
+      "evaluate.py",
+      "--condition",
+      "HistoryOff"
+    ],
+    [
+      "/usr/bin/python3",
+      "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/code/launch.py",
+      "--tag",
+      "score_summary",
+      "evaluate.py",
+      "--summary"
+    ]
+  ],
+  "pending": [],
+  "last_check_unix": 1791967114.2313826,
+  "current_job": "score_summary",
+  "end_unix": 1791967170.6743884,
+  "summary": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/evaluation/step_2048/SUMMARY_COMPLETE.json",
+  "summary_sha256": "926b31fe87b9d669555a68dae08a45f7a2c2c32f608e4a5549aab01a54a14464"
+}

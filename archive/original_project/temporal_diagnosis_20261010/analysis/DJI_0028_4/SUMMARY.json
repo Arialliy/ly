@@ -1,0 +1,339 @@
+{
+  "sequence": "DJI_0028_4",
+  "status": "COMPLETE",
+  "candidate_id": "DJI_0028_4__4400005__00285__00444",
+  "selected_track_id": 4400005,
+  "frame_count": 160,
+  "unique_tracks": 9,
+  "source_annotation_count": 1280,
+  "excluded_annotations": 0,
+  "fusion_reconstruction_bitexact": true,
+  "coverage_reconstruction_exact": true,
+  "primary": [
+    {
+      "threshold": 0.1,
+      "gt_frames": 1280,
+      "matched_gt_frames": 363,
+      "point_match_fraction": 0.28359375,
+      "components": 1400,
+      "unmatched_components_not_confirmed_fp": 1037,
+      "ambiguous_gt_frames": 17,
+      "label_overlapping_gt_frames": 355,
+      "label_identical_box_gt_frames": 0,
+      "overlap_pairs": 320,
+      "overlap_match_flips": 11,
+      "unambiguous_overlap_pairs": 209,
+      "unambiguous_overlap_match_flips": 2,
+      "selected_track": {
+        "track_id": 4400005,
+        "threshold": 0.1,
+        "selected_track": true,
+        "gt_frames": 160,
+        "matched_frames": 158,
+        "match_fraction": 0.9875,
+        "longest_unmatched_frames": 1,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 353,
+            "end_source_frame": 353,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 444,
+            "end_source_frame": 444,
+            "frames": 1
+          }
+        ],
+        "ambiguous_gt_frames": 0,
+        "label_overlapping_gt_frames": 0,
+        "label_identical_box_gt_frames": 0,
+        "partly_outside_frames": 0,
+        "normalized_center_error_median": 0.3436050250873903,
+        "boxmax_min": 0.9982615113258362,
+        "boxmax_median": 1.0,
+        "boxmax_max": 1.0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "gt_frames": 1280,
+      "matched_gt_frames": 354,
+      "point_match_fraction": 0.2765625,
+      "components": 1313,
+      "unmatched_components_not_confirmed_fp": 959,
+      "ambiguous_gt_frames": 17,
+      "label_overlapping_gt_frames": 355,
+      "label_identical_box_gt_frames": 0,
+      "overlap_pairs": 320,
+      "overlap_match_flips": 7,
+      "unambiguous_overlap_pairs": 207,
+      "unambiguous_overlap_match_flips": 2,
+      "selected_track": {
+        "track_id": 4400005,
+        "threshold": 0.5,
+        "selected_track": true,
+        "gt_frames": 160,
+        "matched_frames": 158,
+        "match_fraction": 0.9875,
+        "longest_unmatched_frames": 1,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 353,
+            "end_source_frame": 353,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 444,
+            "end_source_frame": 444,
+            "frames": 1
+          }
+        ],
+        "ambiguous_gt_frames": 0,
+        "label_overlapping_gt_frames": 0,
+        "label_identical_box_gt_frames": 0,
+        "partly_outside_frames": 0,
+        "normalized_center_error_median": 0.3436050250873903,
+        "boxmax_min": 0.9982615113258362,
+        "boxmax_median": 1.0,
+        "boxmax_max": 1.0
+      }
+    },
+    {
+      "threshold": 0.9,
+      "gt_frames": 1280,
+      "matched_gt_frames": 349,
+      "point_match_fraction": 0.27265625,
+      "components": 1251,
+      "unmatched_components_not_confirmed_fp": 902,
+      "ambiguous_gt_frames": 12,
+      "label_overlapping_gt_frames": 355,
+      "label_identical_box_gt_frames": 0,
+      "overlap_pairs": 320,
+      "overlap_match_flips": 5,
+      "unambiguous_overlap_pairs": 208,
+      "unambiguous_overlap_match_flips": 1,
+      "selected_track": {
+        "track_id": 4400005,
+        "threshold": 0.9,
+        "selected_track": true,
+        "gt_frames": 160,
+        "matched_frames": 158,
+        "match_fraction": 0.9875,
+        "longest_unmatched_frames": 1,
+        "unmatched_runs": [
+          {
+            "start_source_frame": 353,
+            "end_source_frame": 353,
+            "frames": 1
+          },
+          {
+            "start_source_frame": 444,
+            "end_source_frame": 444,
+            "frames": 1
+          }
+        ],
+        "ambiguous_gt_frames": 0,
+        "label_overlapping_gt_frames": 0,
+        "label_identical_box_gt_frames": 0,
+        "partly_outside_frames": 0,
+        "normalized_center_error_median": 0.3436050250873903,
+        "boxmax_min": 0.9982615113258362,
+        "boxmax_median": 1.0,
+        "boxmax_max": 1.0
+      }
+    }
+  ],
+  "prediction_metadata": {
+    "model_type": "DeepPro-Plus",
+    "model_file": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+    "wrapper_sha256": "7527aa474ec4e0fd4e85fd493dee871aa795238ff4ad703cde9956f113824625",
+    "window_output_dir": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows",
+    "checkpoint": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+    "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+    "input": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/raw_frames.npy",
+    "input_shape": [
+      160,
+      512,
+      640
+    ],
+    "normalization": "RGB-T",
+    "mean": 85.0799,
+    "std": 47.4845,
+    "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "torch_version": "2.7.0+cu128",
+    "device": "cuda:0",
+    "elapsed_inference_seconds": 17.35014681100438,
+    "window_intervals": "zero-based, end-exclusive",
+    "overlap_fusion": "probability_max",
+    "seed": 46,
+    "seed_note": "Matches declared seed_everything default 46 in official train.py:33; original entrypoint does not call it. Explicitly activated for local inference, not a claim about checkpoint training seed.",
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "spatial_tile_core": 128,
+    "spatial_halo": 16,
+    "tiling_check": [
+      {
+        "crop_yxhw": [
+          0,
+          0,
+          128,
+          160
+        ],
+        "shape": [
+          1,
+          1,
+          40,
+          128,
+          160
+        ],
+        "max_absolute_logit_error": 3.4332275390625e-05,
+        "max_absolute_probability_error": 1.0550138540565968e-10,
+        "threshold_disagreements": {
+          "0.1": 0,
+          "0.5": 0,
+          "0.9": 0
+        },
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "status": "passed"
+      },
+      {
+        "crop_yxhw": [
+          192,
+          240,
+          128,
+          160
+        ],
+        "shape": [
+          1,
+          1,
+          40,
+          128,
+          160
+        ],
+        "max_absolute_logit_error": 1.52587890625e-05,
+        "max_absolute_probability_error": 6.984919309616089e-09,
+        "threshold_disagreements": {
+          "0.1": 0,
+          "0.5": 0,
+          "0.9": 0
+        },
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "status": "passed"
+      },
+      {
+        "crop_yxhw": [
+          368,
+          133,
+          128,
+          160
+        ],
+        "shape": [
+          1,
+          1,
+          40,
+          128,
+          160
+        ],
+        "max_absolute_logit_error": 5.7220458984375e-05,
+        "max_absolute_probability_error": 8.285045623779297e-06,
+        "threshold_disagreements": {
+          "0.1": 0,
+          "0.5": 0,
+          "0.9": 0
+        },
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "status": "passed"
+      },
+      {
+        "crop_yxhw": [
+          368,
+          346,
+          128,
+          160
+        ],
+        "shape": [
+          1,
+          1,
+          40,
+          128,
+          160
+        ],
+        "max_absolute_logit_error": 1.52587890625e-05,
+        "max_absolute_probability_error": 3.41970007866621e-10,
+        "threshold_disagreements": {
+          "0.1": 0,
+          "0.5": 0,
+          "0.9": 0
+        },
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "status": "passed"
+      },
+      {
+        "crop_yxhw": [
+          384,
+          480,
+          128,
+          160
+        ],
+        "shape": [
+          1,
+          1,
+          40,
+          128,
+          160
+        ],
+        "max_absolute_logit_error": 1.9073486328125e-05,
+        "max_absolute_probability_error": 3.41970007866621e-10,
+        "threshold_disagreements": {
+          "0.1": 0,
+          "0.5": 0,
+          "0.9": 0
+        },
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "status": "passed"
+      }
+    ],
+    "temporal_causality": "acausal within each 40-frame clip",
+    "normalization_clip": null,
+    "checkpoint_epoch": 21
+  },
+  "input_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/predictions.npz": "ed55af64eb44bcee080cbfc4a3ffe2f3f1be1f38a87978d13a7f144964ba3a03",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/additional_clips/DJI_0028_4__4400005__00285__00444/annotations.json": "b72c46c27c075510374b081fdd990c3c7136517f39b207c65159358721978c5e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/DIAGNOSTIC_PROTOCOL.json": "5b305b6485fa4bdfc3cc18ef3c16b4b3783d451c74aecb293bf0cfc08496743a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows/window_00_0000_0040.npz": "9395e92eca511ca1886bfaeb39fa470ddf5a37a8e2268c5d4220e8dd15e7a2aa",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows/window_01_0036_0076.npz": "612072e142c580cb040b3b7c096d6eedc1d2d44535c923ebfc78d8c34bcd1287",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows/window_02_0072_0112.npz": "0017d960727d04f7ae45e51209e4a250e6fc46aeb2e950a99ab6132b93520cdd",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows/window_03_0108_0148.npz": "49ab68d078b1fd69b463b77c156c216123daabc427ae4c1ae2dcfb74b096a18f",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/runs/DJI_0028_4/windows/window_04_0120_0160.npz": "81cbcae97f9d9c0267fe03d2074a030de81f4769a64b0fa2a51c3d87ee98de9b"
+  },
+  "analysis_code_sha256": "62752d39eb1004545a881f46a736aee7e1b1a120a79f3312137019874c3be062",
+  "runtime": {
+    "python": "3.11.12 | packaged by conda-forge | (main, Apr 10 2025, 22:23:25) [GCC 13.3.0]",
+    "numpy": "2.2.5",
+    "scipy": "1.16.2",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.35"
+  },
+  "matching_detail": "Sorted GT(track_id,annotation_id); augmenting-path maximum cardinality; each adjacency ordered by normalized squared distance, descending score, component id. Deterministic but not global minimum-distance assignment.",
+  "threshold_comparison": ">=",
+  "coordinate_convention": "pixel center x+0.5,y+0.5 in original half-open xywh; all slices clipped to frame",
+  "limitations": [
+    "bbox labels notpixelmasks",
+    "annotationpresence notverifiedvisibility",
+    "exactseqexclusion notsceneindependence",
+    "notofficialRGBTbenchmark",
+    "clip boundaries mayomitreal surroundingcontext; originalt40windowsusesthechosenclip",
+    "unmatchedcomponents mayincludeunannotatedobjects",
+    "no temporalfailurepreassumed",
+    "This is bbox point-response diagnostic, not official Pd/Fa/IoU/AP.",
+    "Window-context disagreement does not isolate slot, context content, padding or motion effects.",
+    "Ground-truth identity conclusions exclude ambiguous match graphs; low thresholds can merge components.",
+    "Four annotation-prescreened development clips are not independent random samples or a new benchmark."
+  ]
+}

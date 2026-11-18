@@ -1,0 +1,13 @@
+{
+  "strict_model_restore": true,
+  "optimizer_restore": true,
+  "parameter_tensors": 64,
+  "optimizer_state_entries": 64,
+  "optimizer_step_values": [
+    5192
+  ],
+  "epoch": 21,
+  "restored_lr": 0.00049,
+  "optimizer_steps_executed": 0,
+  "moment_shapes_and_finiteness_pass": true
+}

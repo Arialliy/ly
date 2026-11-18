@@ -1,0 +1,231 @@
+{
+  "status": "complete",
+  "variant": "single_dynamic",
+  "model_config": {
+    "version": 1,
+    "channels": 32,
+    "rank": 4,
+    "length": 40,
+    "new_module_seed": 20261011,
+    "reference_offset": 40,
+    "reference_directions": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "stem_spatial_radius": 9,
+    "stem_temporal_radius": 8,
+    "raw_center_exclusion_radius": 23,
+    "recommended_inference_halo": 64,
+    "reference_temporal_kernel": 3,
+    "association": "shared_LayerNorm32_linear_QK_tanh_QKt_over_T_sqrt_r",
+    "value": "(F-stopgrad(B))/sqrt(T)",
+    "gamma_initial": 0.0,
+    "reference_lambda": 1.0,
+    "reference_reduction": "channel_pixel_mean_per_window_then_equal_window_mean",
+    "zero_context_correction": "zero"
+  },
+  "steps": 512,
+  "seed": 46,
+  "new_module_seed": 20261011,
+  "lr": 0.0001,
+  "optimizer": "fresh Adam",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.0001,
+  "reference_lambda": 1.0,
+  "effective_extra_lambda": 0.0,
+  "positive_coefficient": 1.0,
+  "negative_coefficient": 1.0,
+  "detection_background_top_fraction": 0.01,
+  "frozen_plan_config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "original_train_source_sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "original_loss_source_sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+  "train_source_sha256": "fca798c4027c3da2921b75ebef0a920f02b1a2c34a5d5433069ebcbc5d5d628c",
+  "bc_tpro_source_sha256": "5603fe22da26e80534cb8f4a3c11676a06b906460dc2ffec66a8542589f83972",
+  "new_module_initial_state_sha256": "a4fc30c81589745f12e49bd4b4120353410577539db3c59c86132777e7df4c9a",
+  "initialization_preserves_original_state": true,
+  "new_initialization_restores_rng": true,
+  "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "parameter_names_by_gradient_group": {
+    "original": [
+      "TPro.QK_heads.0.bias",
+      "TPro.QK_heads.0.weight",
+      "TPro.QK_heads.1.bias",
+      "TPro.QK_heads.1.weight",
+      "TPro.QK_heads.2.bias",
+      "TPro.QK_heads.2.weight",
+      "TPro.QK_heads.3.bias",
+      "TPro.QK_heads.3.weight",
+      "TPro.QK_heads.4.bias",
+      "TPro.QK_heads.4.weight",
+      "TPro.QK_heads.5.bias",
+      "TPro.QK_heads.5.weight",
+      "TPro.QK_heads.6.bias",
+      "TPro.QK_heads.6.weight",
+      "TPro.QK_heads.7.bias",
+      "TPro.QK_heads.7.weight",
+      "TPro.conv.0.bias",
+      "TPro.conv.0.weight",
+      "TPro.conv.1.bias",
+      "TPro.conv.1.weight",
+      "TPro.norm1.bias",
+      "TPro.norm1.weight",
+      "conv_in.0.bias",
+      "conv_in.0.weight",
+      "conv_in.1.bias",
+      "conv_in.1.weight",
+      "conv_out1.0.bias",
+      "conv_out1.0.weight",
+      "conv_out1.1.bias",
+      "conv_out1.1.weight",
+      "conv_out2.bias",
+      "conv_out2.weight",
+      "layer1.0.bn1.bias",
+      "layer1.0.bn1.weight",
+      "layer1.0.bn2.bias",
+      "layer1.0.bn2.weight",
+      "layer1.0.bn3.bias",
+      "layer1.0.bn3.weight",
+      "layer1.0.conv1.bias",
+      "layer1.0.conv1.weight",
+      "layer1.0.conv2.bias",
+      "layer1.0.conv2.weight",
+      "layer1.0.conv3.bias",
+      "layer1.0.conv3.weight",
+      "layer1.0.shortcut.0.bias",
+      "layer1.0.shortcut.0.weight",
+      "layer1.0.shortcut.1.bias",
+      "layer1.0.shortcut.1.weight",
+      "layer1.1.bn1.bias",
+      "layer1.1.bn1.weight",
+      "layer1.1.bn2.bias",
+      "layer1.1.bn2.weight",
+      "layer1.1.bn3.bias",
+      "layer1.1.bn3.weight",
+      "layer1.1.conv1.bias",
+      "layer1.1.conv1.weight",
+      "layer1.1.conv2.bias",
+      "layer1.1.conv2.weight",
+      "layer1.1.conv3.bias",
+      "layer1.1.conv3.weight",
+      "layer1.1.shortcut.0.bias",
+      "layer1.1.shortcut.0.weight",
+      "layer1.1.shortcut.1.bias",
+      "layer1.1.shortcut.1.weight"
+    ],
+    "reference": [
+      "TPro.reference.0.bias",
+      "TPro.reference.0.weight",
+      "TPro.reference.2.bias",
+      "TPro.reference.2.weight"
+    ],
+    "association": [
+      "TPro.association_norm.bias",
+      "TPro.association_norm.weight",
+      "TPro.key.weight",
+      "TPro.query.weight"
+    ],
+    "gamma": [
+      "TPro.gamma"
+    ]
+  },
+  "parameter_counts_by_group": {
+    "original": 70913,
+    "reference": 1184,
+    "association": 320,
+    "gamma": 1
+  },
+  "torch_version": "2.7.0+cu128",
+  "precision": "FP32_no_AMP_no_TF32",
+  "device": "cuda:0",
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+  "training_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "protocol": "weak_box_MIL_not_official_SoftIoU",
+  "checkpoint_selection": "fixed final update512; no best checkpoint",
+  "reference_mask": "original all-box-expanded2 core9 mask eroded by temporal8 spatial9; valid ring count>0",
+  "final_step": 512,
+  "duration_seconds": 238.74096336402,
+  "counts": {
+    "reference_empty_windows": 0,
+    "extra_objects_logged": 1786
+  },
+  "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "final_checkpoint_sha256": "a8c12b3e52bb0e564f7b20406ba39f10d2da89eea1657b9ad3d74876be015555",
+  "train_log_sha256": "a648a2be289d03e392ac7d5c7cbeb5d218aeb2cae47248ee759b4582d8161191",
+  "cumulative_input_sha256": "9522ab5edb31968d008ea822c9971d02c685f5a5d99437f528e98ccc4e93356b",
+  "gamma_final": -0.003635358763858676,
+  "max_cuda_memory_allocated_bytes": 9133819904,
+  "max_cuda_memory_reserved_bytes": 11796480000
+}

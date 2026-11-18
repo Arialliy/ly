@@ -1,0 +1,8 @@
+{
+  "url": "https://raw.githubusercontent.com/TinaLRJ/DeepPro/main/log/sem_seg/NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro_DataL40/checkpoints/best_model.pth",
+  "status": 200,
+  "bytes": 811632,
+  "magic_hex": "504b0304",
+  "sha256": "4a4d5da12a337553972d507b2320ec26da0116d2018e2f30c7b540bbd7001546",
+  "loaded_or_executed": false
+}

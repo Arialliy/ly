@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-12",
+  "request": "Compare existing top1 and approximate-supervision adaptation settings, with no new training.",
+  "research_objective": "解决真实场景中可重复的持续漏检，同时约束背景代价和原有检出的退化。",
+  "conditions": [
+    "lambda0_top1",
+    "gaussian_softiou_approx"
+  ],
+  "allowed_work": [
+    "existing source/config/log/checkpoint inspection",
+    "CPU checkpoint parameter differences without model forward",
+    "existing result-table summarization",
+    "freeze the research objective and one evidence-based follow-up proposal if supported"
+  ],
+  "excluded_work": [
+    "new training",
+    "new prediction inference",
+    "learning-rate/loss/label parameter search",
+    "BC-TPro rerun",
+    "retrospective replacement of the frozen step512 verdict"
+  ],
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-11T17:18:12.666890+00:00"
+}

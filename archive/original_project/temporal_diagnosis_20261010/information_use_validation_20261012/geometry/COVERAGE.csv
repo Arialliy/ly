@@ -1,0 +1,11 @@
+sequence,split,strict_target_frames,legal_reference_edges,unique_nonoverlap_reference_edges,P1_nonempty_edges,P2_distance_size_matched_edges,paired_common_support_edges,P1_target_frames,P2_target_frames,paired_target_frames,paired_tracks
+DJI_0030_9,train,2240,4452,4444,4444,0,0,2238,0,0,0
+DJI_0043_2,train,10342,20562,19754,19743,32,32,10198,30,30,13
+DJI_0057_1,train,320,636,636,636,5,5,320,5,5,1
+DJI_0113_3,train,160,318,318,318,0,0,160,0,0,0
+DJI_0115_2,train,471,937,934,934,0,0,470,0,0,0
+DJI_0217_2,train,376,748,748,748,8,8,376,8,8,1
+DJI_0309_1,train,160,318,318,300,0,0,155,0,0,0
+DJI_0323_2,train,800,1590,1590,1590,0,0,800,0,0,0
+DJI_0026_2,dev,606,1206,1173,1135,1,1,580,1,1,1
+DJI_0067_2,dev,4594,9129,7714,7662,18,18,4332,17,17,8

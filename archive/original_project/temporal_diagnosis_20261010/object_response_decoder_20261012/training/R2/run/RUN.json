@@ -1,0 +1,117 @@
+{
+  "status": "complete",
+  "condition": "R2",
+  "variant": "R2",
+  "steps": 2048,
+  "seed": 46,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "Adam",
+  "temporal_enabled": true,
+  "assignment": "track",
+  "snapshots": [
+    {
+      "step": 0,
+      "path": "snapshot_0000.pth",
+      "sha256": "6863163e7547ce3167e3520f233621849e060ef3afbb9031a38280ed9ea06098",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07"
+    },
+    {
+      "step": 512,
+      "path": "snapshot_0512.pth",
+      "sha256": "ae10f319e163712e14f99aca520b625a227355bba019e23602114cf7b047ede2",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07"
+    },
+    {
+      "step": 1024,
+      "path": "snapshot_1024.pth",
+      "sha256": "90867b86a554ccf9e796a7275c3c917d94c18a8f545ef28914f36ab4857c9e7f",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07"
+    },
+    {
+      "step": 2048,
+      "path": "snapshot_2048.pth",
+      "sha256": "0285810936a941ce2becab2ac62abb2ac7c103e8076c7a2e6871c9eb23186df5",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07"
+    }
+  ],
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "source_plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "plan_sha256": "28f0014f40f2b7ea0cf677637a33eabc97fb16cdc90939feff41bd476207b3ec",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "training_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "original_initial_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "initial_model_state_sha256": "eb09a29234d9e54300d2a52845f93ff0880d8ba048e2d9c511856ada7bda30b1",
+  "new_parameters": 31194,
+  "parameter_count": 102107,
+  "model_config": {
+    "original_frozen": true,
+    "original_bn": "eval",
+    "d_model": 32,
+    "num_queries": 100,
+    "anchor_grid": [
+      10,
+      10
+    ],
+    "anchor_coordinates": "full-image normalized pixel locations",
+    "num_heads": 4,
+    "decoder_layers": 2,
+    "ffn_hidden": 64,
+    "dropout": 0.0,
+    "token_pool": "average",
+    "token_stride": 4,
+    "token_pool_ceil_mode": true,
+    "token_pool_count_include_pad": false,
+    "position_encoding": "sin/cos of original-image normalized xy, Fourier frequencies 2**arange(8)",
+    "time_encoding": "standard sinusoidal positions within current legal window",
+    "raw_encoder": "Conv2d(1,8,3,p1),ReLU,Conv2d(8,8,3,p1),ReLU",
+    "projection": "Conv2d(16,32,1)",
+    "spatial_frame_chunk": 4,
+    "readout": "max_query(sigmoid(presence) * sigmoid(dynamic_mask))",
+    "mask_logit": "dynamic_weight dot E + dynamic_bias",
+    "normalization": "pre-LayerNorm residual attention and FFN",
+    "temporal_disabled": "bypass temporal attention and its pre-LayerNorm only"
+  },
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/common.py": "86b65a2e1adde3637505404a84117802b8b8a93d7f3c4fe7d51d6fb9b99a3b5e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/model.py": "f46f5be30ecf977cfbb49003bc40f27cf0b1b84ca0df9e61e5bc62ef4d759256",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/targets.py": "79013f3650ae0ca18b447fc5fa4631e073ee81c2ee0ce84600d88879af23f06e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/losses.py": "0fdfbcca909cedd2616c6669167a20faec2f84c91a60846c99dbb58a406fe642",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/train.py": "d082063ccb58ab8a7ca787a8bb2fc36c7548b182fa7ecd7ac1ddfc5ac1d7aa3d"
+  },
+  "model_labels_access": false,
+  "torch_version": "2.7.0+cu128",
+  "precision": "FP32_no_AMP_no_TF32",
+  "snapshots_selection": "fixed2048only",
+  "loss_weights": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "microbatches": 4,
+  "repeat_source_plan": 4,
+  "bn_policy": "entire_original_frozen_eval",
+  "final_step": 2048,
+  "duration_seconds": 957.7628184790374,
+  "original_final_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "frozen_original_unchanged": true,
+  "final_checkpoint_sha256": "0285810936a941ce2becab2ac62abb2ac7c103e8076c7a2e6871c9eb23186df5",
+  "final_model_state_sha256": "d2b1a4becec8160518cfbe3543b4075dc86fd7caeba4e865a45442edc727f751",
+  "cumulative_input_sha256": "ec4f79859f46208f884a14ecfa2886fba9508a9042223d88bcd2d332bc4d436d",
+  "cumulative_label_sha256": "5a6e2d6ff45d5a6029b3062a50d361bb61f5383a1b77915ef68ebd6ed70f91c0",
+  "train_log_sha256": "2f4a3f7a2d56ff1c7109a2b019853873a35a92e84abb39f13dcf3752aaec5a8a",
+  "max_cuda_memory_allocated_bytes": 2650363904,
+  "max_cuda_memory_reserved_bytes": 4213178368
+}

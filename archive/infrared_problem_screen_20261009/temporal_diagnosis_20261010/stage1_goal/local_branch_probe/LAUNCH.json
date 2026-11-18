@@ -1,0 +1,11 @@
+{
+  "actual_command": "STAGE1_GPU=0 bash /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/runtime/run_isolated_python.sh /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/local_branch_probe/run_local_probe.py --output-dir /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/local_branch_probe/full",
+  "stdout_stderr": "RUN.log",
+  "exec_session_id": 99469,
+  "observed_exit_code": 0,
+  "gpu_host_index": 0,
+  "image": "deeppro-official-eval:20261009",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "old_official_directory_mount": "read-only",
+  "optimizer_steps": 0
+}

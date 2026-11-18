@@ -1,0 +1,477 @@
+{
+  "parameter_count": 71013,
+  "new_parameter_count": 100,
+  "parameter_tensors": 67,
+  "changed_parameter_tensors": 3,
+  "per_parameter": {
+    "original.conv_in.0.weight": {
+      "numel": 1960,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_in.0.bias": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_in.1.weight": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_in.1.bias": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv1.weight": {
+      "numel": 3456,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv1.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn1.weight": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn1.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv2.weight": {
+      "numel": 6912,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv2.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn2.weight": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn2.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv3.weight": {
+      "numel": 256,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.conv3.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn3.weight": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.bn3.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.shortcut.0.weight": {
+      "numel": 128,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.shortcut.0.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.shortcut.1.weight": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.0.shortcut.1.bias": {
+      "numel": 16,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv1.weight": {
+      "numel": 13824,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv1.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn1.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn1.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv2.weight": {
+      "numel": 27648,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv2.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn2.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn2.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv3.weight": {
+      "numel": 1024,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.conv3.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn3.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.bn3.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.shortcut.0.weight": {
+      "numel": 512,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.shortcut.0.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.shortcut.1.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.layer1.1.shortcut.1.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.0.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.0.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.1.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.1.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.2.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.2.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.3.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.3.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.4.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.4.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.5.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.5.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.6.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.6.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.7.weight": {
+      "numel": 1600,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.QK_heads.7.bias": {
+      "numel": 40,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.norm1.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.norm1.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.conv.0.weight": {
+      "numel": 1024,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.conv.0.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.conv.1.weight": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.TPro.conv.1.bias": {
+      "numel": 32,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out1.0.weight": {
+      "numel": 256,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out1.0.bias": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out1.1.weight": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out1.1.bias": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out2.weight": {
+      "numel": 8,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "original.conv_out2.bias": {
+      "numel": 1,
+      "trainable": false,
+      "changed_elements": 0,
+      "max_absolute_difference": 0.0,
+      "l2_difference": 0.0
+    },
+    "feature_refiner.scale": {
+      "numel": 1,
+      "trainable": true,
+      "changed_elements": 1,
+      "max_absolute_difference": 0.005264856852591038,
+      "l2_difference": 0.005264856852591038
+    },
+    "feature_refiner.operator.sigma": {
+      "numel": 1,
+      "trainable": true,
+      "changed_elements": 1,
+      "max_absolute_difference": 0.050316691398620605,
+      "l2_difference": 0.050316691398620605
+    },
+    "feature_refiner.operator.attention.weight": {
+      "numel": 98,
+      "trainable": true,
+      "changed_elements": 98,
+      "max_absolute_difference": 0.007761911489069462,
+      "l2_difference": 0.02477723793979619
+    }
+  }
+}

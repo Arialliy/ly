@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "sequence": "DJI_0026_2",
+      "physical_gpu": 2,
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "parameters": 95576030,
+      "forward_calls": 160,
+      "temporal_encoder_calls": 320,
+      "forward_seconds": 11.64044142398052,
+      "forward_ms_per_frame": 72.75275889987824,
+      "inference_loop_seconds": 37.87764966202667,
+      "allocated_peak_GiB": 3.0780086517333984,
+      "reserved_peak_GiB": 3.263671875,
+      "exact_half_main": 567,
+      "exact_half_auxiliary": 182,
+      "receipt_sha256": "fabfe46e8729d87399437b43aa8d34cda56741a1775bacdf73df96b37e08cf6f"
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "physical_gpu": 3,
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "parameters": 95576030,
+      "forward_calls": 160,
+      "temporal_encoder_calls": 320,
+      "forward_seconds": 11.543564490100835,
+      "forward_ms_per_frame": 72.14727806313022,
+      "inference_loop_seconds": 39.57723354204791,
+      "allocated_peak_GiB": 3.0780086517333984,
+      "reserved_peak_GiB": 3.263671875,
+      "exact_half_main": 709,
+      "exact_half_auxiliary": 832,
+      "receipt_sha256": "ecc0a28c15a383deaab0a20be2d80903efebf3b61f3a78ff59025b8d11ff15ed"
+    }
+  ],
+  "total_development_forwards": 320,
+  "total_native_forwards": 100,
+  "total_training_steps": 0,
+  "extra_forward_for_auxiliary": 0,
+  "source_temporal_encoder_calls_per_infer": 2,
+  "forward_seconds_total": 23.184005914081354,
+  "loop_seconds_sum": 77.45488320407458,
+  "timing_scope": "synchronized infer method only for forward timer; loop includes dataset/input transfer/output restoration & recording; excludes model loading, final NPZ compression, CPU scoring; two development jobs run concurrently",
+  "baseline_parameters": 70913,
+  "baseline_parameter_source": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/TRAINING_AUDIT.json",
+  "baseline_timing_note": "Existing release cache receipts timed all11 candidate windows (not5 only), tiling and output work. O/S-only comparable timing not available; no new baseline timing run or speedup claim.",
+  "environment": "immutable deeppro-official-eval:20261009 Torch2.7+cu128 RTX5090, FP32 seed46, noTF32/AMP",
+  "native_scope": "100-frame running check only, not full reproduction"
+}

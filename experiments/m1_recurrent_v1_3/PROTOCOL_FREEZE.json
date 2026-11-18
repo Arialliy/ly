@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN",
+  "frozen_at_unix": 1791983183.9975083,
+  "conditions": [
+    "BankCurrent",
+    "BankHistory"
+  ],
+  "start_step": 2048,
+  "steps": 512,
+  "final_step": 2560,
+  "snapshots": [
+    2048,
+    2176,
+    2304,
+    2560
+  ],
+  "checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "protocol_sha256": "a0c8a326f24bd0ca0667b05e94f417b69d36f9350314e0b8c2b89ba9129f30ec",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/evaluate.py": "d2e5e2818092c76738d846016eea4bc52980ed34183e9623818c939031eaaae2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/infer.py": "1236470fa418833d13984aaf4ca151700da955e76f3a229ee5015eea86e7aedf",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/launch.py": "f5846be1e04834f0551c737c511e7628711e7cc79a2751c538f59a3a9116b768",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/reference_tests.py": "93df0917d4b1bb7a0f673b526bc2df6f1f9c8c83136de6acb6c5aa789968f029",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/revision.py": "f20b8343843f1f283b00eed7cc2a2350096915a5ec3894a66833d0fc7cb5418f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/revision_smoke.py": "be10eb13d46057a54a02f5bf4d37bd64cf9bdfe4a5540571dc1ed872af42eb68",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/runtime.py": "0c3bfa739433b8ef042d79048871057b01194de1bc9027b0c28e259133ad6f20",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/trace.py": "79432912abbbab06ca39f79f8c904b6f9f4b4d3af0c6e2aaecb70e7a183a05ef",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/train.py": "88eb252e4f26a49580c7bf459499fa7baa72323e9310dc84f8043d97fb7bc581",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/code/train_diagnostics.py": "269d1df661cc6d5d723a1f58ddff5f1b112dffd8de714e374457ce0e2c3328c1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/reference/M1_v13_evidence_bank_reference/evidence_bank.py": "035925964a651df6e02a9d48a3748f8e774aa9522a461f69762ca75340de443c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/reference/M1_v13_evidence_bank_reference/test_evidence_bank.py": "2a65b0bbbc685b26322ba8b2f6b7873d5af194f7563e19f3ea4bd585cecaa23c"
+  },
+  "checks": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/checks/REFERENCE_TESTS.json": "08bf906eac2715f505a83e9c8f7779ec164e723bb3faf8ccd4d763a7707f4ab4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/checks/GPU_SEMANTICS.json": "f5d9455222883c1566064629afa9602043e1c6bf2f819ac62fc6fc000751ea0e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_3/checks/GPU_RESOURCES_V2.json": "3df3a6da6e709e63b86eceab3a9b2a116122e31a3028b38be4278478419ec42a"
+  },
+  "reference_zip_sha256": "cf401479bc7647855b88ddc10c87da8d295d41010636e37955399b05df895dac",
+  "worker_sha256": "da5208fe2245f07dc97607097c1ff2fdae41f5f6853adcc8172b7b5522a86f9d",
+  "scope": "M1 original-source feature bank FIFO4; 150 pairs; no new parameters; original53 Adam/RNG; frozen256 exposure twice; no M2"
+}

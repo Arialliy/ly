@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-11T11:21:48.120087+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--entrypoint",
+    "/opt/conda/bin/python3",
+    "--user",
+    "1004:1004",
+    "--cpus",
+    "2",
+    "--memory",
+    "8g",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-v",
+    "/home/ly:/home/ly",
+    "deeppro-official-eval:20261009",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/problem_validity_20261011/runtime/window_scoring/verify.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"sequences\": 2, \"windows\": 22, \"scoring_script_sha256\": \"a94b312d59abe746fa4b193ea31da1f76ef62ef3e1f27bd32e027085d93f96c8\"}\n",
+  "stderr": ""
+}

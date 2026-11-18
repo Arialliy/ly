@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "created_unix": 1791832246.361892,
+  "protocol_sha256": "ba1b345cc4d1dcd14acbad74e5fbf9db719cb2b6658c7618caca6d98bd63428e",
+  "validator_sha256": "54b16e676566998c5679be88d429bdb2d211d6a0ac1c96599e7dcafbc149c752",
+  "runs": {
+    "D": {
+      "initial_model_exact": true,
+      "initial_complete_adam_exact": true,
+      "optimizer_parameter_states": 28,
+      "optimizer_initial_step": 2048,
+      "optimizer_final_step": 2304,
+      "paired_training_updates": 256,
+      "all_exposures_equal_archived_F": true,
+      "frozen_all_saved_states": true,
+      "prediction_receipt_sha256": {
+        "DJI_0026_2": "b50cbfea4f1d606f8a5420b26938fb2b89c9d78c44a7df84fed0805151e15f94",
+        "DJI_0067_2": "a08f7f1a0546c02c49f3cae483b73d7dd52ae4352169ca346f9e19f2b06358c7"
+      },
+      "final_checkpoint_sha256": "bef25ea1fdcc64405b15d875c3826318083d1b6679bd82dd355a149945414187"
+    },
+    "N": {
+      "initial_model_exact": true,
+      "initial_complete_adam_exact": true,
+      "optimizer_parameter_states": 28,
+      "optimizer_initial_step": 2048,
+      "optimizer_final_step": 2304,
+      "paired_training_updates": 256,
+      "all_exposures_equal_archived_F": true,
+      "frozen_all_saved_states": true,
+      "prediction_receipt_sha256": {
+        "DJI_0026_2": "a8ae8a8007e8a6de4dbc645ce933fb32e9ce35c63160830c1b7670da2e01987e",
+        "DJI_0067_2": "a9ab160df0549e6772bd14438ac64ee8a761b96586984f0d5f600d3c94af70b9"
+      },
+      "final_checkpoint_sha256": "e259f30bf90fc935d49bcb0af0e21e59f7f1797a2989e15a4643d9d5cac8cfc5"
+    }
+  },
+  "reference_import_checks": [
+    {
+      "condition": "release",
+      "original_condition": "release",
+      "arrangement": "O",
+      "M": 700,
+      "U": 4015
+    },
+    {
+      "condition": "release",
+      "original_condition": "release",
+      "arrangement": "S",
+      "M": 720,
+      "U": 3967
+    },
+    {
+      "condition": "C_init",
+      "original_condition": "C_init",
+      "arrangement": "O",
+      "M": 707,
+      "U": 4053
+    },
+    {
+      "condition": "C_init",
+      "original_condition": "C_init",
+      "arrangement": "S",
+      "M": 724,
+      "U": 4002
+    },
+    {
+      "condition": "CONT",
+      "original_condition": "CONT",
+      "arrangement": "O",
+      "M": 701,
+      "U": 3933
+    },
+    {
+      "condition": "CONT",
+      "original_condition": "CONT",
+      "arrangement": "S",
+      "M": 722,
+      "U": 3914
+    },
+    {
+      "condition": "F",
+      "original_condition": "FRAME",
+      "arrangement": "O",
+      "M": 703,
+      "U": 3970
+    },
+    {
+      "condition": "F",
+      "original_condition": "FRAME",
+      "arrangement": "S",
+      "M": 724,
+      "U": 3942
+    }
+  ],
+  "initial_model_sha256": "5353db4a72ab05572bd829b395ac51570f2496f0b70fa182d51d3583ea136fc1",
+  "initial_optimizer_sha256": "c349583093e8720e0cd67e6c5be487bbae5c9867cf104da1f5dee57fb6ad6b68",
+  "evidence_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/PROTOCOL_FREEZE.json": "ba1b345cc4d1dcd14acbad74e5fbf9db719cb2b6658c7618caca6d98bd63428e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/resources/F_REUSE_AUDIT.json": "562a22f08d784538397856d221068f813eea2a6c9b4fe88b143d0ff65a747322",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/training/C/run/snapshot_2048.pth": "c7eef7aadb3c2c076bc2a126473198b3dae450109bad32017fe1ad2441f79832",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/VALIDATION.json": "16c355d9bd52dd3569489cadcbd81ac04b40a1d99e2162a6c8defe6bf1d6b243",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/CALIBRATION.json": "934ea3d203a3c6f9ffdd26e173710eaba1926b2650b53bc09c652d86a9e7a98a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/training/FRAME/run/TRAIN.jsonl": "a5e9082a623be083d5acd8b39cafefc3f957a0e41a84b403622139b01707cb30",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/training/D/run/RUN.json": "6eb03fe56a39b4d44ea943f26e0ede9f8fee81380c43d7a9b31814810e6c36e0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/training/D/run/TRAIN.jsonl": "3c95afc57a5bf8c129a5bab95b778f2a37416886b9a2a19fd45a9b976e3687d9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/training/N/run/RUN.json": "57795b1245ec64bc1907b570ca70eb0a7c77af506c65f606ea026d5ba19da4f0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/training/N/run/TRAIN.jsonl": "ceaa4a56bc3bc5a590e9b98eea86dd1f289007d02eabfe11eacad25d3f551738"
+  },
+  "F_reuse_audit_sha256": "562a22f08d784538397856d221068f813eea2a6c9b4fe88b143d0ff65a747322",
+  "evaluation_summary_sha256": "342c853663a751557b66e8129c40395ed13eb4c519d3029dc347ed64948d9390",
+  "checks": [
+    "D/N original C2048 model and complete Adam restored exactly;28 Adam states finish at2304",
+    "All256 D/N input/label/auxiliary exposure hashes equal archived F",
+    "New saved models preserve frozen frontend/BN and original architecture",
+    "New inference only two development sources;new score/summary identity checked",
+    "Existing release/C_init/CONT/F scores imported without model or matcher replay"
+  ],
+  "scope": "Execution/import integrity only;not detection improvement or validity of the research hypothesis."
+}

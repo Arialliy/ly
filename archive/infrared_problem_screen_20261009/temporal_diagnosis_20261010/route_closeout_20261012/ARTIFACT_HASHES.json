@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "updated_utc": "2026-10-11T18:36:59.722654+00:00",
+  "scope": "Existing-results closeout only",
+  "new_training": 0,
+  "new_inference": 0,
+  "files": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/COMPARISONS.csv": "3db4c40aae6d5c9c9fba0b09e7a94841e712118b61a043af816085579287b163",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/PRIOR_CVPR2027_RESEARCH_PLAN (1).md": "f27471f31a81ce4155a3b74619abc7ec1be656cea26d1668023fe7bf306abde2",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/DECISION.json": "9827d80282c5190c0bdc002558a2aae0ea6891525326edf849527e6d76efeeef",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/TABLE_REVIEW.json": "26bee09902dbb65f504066e19335e4d7e8575bafd879681a7c159f48e2bc4483",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/CLOSEOUT.md": "51fbeb57367bc153ec0df14f469ec7790756ec446dc7c1565a82ae400adcebd6",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/CLOSEOUT_CHECK.json": "2851dd44d63383b0d4f617e0e920d0bba5994e8046b08e8459c7acd32a89ed3e",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/route_closeout_20261012/PRIOR_CVPR2027_RESEARCH_PLAN.md": "1ce86bd5aa91eb779df0ba5d12bddb9130aee1a32fc62a99c7e8e74cfe857776",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/RESEARCH_OBJECTIVE_CURRENT.md": "0379fad4525a0ae049486363e10bb7994d08a0ee891549fa9931a1d3baa3ec05",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/RESEARCH_STATUS_CURRENT.json": "5c8bfd2f7b3774fdf25d249441deff1ef2b5f067d6201713fcba52e5ac20b15a",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/CVPR2027_RESEARCH_PLAN.md": "d311046c274ff5d48c10a75260c4b23761024494e04c84da3380321a8968c90c",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/CVPR2027_RESEARCH_PLAN (1).md": "83f17c749a4dfcba5eacac99ca4779672910c25bf484a0a12534378b0495af23"
+  }
+}

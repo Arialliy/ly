@@ -1,0 +1,73 @@
+{
+  "frozen_before_training_utc": "2026-10-11T15:57:53.442745+00:00",
+  "protocol_sha256": "133c308964b5946a23777291bf610976197c5d5c44e235c05c9cea99a834cdc7",
+  "training_code_sha256": {
+    "bc_tpro.py": "5603fe22da26e80534cb8f4a3c11676a06b906460dc2ffec66a8542589f83972",
+    "train_bc.py": "7cb9ebf26784b8cd23bd3ed40ae3fbe3a10eba0cf962304f537f5d02c46a1f3b"
+  },
+  "model_config": {
+    "version": 1,
+    "channels": 32,
+    "rank": 4,
+    "length": 40,
+    "new_module_seed": 20261011,
+    "reference_offset": 40,
+    "reference_directions": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "stem_spatial_radius": 9,
+    "stem_temporal_radius": 8,
+    "raw_center_exclusion_radius": 23,
+    "recommended_inference_halo": 64,
+    "reference_temporal_kernel": 3,
+    "association": "shared_LayerNorm32_linear_QK_tanh_QKt_over_T_sqrt_r",
+    "value": "(F-stopgrad(B))/sqrt(T)",
+    "gamma_initial": 0.0,
+    "reference_lambda": 1.0,
+    "reference_reduction": "channel_pixel_mean_per_window_then_equal_window_mean",
+    "zero_context_correction": "zero"
+  },
+  "implementation_check_sha256": "5185874c57ccb5a9641c34c35c00d2469f2fc31f23f8d26b1ffd26f454060591",
+  "parameter_counts": {
+    "original_parameter_count": 70913,
+    "candidate_parameter_count": 72418,
+    "single_parameter_count": 72418
+  },
+  "planned_configurations": [
+    "single_dynamic",
+    "bc_tpro"
+  ],
+  "training_runs_per_configuration": 1,
+  "steps": 512
+}

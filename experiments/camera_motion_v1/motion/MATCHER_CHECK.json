@@ -1,0 +1,46 @@
+{
+  "exact_correspondence_homography_check": "pass",
+  "NUDT_source": "Sequence1/images/00001.png",
+  "NUDT_shape": [
+    157,
+    209
+  ],
+  "identity_image_exact": true,
+  "noninteger_translation": [
+    2.375,
+    -1.625
+  ],
+  "noninteger_roundtrip_mean_absolute_intensity_difference": 2.3543717429067748,
+  "matcher_seconds": 4.235546599957161,
+  "matches": 4896,
+  "matcher_geometry": {
+    "matches": 4896,
+    "fit_count": 3916,
+    "holdout_count": 980,
+    "trusted": true,
+    "reason": "ok",
+    "displacement_px": 2.8910275957552996,
+    "dx_px": 2.343633856769671,
+    "dy_px": -1.6927554178975726,
+    "rotation_deg": -0.02538850456512719,
+    "scale": 1.001343149301038,
+    "min_local_scale": 0.9975261385788362,
+    "max_local_scale": 1.005465750514802,
+    "no_fold": true,
+    "corner_bounded": true,
+    "roundtrip_valid_fraction": 0.9621186724773718,
+    "fit_inliers": 3916,
+    "fit_inlier_ratio": 1.0,
+    "source_hull_fraction": 0.948866439832255,
+    "destination_hull_fraction": 0.944032200507,
+    "source_grid_cells": 16,
+    "destination_grid_cells": 16,
+    "heldout_before_median_px": 2.9183031086962083,
+    "heldout_before_p90_px": 3.133924475385801,
+    "heldout_after_median_px": 0.23364327532476803,
+    "heldout_after_p90_px": 0.42240629188319523,
+    "heldout_within_3px_fraction": 1.0
+  },
+  "known_transform_match_error_median": 0.25768437217830975,
+  "peak_gpu_gb": 13.725567488
+}

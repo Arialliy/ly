@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-12T13:24:25.106450+00:00",
+  "tool": "tools/package_manifest.py",
+  "checks": [
+    {
+      "check": "first generation complete",
+      "pass": true
+    },
+    {
+      "check": "only manifest excluded",
+      "pass": true
+    },
+    {
+      "check": "old pending manifest backed up exactly",
+      "pass": true
+    },
+    {
+      "check": "hardlink hashed only once",
+      "pass": true
+    },
+    {
+      "check": "internal file and directory links included",
+      "pass": true
+    },
+    {
+      "check": "empty directory included",
+      "pass": true
+    },
+    {
+      "check": "independent verify passes",
+      "pass": true
+    },
+    {
+      "check": "old complete manifest backed up exactly",
+      "pass": true
+    },
+    {
+      "check": "unchanged inode cache explicitly reused",
+      "pass": true
+    },
+    {
+      "check": "verify rehashes even after prior cache reuse",
+      "pass": true
+    },
+    {
+      "check": "copied package may lose hardlink topology",
+      "pass": true
+    },
+    {
+      "check": "same-size content mutation rejected",
+      "pass": true
+    },
+    {
+      "check": "ctime changed inode rehashed",
+      "pass": true
+    },
+    {
+      "check": "unlisted file rejected",
+      "pass": true
+    },
+    {
+      "check": "dangling link rejected",
+      "pass": true
+    },
+    {
+      "check": "dangling outside link rejected",
+      "pass": true
+    },
+    {
+      "check": "existing external link rejected",
+      "pass": true
+    },
+    {
+      "check": "concurrent tree mutation rejects generation",
+      "pass": true
+    },
+    {
+      "check": "failed generation leaves prior manifest unchanged",
+      "pass": true
+    }
+  ],
+  "count": 19,
+  "scope": "Small temporary synthetic tree under package validation only; no full-package final manifest created, no model run, no frozen experiment/source changed. Temporary tree automatically removed."
+}

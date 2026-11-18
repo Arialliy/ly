@@ -1,0 +1,863 @@
+{
+  "all": {
+    "n": 1417,
+    "ids": 33,
+    "clips": {
+      "DJI_0028_2": 214,
+      "DJI_0028_4": 465,
+      "DJI_0032_5": 289,
+      "DJI_0047_3": 449
+    },
+    "group_counts": {
+      "stable_low": 778,
+      "stable_high": 502,
+      "flip": 137
+    },
+    "original_probability_gap_median": 2.8454943503675167e-06,
+    "original_logit_gap_median": 2.4396066665649414,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 506,
+        "slot": 631,
+        "feature": 280
+      },
+      "anchor_a": {
+        "membership": 507,
+        "slot": 566,
+        "feature": 344
+      },
+      "anchor_b": {
+        "membership": 507,
+        "feature": 251,
+        "slot": 659
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 376,
+        "slot": 567,
+        "membership": 474
+      },
+      "b_peak_logit": {
+        "feature": 311,
+        "slot": 623,
+        "membership": 483
+      }
+    },
+    "all_anchor_dominant_agree": 1175,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 0.3154750402199187,
+        "median": 0.93210236231486,
+        "positive_count": 904
+      },
+      "feature": {
+        "mean": 0.99854339399469,
+        "median": 0.2683299382527669,
+        "positive_count": 890
+      },
+      "membership": {
+        "mean": 1.7012087843244816,
+        "median": 0.6189176241556803,
+        "positive_count": 945
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 43,
+      "feature": 55,
+      "membership": 92
+    },
+    "remove_term_high_to_low": {
+      "slot": 41,
+      "feature": 52,
+      "membership": 86
+    },
+    "halo": {
+      "both_complete": 867,
+      "crosses_half": 105,
+      "strong_flip": 67,
+      "both_high": 553,
+      "both_low": 759,
+      "pair_probability_range_median": 1.1027888149328646e-06,
+      "a_response_gain": 65,
+      "a_response_loss": 4,
+      "b_response_gain": 33,
+      "b_response_loss": 24
+    }
+  },
+  "flips": {
+    "n": 137,
+    "ids": 20,
+    "clips": {
+      "DJI_0028_4": 12,
+      "DJI_0032_5": 52,
+      "DJI_0047_3": 73
+    },
+    "group_counts": {
+      "flip": 137
+    },
+    "original_probability_gap_median": 0.9793245643377304,
+    "original_logit_gap_median": 15.56585168838501,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 32,
+        "slot": 25,
+        "membership": 80
+      },
+      "anchor_a": {
+        "feature": 32,
+        "membership": 82,
+        "slot": 23
+      },
+      "anchor_b": {
+        "feature": 33,
+        "slot": 24,
+        "membership": 80
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 47,
+        "slot": 47,
+        "feature": 43
+      },
+      "b_peak_logit": {
+        "feature": 35,
+        "membership": 86,
+        "slot": 16
+      }
+    },
+    "all_anchor_dominant_agree": 117,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.009601860803409,
+        "median": 1.1821632782618203,
+        "positive_count": 85
+      },
+      "feature": {
+        "mean": 4.770091316125688,
+        "median": 3.035011251767476,
+        "positive_count": 107
+      },
+      "membership": {
+        "mean": 9.18634516805628,
+        "median": 8.916565974553425,
+        "positive_count": 121
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 31,
+      "feature": 45,
+      "membership": 78
+    },
+    "remove_term_high_to_low": {
+      "slot": 38,
+      "feature": 47,
+      "membership": 78
+    },
+    "halo": {
+      "both_complete": 90,
+      "crosses_half": 68,
+      "strong_flip": 52,
+      "both_high": 50,
+      "both_low": 19,
+      "pair_probability_range_median": 0.45564186573028564,
+      "a_response_gain": 51,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 20
+    }
+  },
+  "strong_flips": {
+    "n": 97,
+    "ids": 18,
+    "clips": {
+      "DJI_0028_4": 7,
+      "DJI_0032_5": 35,
+      "DJI_0047_3": 55
+    },
+    "group_counts": {
+      "flip": 97
+    },
+    "original_probability_gap_median": 0.9965999918276793,
+    "original_logit_gap_median": 17.300118923187256,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 25,
+        "membership": 58,
+        "slot": 14
+      },
+      "anchor_a": {
+        "feature": 23,
+        "membership": 61,
+        "slot": 13
+      },
+      "anchor_b": {
+        "feature": 24,
+        "slot": 16,
+        "membership": 57
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 29,
+        "slot": 32,
+        "feature": 36
+      },
+      "b_peak_logit": {
+        "feature": 24,
+        "membership": 63,
+        "slot": 10
+      }
+    },
+    "all_anchor_dominant_agree": 84,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.1515965156538788,
+        "median": 1.1821632782618203,
+        "positive_count": 58
+      },
+      "feature": {
+        "mean": 5.441073463032745,
+        "median": 4.5510991017023725,
+        "positive_count": 78
+      },
+      "membership": {
+        "mean": 10.586116060665791,
+        "median": 10.52699049313863,
+        "positive_count": 85
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 20,
+      "feature": 33,
+      "membership": 59
+    },
+    "remove_term_high_to_low": {
+      "slot": 21,
+      "feature": 28,
+      "membership": 55
+    },
+    "halo": {
+      "both_complete": 66,
+      "crosses_half": 49,
+      "strong_flip": 44,
+      "both_high": 37,
+      "both_low": 11,
+      "pair_probability_range_median": 0.7406311230733991,
+      "a_response_gain": 37,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 11
+    }
+  },
+  "stable_low": {
+    "n": 778,
+    "ids": 24,
+    "clips": {
+      "DJI_0028_2": 136,
+      "DJI_0028_4": 184,
+      "DJI_0032_5": 139,
+      "DJI_0047_3": 319
+    },
+    "group_counts": {
+      "stable_low": 778
+    },
+    "original_probability_gap_median": 4.203688902748581e-06,
+    "original_logit_gap_median": 2.355858325958252,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 189,
+        "slot": 487,
+        "feature": 102
+      },
+      "anchor_a": {
+        "membership": 192,
+        "slot": 443,
+        "feature": 143
+      },
+      "anchor_b": {
+        "membership": 193,
+        "feature": 82,
+        "slot": 503
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 189,
+        "slot": 390,
+        "membership": 199
+      },
+      "b_peak_logit": {
+        "feature": 134,
+        "slot": 485,
+        "membership": 159
+      }
+    },
+    "all_anchor_dominant_agree": 640,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 1.7186567755902844,
+        "median": 1.4799200693766275,
+        "positive_count": 653
+      },
+      "feature": {
+        "mean": 0.5690360570449347,
+        "median": 0.1671806971232096,
+        "positive_count": 479
+      },
+      "membership": {
+        "mean": 0.8401337177608394,
+        "median": 0.3430053393046061,
+        "positive_count": 498
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 12,
+      "feature": 10,
+      "membership": 14
+    },
+    "remove_term_high_to_low": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 0
+    },
+    "halo": {
+      "both_complete": 489,
+      "crosses_half": 31,
+      "strong_flip": 13,
+      "both_high": 8,
+      "both_low": 739,
+      "pair_probability_range_median": 1.8182653320764075e-06,
+      "a_response_gain": 14,
+      "a_response_loss": 0,
+      "b_response_gain": 33,
+      "b_response_loss": 0
+    }
+  },
+  "stable_high": {
+    "n": 502,
+    "ids": 17,
+    "clips": {
+      "DJI_0028_2": 78,
+      "DJI_0028_4": 269,
+      "DJI_0032_5": 98,
+      "DJI_0047_3": 57
+    },
+    "group_counts": {
+      "stable_high": 502
+    },
+    "original_probability_gap_median": 0.0,
+    "original_logit_gap_median": 0.4732398986816406,
+    "dominant_anchors": {
+      "symmetric": {
+        "membership": 237,
+        "feature": 146,
+        "slot": 119
+      },
+      "anchor_a": {
+        "membership": 233,
+        "feature": 169,
+        "slot": 100
+      },
+      "anchor_b": {
+        "membership": 234,
+        "feature": 136,
+        "slot": 132
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "feature": 144,
+        "membership": 228,
+        "slot": 130
+      },
+      "b_peak_logit": {
+        "feature": 142,
+        "membership": 238,
+        "slot": 122
+      }
+    },
+    "all_anchor_dominant_agree": 418,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": -2.3215185146368196,
+        "median": -2.1376189390818277,
+        "positive_count": 166
+      },
+      "feature": {
+        "mean": 0.634907224303381,
+        "median": 0.44189278284708655,
+        "positive_count": 304
+      },
+      "membership": {
+        "mean": 0.9929472648329626,
+        "median": 0.8810656865437825,
+        "positive_count": 326
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 0,
+      "feature": 0,
+      "membership": 0
+    },
+    "remove_term_high_to_low": {
+      "slot": 3,
+      "feature": 5,
+      "membership": 8
+    },
+    "halo": {
+      "both_complete": 288,
+      "crosses_half": 6,
+      "strong_flip": 2,
+      "both_high": 495,
+      "both_low": 1,
+      "pair_probability_range_median": 0.0,
+      "a_response_gain": 0,
+      "a_response_loss": 4,
+      "b_response_gain": 0,
+      "b_response_loss": 4
+    }
+  },
+  "strong_both_complete_halo": {
+    "n": 66,
+    "ids": 14,
+    "clips": {
+      "DJI_0028_4": 7,
+      "DJI_0032_5": 21,
+      "DJI_0047_3": 38
+    },
+    "group_counts": {
+      "flip": 66
+    },
+    "original_probability_gap_median": 0.9966798833011126,
+    "original_logit_gap_median": 17.532478094100952,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 17,
+        "membership": 41,
+        "slot": 8
+      },
+      "anchor_a": {
+        "feature": 16,
+        "membership": 43,
+        "slot": 7
+      },
+      "anchor_b": {
+        "feature": 15,
+        "slot": 10,
+        "membership": 41
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 22,
+        "slot": 20,
+        "feature": 24
+      },
+      "b_peak_logit": {
+        "feature": 16,
+        "membership": 43,
+        "slot": 7
+      }
+    },
+    "all_anchor_dominant_agree": 58,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.138166499860359,
+        "median": 1.1032628118991852,
+        "positive_count": 40
+      },
+      "feature": {
+        "mean": 5.504438374078634,
+        "median": 4.476397196451822,
+        "positive_count": 55
+      },
+      "membership": {
+        "mean": 10.67998490279371,
+        "median": 10.770955870548883,
+        "positive_count": 58
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 13,
+      "feature": 26,
+      "membership": 41
+    },
+    "remove_term_high_to_low": {
+      "slot": 13,
+      "feature": 16,
+      "membership": 34
+    },
+    "halo": {
+      "both_complete": 66,
+      "crosses_half": 31,
+      "strong_flip": 27,
+      "both_high": 27,
+      "both_low": 8,
+      "pair_probability_range_median": 0.31107190251350403,
+      "a_response_gain": 27,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 8
+    }
+  },
+  "flips_both_complete_halo": {
+    "n": 90,
+    "ids": 16,
+    "clips": {
+      "DJI_0028_4": 11,
+      "DJI_0032_5": 31,
+      "DJI_0047_3": 48
+    },
+    "group_counts": {
+      "flip": 90
+    },
+    "original_probability_gap_median": 0.9843307674898938,
+    "original_logit_gap_median": 16.109290182590485,
+    "dominant_anchors": {
+      "symmetric": {
+        "feature": 22,
+        "slot": 17,
+        "membership": 51
+      },
+      "anchor_a": {
+        "feature": 22,
+        "membership": 53,
+        "slot": 15
+      },
+      "anchor_b": {
+        "feature": 21,
+        "slot": 16,
+        "membership": 53
+      }
+    },
+    "dominant_fixed_peaks": {
+      "a_peak_logit": {
+        "membership": 32,
+        "slot": 31,
+        "feature": 27
+      },
+      "b_peak_logit": {
+        "feature": 21,
+        "membership": 56,
+        "slot": 13
+      }
+    },
+    "all_anchor_dominant_agree": 78,
+    "shapley_symmetric": {
+      "slot": {
+        "mean": 2.2012930952840377,
+        "median": 1.367736279964447,
+        "positive_count": 56
+      },
+      "feature": {
+        "mean": 4.7884023136562766,
+        "median": 2.792041639486948,
+        "positive_count": 72
+      },
+      "membership": {
+        "mean": 9.290797482265365,
+        "median": 9.169562647740046,
+        "positive_count": 79
+      }
+    },
+    "single_term_low_to_high": {
+      "slot": 21,
+      "feature": 35,
+      "membership": 55
+    },
+    "remove_term_high_to_low": {
+      "slot": 22,
+      "feature": 26,
+      "membership": 44
+    },
+    "halo": {
+      "both_complete": 90,
+      "crosses_half": 40,
+      "strong_flip": 31,
+      "both_high": 36,
+      "both_low": 14,
+      "pair_probability_range_median": 0.1693570613861084,
+      "a_response_gain": 37,
+      "a_response_loss": 0,
+      "b_response_gain": 0,
+      "b_response_loss": 15
+    }
+  },
+  "strong_by_clip": {
+    "DJI_0028_2": {
+      "n": 0,
+      "ids": 0,
+      "clips": {},
+      "group_counts": {}
+    },
+    "DJI_0028_4": {
+      "n": 7,
+      "ids": 1,
+      "clips": {
+        "DJI_0028_4": 7
+      },
+      "group_counts": {
+        "flip": 7
+      },
+      "original_probability_gap_median": 0.9868541807204281,
+      "original_logit_gap_median": 17.300118923187256,
+      "dominant_anchors": {
+        "symmetric": {
+          "feature": 6,
+          "membership": 1
+        },
+        "anchor_a": {
+          "feature": 6,
+          "membership": 1
+        },
+        "anchor_b": {
+          "feature": 3,
+          "slot": 2,
+          "membership": 2
+        }
+      },
+      "dominant_fixed_peaks": {
+        "a_peak_logit": {
+          "membership": 2,
+          "slot": 1,
+          "feature": 4
+        },
+        "b_peak_logit": {
+          "feature": 6,
+          "membership": 1
+        }
+      },
+      "all_anchor_dominant_agree": 4,
+      "shapley_symmetric": {
+        "slot": {
+          "mean": 1.9731215692701793,
+          "median": 1.410723368326823,
+          "positive_count": 5
+        },
+        "feature": {
+          "mean": 11.627795545827773,
+          "median": 16.101832270622253,
+          "positive_count": 6
+        },
+        "membership": {
+          "mean": 2.246648365543002,
+          "median": -1.1193851431210837,
+          "positive_count": 3
+        }
+      },
+      "single_term_low_to_high": {
+        "slot": 0,
+        "feature": 5,
+        "membership": 1
+      },
+      "remove_term_high_to_low": {
+        "slot": 3,
+        "feature": 6,
+        "membership": 2
+      },
+      "halo": {
+        "both_complete": 7,
+        "crosses_half": 0,
+        "strong_flip": 0,
+        "both_high": 0,
+        "both_low": 7,
+        "pair_probability_range_median": 2.5354728450110997e-06,
+        "a_response_gain": 0,
+        "a_response_loss": 0,
+        "b_response_gain": 0,
+        "b_response_loss": 7
+      }
+    },
+    "DJI_0032_5": {
+      "n": 35,
+      "ids": 11,
+      "clips": {
+        "DJI_0032_5": 35
+      },
+      "group_counts": {
+        "flip": 35
+      },
+      "original_probability_gap_median": 0.9959801053628325,
+      "original_logit_gap_median": 15.269506931304932,
+      "dominant_anchors": {
+        "symmetric": {
+          "membership": 20,
+          "feature": 7,
+          "slot": 8
+        },
+        "anchor_a": {
+          "membership": 21,
+          "feature": 7,
+          "slot": 7
+        },
+        "anchor_b": {
+          "membership": 19,
+          "feature": 8,
+          "slot": 8
+        }
+      },
+      "dominant_fixed_peaks": {
+        "a_peak_logit": {
+          "membership": 8,
+          "feature": 18,
+          "slot": 9
+        },
+        "b_peak_logit": {
+          "membership": 20,
+          "feature": 9,
+          "slot": 6
+        }
+      },
+      "all_anchor_dominant_agree": 29,
+      "shapley_symmetric": {
+        "slot": {
+          "mean": 2.423589631773176,
+          "median": 1.2144754727681477,
+          "positive_count": 20
+        },
+        "feature": {
+          "mean": 5.138482801687149,
+          "median": 5.183681706587473,
+          "positive_count": 29
+        },
+        "membership": {
+          "mean": 8.084126895098459,
+          "median": 8.916565974553425,
+          "positive_count": 28
+        }
+      },
+      "single_term_low_to_high": {
+        "slot": 10,
+        "feature": 15,
+        "membership": 18
+      },
+      "remove_term_high_to_low": {
+        "slot": 11,
+        "feature": 10,
+        "membership": 16
+      },
+      "halo": {
+        "both_complete": 21,
+        "crosses_half": 15,
+        "strong_flip": 12,
+        "both_high": 17,
+        "both_low": 3,
+        "pair_probability_range_median": 0.09219443798065186,
+        "a_response_gain": 17,
+        "a_response_loss": 0,
+        "b_response_gain": 0,
+        "b_response_loss": 3
+      }
+    },
+    "DJI_0047_3": {
+      "n": 55,
+      "ids": 6,
+      "clips": {
+        "DJI_0047_3": 55
+      },
+      "group_counts": {
+        "flip": 55
+      },
+      "original_probability_gap_median": 0.9983927851235421,
+      "original_logit_gap_median": 18.981869220733643,
+      "dominant_anchors": {
+        "symmetric": {
+          "slot": 6,
+          "membership": 37,
+          "feature": 12
+        },
+        "anchor_a": {
+          "slot": 6,
+          "membership": 39,
+          "feature": 10
+        },
+        "anchor_b": {
+          "slot": 6,
+          "membership": 36,
+          "feature": 13
+        }
+      },
+      "dominant_fixed_peaks": {
+        "a_peak_logit": {
+          "membership": 19,
+          "slot": 22,
+          "feature": 14
+        },
+        "b_peak_logit": {
+          "feature": 9,
+          "membership": 42,
+          "slot": 4
+        }
+      },
+      "all_anchor_dominant_agree": 51,
+      "shapley_symmetric": {
+        "slot": {
+          "mean": 2.001224980390433,
+          "median": 0.5247151056925454,
+          "positive_count": 33
+        },
+        "feature": {
+          "mean": 4.846230164260575,
+          "median": 2.5573546091715493,
+          "positive_count": 43
+        },
+        "membership": {
+          "mean": 13.239677781769723,
+          "median": 13.216598828633625,
+          "positive_count": 54
+        }
+      },
+      "single_term_low_to_high": {
+        "slot": 10,
+        "feature": 13,
+        "membership": 40
+      },
+      "remove_term_high_to_low": {
+        "slot": 7,
+        "feature": 12,
+        "membership": 37
+      },
+      "halo": {
+        "both_complete": 38,
+        "crosses_half": 34,
+        "strong_flip": 32,
+        "both_high": 20,
+        "both_low": 1,
+        "pair_probability_range_median": 0.9813943364715669,
+        "a_response_gain": 20,
+        "a_response_loss": 0,
+        "b_response_gain": 0,
+        "b_response_loss": 1
+      }
+    }
+  },
+  "maximum_errors": {
+    "a_replay_abs_error": 1.9669532775878906e-06,
+    "a_halo_interior_feature_max_abs_error": 1.1444091796875e-05,
+    "b_replay_abs_error": 3.2782554626464844e-06,
+    "b_halo_interior_feature_max_abs_error": 1.239776611328125e-05,
+    "shared_interior_feature_max_abs_error": 0.0,
+    "projection_reconstruction_max_abs_error": 5.960464477539062e-07,
+    "a_projection_vs_official_max_abs_error": 7.152557373046875e-07,
+    "b_projection_vs_official_max_abs_error": 5.960464477539062e-07,
+    "a_factorial_endpoint_max_abs_probability_error": 4.26173210144043e-06,
+    "a_factorial_endpoint_max_abs_logit_error": 4.57763671875e-05,
+    "b_factorial_endpoint_max_abs_probability_error": 1.1682510375976562e-05,
+    "b_factorial_endpoint_max_abs_logit_error": 6.580352783203125e-05,
+    "anchor_a_endpoint_max_abs_probability_error": 1.1563301086425781e-05,
+    "anchor_a_endpoint_max_abs_logit_error": 6.4849853515625e-05,
+    "anchor_b_endpoint_max_abs_probability_error": 1.2516975402832031e-05,
+    "anchor_b_endpoint_max_abs_logit_error": 6.4849853515625e-05
+  },
+  "threshold_disagreements": {
+    "a_replay_threshold_disagreement_0_1": 0,
+    "a_replay_threshold_disagreement_0_5": 0,
+    "a_replay_threshold_disagreement_0_9": 0,
+    "b_replay_threshold_disagreement_0_1": 0,
+    "b_replay_threshold_disagreement_0_5": 0,
+    "b_replay_threshold_disagreement_0_9": 0
+  },
+  "interpretation": "Internal counterfactual decomposition of previously selected extreme windows; Shapley not unique natural causal factorization. Halo changes frontend true neighbors; response gains/losses are not point detections or Pd/Fa."
+}

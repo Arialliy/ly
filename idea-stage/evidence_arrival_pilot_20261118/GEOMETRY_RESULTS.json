@@ -1,0 +1,3169 @@
+{
+  "summary": {
+    "known_copy": {
+      "neutral": {
+        "worlds": 32,
+        "fact_accuracy": 0.5,
+        "mean_fraction_true_paired_difference": 0.0,
+        "pairs_moving_in_true_direction": 0,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.0,
+        "signed_change_fraction_bounds": [
+          0.0,
+          0.0
+        ],
+        "world_signed_changes_positive": 0,
+        "mean_coefficient_by_true_sign": {
+          "-1": 0.0002918468719679641,
+          "1": 0.0002918468719679641
+        }
+      },
+      "slot3": {
+        "worlds": 32,
+        "fact_accuracy": 1.0,
+        "mean_fraction_true_paired_difference": 1.0000000005382756,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 1.0000000005382756,
+        "signed_change_fraction_bounds": [
+          -0.030708170121149514,
+          2.030708159774069
+        ],
+        "world_signed_changes_positive": 30,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.050000000131681266,
+          "1": 0.049999999922146314
+        }
+      },
+      "slot4": {
+        "worlds": 32,
+        "fact_accuracy": 1.0,
+        "mean_fraction_true_paired_difference": 1.0000000005382756,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 1.0000000005382756,
+        "signed_change_fraction_bounds": [
+          -0.030708170121149514,
+          2.030708159774069
+        ],
+        "world_signed_changes_positive": 30,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.050000000131681266,
+          "1": 0.049999999922146314
+        }
+      }
+    },
+    "known_fourier": {
+      "neutral": {
+        "worlds": 32,
+        "fact_accuracy": 0.5,
+        "mean_fraction_true_paired_difference": 0.0,
+        "pairs_moving_in_true_direction": 0,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.0,
+        "signed_change_fraction_bounds": [
+          0.0,
+          0.0
+        ],
+        "world_signed_changes_positive": 0,
+        "mean_coefficient_by_true_sign": {
+          "-1": 0.00029184687196796757,
+          "1": 0.00029184687196796757
+        }
+      },
+      "slot3": {
+        "worlds": 32,
+        "fact_accuracy": 1.0,
+        "mean_fraction_true_paired_difference": 0.941176471299255,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.941176471299255,
+        "signed_change_fraction_bounds": [
+          -0.03996407354208087,
+          1.9223170055885141
+        ],
+        "world_signed_changes_positive": 30,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.047108632087860675,
+          "1": 0.047009015042064825
+        }
+      },
+      "slot4": {
+        "worlds": 32,
+        "fact_accuracy": 1.0,
+        "mean_fraction_true_paired_difference": 0.941176471299255,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.941176471299255,
+        "signed_change_fraction_bounds": [
+          -0.03996407354208087,
+          1.9223170055885144
+        ],
+        "world_signed_changes_positive": 30,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.047108632087860675,
+          "1": 0.047009015042064825
+        }
+      }
+    },
+    "estimated_fourier": {
+      "neutral": {
+        "worlds": 32,
+        "fact_accuracy": 0.5,
+        "mean_fraction_true_paired_difference": 0.0,
+        "pairs_moving_in_true_direction": 0,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.0,
+        "signed_change_fraction_bounds": [
+          0.0,
+          0.0
+        ],
+        "world_signed_changes_positive": 0,
+        "mean_coefficient_by_true_sign": {
+          "-1": 0.00029184687196796757,
+          "1": 0.00029184687196796757
+        }
+      },
+      "slot3": {
+        "worlds": 32,
+        "fact_accuracy": 0.9375,
+        "mean_fraction_true_paired_difference": 0.8043105263187519,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.8043105263187519,
+        "signed_change_fraction_bounds": [
+          -0.11611644414893471,
+          2.1623805785990844
+        ],
+        "world_signed_changes_positive": 21,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.040730433528536586,
+          "1": 0.0397006191033386
+        }
+      },
+      "slot4": {
+        "worlds": 32,
+        "fact_accuracy": 0.9375,
+        "mean_fraction_true_paired_difference": 0.804310526318752,
+        "pairs_moving_in_true_direction": 16,
+        "pairs": 16,
+        "signed_mean_change_amplitude_fraction": 0.804310526318752,
+        "signed_change_fraction_bounds": [
+          -0.11611644414893471,
+          2.1623805785990844
+        ],
+        "world_signed_changes_positive": 21,
+        "mean_coefficient_by_true_sign": {
+          "-1": -0.04073043352853659,
+          "1": 0.0397006191033386
+        }
+      }
+    }
+  },
+  "registration": {
+    "worlds": 32,
+    "mean": 0.4221860975781874,
+    "median": 0.09849434896384507,
+    "max": 5.132759223016488,
+    "mean_estimated_dxdy": [
+      0.3373044879594388,
+      0.021233678604116235
+    ],
+    "EPE_by_fact": {
+      "-1": 0.6485007042999799,
+      "1": 0.19587149085639494
+    }
+  },
+  "rows": {
+    "known_copy": [
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0500000002425224,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0500000002425224,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000098198259,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000098198259,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04434027755676676,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000098198259,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000098198259,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04434027755676676,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0500000002425224,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0500000002425224,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04999999989628369,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04999999989628369,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000031788064,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000031788064,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351064,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000031788064,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000031788064,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351064,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04999999989628369,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04999999989628369,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.05000000001726617,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.05000000001726617,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000033793763,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000033793763,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976215,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000033793763,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000033793763,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976215,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.05000000001726617,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.05000000001726617,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.045134648793682085,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04999999941937344,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04999999941937344,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.045134648793682085,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000042166973,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000042166973,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682957,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000042166973,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000042166973,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682957,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04999999941937344,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04999999941937344,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.050000000131351134,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.050000000131351134,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04999999935129484,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04999999935129484,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740861,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04999999935129484,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04999999935129484,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740861,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.050000000131351134,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.050000000131351134,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.051128649645281805,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.05000000034478267,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.05000000034478267,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.051128649645281805,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04999999959569616,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04999999959569616,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04999999959569616,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04999999959569616,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.05000000034478267,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.05000000034478267,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531371,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0499999999483732,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0499999999483732,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531371,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.049999999990591515,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049999999990591515,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.046656936123533214,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.049999999990591515,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049999999990591515,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.046656936123533214,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0499999999483732,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0499999999483732,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315773,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0499999993772178,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0499999993772178,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315773,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000005639703,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000005639703,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04807514115051662,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05000000005639703,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.05000000005639703,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04807514115051662,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0499999993772178,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0499999993772178,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      }
+    ],
+    "known_fourier": [
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04432975191707222,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04432975191707222,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.049787896271062,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049787896271062,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.044340277556766776,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.044402500625762654,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.044402500625762675,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.044340277556766776,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04971514756237158,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04971514756237158,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04458168054759272,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04458168054759271,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04953596677191557,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04953596677191557,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351065,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04412613292018143,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04412613292018143,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351065,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04999151439932682,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04999151439932682,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.044143728066781754,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.044143728066781754,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.0499739193372478,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049973919337247805,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976216,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.044562151237396035,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04456215123739603,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976216,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04955549616663353,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04955549616663353,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04513464879368209,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.044322102655603074,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.044322102655603095,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04513464879368209,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.049795544233756296,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049795544233756296,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682958,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04440541622304285,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04440541622304285,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682958,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04971223066631652,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.049712230666316526,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04417189527527294,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04417189527527293,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04994575132704876,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049945751327048746,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740864,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04458044164201708,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.044580441642017084,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740864,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.049537204960304594,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.049537204960304594,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.05112864964528182,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04400126594957532,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04400126594957532,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.05112864964528182,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.0501163811177945,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.050116381117794505,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04475596823029053,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04475596823029053,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.049361678837079294,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.0493616788370793,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531373,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04445476450774906,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04445476450774906,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531373,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.049662882519454575,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.049662882519454575,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04665693612353323,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04428204417603081,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04428204417603079,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04665693612353323,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.049835602851172854,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.049835602851172854,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315774,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04451157943708699,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.04451157943708698,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315774,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04960606710439047,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04960606710439047,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.048075141150516636,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04419904966837947,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": -0.04419904966837946,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.048075141150516636,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.049918596873097965,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          },
+          "slot4": {
+            "coefficient": 0.049918596873097965,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5,
+              0.0
+            ],
+            "epe": 0.0
+          }
+        }
+      }
+    ],
+    "estimated_fourier": [
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.041650210479568545,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5263892784378024,
+              0.02834257756505569
+            ],
+            "epe": 0.038725905018463534
+          },
+          "slot4": {
+            "coefficient": 0.041650210479568545,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5263892784378024,
+              0.02834257756505569
+            ],
+            "epe": 0.038725905018463534
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.047211447729085816,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04877203908399627,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4657293037348275,
+              -0.01060257672780792
+            ],
+            "epe": 0.03587332234082538
+          },
+          "slot4": {
+            "coefficient": -0.048772039083996285,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4657293037348275,
+              -0.01060257672780792
+            ],
+            "epe": 0.03587332234082538
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.044340277556766776,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04533540200478255,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.49110494159791973,
+              -0.00982931652910317
+            ],
+            "epe": 0.0132566031624138
+          },
+          "slot4": {
+            "coefficient": -0.045335402004782546,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.49110494159791973,
+              -0.00982931652910317
+            ],
+            "epe": 0.0132566031624138
+          }
+        }
+      },
+      {
+        "sequence": 2,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.044340277556766776,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.042846323829779064,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.39925511928388824,
+              -0.03396187549996591
+            ],
+            "epe": 0.10631528572119238
+          },
+          "slot4": {
+            "coefficient": 0.04284632382977905,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.39925511928388824,
+              -0.03396187549996591
+            ],
+            "epe": 0.10631528572119238
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04882910977758616,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.2522470820617902,
+              0.13146907650211664
+            ],
+            "epe": 0.28047393180689134
+          },
+          "slot4": {
+            "coefficient": 0.048829109777586165,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.2522470820617902,
+              0.13146907650211664
+            ],
+            "epe": 0.28047393180689134
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04618498825659446,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04676640221718345,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.26215045057159975,
+              0.097631134361687
+            ],
+            "epe": 0.2571074611131361
+          },
+          "slot4": {
+            "coefficient": -0.04676640221718345,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.26215045057159975,
+              0.097631134361687
+            ],
+            "epe": 0.2571074611131361
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351065,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04938224792104507,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.40049663395967955,
+              0.028870368471219356
+            ],
+            "epe": 0.1036070365806202
+          },
+          "slot4": {
+            "coefficient": -0.04938224792104507,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.40049663395967955,
+              0.028870368471219356
+            ],
+            "epe": 0.1036070365806202
+          }
+        }
+      },
+      {
+        "sequence": 12,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04578218719351065,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.041860307219832776,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.1887558112015401,
+              0.11347161981085999
+            ],
+            "epe": 0.3312834942512405
+          },
+          "slot4": {
+            "coefficient": 0.041860307219832776,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.1887558112015401,
+              0.11347161981085999
+            ],
+            "epe": 0.3312834942512405
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.0620088811239461,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.21396007148392052,
+              0.029380455252083815
+            ],
+            "epe": 0.2875448692922612
+          },
+          "slot4": {
+            "coefficient": 0.0620088811239461,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.21396007148392052,
+              0.029380455252083815
+            ],
+            "epe": 0.2875448692922612
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.046110147806008125,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04291361755354094,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.18634800927011425,
+              0.01432801999216301
+            ],
+            "epe": 0.3139790812231225
+          },
+          "slot4": {
+            "coefficient": -0.042913617553540936,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.18634800927011425,
+              0.01432801999216301
+            ],
+            "epe": 0.3139790812231225
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976216,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.05360674746672605,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.28486965213532406,
+              -0.006048925141752044
+            ],
+            "epe": 0.21521537135564225
+          },
+          "slot4": {
+            "coefficient": -0.05360674746672613,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.28486965213532406,
+              -0.006048925141752044
+            ],
+            "epe": 0.21521537135564225
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04588991043976216,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04159079900911059,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.15162546480792274,
+              0.008636670845458315
+            ],
+            "epe": 0.34848157606046937
+          },
+          "slot4": {
+            "coefficient": 0.041590799009110606,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.15162546480792274,
+              0.008636670845458315
+            ],
+            "epe": 0.34848157606046937
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04513464879368209,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.03912852530608168,
+            "fact_accuracy": 0.0,
+            "shift": [
+              4.274760309411358,
+              0.35352530223428164
+            ],
+            "epe": 3.7912788782714433
+          },
+          "slot4": {
+            "coefficient": -0.03912852530608165,
+            "fact_accuracy": 0.0,
+            "shift": [
+              4.274760309411358,
+              0.35352530223428164
+            ],
+            "epe": 3.7912788782714433
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04513464879368209,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.042987012039072924,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.06939547054006066,
+              0.05466652516381616
+            ],
+            "epe": 0.4340606982495673
+          },
+          "slot4": {
+            "coefficient": -0.042987012039072924,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.06939547054006066,
+              0.05466652516381616
+            ],
+            "epe": 0.4340606982495673
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682958,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.034112175892838596,
+            "fact_accuracy": 0.0,
+            "shift": [
+              -4.63249241792408,
+              -0.052333750225367334
+            ],
+            "epe": 5.132759223016488
+          },
+          "slot4": {
+            "coefficient": 0.03411217589283859,
+            "fact_accuracy": 0.0,
+            "shift": [
+              -4.63249241792408,
+              -0.052333750225367334
+            ],
+            "epe": 5.132759223016488
+          }
+        }
+      },
+      {
+        "sequence": 32,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04649752766682958,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04492290262610509,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.04825596079380802,
+              0.020611520593739857
+            ],
+            "epe": 0.45221401099425446
+          },
+          "slot4": {
+            "coefficient": 0.0449229026261051,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.04825596079380802,
+              0.020611520593739857
+            ],
+            "epe": 0.45221401099425446
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.037045922605824864,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.512871075304709,
+              0.05751607330728786
+            ],
+            "epe": 0.05893863985696311
+          },
+          "slot4": {
+            "coefficient": 0.037045922605824864,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.512871075304709,
+              0.05751607330728786
+            ],
+            "epe": 0.05893863985696311
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.03967485459350543,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.046326864002035645,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.42312260013055863,
+              0.007622921104223067
+            ],
+            "epe": 0.07725440787972679
+          },
+          "slot4": {
+            "coefficient": -0.04632686400203565,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.42312260013055863,
+              0.007622921104223067
+            ],
+            "epe": 0.07725440787972679
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740864,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04636506872501033,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.40861922945082846,
+              -0.019227309998502577
+            ],
+            "epe": 0.09338166134706993
+          },
+          "slot4": {
+            "coefficient": -0.04636506872501034,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.40861922945082846,
+              -0.019227309998502577
+            ],
+            "epe": 0.09338166134706993
+          }
+        }
+      },
+      {
+        "sequence": 42,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.05153540863740864,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04789039302729765,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.41796019167907006,
+              0.016730035506299985
+            ],
+            "epe": 0.0837282762116657
+          },
+          "slot4": {
+            "coefficient": 0.04789039302729763,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.41796019167907006,
+              0.016730035506299985
+            ],
+            "epe": 0.0837282762116657
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.05112864964528182,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04641758627258356,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4449569615043406,
+              0.009153674138423605
+            ],
+            "epe": 0.05579897702527428
+          },
+          "slot4": {
+            "coefficient": 0.04641758627258357,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4449569615043406,
+              0.009153674138423605
+            ],
+            "epe": 0.05579897702527428
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.05112864964528182,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04889089456697569,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4683112559718544,
+              -0.0011872335519617287
+            ],
+            "epe": 0.03171097635816716
+          },
+          "slot4": {
+            "coefficient": -0.048890894566975686,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4683112559718544,
+              -0.0011872335519617287
+            ],
+            "epe": 0.03171097635816716
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04142118352777401,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5780845997201,
+              -0.0068703346621392415
+            ],
+            "epe": 0.07838626290248837
+          },
+          "slot4": {
+            "coefficient": -0.041421183527773985,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5780845997201,
+              -0.0068703346621392415
+            ],
+            "epe": 0.07838626290248837
+          }
+        }
+      },
+      {
+        "sequence": 52,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.03999836853578902,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04734325546176059,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.44635851132719473,
+              0.007051537390746249
+            ],
+            "epe": 0.054102989627263565
+          },
+          "slot4": {
+            "coefficient": 0.047343255461760596,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.44635851132719473,
+              0.007051537390746249
+            ],
+            "epe": 0.054102989627263565
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531373,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04410358710363188,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5175943572871611,
+              -0.007704061114229473
+            ],
+            "epe": 0.019207133206183082
+          },
+          "slot4": {
+            "coefficient": 0.04410358710363188,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5175943572871611,
+              -0.007704061114229473
+            ],
+            "epe": 0.019207133206183082
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04481731546531373,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.048336180531099955,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.46352036518487016,
+              -0.008525564468036335
+            ],
+            "epe": 0.03746263479447056
+          },
+          "slot4": {
+            "coefficient": -0.048336180531099976,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.46352036518487016,
+              -0.008525564468036335
+            ],
+            "epe": 0.03746263479447056
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04665693612353323,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.04167809509982138,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5319799528255725,
+              0.009988380015639503
+            ],
+            "epe": 0.03350350904103436
+          },
+          "slot4": {
+            "coefficient": -0.041678095099821386,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.5319799528255725,
+              0.009988380015639503
+            ],
+            "epe": 0.03350350904103436
+          }
+        }
+      },
+      {
+        "sequence": 62,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.04665693612353323,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.04590328188538108,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4367860732621924,
+              -0.018187995862485408
+            ],
+            "epe": 0.06577844424358709
+          },
+          "slot4": {
+            "coefficient": 0.04590328188538108,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4367860732621924,
+              -0.018187995862485408
+            ],
+            "epe": 0.06577844424358709
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315774,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.03626037919110575,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.6076410044742556,
+              0.0199632787802932
+            ],
+            "epe": 0.10947656527260262
+          },
+          "slot4": {
+            "coefficient": 0.036260379191105765,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.6076410044742556,
+              0.0199632787802932
+            ],
+            "epe": 0.10947656527260262
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": -1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": -0.04384415506315774,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.038038332855711,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.2278238848919501,
+              -0.07465137044622802
+            ],
+            "epe": 0.2822280367802079
+          },
+          "slot4": {
+            "coefficient": -0.038038332855711,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.2278238848919501,
+              -0.07465137044622802
+            ],
+            "epe": 0.2822280367802079
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": -1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.048075141150516636,
+            "fact_accuracy": 0.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": -0.044979024754648766,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4406838421206977,
+              -0.02522419079456578
+            ],
+            "epe": 0.06445670164383972
+          },
+          "slot4": {
+            "coefficient": -0.044979024754648766,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.4406838421206977,
+              -0.02522419079456578
+            ],
+            "epe": 0.06445670164383972
+          }
+        }
+      },
+      {
+        "sequence": 72,
+        "s": 1,
+        "b": 1,
+        "outputs": {
+          "neutral": {
+            "coefficient": 0.048075141150516636,
+            "fact_accuracy": 1.0,
+            "shift": null,
+            "epe": null
+          },
+          "slot3": {
+            "coefficient": 0.045665491345985555,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.28457856819921085,
+              -0.05512695068153064
+            ],
+            "epe": 0.2223631578534222
+          },
+          "slot4": {
+            "coefficient": 0.045665491345985555,
+            "fact_accuracy": 1.0,
+            "shift": [
+              0.28457856819921085,
+              -0.05512695068153064
+            ],
+            "epe": 0.2223631578534222
+          }
+        }
+      }
+    ]
+  },
+  "ridge": 0.05,
+  "truth_offsets_at_reveal": [
+    0.5,
+    0
+  ],
+  "prior_sha256": "5c9fb8e2451b2152a41b73a132fcfb620b56024e37351c6166a2deef54fd9308",
+  "solver_sha256": "0440c02266aeb522433242eed5243e3d530fa4d25630975acc4ab5a722ed1a02",
+  "registration_sha256": "872b1ac8c30500837cf38611d85271f033ea7e99eb059f543e2d07aa0d8d4908"
+}

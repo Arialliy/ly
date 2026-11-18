@@ -1,0 +1,24 @@
+{
+  "scope": "All-background DEIM MAL kernel, gamma=2, mal_alpha=None, equal mean normalization only",
+  "author_source": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/resources/DEIM_deim_criterion.py",
+  "source_sha256": "380a7d86b71ba9a3cbbdb670b4c11a3f2bfd2e367ffe87db7ef8e9ba30806dd2",
+  "git_commit": null,
+  "tests": [
+    {
+      "batch": 1,
+      "queries": 1,
+      "value_and_gradient": "passed"
+    },
+    {
+      "batch": 1,
+      "queries": 7,
+      "value_and_gradient": "passed"
+    },
+    {
+      "batch": 2,
+      "queries": 11,
+      "value_and_gradient": "passed"
+    }
+  ],
+  "whole_detector_or_training_verified": false
+}

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-12",
+  "scope": "source verification and one approximate rule proposal; no training or GPU",
+  "status": "SOURCE_VERIFIED_APPROXIMATION_SPECIFIED",
+  "official_commit": "8fa1a68b94eb22e94ccd0529e6c5ceccdaa7ec28",
+  "source_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/train.py": "51d77e855ee798ee5b6371a130f2cab5b823ffe22a192ea52383d879f95f988d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/data_utils/TrainDataLoader.py": "ac94cf5bbfa2a4bcb76f5eeec0e047b999c76d1423afeb1a54136bf535ffa3d4",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/networks/models/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/frozen_v1/train_pilot.py": "ca37be9d9ecb68ca1e779c2ba7177d1f87e498d57ef272d99470f46e97b702af"
+  },
+  "primary_paper": {
+    "url": "https://arxiv.org/html/2506.12766v5",
+    "title": "Probing Deep into Temporal Profile Makes the Infrared Small Target Detector Much Better",
+    "gaussian_label_section": "IV-F",
+    "soft_iou_section": "IV-A3",
+    "gaussian_generation_hyperparameters_verified": false
+  },
+  "verified_loader": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/data_utils/TrainDataLoader.py",
+    "label_lines": [
+      58,
+      59
+    ],
+    "operation": [
+      "float32 / 255",
+      "all label > 0 set to 1"
+    ],
+    "rgbt_label_root_lines": [
+      150,
+      154
+    ],
+    "rgbt_resize": false
+  },
+  "verified_loss": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+    "lines": [
+      84,
+      101
+    ],
+    "class": "SoftLoUloss",
+    "input": "logits [N,T,H,W]",
+    "activation": "sigmoid",
+    "sum_dims": [
+      1,
+      2,
+      3
+    ],
+    "outer_reduction": "mean of per-window IoU, then 1-minus",
+    "smooth": 0.0,
+    "threshold_applied_in_loss": false,
+    "mask_supported_in_original": false,
+    "empty_target_window": "loss=1 and zero logit gradient if prediction sum>0; 0/0 if prediction sum=0"
+  },
+  "single_approximation": {
+    "name": "box_truncated_elliptical_gaussian_uint8_floor_binary_support",
+    "raw_box_coordinates": "float xywh",
+    "center": "geometric bbox center",
+    "sigma_x": "w/6",
+    "sigma_y": "h/6",
+    "sampling": "global pixel center (j+0.5,i+0.5)",
+    "inside_box": "half-open intervals",
+    "outside_box_value": 0,
+    "overlap": "pixelwise maximum",
+    "quantization": "floor(255*g) uint8",
+    "training_target": "uint8_value>0 as float32",
+    "gaussian_parameters_source": "single pre-specified project approximation, not author-recovered",
+    "sigma_search": false,
+    "force_nonempty_support": false,
+    "label_generation_scope": "old positive_annotation and full_core selection",
+    "effective_domain": "(old_bg | full_positive_rect) minus all excluded ignore/crowd/partial original bboxes expanded by 2px; exclusions win",
+    "preflight_counts": [
+      "quantized support per object",
+      "effective support per object",
+      "empty-support objects",
+      "whole windows with empty target",
+      "positive support to bbox pixel ratio"
+    ],
+    "frozen_overlap_precedence": "excluded-object bbox plus 2px overrides all positive rectangles; invalid target pixels set zero"
+  },
+  "must_disclose": [
+    "author Gaussian generator unknown",
+    "binary support versus continuous Gaussian difference",
+    "effective-domain mask/core9/guard are not original loss features",
+    "supervision bundle changes both spatial target and loss, so cannot isolate Gaussian benefit",
+    "fixed plan/fine-tuning/BN settings differ from original training",
+    "development diagnostic M/U not paper Pd/Fa",
+    "not a SPIRE reproduction"
+  ],
+  "spire_evidence_reused": {
+    "local_report": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/recent_method_alignment_20261011/SUPERVISION_PRIOR_ART.md",
+    "code_commit": "53a236d5d3c551eaf8ec59de3340e97950c5090f",
+    "primary_urls": [
+      "https://link.springer.com/chapter/10.1007/978-3-032-37023-5_35",
+      "https://arxiv.org/html/2604.05363v2"
+    ],
+    "mechanism": "point-anchored Gaussian times normalized local radiance, continuous MSE response regression, own decoder",
+    "expanded_search": false
+  },
+  "limitations": [
+    "Static source audit does not verify any newly generated label implementation",
+    "Does not recover exact authors original Gaussian masks",
+    "Does not establish gains or root cause"
+  ],
+  "implementation_preflight": {
+    "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/LABEL_PREFLIGHT.json",
+    "status": "PASS",
+    "checks": 1071,
+    "source_sha256": {
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+      "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/test_gaussian_labels.py": "95ce004c3c7d201819bde5e4829c3a043ee48e916341b17a03d825bd7c770c0f"
+    },
+    "scope": "CPU labels only; whole frozen 512-step plan; no development responses or images"
+  }
+}

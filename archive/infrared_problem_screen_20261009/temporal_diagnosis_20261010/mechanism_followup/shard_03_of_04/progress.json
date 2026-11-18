@@ -1,0 +1,33 @@
+{
+  "completed": 354,
+  "total": 354,
+  "elapsed_seconds": 12.173615310006426,
+  "sequence": "DJI_0047_3",
+  "pair_index": 1415,
+  "maximum_errors": {
+    "a_replay_abs_error": 1.4901161193847656e-06,
+    "a_halo_interior_feature_max_abs_error": 1.049041748046875e-05,
+    "b_replay_abs_error": 2.51084566116333e-06,
+    "b_halo_interior_feature_max_abs_error": 1.239776611328125e-05,
+    "shared_interior_feature_max_abs_error": 0.0,
+    "projection_reconstruction_max_abs_error": 4.76837158203125e-07,
+    "a_projection_vs_official_max_abs_error": 7.152557373046875e-07,
+    "b_projection_vs_official_max_abs_error": 4.76837158203125e-07,
+    "a_factorial_endpoint_max_abs_probability_error": 4.0531158447265625e-06,
+    "a_factorial_endpoint_max_abs_logit_error": 4.1961669921875e-05,
+    "b_factorial_endpoint_max_abs_probability_error": 1.1682510375976562e-05,
+    "b_factorial_endpoint_max_abs_logit_error": 4.9591064453125e-05,
+    "anchor_a_endpoint_max_abs_probability_error": 1.1563301086425781e-05,
+    "anchor_a_endpoint_max_abs_logit_error": 4.9591064453125e-05,
+    "anchor_b_endpoint_max_abs_probability_error": 1.2516975402832031e-05,
+    "anchor_b_endpoint_max_abs_logit_error": 5.1021575927734375e-05
+  },
+  "replay_threshold_disagreements": {
+    "a_replay_threshold_disagreement_0_1": 0,
+    "a_replay_threshold_disagreement_0_5": 0,
+    "a_replay_threshold_disagreement_0_9": 0,
+    "b_replay_threshold_disagreement_0_1": 0,
+    "b_replay_threshold_disagreement_0_5": 0,
+    "b_replay_threshold_disagreement_0_9": 0
+  }
+}

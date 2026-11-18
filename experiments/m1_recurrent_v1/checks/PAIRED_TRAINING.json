@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "steps_each": 2048,
+  "identical_initialization": true,
+  "identical_ordered_exposure": true,
+  "original_unchanged_both": true,
+  "initial_model_state_sha256": "44476162503a63b9bbff18ea61ef957c21464a2d1f9da6cf35f8f1892f088756",
+  "exposure_digest_sha256": "54d9ad56defaeac1a8b12d829d666313e18b42e1d28a401a7a2f5c48851813f4",
+  "run_sha256": {
+    "Current": "2160761dd20bff01d1d5d535f529f8d827882afaa5097af5c4294828a7b10c6c",
+    "History": "17f121161458762e38063ac74e28a378dcfbe53ec6c2df8ad50079eb3a8c81ae"
+  }
+}

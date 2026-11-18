@@ -1,0 +1,127 @@
+{
+  "status": "COMPLETE",
+  "condition": "History",
+  "gpu": 2,
+  "pid": 985097,
+  "worker": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/runtime/History_worker.py",
+  "worker_sha256": "5f58ea1657271b86980255b448f07e786861605f17ed4b28dcc7e44a22965374",
+  "protocol_freeze_sha256": "d5c332aa859c096557cbbb416c5017661e32889822c879421ebd28102618068a",
+  "start_unix": 1791917555.0309088,
+  "jobs": [
+    {
+      "tag": "history_infer_dji_0026_2",
+      "script": "infer.py",
+      "command": [
+        "/usr/bin/python",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py",
+        "--gpu",
+        "2",
+        "--tag",
+        "history_infer_dji_0026_2",
+        "infer.py",
+        "--condition",
+        "History",
+        "--sequence",
+        "DJI_0026_2",
+        "--step",
+        "2048"
+      ],
+      "invoked_source_sha256": {
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/infer.py": "b9bab33dad64c159026fe736b5077ea2ed94ece1fc0972ab00e100676237ee76",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577"
+      },
+      "status": "COMPLETE",
+      "gpu": 2,
+      "start_unix": 1791964477.3957787,
+      "launcher_pid": 1014041,
+      "exit_code": 0,
+      "end_unix": 1791964537.4089024,
+      "launcher_receipt_sha256": "0d2c3ef5650cd2b94f539b5e05dcd1420056229b3e096e7567239c60f5500ea7"
+    },
+    {
+      "tag": "history_infer_dji_0067_2",
+      "script": "infer.py",
+      "command": [
+        "/usr/bin/python",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py",
+        "--gpu",
+        "2",
+        "--tag",
+        "history_infer_dji_0067_2",
+        "infer.py",
+        "--condition",
+        "History",
+        "--sequence",
+        "DJI_0067_2",
+        "--step",
+        "2048"
+      ],
+      "invoked_source_sha256": {
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/infer.py": "b9bab33dad64c159026fe736b5077ea2ed94ece1fc0972ab00e100676237ee76",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577"
+      },
+      "status": "COMPLETE",
+      "gpu": 2,
+      "start_unix": 1791964537.547134,
+      "launcher_pid": 1014326,
+      "exit_code": 0,
+      "end_unix": 1791964602.5967283,
+      "launcher_receipt_sha256": "bc5a5edbf6b049d8debb799a0361dcdbf23462cc8059bdcb0551f9f342c69098"
+    },
+    {
+      "tag": "history_evaluate",
+      "script": "evaluate.py",
+      "command": [
+        "/usr/bin/python",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py",
+        "--tag",
+        "history_evaluate",
+        "evaluate.py",
+        "--condition",
+        "History",
+        "--step",
+        "2048"
+      ],
+      "invoked_source_sha256": {
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/evaluate.py": "8bc75424db80e077897384543ace13e665e4bac9ca2be82949d085f310c06381",
+        "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577"
+      },
+      "status": "COMPLETE",
+      "gpu": null,
+      "start_unix": 1791964602.6763587,
+      "launcher_pid": 1014903,
+      "exit_code": 0,
+      "end_unix": 1791964627.6835475,
+      "launcher_receipt_sha256": "e122934a7e3d1845d9d0cdba7ec47304224e20eb7e84a03e08294c3b0ab53185"
+    }
+  ],
+  "main_step": 2048,
+  "train_retry_policy": "never",
+  "inference_retry_policy": "never after a workload launches",
+  "scope": "Wait existing History training and launcher; infer two fixed development clips on GPU2; CPU score History only",
+  "heartbeat_unix": 1791964627.6848617,
+  "training_status": "complete",
+  "training_launcher_status": "COMPLETE",
+  "training_run_sha256": "17f121161458762e38063ac74e28a378dcfbe53ec6c2df8ad50079eb3a8c81ae",
+  "training_launcher_sha256": "60900ad501d4a648f2fb304c5412adce2e73c9848a7ceb6502a319cf19551e77",
+  "training_completed_unix": 1791964477.3033495,
+  "gpu_observation": {
+    "0": [
+      15,
+      0
+    ],
+    "1": [
+      15,
+      0
+    ],
+    "2": [
+      15,
+      0
+    ]
+  },
+  "current_job": null,
+  "end_unix": 1791964627.6848557
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-12T11:28:11.346856+00:00",
+  "scope": "Existing release caches only; no new model prediction accessed.",
+  "output": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_preflight",
+  "original_output": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/preflight",
+  "output_moved_without_recomputation": true,
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "command_mode": "CPU docker python -c: import evaluate; evaluate.summarize(evaluate.REFERENCES, evaluate.BASE / evaluation_code / preflight)",
+  "producer_stdout": {
+    "status": "COMPLETE",
+    "release_O_M_U_A": [
+      700,
+      4015,
+      38368
+    ],
+    "release_S_M_U_A": [
+      720,
+      3967,
+      38641
+    ]
+  },
+  "validator_command": [
+    "python3",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/validate_tables.py",
+    "--directory",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_preflight"
+  ],
+  "validator_exit_code": 0,
+  "validator_stdout": "{\"status\": \"PASS\", \"checks_passed\": 5136, \"conditions\": [\"release\"], \"new_models_evaluated\": [], \"rows\": {\"SUMMARY\": 2, \"SEQUENCE_SUMMARY\": 4, \"OBJECT_COMPARISON\": 10400, \"FRAME_COUNTS\": 640, \"TRACK_SUMMARY\": 260, \"WINDOW_DEPENDENCE\": 27, \"COHORT_TRANSITIONS\": 60, \"CONTINUOUS_MISS_TRACKS\": 900, \"CONTINUOUS_MISS_SUMMARY\": 30, \"RELEASE_MISS_SEGMENTS\": 1547}}\n",
+  "validator_stderr": ""
+}

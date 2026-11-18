@@ -1,0 +1,101 @@
+{
+  "sha": "94862437f451f175673bce9c85f3e14bd9182c21",
+  "node_id": "C_kwDOMJSDZdoAKDk0ODYyNDM3ZjQ1MWYxNzU2NzNiY2U5Yzg1ZjNlMTRiZDkxODJjMjE",
+  "commit": {
+    "author": {
+      "name": "qiangliu.7@outlook.com",
+      "email": "qiangliu.7@outlook.com",
+      "date": "2026-06-01T12:40:50Z"
+    },
+    "committer": {
+      "name": "qiangliu.7@outlook.com",
+      "email": "qiangliu.7@outlook.com",
+      "date": "2026-06-01T12:40:50Z"
+    },
+    "message": "remove polyfill in the document webpage",
+    "tree": {
+      "sha": "008abf938f70199c8e70d1d54d2c62a7b7761289",
+      "url": "https://api.github.com/repos/tum-pbs/ConFIG/git/trees/008abf938f70199c8e70d1d54d2c62a7b7761289"
+    },
+    "url": "https://api.github.com/repos/tum-pbs/ConFIG/git/commits/94862437f451f175673bce9c85f3e14bd9182c21",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/tum-pbs/ConFIG/commits/94862437f451f175673bce9c85f3e14bd9182c21",
+  "html_url": "https://github.com/tum-pbs/ConFIG/commit/94862437f451f175673bce9c85f3e14bd9182c21",
+  "comments_url": "https://api.github.com/repos/tum-pbs/ConFIG/commits/94862437f451f175673bce9c85f3e14bd9182c21/comments",
+  "author": {
+    "login": "qiauil",
+    "id": 137192063,
+    "node_id": "U_kgDOCC1ifw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/137192063?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/qiauil",
+    "html_url": "https://github.com/qiauil",
+    "followers_url": "https://api.github.com/users/qiauil/followers",
+    "following_url": "https://api.github.com/users/qiauil/following{/other_user}",
+    "gists_url": "https://api.github.com/users/qiauil/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/qiauil/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/qiauil/subscriptions",
+    "organizations_url": "https://api.github.com/users/qiauil/orgs",
+    "repos_url": "https://api.github.com/users/qiauil/repos",
+    "events_url": "https://api.github.com/users/qiauil/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/qiauil/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "qiauil",
+    "id": 137192063,
+    "node_id": "U_kgDOCC1ifw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/137192063?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/qiauil",
+    "html_url": "https://github.com/qiauil",
+    "followers_url": "https://api.github.com/users/qiauil/followers",
+    "following_url": "https://api.github.com/users/qiauil/following{/other_user}",
+    "gists_url": "https://api.github.com/users/qiauil/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/qiauil/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/qiauil/subscriptions",
+    "organizations_url": "https://api.github.com/users/qiauil/orgs",
+    "repos_url": "https://api.github.com/users/qiauil/repos",
+    "events_url": "https://api.github.com/users/qiauil/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/qiauil/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "0cfe5aeecbe0dde10fd78814b87345cadc051a04",
+      "url": "https://api.github.com/repos/tum-pbs/ConFIG/commits/0cfe5aeecbe0dde10fd78814b87345cadc051a04",
+      "html_url": "https://github.com/tum-pbs/ConFIG/commit/0cfe5aeecbe0dde10fd78814b87345cadc051a04"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "3f0ef91a900d9e9bd9bad511b6b98329d91b053e",
+      "filename": "mkdocs.yml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/tum-pbs/ConFIG/blob/94862437f451f175673bce9c85f3e14bd9182c21/mkdocs.yml",
+      "raw_url": "https://github.com/tum-pbs/ConFIG/raw/94862437f451f175673bce9c85f3e14bd9182c21/mkdocs.yml",
+      "contents_url": "https://api.github.com/repos/tum-pbs/ConFIG/contents/mkdocs.yml?ref=94862437f451f175673bce9c85f3e14bd9182c21",
+      "patch": "@@ -63,7 +63,7 @@ markdown_extensions:\n \r\n extra_javascript:\r\n     - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML\r\n-    - https://polyfill.io/v3/polyfill.min.js?features=es6\r\n+    #- https://polyfill.io/v3/polyfill.min.js?features=es6\r\n \r\n plugins:\r\n     - search  # default search plugin; needs manually re-enabling when using any other plugins\r"
+    }
+  ]
+}

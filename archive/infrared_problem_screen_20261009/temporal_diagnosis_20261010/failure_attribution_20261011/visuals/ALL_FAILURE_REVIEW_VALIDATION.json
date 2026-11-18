@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "all_condition_frozen_hashes_unchanged": 27,
+  "markdown_local_links": "PASS",
+  "artifact_sha256": {
+    "ALL_FAILURE_REVIEW.md": "c51b4069628e2ad984fa5ed61062dd04c53e7fb7068af63a0eb3d531a1cadc24",
+    "ALL_FAILURE_REVIEW.csv": "815535a906b09084e1734abfbafb76e106e7465387f4594224cea4c4e3fb6476",
+    "ALL_FAILURE_REVIEW_RECORD.json": "0eef3dc43796e6425524df645e90514dcafce588f65da57d90efd1fec4e7ff52",
+    "STABLE_REFERENCE_REVIEW.csv": "f4ef930a530be85194c35163c84cc85a8e9f520fae4c4fba3d7baf1ef5153af9",
+    "write_all_failure_review.py": "fc4bc8e35f3a4406d4cccb3f503eb1b56b9f6d19f907958f71cc817dbea69e2d"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "stage": "stage1_minimal_validation",
+  "status": "active_matched_pilot_training",
+  "updated_date": "2026-10-10",
+  "scope_source": "User activated the persistent first-stage research objective.",
+  "goal_file": "GOAL.md",
+  "runtime_goal_registered": true,
+  "training_started": true,
+  "improvement_established": false,
+  "reused_completed_work": [
+    "result stratification and independent recount",
+    "full-cohort mechanism interventions and audits",
+    "data/supervision candidate IDEA.md",
+    "infrared, video detection and selective context literature notes"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "name": "evidence boundaries",
+      "status": "complete"
+    },
+    {
+      "id": 2,
+      "name": "minimal candidate selection",
+      "status": "complete"
+    },
+    {
+      "id": 3,
+      "name": "data and evaluation protocol alignment",
+      "status": "complete_with_explicit_weak_box_and_scene_limits"
+    },
+    {
+      "id": 4,
+      "name": "small matched pilot with key controls",
+      "status": "in_progress"
+    },
+    {
+      "id": 5,
+      "name": "stage decision and single primary idea",
+      "status": "pending"
+    }
+  ],
+  "stage_limits": {
+    "max_initial_candidates": 2,
+    "initial_seeds_per_configuration": 1,
+    "initial_seed_proposal": 46,
+    "target_training_configurations_including_controls": "4-6; finalize from essential comparisons",
+    "max_evidence_driven_revision_rounds": 1,
+    "require_positive_result_to_finish_decision": false,
+    "full_benchmark_stage": 2
+  },
+  "planned_artifacts": [
+    "EVIDENCE_AND_GAP.md",
+    "DESIGN_DECISION.md",
+    "PILOT_PROTOCOL.md",
+    "PILOT_RESULTS.md",
+    "STAGE1_DECISION.md"
+  ],
+  "next_action": "Finish four frozen 512-step runs; verify terminal state and checkpoints; infer calibration then freeze thresholds before confirmation interpretation.",
+  "project_ccfa_yaml_found": false,
+  "updated_utc": "2026-10-09T20:12:28.679858+00:00",
+  "previous_goal_turn_classification": "progress: goal design and acceptance artifacts created",
+  "main_candidate": "paired_max under explicit weak-box MIL supervision",
+  "data_integrity": "all 2240 JPEG CRC verified, arrays pixel-identical and 70276 original annotations retained",
+  "model_probe": "complete; fixed local projection attenuations harm beneficial-context cases; independently recomputed",
+  "active_training_handles": "runtime/TRAIN_LAUNCHES.json"
+}

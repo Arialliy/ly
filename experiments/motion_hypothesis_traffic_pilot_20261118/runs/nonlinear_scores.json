@@ -1,0 +1,663 @@
+{
+  "status": "exploratory follow-up, same development videos as the linear pilot",
+  "fixed_settings": {
+    "seeds": [
+      46,
+      47
+    ],
+    "steps": 400,
+    "hidden_relu": 16,
+    "balanced_batch": 256,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "loss": "BCEWithLogitsLoss",
+    "backend": "CPU single-thread deterministic",
+    "input": "4 common values and 300 response entries with train-only standardization; same initial weights/sample ids by seed"
+  },
+  "variants": {
+    "group_span_mean": "per proposal and perturbation, average the two groups and all three span responses with equal weights; retain same position/velocity projection and broadcast",
+    "group_mean_per_span": "per proposal, span and perturbation, average A/B, and broadcast over group",
+    "separate_groups_spans": "complete input: two proposals, two groups, three spans and 5x5 perturbations"
+  },
+  "interpretation": "All arms derive from the same cached observations; pooling destroys ordered axes but retains the contribution of every span and their potentially unequal effective temporal weights. Common discovery scores always retain some A information.",
+  "metrics": "empirical FROC evaluated on each development subset exactly as in readout.py; separately swept thresholds for descriptive, not deployment, use",
+  "sha256": {
+    "records.npz": "7ba26d67523f0a0bf126efd99bedfa972b4a9e696c79d2e6b45a2e1a7e1f404d",
+    "labels.json": "97e9ccbc0b79574ec58a77dd37130240ea32241941450c6e4ebad21d21541f2e"
+  },
+  "train_positive_candidates": 927,
+  "train_negative_candidates": 43906,
+  "methods": {
+    "group_span_mean": {
+      "46": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 8,
+              "fp": 6,
+              "fn": 670,
+              "recall": 0.011799410029498525,
+              "fp_per_frame": 0.3333333333333333,
+              "logit_threshold": 3.1999731063842773
+            },
+            "1": {
+              "tp": 12,
+              "fp": 16,
+              "fn": 666,
+              "recall": 0.017699115044247787,
+              "fp_per_frame": 0.8888888888888888,
+              "logit_threshold": 2.9951171875
+            },
+            "5": {
+              "tp": 46,
+              "fp": 88,
+              "fn": 632,
+              "recall": 0.06784660766961652,
+              "fp_per_frame": 4.888888888888889,
+              "logit_threshold": 2.105269193649292
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 13,
+              "fp": 37,
+              "fn": 18,
+              "recall": 0.41935483870967744,
+              "fp_per_frame": 4.111111111111111,
+              "logit_threshold": 1.0337727069854736
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 6,
+              "fp": 4,
+              "fn": 641,
+              "recall": 0.00927357032457496,
+              "fp_per_frame": 0.4444444444444444,
+              "logit_threshold": 3.3122940063476562
+            },
+            "1": {
+              "tp": 10,
+              "fp": 9,
+              "fn": 637,
+              "recall": 0.015455950540958269,
+              "fp_per_frame": 1.0,
+              "logit_threshold": 3.1004016399383545
+            },
+            "5": {
+              "tp": 28,
+              "fp": 45,
+              "fn": 619,
+              "recall": 0.04327666151468315,
+              "fp_per_frame": 5.0,
+              "logit_threshold": 2.419585704803467
+            }
+          }
+        }
+      },
+      "47": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 678,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 678,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 22,
+              "fp": 88,
+              "fn": 656,
+              "recall": 0.032448377581120944,
+              "fp_per_frame": 4.888888888888889,
+              "logit_threshold": 2.1905059814453125
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 13,
+              "fp": 42,
+              "fn": 18,
+              "recall": 0.41935483870967744,
+              "fp_per_frame": 4.666666666666667,
+              "logit_threshold": 0.9422245025634766
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 647,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 1,
+              "fp": 7,
+              "fn": 646,
+              "recall": 0.0015455950540958269,
+              "fp_per_frame": 0.7777777777777778,
+              "logit_threshold": 3.2736363410949707
+            },
+            "5": {
+              "tp": 12,
+              "fp": 41,
+              "fn": 635,
+              "recall": 0.01854714064914992,
+              "fp_per_frame": 4.555555555555555,
+              "logit_threshold": 2.5877480506896973
+            }
+          }
+        }
+      }
+    },
+    "group_mean_per_span": {
+      "46": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 8,
+              "fp": 8,
+              "fn": 670,
+              "recall": 0.011799410029498525,
+              "fp_per_frame": 0.4444444444444444,
+              "logit_threshold": 3.1002354621887207
+            },
+            "1": {
+              "tp": 9,
+              "fp": 14,
+              "fn": 669,
+              "recall": 0.01327433628318584,
+              "fp_per_frame": 0.7777777777777778,
+              "logit_threshold": 2.99808669090271
+            },
+            "5": {
+              "tp": 41,
+              "fp": 90,
+              "fn": 637,
+              "recall": 0.06047197640117994,
+              "fp_per_frame": 5.0,
+              "logit_threshold": 2.175589084625244
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 12,
+              "fp": 41,
+              "fn": 19,
+              "recall": 0.3870967741935484,
+              "fp_per_frame": 4.555555555555555,
+              "logit_threshold": 1.195749282836914
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 5,
+              "fp": 4,
+              "fn": 642,
+              "recall": 0.0077279752704791345,
+              "fp_per_frame": 0.4444444444444444,
+              "logit_threshold": 3.511157512664795
+            },
+            "1": {
+              "tp": 8,
+              "fp": 8,
+              "fn": 639,
+              "recall": 0.012364760432766615,
+              "fp_per_frame": 0.8888888888888888,
+              "logit_threshold": 3.1002354621887207
+            },
+            "5": {
+              "tp": 19,
+              "fp": 33,
+              "fn": 628,
+              "recall": 0.02936630602782071,
+              "fp_per_frame": 3.6666666666666665,
+              "logit_threshold": 2.620157480239868
+            }
+          }
+        }
+      },
+      "47": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 1,
+              "fp": 8,
+              "fn": 677,
+              "recall": 0.0014749262536873156,
+              "fp_per_frame": 0.4444444444444444,
+              "logit_threshold": 3.4241995811462402
+            },
+            "1": {
+              "tp": 2,
+              "fp": 10,
+              "fn": 676,
+              "recall": 0.0029498525073746312,
+              "fp_per_frame": 0.5555555555555556,
+              "logit_threshold": 3.341550350189209
+            },
+            "5": {
+              "tp": 26,
+              "fp": 89,
+              "fn": 652,
+              "recall": 0.038348082595870206,
+              "fp_per_frame": 4.944444444444445,
+              "logit_threshold": 2.240168571472168
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 12,
+              "fp": 33,
+              "fn": 19,
+              "recall": 0.3870967741935484,
+              "fp_per_frame": 3.6666666666666665,
+              "logit_threshold": 1.3179094791412354
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 2,
+              "fp": 3,
+              "fn": 645,
+              "recall": 0.0030911901081916537,
+              "fp_per_frame": 0.3333333333333333,
+              "logit_threshold": 3.341550350189209
+            },
+            "1": {
+              "tp": 3,
+              "fp": 8,
+              "fn": 644,
+              "recall": 0.00463678516228748,
+              "fp_per_frame": 0.8888888888888888,
+              "logit_threshold": 3.172929525375366
+            },
+            "5": {
+              "tp": 13,
+              "fp": 44,
+              "fn": 634,
+              "recall": 0.02009273570324575,
+              "fp_per_frame": 4.888888888888889,
+              "logit_threshold": 2.564183473587036
+            }
+          }
+        }
+      }
+    },
+    "separate_groups_spans": {
+      "46": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 9,
+              "fp": 7,
+              "fn": 669,
+              "recall": 0.01327433628318584,
+              "fp_per_frame": 0.3888888888888889,
+              "logit_threshold": 3.070174217224121
+            },
+            "1": {
+              "tp": 11,
+              "fp": 18,
+              "fn": 667,
+              "recall": 0.016224188790560472,
+              "fp_per_frame": 1.0,
+              "logit_threshold": 2.8911185264587402
+            },
+            "5": {
+              "tp": 34,
+              "fp": 87,
+              "fn": 644,
+              "recall": 0.05014749262536873,
+              "fp_per_frame": 4.833333333333333,
+              "logit_threshold": 2.1843366622924805
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 13,
+              "fp": 41,
+              "fn": 18,
+              "recall": 0.41935483870967744,
+              "fp_per_frame": 4.555555555555555,
+              "logit_threshold": 1.112676978111267
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 642,
+              "recall": 0.0077279752704791345,
+              "fp_per_frame": 0.0,
+              "logit_threshold": 3.727607250213623
+            },
+            "1": {
+              "tp": 9,
+              "fp": 7,
+              "fn": 638,
+              "recall": 0.013910355486862442,
+              "fp_per_frame": 0.7777777777777778,
+              "logit_threshold": 3.070174217224121
+            },
+            "5": {
+              "tp": 20,
+              "fp": 42,
+              "fn": 627,
+              "recall": 0.030911901081916538,
+              "fp_per_frame": 4.666666666666667,
+              "logit_threshold": 2.467787265777588
+            }
+          }
+        }
+      },
+      "47": {
+        "all_dev": {
+          "frames": 18,
+          "targets": 678,
+          "candidates": 17944,
+          "ignored_candidates": 482,
+          "candidate_oracle_tp": 308,
+          "candidate_oracle_recall": 0.45427728613569324,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 678,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 2,
+              "fp": 13,
+              "fn": 676,
+              "recall": 0.0029498525073746312,
+              "fp_per_frame": 0.7222222222222222,
+              "logit_threshold": 3.3055853843688965
+            },
+            "5": {
+              "tp": 25,
+              "fp": 88,
+              "fn": 653,
+              "recall": 0.03687315634218289,
+              "fp_per_frame": 4.888888888888889,
+              "logit_threshold": 2.2455954551696777
+            }
+          }
+        },
+        "DJI_0026_2": {
+          "frames": 9,
+          "targets": 31,
+          "candidates": 8965,
+          "ignored_candidates": 132,
+          "candidate_oracle_tp": 21,
+          "candidate_oracle_recall": 0.6774193548387096,
+          "froc": {
+            "0.5": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 31,
+              "recall": 0.0,
+              "fp_per_frame": 0.0,
+              "logit_threshold": null
+            },
+            "5": {
+              "tp": 12,
+              "fp": 34,
+              "fn": 19,
+              "recall": 0.3870967741935484,
+              "fp_per_frame": 3.7777777777777777,
+              "logit_threshold": 1.2080695629119873
+            }
+          }
+        },
+        "DJI_0067_2": {
+          "frames": 9,
+          "targets": 647,
+          "candidates": 8979,
+          "ignored_candidates": 350,
+          "candidate_oracle_tp": 287,
+          "candidate_oracle_recall": 0.4435857805255023,
+          "froc": {
+            "0.5": {
+              "tp": 2,
+              "fp": 4,
+              "fn": 645,
+              "recall": 0.0030911901081916537,
+              "fp_per_frame": 0.4444444444444444,
+              "logit_threshold": 3.3055853843688965
+            },
+            "1": {
+              "tp": 4,
+              "fp": 8,
+              "fn": 643,
+              "recall": 0.0061823802163833074,
+              "fp_per_frame": 0.8888888888888888,
+              "logit_threshold": 3.1707890033721924
+            },
+            "5": {
+              "tp": 9,
+              "fp": 32,
+              "fn": 638,
+              "recall": 0.013910355486862442,
+              "fp_per_frame": 3.5555555555555554,
+              "logit_threshold": 2.681931972503662
+            }
+          }
+        }
+      }
+    }
+  }
+}

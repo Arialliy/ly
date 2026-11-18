@@ -1,0 +1,110 @@
+{
+  "status": "COMPLETE",
+  "figures": [
+    {
+      "name": "frame_DJI_0026_2_000",
+      "sequence": "DJI_0026_2",
+      "frame": 0,
+      "arrangement": "O",
+      "strict_small_gt": 4,
+      "release_matched": 2,
+      "T_matched": 2
+    },
+    {
+      "name": "frame_DJI_0026_2_080",
+      "sequence": "DJI_0026_2",
+      "frame": 80,
+      "arrangement": "O",
+      "strict_small_gt": 4,
+      "release_matched": 2,
+      "T_matched": 2
+    },
+    {
+      "name": "frame_DJI_0026_2_159",
+      "sequence": "DJI_0026_2",
+      "frame": 159,
+      "arrangement": "O",
+      "strict_small_gt": 2,
+      "release_matched": 1,
+      "T_matched": 1
+    },
+    {
+      "name": "zoom_DJI_0026_2_080_track_400006",
+      "sequence": "DJI_0026_2",
+      "frame": 80,
+      "track_id": 400006,
+      "annotation_id": 805280,
+      "crop_xywh": [
+        544,
+        270,
+        96,
+        96
+      ],
+      "bbox": [
+        631.0,
+        314.0,
+        9.0,
+        8.0
+      ],
+      "release_box_max": 8.52085349833942e-07,
+      "T_box_max": 8.442401053798676e-07,
+      "touches_original_image_boundary": true,
+      "low_all_05": true,
+      "extreme_all_001": true
+    },
+    {
+      "name": "frame_DJI_0067_2_000",
+      "sequence": "DJI_0067_2",
+      "frame": 0,
+      "arrangement": "O",
+      "strict_small_gt": 34,
+      "release_matched": 1,
+      "T_matched": 1
+    },
+    {
+      "name": "frame_DJI_0067_2_080",
+      "sequence": "DJI_0067_2",
+      "frame": 80,
+      "arrangement": "O",
+      "strict_small_gt": 30,
+      "release_matched": 3,
+      "T_matched": 3
+    },
+    {
+      "name": "frame_DJI_0067_2_159",
+      "sequence": "DJI_0067_2",
+      "frame": 159,
+      "arrangement": "O",
+      "strict_small_gt": 25,
+      "release_matched": 1,
+      "T_matched": 1
+    },
+    {
+      "name": "zoom_DJI_0067_2_080_track_7700051",
+      "sequence": "DJI_0067_2",
+      "frame": 80,
+      "track_id": 7700051,
+      "annotation_id": 874661,
+      "crop_xywh": [
+        157,
+        137,
+        96,
+        96
+      ],
+      "bbox": [
+        201.0,
+        180.0,
+        9.0,
+        10.0
+      ],
+      "release_box_max": 4.2897443108813604e-07,
+      "T_box_max": 4.2555979007374845e-07,
+      "touches_original_image_boundary": false,
+      "low_all_05": true,
+      "extreme_all_001": true
+    }
+  ],
+  "model_runs": 0,
+  "caution": "Ground-truth boxes are coarse annotations. Cyan contours include foreground belonging to all object sizes and are not themselves false-alarm labels. No new matching or physical-visibility judgment.",
+  "display": "Raw uint8 range0..255; all probability crops share0..1; interpolation nearest. White crop margins are outside sampled image data; boundary boxes are preserved."
+}

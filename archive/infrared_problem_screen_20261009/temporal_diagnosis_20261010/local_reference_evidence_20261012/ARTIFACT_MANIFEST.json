@@ -1,0 +1,1522 @@
+{
+  "status": "COMPLETE",
+  "created_unix": 1791751576.5466762,
+  "scope": "All files in this stage excluding Python bytecode and this manifest; historical sources bound by receipts.",
+  "files": [
+    {
+      "path": "AUX_RESULT_REVIEW.json",
+      "size_bytes": 7477,
+      "sha256": "0b200f9ad19c5438db564c55f31c7ae62c0650516b249eabe199618a21dec382"
+    },
+    {
+      "path": "AUX_RESULT_REVIEW.md",
+      "size_bytes": 3797,
+      "sha256": "72d01fe4b9cbcde14534b0859cce6f06ba8c3a033f2eb88f72e66f142c25d71b"
+    },
+    {
+      "path": "DECISION.json",
+      "size_bytes": 2107,
+      "sha256": "f9cc4451c5f1f402958b30b48a2db22f6b172340b2a9b3daf4cfe10ffd59ed54"
+    },
+    {
+      "path": "DIAGNOSTIC_FREEZE.json",
+      "size_bytes": 1033,
+      "sha256": "b207a403632efff49da6924ef6e717ed15d8ef113ebb2e48047d950b4f02ec55"
+    },
+    {
+      "path": "DIAGNOSTIC_TRIGGER.md",
+      "size_bytes": 1491,
+      "sha256": "9b11549626b57874e6e05b7d0574be205547849fabc700fc88cdae2b07603f4e"
+    },
+    {
+      "path": "ENGINEERING_SPEC.json",
+      "size_bytes": 4635,
+      "sha256": "c858f218617f10c145b00f2059c1ef66acd815f73919f9a41376b652b877929d"
+    },
+    {
+      "path": "EVALUATION_PROTOCOL.md",
+      "size_bytes": 5248,
+      "sha256": "e87be9feb2b24624e74f6b090491670ae18b8dc6c8f5c8c37c3405a52210f4d4"
+    },
+    {
+      "path": "FINAL_EXECUTION_AUDIT.json",
+      "size_bytes": 6770,
+      "sha256": "e6a57abf9a6d28f6b2c3e5469375d6dcfbb89392f73da1d60ef66b884074568d"
+    },
+    {
+      "path": "LITERATURE_ALIGNMENT.md",
+      "size_bytes": 1271,
+      "sha256": "e4c7e71494f849e3819f0c2a82becb9b7339b50e0c9e637eaac6b8d39ebfdf37"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "size_bytes": 6562,
+      "sha256": "a51d1ff730af2eeeb79a9701267ee17278128426cf8d2cdb3b8769ae66c7d19a"
+    },
+    {
+      "path": "PROTOCOL_FREEZE.json",
+      "size_bytes": 1932,
+      "sha256": "6aeec454ecb1bd34ab9e6a059770b1640de6df60af61acbe69e238fc4a542e57"
+    },
+    {
+      "path": "REPORT.md",
+      "size_bytes": 10247,
+      "sha256": "c82b9cfcdb708ef988624d32c8d05f3ceb06e4fda0b3ad5c8928b0ceca11a086"
+    },
+    {
+      "path": "RESULT_REVIEW.json",
+      "size_bytes": 135804,
+      "sha256": "a0f409f67866377d6c9e24eccffbdb66c7a63723056893c9f9c897f48cfd947b"
+    },
+    {
+      "path": "RESULT_REVIEW.md",
+      "size_bytes": 6771,
+      "sha256": "8ed7b91cdd9cab17ac22579898635fc47e27d251cebf4aa677789187036f5640"
+    },
+    {
+      "path": "STATUS.json",
+      "size_bytes": 909,
+      "sha256": "be7d70494baf585dccd35424ff739b78c9496a22dc2c93f2dcf1287fbf68f8fa"
+    },
+    {
+      "path": "TRAINING_AUDIT.json",
+      "size_bytes": 23635,
+      "sha256": "4557eca2b142409fbb8ea29b9db610de5dcf51c5eaef201c6a9164d596112f90"
+    },
+    {
+      "path": "TRAINING_AUDIT.md",
+      "size_bytes": 1223,
+      "sha256": "3e0bae25d2b9c1820dad292636f6455db1abb2119a15b057d7b3f75a94f84c90"
+    },
+    {
+      "path": "USER_REQUEST.txt",
+      "size_bytes": 14098,
+      "sha256": "282f7a629156b383b32522e134629b941f9d796a30cebe6a374707cea997215b"
+    },
+    {
+      "path": "audit_code/audit_training.py",
+      "size_bytes": 16899,
+      "sha256": "ac4b30e83e02a1f1739a8b75315e9dd4b761ef6ed06eec0f0b3466591b12fff5"
+    },
+    {
+      "path": "checks/CPU_KTHVALUE_ONLY_SUPERSEDED.json",
+      "size_bytes": 5460,
+      "sha256": "da1a4ed6d503138cbea3c3cd2a5e780bd78c932a78e0270ca1da2440f6281025"
+    },
+    {
+      "path": "checks/GPU_INTEGRATION.json",
+      "size_bytes": 2661,
+      "sha256": "12eb9027b0f2596a11f3ee35cd3494cf0b6fef4f6d9843eda21749641ce5120b"
+    },
+    {
+      "path": "checks/MEDIAN_IMPLEMENTATION_NOTE.md",
+      "size_bytes": 1237,
+      "sha256": "a933748a679ed7af02ae7510e291accbbf82a22b1c4c2c3688af7a0240bf7090"
+    },
+    {
+      "path": "checks/MISREFERENCE_CPU_TESTS.json",
+      "size_bytes": 755,
+      "sha256": "405c50857c287bbb7e481b7b5cafb542b5cd7f75932273f2a5f8483a6739b772"
+    },
+    {
+      "path": "checks/MODULE_CPU_TESTS.json",
+      "size_bytes": 5460,
+      "sha256": "5fa9affe925f7aaa147b1f7b8705cb9b92f1369987e7dcb09cfb6f9a5066d45c"
+    },
+    {
+      "path": "code/infer_evidence.py",
+      "size_bytes": 16891,
+      "sha256": "c67bb9b926fbc141842b446c9d58d29c372ac6b917c04b6efa0c809395d80a80"
+    },
+    {
+      "path": "code/launch_gpu.py",
+      "size_bytes": 3957,
+      "sha256": "03e607ab722e74b948592a3e2f93c46124d0c26c25247a8028194b5be793e2d4"
+    },
+    {
+      "path": "code/module.py",
+      "size_bytes": 8853,
+      "sha256": "f87efd3f00c5167672045c83880c693e892cf906b58103f6327a55bba2502f2a"
+    },
+    {
+      "path": "code/preflight.py",
+      "size_bytes": 5440,
+      "sha256": "1b76914bb3813a3f6911cf2f6a8e9404cc9ea540c3c4899291387ca04212b041"
+    },
+    {
+      "path": "code/test_module.py",
+      "size_bytes": 11272,
+      "sha256": "32c0800e915e63ed101f1f30a0386808ca7a3f9feba6086073fa53b975d425a4"
+    },
+    {
+      "path": "code/train_evidence.py",
+      "size_bytes": 19335,
+      "sha256": "96362e07c45e1d435e2f890fd0a2aaca03581e2d7f741dbedfa07cc0a41e5342"
+    },
+    {
+      "path": "diagnostic_code/SCORING_SOURCE.json",
+      "size_bytes": 695,
+      "sha256": "4de17f76ffbe083f6c09803d0d373ac0c189ca9b40b23cc8630a1c22b7989f68"
+    },
+    {
+      "path": "diagnostic_code/infer_misreference.py",
+      "size_bytes": 18465,
+      "sha256": "dcba49a88eae1e089d82d1679711e5920c57a6286d5db92b6b795b8fffbaa66f"
+    },
+    {
+      "path": "diagnostic_code/launch_score_misreference.py",
+      "size_bytes": 1682,
+      "sha256": "d8caaec91f0286a9dcc2c649b760b1034a7659c2b65316e74acd95a74e120c9a"
+    },
+    {
+      "path": "diagnostic_code/score_misreference.py",
+      "size_bytes": 9661,
+      "sha256": "41ec0fd8add2e3c6c649cede1cb7259cf6d5b13a41fb84f244ca48c7541f543d"
+    },
+    {
+      "path": "diagnostic_code/test_misreference.py",
+      "size_bytes": 3837,
+      "sha256": "023d9444059352f707962bb4ae71bfd55dcaa56643aa23591ad68ae3af34bff5"
+    },
+    {
+      "path": "diagnostic_evaluation/COHORT_TRANSITIONS.csv",
+      "size_bytes": 97826,
+      "sha256": "c6a7b65d413c1471ad9069da7189e5adfb1784564480a5cf9c7dc3927e5f345f"
+    },
+    {
+      "path": "diagnostic_evaluation/CONTINUOUS_MISS_SCHEMA.json",
+      "size_bytes": 1475,
+      "sha256": "1ac81dd249c852c6da559502fe49dcb8dacb23d9f92eac6b6a5f345e2d573f80"
+    },
+    {
+      "path": "diagnostic_evaluation/CONTINUOUS_MISS_SUMMARY.csv",
+      "size_bytes": 22818,
+      "sha256": "f533f1c3babca65003b2f7c3f2585da93e9c5e4b53e1c28c2ba87eb64dcb2d85"
+    },
+    {
+      "path": "diagnostic_evaluation/CONTINUOUS_MISS_TRACKS.csv",
+      "size_bytes": 394894,
+      "sha256": "464bd809aee133353fcfce4d347ecf8fe72fd2028f681d8167d8013c04224f04"
+    },
+    {
+      "path": "diagnostic_evaluation/CPU_SCORE_LAUNCH.json",
+      "size_bytes": 1483,
+      "sha256": "3a75318936293c18b91ae2a34c5330c19e341088c30ada466b1e3557f95bc893"
+    },
+    {
+      "path": "diagnostic_evaluation/CPU_SUMMARY_LAUNCH.json",
+      "size_bytes": 1505,
+      "sha256": "f58be0aa6cd0bac0bf74b765e3e78db3716bd3a9119e2fce38240bbf5d47e3f9"
+    },
+    {
+      "path": "diagnostic_evaluation/FRAME_COUNTS.csv",
+      "size_bytes": 182228,
+      "sha256": "d8318ce29629808b1d09181417a8680c53e9430639159ed040bff466d324a26d"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 401323,
+      "sha256": "73440f9fb71d5290bdc55f1589d32c90e1071ba4a8b6693198032fc286b5f5b9"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0026_2/FRAME_COUNTS.csv",
+      "size_bytes": 20544,
+      "sha256": "8d595aba6ad9d6396731b39bdd680cddc080a9b7ac758d2cf254bca7a8043945"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0026_2/component_areas.npz",
+      "size_bytes": 4750,
+      "sha256": "c1456e17da74d96ddbd93b2d80a729e1e831c80087def3ddcf478ca71fb2fd60"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0026_2/scores.npz",
+      "size_bytes": 15517,
+      "sha256": "215e8cd34a746845b10cb065703a26bef769ca8ba2257e5788fa16261a77170f"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 4120330,
+      "sha256": "8eb8f5adff73edac97653eb6d1d46f8be69da574cd84fe6d7c11f4cf0abd6432"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0067_2/FRAME_COUNTS.csv",
+      "size_bytes": 22354,
+      "sha256": "d7e06939f3235cb77529b5e2cd4cbcf11233291492ff0194933264ac6aa9badc"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0067_2/component_areas.npz",
+      "size_bytes": 16275,
+      "sha256": "68fd5857316497968c24daaefac855218929c5957ef7dff950c746ad0f6cc80c"
+    },
+    {
+      "path": "diagnostic_evaluation/N2_misreference/DJI_0067_2/scores.npz",
+      "size_bytes": 149255,
+      "sha256": "d6732194225b880c06d92e54e99173c8ba59fb963150046f43335dda6d19a1ca"
+    },
+    {
+      "path": "diagnostic_evaluation/OBJECT_COMPARISON.csv",
+      "size_bytes": 3325746,
+      "sha256": "8c556e27878062ae7dab28cd999f2a474f739389dccd94b2454feade4c869524"
+    },
+    {
+      "path": "diagnostic_evaluation/RECOVERY_CONCENTRATION.csv",
+      "size_bytes": 4643,
+      "sha256": "1bb1b9741fbbaf2e2a9c67474770b160f50a415024ce7a08044ce65abaec3d2c"
+    },
+    {
+      "path": "diagnostic_evaluation/RELEASE_MISS_SEGMENTS.csv",
+      "size_bytes": 112431,
+      "sha256": "95408305268403a6f7f9fa758df43bb17f1e4c124396105817cfca85297a7ad1"
+    },
+    {
+      "path": "diagnostic_evaluation/SEQUENCE_SUMMARY.csv",
+      "size_bytes": 8710,
+      "sha256": "0c007ee52dc3bcb9dea309eb102861206c4158b64b3ea6b66e469e018062c629"
+    },
+    {
+      "path": "diagnostic_evaluation/SUMMARY.csv",
+      "size_bytes": 5371,
+      "sha256": "894aaa933b9835bbaf665ab67c51ca45b4b39147762a8aec51927af6c63511e5"
+    },
+    {
+      "path": "diagnostic_evaluation/SUMMARY_COMPLETE.json",
+      "size_bytes": 19992,
+      "sha256": "2cc353561c6e5c4ab9d22e1e57af85c32d50018979c85244926ef74a13da3b0f"
+    },
+    {
+      "path": "diagnostic_evaluation/TABLE_VALIDATION.json",
+      "size_bytes": 2172734,
+      "sha256": "caff7c6aa6c8a787ca082cf7e6506a190e94905797efbbcf397beca6ce85f30e"
+    },
+    {
+      "path": "diagnostic_evaluation/TRACK_SUMMARY.csv",
+      "size_bytes": 113834,
+      "sha256": "198e8715803d0529ea3b31f3419aabb0c7090cc544a0ae35fe448a8729411f2b"
+    },
+    {
+      "path": "diagnostic_evaluation/TRAINING_COMPARABILITY.json",
+      "size_bytes": 5055,
+      "sha256": "5e488240dfe385c4381b4a4208f85419062516aadcb4b0a6b2889284cb93f5b5"
+    },
+    {
+      "path": "diagnostic_evaluation/UNIQUE_LOW_RECOVERY_CHECK.json",
+      "size_bytes": 1451,
+      "sha256": "874293f60719596e8195dbc3aa0b35a5f9664a49e31022dcee6923287cf1f9e5"
+    },
+    {
+      "path": "diagnostic_evaluation/WINDOW_DEPENDENCE.csv",
+      "size_bytes": 8140,
+      "sha256": "f84a926f84d449f035d8f805ef40a9fe561cbc63a8ca582af4c9da619a518765"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 16832,
+      "sha256": "447a058b27415c9eefb137e42416815e1bd23501985ef1175d84ad2978766426"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/RUNNING.json",
+      "size_bytes": 12192,
+      "sha256": "018fce90290c4f434bb0fdd2991effdd0747697704645c6599108cba8cd20a54"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/ZERO_SHIFT_CHECK.json",
+      "size_bytes": 541,
+      "sha256": "5aa3a33f1c538c5ef33aae8df1f61ae62ac3101974ed09f165fdf987f21443d1"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/official_fused.npz",
+      "size_bytes": 178963192,
+      "sha256": "9dbe07849d04b1a5057d7432c6f86e012f9a4390a42f46f009dff903be3ab872"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_000.npz",
+      "size_bytes": 44852900,
+      "sha256": "66fabe43b807fcd5759fed4408b92092b6ef5955805f14b47e5053167130fe39"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_024.npz",
+      "size_bytes": 44743447,
+      "sha256": "4eaf18685806e0b5a25e51630e9019a8fc79d42b6eca21dedb552a34bd98ba2c"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_036.npz",
+      "size_bytes": 44736216,
+      "sha256": "bb3ef9fe9adf05bf43a62281feff295edd4b1fa67d4580941ea0c68d90b90398"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_060.npz",
+      "size_bytes": 44654829,
+      "sha256": "10841215a3554c411ba4195a9e477c579dbcd99b86fc934d83359414cbfa3f43"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_072.npz",
+      "size_bytes": 44642849,
+      "sha256": "551f90301d7f136f5ca66c7104fa012cc7e6754164a2b07ac12fe8d21167503c"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_096.npz",
+      "size_bytes": 44641627,
+      "sha256": "165cccb50bb53032bc1422177ce3a334787dbda30c5830ea1daa30058d84b41e"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_108.npz",
+      "size_bytes": 44705518,
+      "sha256": "30930cdb8f2bfd22a97f9c97d1caf192347622fc34f2aca2c9b934417c79c00f"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0026_2/windows/window_120.npz",
+      "size_bytes": 45095387,
+      "sha256": "1496a617174200d56bc56b3d956b52d1154f9c003a08e0d3929b6724bf480222"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 16842,
+      "sha256": "1d8d6cc12c911980f626bb34c8eb92ed2f403070ae609903a68962e1d065577f"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/RUNNING.json",
+      "size_bytes": 12192,
+      "sha256": "62751c7bb95f1b9c2f524621c9d1687eab4d2b01fab8691901eb78a521df5512"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/ZERO_SHIFT_CHECK.json",
+      "size_bytes": 540,
+      "sha256": "5deba603e1588a5bbaa4a31465c292a596a5fa82855fdd085f5bf8184bf3efbf"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/official_fused.npz",
+      "size_bytes": 186988062,
+      "sha256": "5dcc2119951dbde30bb75b35d655ab2db6d2d9dbf60a160386bf3fbbe2817f3b"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_000.npz",
+      "size_bytes": 46737148,
+      "sha256": "6e67a921403d7d31efaade1b4d335d50e4d4061bdebfa8669a2b868f3634925e"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_024.npz",
+      "size_bytes": 46798942,
+      "sha256": "87259915b377d2333b1313475b56577c8801c88099cd39e21261a01dd2713001"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_036.npz",
+      "size_bytes": 46845319,
+      "sha256": "5e1caa67805f5c42609ad6adf5a0a20336b4a6fd180215805c27f3869950f901"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_060.npz",
+      "size_bytes": 46880695,
+      "sha256": "1fe157c18e4a171c65aa1da3986cfb6b9a1c69c25fd8446a2210a76a8aff26a9"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_072.npz",
+      "size_bytes": 46871664,
+      "sha256": "37a1fa42068edc56fd23b1a9926f1865c5c300e92bd40c232d712db824e7b6b6"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_096.npz",
+      "size_bytes": 46880583,
+      "sha256": "e400dc5291dd5dc0f7e9ef55b0fc1f79028897f8e9206b4f588b83fb13a5c69c"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_108.npz",
+      "size_bytes": 46906321,
+      "sha256": "166979882ad84578184a6443f75754dcb03f02f19a98873a31169acc920fa889"
+    },
+    {
+      "path": "diagnostic_predictions/N2_misreference/DJI_0067_2/windows/window_120.npz",
+      "size_bytes": 46941285,
+      "sha256": "967d5abf81d6537a74836624915b788f4ac7a2dc2ca604a9f32165836b8f0e4b"
+    },
+    {
+      "path": "evaluation/COHORT_TRANSITIONS.csv",
+      "size_bytes": 76072,
+      "sha256": "ff6f8ca546d9cfd29100077dc2f17fe30fd648541f58fb934615b87a37f03e1d"
+    },
+    {
+      "path": "evaluation/CONTINUOUS_MISS_SCHEMA.json",
+      "size_bytes": 1475,
+      "sha256": "4a0138d4f01cecffca8eabc9351defae90d409eb1ef54a8feda5dba9a40c5454"
+    },
+    {
+      "path": "evaluation/CONTINUOUS_MISS_SUMMARY.csv",
+      "size_bytes": 17500,
+      "sha256": "458af9d38effef47ba48a73b48a5f7eeb9aea597829dc0d24a194de79058d30c"
+    },
+    {
+      "path": "evaluation/CONTINUOUS_MISS_TRACKS.csv",
+      "size_bytes": 307464,
+      "sha256": "63e29f393e8bc259b7eaecc739f5685819c64569c153e62416eb2a7e0a0f5d05"
+    },
+    {
+      "path": "evaluation/FRAME_COUNTS.csv",
+      "size_bytes": 139818,
+      "sha256": "6dd210af6413321d3b30a5a14d99e981dcefaad9ac1a7a2eb924686c3777d1b8"
+    },
+    {
+      "path": "evaluation/N0/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 400043,
+      "sha256": "fb1949c1016321d1fdda3f455c04b83dbf362ea341fb14598eb487e5f090c6b8"
+    },
+    {
+      "path": "evaluation/N0/DJI_0026_2/FRAME_COUNTS.csv",
+      "size_bytes": 16384,
+      "sha256": "f9fb2688a1d72ddf73c1b00eb0685ffba9cf904d714a98965ededb60e65fa074"
+    },
+    {
+      "path": "evaluation/N0/DJI_0026_2/component_areas.npz",
+      "size_bytes": 4741,
+      "sha256": "44bf13abbf16b3464a96cd0bbc648898c1bc674c173945f11f073ecc2159f674"
+    },
+    {
+      "path": "evaluation/N0/DJI_0026_2/scores.npz",
+      "size_bytes": 15510,
+      "sha256": "668f42f15e91490b84b8487c5fcf6ae583d9ea6209e8c2639cb80d7f67b42028"
+    },
+    {
+      "path": "evaluation/N0/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 4119050,
+      "sha256": "642807b46c8ef95d14dc57f228393bb5de717e17e717c6f000643a6fbd42e5b7"
+    },
+    {
+      "path": "evaluation/N0/DJI_0067_2/FRAME_COUNTS.csv",
+      "size_bytes": 18198,
+      "sha256": "b1e77d93c2cfa3049c7d816281fc76712b4e940b06718dcef0d839c73a9b60be"
+    },
+    {
+      "path": "evaluation/N0/DJI_0067_2/component_areas.npz",
+      "size_bytes": 16079,
+      "sha256": "bc13371e0120dd629a0e4c2a52807ea4648f7767c7604debd7e679ae72e4c2af"
+    },
+    {
+      "path": "evaluation/N0/DJI_0067_2/scores.npz",
+      "size_bytes": 149352,
+      "sha256": "09eab235f38879dfd881b15e2d21a72dbfc6ba3cf7a6a9f6248e91cc04991c02"
+    },
+    {
+      "path": "evaluation/N1/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 400043,
+      "sha256": "8a0d509934f4dc8ff9234506ab4c313cacfb036417f86c6b34685f5198161d49"
+    },
+    {
+      "path": "evaluation/N1/DJI_0026_2/FRAME_COUNTS.csv",
+      "size_bytes": 16384,
+      "sha256": "3da6086b310bb9f7a4e338f2ea1ff94bae1f7ae17caa89576d51d073959c75b8"
+    },
+    {
+      "path": "evaluation/N1/DJI_0026_2/component_areas.npz",
+      "size_bytes": 4744,
+      "sha256": "3d99b31852aff61cad20ed71c4571ebbf3d2d5f7e43f620caff77f5a92495d23"
+    },
+    {
+      "path": "evaluation/N1/DJI_0026_2/scores.npz",
+      "size_bytes": 15506,
+      "sha256": "74484bec1d472ff355399442cfd2f679d270403571095b09249a1b5d30448b08"
+    },
+    {
+      "path": "evaluation/N1/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 4119051,
+      "sha256": "9e8ce2c917e08e528fddda4c176e0977ac9f8faa4415d4ade80dc8d6d463c01f"
+    },
+    {
+      "path": "evaluation/N1/DJI_0067_2/FRAME_COUNTS.csv",
+      "size_bytes": 18198,
+      "sha256": "d6706302824b5d0b9e8ca25fbb9e81fe36429722390b58877d0c57b31f8a78d1"
+    },
+    {
+      "path": "evaluation/N1/DJI_0067_2/component_areas.npz",
+      "size_bytes": 16091,
+      "sha256": "5f9fcd8e3457c1f57c0ac515fcbe7e28d316521f9717cb12ae3238d5e00e68b5"
+    },
+    {
+      "path": "evaluation/N1/DJI_0067_2/scores.npz",
+      "size_bytes": 149314,
+      "sha256": "3f091e88e3d1780e8430b4b64ce5acd382b7bc9b3c6d296bc968739997205644"
+    },
+    {
+      "path": "evaluation/N2/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 400044,
+      "sha256": "282a747415c99bc7df829d5f0dd3a40ec44c78e5470b5ecb3a1ddf08dc58a038"
+    },
+    {
+      "path": "evaluation/N2/DJI_0026_2/FRAME_COUNTS.csv",
+      "size_bytes": 16384,
+      "sha256": "102cc968c250790c32f3a8ce5253e339018403c09e1aeb2e6514750a0e2c1b5b"
+    },
+    {
+      "path": "evaluation/N2/DJI_0026_2/component_areas.npz",
+      "size_bytes": 4754,
+      "sha256": "a1123e2491d48138d5b08a07d6edbc49849a8a93a47c80f19edcd28a79a47832"
+    },
+    {
+      "path": "evaluation/N2/DJI_0026_2/scores.npz",
+      "size_bytes": 15544,
+      "sha256": "9a6104f31ab7e5046142f0bf14c73b0d1ff8d11369d39a3ab486b050211f05e3"
+    },
+    {
+      "path": "evaluation/N2/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 4119050,
+      "sha256": "dff8624a2776c11dab9cb9226e34d25c073e979fab0279f30277c3803c1031cb"
+    },
+    {
+      "path": "evaluation/N2/DJI_0067_2/FRAME_COUNTS.csv",
+      "size_bytes": 18198,
+      "sha256": "6538a35d00f1bd1d6db30296a46f5cb6573f295a7027b89acc475f1106191eaa"
+    },
+    {
+      "path": "evaluation/N2/DJI_0067_2/component_areas.npz",
+      "size_bytes": 16146,
+      "sha256": "f481d0e8103a0c63562c952f8cf5cb7638f507e7b7cd275f19e754b8eec10a4f"
+    },
+    {
+      "path": "evaluation/N2/DJI_0067_2/scores.npz",
+      "size_bytes": 149331,
+      "sha256": "c4d62cbd20aa05328a4555c3ca62c284fb2d9a937a1b517059aa9ddb5a62a07c"
+    },
+    {
+      "path": "evaluation/OBJECT_COMPARISON.csv",
+      "size_bytes": 2863382,
+      "sha256": "564c781dfdab53b4c2f7dc46b6e6608b090155cee9d752e49f89657dc1177c98"
+    },
+    {
+      "path": "evaluation/RECOVERY_CONCENTRATION.csv",
+      "size_bytes": 2859,
+      "sha256": "3458722f983c7bb62cb497452f9e4c824ef054ae06e50035924d21be0b596723"
+    },
+    {
+      "path": "evaluation/RELEASE_MISS_SEGMENTS.csv",
+      "size_bytes": 102818,
+      "sha256": "d7f07d358c25035b0b5f62f9c7848fe45c83b662e2ba4784bb3f22ea8c836d1a"
+    },
+    {
+      "path": "evaluation/SEQUENCE_SUMMARY.csv",
+      "size_bytes": 7318,
+      "sha256": "32178c16960f4df295f3df16036b655f4c2324986a71183024a5be6b32fed2f7"
+    },
+    {
+      "path": "evaluation/SUMMARY.csv",
+      "size_bytes": 4658,
+      "sha256": "87dbfaa1fa4ebe4abc602ad139798b97e8135a4460c7edd4d89d66f97fb79dcc"
+    },
+    {
+      "path": "evaluation/SUMMARY_COMPLETE.json",
+      "size_bytes": 10057,
+      "sha256": "b844e0232b21d8441621829d55bf5f5259d58140df6d3d49bf1e0d04220919c6"
+    },
+    {
+      "path": "evaluation/TABLE_VALIDATION.json",
+      "size_bytes": 1688544,
+      "sha256": "4b11e07719260db002a4a07ea0ed2652320c6178df1892916133f6477c4da6ef"
+    },
+    {
+      "path": "evaluation/TRACK_SUMMARY.csv",
+      "size_bytes": 88735,
+      "sha256": "3975f834bfc63f7524ef410c61c98a72db2c3a83c81670906bf7277cdaafac53"
+    },
+    {
+      "path": "evaluation/TRAINING_COMPARABILITY.json",
+      "size_bytes": 5055,
+      "sha256": "5e488240dfe385c4381b4a4208f85419062516aadcb4b0a6b2889284cb93f5b5"
+    },
+    {
+      "path": "evaluation/WINDOW_DEPENDENCE.csv",
+      "size_bytes": 6286,
+      "sha256": "d70bc9a75766ed0e0c6d6d6535f8bba4be05d5ab86cf043d52c84ddc1476e370"
+    },
+    {
+      "path": "evaluation/lre_score_n0_LAUNCH.json",
+      "size_bytes": 1591,
+      "sha256": "675297244a88eaa145c926fcac5c3cddb614ffe9a63278e53dd932c4f3a1c36c"
+    },
+    {
+      "path": "evaluation/lre_score_n1_LAUNCH.json",
+      "size_bytes": 1591,
+      "sha256": "f23a254a136b49752dd4f72c97e5e3e9f9604ec4986cd13aaad4fca1126ba3cf"
+    },
+    {
+      "path": "evaluation/lre_score_n2_LAUNCH.json",
+      "size_bytes": 1591,
+      "sha256": "d3bd619a4c042a07a36c5d6470b469dc3dc2217524cb07a13d288f24d21e3828"
+    },
+    {
+      "path": "evaluation/lre_score_summary_LAUNCH.json",
+      "size_bytes": 1584,
+      "sha256": "76c3cd9501064f8e882f84a848b25b946e063c06fbde16956b5607788186015e"
+    },
+    {
+      "path": "evaluation/telemetry/COMPLETE.json",
+      "size_bytes": 6031,
+      "sha256": "2f3fcb0d95f671f667ca4a79ea09c21abbaa8b2a5ec236d50f97c8bca0c070c7"
+    },
+    {
+      "path": "evaluation/telemetry/EVIDENCE_BACKGROUND_DIAGNOSTIC.csv",
+      "size_bytes": 355550,
+      "sha256": "cbea501a10d8ae668524cc83471b24f90ce2a4b17be9eac946e3bc9e4e920359"
+    },
+    {
+      "path": "evaluation/telemetry/EVIDENCE_DISTRIBUTIONS.csv",
+      "size_bytes": 820591,
+      "sha256": "06958336f4e3417fa0b59a87f3ad6dc6e7a9af7c928a1385816de9fb55c21247"
+    },
+    {
+      "path": "evaluation/telemetry/EVIDENCE_OBJECT_DIAGNOSTIC.csv",
+      "size_bytes": 12206044,
+      "sha256": "727496bf848cdbe6a636a497bf526a8950a763d5eb02792d76e23c5105be5bab"
+    },
+    {
+      "path": "evaluation/telemetry/RUNTIME_COSTS.csv",
+      "size_bytes": 3395,
+      "sha256": "d43bb52b4789257d7f10cb07dcbbee073a31b808738faf889cc9eca41e1c82d5"
+    },
+    {
+      "path": "evaluation_code/PREFLIGHT_LAUNCH.json",
+      "size_bytes": 695,
+      "sha256": "04b0b76950092ab61a26938c4fe3df03174c2108aa4e694a1f7c55215cf2927d"
+    },
+    {
+      "path": "evaluation_code/TELEMETRY_ANALYSIS_SOURCE.json",
+      "size_bytes": 959,
+      "sha256": "5940b69d49941492864f968e2434ac458a8e3bf4b320ed39613113005c494777"
+    },
+    {
+      "path": "evaluation_code/evaluate.py",
+      "size_bytes": 24632,
+      "sha256": "f1797f27cd687e9e7728b24d2355b8ae4ab5b66c46bd3d28c5eac959bd172225"
+    },
+    {
+      "path": "evaluation_code/launch_score.py",
+      "size_bytes": 2822,
+      "sha256": "20d96f6b14022afef86438cf69a7e838530b162d9bf2d6c33e28938ea6ca2d95"
+    },
+    {
+      "path": "evaluation_code/telemetry_summary.py",
+      "size_bytes": 15401,
+      "sha256": "c3223e63b73a1dc03f659e22f6a68c5abc62ce63dc21dd4b3cb1a3bef5286a6f"
+    },
+    {
+      "path": "evaluation_code/trajectory_tables.py",
+      "size_bytes": 7245,
+      "sha256": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165"
+    },
+    {
+      "path": "evaluation_code/validate_tables.py",
+      "size_bytes": 10727,
+      "sha256": "b203e7285920589cfae5fcdf63b45056774b440721a23124c10f5531416bfe60"
+    },
+    {
+      "path": "evaluation_code/verify_identity.py",
+      "size_bytes": 8474,
+      "sha256": "84fd58765180f24df8883584674e325144764811f4f1ced76181914852481a23"
+    },
+    {
+      "path": "evaluation_preflight/COHORT_TRANSITIONS.csv",
+      "size_bytes": 5467,
+      "sha256": "89cd9c388b521f383cbacbed5ddebbe69ad8ef552596ed7f0e616a2e892d0d96"
+    },
+    {
+      "path": "evaluation_preflight/CONTINUOUS_MISS_SCHEMA.json",
+      "size_bytes": 1475,
+      "sha256": "0d0db06340fb66452b2c335935d11fcf8f6fa97252fdbbbffcfc21b812fcb21e"
+    },
+    {
+      "path": "evaluation_preflight/CONTINUOUS_MISS_SUMMARY.csv",
+      "size_bytes": 3498,
+      "sha256": "59f28074fd74e78f4487dc19380e31f36a63c06d37ba0dd382a009837c576694"
+    },
+    {
+      "path": "evaluation_preflight/CONTINUOUS_MISS_TRACKS.csv",
+      "size_bytes": 69577,
+      "sha256": "ce9428c1d440fb8aa985e5fac50b56878f00f2a17fbda6fda45c6bfe80006ccc"
+    },
+    {
+      "path": "evaluation_preflight/FRAME_COUNTS.csv",
+      "size_bytes": 37536,
+      "sha256": "4d5c6d5fbee11304c119e0cade6a4861a88a66eeb206db5dd4abf04a8647c86b"
+    },
+    {
+      "path": "evaluation_preflight/OBJECT_COMPARISON.csv",
+      "size_bytes": 1351240,
+      "sha256": "1a165f52d1424b99d9463dbf0a7e73082d60d20c0c85d6feb555877508c8e0cf"
+    },
+    {
+      "path": "evaluation_preflight/RECOVERY_CONCENTRATION.csv",
+      "size_bytes": 409,
+      "sha256": "9b2f4237464d4f3ebf1c6def38f8a344d5ae5edde5d3f78d0f4321e1e5185e68"
+    },
+    {
+      "path": "evaluation_preflight/RELEASE_MISS_SEGMENTS.csv",
+      "size_bytes": 74096,
+      "sha256": "c88c8acd4ebaea4c8f6f43b7010cd19a0b88c4a16930838ba6cae83a49c8bb68"
+    },
+    {
+      "path": "evaluation_preflight/SEQUENCE_SUMMARY.csv",
+      "size_bytes": 3014,
+      "sha256": "fbacfa36859f6c76c5283946819002279f60285a436511f6c672ce41f5771d9f"
+    },
+    {
+      "path": "evaluation_preflight/SUMMARY.csv",
+      "size_bytes": 2402,
+      "sha256": "616aadf349aa6ecb992db9a64d78c5824e64b04a7c5bebb2c320a6366cefd152"
+    },
+    {
+      "path": "evaluation_preflight/SUMMARY_COMPLETE.json",
+      "size_bytes": 3761,
+      "sha256": "f1949a1abe51354aff58f4f350d0ce5070be76017a969c6381ff42ec01f7219b"
+    },
+    {
+      "path": "evaluation_preflight/TABLE_VALIDATION.json",
+      "size_bytes": 308735,
+      "sha256": "292a060728c1132eb3762aa1fe0380b950c8abc671bc2cdb35715b7f952221f0"
+    },
+    {
+      "path": "evaluation_preflight/TRACK_SUMMARY.csv",
+      "size_bytes": 20382,
+      "sha256": "d04e54fc2df7d8d496350fd2c91fed7ae33909d1dd89b9ac86b2b8f31c20aef5"
+    },
+    {
+      "path": "evaluation_preflight/WINDOW_DEPENDENCE.csv",
+      "size_bytes": 1777,
+      "sha256": "6811f86fdb42cbcf3d619e5d711fef5de793115bc68bc0c4e6dbd66cc18258d2"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 15142,
+      "sha256": "58b203684428b63d2f57eef99002ad0d6ab1cec364b0667fc0ebded78299515d"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 263738,
+      "sha256": "ef644b36cfda6d7fa667ca57c07d9e1b208627ee26e2fa5cc50e6343735e319c"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/RUNNING.json",
+      "size_bytes": 11182,
+      "sha256": "c60caf360f4ad22a92d05d55259bd8d2aa72455fcd609ec8bcfef361f0fe90e4"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/official_fused.npz",
+      "size_bytes": 176606176,
+      "sha256": "b5cc2170d7652342606665af8f81962b8e2e4cd1907e3f675e140ad0c58bc4bc"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_000.npz",
+      "size_bytes": 44418846,
+      "sha256": "aa17048c03ca6763a0084199991b73cd3fdcf5a5cba9db25a061ea041d272ad9"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_024.npz",
+      "size_bytes": 44316708,
+      "sha256": "f4ea07d4094c9b75dbef5313249d23260e6af286f354b65ee6f93af6602e3f08"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_036.npz",
+      "size_bytes": 44220697,
+      "sha256": "dc367c2d43e27a66c7aa40bce7c9162a84650eb5ec5586162f665981f7ac1e75"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_060.npz",
+      "size_bytes": 44088588,
+      "sha256": "4f272888bf6057419f8b04b174a776c5b9d0381e4706831fcac06889c8daabd9"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_072.npz",
+      "size_bytes": 44037044,
+      "sha256": "f05d2247f8e9c2fce7b93bc31f927f61ed8337829e0de57cbb3b36668d638e21"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_096.npz",
+      "size_bytes": 43993325,
+      "sha256": "9967f71c6e4db1f88d3d3717ec22d8b33926d7c21d74f53577283ad925cc528a"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_108.npz",
+      "size_bytes": 44018781,
+      "sha256": "181d16f508cd83736746466b1c43730840a67866bf50c888b07e436bfdb11600"
+    },
+    {
+      "path": "predictions/N0/DJI_0026_2/windows/window_120.npz",
+      "size_bytes": 44458776,
+      "sha256": "a62da5c9bfd4fdf8d81e8eeb246153e9bc453de97937393904369f0e953155d2"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 15150,
+      "sha256": "113f47136ee330576101822536d8cd7ffab00cc901103c718df1e2251a89b5d0"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 1639700,
+      "sha256": "c50f3f1fedf860a6af52f187181c92ddb7a11d411eaf1a0c5e64467e78176edc"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/RUNNING.json",
+      "size_bytes": 11182,
+      "sha256": "19db2174dee73c705666db9e80dd60740f4a2c8df3744ccafd5e598370d5a991"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/official_fused.npz",
+      "size_bytes": 187011086,
+      "sha256": "045e5ae990e80a1f8972a84cbedf0c12cb6d3f2d38744af097ee36e6361c5263"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_000.npz",
+      "size_bytes": 46742967,
+      "sha256": "dbe0b9d20eecbf44dba93565fbb67f3ec30ac176dc4bc16ff83f7cd85e86453f"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_024.npz",
+      "size_bytes": 46805753,
+      "sha256": "4e3fb42f0ad8418fadd3096960845d46bc0fc0e4e414c8b255df3b233d75fff8"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_036.npz",
+      "size_bytes": 46853340,
+      "sha256": "e72b37b469df8486cb34b97b48cd22eff8cbfe0331ef647770c16fe8104a34b8"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_060.npz",
+      "size_bytes": 46886439,
+      "sha256": "81791ac93ec7e124a184f0cf5fbffb251f56106a9846797c8766de842a523965"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_072.npz",
+      "size_bytes": 46879119,
+      "sha256": "80bd4947f555f4569f75994f260f37cacad3cc19627d1d67cb16e39c59ee815e"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_096.npz",
+      "size_bytes": 46887552,
+      "sha256": "d64a7134c0e79088a78c0553f4be440c15f62e2a81871cdd6079a5564395b2ef"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_108.npz",
+      "size_bytes": 46912667,
+      "sha256": "9a510c43a2ede3eb97a880b69330ba89426b24fd8e45b799ea88239e8cd80441"
+    },
+    {
+      "path": "predictions/N0/DJI_0067_2/windows/window_120.npz",
+      "size_bytes": 46947971,
+      "sha256": "ab84c45e604fef6bf63363aaa481a22d58315133f5ae47dee52f12dfb3ed9c5e"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 15146,
+      "sha256": "6cb6087b92dcd0f0fab6811642a7c3833480094b86980aa72ef1c65c30c40a80"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 303615,
+      "sha256": "107a575751fa78a8bb851af7ad19d4f2fd8b3ac58c17334e6b0918f994d47a89"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/RUNNING.json",
+      "size_bytes": 11188,
+      "sha256": "691c9226a98261b95298e52b233d3c2a780a8b7b1659c7c9b5237ee95958c939"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/official_fused.npz",
+      "size_bytes": 176602882,
+      "sha256": "49eea6be6d46d1bdf1ee35c3add211eb5664f79f526475ae9ce42c691c54e0f9"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_000.npz",
+      "size_bytes": 44417393,
+      "sha256": "4542e97e48cbc7fb10214099ff1f921fa5663679724f0f6c627e9b0dfe747eeb"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_024.npz",
+      "size_bytes": 44315591,
+      "sha256": "19f922673177b27e508f0ee6dbd9a41f8246373ef726689bd605a0af356b4959"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_036.npz",
+      "size_bytes": 44220102,
+      "sha256": "9c8c4d367d623d2d031ef5a0a73cba356a718b21592301ce2fdda95dd7261ab0"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_060.npz",
+      "size_bytes": 44088346,
+      "sha256": "f32c4a008c5bc3ac0f5b6c993fea28af77a076a84003f07721eafc7bcf4bcab9"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_072.npz",
+      "size_bytes": 44036946,
+      "sha256": "91334667c6888fabe10808150fbdda694cbc155a3257ea50bb6f2638aa9e6f5c"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_096.npz",
+      "size_bytes": 43990567,
+      "sha256": "bf749fe236240130dc7f28ea55f09bab643dafdaf6bf64d827be3e9a6685d383"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_108.npz",
+      "size_bytes": 44017666,
+      "sha256": "d21137aa8f46f7c979370ca9007fa71c988241e24f8ad37506eff3e1d0dcb5bc"
+    },
+    {
+      "path": "predictions/N1/DJI_0026_2/windows/window_120.npz",
+      "size_bytes": 44457263,
+      "sha256": "8e27c864b43373da4b3088290565e97c9768a5f0ce0468ae604c460045462ac5"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 15159,
+      "sha256": "72535b3f9c1a31ac89c14e2e174f7f473d877adb60a7de0840110ba037bf5ec6"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 1905115,
+      "sha256": "84f1e9a3b86ac20c17f32d964ce99d112abd6d159379d9ec1445073171225390"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/RUNNING.json",
+      "size_bytes": 11188,
+      "sha256": "f46505dcb22cd94aa8a46a9dbee2ee0eb57660205f8e0a83566fa7b507c7cea1"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/official_fused.npz",
+      "size_bytes": 187007315,
+      "sha256": "ea85239f81258b5f2f2c2292d9d33350158dcfe68b04d8671bd3acf6ac26ac28"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_000.npz",
+      "size_bytes": 46742773,
+      "sha256": "8637dec96a595b3df31e055e6f2b7fd12e6bb7f9ef62f2f53ace3ea6798e679c"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_024.npz",
+      "size_bytes": 46805109,
+      "sha256": "24e872e9190f33b6819e6494592c7091aea772c99cdd0b870a0a400e29490607"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_036.npz",
+      "size_bytes": 46851187,
+      "sha256": "8cce7b484fc2029ce9553f7a4236dae6d2c72e5b98d8ea34e3cb04e77c2913bb"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_060.npz",
+      "size_bytes": 46886160,
+      "sha256": "d5883d3a9af62288f8ca6affa6c6f2dbfbc61d2d59a0cfe0e2b2a8bf37542701"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_072.npz",
+      "size_bytes": 46877968,
+      "sha256": "490fe4c63b6f4075bfebf77839b67b31a061ac30c89f338a3a1164df17ddae5e"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_096.npz",
+      "size_bytes": 46886716,
+      "sha256": "040bf1c3b079b7cc4659acd7ed67cf2d9b9e9202dac11f5fa7484629207ffec1"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_108.npz",
+      "size_bytes": 46911854,
+      "sha256": "cec939a63b07eb38f3d68276373e17bfecceb7f5eb1da66fdf16cc7e0f75b50e"
+    },
+    {
+      "path": "predictions/N1/DJI_0067_2/windows/window_120.npz",
+      "size_bytes": 46946749,
+      "sha256": "05c4546d2cfa81b3308b84acc62db4c36a742b882bf37726610f40f3738fd822"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/COMPLETE.json",
+      "size_bytes": 15149,
+      "sha256": "db66420de8184b72c6c1f55b95e2a0b38d79ce1623538eee2bebde5d090e16cb"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 380804,
+      "sha256": "db6cad759a0450acddb2922acc4dd2c7a5fca9491fd50d55953fd84108ab62da"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/RUNNING.json",
+      "size_bytes": 11184,
+      "sha256": "12344702e84789a6c680165e3c041bcdcd621c9da21c33c18cec2e0cd834ce71"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/official_fused.npz",
+      "size_bytes": 176590214,
+      "sha256": "2907f5786184449a4c67481b9a9c04c76b5e833f5e198e64f7776e75f6e560c6"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_000.npz",
+      "size_bytes": 44414179,
+      "sha256": "c519fc4bd72ed54a7bfb2a17d4e27baaff998781a1a17e6b77f035e95b3da7a2"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_024.npz",
+      "size_bytes": 44311567,
+      "sha256": "f29ae5ddb01c0146248c07c6d047160ca1916bf41dc6b1a2284c03c276112dd2"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_036.npz",
+      "size_bytes": 44214692,
+      "sha256": "73676c7f8779a6b00b96196907a9f45b7c3aa447db0f390275fd603449770218"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_060.npz",
+      "size_bytes": 44082378,
+      "sha256": "cc2a0e6c9a3a7471aeaee06ce1099b5dd5fe631f2836631a8d6192a652dc5388"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_072.npz",
+      "size_bytes": 44031878,
+      "sha256": "8db037b5ab9439cc45fc8ebb075faed09a2a0a7269975ab65d8fc129c961cfe3"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_096.npz",
+      "size_bytes": 43986781,
+      "sha256": "facd756660e9c36f9a663a581ff25ca253c2f18d404ca01e71619b7a7123ae07"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_108.npz",
+      "size_bytes": 44013173,
+      "sha256": "d2597908c04d13acc5fa3eb282e66b63a9d9ff5df362da4d6484c57de0702af8"
+    },
+    {
+      "path": "predictions/N2/DJI_0026_2/windows/window_120.npz",
+      "size_bytes": 44453046,
+      "sha256": "e0b37b146d77003ff3d2394cc4f31b8e3e6c7ddd3c50b9a9e3ef2cf35eca9082"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/COMPLETE.json",
+      "size_bytes": 15149,
+      "sha256": "6c244ce1d0d55ac47d12fb6b9a0a57a8c379ea774a335617b2a8a6f431c3cca0"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/EVIDENCE_SAMPLES.csv",
+      "size_bytes": 2572004,
+      "sha256": "1791945fbaf87bb51c4877dfd157f575045fc8adaf356e3d970c57bd5db85e41"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/RUNNING.json",
+      "size_bytes": 11184,
+      "sha256": "ef2318ef12af96bafbceb669df3b76a9a82134a602cc0a9e45593c68635317fd"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/official_fused.npz",
+      "size_bytes": 186991765,
+      "sha256": "08691431c58455f80a2c07a04141287c41918147c008797e75116297731ce126"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_000.npz",
+      "size_bytes": 46737906,
+      "sha256": "3b81ca7076de5c2a21dfb6ada8439bd5b23a712f8164083151755b27733e3579"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_024.npz",
+      "size_bytes": 46800117,
+      "sha256": "204ad966708d2da000162d3f036e81cd2426e5750f79ee089a80decdf27f63af"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_036.npz",
+      "size_bytes": 46845442,
+      "sha256": "38416ad12b73e59244382861771a4dbcd160aabab7e89ba6bf9ac51133ce0f18"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_060.npz",
+      "size_bytes": 46880727,
+      "sha256": "8bc15eeef1e302018d20f988e523f3bd8d37bf630fbe355c863a180b5759240b"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_072.npz",
+      "size_bytes": 46873057,
+      "sha256": "d113749a37e48ae34e8ee8a2685005d1b58fb69c1a83c0addc2451c2226cf59e"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_096.npz",
+      "size_bytes": 46881630,
+      "sha256": "947b131896f7ec5ee573c77ef4d255a4e8cf13b907dadb8c7640e9901fe736e5"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_108.npz",
+      "size_bytes": 46907035,
+      "sha256": "7fb321325a5b22dd64cbca5ab79a6306b2de5b4b66effeca80b8115db3433d3b"
+    },
+    {
+      "path": "predictions/N2/DJI_0067_2/windows/window_120.npz",
+      "size_bytes": 46943193,
+      "sha256": "ac72dd39530112d1b9a8a99e3fd74dc94c4e93a801c91d7d5453f58494dfd819"
+    },
+    {
+      "path": "runtime/CPU_SCORING_WATCH.json",
+      "size_bytes": 219,
+      "sha256": "12eb6e6da335dfe47e7bf80579acd245c6c24c5bf61e60f64557a0104736451a"
+    },
+    {
+      "path": "runtime/CPU_SCORING_WATCH.log",
+      "size_bytes": 4031,
+      "sha256": "26017179791eb9461ff3fbfe6e9425edd57aea9c4de73b50d69784e250734573"
+    },
+    {
+      "path": "runtime/DIAGNOSTIC_DOC_FOLLOW_RESULT.json",
+      "size_bytes": 4916,
+      "sha256": "562a9dac47a965b33c1035f0bc79f370e0feb4fb9c2303925ee0db169f2ace69"
+    },
+    {
+      "path": "runtime/DIAGNOSTIC_INVOCATION.md",
+      "size_bytes": 1464,
+      "sha256": "7b66ed23695dec39a16154c6e9ec5c4b4a3da7e7506bebdc6046b4dfab4f6fe6"
+    },
+    {
+      "path": "runtime/DOC_FOLLOW_RESULT.json",
+      "size_bytes": 4319,
+      "sha256": "1d2ba7b118df7c4aca1d0478a97978528cfc9082eb7e651de0566013f5f305a1"
+    },
+    {
+      "path": "runtime/INVOCATION.md",
+      "size_bytes": 1636,
+      "sha256": "f4bf805046ffcac9705c777304cd57b15e50d20b023c290d9a82212f07c86645"
+    },
+    {
+      "path": "runtime/MISREFERENCE_CPU_WATCH.json",
+      "size_bytes": 115,
+      "sha256": "779903493804f660d011398844236ea914c9ab598bde04084ce0b2bf0caf9257"
+    },
+    {
+      "path": "runtime/MISREFERENCE_CPU_WATCH.log",
+      "size_bytes": 2943,
+      "sha256": "c98a6f3d295c81a76f49c7e83efc5f94273c844185f37dd6209e70e82b54c080"
+    },
+    {
+      "path": "runtime/QUEUE_STATUS.json",
+      "size_bytes": 760,
+      "sha256": "59e38ff9b8bbd3f8150007c43ebc52d57ec0ad0a7d17eba26db4c20ed73e943c"
+    },
+    {
+      "path": "runtime/infer_N0_DJI_0026_2.json",
+      "size_bytes": 2934,
+      "sha256": "d9cfbaffd96d95e7310df363ac44bfdb33a15a08bfcdb053b896bfa79d5db669"
+    },
+    {
+      "path": "runtime/infer_N0_DJI_0026_2.log",
+      "size_bytes": 749,
+      "sha256": "65ed740f908c16415d755909380c62134dccaef9c3b3e505c86cf0f1c6d92d5e"
+    },
+    {
+      "path": "runtime/infer_N0_DJI_0067_2.json",
+      "size_bytes": 2933,
+      "sha256": "bb9c23effd05c2eb2b3071bf27ef9d4810c0295bc2713b0ddf9f598010c5f664"
+    },
+    {
+      "path": "runtime/infer_N0_DJI_0067_2.log",
+      "size_bytes": 748,
+      "sha256": "ab1003206927db566c5aa283671fd515b066329b0e3cf31bec32b4a41f74c84d"
+    },
+    {
+      "path": "runtime/infer_N1_DJI_0026_2.json",
+      "size_bytes": 2932,
+      "sha256": "c48b94be50d1c4b2e8fcf5ef5509983482efb541c2282a46f60f1a3fcf6a3359"
+    },
+    {
+      "path": "runtime/infer_N1_DJI_0026_2.log",
+      "size_bytes": 751,
+      "sha256": "98eb645a3c58006912c67149c93ad45ca2f5029199c3abf9f8f384913c30c35f"
+    },
+    {
+      "path": "runtime/infer_N1_DJI_0067_2.json",
+      "size_bytes": 2934,
+      "sha256": "3b21fad71e056ac61369fef3c05fd33e6f7bad5825696343ad1d68a33f15ed32"
+    },
+    {
+      "path": "runtime/infer_N1_DJI_0067_2.log",
+      "size_bytes": 750,
+      "sha256": "86add0e74b0e6a6a097a0069f644b2f0f3a63fc47a59af0ddfccaae319f19dda"
+    },
+    {
+      "path": "runtime/infer_N2_DJI_0026_2.json",
+      "size_bytes": 2933,
+      "sha256": "ec378f166b2276361d3586e6c3b7f02aac7ba29dfc7341b1f41e8778240fa7aa"
+    },
+    {
+      "path": "runtime/infer_N2_DJI_0026_2.log",
+      "size_bytes": 752,
+      "sha256": "8a1627bcb417f4720dec8e574bc9dfa17574b30a385a5bb222323ba001995bc7"
+    },
+    {
+      "path": "runtime/infer_N2_DJI_0067_2.json",
+      "size_bytes": 2934,
+      "sha256": "771480de2e82672980c855236029ca6be4c4805fe0bd27a5ebfff13620151a96"
+    },
+    {
+      "path": "runtime/infer_N2_DJI_0067_2.log",
+      "size_bytes": 751,
+      "sha256": "40a440ad47f92b47a233eeb3a466665ce8e37b3de29a0422392cd8705d7d1be9"
+    },
+    {
+      "path": "runtime/launch_misreference.py",
+      "size_bytes": 2914,
+      "sha256": "ca8cdfd5b835172ac5a9b39af4c0f4180f44b9eb1d231f626290933763363d8a"
+    },
+    {
+      "path": "runtime/misreference_DJI_0026_2.json",
+      "size_bytes": 2315,
+      "sha256": "d5bd57608726ac72fdc582cf2375bd90c7c5a30c24c8d0252ec477b53c7d4ee6"
+    },
+    {
+      "path": "runtime/misreference_DJI_0026_2.log",
+      "size_bytes": 1077,
+      "sha256": "0226f0450ae59aa75556d9c87b35f7b439a01cc6125521d3eb9baf54cbd4095b"
+    },
+    {
+      "path": "runtime/misreference_DJI_0067_2.json",
+      "size_bytes": 2315,
+      "sha256": "4f74a0df85ca2d0be97fc6947ab53f77510a4e64d627578ca1a650dbb55fd151"
+    },
+    {
+      "path": "runtime/misreference_DJI_0067_2.log",
+      "size_bytes": 1076,
+      "sha256": "dbfa09ecb6a1d94ffda566f66414b1a9cb950d6c1ed983ae538b0ebdd98c6bb8"
+    },
+    {
+      "path": "runtime/preflight.json",
+      "size_bytes": 2115,
+      "sha256": "ddb44e566492fb9175214c45e0333fd9b1f0003b3109210c5f099fa7ff465b36"
+    },
+    {
+      "path": "runtime/preflight.log",
+      "size_bytes": 2368,
+      "sha256": "9c3a05821a5bfdeee05470ae76f15b0acf3ae12a17f012c58a65ff0105082b8e"
+    },
+    {
+      "path": "runtime/queue_infer_N0_DJI_0026_2.log",
+      "size_bytes": 5123,
+      "sha256": "d5cb864649af5e3dd340f59ae289c60479c6bf3e767efad536adfd59e607d31a"
+    },
+    {
+      "path": "runtime/queue_infer_N0_DJI_0067_2.log",
+      "size_bytes": 5121,
+      "sha256": "a854447be48d6ee7bc8aa3ddaaa3d44eded68615823bfe4cb352c773dc613b78"
+    },
+    {
+      "path": "runtime/queue_infer_N1_DJI_0026_2.log",
+      "size_bytes": 5120,
+      "sha256": "9f4072f1fd80ed68cffc17a6987e38c5cb3c220162ec8f71f199e1d8f780956a"
+    },
+    {
+      "path": "runtime/queue_infer_N1_DJI_0067_2.log",
+      "size_bytes": 5123,
+      "sha256": "bd276692cfc61e0c1bf1991c10d2f11b67b350436214e12646dee0b2c2540cae"
+    },
+    {
+      "path": "runtime/queue_infer_N2_DJI_0026_2.log",
+      "size_bytes": 5121,
+      "sha256": "20bbf8b301a484efeae2e448e25bf6acca8ce319f7f876ee958e8ce0e4c240d1"
+    },
+    {
+      "path": "runtime/queue_infer_N2_DJI_0067_2.log",
+      "size_bytes": 5123,
+      "sha256": "90feac496bc368d0bd0154a2ee949fc9f965a989d36d96969025bcd0ce988503"
+    },
+    {
+      "path": "runtime/queue_train_N0.log",
+      "size_bytes": 5185,
+      "sha256": "3f08418acde188ff6a0dbe25361c53f862fd16fe539e01df471a11579574820a"
+    },
+    {
+      "path": "runtime/queue_train_N1.log",
+      "size_bytes": 5187,
+      "sha256": "15356342b0f1375aab57e17df53f7053ccfd50d3188720d2a5a29a6449158013"
+    },
+    {
+      "path": "runtime/run_queue.py",
+      "size_bytes": 2467,
+      "sha256": "93fe56a5f7c635b7c5021e87c94bb5d4204c7d035af914f8c1b79438b93d2b4e"
+    },
+    {
+      "path": "runtime/train_N0.json",
+      "size_bytes": 2961,
+      "sha256": "61391df0c3cf9f5a31e5fd8c3b92707f00c3b35c43fb68745715913236b44e53"
+    },
+    {
+      "path": "runtime/train_N0.log",
+      "size_bytes": 87406,
+      "sha256": "757a60f814817d8e64bb9182cec6b22f6cd65fbd24e41e5fe140753a3039cf19"
+    },
+    {
+      "path": "runtime/train_N1.json",
+      "size_bytes": 2962,
+      "sha256": "a4cf759a6ffce42ddfb24e00275411b895c2190ae117fb134b94075b1b2ef5b9"
+    },
+    {
+      "path": "runtime/train_N1.log",
+      "size_bytes": 87391,
+      "sha256": "e2e0f8830e5f4d0681ceeac98f5c25c4a837ca813b004ca7a0441971a062b998"
+    },
+    {
+      "path": "runtime/train_N2.json",
+      "size_bytes": 2961,
+      "sha256": "a8913eb4ff280000765eea23fb54401a81d0cb77192e1b2f636f85b57b96c3f2"
+    },
+    {
+      "path": "runtime/train_N2.log",
+      "size_bytes": 87413,
+      "sha256": "013a3c028fa12b371e52d52ef384231bba166fda47bb23acb25ac40c301222d5"
+    },
+    {
+      "path": "training/N0/run/EVIDENCE_SAMPLES.jsonl",
+      "size_bytes": 550627,
+      "sha256": "5867c643320d4f63cf5fb583a4f6fb266e4b42ed6f66183f2473451dad3ea742"
+    },
+    {
+      "path": "training/N0/run/INITIAL_STATE.json",
+      "size_bytes": 14945,
+      "sha256": "b6a9be86a84e47d443d83528ff8e0fdc2fd6dfd2a6a1b9a02d2c090df9a132e2"
+    },
+    {
+      "path": "training/N0/run/PARAMETER_DIFF.json",
+      "size_bytes": 13670,
+      "sha256": "66b9cacba9925bcbea539da761bf5f2633505d58d5449fac54eef98f5fcee66d"
+    },
+    {
+      "path": "training/N0/run/RUN.json",
+      "size_bytes": 15263,
+      "sha256": "4f2650d5ba8f5f9b9c301b52835f4d93e96e990798bda0f2fbeee603164dc714"
+    },
+    {
+      "path": "training/N0/run/TRAIN.jsonl",
+      "size_bytes": 1357982,
+      "sha256": "187e523003c8f093100343333cc3a3cb6963734a5f60a0316204c3eeb6a62b09"
+    },
+    {
+      "path": "training/N0/run/final_model.pth",
+      "size_bytes": 350121,
+      "sha256": "bd12f9cdc22811d7ccf1eab666cca65e1e53f4ae33994fe0c60c0fe5bc1b7cb0"
+    },
+    {
+      "path": "training/N0/run/snapshot_000.pth",
+      "size_bytes": 331361,
+      "sha256": "d7fefc544353785dbb5b5f235423833a167cebb7f0e0e04ffdefe667fd738591"
+    },
+    {
+      "path": "training/N0/run/snapshot_128.pth",
+      "size_bytes": 350121,
+      "sha256": "a4063db69a95ee3c7a23ae0840c6f8c1d8717e746bfa45378d43047386e6cad2"
+    },
+    {
+      "path": "training/N0/run/snapshot_256.pth",
+      "size_bytes": 350121,
+      "sha256": "1be8cfef600db293ec129bea170ee3c7d4ceff71c6d66387225f60c5bd4fb4e5"
+    },
+    {
+      "path": "training/N0/run/snapshot_384.pth",
+      "size_bytes": 350121,
+      "sha256": "ecc38cbe32f175c203e0e8885749d40aebb8b37b5236d7cb667b0c1c9fb7dbee"
+    },
+    {
+      "path": "training/N0/run/snapshot_512.pth",
+      "size_bytes": 350121,
+      "sha256": "bd12f9cdc22811d7ccf1eab666cca65e1e53f4ae33994fe0c60c0fe5bc1b7cb0"
+    },
+    {
+      "path": "training/N1/run/EVIDENCE_SAMPLES.jsonl",
+      "size_bytes": 574500,
+      "sha256": "ee6d4e28cc7b9401f11c61bfecba6916765a93d2cdd4b9663a386c0fc72f2011"
+    },
+    {
+      "path": "training/N1/run/INITIAL_STATE.json",
+      "size_bytes": 14948,
+      "sha256": "78ecb27b26a192073ba3c5b7d9ea39f5135c1985b4a6e08304e96deb18bc4560"
+    },
+    {
+      "path": "training/N1/run/PARAMETER_DIFF.json",
+      "size_bytes": 13667,
+      "sha256": "6afd6cde584301d81d553c01aba467939598ed31e9d385fcbd14aa9722ac1bbf"
+    },
+    {
+      "path": "training/N1/run/RUN.json",
+      "size_bytes": 15270,
+      "sha256": "c9ffbd1e3ca28316f0c1960c51e6d06dddd570673a5af2b8533d48ffe215a682"
+    },
+    {
+      "path": "training/N1/run/TRAIN.jsonl",
+      "size_bytes": 1358151,
+      "sha256": "06fcf807a1e9276571a9995af59b382d84e84d2ef6f765708aca3d2ab6f06bea"
+    },
+    {
+      "path": "training/N1/run/final_model.pth",
+      "size_bytes": 350121,
+      "sha256": "e2b2b42316e3d49086d9ab411f8dcbea79f7a114c800b1decc42310a472fc731"
+    },
+    {
+      "path": "training/N1/run/snapshot_000.pth",
+      "size_bytes": 331361,
+      "sha256": "44481a61d9383c0489c1348e52040a97b0a11a57c6169ffab408a41f73d763ea"
+    },
+    {
+      "path": "training/N1/run/snapshot_128.pth",
+      "size_bytes": 350121,
+      "sha256": "fa82e776c980124a8852b485512fd1b0b249ed44ad7d28742755d83114942035"
+    },
+    {
+      "path": "training/N1/run/snapshot_256.pth",
+      "size_bytes": 350121,
+      "sha256": "0958fd19844c5a4f4387112af4c3ce8e5d317d83ab021bf7e1f4413850745f3b"
+    },
+    {
+      "path": "training/N1/run/snapshot_384.pth",
+      "size_bytes": 350121,
+      "sha256": "5673b45db5dac9d87bc60dcbcdc3bb6f29ba6d5a37cb71ace434fdb01fa8df34"
+    },
+    {
+      "path": "training/N1/run/snapshot_512.pth",
+      "size_bytes": 350121,
+      "sha256": "e2b2b42316e3d49086d9ab411f8dcbea79f7a114c800b1decc42310a472fc731"
+    },
+    {
+      "path": "training/N2/run/EVIDENCE_SAMPLES.jsonl",
+      "size_bytes": 626941,
+      "sha256": "447f05f98ab488cbc42abeabb5e16aa5d7de0d955097cc5b5e35db0d4ed9c1ac"
+    },
+    {
+      "path": "training/N2/run/INITIAL_STATE.json",
+      "size_bytes": 14946,
+      "sha256": "471cd9e8e5298f1dbd359f5cd92557d3cf36a2e48e2c6cfae81df0e13183ccf3"
+    },
+    {
+      "path": "training/N2/run/PARAMETER_DIFF.json",
+      "size_bytes": 13672,
+      "sha256": "939c5b6dae4dbe913422ee6321936e6af76ade47ff01a2b90edc80677717d347"
+    },
+    {
+      "path": "training/N2/run/RUN.json",
+      "size_bytes": 15265,
+      "sha256": "ad86410c18f013683ab3d307c89ca577f15f5f9a6c79c314c88d2538243560c3"
+    },
+    {
+      "path": "training/N2/run/TRAIN.jsonl",
+      "size_bytes": 1358209,
+      "sha256": "ee521862b75a7f2e784b1ab1d10af68787b4b11863b04135d27b95850049e978"
+    },
+    {
+      "path": "training/N2/run/final_model.pth",
+      "size_bytes": 350121,
+      "sha256": "24fb24b59d7cac7766cadd9b25703564226fae130b0be7970825a7360ebf6e09"
+    },
+    {
+      "path": "training/N2/run/snapshot_000.pth",
+      "size_bytes": 331361,
+      "sha256": "d9f417bc526997dad81b15c857450c489b40164a9f935c425ac305bfebc984b9"
+    },
+    {
+      "path": "training/N2/run/snapshot_128.pth",
+      "size_bytes": 350121,
+      "sha256": "5a22966bdc2fe3a3045fade2c38a1b052a22d0b3a5e12980168fa146c85f2918"
+    },
+    {
+      "path": "training/N2/run/snapshot_256.pth",
+      "size_bytes": 350121,
+      "sha256": "d67bcb85ffddbb9c22c544122e6a76a46bf7e59afc0fc1e32eb8df0920074deb"
+    },
+    {
+      "path": "training/N2/run/snapshot_384.pth",
+      "size_bytes": 350121,
+      "sha256": "64bcec0155d357580f1660c546dc80d7900d7ba2fadaf6e2768b6070aa91c630"
+    },
+    {
+      "path": "training/N2/run/snapshot_512.pth",
+      "size_bytes": 350121,
+      "sha256": "24fb24b59d7cac7766cadd9b25703564226fae130b0be7970825a7360ebf6e09"
+    }
+  ]
+}

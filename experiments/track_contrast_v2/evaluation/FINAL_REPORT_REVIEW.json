@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "mode": [
+    "numeric-audit",
+    "claim-audit"
+  ],
+  "reviewer": "motion_eval independent final report review",
+  "reviewed_utc": "2026-10-12T18:13:09.877400+00:00",
+  "report": "RESULTS.md",
+  "report_sha256": "e32d8be3fe38eb2a42bb60b27d07a6068465f874c0bb6815c31755df1f217c16",
+  "claim_evidence_matrix": [
+    {
+      "claim": "Five-condition main table, fixed denominators, original diagnostic meaning",
+      "status": "supported",
+      "evidence": [
+        "SUMMARY.csv",
+        "PROTECTED_AND_WINDOW_RETENTION.csv",
+        "PROTOCOL.md"
+      ]
+    },
+    {
+      "claim": "GAP strict matches identical to CONT, while nonstrict net improves7/7 and background costs increase",
+      "status": "supported",
+      "evidence": [
+        "OBJECT_COMPARISON.csv",
+        "ALL_GT_SUMMARY.csv",
+        "SUMMARY.csv"
+      ],
+      "measurements": [
+        {
+          "condition": "FRAME",
+          "reference": "CONT",
+          "arrangement": "O",
+          "delta_U": 37,
+          "delta_outside": 248,
+          "delta_unmatched_area": 208,
+          "gain": 2,
+          "loss": 0,
+          "nonstrict_net": 10
+        },
+        {
+          "condition": "GAP",
+          "reference": "CONT",
+          "arrangement": "O",
+          "delta_U": 29,
+          "delta_outside": 191,
+          "delta_unmatched_area": 135,
+          "gain": 0,
+          "loss": 0,
+          "nonstrict_net": 7
+        },
+        {
+          "condition": "FRAME",
+          "reference": "CONT",
+          "arrangement": "S",
+          "delta_U": 28,
+          "delta_outside": 225,
+          "delta_unmatched_area": 140,
+          "gain": 2,
+          "loss": 0,
+          "nonstrict_net": 7
+        },
+        {
+          "condition": "GAP",
+          "reference": "CONT",
+          "arrangement": "S",
+          "delta_U": 19,
+          "delta_outside": 194,
+          "delta_unmatched_area": 78,
+          "gain": 0,
+          "loss": 0,
+          "nonstrict_net": 7
+        }
+      ]
+    },
+    {
+      "claim": "FRAME adds same two frames23/24 of one track7700538 in both arrangements; not four independent recoveries, not multi-track recovery, no010 gains, one boundary observation",
+      "status": "supported",
+      "evidence": [
+        "OBJECT_COMPARISON.csv",
+        "ISOLATED_HIT_OBJECTS.csv",
+        "COVERAGE_AND_ISOLATION_SUMMARY.csv",
+        "INDEPENDENT_DIRECTION_REVIEW.json"
+      ]
+    },
+    {
+      "claim": "130-track longest-miss vectors identical in all three branches;3 longer/0 shorter vs C_init each arrangement, protection638/646 and2 lost in both",
+      "status": "supported",
+      "evidence": [
+        "CONTINUOUS_MISS_TRACKS.csv",
+        "CONTINUOUS_MISS_SUMMARY.csv",
+        "PROTECTED_AND_WINDOW_RETENTION.csv"
+      ]
+    },
+    {
+      "claim": "All branches pass shared U budget but outside foreground and unmatched area exceed release; budget does not settle tradeoff",
+      "status": "supported",
+      "evidence": [
+        "SUMMARY.csv"
+      ]
+    },
+    {
+      "claim": "C+Adam exact continuation, original architecture/state, paired256 exposures, original inference",
+      "status": "supported",
+      "evidence": [
+        "VALIDATION.json",
+        "PROTOCOL.md"
+      ]
+    },
+    {
+      "claim": "Training sigmoid margins improve while logit margins decline; FRAME stronger than GAP in all8 fixed batches; signed finite original-chain gradients",
+      "status": "supported",
+      "evidence": [
+        "TRAINING_CHANGE_SUMMARY.json",
+        "CALIBRATION.json",
+        "TRAINING_CONNECTION_REVIEW.json"
+      ],
+      "gradient_measures": {
+        "frame": {
+          "background_target_ratio_median": 6.832719568917562e-06,
+          "all8_det_cosine_positive": true,
+          "all8_keep_cosine_negative": true
+        },
+        "gap": {
+          "background_target_ratio_median": 1.0501233615829657e-05,
+          "all8_det_cosine_positive": true,
+          "all8_keep_cosine_negative": true
+        }
+      }
+    },
+    {
+      "claim": "CPU/GPU validation and training-only segment/background counts with annotation limitations",
+      "status": "supported",
+      "evidence": [
+        "LOSS_VALIDATION.json",
+        "SEGMENT_CACHE_AUDIT.json"
+      ]
+    },
+    {
+      "claim": "No expansion of current GAP justified; small direct-readout evidence retained without universal rejection of temporal learning",
+      "status": "supported",
+      "evidence": [
+        "DIRECTION.json",
+        "INDEPENDENT_DIRECTION_REVIEW.json",
+        "PROTOCOL.md"
+      ]
+    },
+    {
+      "claim": "Teacher-fixed peak-position background readout is a proposed single-factor test, not demonstrated mean-dilution mechanism or proven fix",
+      "status": "appropriately_bounded_hypothesis",
+      "evidence": [
+        "CALIBRATION.json",
+        "TRAINING_CONNECTION_REVIEW.json",
+        "RESULTS.md"
+      ],
+      "assessment": "Acceptable candidate motivated by weak initial background-readout derivatives. Neither this candidate nor a keep-weight change is uniquely selected by the current results. The revised text acknowledges no measured peak-mean gap, possible negative-logit saturation, shared continuation losses and no implementation/effectiveness claim."
+    }
+  ],
+  "numeric_consistency_findings": [],
+  "required_corrections": [],
+  "resolved_wording_findings": [
+    {
+      "issue": "Initial parameter-gradient conflict was worded as a general target-elevation causal effect",
+      "resolution": "Now confined to C2048 initial8 calibration batches and local parameter-gradient cosine; no whole-training causal inference."
+    },
+    {
+      "issue": "Weak background derivative does not establish ROI-mean dilution as cause",
+      "resolution": "Candidate paragraph now says peak-mean gap unmeasured, saturation is another possible explanation, and fixed-teacher-peak readout is unimplemented and unproven."
+    }
+  ],
+  "severity": "none",
+  "safe_edit_suggestions": [],
+  "local_links_resolved": 14,
+  "citation_metadata_findings": "External bibliographic/source authenticity not re-audited in this numeric/claim review; linked local provenance records retained.",
+  "next_owner": "root final integration",
+  "no_invention_status": "Derived solely from completed frozen artifacts; no new experiment or model execution. Frozen code and report not edited.",
+  "source_sha256": {
+    "RESULTS.md": "e32d8be3fe38eb2a42bb60b27d07a6068465f874c0bb6815c31755df1f217c16",
+    "RESULT_TABLES.md": "790e9af94043e03dde893f08e7a37597020228aa7d048bc08845ffcc80b5caf2",
+    "PROTOCOL.md": "f0e814bc68e737f9018222fa9dfefcdc77af475811f078e14be02179f9032008",
+    "VALIDATION.json": "16c355d9bd52dd3569489cadcbd81ac04b40a1d99e2162a6c8defe6bf1d6b243",
+    "CALIBRATION.json": "934ea3d203a3c6f9ffdd26e173710eaba1926b2650b53bc09c652d86a9e7a98a",
+    "resources/TRAINING_CONNECTION_REVIEW.json": "19e8b463d94596d34ddb08ddf80d069cd773966d248a4356b469abbc4fc4d874",
+    "resources/TRAINING_CHANGE_SUMMARY.json": "d603b75e02c5603dc4ad68eb67649e1e916cac958afb8fb6d7d8c3404d89c7f6",
+    "resources/LOSS_VALIDATION.json": "e04c09b1f4e82cd2faf5c22f967493bc723fd52cceb5cb57ad01ebf58866222e",
+    "resources/SEGMENT_CACHE_AUDIT.json": "b174067693385f2cb152b4cfc20bb2ed86b4dc4de1d4707f61943164a9b52894",
+    "evaluation/INDEPENDENT_DIRECTION_REVIEW.json": "6ec0f96533bd8235aea35236f1e1a9b6cbe3d4c54fb877ba7c2828ccd209ca6d",
+    "evaluation/DIRECTION.json": "d9bf8090c343f4e66f61f815e40abeabb9483389ce655aa3c762944261ac6da0",
+    "evaluation/SUMMARY.csv": "5b70e32b8bb196673c5a0dac5f4e71cf0b3feaaa1feba0d84780de19c930da7a",
+    "evaluation/OBJECT_COMPARISON.csv": "d026fdc5c7fb1889e289f515635bfb1296f88525f9e67efc5b6f06c5b9034097",
+    "evaluation/PROTECTED_AND_WINDOW_RETENTION.csv": "e939f5bb854545fcfb9eb5e9ebee94e6c077c40dc4cb6e716e2d08fa892a6385",
+    "evaluation/CONTINUOUS_MISS_TRACKS.csv": "b591145a1e103bc68612bd287f091c093be37d8542749e306f034a52b0c9659a",
+    "evaluation/CONTINUOUS_MISS_SUMMARY.csv": "3f5dca14241fbfb82901063317edc7929e0c2c590d4ab36b6d2e286f95299f30",
+    "evaluation/ISOLATED_HIT_OBJECTS.csv": "8aaf42cd87b9326b15087abfa33115110db7537ca972e9c28374960dbefd2062",
+    "evaluation/COVERAGE_AND_ISOLATION_SUMMARY.csv": "195fc7268ffbc3de210377924ab24e2f7b5fd2a058d949237e7957016cf5ec8b",
+    "evaluation/ALL_GT_SUMMARY.csv": "e8cc243d6e8ac9249bca878a4d1afd97b0a8abd2af91e6de513e47efd45b8344"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETE",
+  "conditions": [
+    "release",
+    "A",
+    "B",
+    "C"
+  ],
+  "threshold": 0.5,
+  "plans": {
+    "O": [
+      0,
+      36,
+      72,
+      108,
+      120
+    ],
+    "S": [
+      0,
+      24,
+      60,
+      96,
+      120
+    ]
+  },
+  "fixed_main_step": 2048,
+  "strict_small_target_frames": 5200,
+  "strict_small_tracks": 130,
+  "all_valid_target_frames": 16297,
+  "other_valid_target_frames": 11097,
+  "cohorts": {
+    "low_all_05": 4342,
+    "extreme_all_001": 4170,
+    "both_fixed_success": 646
+  },
+  "requested_paired_comparisons": [
+    "C_vs_release",
+    "C_vs_A",
+    "C_vs_B"
+  ],
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/COHORTS.csv": "aa7927944b2826b3c91292352fe65ffbe3d1046f101ffe42420bbc20476b2961",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0026_2/COMPLETE.json": "6f4faed431c5bb7eebda548f4fcacc2c9622cdd5daabcaceb09c10815baeebe3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0026_2/scores.npz": "5bc376ed1b45fe099552f0b31e11ebb6df28aeca983190b7bd6f111c8835ec7c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0026_2/component_areas.npz": "b7b9b9865d722f01242d04a84e4e9fd6946dda2624d41d7184f353baadb5a795",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0026_2/FRAME_COUNTS.csv": "b5d508f7c2d757db4d6b9880657370b060aaa121d19f7d926c3dd3635c4edea6",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0067_2/COMPLETE.json": "52dc172c9c9120640c55d52934cdef7ae8c69541e9335e03f679e35c62d2882c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0067_2/scores.npz": "6bdc247a700a3f5158d13fafae201234d7682ec63253cb5c828b6bc3b9a55a65",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0067_2/component_areas.npz": "2e3799175f1004db20460acb2cd55561c02f4f07c6261c5a23ea79f265e5bfe8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/release/DJI_0067_2/FRAME_COUNTS.csv": "264cd7ef053006fc2c798f9657307c33926f5ecdae56f11868752338c9ebc397",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0026_2/COMPLETE.json": "d049216aa080d9adf18410b06589cf21c5518c5f88b70ee519f8f7fd9be998d8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0026_2/scores.npz": "81dad2d80d6f124280e977a00317b3c98fe61b93e7f03bd23981a1deae75b3d8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0026_2/component_areas.npz": "d00619271b188c3247e89488cc0623d83abf1e86753b02ba6936a1412538182e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0026_2/FRAME_COUNTS.csv": "90a78ddb728f4f1908f9d18dee7ba6db14302a6b4566cccc78b09d6156be2a4c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0067_2/COMPLETE.json": "0b8b206bb181b35648b8149844d89d8f4a08ef4211c7028cedfe36a5a3553f6a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0067_2/scores.npz": "889e03d9b3a40e4dfb057bbef9c8106ae55361339afb5ddb9d1245d412ddcaee",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0067_2/component_areas.npz": "e8f4605940e0a76550384848741980c5ed49e9a4aabcd27c31bab66256469d6f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/A/DJI_0067_2/FRAME_COUNTS.csv": "5c77e6e1684201cc670668ddba94ed0dc7c3504d7f52ceb00dab217e93b90495",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0026_2/COMPLETE.json": "3004fcddc764231b516cf0874bf3772fcba504e57a6ff13bd66231a0c71b1a39",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0026_2/scores.npz": "e985a11c450957f025d5eafa67dfd4fc5d327acc8c08636dcdd284a37b3d33e3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0026_2/component_areas.npz": "7404cf0c7677b677db0b8a6e1679f6b481e5c33ba66f0f81dfca3f3bea135d5b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0026_2/FRAME_COUNTS.csv": "6d62dc7c6a60eef3a5813281138b3d4a1b359215dbb6992a53b6ad5186faf5a3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0067_2/COMPLETE.json": "baf218b8b26ef70d78d087aae3a41fe98b0bc2544e291ef7cf6dc4e74fa1081b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0067_2/scores.npz": "44c6c36f1f69f5befd8de809072c0ace54059e34e787e21a10102034fbb9a76e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0067_2/component_areas.npz": "3a23969795d8683ea01cb4063bc33acb49d559769ed7882c1e61fb07a70e63ea",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/B/DJI_0067_2/FRAME_COUNTS.csv": "07bfc4f4705cda0c2855469180104b46b36146009c5834c88470c77eadbe8a4e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0026_2/COMPLETE.json": "611f1070e23c358361aee0150ba300583218bfdf39955a2fd0d090858cb5afcb",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0026_2/scores.npz": "86cc09feb608e410dbc2f2818b4e5b5f2cae5de8f2ae91a404367703971c3ad4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0026_2/component_areas.npz": "96a14a7fb5841dcae858c7ec495984563a8f97300550371c61041d47ce73ca37",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0026_2/FRAME_COUNTS.csv": "dbc8bb712f8dfdf32df4168e6592ec6441af3b95536c76b9e93f6b0a493431c6",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0067_2/COMPLETE.json": "70ecbdc683ed694b1ab4f8d9d8c597e93b2354bbd6041e8d03c31097b6a569f4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0067_2/scores.npz": "77aa0946dec9e3a22967ac7dfba66bebc625c4dd56458450a24a1422349da5b7",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0067_2/component_areas.npz": "79766284ab01ce3cd44011f3b85c489137bd33f8576c273878fc4c883271c826",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/evaluation/scored/C/DJI_0067_2/FRAME_COUNTS.csv": "08add44dc72d2a34e21db34a0778c79f431cf3349e808ef3067e088c6439966f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/evaluate.py": "dc87a6ca520f3e31feb9c5e10b1bb27179c46aee6d3d63b442f4da812ed674a8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/runtime.py": "f4c9a387b33440b5d71aebbbbd66c6c84edca37b31313e0377e479d693bd159c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/trajectory_tables.py": "5aa13b44b365253ce9ae5a305e6fcd958a5a8b0b4bae183fa01b8d8bb57c6165",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/tlfp_pilot_20261012/evaluation_code/evaluate.py": "c029eac54ed4e6538e65759dea25c6ff852a755151a753d49b50a49ccb4b3451"
+  },
+  "output_sha256": {
+    "ALL_GT_OBJECT_COMPARISON.csv": "a7551bce21cc56b68ed23ca1a0e7bf892a180fa133fd53ad72e4fe82fe5a12fb",
+    "ALL_GT_SUMMARY.csv": "bb5e712f68c307ecc2e06a92afffe327fd600515bcc2bf4a4f93d5e41f160089",
+    "COHORT_TRANSITIONS.csv": "6055972e0d64ab42ddb5a6a2a333f3b109e70e0e51b9d75c130d8af033ed4d8e",
+    "CONTINUOUS_MISS_SUMMARY.csv": "ae83288597d9f0b5d7dd0d0b2a60c3da35a7bf5a49ae42c70c207411347227d3",
+    "CONTINUOUS_MISS_TRACKS.csv": "02c5690c6d17f22311004ee559dd7ca3e9b424a3b07ae6d85f50e86c2107324b",
+    "FRAME_COUNTS.csv": "4b205d611d9092a00fbeb90c30a485727dd7f32437811890abd6b31a24a58c4d",
+    "OBJECT_COMPARISON.csv": "09f0ec4ac1b2f29cca5009aa6a7d95b598a0535a68efad46fd0d1b305bbabe21",
+    "PROTECTED_AND_WINDOW_RETENTION.csv": "fb0764894189dbd48b46b945389d422680d0fd864b3fb703cd04825d7e3d9fc4",
+    "RECOVERY_CONCENTRATION.csv": "8c56cd9a935de72abcbfdb48921e204c925134854bd18de36d74b007a3d1600a",
+    "RELEASE_MISS_SEGMENTS.csv": "dafb54871a6ea0b13b3628c7a53f48effc969ee639af780d12db890392bc5e61",
+    "SEQUENCE_SUMMARY.csv": "ae524135ce77c215699a6012c166d9e63929b0ee9555c6ff825512aad2692056",
+    "SUMMARY.csv": "a54e40522cb8b40bcdb17c112889eafd458f51594c59c2b2576172765b21b4f1"
+  },
+  "interpretation": "Frozen full-frame actual-component diagnostic; not official Pd/Fa. Same 2048-step endpoint, O/S, threshold and fixed cohorts. Other-valid-GT records are reported separately."
+}

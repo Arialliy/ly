@@ -1,0 +1,909 @@
+{
+  "utc": "2026-10-11T11:44:59.267114+00:00",
+  "excludes": [
+    "ARTIFACT_SHA256.json",
+    "__pycache__"
+  ],
+  "files": [
+    {
+      "path": "CONDITIONS.csv",
+      "bytes": 7324,
+      "sha256": "bf03e19da817a60a3d9cc8763d6d32280cea889f341d1c4eebc6bce3ad47a3c2"
+    },
+    {
+      "path": "FINAL_VALIDATION.json",
+      "bytes": 2709,
+      "sha256": "4b87567f879d7f7ce9423fd21b2663e3a26a046981f9878f068eafb53ec5de3d"
+    },
+    {
+      "path": "MANIFEST.md",
+      "bytes": 2685,
+      "sha256": "a83057a7206ce571104ec76d06e16684f5e5930b99effefee617c67937dd906e"
+    },
+    {
+      "path": "OBJECTS.csv",
+      "bytes": 4803681,
+      "sha256": "e867369e7756bf83ab483cbc618122d7b505ac29db7a6e0ff87975b9aebb4400"
+    },
+    {
+      "path": "PLAN_REVISION.json",
+      "bytes": 820,
+      "sha256": "7265560bd51c15c7aaab9178fee927acf61e3a31c2d46399e4fbaf184856deef"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 6041,
+      "sha256": "15fdd8218026c2496b6515d0db175741184f9868153bb9e42f7b6ee257dec2cc"
+    },
+    {
+      "path": "PROTOCOL_FREEZE.json",
+      "bytes": 505,
+      "sha256": "d1aadf67eb998599865b68b315b55968d1a6f19b7211dcb94a8e1bbcaef7f193"
+    },
+    {
+      "path": "PROTOCOL_FREEZE_v1.json",
+      "bytes": 325,
+      "sha256": "b4b6438419ffb50aeac31ad62fd61d856c81670e9249c12387a85e267885fa31"
+    },
+    {
+      "path": "PROTOCOL_v1_before_sampling_provenance_correction.md",
+      "bytes": 5173,
+      "sha256": "b47c2b1a54d01bd7d96b610d76d3cac0679a22987277d93396dec2497f00e871"
+    },
+    {
+      "path": "REMAINING_OPPORTUNITIES.csv",
+      "bytes": 229941,
+      "sha256": "10a555765f567ebd4972ce4cbcf7e69253639ddaf87ca0c89a7b005f176293cd"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 12632,
+      "sha256": "aa1334d348cacd9d285e5110d7a930f317d59b4cbf9302d305a715b0f82a1864"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 1076,
+      "sha256": "1ca1bb92b28c7c1ad50c850a17f782016964245ac1dd57782c7ee270cad4b676"
+    },
+    {
+      "path": "SUMMARY.json",
+      "bytes": 53703,
+      "sha256": "583a7422397c3771323f1179ca69c120b6195eadb74f60deccd4626748118886"
+    },
+    {
+      "path": "TABLE.csv",
+      "bytes": 7029,
+      "sha256": "ba6b7ebdf5349d71f8f8a417542dd43c07ddf9ca7cc465a34911d93743630b9a"
+    },
+    {
+      "path": "TRACKS.csv",
+      "bytes": 130842,
+      "sha256": "8afc2ca8759a5be9300e6eeab091563ecf92fc5303a9a98e304eba01cc8aae12"
+    },
+    {
+      "path": "WINDOWS.csv",
+      "bytes": 7863952,
+      "sha256": "642829d527ce23301628f64c01eb16abbdba53d96b1207470787c62a88ca5c53"
+    },
+    {
+      "path": "audit_controls/CLAIM_REVIEW.json",
+      "bytes": 2499,
+      "sha256": "00ad5793b315c1f7cda5d1172b65e4c5faebe3acf2ec1ce565d0fa861eff842c"
+    },
+    {
+      "path": "audit_controls/CLAIM_REVIEW.md",
+      "bytes": 5311,
+      "sha256": "2e27e2372c9931702d9a0b8bde03c7a79b313d1194d1d905ac459236459f7776"
+    },
+    {
+      "path": "audit_controls/REPORT.md",
+      "bytes": 4625,
+      "sha256": "e62750668f5595fe82cf19175cc812a97d7ca44447bb42a2e9ec36939253849d"
+    },
+    {
+      "path": "audit_controls/SUMMARY.json",
+      "bytes": 35176,
+      "sha256": "ae150136ec0ac68087cb8a5dbea9275bc283cdb70a49dc84adf82319e391e3f7"
+    },
+    {
+      "path": "audit_controls/audit.py",
+      "bytes": 11879,
+      "sha256": "1940dab22a66aa63167f8bc160ef12f6576dc59ff28c43e33ed7c6db1a4f19ae"
+    },
+    {
+      "path": "audit_controls/review_claims.py",
+      "bytes": 5134,
+      "sha256": "6b035749dad2d7e895985e6b07ee7905e4dd0c3a6f484ff50438e9ba397dbe2f"
+    },
+    {
+      "path": "audit_new/AUDIT.json",
+      "bytes": 22664,
+      "sha256": "84af2f749725f5f90b5f0f013a6444cbc6e47e61ba749d19e6cb85d5505555b5"
+    },
+    {
+      "path": "audit_new/INDEPENDENT_COUNTS.json",
+      "bytes": 22535,
+      "sha256": "82c50268b6176881f60aad91ec5bc0f8f5762405bb81535b61a53a24de71642d"
+    },
+    {
+      "path": "audit_new/REPORT.md",
+      "bytes": 1609,
+      "sha256": "daa94035e7443a66400cd5953aa976855fae8c736fb4a236d7693ebdc2437125"
+    },
+    {
+      "path": "audit_new/recompute.py",
+      "bytes": 8636,
+      "sha256": "2e8d0e4277f47b5ab875e32d257d295f639aca7591a7c484ee6bb1fae5fbb433"
+    },
+    {
+      "path": "audit_old/REPORT.md",
+      "bytes": 7944,
+      "sha256": "700a97f0bcdf85046397a121d64c1f872d614b7c082c283c15cfe83c1cb29f31"
+    },
+    {
+      "path": "audit_old/SUMMARY.json",
+      "bytes": 22761,
+      "sha256": "f670c8cd7cb414837d52ff5921bc0167634c4ab7062bb8aceceb6a2a1d32765e"
+    },
+    {
+      "path": "audit_old/audit.py",
+      "bytes": 10417,
+      "sha256": "e504461de485e9e9270c37194d85c307a6ac195238c0f5fc322e0fcb8f8f4c79"
+    },
+    {
+      "path": "audit_old/by_cohort_sequence.csv",
+      "bytes": 1927,
+      "sha256": "b60e278ff598100ac89741f56a13bc5982d80e7427d806a5d9502b042efd7c5b"
+    },
+    {
+      "path": "audit_old/by_cohort_track.csv",
+      "bytes": 14718,
+      "sha256": "04adf3ba449a07e35365dbedcfd907268c2e9c67fd6b6fe9c9954cd8b1e2b4bb"
+    },
+    {
+      "path": "audit_old/objects.csv",
+      "bytes": 900871,
+      "sha256": "02772e24a21e7ba98123ec8d52c116d9cc8d90f290c87bbf26699494d402dca0"
+    },
+    {
+      "path": "control_design/MINIMAL_CONTROLS.md",
+      "bytes": 9234,
+      "sha256": "a3c99e40232b6d2ce7208f42db05f128c1995b52c7992234de53409ab991ce8b"
+    },
+    {
+      "path": "control_summary/ALL_CURVES.csv",
+      "bytes": 5108,
+      "sha256": "0988067886675e7f4a20aae04cf946f5e084cf851b8b4bcede5d7d3819662a43"
+    },
+    {
+      "path": "control_summary/COHORTS.csv",
+      "bytes": 639,
+      "sha256": "514a44cdef7d29b22b33541f85d896a5d0b7c8627479abb76f1eff0f0719055d"
+    },
+    {
+      "path": "control_summary/FIXED_HALF.csv",
+      "bytes": 1044,
+      "sha256": "efb82eb03a8f0b87565456cb2d49a0876d49bf5bdc21d38247cbfa5f5ea82b10"
+    },
+    {
+      "path": "control_summary/OBJECTS.csv",
+      "bytes": 2804674,
+      "sha256": "bc26057ffd5dc91f53e960a0804bec391dd80869e6e1fb8d95a63933af5a79be"
+    },
+    {
+      "path": "control_summary/POOLED_DEVELOPMENT.csv",
+      "bytes": 484,
+      "sha256": "2815f36452686a7ae996e05e2c72f15acccd2d8dfcef1d3954d0cf895812bbde"
+    },
+    {
+      "path": "control_summary/POOLED_VS_RETHRESHOLD.csv",
+      "bytes": 486,
+      "sha256": "66f6669b5b3ce6eb1f9d75382d5d755da53d71c41e57ea71929d4f9f02a449b9"
+    },
+    {
+      "path": "control_summary/SUMMARY.json",
+      "bytes": 15736,
+      "sha256": "eb4b1c717608b8504e3a737f212e7f979ab6b4f2425b11c6058232bd9594a7a0"
+    },
+    {
+      "path": "control_summary/TRACKS.csv",
+      "bytes": 12475,
+      "sha256": "5262aa6c82dd19e23e4aa8faf6ba8961ddfd507198fbb9d49d713144d33571a2"
+    },
+    {
+      "path": "control_summary/TRANSFER.csv",
+      "bytes": 584,
+      "sha256": "e2850bee12076f7d7bd3ec58724b19a9d0e1dfbb034a4d0d3edd785b22a79dff"
+    },
+    {
+      "path": "control_summary/TRANSFER_VS_RETHRESHOLD.csv",
+      "bytes": 479,
+      "sha256": "e260030b2723d195582c58d2da8d4f00790df69c41e7a9247b54b1e882b9d384"
+    },
+    {
+      "path": "evidence_context/INTEGRITY_CHECK.json",
+      "bytes": 285,
+      "sha256": "ccd5b3143f2d8bef533867fc8fdd16ae81028e2602d175235d4a71e65ee1e2cd"
+    },
+    {
+      "path": "evidence_context/OBJECT_CONTEXT.csv",
+      "bytes": 29263,
+      "sha256": "b7dc0bf6a2f4ff4b949424d0cafb5bccfd87ba087b516fd465239aaf115698c9"
+    },
+    {
+      "path": "evidence_context/README.md",
+      "bytes": 2888,
+      "sha256": "b70ed634a840d9c764ee0cef1466ab1648aec034e2d705529c835b7569513f4d"
+    },
+    {
+      "path": "evidence_context/SEQUENCE_SUMMARY.csv",
+      "bytes": 1439,
+      "sha256": "c14c4dcb5cf5b51bc4326426591f5aa2d9e995ece7d47d09c16d18ca934305fa"
+    },
+    {
+      "path": "evidence_context/SUMMARY.json",
+      "bytes": 4226,
+      "sha256": "72013fe0e496c25676176fa1a04f7d7fee8b725d1d4f9cd76f504b63b7a35b94"
+    },
+    {
+      "path": "evidence_context/WINDOW_EVIDENCE.csv",
+      "bytes": 260051,
+      "sha256": "6d39b5fbba9eb5a593fef27ee4fc130b0a57bd554788cce7b7b8d6401ad55f62"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/OBJECT_CONTEXT.csv",
+      "bytes": 29263,
+      "sha256": "b7dc0bf6a2f4ff4b949424d0cafb5bccfd87ba087b516fd465239aaf115698c9"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/README.md",
+      "bytes": 2888,
+      "sha256": "b70ed634a840d9c764ee0cef1466ab1648aec034e2d705529c835b7569513f4d"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/SEQUENCE_SUMMARY.csv",
+      "bytes": 1395,
+      "sha256": "812c904b8ebc640ab033a2e8711a25f0746873c0e7df9667a1fd421f5f56b510"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/SUMMARY.json",
+      "bytes": 4226,
+      "sha256": "a5c4a50927f2b0a122310443b27eed80184029e92e88e1c7b5e71aee37433e6f"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/WINDOW_EVIDENCE.csv",
+      "bytes": 260051,
+      "sha256": "6d39b5fbba9eb5a593fef27ee4fc130b0a57bd554788cce7b7b8d6401ad55f62"
+    },
+    {
+      "path": "evidence_context/archive_before_group_label_alignment/describe_window_evidence.py",
+      "bytes": 16137,
+      "sha256": "766c03800971a061d8721185370a919eed2ebc841fa7bca70cd5dcb7b0c468b2"
+    },
+    {
+      "path": "evidence_context/describe_window_evidence.py",
+      "bytes": 16197,
+      "sha256": "bb5deb7c463e330a3c3289f0b967e2a4810c83bb9fc272328d7246a61b9cf25e"
+    },
+    {
+      "path": "join_matches.py",
+      "bytes": 11533,
+      "sha256": "9dbbbef4ea7f2c7191fc76add0c0c111de3354fa06568c139da206e31bab4a7c"
+    },
+    {
+      "path": "join_matches_before_npz_cache.py",
+      "bytes": 11421,
+      "sha256": "1aef534f2f1bb4fa194db8e2831fa940bd4c84307d4f4c80ca8b236aaaa6dfc0"
+    },
+    {
+      "path": "join_v1/CONDITIONS.csv",
+      "bytes": 7324,
+      "sha256": "bf03e19da817a60a3d9cc8763d6d32280cea889f341d1c4eebc6bce3ad47a3c2"
+    },
+    {
+      "path": "join_v1/OBJECTS.csv",
+      "bytes": 4803681,
+      "sha256": "e867369e7756bf83ab483cbc618122d7b505ac29db7a6e0ff87975b9aebb4400"
+    },
+    {
+      "path": "join_v1/REMAINING_OPPORTUNITIES.csv",
+      "bytes": 229941,
+      "sha256": "10a555765f567ebd4972ce4cbcf7e69253639ddaf87ca0c89a7b005f176293cd"
+    },
+    {
+      "path": "join_v1/SUMMARY.json",
+      "bytes": 53703,
+      "sha256": "3ac82c2b10c520ed3b20d3acd126628ebabc58d4bf9dcc721d22132fb4e6f709"
+    },
+    {
+      "path": "join_v1/TABLE.csv",
+      "bytes": 7029,
+      "sha256": "ba6b7ebdf5349d71f8f8a417542dd43c07ddf9ca7cc465a34911d93743630b9a"
+    },
+    {
+      "path": "join_v1/TRACKS.csv",
+      "bytes": 130842,
+      "sha256": "8afc2ca8759a5be9300e6eeab091563ecf92fc5303a9a98e304eba01cc8aae12"
+    },
+    {
+      "path": "join_v1/WINDOWS.csv",
+      "bytes": 7863952,
+      "sha256": "642829d527ce23301628f64c01eb16abbdba53d96b1207470787c62a88ca5c53"
+    },
+    {
+      "path": "runtime/JOIN_REVISION.json",
+      "bytes": 375,
+      "sha256": "3321b32c484b167acd2b8d151e0ec140747f6b2ef98fe0132dec123b7ee08bd2"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0026_2.stderr.log",
+      "bytes": 419,
+      "sha256": "1b52d6802653b422c68ac9d1e22cb088aa051c4c257bed81ccca29f3b62f8620"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0026_2.stdout.log",
+      "bytes": 884,
+      "sha256": "0a48a5e6f322627f4fb068055af5635f8bfb247e4f7b22da929f98e5220259d3"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0026_2_exit.json",
+      "bytes": 571,
+      "sha256": "bb5fcef73f63aae0854972649b542705c1541a43871db594eb118c17c1510a99"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0026_2_launch.json",
+      "bytes": 1817,
+      "sha256": "c9f4f6736eda8fa0d0c5f568e40ccaa3850991f68ed8060fff0edc2a37d9380d"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0067_2.stderr.log",
+      "bytes": 419,
+      "sha256": "e2af027ff502dfcb0fd37b70d202628c3422d4b37444ef0285384d4bcc179278"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0067_2.stdout.log",
+      "bytes": 894,
+      "sha256": "cbed9bdf1f7f9fd6673bc7f42a7a4c9469b0ce13f36a5b7a6acca770df670fe5"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0067_2_exit.json",
+      "bytes": 571,
+      "sha256": "63509483e6af770fdc9dbc4422e9ae5f2af24748fdc7ae55a727f49f2e23a706"
+    },
+    {
+      "path": "runtime/window_scoring/DJI_0067_2_launch.json",
+      "bytes": 1817,
+      "sha256": "a897a6bce6380c878d8a05d13db00cf9eaf4441e5f2befa612165791f304f158"
+    },
+    {
+      "path": "runtime/window_scoring/VERIFICATION.json",
+      "bytes": 13592,
+      "sha256": "125af42b838eed66fa11f067f39224773fd6b4e85c947321db06ec42a223ead3"
+    },
+    {
+      "path": "runtime/window_scoring/verify.py",
+      "bytes": 3456,
+      "sha256": "18e55ac1cc3e4b07ec9fbea70c64a2eb04e893bc017f3bba01eb8f7eee123a67"
+    },
+    {
+      "path": "runtime/window_scoring/verify_run.json",
+      "bytes": 776,
+      "sha256": "f6d497ce96b76feac21ebbe95ee20d2f8a524944f861e288f7bb37026964c0fc"
+    },
+    {
+      "path": "simple_controls/DJI_0026_2_BASELINE_ADAPTER_CHECK.json",
+      "bytes": 439,
+      "sha256": "fe28ffb06013f4c9246dea2ff83bca8078b919a5bfe2eefe1a77433cc10582cf"
+    },
+    {
+      "path": "simple_controls/DJI_0026_2_container.log",
+      "bytes": 3168,
+      "sha256": "b26af8e19875b44858b4151b23441a10461a1af51ef315509f3e5d5ad275c892"
+    },
+    {
+      "path": "simple_controls/DJI_0067_2_BASELINE_ADAPTER_CHECK.json",
+      "bytes": 440,
+      "sha256": "5ac718141ce679a270266dad696eb6552c4a74cda9ecf99383372ed71071f09e"
+    },
+    {
+      "path": "simple_controls/DJI_0067_2_container.log",
+      "bytes": 3169,
+      "sha256": "7d2403369c5a50130132ddb619f38d909c33bd03dcad416bf1a9d6fdfe46af5c"
+    },
+    {
+      "path": "simple_controls/LAUNCHES.json",
+      "bytes": 3357,
+      "sha256": "8815226f329da9cd3c788da0f1d65a8f6206431ecf60e1ac19f5b08584e7a282"
+    },
+    {
+      "path": "simple_controls/OUTPUT_INTEGRITY_CHECK.json",
+      "bytes": 787,
+      "sha256": "3c439057447659811a278ce3037723c249cefd040bda735dc2b86f51b1adaf47"
+    },
+    {
+      "path": "simple_controls/OUTPUT_SUMMARY.json",
+      "bytes": 1827,
+      "sha256": "533b353fcf5499fd9259550ff279e7d2329f4010de4d61db7449ac92bb819031"
+    },
+    {
+      "path": "simple_controls/README.md",
+      "bytes": 2646,
+      "sha256": "80bc43c8f3801ac5deed49afe46f8e999bd6b23b18abde8e53d8497ab264b672"
+    },
+    {
+      "path": "simple_controls/RUNTIME_STATUS.json",
+      "bytes": 1354,
+      "sha256": "bb55271c6741cb95ea4d19bbb61c291cfca79443fa0690171e930968061c996e"
+    },
+    {
+      "path": "simple_controls/check_saved_outputs.py",
+      "bytes": 3222,
+      "sha256": "996edb5f01921e6b8359949d16fd0a90a3190b27feb4deb12bf3396603c9b8c8"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0026_2/fused.npz",
+      "bytes": 176609910,
+      "sha256": "6d8faf4fbfe2d8767c344b94a31ae0b97202358298d67d4c932461406e582d1e"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0026_2/fused_COMPLETE.json",
+      "bytes": 393944,
+      "sha256": "66c788d4aac79c7564adab986b3f791b3f7c1dcf1a312f0aa269ca01c880dfae"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0026_2/fused_curves.csv",
+      "bytes": 1244,
+      "sha256": "e652389fd0e18df0aac6267412d9d193044ce190a1c1440958b6bfe374c912d7"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0026_2/fused_matches.npz",
+      "bytes": 58801,
+      "sha256": "4b387f8428d606b7bb44a6579dd3b65e2ee642444ec04a74e025be063824aace"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0067_2/fused.npz",
+      "bytes": 187005695,
+      "sha256": "7e73f06ccd30b72c0cc6dd89bba06ef54f2c16eb5a694f35f0b7a8f0d901e024"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0067_2/fused_COMPLETE.json",
+      "bytes": 4112951,
+      "sha256": "7e28e828b09e321f9195dad53cf9a00cf0a2fe538e94c8319bd8def0d653009e"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0067_2/fused_curves.csv",
+      "bytes": 1354,
+      "sha256": "423b3079d765180e49fb343403c5f8407bd59d62fd9fd172da30b7877c7ef654"
+    },
+    {
+      "path": "simple_controls/official5_probmean/DJI_0067_2/fused_matches.npz",
+      "bytes": 779540,
+      "sha256": "6538436803fdddcc8369dd5fd46d86c1a251b704e85fcff0ae97b474c786a707"
+    },
+    {
+      "path": "simple_controls/score_controls.py",
+      "bytes": 11831,
+      "sha256": "9f64de98cdef8e6b57a638c703d598185a713fdc51f1aae4432283716a755d4f"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0026_2/fused.npz",
+      "bytes": 176493259,
+      "sha256": "800550cc71a545b9168801b682c95357359e412841e2a010e9dab949f060648b"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0026_2/fused_COMPLETE.json",
+      "bytes": 393926,
+      "sha256": "28358cf794e7b0d49cf62e8945b8c57a040f6f0c8a7b3a956792125b32aaa0bc"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0026_2/fused_curves.csv",
+      "bytes": 1251,
+      "sha256": "637942bfbb2b94a5701b36f1a500a8657dd655a0f6ba63b57c19456c06dc0cee"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0026_2/fused_matches.npz",
+      "bytes": 60358,
+      "sha256": "72500514814fc92d290d3139e02e805d8b878a4f98da6085c0335f7fbf88fae9"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0067_2/fused.npz",
+      "bytes": 186894970,
+      "sha256": "d0959f6813e870462499eb61ac9c4ac0562eca69280cc5370fa2f8a2028ec00e"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0067_2/fused_COMPLETE.json",
+      "bytes": 4112933,
+      "sha256": "d2fe5b4cc895ed64a7553ecc8e6f8ead9d3041ad5553c75ea41b540db53fd499"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0067_2/fused_curves.csv",
+      "bytes": 1357,
+      "sha256": "aaac5c54074ac95d0f440a057a9e2f1924bb5f80a2cbeeed28635ed9a8ebbf2b"
+    },
+    {
+      "path": "simple_controls/symmetric5_probmax/DJI_0067_2/fused_matches.npz",
+      "bytes": 831776,
+      "sha256": "8da2f05f800325ef8ce43c643313789930d893e27471f996adef1ddf330f218a"
+    },
+    {
+      "path": "summarize_controls.py",
+      "bytes": 8237,
+      "sha256": "5658ded41caf67319ba99a85e9df46205ec32286baad7d03989ba6c4fb3188c3"
+    },
+    {
+      "path": "supplemental_diagnostics/EXTRA_OPPORTUNITIES.csv",
+      "bytes": 4284,
+      "sha256": "34064dce041d29a24e14d3819afc9fa3a27c970b31e58d55b350dffd24cd5513"
+    },
+    {
+      "path": "supplemental_diagnostics/README.md",
+      "bytes": 2817,
+      "sha256": "06fb2b2a785ae5218ce4e24bcd093de7fc500aaa9a7ac7987bf0458e1ff57172"
+    },
+    {
+      "path": "supplemental_diagnostics/RESULTS.json",
+      "bytes": 2924,
+      "sha256": "07b933a41bfa3db26e0d666e01670052b3eb264888643609e37f5e3ccdfce906"
+    },
+    {
+      "path": "supplemental_diagnostics/STABLE_OBJECTS.csv",
+      "bytes": 16946,
+      "sha256": "e10676d1e80ba7f041a93cbf025c7833fc1fa93b4d1adfc11d908d84af1bb27e"
+    },
+    {
+      "path": "supplemental_diagnostics/TRACK_NET.csv",
+      "bytes": 12475,
+      "sha256": "5262aa6c82dd19e23e4aa8faf6ba8961ddfd507198fbb9d49d713144d33571a2"
+    },
+    {
+      "path": "supplemental_diagnostics/recompute.py",
+      "bytes": 12795,
+      "sha256": "6ddfe8cf55a25b08082f756980e6d2048982ee0b47f8c69ea4164316b3ece837"
+    },
+    {
+      "path": "verify_delivery.py",
+      "bytes": 4801,
+      "sha256": "fb93e89e90d697f16542b0234241a21a3b21ee126c99ce2e464f2824e46c407f"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_000_COMPLETE.json",
+      "bytes": 99894,
+      "sha256": "154b5c10fedb383e0288fd4e2f2442623ad237a8c4f8aa6af9b79e5417c4086a"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_000_curves.csv",
+      "bytes": 184,
+      "sha256": "4e765ca38697c2a7f4809095e16fd3c4d817e8b2e09fc3983bd2b15da0b69d53"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_000_matches.npz",
+      "bytes": 4276,
+      "sha256": "56e7bb30affa854b531bcfd880a61b9dfa5e09886f21c235ec1a73c91b888177"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_012_COMPLETE.json",
+      "bytes": 100085,
+      "sha256": "f9a9f471373d07caee069bf2f7fdde9480eaf84453b158a286f561a9c07f3f8f"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_012_curves.csv",
+      "bytes": 183,
+      "sha256": "0a61aedbfe632d7f1a4c2603d4bbcb672b4827edd9b338cf8990fd06cede304e"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_012_matches.npz",
+      "bytes": 4218,
+      "sha256": "694fbe7138753b47c9ee22c050f32250d088b008b23f5c46a53928bf8a4faed5"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_024_COMPLETE.json",
+      "bytes": 100087,
+      "sha256": "41863e06ace3357882d782450f1d97af514a2173afd99fb50c4f31fe20acf5eb"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_024_curves.csv",
+      "bytes": 183,
+      "sha256": "dc336a259f2f0c5731c9c64f041cd5640f0b0b18c320fecd1ae887b733f09d40"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_024_matches.npz",
+      "bytes": 4258,
+      "sha256": "8e4a9f34dc035b5f8879f05c9b42148306f8088d20ad83d5985fc194caeb55f5"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_036_COMPLETE.json",
+      "bytes": 100079,
+      "sha256": "e9e4877ebb422a00028b3e96368168ed256db83289bcde571bd509d86a3d1264"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_036_curves.csv",
+      "bytes": 183,
+      "sha256": "1df95ab3a0d551fe4c44e113ba613498232c85dd0a2bdad1831aceb1dafb2cb9"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_036_matches.npz",
+      "bytes": 4091,
+      "sha256": "c9ea991ce2cef747a9632f4e5ffc7b8dac7a4094f7a36af1bd1b8022b114ca77"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_048_COMPLETE.json",
+      "bytes": 100054,
+      "sha256": "db4007abbb5f1bd1ff1468bdf63560c83f1e63c213cb81bc181bdabbd0c6956a"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_048_curves.csv",
+      "bytes": 183,
+      "sha256": "dc94352e9f725dcfbeac4b660b3386b46ef84895a19327278148ec508d7ae905"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_048_matches.npz",
+      "bytes": 4138,
+      "sha256": "982447248b6eeb7e807109a3968d975af32592e073212d11238855312014640e"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_060_COMPLETE.json",
+      "bytes": 100042,
+      "sha256": "a5444a7de10b06da2dbf56c4ee5717d4f7e7f5ad949412c6c5617ead60a84208"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_060_curves.csv",
+      "bytes": 183,
+      "sha256": "38e79faceda473d243a1d63e07653e2f10c5c3f94cfa58b06cc9839130c53d33"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_060_matches.npz",
+      "bytes": 4135,
+      "sha256": "52cf9b1e892eadc016e7954c1027d440b841f173dc788a153a03f17eda4f47dd"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_072_COMPLETE.json",
+      "bytes": 100247,
+      "sha256": "86dc1b691ef509ac10eee0f63677e05b0ddffe993f0474acb942a5bc57bf2fa5"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_072_curves.csv",
+      "bytes": 183,
+      "sha256": "66f92aeddb8cca7508b0d0c0278616e67232f69e6a21daf79a75818116cb0991"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_072_matches.npz",
+      "bytes": 4174,
+      "sha256": "1d31a39a0832815a49a093e245bbe026759e572091f0225a9ec3054cf2cb868e"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_084_COMPLETE.json",
+      "bytes": 100445,
+      "sha256": "3e6142203e747d8943aabcdb5a91548775be27e32dbe3f81acc44c57161c0a2a"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_084_curves.csv",
+      "bytes": 183,
+      "sha256": "c5145a0d61e1ca5f8983cbe423c56fb8bc356847a9e354511b4d8237123783af"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_084_matches.npz",
+      "bytes": 4199,
+      "sha256": "7e9a09a253eaef8c624b62a00e2fa02b857cfb9d81c1ed14cb87121589bca241"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_096_COMPLETE.json",
+      "bytes": 100361,
+      "sha256": "3b71eff8e86115f9a7eaca939a256c3c6a74f2ff420e3fea4d48575faa5199f4"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_096_curves.csv",
+      "bytes": 183,
+      "sha256": "5683cfb7faaf005f4fa47ddfc656faec0984d359641413bcb078058b3a2e3d4a"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_096_matches.npz",
+      "bytes": 4276,
+      "sha256": "58deed6bb982172e81f4636d60b25269f383951badeb7d1f5364345215397681"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_108_COMPLETE.json",
+      "bytes": 97112,
+      "sha256": "059f5f30f6ce358f5f10a4107062a1b60cf4741c51cac55dbb46f83442df1528"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_108_curves.csv",
+      "bytes": 184,
+      "sha256": "84d002cf486397a9bd9dfcdb73bc98041f3dbeab4e4c12adc351ff7464310dcf"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_108_matches.npz",
+      "bytes": 4444,
+      "sha256": "24bbfe31af39542ce6c2f5e8443d9aadd911cf5d993df62cb26b2d6aa25433f5"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_120_COMPLETE.json",
+      "bytes": 94648,
+      "sha256": "43dfb02ba3f939124c159515f5006bed458ab1931327529439b2519d77f92379"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_120_curves.csv",
+      "bytes": 186,
+      "sha256": "f2bebecbd8f2a241dc34e34511b601e23706c552df6e9c8f5c1f9a3b78c24986"
+    },
+    {
+      "path": "window_scores/DJI_0026_2/window_120_matches.npz",
+      "bytes": 5088,
+      "sha256": "38bc090122b77c0c2703a4b1fd9a602d879588f9e73e1f03c6fbe2896711dddf"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_000_COMPLETE.json",
+      "bytes": 987025,
+      "sha256": "fef53a38d92b80c91c14282e82db379e08dcb4bde0f6a3d094daf44bf23da70f"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_000_curves.csv",
+      "bytes": 189,
+      "sha256": "ffa913d85a34e2e75a9a6a2aaaa5435cbc0de266dff07423a7d649b553c67a54"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_000_matches.npz",
+      "bytes": 22865,
+      "sha256": "0ab235a7bcc8d9205b4eee102a508517d2d3ac6214393286cbbc42b9992d7cbc"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_012_COMPLETE.json",
+      "bytes": 990498,
+      "sha256": "46f5a31dfcfde04c874fe5e94018b1979571f0d46990aaeb67c728aea381d580"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_012_curves.csv",
+      "bytes": 189,
+      "sha256": "7542dcb71cc51eff0619c5faa6fdf1e4603c8c2a92bf5128c4b0537f3b5d5d1e"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_012_matches.npz",
+      "bytes": 23254,
+      "sha256": "d0684a8ae2e0b900891f506dd967c82a94d745778a93864f6dbfeddf1386d5ff"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_024_COMPLETE.json",
+      "bytes": 995218,
+      "sha256": "97197da89bf21d497b2b024b23b640c0bd76bd03e5a3e03437e89d96e4c796e7"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_024_curves.csv",
+      "bytes": 189,
+      "sha256": "7b107bff60a1e05078a5734386cffa1bcebf94b442d6ee7ed482aaf1c233c70b"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_024_matches.npz",
+      "bytes": 23232,
+      "sha256": "c12dee55b5ea2f262314a3c8304d132b9d0998800d45715997438ddc00ca26bc"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_036_COMPLETE.json",
+      "bytes": 1010098,
+      "sha256": "d4d34e3d82ec536007cf1d3ef002a917fd399f6603dac7b27bb3609c55bc73df"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_036_curves.csv",
+      "bytes": 189,
+      "sha256": "b91db15a91dcc78ffd614950da599ff3634d9b7a0215954ab41d0a17b595755f"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_036_matches.npz",
+      "bytes": 22965,
+      "sha256": "4e75b48abf5f3e02f22e9c9d18ff00afc711fbb43d2aa9a98f8a2910c4f43f3f"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_048_COMPLETE.json",
+      "bytes": 1024757,
+      "sha256": "406a363a854138f2214248d0659b27d8f483c0bad8e4d02c387aba3e26517741"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_048_curves.csv",
+      "bytes": 189,
+      "sha256": "0dcf0627ea35f9bdbab794f4e3bef32fa1bb8b369ba4c4408d318406bca343fa"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_048_matches.npz",
+      "bytes": 23491,
+      "sha256": "2ed07def70dc2d610444b20256fc759a31b2b1819faeffe789c87b74500c3b34"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_060_COMPLETE.json",
+      "bytes": 1048220,
+      "sha256": "57d70d7f6996921e56a0b2d44fc45b7a3ea030b460fa22a2da706de45540f014"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_060_curves.csv",
+      "bytes": 189,
+      "sha256": "87dffb515262b533975c76b832ecb9855d8fa8683f3b21f2c339c205c62b6f9e"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_060_matches.npz",
+      "bytes": 23857,
+      "sha256": "0420228d01d41b89efe70359ae5e6c76bf5f369839558e3a72008c49df10d8ac"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_072_COMPLETE.json",
+      "bytes": 1059353,
+      "sha256": "a01d5d02c70adbbe964e93e6a813149b05cf8387971342c3a78cdc160f758a37"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_072_curves.csv",
+      "bytes": 189,
+      "sha256": "9700889c48f3580f51330e32ed895f6bf8170e0d8fb33deb0a7ae23fd607bd23"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_072_matches.npz",
+      "bytes": 24191,
+      "sha256": "24e610ba185eefc239ab44b8d9bd36a2f26a8ae90f67a2af1c9174bbbe632a89"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_084_COMPLETE.json",
+      "bytes": 1072149,
+      "sha256": "c5b021b535121395c5b199fa8acdfea1e1baf52bbf220444571c8ae545633e35"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_084_curves.csv",
+      "bytes": 189,
+      "sha256": "08331fc95433a6ed9466a472aebd124e55db682bce76bd72f15e8b9babbfbdb3"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_084_matches.npz",
+      "bytes": 24493,
+      "sha256": "2ab987ead2c0ec082e27543eb2c2be012312186107447c9a5a8894c33c773b53"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_096_COMPLETE.json",
+      "bytes": 1068666,
+      "sha256": "ab24ea55308ca93ec8e4a5fb6f499a412025513dda5264958715c8f7f669e3ea"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_096_curves.csv",
+      "bytes": 190,
+      "sha256": "7788446395fdf4f142d63cae055e602c6b3140573aa155812823ff7d68bb5554"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_096_matches.npz",
+      "bytes": 24714,
+      "sha256": "878cc6eda3c24fa5e0bf1dcfc9c1dbcb11ee8ddfa92fae7ec736a1ef8f6355ea"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_108_COMPLETE.json",
+      "bytes": 1060640,
+      "sha256": "18b90ed9a3870edfeb6e9a77b5d4d77a6c14e6a504b9c3715e97c6d850eca789"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_108_curves.csv",
+      "bytes": 190,
+      "sha256": "ac9e7c8c249be684ec865382cf143b65ece88c499f9510c4ae92033fcc6f28c1"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_108_matches.npz",
+      "bytes": 24682,
+      "sha256": "a61248f5b3eaacd28c1d16701b3bd578003e2aa9858e8e7ac14ee79f85e56347"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_120_COMPLETE.json",
+      "bytes": 1043814,
+      "sha256": "b9bc89a4416afa419b27e75c268be0839f14074efc52fb99b9f7cb3e49c4aca1"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_120_curves.csv",
+      "bytes": 190,
+      "sha256": "f2e8b55654c04626d3af8adfe00eebd604c41030f00f1ad321934597b3c64368"
+    },
+    {
+      "path": "window_scores/DJI_0067_2/window_120_matches.npz",
+      "bytes": 24516,
+      "sha256": "24afc0bb2914252a251d30d3cd4fe1d680c80a2ad8c019851d2f69f875442f93"
+    },
+    {
+      "path": "../stage1_goal/CVPR2027_RESEARCH_PLAN.md",
+      "bytes": 20955,
+      "sha256": "fad0b5c0fa09662439158d642b1474e45f4aa56472cdc74c3564f940f1940484"
+    },
+    {
+      "path": "../stage1_goal/CVPR2027_RESEARCH_PLAN_before_problem_validity_20261011.md",
+      "bytes": 14621,
+      "sha256": "f7d53229fd8c6e12577dad16a29c8745cafc9d8b3eace25c0b1fb5120e5e987d"
+    }
+  ]
+}

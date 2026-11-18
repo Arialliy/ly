@@ -1,0 +1,10 @@
+pair_id,source_relation,update_weak_context_count,update_weak_bbox_area_median,update_exposed_target_context_count,update_reliable_context_count,update_visibility_status,observer_weak_context_count,observer_weak_bbox_area_median,observer_exposed_target_context_count,observer_reliable_context_count,observer_visibility_status
+6,same_source,27,99,240,186,not_available_in_source_annotations,80,66.0,640,547,not_available_in_source_annotations
+8,same_source,37,24,438,533,not_available_in_source_annotations,610,28.0,734,421,not_available_in_source_annotations
+9,same_source,20,135.0,240,286,not_available_in_source_annotations,44,84.0,160,109,not_available_in_source_annotations
+10,same_source,461,32,992,526,not_available_in_source_annotations,721,28,1183,462,not_available_in_source_annotations
+12,same_source,80,132.0,222,142,not_available_in_source_annotations,3,100,170,160,not_available_in_source_annotations
+13,same_source,44,88.0,160,109,not_available_in_source_annotations,80,128.0,160,129,not_available_in_source_annotations
+15,same_source,231,28,591,333,not_available_in_source_annotations,286,54.0,638,329,not_available_in_source_annotations
+16,cross_source,34,88.0,146,103,not_available_in_source_annotations,680,21.0,933,230,not_available_in_source_annotations
+17,cross_source,114,66.0,400,268,not_available_in_source_annotations,80,144.0,380,300,not_available_in_source_annotations

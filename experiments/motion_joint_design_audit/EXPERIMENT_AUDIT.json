@@ -1,0 +1,36 @@
+{
+  "audit_skill": "experiment-audit",
+  "date": "2026-11-18",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "agent_id": "/root/audit_integrity",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "WARN",
+  "integrity_status": "warn",
+  "reason_code": "scope_exceeds_evidence_for_global_claim",
+  "trace_path": ".aris/traces/experiment-audit/2026-11-18_run01/",
+  "audited_input_hashes": {
+    "experiments/motion_joint_factorial/model.py": "c5dd3f55c46e1e79f793665e0343687f3062fdec0d7b5abdd0ee2f6704618296",
+    "experiments/motion_joint_factorial/motion_evidence.py": "8160acea9cc1be0da44a3ea417d65824931af851ca3b4e835df669df93a94835",
+    "experiments/motion_joint_confirmation/runs/scores.json": "2558d63f5eb458c7cffdd22c2bffd44333e5acedff1c4356e8e2629381155493",
+    "experiments/motion_joint_factorial/runs/scores.json": "a3093f8d705b6b1fd2176d84b5fdc120f76aa12e0a0a530be976404e8554f23b",
+    "experiments/motion_joint_design_audit/probe.py": "0b8f03d5e85f250160980e2f251e5518c9c4e9489356503ecba91c39d7ce7e55",
+    "experiments/motion_joint_design_audit/training_fit.py": "ee9626b60a6aed4739bd3881ed51238e9ae349f09b2fed38ad2c415904641c09",
+    "experiments/motion_joint_design_audit/runs/probe.json": "61e960331cffa34b211c91ff95582a0b662253ed05e1d4310423dba59e8e20c0",
+    "experiments/motion_joint_design_audit/runs/training_fit.json": "a5488efedac8d7fad81929f516794ee741c4bafa1aa9297c1219fb9bd1e8cf49"
+  },
+  "checks": {
+    "gt_provenance": "pass",
+    "score_normalization": "pass",
+    "result_existence": "pass",
+    "dead_code": "pass",
+    "scope": "warn",
+    "eval_type": "real_gt"
+  },
+  "claims": {
+    "span_model_failed_to_replicate": "supported",
+    "underlying_chronological_signal_is_useless": "unsupported",
+    "training_design_caused_entire_negative_result": "unsupported"
+  }
+}

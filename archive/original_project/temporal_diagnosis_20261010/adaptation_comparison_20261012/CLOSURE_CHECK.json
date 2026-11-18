@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checked_local_links": 46,
+  "previous_supervision_artifacts_unchanged": 79,
+  "both_checkpoint_and_log_run_hashes_match": true,
+  "source_sha256": {
+    "top1_background_control_20261011/training/run/RUN.json": "833dc1e10bbf8642f92e6f6c57dadc3ff819bd71a6b85a128d4a8dce479a3f2e",
+    "top1_background_control_20261011/training/run/TRAIN.jsonl": "326713208e0672f4c40657bb930a2bed2165ed351a9222ae33cdf080461fa899",
+    "top1_background_control_20261011/training/run/final_model.pth": "3dc5b7ea6a3e5709a8beb5375d2ab811d71cf32de86fac9f7d527cdb194b74b5",
+    "supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/RUN.json": "f0308eb3dd918e80445fbfbb7b2c406cebab4f7d5bfb8dc19a3d348e1e261625",
+    "supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/TRAIN.jsonl": "4c974ddc52942ceb2c268bbdbbdc5bd74f4149fe1798a8621bddb015b8dbc728",
+    "supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/final_model.pth": "42d5c8de74f4312ceccf97cff209523963073bc26976ff17383e33517f7ca5b5"
+  },
+  "scope": "Local links and artifact integrity only; the existing numeric audits are cited rather than redoing image/coordinate checks."
+}

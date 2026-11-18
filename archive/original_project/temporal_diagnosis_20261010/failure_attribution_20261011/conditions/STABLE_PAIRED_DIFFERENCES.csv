@@ -1,0 +1,25 @@
+sequence,group,condition,cases,matched_cases,difference_definition,n,q25,median,q75,p90,min,max
+ALL,gain,max_side,74,65,case minus reused response-defined stable control,65,0.0,0.0,0.0,0.6000000000000014,-3.0,1.0
+ALL,gain,official_support_center_step_median,74,65,case minus reused response-defined stable control,65,0.0,0.0,0.0,0.1745151646909595,-0.31344177929660244,0.5
+ALL,gain,official_support_center_step_p90,74,65,case minus reused response-defined stable control,65,0.0,0.02462112512353265,0.16568542494923744,0.5004805150236512,-0.3014678138649707,1.0
+ALL,gain,nearest_other_annotation_center_px,74,65,case minus reused response-defined stable control,65,-2.3008858756713764,-0.18274630190466823,0.43492502221304363,1.4663124475576959,-13.0378935004866,8.900980486407216
+ALL,loss,max_side,54,52,case minus reused response-defined stable control,52,0.0,0.0,0.0,1.0,-2.0,2.0
+ALL,loss,official_support_center_step_median,54,52,case minus reused response-defined stable control,52,0.0,0.0,0.0,0.08578643762690485,-0.2216368076478048,0.5
+ALL,loss,official_support_center_step_p90,54,52,case minus reused response-defined stable control,52,0.0,0.0,0.0,0.10548643798153301,-0.06980606587638372,2.157779489814404
+ALL,loss,nearest_other_annotation_center_px,54,52,case minus reused response-defined stable control,52,-2.2350719675843367,-0.21129595109449628,0.20688652313381084,0.6467068253788545,-8.496532384375108,16.04218621057509
+DJI_0026_2,gain,max_side,8,8,case minus reused response-defined stable control,8,0.0,0.0,0.0,0.2999999999999998,0.0,1.0
+DJI_0026_2,gain,official_support_center_step_median,8,8,case minus reused response-defined stable control,8,0.0,0.0,0.0,0.0,0.0,0.0
+DJI_0026_2,gain,official_support_center_step_p90,8,8,case minus reused response-defined stable control,8,0.0,0.0,0.0,0.0,0.0,0.0
+DJI_0026_2,gain,nearest_other_annotation_center_px,8,8,case minus reused response-defined stable control,8,-0.5733203858746414,0.10117526703812274,0.449550896084979,1.2266180323392106,-1.3918471361747038,1.3093721495379498
+DJI_0026_2,loss,max_side,2,2,case minus reused response-defined stable control,2,0.0,0.0,0.0,0.0,0.0,0.0
+DJI_0026_2,loss,official_support_center_step_median,2,2,case minus reused response-defined stable control,2,0.0,0.0,0.0,0.0,0.0,0.0
+DJI_0026_2,loss,official_support_center_step_p90,2,2,case minus reused response-defined stable control,2,0.0,0.0,0.0,0.0,0.0,0.0
+DJI_0026_2,loss,nearest_other_annotation_center_px,2,2,case minus reused response-defined stable control,2,0.3766403583719793,0.4721699283107057,0.5676994982494321,0.6250172402126679,0.2811107884332529,0.6632290681881585
+DJI_0067_2,gain,max_side,66,57,case minus reused response-defined stable control,57,0.0,0.0,0.0,0.3999999999999986,-3.0,1.0
+DJI_0067_2,gain,official_support_center_step_median,66,57,case minus reused response-defined stable control,57,0.0,0.0,0.0,0.18755181128919468,-0.31344177929660244,0.5
+DJI_0067_2,gain,official_support_center_step_p90,66,57,case minus reused response-defined stable control,57,0.0,0.05278640450004257,0.21114561800016762,0.5865456835347281,-0.3014678138649707,1.0
+DJI_0067_2,gain,nearest_other_annotation_center_px,66,57,case minus reused response-defined stable control,57,-3.856611190299841,-0.33052454572238865,0.43492502221304363,1.5142735013179318,-13.0378935004866,8.900980486407216
+DJI_0067_2,loss,max_side,52,50,case minus reused response-defined stable control,50,0.0,0.0,0.0,1.0,-2.0,2.0
+DJI_0067_2,loss,official_support_center_step_median,52,50,case minus reused response-defined stable control,50,0.0,0.0,0.0,0.08578643762690485,-0.2216368076478048,0.5
+DJI_0067_2,loss,official_support_center_step_p90,52,50,case minus reused response-defined stable control,50,0.0,0.0,0.0,0.10557280900008381,-0.06980606587638372,2.157779489814404
+DJI_0067_2,loss,nearest_other_annotation_center_px,52,50,case minus reused response-defined stable control,50,-2.4531958213938116,-0.2379146211310017,0.14804886466172107,0.5639346469850429,-8.496532384375108,16.04218621057509

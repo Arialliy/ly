@@ -1,0 +1,33 @@
+{
+  "candidate_pool": 422,
+  "case_objects": 128,
+  "matched": 117,
+  "unmatched": 11,
+  "unique_controls": 60,
+  "max_reuse": 15,
+  "same_track": 64,
+  "exact_fields": [
+    "sequence",
+    "category",
+    "scale_bin"
+  ],
+  "continuous_fields": [
+    "max_side",
+    "official_support_center_step_median",
+    "official_support_center_step_p90",
+    "nearest_other_annotation_center_px"
+  ],
+  "iqr_scales": {
+    "max_side": 4.0,
+    "official_support_center_step_median": 0.6180339887498949,
+    "official_support_center_step_p90": 1.118033988749895,
+    "nearest_other_annotation_center_px": 22.91296596613363
+  },
+  "tie_break": [
+    "track_id",
+    "source_frame",
+    "annotation_id"
+  ],
+  "replacement": true,
+  "caliper": "none; distance is descriptive, no causal matching claim"
+}

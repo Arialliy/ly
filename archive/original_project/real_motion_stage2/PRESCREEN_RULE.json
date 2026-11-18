@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "rule_id": "vt_annotation_motion_prescreen_v1",
+  "frozen_utc": "2026-10-09T16:13:12.690924+00:00",
+  "status": "FROZEN_BEFORE_MOTION_SCAN",
+  "scope": "Annotation-only development prescreen of VT-Tiny-MOT train2017 thermal channel 01; no image download, model output reading, GPU inference, or new method.",
+  "inputs": [
+    "runtime/VT_TRAIN_01_ANNOTATIONS.json.gz",
+    "runtime/VT_ANNOTATION_DOWNLOAD_PROVENANCE.json",
+    "official_deeppro/datasets/RGB-T/train.txt",
+    "official_deeppro/datasets/RGB-T/test.txt"
+  ],
+  "provenance_references": [
+    "runtime/select_vt_development_clip.py",
+    "VT_SMALL_TARGET_PRESCREEN.json"
+  ],
+  "split": {
+    "exclude_exact_sequence_ids_from_both_deeppro_train_and_test": true,
+    "do_not_infer_scene_independence": true,
+    "role": "extra development only; not official validation or test"
+  },
+  "eligibility": {
+    "thermal_channel": "01",
+    "max_box_side_px_primary": 16,
+    "max_box_side_px_nested_stratum": 12,
+    "min_box_side_exclusive": 0,
+    "ignore": 0,
+    "iscrowd": 0,
+    "category_must_be_constant": true,
+    "one_annotation_per_original_track_id_per_numeric_filename": true,
+    "missing_or_duplicate_frame_breaks_run": true,
+    "image_bounds_required": true,
+    "frame_key": "numeric raw filename stem (mot_frame_id cross-check), not compacted frame_id",
+    "visibility": "annotated presence only; schema has no visibility/occlusion field; raw visual verification pending"
+  },
+  "windows": {
+    "primary_frames": 160,
+    "fallback_frames": 120,
+    "fallback_only_for_maximal_eligible_runs_of_120_to_159_frames": true,
+    "stride_frames": 1,
+    "minimum_consecutive_annotated_frames": 120,
+    "block_frames": 40,
+    "block_alignment": "four consecutive disjoint 40-frame blocks for 160 frames, three for 120; compare all adjacent pairs; each block has 39 internal one-frame differences and 35 five-frame differences",
+    "do_not_select_by_result_magnitude": true
+  },
+  "motion_statistics": {
+    "coordinate_system": "image bbox centers x+w/2, y+h/2; px/frame, no camera compensation",
+    "lag_frames": 5,
+    "robust_speed": "median of the 35 within-block norms of center[t+5]-center[t], divided by 5",
+    "quantiles": "linear interpolation at q*(n-1)",
+    "quarter_speed": "endpoint center distance / 9 in each of four disjoint 10-frame quarters",
+    "net_velocity": "last center minus first center, divided by 39",
+    "coherence": "norm of summed five-frame displacement vectors divided by sum of their norms; zero for zero path",
+    "heading": "atan2(net_dy,net_dx) degrees; pairwise unsigned heading angle in [0,180]"
+  },
+  "regimes": {
+    "low": {
+      "lag5_speed_p90_max": 0.15,
+      "net_speed_max": 0.15,
+      "all_four_quarter_speeds_max": 0.2
+    },
+    "moving": {
+      "lag5_speed_median_min": 0.5,
+      "lag5_speed_p25_min": 0.3,
+      "quarter_speed_min": 0.3,
+      "minimum_qualifying_quarters": 3
+    },
+    "directional_moving": {
+      "requires_moving": true,
+      "coherence_min": 0.7,
+      "net_speed_min": 0.3
+    }
+  },
+  "event_tags": {
+    "low_to_moving": "adjacent block low then moving",
+    "moving_to_low": "adjacent block moving then low",
+    "acceleration": {
+      "both_blocks_moving": true,
+      "later_over_earlier_robust_speed_ratio_min": 2.0,
+      "robust_speed_increase_min": 0.4
+    },
+    "deceleration": {
+      "both_blocks_moving": true,
+      "earlier_over_later_robust_speed_ratio_min": 2.0,
+      "robust_speed_decrease_min": 0.4
+    },
+    "turn": {
+      "both_blocks_directional_moving": true,
+      "unsigned_heading_angle_min_degrees": 45.0
+    },
+    "low_moving_low": "three consecutive blocks low, moving, low",
+    "moving_low_moving": "three consecutive blocks moving, low, moving"
+  },
+  "artifact_guards": {
+    "reject_clip_if_any_raw_center_step_exceeds": "max(8 px, 6 * median raw center-step length over whole clip)",
+    "reject_clip_if_any_adjacent_width_or_height_change_exceeds": "max(4 px, 0.5 * previous corresponding side)",
+    "rationale": "lag-five median, moving lower quartile, and 3/4 quarter support prevent a single coordinate jump establishing movement; raw center/box jumps reject conspicuous annotation artifacts, but do not prove annotation quality"
+  },
+  "retention": {
+    "save_all_eligible_run_counts_and_scale_coverage": true,
+    "save_every_evaluated_window_summary": true,
+    "save_every_passing_window_with_all_adjacent_block_stats": true,
+    "retain_overlapping_candidates": true,
+    "representative_event_list": "first window per (sequence, numeric track_id, event_tag, length stratum), no ranking by score"
+  },
+  "selection": {
+    "primary": "160-frame passing windows sorted by sequence lexicographic, track_id numeric, clip_start numeric; take first",
+    "fallback": "only if zero passing 160-frame windows, choose 120-frame passing windows in same order",
+    "inspection_queue": "first passing 160-frame window per sequence, first 12 sequences; if none use 120-frame; representatives additionally retained"
+  },
+  "limits": [
+    "Image-coordinate motion is not physical motion; camera motion and actual stop/restart remain unverified.",
+    "Annotated presence is not verified continuous visibility.",
+    "Prescreen labels are annotation candidates, not established events or model failures.",
+    "No model prediction, score, mask, or error is used to choose candidates.",
+    "Rectangular segmentation is not verified pixel segmentation.",
+    "Exact sequence exclusion does not establish different capture scene or camera trajectory."
+  ],
+  "input_sha256": {
+    "runtime/VT_TRAIN_01_ANNOTATIONS.json.gz": "d60553eb3c537f91fbf778d995d1c978071cdd978e006834186e58de55b8082b",
+    "runtime/VT_ANNOTATION_DOWNLOAD_PROVENANCE.json": "059a5fc18618d10416230a53a594df4f16c66c0ac0d802f7a0b01634ea77e4b9",
+    "official_deeppro/datasets/RGB-T/train.txt": "273735b9da40ac2c4a18828f1d3e848851a33339d23325e3f4564b0575b61b6d",
+    "official_deeppro/datasets/RGB-T/test.txt": "102505309d793edc918fe3004a2d0de382634d83bcc1a9d6b7c0c14eff808bc4",
+    "runtime/select_vt_development_clip.py": "1425a409524c7679aa9aa4e9ac51a3b980fc6bc8b1b22f1a6b7586524281cc68",
+    "VT_SMALL_TARGET_PRESCREEN.json": "9b1818f12ffee7f2861d01e043fc14c116ffe00540f66e740820b4918e47b7a5"
+  }
+}

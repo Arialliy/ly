@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-10",
+  "status": "frozen_before_new_inference",
+  "question": "从官方checkpoint失败结果定位小目标同帧跨窗响应变化，再决定模型或数据idea",
+  "population": "既有threshold0.5 strict multi max_side<=16，全1417目标帧",
+  "selection": "每目标帧既有最小/最大boxmax窗口，ties按start；保留稳定高/低对照；极值条件化诊断，不是无偏效果估计",
+  "model": "official RGB-T DeepPro-Plus checkpoint, frozen eval FP32 seed46",
+  "spatial_evaluation": "原坐标bbox plus halo16，无resize；空间半径9；与已保存boxmax重放核对",
+  "experiments": [
+    {
+      "id": "E0",
+      "name": "replay",
+      "gate": "原概率误差<=1e-4，单列threshold disagreements；TPro factorized endpoint数值核对"
+    },
+    {
+      "id": "E1",
+      "name": "real temporal halo",
+      "intervention": "前端对窗口周围最多8真实帧扩展，切回相同40绝对帧特征后用原TPro；记录源片段两端缺失halo",
+      "interpretation": "恢复前端缺失邻域的诊断作用，不叫纯padding因果或部署收益"
+    },
+    {
+      "id": "E2",
+      "name": "exact three-term projection decomposition",
+      "factors": [
+        "共同真实帧权重行变化及bias差",
+        "共同真实帧前端特征变化",
+        "非重叠帧的进入/退出投影贡献"
+      ],
+      "formula": "qB-qA=sum_shared[(wB-wA)(FA+FB)/2]+bB-bA + sum_shared[(wA+wB)(FB-FA)/2] + sum_Bonly(wB FB)-sum_Aonly(wA FA), weighted feature terms /sqrt40",
+      "readout": "8种组合经原eval后端；整个bbox max logit及固定端点峰值；3因素Shapley只作内部机制归因",
+      "gate": "投影精确重构；双方距窗口两端>=8帧的共同特征一致"
+    }
+  ],
+  "reporting": [
+    "四片分别",
+    "标注轨迹ID分别",
+    "137跨0.5 / 97强翻转 / 778全低 / 502全高",
+    "双向变好与变坏",
+    "不把强响应当新增点检出",
+    "不把目标帧当独立样本",
+    "没有误报全面评估前不宣称整体提升"
+  ],
+  "idea_decision": "优先响应可重复干预的处理环节；若主导差异在内容或数据条件则据此改方向；不以源码结构缺陷直接当论文贡献",
+  "limits": [
+    "原4片为开发集，不能泛化到所有方法",
+    "GT辅助选窗/裁剪/反事实均只用于诊断",
+    "778全低不承诺由同一机制解决",
+    "方法效果与新颖性需另验"
+  ],
+  "input_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/result_stratification/context/same_gt_frame_choices.csv": "7bb93565a3cfcf0ccac1aa7b97bf2398ce01e77171e1ff8768ccb35bb833accd",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/result_stratification/REPORT.md": "77668722d7b11bf18efd152a9a8e4e9b86756d3bedfc1d40b20c7cb94aebf3b2"
+  }
+}

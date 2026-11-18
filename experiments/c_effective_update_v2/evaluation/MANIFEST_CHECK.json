@@ -1,0 +1,381 @@
+{
+  "status": "PASS",
+  "pair_count": 9,
+  "distinct_entry_count": 18,
+  "original_common_pairs_preserved": true,
+  "metadata_ranking_reproduced": true,
+  "selection_reads_intervention_effects": false,
+  "new_teacher_forwards": 0,
+  "new_optimizer_steps": 0,
+  "trusted_weak_track_count": 39,
+  "background_key_unique_physical_rois": 14072,
+  "identity_key_consistency": true,
+  "records": [
+    {
+      "entry_index": 172,
+      "weak": 27,
+      "reliable": 186,
+      "background": 480,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 162,
+      "weak": 80,
+      "reliable": 547,
+      "background": 1211,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 153,
+      "weak": 37,
+      "reliable": 533,
+      "background": 760,
+      "uncertain_reliable_observations": 161
+    },
+    {
+      "entry_index": 48,
+      "weak": 610,
+      "reliable": 421,
+      "background": 918,
+      "uncertain_reliable_observations": 303
+    },
+    {
+      "entry_index": 27,
+      "weak": 20,
+      "reliable": 286,
+      "background": 386,
+      "uncertain_reliable_observations": 106
+    },
+    {
+      "entry_index": 201,
+      "weak": 44,
+      "reliable": 109,
+      "background": 320,
+      "uncertain_reliable_observations": 6
+    },
+    {
+      "entry_index": 122,
+      "weak": 461,
+      "reliable": 526,
+      "background": 1708,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 168,
+      "weak": 721,
+      "reliable": 462,
+      "background": 2036,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 77,
+      "weak": 80,
+      "reliable": 142,
+      "background": 444,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 211,
+      "weak": 3,
+      "reliable": 160,
+      "background": 329,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 188,
+      "weak": 44,
+      "reliable": 109,
+      "background": 320,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 21,
+      "weak": 80,
+      "reliable": 129,
+      "background": 320,
+      "uncertain_reliable_observations": 49
+    },
+    {
+      "entry_index": 167,
+      "weak": 231,
+      "reliable": 333,
+      "background": 967,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 6,
+      "weak": 286,
+      "reliable": 329,
+      "background": 1137,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 230,
+      "weak": 34,
+      "reliable": 103,
+      "background": 292,
+      "uncertain_reliable_observations": 30
+    },
+    {
+      "entry_index": 25,
+      "weak": 680,
+      "reliable": 230,
+      "background": 1590,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 235,
+      "weak": 114,
+      "reliable": 268,
+      "background": 794,
+      "uncertain_reliable_observations": 0
+    },
+    {
+      "entry_index": 32,
+      "weak": 80,
+      "reliable": 300,
+      "background": 736,
+      "uncertain_reliable_observations": 0
+    }
+  ],
+  "examples": {
+    "weak": {
+      "sequence": "DJI_0030_9",
+      "video_id": 78,
+      "track_id": 7800004,
+      "tracking_id": "4",
+      "category_id": 0,
+      "annotation_id": 823044,
+      "frame": 104,
+      "source_frame": 104,
+      "window": 2,
+      "window_start": 88,
+      "slot": 16,
+      "rect": [
+        77,
+        77,
+        88,
+        86
+      ],
+      "bbox": [
+        155,
+        245,
+        11,
+        9
+      ],
+      "bbox_area": 99,
+      "visibility_status": "not_available_in_source_annotations",
+      "eligibility_basis": "continuous_legal_annotation_proxy",
+      "target_index": 49,
+      "region": [
+        2,
+        16,
+        77,
+        77,
+        88,
+        86
+      ],
+      "release_mean_logit": -15.970192888168373,
+      "release_peak_logit": -0.3338395357131958,
+      "release_peak_probability": 0.417306699296672,
+      "release_peak_xy": [
+        84.5,
+        80.5
+      ],
+      "source": "DJI_0030_9",
+      "raw_scoped_track_key": "DJI_0030_9|video=78|track=7800004",
+      "scoped_track_key": "DJI_0030_9|video=78|track=7800004",
+      "identity_audit_status": "trusted",
+      "object_key": "entry=172|target=49",
+      "source_object_frame_key": "DJI_0030_9|frame=104|ann=823044",
+      "window_context": {
+        "entry_index": 172,
+        "window": 2,
+        "start": 88,
+        "crop_yx": [
+          168,
+          78
+        ],
+        "slot": 16,
+        "source_frame": 104
+      },
+      "physical_frame_context_key": "DJI_0030_9|frame=104|crop=168,78|ann=823044",
+      "v2_target_index": 49,
+      "v2_segment_indices": [
+        12,
+        13
+      ],
+      "original_C_links": {
+        "descriptor_indices": [
+          103
+        ],
+        "active_anchor_pairs": [
+          62
+        ],
+        "active_endpoint_pairs": []
+      },
+      "negative_reference_ids": [
+        "entry=172|background=98",
+        "entry=172|background=99"
+      ],
+      "negative_reference_slots": [
+        {
+          "kind": "local",
+          "background_index": 98,
+          "reference_id": "entry=172|background=98"
+        },
+        {
+          "kind": "global",
+          "background_index": 99,
+          "reference_id": "entry=172|background=99"
+        }
+      ],
+      "veryweak_release_peak": false
+    },
+    "reliable": {
+      "window": 2,
+      "slot": 0,
+      "sequence": "DJI_0030_9",
+      "frame": 88,
+      "source_frame": 88,
+      "annotation_id": 822819,
+      "track_id": 7800003,
+      "bbox_local": [
+        21,
+        53,
+        7,
+        10
+      ],
+      "rect": [
+        21,
+        53,
+        28,
+        63
+      ],
+      "surviving_keep_pixels": 70,
+      "source": "DJI_0030_9",
+      "video_id": 78,
+      "raw_scoped_track_key": "DJI_0030_9|video=78|track=7800003",
+      "scoped_track_key": "DJI_0030_9|video=78|track=7800003",
+      "identity_audit_status": "trusted",
+      "object_key": "entry=172|reliable=0",
+      "source_object_frame_key": "DJI_0030_9|frame=88|ann=822819",
+      "window_context": {
+        "entry_index": 172,
+        "window": 2,
+        "start": 88,
+        "crop_yx": [
+          168,
+          78
+        ],
+        "slot": 0,
+        "source_frame": 88
+      },
+      "physical_frame_context_key": "DJI_0030_9|frame=88|crop=168,78|ann=822819",
+      "v2_target_index": 0,
+      "v2_segment_indices": [
+        0
+      ],
+      "original_C_links": {
+        "descriptor_indices": [
+          33
+        ],
+        "active_anchor_pairs": [
+          17
+        ],
+        "active_endpoint_pairs": []
+      }
+    },
+    "background": {
+      "reference_id": "entry=172|background=0",
+      "background_index": 0,
+      "region": [
+        2,
+        0,
+        34,
+        41,
+        41,
+        51
+      ],
+      "source": "DJI_0030_9",
+      "sequence": "DJI_0030_9",
+      "window": 2,
+      "slot": 0,
+      "frame": 88,
+      "source_frame": 88,
+      "window_context": {
+        "entry_index": 172,
+        "window": 2,
+        "start": 88,
+        "crop_yx": [
+          168,
+          78
+        ]
+      },
+      "absolute_roi": [
+        112,
+        209,
+        119,
+        219
+      ],
+      "track_id": null,
+      "scoped_track_key": null,
+      "source_background_frame_key": "DJI_0030_9|frame=88|roi=112,209,119,219",
+      "source_object_frame_key": "DJI_0030_9|frame=88|roi=112,209,119,219",
+      "background_rule": "original fixed v2 local/global candidate ROI; max candidate may change with logits, ROI set may not"
+    },
+    "uncertain_reliable": {
+      "window": 2,
+      "slot": 0,
+      "sequence": "DJI_0043_2",
+      "frame": 9,
+      "source_frame": 9,
+      "annotation_id": 834746,
+      "track_id": 8601516,
+      "bbox_local": [
+        16,
+        19,
+        4,
+        7
+      ],
+      "rect": [
+        16,
+        19,
+        20,
+        26
+      ],
+      "surviving_keep_pixels": 28,
+      "source": "DJI_0043_2",
+      "video_id": 86,
+      "raw_scoped_track_key": "DJI_0043_2|video=86|track=8601516",
+      "scoped_track_key": null,
+      "identity_audit_status": "uncertain_excluded_from_track_evidence",
+      "object_key": "entry=153|reliable=83",
+      "source_object_frame_key": "DJI_0043_2|frame=9|ann=834746",
+      "window_context": {
+        "entry_index": 153,
+        "window": 2,
+        "start": 9,
+        "crop_yx": [
+          0,
+          235
+        ],
+        "slot": 0,
+        "source_frame": 9
+      },
+      "physical_frame_context_key": "DJI_0043_2|frame=9|crop=0,235|ann=834746",
+      "v2_target_index": null,
+      "v2_segment_indices": [],
+      "original_C_links": {
+        "descriptor_indices": [],
+        "active_anchor_pairs": [],
+        "active_endpoint_pairs": []
+      }
+    }
+  },
+  "plan_sha256": "692a6ac81beed2d1a74938667e076333fd7e080e8dfed7c17c2bf75d387db717",
+  "manifest_sha256": "6daa716cf4e5b1c7759e998ae81de4deff886120aba3e969df8816167b741f66",
+  "manifest_source_sha256": "698d6efff484b3fdde0cb6a022eacdde61424ea534c3486e6a95c8d1f148c2ef",
+  "checker_sha256": "5b56220526ada94bdadb7096c4ecdb4f910c6de6d8a1bce65d79a2318ba95506",
+  "review_scope": "Metadata-only execution verification; independent intervention-effect review is separate."
+}

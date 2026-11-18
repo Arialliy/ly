@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-14",
+  "torch": "2.10.0+cpu",
+  "device": "CPU",
+  "cuda_available": false,
+  "tests": 29,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Independent bank scheduling and toy pair operators only",
+  "not_done": [
+    "real RFR PDA/DCN/TSFM execution",
+    "official-code output equivalence",
+    "local DeepPro-Plus integration",
+    "GPU tests",
+    "detector training",
+    "real-video evaluation",
+    "novelty validation"
+  ],
+  "file_sha256": {
+    "evidence_bank.py": "035925964a651df6e02a9d48a3748f8e774aa9522a461f69762ca75340de443c",
+    "TEST_RESULTS.xml": "1002cd2941fa572e33e2251bb2052f3b9ea9ce5c9e43d583f574109e4813503a",
+    "test_evidence_bank.py": "2a65b0bbbc685b26322ba8b2f6b7873d5af194f7563e19f3ea4bd585cecaa23c",
+    "README.md": "f909b9b0b7571c74285d56ad9e7535f8a92d105b2b27c5e2a309683372cfb59d",
+    "SOURCE_MAP.md": "7f192e9dc6bef20540e3d6aedf8632c723a5c5cc8bda2c8de8ead5f2f4242269"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-11T17:12:10.490874+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--mount",
+    "type=bind,src=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,dst=/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009,readonly",
+    "--env",
+    "CUDA_VISIBLE_DEVICES=",
+    "--entrypoint",
+    "python",
+    "deeppro-official-eval:20261009",
+    "-"
+  ],
+  "script_sha256": "cf25b95415f46c49f85fcdbaa793c10b218bf776a3c7703e0f8aef7e9f8c62c0",
+  "returncode": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\n  File \"<stdin>\", line 8, in <dictcomp>\n  File \"/opt/conda/lib/python3.11/site-packages/torch/serialization.py\", line 1524, in load\n    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None\n_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, \u001b[1mdo those steps only if you trust the source of the checkpoint\u001b[0m. \n\t(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.\n\t(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.\n\tWeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy.core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy.core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.\n\nCheck the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.\n",
+  "gpu_requested": false,
+  "readonly_mount": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009"
+}

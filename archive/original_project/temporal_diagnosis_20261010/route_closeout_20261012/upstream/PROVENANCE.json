@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/mengduann/NS-FPN",
+  "commit": "b857bef068ba48f1258b62de6bf082f73dbafde4",
+  "source_path": "model/NS_FPN.py",
+  "source_sha256": "4c293334e05c98256d91b535242316ac4e3c725e02cd4ba7ba81aa86f310409f",
+  "license": "No LICENSE/COPYING file in fetched root listing; usage restricted to local inspection, no redistribution permission inferred. Full licensing not established.",
+  "scope": "Only local LFP definitions; no full-model or author checkpoint reproduction."
+}

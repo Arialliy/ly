@@ -1,0 +1,28 @@
+{
+  "train_classes": {
+    "ship": 76,
+    "pedestrian": 303,
+    "cyclist": 2
+  },
+  "total_saved_points": 7018,
+  "positive": 1898,
+  "original_high_scoring_negative_peaks": 2560,
+  "values": {
+    "A": {
+      "balanced_BCE": 0.6065807707426312,
+      "positive_vs_hard_negative_AUC": 0.8195201363277134
+    },
+    "B": {
+      "balanced_BCE": 0.5561600668845126,
+      "positive_vs_hard_negative_AUC": 0.792756355374078
+    },
+    "C": {
+      "balanced_BCE": 0.49739476839003716,
+      "positive_vs_hard_negative_AUC": 0.7943960336538461
+    },
+    "D": {
+      "balanced_BCE": 0.47720769600913004,
+      "positive_vs_hard_negative_AUC": 0.7851274367755532
+    }
+  }
+}

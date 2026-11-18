@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-09T20:12:28.680296+00:00",
+  "before_new_calibration_or_confirmation_predictions": true,
+  "files": {
+    "EVALUATION_CLARIFICATIONS.md": "5621930be23000bbc492efe4a8b827618a7450511ab990eba4bb8a48c3425deb",
+    "DESIGN_DECISION.md": "6d006ec41389950cfd8a4b175bdd642c677396e0986a90b829de48dd40bba460",
+    "pilot/infer_pilot.py": "9cf91749b60f104ff87fae63232eac704bbb20b6d0893048abb50a5043a551c4",
+    "pilot/score_pilot.py": "a94b312d59abe746fa4b193ea31da1f76ef62ef3e1f27bd32e027085d93f96c8"
+  }
+}

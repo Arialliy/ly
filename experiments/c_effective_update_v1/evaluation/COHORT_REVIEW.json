@@ -1,0 +1,1442 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE_FIXED_COHORT_COVERAGE_LIMITED",
+  "created_at_utc": "2026-10-12T20:06:18.539141+00:00",
+  "scope": "Read-only aggregation of completed fixed 32-entry release cohorts, original PAIR_PLAN and shard receipts; no model/optimizer/matcher runs and no batch changes.",
+  "new_model_runs": 0,
+  "new_matcher_runs": 0,
+  "uses_development": false,
+  "uses_confirmation": false,
+  "source_artifacts": {
+    "PAIR_PLAN.json": "48df32d4e9558302aa0824008af0b3ce735b94f7ede6bf5709e3fb9c4f3664ea",
+    "PROTOCOL_FREEZE.json": "3789abfde8fb33dc074329ec73993fd044a40f97bfafd59a51632b2c748f4ff6",
+    "cohorts/SHARD_0.json": "ac61377aba158f79cbd2e9cceeed08c2a5326f3139f4d91f73a45bf2753d0f87",
+    "cohorts/SHARD_1.json": "a442531c5c07aa88b7080e8f6c2b1bf0e13bbaeabc27cfd344e32d4d38e386cc",
+    "cohorts/SHARD_2.json": "3dbaaec09089d8ae99b27453d694097f4c0ea5c938b09380bbf08c5922a80787",
+    "cohorts/entry_006.json": "3e84a0c1636b0acdb7c545b814dbfe1802dd76f5efd4303341672435de384dc9",
+    "cohorts/entry_019.json": "fc465a271ef49205b1f0739109d43acfd08718beadb59e36ed93a1c02842b300",
+    "cohorts/entry_021.json": "ff5f89e1ab2fc2bcd3b79fb8b6634af007ac82af1144138afbcd842fe4fdbb6c",
+    "cohorts/entry_025.json": "f71a5b604d4eba1e2fd2e15846883f0e4bd924c69bab9a750c59f1460e533619",
+    "cohorts/entry_027.json": "5289a50b9581a02cb2becf433be826415c22fd238385b58a5238ff42e310fcce",
+    "cohorts/entry_032.json": "2d62dbd1de014db7d675dbbdcf38f7ee0846b841cc955e6c9b34d48596e65216",
+    "cohorts/entry_043.json": "20ef0cd81cb85c28e97a00b92ab341bfc14cdd8ba7e058e114b2d4918447f30e",
+    "cohorts/entry_048.json": "c0e86b75bcbc61d5e291950a1e376130f0e57802e71cd65cb5a5aaa83774adc0",
+    "cohorts/entry_063.json": "977ada07f75298b9c9f05e260e372ef4ede94ac5262e043b8762ee9c6d3b25e8",
+    "cohorts/entry_074.json": "ef2df51dafeb6642d6446a89b4170fc13a4e414400f8cd8b376d07d772c79838",
+    "cohorts/entry_077.json": "2b13a108509d891fe05d1112bf89a6c9eed1a23dc906c8726c263ced3cbf5ffc",
+    "cohorts/entry_081.json": "db3bdd44b717d2c6f5304772fbe8365353a457c4f339c66c7907e56c40abe368",
+    "cohorts/entry_088.json": "1a1029518efb358c25c834b99cc226e180896f5390a7d7d507ab369d8fadcbc5",
+    "cohorts/entry_091.json": "f81756b566316e186ab48edad109ced55de0205d47f602735eeed1193bddb4ad",
+    "cohorts/entry_122.json": "a1125aafa365bc2b3c7732e71d9150c618f94f23b88c8810e67ca29df6f24f9b",
+    "cohorts/entry_128.json": "beff5695852cb717d5d7c7806b0d3d040d3d71ba32ee8eb46977e8bb69e6bfc5",
+    "cohorts/entry_134.json": "4ebcb5eacb5995760a6410b2c7bce93dc0de815d1a0a4fa15b876a395030156f",
+    "cohorts/entry_153.json": "8e2c6e04fbf573d1d1da0d06af5bc47c8c9c64e85375290279441e0ad56e9cd8",
+    "cohorts/entry_162.json": "7d454918fdf3708b92479d900f1e8aa927806fb2ae283ec2aefc2cabd0c165be",
+    "cohorts/entry_167.json": "f3286f032804022acf7ad5be9a6570b22a8c80146c7425730107740e679eda75",
+    "cohorts/entry_168.json": "e135270a4e8741cbfb48968699c1b34644467a7ff8ed881eafc45ccfa799c898",
+    "cohorts/entry_172.json": "8e88d8c91745591ed9b483ef5ac469af12cefe90dc2d6922e32f509d0091f1e4",
+    "cohorts/entry_173.json": "349badb47b993534b02709681cb69d83322dd7b98cb8feb89341cb38ffe9866c",
+    "cohorts/entry_176.json": "0f8162f1e3bfe8f1e4e555c408be4eda1dccc349400de14dc21c0f984cb1109b",
+    "cohorts/entry_188.json": "96e15a04e30423ec7d5c7540da9a82e66b04e222d65bb33f66650d2ec64e7cfb",
+    "cohorts/entry_189.json": "7687850d5cb7f243c523be0a014c8f4783b10dd5f79d6a7d2b16a7f888a18501",
+    "cohorts/entry_201.json": "ea863a5e20b1787e01f544d76c01e499a066b623f60526ffaf7e742c66ff3e54",
+    "cohorts/entry_207.json": "ca578ff7af77224fb9c97a5f78da5f1f31cffb1c8e524dc14bc3032a82cff742",
+    "cohorts/entry_211.json": "14b91c260bf8bdae08ad41d475daa38d64aabbbf909dc844094bb13ea5e325ec",
+    "cohorts/entry_217.json": "129e65e22cd7759e4549bcc6476579de33767d4dbcc860386f5403dd02a06e9f",
+    "cohorts/entry_230.json": "bf00ce3d3e730d9d24ae58016a030918edb97d8149e0e24f4d97edfc88d571cb",
+    "cohorts/entry_235.json": "80efc6bf750c73c0bccd278258c69339402e4ea46dcae23db04f3957b4f794a6"
+  },
+  "receipt_checks": {
+    "three_shards_complete": true,
+    "exactly32_registered_entries": true,
+    "all_cohort_hashes_match_shard_receipts": true,
+    "all_entry_pair_plan_hashes_match": true,
+    "release_parameters_unchanged": true,
+    "cohort_parameter_updates": 0,
+    "all_saved_cohort_counts_match_membership_arrays": true,
+    "all_original_keep_target_pixels_mapped": true
+  },
+  "totals": {
+    "exposed_targets": 11031,
+    "weak": 3667,
+    "veryweak": 3279,
+    "reliable": 8212,
+    "hardbg": 19880,
+    "keep_target_pixels": 610853
+  },
+  "totals_by_role": {
+    "observer": {
+      "exposed_targets": 5269,
+      "weak": 1824,
+      "veryweak": 1662,
+      "reliable": 4075,
+      "hardbg": 9366,
+      "keep_target_pixels": 315020
+    },
+    "update": {
+      "exposed_targets": 5762,
+      "weak": 1843,
+      "veryweak": 1617,
+      "reliable": 4137,
+      "hardbg": 10514,
+      "keep_target_pixels": 295833
+    }
+  },
+  "per_source": {
+    "DJI_0030_9": {
+      "exposed_targets": 2442,
+      "weak": 377,
+      "veryweak": 298,
+      "reliable": 2226,
+      "hardbg": 4660,
+      "keep_target_pixels": 185754,
+      "weak_fraction_among_this_source_exposed_targets": 0.15438165438165438,
+      "share_of_all_weak_exposures": 0.1028088355604036,
+      "unique_source_annotations": {
+        "exposed_targets": 1276,
+        "weak": 254,
+        "veryweak": 210,
+        "reliable": 1168
+      }
+    },
+    "DJI_0043_2": {
+      "exposed_targets": 4938,
+      "weak": 2870,
+      "veryweak": 2615,
+      "reliable": 2540,
+      "hardbg": 8050,
+      "keep_target_pixels": 101496,
+      "weak_fraction_among_this_source_exposed_targets": 0.5812069663831511,
+      "share_of_all_weak_exposures": 0.7826561221707118,
+      "unique_source_annotations": {
+        "exposed_targets": 2809,
+        "weak": 1626,
+        "veryweak": 1482,
+        "reliable": 1607
+      }
+    },
+    "DJI_0057_1": {
+      "exposed_targets": 569,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 578,
+      "hardbg": 1127,
+      "keep_target_pixels": 31452,
+      "weak_fraction_among_this_source_exposed_targets": 0.0,
+      "share_of_all_weak_exposures": 0.0,
+      "unique_source_annotations": {
+        "exposed_targets": 242,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 242
+      }
+    },
+    "DJI_0113_3": {
+      "exposed_targets": 640,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 638,
+      "hardbg": 1280,
+      "keep_target_pixels": 52209,
+      "weak_fraction_among_this_source_exposed_targets": 0.0,
+      "share_of_all_weak_exposures": 0.0,
+      "unique_source_annotations": {
+        "exposed_targets": 151,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 151
+      }
+    },
+    "DJI_0115_2": {
+      "exposed_targets": 720,
+      "weak": 255,
+      "veryweak": 206,
+      "reliable": 649,
+      "hardbg": 1346,
+      "keep_target_pixels": 73281,
+      "weak_fraction_among_this_source_exposed_targets": 0.3541666666666667,
+      "share_of_all_weak_exposures": 0.06953913280610853,
+      "unique_source_annotations": {
+        "exposed_targets": 276,
+        "weak": 141,
+        "veryweak": 120,
+        "reliable": 277
+      }
+    },
+    "DJI_0217_2": {
+      "exposed_targets": 380,
+      "weak": 2,
+      "veryweak": 0,
+      "reliable": 420,
+      "hardbg": 760,
+      "keep_target_pixels": 85158,
+      "weak_fraction_among_this_source_exposed_targets": 0.005263157894736842,
+      "share_of_all_weak_exposures": 0.000545404963185165,
+      "unique_source_annotations": {
+        "exposed_targets": 146,
+        "weak": 2,
+        "veryweak": 0,
+        "reliable": 183
+      }
+    },
+    "DJI_0309_1": {
+      "exposed_targets": 400,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 400,
+      "hardbg": 800,
+      "keep_target_pixels": 17908,
+      "weak_fraction_among_this_source_exposed_targets": 0.0,
+      "share_of_all_weak_exposures": 0.0,
+      "unique_source_annotations": {
+        "exposed_targets": 144,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 144
+      }
+    },
+    "DJI_0323_2": {
+      "exposed_targets": 942,
+      "weak": 163,
+      "veryweak": 160,
+      "reliable": 761,
+      "hardbg": 1857,
+      "keep_target_pixels": 63595,
+      "weak_fraction_among_this_source_exposed_targets": 0.173036093418259,
+      "share_of_all_weak_exposures": 0.04445050449959095,
+      "unique_source_annotations": {
+        "exposed_targets": 403,
+        "weak": 68,
+        "veryweak": 65,
+        "reliable": 331
+      }
+    }
+  },
+  "per_role_source": {
+    "update": {
+      "DJI_0030_9": {
+        "exposed_targets": 800,
+        "weak": 141,
+        "veryweak": 88,
+        "reliable": 680,
+        "hardbg": 1594,
+        "keep_target_pixels": 59502
+      },
+      "DJI_0043_2": {
+        "exposed_targets": 2715,
+        "weak": 1409,
+        "veryweak": 1278,
+        "reliable": 1384,
+        "hardbg": 4547,
+        "keep_target_pixels": 53143
+      },
+      "DJI_0057_1": {
+        "exposed_targets": 319,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 318,
+        "hardbg": 638,
+        "keep_target_pixels": 18587
+      },
+      "DJI_0113_3": {
+        "exposed_targets": 320,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 320,
+        "hardbg": 640,
+        "keep_target_pixels": 26034
+      },
+      "DJI_0115_2": {
+        "exposed_targets": 480,
+        "weak": 131,
+        "veryweak": 91,
+        "reliable": 494,
+        "hardbg": 866,
+        "keep_target_pixels": 53981
+      },
+      "DJI_0217_2": {
+        "exposed_targets": 186,
+        "weak": 2,
+        "veryweak": 0,
+        "reliable": 159,
+        "hardbg": 372,
+        "keep_target_pixels": 24651
+      },
+      "DJI_0309_1": {
+        "exposed_targets": 160,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 160,
+        "hardbg": 320,
+        "keep_target_pixels": 7220
+      },
+      "DJI_0323_2": {
+        "exposed_targets": 782,
+        "weak": 160,
+        "veryweak": 160,
+        "reliable": 622,
+        "hardbg": 1537,
+        "keep_target_pixels": 52715
+      }
+    },
+    "observer": {
+      "DJI_0030_9": {
+        "exposed_targets": 1642,
+        "weak": 236,
+        "veryweak": 210,
+        "reliable": 1546,
+        "hardbg": 3066,
+        "keep_target_pixels": 126252
+      },
+      "DJI_0043_2": {
+        "exposed_targets": 2223,
+        "weak": 1461,
+        "veryweak": 1337,
+        "reliable": 1156,
+        "hardbg": 3503,
+        "keep_target_pixels": 48353
+      },
+      "DJI_0057_1": {
+        "exposed_targets": 250,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 260,
+        "hardbg": 489,
+        "keep_target_pixels": 12865
+      },
+      "DJI_0113_3": {
+        "exposed_targets": 320,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 318,
+        "hardbg": 640,
+        "keep_target_pixels": 26175
+      },
+      "DJI_0115_2": {
+        "exposed_targets": 240,
+        "weak": 124,
+        "veryweak": 115,
+        "reliable": 155,
+        "hardbg": 480,
+        "keep_target_pixels": 19300
+      },
+      "DJI_0217_2": {
+        "exposed_targets": 194,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 261,
+        "hardbg": 388,
+        "keep_target_pixels": 60507
+      },
+      "DJI_0309_1": {
+        "exposed_targets": 240,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 240,
+        "hardbg": 480,
+        "keep_target_pixels": 10688
+      },
+      "DJI_0323_2": {
+        "exposed_targets": 160,
+        "weak": 3,
+        "veryweak": 0,
+        "reliable": 139,
+        "hardbg": 320,
+        "keep_target_pixels": 10880
+      }
+    }
+  },
+  "empty_entry_indices": {
+    "weak": [
+      19,
+      43,
+      74,
+      81,
+      88,
+      91,
+      128,
+      134,
+      173,
+      176,
+      189,
+      207,
+      217
+    ],
+    "veryweak": [
+      19,
+      43,
+      74,
+      81,
+      88,
+      91,
+      128,
+      134,
+      173,
+      176,
+      189,
+      207,
+      211,
+      217
+    ],
+    "reliable": [],
+    "hardbg": []
+  },
+  "pairs": [
+    {
+      "pair_id": 0,
+      "update_index": 63,
+      "observer_index": 128,
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0115_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 160,
+        "weak": 35,
+        "veryweak": 25,
+        "reliable": 189,
+        "hardbg": 320,
+        "keep_target_pixels": 15820
+      },
+      "observer_counts": {
+        "exposed_targets": 80,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 85,
+        "hardbg": 160,
+        "keep_target_pixels": 4435
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 1,
+      "update_index": 81,
+      "observer_index": 189,
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 220,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 226,
+        "hardbg": 437,
+        "keep_target_pixels": 28361
+      },
+      "observer_counts": {
+        "exposed_targets": 22,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 65,
+        "hardbg": 44,
+        "keep_target_pixels": 16811
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 2,
+      "update_index": 25,
+      "observer_index": 19,
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0057_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 933,
+        "weak": 680,
+        "veryweak": 658,
+        "reliable": 230,
+        "hardbg": 1590,
+        "keep_target_pixels": 8358
+      },
+      "observer_counts": {
+        "exposed_targets": 30,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 152,
+        "hardbg": 60,
+        "keep_target_pixels": 15019
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 3,
+      "update_index": 173,
+      "observer_index": 134,
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0323_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 240,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 240,
+        "hardbg": 480,
+        "keep_target_pixels": 19796
+      },
+      "observer_counts": {
+        "exposed_targets": 80,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 80,
+        "hardbg": 160,
+        "keep_target_pixels": 7173
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 4,
+      "update_index": 176,
+      "observer_index": 217,
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 320,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 386,
+        "hardbg": 640,
+        "keep_target_pixels": 33278
+      },
+      "observer_counts": {
+        "exposed_targets": 320,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 398,
+        "hardbg": 640,
+        "keep_target_pixels": 35673
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 5,
+      "update_index": 235,
+      "observer_index": 88,
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0057_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 400,
+        "weak": 114,
+        "veryweak": 84,
+        "reliable": 268,
+        "hardbg": 794,
+        "keep_target_pixels": 17616
+      },
+      "observer_counts": {
+        "exposed_targets": 640,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 710,
+        "hardbg": 1207,
+        "keep_target_pixels": 53504
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 6,
+      "update_index": 172,
+      "observer_index": 162,
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 240,
+        "weak": 27,
+        "veryweak": 4,
+        "reliable": 186,
+        "hardbg": 480,
+        "keep_target_pixels": 18186
+      },
+      "observer_counts": {
+        "exposed_targets": 640,
+        "weak": 80,
+        "veryweak": 80,
+        "reliable": 547,
+        "hardbg": 1211,
+        "keep_target_pixels": 40634
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 7,
+      "update_index": 32,
+      "observer_index": 74,
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 380,
+        "weak": 80,
+        "veryweak": 80,
+        "reliable": 300,
+        "hardbg": 736,
+        "keep_target_pixels": 23639
+      },
+      "observer_counts": {
+        "exposed_targets": 150,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 145,
+        "hardbg": 300,
+        "keep_target_pixels": 19540
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 8,
+      "update_index": 153,
+      "observer_index": 48,
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "update_counts": {
+        "exposed_targets": 438,
+        "weak": 37,
+        "veryweak": 27,
+        "reliable": 533,
+        "hardbg": 760,
+        "keep_target_pixels": 24883
+      },
+      "observer_counts": {
+        "exposed_targets": 734,
+        "weak": 610,
+        "veryweak": 584,
+        "reliable": 421,
+        "hardbg": 918,
+        "keep_target_pixels": 20101
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 9,
+      "update_index": 27,
+      "observer_index": 201,
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 240,
+        "weak": 20,
+        "veryweak": 9,
+        "reliable": 286,
+        "hardbg": 386,
+        "keep_target_pixels": 30196
+      },
+      "observer_counts": {
+        "exposed_targets": 160,
+        "weak": 44,
+        "veryweak": 35,
+        "reliable": 109,
+        "hardbg": 320,
+        "keep_target_pixels": 7096
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": true,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 10,
+      "update_index": 122,
+      "observer_index": 168,
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "update_counts": {
+        "exposed_targets": 992,
+        "weak": 461,
+        "veryweak": 405,
+        "reliable": 526,
+        "hardbg": 1708,
+        "keep_target_pixels": 29791
+      },
+      "observer_counts": {
+        "exposed_targets": 1183,
+        "weak": 721,
+        "veryweak": 650,
+        "reliable": 462,
+        "hardbg": 2036,
+        "keep_target_pixels": 17827
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 11,
+      "update_index": 230,
+      "observer_index": 207,
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0217_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 146,
+        "weak": 34,
+        "veryweak": 24,
+        "reliable": 103,
+        "hardbg": 292,
+        "keep_target_pixels": 15843
+      },
+      "observer_counts": {
+        "exposed_targets": 160,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 144,
+        "hardbg": 320,
+        "keep_target_pixels": 20100
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 12,
+      "update_index": 77,
+      "observer_index": 211,
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0323_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 222,
+        "weak": 80,
+        "veryweak": 80,
+        "reliable": 142,
+        "hardbg": 444,
+        "keep_target_pixels": 8574
+      },
+      "observer_counts": {
+        "exposed_targets": 170,
+        "weak": 3,
+        "veryweak": 0,
+        "reliable": 160,
+        "hardbg": 329,
+        "keep_target_pixels": 11086
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 13,
+      "update_index": 188,
+      "observer_index": 21,
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "update_counts": {
+        "exposed_targets": 160,
+        "weak": 44,
+        "veryweak": 33,
+        "reliable": 109,
+        "hardbg": 320,
+        "keep_target_pixels": 6586
+      },
+      "observer_counts": {
+        "exposed_targets": 160,
+        "weak": 80,
+        "veryweak": 80,
+        "reliable": 129,
+        "hardbg": 320,
+        "keep_target_pixels": 13187
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": true,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 14,
+      "update_index": 43,
+      "observer_index": 91,
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0217_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 80,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 80,
+        "hardbg": 160,
+        "keep_target_pixels": 6051
+      },
+      "observer_counts": {
+        "exposed_targets": 102,
+        "weak": 0,
+        "veryweak": 0,
+        "reliable": 139,
+        "hardbg": 204,
+        "keep_target_pixels": 21810
+      },
+      "both_weak_nonempty": false,
+      "both_veryweak_nonempty": false,
+      "structural_zero_track_update": true,
+      "within_pair_original_frames_overlap": false
+    },
+    {
+      "pair_id": 15,
+      "update_index": 167,
+      "observer_index": 6,
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0043_2"
+      ],
+      "update_counts": {
+        "exposed_targets": 591,
+        "weak": 231,
+        "veryweak": 188,
+        "reliable": 333,
+        "hardbg": 967,
+        "keep_target_pixels": 8855
+      },
+      "observer_counts": {
+        "exposed_targets": 638,
+        "weak": 286,
+        "veryweak": 233,
+        "reliable": 329,
+        "hardbg": 1137,
+        "keep_target_pixels": 11024
+      },
+      "both_weak_nonempty": true,
+      "both_veryweak_nonempty": true,
+      "structural_zero_track_update": false,
+      "within_pair_original_frames_overlap": false
+    }
+  ],
+  "entries": [
+    {
+      "index": 6,
+      "role": "observer",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0043_2"
+      ],
+      "exposed_targets": 638,
+      "weak": 286,
+      "veryweak": 233,
+      "reliable": 329,
+      "hardbg": 1137,
+      "keep_target_pixels": 11024,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 19,
+      "role": "observer",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0057_1"
+      ],
+      "exposed_targets": 30,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 152,
+      "hardbg": 60,
+      "keep_target_pixels": 15019,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 21,
+      "role": "observer",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 160,
+      "weak": 80,
+      "veryweak": 80,
+      "reliable": 129,
+      "hardbg": 320,
+      "keep_target_pixels": 13187,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 25,
+      "role": "update",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0057_1"
+      ],
+      "exposed_targets": 933,
+      "weak": 680,
+      "veryweak": 658,
+      "reliable": 230,
+      "hardbg": 1590,
+      "keep_target_pixels": 8358,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 27,
+      "role": "update",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 240,
+      "weak": 20,
+      "veryweak": 9,
+      "reliable": 286,
+      "hardbg": 386,
+      "keep_target_pixels": 30196,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 32,
+      "role": "update",
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 380,
+      "weak": 80,
+      "veryweak": 80,
+      "reliable": 300,
+      "hardbg": 736,
+      "keep_target_pixels": 23639,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 43,
+      "role": "update",
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0217_2"
+      ],
+      "exposed_targets": 80,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 80,
+      "hardbg": 160,
+      "keep_target_pixels": 6051,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 48,
+      "role": "observer",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "exposed_targets": 734,
+      "weak": 610,
+      "veryweak": 584,
+      "reliable": 421,
+      "hardbg": 918,
+      "keep_target_pixels": 20101,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 63,
+      "role": "update",
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0115_2"
+      ],
+      "exposed_targets": 160,
+      "weak": 35,
+      "veryweak": 25,
+      "reliable": 189,
+      "hardbg": 320,
+      "keep_target_pixels": 15820,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 74,
+      "role": "observer",
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 150,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 145,
+      "hardbg": 300,
+      "keep_target_pixels": 19540,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 77,
+      "role": "update",
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 222,
+      "weak": 80,
+      "veryweak": 80,
+      "reliable": 142,
+      "hardbg": 444,
+      "keep_target_pixels": 8574,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 81,
+      "role": "update",
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 220,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 226,
+      "hardbg": 437,
+      "keep_target_pixels": 28361,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 88,
+      "role": "observer",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0057_1"
+      ],
+      "exposed_targets": 640,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 710,
+      "hardbg": 1207,
+      "keep_target_pixels": 53504,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 91,
+      "role": "observer",
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0217_2"
+      ],
+      "exposed_targets": 102,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 139,
+      "hardbg": 204,
+      "keep_target_pixels": 21810,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 122,
+      "role": "update",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "exposed_targets": 992,
+      "weak": 461,
+      "veryweak": 405,
+      "reliable": 526,
+      "hardbg": 1708,
+      "keep_target_pixels": 29791,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 128,
+      "role": "observer",
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0115_2"
+      ],
+      "exposed_targets": 80,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 85,
+      "hardbg": 160,
+      "keep_target_pixels": 4435,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 134,
+      "role": "observer",
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 80,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 80,
+      "hardbg": 160,
+      "keep_target_pixels": 7173,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 153,
+      "role": "update",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "exposed_targets": 438,
+      "weak": 37,
+      "veryweak": 27,
+      "reliable": 533,
+      "hardbg": 760,
+      "keep_target_pixels": 24883,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 162,
+      "role": "observer",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 640,
+      "weak": 80,
+      "veryweak": 80,
+      "reliable": 547,
+      "hardbg": 1211,
+      "keep_target_pixels": 40634,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 167,
+      "role": "update",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0043_2"
+      ],
+      "exposed_targets": 591,
+      "weak": 231,
+      "veryweak": 188,
+      "reliable": 333,
+      "hardbg": 967,
+      "keep_target_pixels": 8855,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 168,
+      "role": "observer",
+      "sources": [
+        "DJI_0043_2",
+        "DJI_0113_3"
+      ],
+      "exposed_targets": 1183,
+      "weak": 721,
+      "veryweak": 650,
+      "reliable": 462,
+      "hardbg": 2036,
+      "keep_target_pixels": 17827,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 172,
+      "role": "update",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 240,
+      "weak": 27,
+      "veryweak": 4,
+      "reliable": 186,
+      "hardbg": 480,
+      "keep_target_pixels": 18186,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 173,
+      "role": "update",
+      "sources": [
+        "DJI_0113_3",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 240,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 240,
+      "hardbg": 480,
+      "keep_target_pixels": 19796,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 176,
+      "role": "update",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 320,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 386,
+      "hardbg": 640,
+      "keep_target_pixels": 33278,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 188,
+      "role": "update",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 160,
+      "weak": 44,
+      "veryweak": 33,
+      "reliable": 109,
+      "hardbg": 320,
+      "keep_target_pixels": 6586,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 189,
+      "role": "observer",
+      "sources": [
+        "DJI_0217_2",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 22,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 65,
+      "hardbg": 44,
+      "keep_target_pixels": 16811,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 201,
+      "role": "observer",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 160,
+      "weak": 44,
+      "veryweak": 35,
+      "reliable": 109,
+      "hardbg": 320,
+      "keep_target_pixels": 7096,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 207,
+      "role": "observer",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0217_2"
+      ],
+      "exposed_targets": 160,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 144,
+      "hardbg": 320,
+      "keep_target_pixels": 20100,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 211,
+      "role": "observer",
+      "sources": [
+        "DJI_0057_1",
+        "DJI_0323_2"
+      ],
+      "exposed_targets": 170,
+      "weak": 3,
+      "veryweak": 0,
+      "reliable": 160,
+      "hardbg": 329,
+      "keep_target_pixels": 11086,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 217,
+      "role": "observer",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0309_1"
+      ],
+      "exposed_targets": 320,
+      "weak": 0,
+      "veryweak": 0,
+      "reliable": 398,
+      "hardbg": 640,
+      "keep_target_pixels": 35673,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 230,
+      "role": "update",
+      "sources": [
+        "DJI_0115_2",
+        "DJI_0217_2"
+      ],
+      "exposed_targets": 146,
+      "weak": 34,
+      "veryweak": 24,
+      "reliable": 103,
+      "hardbg": 292,
+      "keep_target_pixels": 15843,
+      "old_keep_mapping_unmapped_pixels": 0
+    },
+    {
+      "index": 235,
+      "role": "update",
+      "sources": [
+        "DJI_0030_9",
+        "DJI_0057_1"
+      ],
+      "exposed_targets": 400,
+      "weak": 114,
+      "veryweak": 84,
+      "reliable": 268,
+      "hardbg": 794,
+      "keep_target_pixels": 17616,
+      "old_keep_mapping_unmapped_pixels": 0
+    }
+  ],
+  "identifiability": {
+    "fixed_pair_denominator": 16,
+    "pairs_with_weak_on_both_sides": 7,
+    "both_weak_pair_ids": [
+      6,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15
+    ],
+    "track_nonzero_update_and_both_weak_pairs": 5,
+    "track_nonzero_and_both_weak_pair_ids": [
+      6,
+      8,
+      10,
+      12,
+      15
+    ],
+    "pairs_with_veryweak_on_both_sides": [
+      6,
+      8,
+      9,
+      10,
+      13,
+      15
+    ],
+    "pairs_with_no_weak_on_either_side": [
+      1,
+      3,
+      4,
+      14
+    ],
+    "weak_nonempty_sources": [
+      "DJI_0030_9",
+      "DJI_0043_2",
+      "DJI_0115_2",
+      "DJI_0217_2",
+      "DJI_0323_2"
+    ],
+    "weak_empty_sources": [
+      "DJI_0057_1",
+      "DJI_0113_3",
+      "DJI_0309_1"
+    ],
+    "reason": "Training cohort coverage is insufficient for a complete fixed-16 paired weak-target gate. This is an identifiability limitation of the preregistered sample, not evidence of an incorrect model update.",
+    "required_interpretation": [
+      "Preserve null for empty weak groups; retain all16 pairs in the preregistered denominator and do not replace/select new batches.",
+      "Only seven pairs can descriptively compare weak-target direction on both update and observation batches; only five also have nonzero original track pairs.",
+      "Do not conclude that auxiliary-gradient cancellation does not exist from missing weak cohorts.",
+      "Do not conclude ConFIG is ineffective or impossible to help from this coverage failure.",
+      "Measured changes on available cohorts are descriptive; a gate requiring broader paired support cannot be fully adjudicated from the missing groups.",
+      "All entries and original reliable/background cohorts remain usable for their recorded descriptive effects and structural-zero correctness checks."
+    ]
+  },
+  "repeated_exposures": {
+    "input_windows": 256,
+    "unique_sequence_start_crop_windows": 256,
+    "duplicate_exact_window_exposures": 0,
+    "exact_window_keys_repeated": 0,
+    "maximum_exact_window_repetition": 1,
+    "source_frame_exposures": 10240,
+    "unique_source_frames": 1242,
+    "maximum_source_frame_repetition": 16,
+    "unique_source_frame_crop_contexts": 6785,
+    "duplicate_source_frame_crop_exposures": 3455,
+    "target_cohorts": {
+      "exposed_targets": {
+        "observation_exposures": 11031,
+        "unique_source_frame_annotations": 5447,
+        "unique_full_window_context_annotations": 11031,
+        "unique_sequence_scoped_tracks": 64
+      },
+      "weak": {
+        "observation_exposures": 3667,
+        "unique_source_frame_annotations": 2091,
+        "unique_full_window_context_annotations": 3667,
+        "unique_sequence_scoped_tracks": 39
+      },
+      "veryweak": {
+        "observation_exposures": 3279,
+        "unique_source_frame_annotations": 1877,
+        "unique_full_window_context_annotations": 3279,
+        "unique_sequence_scoped_tracks": 37
+      },
+      "reliable": {
+        "observation_exposures": 8212,
+        "unique_source_frame_annotations": 4103,
+        "unique_full_window_context_annotations": 8212,
+        "unique_sequence_scoped_tracks": 70
+      }
+    },
+    "hard_background": {
+      "roi_exposures": 19880,
+      "unique_source_frame_absolute_ROIs": 18946,
+      "unique_full_window_context_ROIs": 19880
+    },
+    "weak_reliable_shared_source_frame_annotations": 243,
+    "weak_reliable_shared_full_window_context_annotations": 0,
+    "interpretation": "Per-entry target indices already remove overlapping-segment multiplicity. Counts retain different window/entry contexts and are not independent objects. Shared original frames/annotations can recur across different pairs; within each pair original frames do not overlap. A target may be weak in one temporal/crop context and reliable in another."
+  },
+  "limits": [
+    "Weak is release within-bbox peak probability below0.5; veryweak below0.01; neither cohort is defined using development objects or actual detector failure IDs.",
+    "Reliable objects come from all original surviving keep group0 pixels and are not restricted to v2 max-side16 targets. Their count is not a subset count of the small-target exposed pool.",
+    "Hard backgrounds are original v2 local/global ROIs and their annotation-exclusion limits remain unchanged; no new negative mining is performed.",
+    "Sources share training identity and repeated frames across pairs; no claim of16 statistically independent samples is supported.",
+    "Input source coverage is eight, weak-target source coverage is five; three input sources contribute zero weak observations.",
+    "Cohort membership is fixed by the release teacher, prior to intervention effects; counts were not used to alter the frozen plan."
+  ]
+}

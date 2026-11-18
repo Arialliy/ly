@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "report_sha256": "4f5803f776fbda4e20e829e0328f77535be80eb633793e88cc82e5a2f5bb99ed",
+  "numeric_table_rows_checked": 12,
+  "numeric_table_unit": "1e-3 logit",
+  "cohort_covariate_rows_checked": 9,
+  "coverage": {
+    "pair_count": 9,
+    "trusted_weak_track_count": 39,
+    "weak_source_count": 5,
+    "weak_context_count": 3632,
+    "uncertain_reliable_contexts_retained": 655
+  },
+  "scope": {
+    "new_optimizer_steps": 0,
+    "historical_exact_endpoints": 27,
+    "new_cross_source_observer_pairings": 2
+  },
+  "raw_reliable_peak_coordinate_checks": {
+    "raw_reliable_coordinate_comparisons": 15519,
+    "full_F_update_changed_vs_initial": 2,
+    "no_keep_update_changed_vs_initial": 2,
+    "no_track_update_changed_vs_initial": 2
+  },
+  "reliable_condition_vs_full_position_differences": 0,
+  "no_track_local_absolute_improvements_do_not_meet_relative_requirements": [
+    {
+      "pair_id": 13,
+      "role": "observer",
+      "track": "DJI_0115_2|video=68|track=6801502",
+      "delta_q_positive": 9.260727809025691e-05,
+      "delta_margin": 0.0009290621830866887,
+      "margin_advantage_vs_full": 0.0,
+      "q_positive_advantage_vs_full": 0.0
+    },
+    {
+      "pair_id": 16,
+      "role": "observer",
+      "track": "DJI_0043_2|video=86|track=8601509",
+      "delta_q_positive": 0.0005431923211789599,
+      "delta_margin": 0.0010652542114257812,
+      "margin_advantage_vs_full": -0.0002475252338484222,
+      "q_positive_advantage_vs_full": -0.0008847853716681985
+    },
+    {
+      "pair_id": 16,
+      "role": "observer",
+      "track": "DJI_0043_2|video=86|track=8601510",
+      "delta_q_positive": 0.00020967997037447416,
+      "delta_margin": 0.0006509285706740159,
+      "margin_advantage_vs_full": -0.00010633468627929688,
+      "q_positive_advantage_vs_full": -0.0007685147798978365
+    },
+    {
+      "pair_id": 16,
+      "role": "observer",
+      "track": "DJI_0043_2|video=86|track=8601623",
+      "delta_q_positive": 0.00029606085557204025,
+      "delta_margin": 0.0007519997083223783,
+      "margin_advantage_vs_full": -0.0002288359862107497,
+      "q_positive_advantage_vs_full": -0.0008828273186316857
+    }
+  ],
+  "nonlinear_source_median_explanation_present": true,
+  "decision_and_denominators_match_raw_review": true,
+  "source_sha256": {
+    "DECISION.md": "4f5803f776fbda4e20e829e0328f77535be80eb633793e88cc82e5a2f5bb99ed",
+    "DECISION.json": "d014f38860c231a4f75f8f27576a8317518c63f18e17d68e8fda4138faa5316f",
+    "PAIRED_EFFECT.csv": "e5e4153b36f296b403ba28e30cf7e73ac43d24b99833a57ebfca498fae5678fb",
+    "evaluation/COHORT_COVARIATES.csv": "6703a8c0a6cd42e9887035ccf33c8b2df9d137fab8e4449e9ca67ea4ced9e3c8",
+    "evaluation/RESULT_REVIEW.json": "e76c6a98a99d774a9e93cbf30277f042b28da3abe12137d88a1c391e73aa3395",
+    "replay/RECONSTRUCTION.json": "3950b5c1844454940ca62d43294cad0895a53a79b2d4395b2961d12b069b23a6"
+  },
+  "review_script_sha256": "5d7076b6fe503c4e3331244e2ec24214ee0243ff248796a57cffc44976f4c20a",
+  "notes": [
+    "Reliable peak positions can move versus F2304; all three conditions share those same positions. The report correctly restricts zero-difference wording to comparisons between conditions.",
+    "No-Track has four pair-track-role absolute q+/margin improvements; none beats Full sufficiently. The report correctly requires both absolute and relative benefit.",
+    "Thirty-nine is the union of trusted weak tracks; 3632 is the count of window-context exposures, not independent samples."
+  ]
+}

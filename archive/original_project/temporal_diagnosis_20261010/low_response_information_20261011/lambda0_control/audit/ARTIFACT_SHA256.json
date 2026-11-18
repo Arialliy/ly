@@ -1,0 +1,9 @@
+{
+  "CONTROL_AUDIT.json": "dcdf830e6f7d3b74688e257cd9d59c9c4708cb598cfbd125baebf25e72935cbf",
+  "EXIT.json": "ae757f0d5e2449d1650559ef53b6b893af8fcaa45916fff2c85cd0fa73ab86f3",
+  "LAUNCH.json": "b95a87b7d4e419546585a646ad9d97e1ac7145c28bdd025b31fc61a452193f76",
+  "audit_control.py": "7637065da967fad6462c2295e672b49f8a125fe5dd55ba66ae49182b4c808e0d",
+  "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout.log": "ed9b6f5957fc0a89d0393d9a16a347369e49dcf0570e24e216a3987ee96ae1b0",
+  "verify_reference_sources.py": "f9d3c000ce4ecf7b2816b79b0c54ea93f230031e32b0943d121bff5dee803cdb"
+}

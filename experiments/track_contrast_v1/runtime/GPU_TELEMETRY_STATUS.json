@@ -1,0 +1,71 @@
+{
+  "pid": 717602,
+  "status": "STOPPED",
+  "started_utc": "2026-10-12T16:03:04.510278+00:00",
+  "interval_seconds": 30,
+  "read_only": true,
+  "output": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/runtime/GPU_TELEMETRY.jsonl",
+  "stop_markers": [
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/runtime/STOP_GPU_TELEMETRY",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/runtime/TASK_COMPLETE"
+  ],
+  "last_sample": {
+    "utc": "2026-10-12T16:55:33.915031+00:00",
+    "sample": 105,
+    "pid": 717602,
+    "gpus": [
+      {
+        "index": 0,
+        "uuid": "GPU-12cdabd0-7910-8f4a-e4d7-e3c7867d1296",
+        "temperature_c": 45,
+        "sm_clock_mhz": 210,
+        "utilization_percent": 0,
+        "memory_used_mib": 15,
+        "memory_total_mib": 24576,
+        "power_w": 24.39,
+        "throttle_active_hex": "0x0000000000000001",
+        "sw_thermal_slowdown": "Not Active",
+        "hw_thermal_slowdown": "Not Active",
+        "hw_slowdown": "Not Active",
+        "sw_power_cap": "Not Active",
+        "thermal_active": false
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-48b3f9d5-25d4-2398-5483-ee6bd406b655",
+        "temperature_c": 51,
+        "sm_clock_mhz": 210,
+        "utilization_percent": 0,
+        "memory_used_mib": 15,
+        "memory_total_mib": 24576,
+        "power_w": 24.38,
+        "throttle_active_hex": "0x0000000000000001",
+        "sw_thermal_slowdown": "Not Active",
+        "hw_thermal_slowdown": "Not Active",
+        "hw_slowdown": "Not Active",
+        "sw_power_cap": "Not Active",
+        "thermal_active": false
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-3509f974-0eba-2bcb-9469-372003ae4f0a",
+        "temperature_c": 46,
+        "sm_clock_mhz": 210,
+        "utilization_percent": 0,
+        "memory_used_mib": 15,
+        "memory_total_mib": 24576,
+        "power_w": 23.48,
+        "throttle_active_hex": "0x0000000000000001",
+        "sw_thermal_slowdown": "Not Active",
+        "hw_thermal_slowdown": "Not Active",
+        "hw_slowdown": "Not Active",
+        "sw_power_cap": "Not Active",
+        "thermal_active": false
+      }
+    ]
+  },
+  "sample_count": 106,
+  "thermal_sample_count": 90,
+  "ended_utc": "2026-10-12T16:56:03.915326+00:00",
+  "stop_reason": "marker:/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/runtime/STOP_GPU_TELEMETRY"
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS_NO_CORRECTIONS_REQUIRED",
+  "created_unix": 1791832562.8839152,
+  "report_path": "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/RESULTS.md",
+  "report_sha256": "a26ea6264f63cea4e0f1241a7ee5c600ef3a235fe11fa4d307a0e44069e1bd4d",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/RESULTS.md": "a26ea6264f63cea4e0f1241a7ee5c600ef3a235fe11fa4d307a0e44069e1bd4d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/VALIDATION.json": "9a27979d91c628e5b926ce7dcd2ddd0c2c88c041555b2f3556d64ddc8d72b918",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/SUMMARY_COMPLETE.json": "342c853663a751557b66e8129c40395ed13eb4c519d3029dc347ed64948d9390",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/SUMMARY.csv": "f26c04a8906df04c444456998a24de8966eef9425f48ff14daee11172fec21d1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/RESULT_REVIEW.json": "f2890152e5745638b480440577fa95ca6bdf1629ae3a05bf8d18ab1d5e42cc28",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/DIRECTION.json": "f413cdda455821aff2f23fa990f82d05bdbff81876c7ac7fbb15c126e8278692",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/PREFLIGHT_INTERPRETATION.json": "449bccc2273bf64062ab78c7e8bec0888140f41080c4fb454a0c473862ec50ce",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/ENDPOINT_TRAIN_DIAGNOSTICS.json": "a670801d90ef41e9093c145c1132176ba40a758060d97c43535d461c49e20653",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/evaluation/TRAINING_LOG_REVIEW.json": "6a239d359db96c9406e2fbbf46d7a83ed77dddd4b0f04bc16f9dc630c04bd5aa",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/resources/CODE_REVIEW.md": "42c4a3f247fe04d50f16c43acf7242f6b876dca0971a10cd7ab7799d0e944d79",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/readout_weighting_v3/resources/REAL_WEIGHTING_CHECK.json": "753a33702c2d18c8f6ea9c3b1a5d8d8eb45452a3eeef2964e7baf15b5c76d78e"
+  },
+  "scope": "Final read-only report review;existing numerical/execution evidence reused;no model,scorer,training or frozen-source changes.",
+  "checks": [
+    "Six-condition main table exactly matches SUMMARY.csv,including each O/S release reference",
+    "N-F,N-D,D-F zero paired gains/losses supported by full per-object and track-vector review",
+    "CONT two-frame inheritance explicitly separated from new weighting and release comparisons",
+    "U,box-exterior pixels and unmatched-component area distinguished;4015 not used as a new gate",
+    "Protection646 losses and continuous-miss direction agree with per-object/per-track evidence",
+    "Pixel-area differences are reported without claiming equal prediction tensors",
+    "Code correction,test scope and same-snapshot negative-q budget not promoted to parameter/Adam equality",
+    "Fixed-eight endpoint frame-loss values and direction counts agree with stored diagnostic summaries",
+    "Decision limited to this seed/two development sequences/+256-step screen;no unsupported expansion or universal ineffectiveness claim"
+  ],
+  "required_corrections": [],
+  "blocking_issues": []
+}

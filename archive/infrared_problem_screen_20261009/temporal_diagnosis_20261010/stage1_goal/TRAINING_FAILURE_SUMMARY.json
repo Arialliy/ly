@@ -1,0 +1,733 @@
+{
+  "source": "read-only existing logs and frozen code; no training/inference",
+  "variants": {
+    "paired_mean": {
+      "status": "complete",
+      "final_step": 512,
+      "logged_rows": 33,
+      "logged_steps": [
+        1,
+        17,
+        33,
+        49,
+        65,
+        81,
+        97,
+        113,
+        129,
+        145,
+        161,
+        177,
+        193,
+        209,
+        225,
+        241,
+        257,
+        273,
+        289,
+        305,
+        321,
+        337,
+        353,
+        369,
+        385,
+        401,
+        417,
+        433,
+        449,
+        465,
+        481,
+        497,
+        512
+      ],
+      "all_recorded_finite": true,
+      "log_sha_matches": true,
+      "checkpoint_sha_matches": true,
+      "frozen_train_sha_matches": true,
+      "frozen_loss_sha_matches": true,
+      "BN_hash_same": true,
+      "duration_seconds": 229.90101649799908,
+      "counts": {
+        "extra_disabled_n_lt_2": 113,
+        "extra_objects": 1786
+      },
+      "first": {
+        "step": 1,
+        "loss": 1.8913618987426162e-05,
+        "positive": 1.8567900042398833e-05,
+        "negative": 3.4564641282486264e-07,
+        "extra": 7.257929673931685e-11,
+        "grad_norm": 0.008397321216762066,
+        "finite": true,
+        "extra_objects": 2,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "background_pixels_per_window": [
+          479302,
+          479388,
+          479010,
+          479103
+        ],
+        "elapsed_seconds": 1.5957741339952918
+      },
+      "last": {
+        "step": 512,
+        "loss": 0.04265075922012329,
+        "positive": 0.0002108251501340419,
+        "negative": 0.04243786633014679,
+        "extra": 2.0679538010881515e-06,
+        "grad_norm": 2.134734630584717,
+        "finite": true,
+        "extra_objects": 8,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          200,
+          200,
+          114,
+          120
+        ],
+        "background_pixels_per_window": [
+          447778,
+          448119,
+          460604,
+          460959
+        ],
+        "elapsed_seconds": 229.89960174399312
+      },
+      "logged_range": {
+        "loss": [
+          2.5945514607883524e-06,
+          7.19725227355957
+        ],
+        "positive": [
+          2.582032550364908e-41,
+          2.646503448486328
+        ],
+        "negative": [
+          3.4564641282486264e-07,
+          0.6576262712478638
+        ],
+        "extra": [
+          0.0,
+          4.481485843658447
+        ],
+        "grad_norm": [
+          0.0014225516933947802,
+          80.46556091308594
+        ]
+      },
+      "first8_mean": {
+        "loss": 2.3483222142353384,
+        "positive": 0.9195569526948809,
+        "negative": 0.04336254860476174,
+        "extra": 1.385402695547654,
+        "grad_norm": 22.83260295636137
+      },
+      "last8_mean": {
+        "loss": 0.10185183462454006,
+        "positive": 0.0438270807502839,
+        "negative": 0.052936623978894204,
+        "extra": 0.00508813248170967,
+        "grad_norm": 6.84952312335372
+      },
+      "logged_positive_counts_per_window": {
+        "median": 40.0,
+        "min": 0,
+        "max": 542
+      },
+      "logged_background_pixels_per_window": {
+        "median": 477308.5,
+        "min": 432619,
+        "max": 484000
+      },
+      "calibration_minU": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5064,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1322,
+        "components": 16452,
+        "unmatched_components": 11388,
+        "positive_pixels": 151049,
+        "positive_pixels_outside_boxes": 83895
+      },
+      "calibration_half": {
+        "threshold": 0.5,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 11281,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 3502,
+        "components": 201708,
+        "unmatched_components": 190427,
+        "positive_pixels": 1612008,
+        "positive_pixels_outside_boxes": 1270530
+      },
+      "calibration_one": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5064,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1322,
+        "components": 16452,
+        "unmatched_components": 11388,
+        "positive_pixels": 151049,
+        "positive_pixels_outside_boxes": 83895
+      },
+      "feasible_grid_points": 0
+    },
+    "paired_max": {
+      "status": "complete",
+      "final_step": 512,
+      "logged_rows": 33,
+      "logged_steps": [
+        1,
+        17,
+        33,
+        49,
+        65,
+        81,
+        97,
+        113,
+        129,
+        145,
+        161,
+        177,
+        193,
+        209,
+        225,
+        241,
+        257,
+        273,
+        289,
+        305,
+        321,
+        337,
+        353,
+        369,
+        385,
+        401,
+        417,
+        433,
+        449,
+        465,
+        481,
+        497,
+        512
+      ],
+      "all_recorded_finite": true,
+      "log_sha_matches": true,
+      "checkpoint_sha_matches": true,
+      "frozen_train_sha_matches": true,
+      "frozen_loss_sha_matches": true,
+      "BN_hash_same": true,
+      "duration_seconds": 232.21208356900024,
+      "counts": {
+        "extra_disabled_n_lt_2": 113,
+        "extra_objects": 1786
+      },
+      "first": {
+        "step": 1,
+        "loss": 1.8913691747002304e-05,
+        "positive": 1.8567900042398833e-05,
+        "negative": 3.4564641282486264e-07,
+        "extra": 1.449304010137098e-10,
+        "grad_norm": 0.008397328667342663,
+        "finite": true,
+        "extra_objects": 2,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "background_pixels_per_window": [
+          479302,
+          479388,
+          479010,
+          479103
+        ],
+        "elapsed_seconds": 1.2465335949964356
+      },
+      "last": {
+        "step": 512,
+        "loss": 0.05906552076339722,
+        "positive": 0.0011789710260927677,
+        "negative": 0.057875435799360275,
+        "extra": 1.1111384083051234e-05,
+        "grad_norm": 2.769041061401367,
+        "finite": true,
+        "extra_objects": 8,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          200,
+          200,
+          114,
+          120
+        ],
+        "background_pixels_per_window": [
+          447778,
+          448119,
+          460604,
+          460959
+        ],
+        "elapsed_seconds": 232.21097447100328
+      },
+      "logged_range": {
+        "loss": [
+          2.872273853427032e-06,
+          7.757177352905273
+        ],
+        "positive": [
+          1.9646204469833935e-42,
+          2.6645121574401855
+        ],
+        "negative": [
+          3.4564641282486264e-07,
+          0.7658286690711975
+        ],
+        "extra": [
+          0.0,
+          5.05595064163208
+        ],
+        "grad_norm": [
+          0.0015124572673812509,
+          60.55683898925781
+        ]
+      },
+      "first8_mean": {
+        "loss": 2.489299879933526,
+        "positive": 0.9189756612077319,
+        "negative": 0.04637095423746018,
+        "extra": 1.523953206915628,
+        "grad_norm": 22.3210257486935
+      },
+      "last8_mean": {
+        "loss": 0.09409551857970655,
+        "positive": 0.022164456616077927,
+        "negative": 0.06289587658829987,
+        "extra": 0.009035186115721572,
+        "grad_norm": 8.705680906772614
+      },
+      "logged_positive_counts_per_window": {
+        "median": 40.0,
+        "min": 0,
+        "max": 542
+      },
+      "logged_background_pixels_per_window": {
+        "median": 477308.5,
+        "min": 432619,
+        "max": 484000
+      },
+      "calibration_minU": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5721,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1477,
+        "components": 19407,
+        "unmatched_components": 13686,
+        "positive_pixels": 197497,
+        "positive_pixels_outside_boxes": 111679
+      },
+      "calibration_half": {
+        "threshold": 0.5,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 11141,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 3477,
+        "components": 218629,
+        "unmatched_components": 207488,
+        "positive_pixels": 1953559,
+        "positive_pixels_outside_boxes": 1566903
+      },
+      "calibration_one": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5721,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1477,
+        "components": 19407,
+        "unmatched_components": 13686,
+        "positive_pixels": 197497,
+        "positive_pixels_outside_boxes": 111679
+      },
+      "feasible_grid_points": 0
+    },
+    "ohem": {
+      "status": "complete",
+      "final_step": 512,
+      "logged_rows": 33,
+      "logged_steps": [
+        1,
+        17,
+        33,
+        49,
+        65,
+        81,
+        97,
+        113,
+        129,
+        145,
+        161,
+        177,
+        193,
+        209,
+        225,
+        241,
+        257,
+        273,
+        289,
+        305,
+        321,
+        337,
+        353,
+        369,
+        385,
+        401,
+        417,
+        433,
+        449,
+        465,
+        481,
+        497,
+        512
+      ],
+      "all_recorded_finite": true,
+      "log_sha_matches": true,
+      "checkpoint_sha_matches": true,
+      "frozen_train_sha_matches": true,
+      "frozen_loss_sha_matches": true,
+      "BN_hash_same": true,
+      "duration_seconds": 233.62950162500783,
+      "counts": {
+        "extra_disabled_n_lt_2": 113,
+        "extra_objects": 1786
+      },
+      "first": {
+        "step": 1,
+        "loss": 1.8913691747002304e-05,
+        "positive": 1.8567900042398833e-05,
+        "negative": 3.4564641282486264e-07,
+        "extra": 1.451585934786337e-10,
+        "grad_norm": 0.008397328667342663,
+        "finite": true,
+        "extra_objects": 2,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "background_pixels_per_window": [
+          479302,
+          479388,
+          479010,
+          479103
+        ],
+        "elapsed_seconds": 1.1472460020013386
+      },
+      "last": {
+        "step": 512,
+        "loss": 0.07635368406772614,
+        "positive": 0.00026857611373998225,
+        "negative": 0.07608139514923096,
+        "extra": 3.7074769352329895e-06,
+        "grad_norm": 3.5581820011138916,
+        "finite": true,
+        "extra_objects": 8,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          200,
+          200,
+          114,
+          120
+        ],
+        "background_pixels_per_window": [
+          447778,
+          448119,
+          460604,
+          460959
+        ],
+        "elapsed_seconds": 233.62832166200678
+      },
+      "logged_range": {
+        "loss": [
+          2.333077645744197e-06,
+          11.859521865844727
+        ],
+        "positive": [
+          0.0,
+          2.6538071632385254
+        ],
+        "negative": [
+          3.4564641282486264e-07,
+          0.7652331590652466
+        ],
+        "extra": [
+          0.0,
+          9.116103172302246
+        ],
+        "grad_norm": [
+          0.0013286571484059095,
+          127.51192474365234
+        ]
+      },
+      "first8_mean": {
+        "loss": 3.7793575142911777,
+        "positive": 0.9255919677474469,
+        "negative": 0.05130647485896134,
+        "extra": 2.802459098533646,
+        "grad_norm": 40.67985701534781
+      },
+      "last8_mean": {
+        "loss": 0.09340762021020055,
+        "positive": 0.014028783243857366,
+        "negative": 0.07931323675438762,
+        "extra": 6.55979778681564e-05,
+        "grad_norm": 4.925215035676956
+      },
+      "logged_positive_counts_per_window": {
+        "median": 40.0,
+        "min": 0,
+        "max": 542
+      },
+      "logged_background_pixels_per_window": {
+        "median": 477308.5,
+        "min": 432619,
+        "max": 484000
+      },
+      "calibration_minU": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 6287,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1683,
+        "components": 23508,
+        "unmatched_components": 17221,
+        "positive_pixels": 235374,
+        "positive_pixels_outside_boxes": 137060
+      },
+      "calibration_half": {
+        "threshold": 0.5,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 11190,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 3506,
+        "components": 226574,
+        "unmatched_components": 215384,
+        "positive_pixels": 2118349,
+        "positive_pixels_outside_boxes": 1720431
+      },
+      "calibration_one": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 6287,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1683,
+        "components": 23508,
+        "unmatched_components": 17221,
+        "positive_pixels": 235374,
+        "positive_pixels_outside_boxes": 137060
+      },
+      "feasible_grid_points": 0
+    },
+    "random_pair_max": {
+      "status": "complete",
+      "final_step": 512,
+      "logged_rows": 33,
+      "logged_steps": [
+        1,
+        17,
+        33,
+        49,
+        65,
+        81,
+        97,
+        113,
+        129,
+        145,
+        161,
+        177,
+        193,
+        209,
+        225,
+        241,
+        257,
+        273,
+        289,
+        305,
+        321,
+        337,
+        353,
+        369,
+        385,
+        401,
+        417,
+        433,
+        449,
+        465,
+        481,
+        497,
+        512
+      ],
+      "all_recorded_finite": true,
+      "log_sha_matches": true,
+      "checkpoint_sha_matches": true,
+      "frozen_train_sha_matches": true,
+      "frozen_loss_sha_matches": true,
+      "BN_hash_same": true,
+      "duration_seconds": 231.7054823619983,
+      "counts": {
+        "extra_disabled_n_lt_2": 113,
+        "extra_objects": 1786
+      },
+      "first": {
+        "step": 1,
+        "loss": 1.8913691747002304e-05,
+        "positive": 1.8567900042398833e-05,
+        "negative": 3.4564641282486264e-07,
+        "extra": 1.451585934786337e-10,
+        "grad_norm": 0.008397328667342663,
+        "finite": true,
+        "extra_objects": 2,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "background_pixels_per_window": [
+          479302,
+          479388,
+          479010,
+          479103
+        ],
+        "elapsed_seconds": 1.1188677940081106
+      },
+      "last": {
+        "step": 512,
+        "loss": 0.066981241106987,
+        "positive": 0.00017646889318712056,
+        "negative": 0.06680101156234741,
+        "extra": 3.7608397178701125e-06,
+        "grad_norm": 3.2922255992889404,
+        "finite": true,
+        "extra_objects": 8,
+        "extra_disabled_n_lt_2": 0,
+        "base_objects_per_window": [
+          200,
+          200,
+          114,
+          120
+        ],
+        "background_pixels_per_window": [
+          447778,
+          448119,
+          460604,
+          460959
+        ],
+        "elapsed_seconds": 231.70400594400417
+      },
+      "logged_range": {
+        "loss": [
+          2.1765010842500487e-06,
+          10.73232650756836
+        ],
+        "positive": [
+          5.605193857299268e-45,
+          2.6585700511932373
+        ],
+        "negative": [
+          3.4564641282486264e-07,
+          0.7415274381637573
+        ],
+        "extra": [
+          0.0,
+          7.987847328186035
+        ],
+        "grad_norm": [
+          0.0012536708964034915,
+          123.16785430908203
+        ]
+      },
+      "first8_mean": {
+        "loss": 3.6361510357146756,
+        "positive": 0.9264571363537548,
+        "negative": 0.04435446933942444,
+        "extra": 2.6653394620413224,
+        "grad_norm": 37.48376469987852
+      },
+      "last8_mean": {
+        "loss": 0.08994078694377095,
+        "positive": 0.015235475978164999,
+        "negative": 0.07355789293069392,
+        "extra": 0.0011474181096115769,
+        "grad_norm": 4.622787997126579
+      },
+      "logged_positive_counts_per_window": {
+        "median": 40.0,
+        "min": 0,
+        "max": 542
+      },
+      "logged_background_pixels_per_window": {
+        "median": 477308.5,
+        "min": 432619,
+        "max": 484000
+      },
+      "calibration_minU": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5754,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1517,
+        "components": 20454,
+        "unmatched_components": 14700,
+        "positive_pixels": 201567,
+        "positive_pixels_outside_boxes": 117311
+      },
+      "calibration_half": {
+        "threshold": 0.5,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 11167,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 3480,
+        "components": 225886,
+        "unmatched_components": 214719,
+        "positive_pixels": 2027719,
+        "positive_pixels_outside_boxes": 1650955
+      },
+      "calibration_one": {
+        "threshold": 1.0,
+        "frames": 320,
+        "gt": 16297,
+        "matched": 5754,
+        "strict_small_gt": 5200,
+        "strict_small_matched": 1517,
+        "components": 20454,
+        "unmatched_components": 14700,
+        "positive_pixels": 201567,
+        "positive_pixels_outside_boxes": 117311
+      },
+      "feasible_grid_points": 0
+    }
+  }
+}

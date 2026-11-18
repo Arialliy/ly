@@ -1,0 +1,41 @@
+{
+  "source": "../rgb_domain_control_20261118/results.json; pedestrian_and_people",
+  "metric": "minimum number of represented identities never allocated any box at the eight sampled times, arbitrary within-frame geometry allowed",
+  "counts": {
+    "DJI_0043_2": {
+      "represented_tracks": 84,
+      "full_0.2": 0,
+      "full_0.5": 1,
+      "tiled_0.2": 0,
+      "tiled_0.5": 0
+    },
+    "DJI_0057_1": {
+      "represented_tracks": 2,
+      "full_0.2": 2,
+      "full_0.5": 2,
+      "tiled_0.2": 2,
+      "tiled_0.5": 2
+    },
+    "DJI_0067_2": {
+      "represented_tracks": 50,
+      "full_0.2": 29,
+      "full_0.5": 50,
+      "tiled_0.2": 0,
+      "tiled_0.5": 47
+    },
+    "DJI_0115_2": {
+      "represented_tracks": 3,
+      "full_0.2": 3,
+      "full_0.5": 3,
+      "tiled_0.2": 0,
+      "tiled_0.5": 3
+    },
+    "DJI_0217_2": {
+      "represented_tracks": 2,
+      "full_0.2": 2,
+      "full_0.5": 2,
+      "tiled_0.2": 2,
+      "tiled_0.5": 2
+    }
+  }
+}

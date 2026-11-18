@@ -1,0 +1,22 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Noto Sans CJK SC, sans-serif","fontSize":"17px","lineColor":"#456074"},"flowchart":{"htmlLabels":true,"curve":"linear","nodeSpacing":32,"rankSpacing":35,"padding":12}}}%%
+flowchart TB
+    video["连续 40 帧红外视频"]
+    temporal["开源 DeepPro-Plus 主干<br/>conv_in → layer1 → TPro"]
+    features["中心帧时间剖面特征<br/>32 通道"]
+    window["中心附近 17 帧原图<br/>在每个像素检查运动"]
+    cross["一组帧提出静止和移动两种猜测<br/>另一组按速度与跨度检验，两组互换"]
+    motion["编码各段的局部对齐图<br/>零初始化投影到 32 通道"]
+    fusion["中心帧特征逐位置相加"]
+    head["开源检测头<br/>conv_out1 含非线性 → conv_out2"]
+    output["中心帧目标概率图"]
+    video --> temporal --> features --> fusion
+    video --> window --> cross --> motion --> fusion
+    fusion --> head --> output
+    classDef original fill:#e9f1f9,stroke:#56769b,stroke-width:1.5px,color:#173856;
+    classDef added fill:#e6f5f0,stroke:#39816a,stroke-width:1.5px,color:#174e3c;
+    classDef common fill:#f3f5f7,stroke:#677b8b,stroke-width:1.5px,color:#243847;
+    classDef combined fill:#fff1d8,stroke:#a67429,stroke-width:1.5px,color:#624315;
+    class video,output common;
+    class temporal,features,head original;
+    class window,cross,motion added;
+    class fusion combined;

@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-12T14:50:54.565814+00:00",
+  "official_source": "https://github.com/xuelunshen/gim",
+  "code_download": "official raw.githubusercontent.com /main files retrieved2026-10-12, content hashes below; git commit endpoint unavailable",
+  "weight_source": "https://drive.google.com/file/d/1gk97V4IROnR1Nprq10W9NCFUv2mxXR_-/view",
+  "tdcnet_reference": "https://github.com/IVPLabs/TDCNet/blob/main/model/gim/matcher.py",
+  "docker_image": "sha256:8470a68886ff2f480d76858d930fb72d0e680e69276fc1d068fe8b6625b4cb9f",
+  "dependencies": "torch2.2.0a0+81ea7a4 torchvision0.17.0a0 cv2 4.7.0 numpy einops; no packages installed",
+  "sha256": {
+    "resources/gim_minimal/networks/__init__.py": "65143bfa1895de0ca0586f107cd935924ea59d001d63f75222eebb9762bac5de",
+    "resources/gim_minimal/networks/dkm/__init__.py": "f574b65440a9978b7f5fb2238e74f580ea04a265ec6cdc11c9c0f5788c8bcdaa",
+    "resources/gim_minimal/networks/dkm/utils/local_correlation.py": "6884de8a04f2977c0ee90776072d7d2fe7f6ae9deac1a4c18793e14b05bc412c",
+    "resources/gim_minimal/networks/dkm/utils/utils.py": "4563a39ae11ebb3217f0f6fd6e995bd7127fb23bc9149b7ed19561c6063f98ff",
+    "resources/gim_minimal/networks/dkm/utils/__init__.py": "9a3b0bc5581da37cd5f3f57cabf07dd146c67b138386105dff16540078bf041f",
+    "resources/gim_minimal/networks/dkm/utils/kde.py": "85b8890be1f77ec5e52455af314f71f8b0d8f7f2341e48a01ee7d2f66d9372a6",
+    "resources/gim_minimal/networks/dkm/models/encoders.py": "09272cb40db982a6c3b3686aa2f6a3960c731e81363d91918c8e0a2e2dae8c1a",
+    "resources/gim_minimal/networks/dkm/models/dkm.py": "78bd1fa964bfbf5bb8761117cfebc46b6df9a83c824bdd8384d85a05e598b93a",
+    "resources/gim_minimal/networks/dkm/models/__init__.py": "208bae2a24e994751518e6b785300ccaf77350482a96480180708007344dfa80",
+    "resources/gim_minimal/networks/dkm/models/model_zoo/DKMv3.py": "cdc8d0cad10e45ec6bcf13438c585a103d8b3a5a8025ff9b978d963ff59fc40e",
+    "resources/gim_minimal/networks/dkm/models/model_zoo/__init__.py": "7644c1d1cfa9f0636a6c7418a8f99deb03300104d99480bb98b5cf18beb5c66b",
+    "resources/gim_minimal/LICENSE": "23614e7e6be8c1208e925b84a6ff6b9ca4dd505be7092c5e907f90d7fc548732",
+    "resources/gim_dkm_100h.ckpt": "bb9c996f538d03f41f6181610de9df3dc47083b81436ccc21f3d5d0a738b3c29",
+    "resources/tdcnet_matcher.py": "b454faf4f59e3a984445e3edaf3009aea4360f2f86ecb9f2a7bf23d06df88059",
+    "code/estimate_motion.py": "d4a0d4ee923fef71679917f195376f07051d701412bdc51135dfdcfe1f74b4b3",
+    "motion/CONFIG.json": "5d772d957fddaaf4751046bb3c3f823eea3c25b7dfcf7177bb71f89b4dff802c"
+  }
+}

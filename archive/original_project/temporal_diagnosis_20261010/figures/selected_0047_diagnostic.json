@@ -1,0 +1,30 @@
+{
+  "track_id": 4621500,
+  "sequence": "DJI_0047_3",
+  "frame_range": [
+    0,
+    159
+  ],
+  "input_sha256": {
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/window_offset_experiment/analysis/DJI_0047_3/same_gt_frame_context_summary.csv": "8568db14bf03dd762d5a53a1f790ff9eae29084daaf5a886b8475a902f18e45d",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/motion/DJI_0047_3/TRACK_FRAME_DIAGNOSTICS.csv": "61e42477bd0f0a72aa9840c22bbfbd1705ec38e0e803bddab1a0b2e765e91499"
+  },
+  "script_sha256": "5ed0399323f623d91c3fe293a581f80b8fabc01679cbf68520961182f334da1c",
+  "output_sha256": {
+    "selected_0047_diagnostic.png": "53db79e4692ca1f1eec8c17dd4ee942c93af0e712eed0643c57afa60eabfdcf0",
+    "selected_0047_diagnostic.pdf": "20cf8259cde7406d77d80f7bee1caae946c8073f7c8a9b1a667d311b76d4a65d"
+  },
+  "valid_contrast_frames": 160,
+  "new_recovered_frames_at_0_5": [
+    53,
+    54,
+    55,
+    56
+  ],
+  "log_y_limits": [
+    1e-09,
+    1.6
+  ],
+  "data_transform": "none; log axis only; invalid contrast shown as NaN gap",
+  "scope": "Plot of saved CSVs only; no new metrics, model, inference, thresholds or sample selection."
+}

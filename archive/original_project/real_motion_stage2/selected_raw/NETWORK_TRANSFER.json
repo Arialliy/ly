@@ -1,0 +1,23 @@
+{
+  "response_body_bytes_read": 1231344,
+  "response_body_budget_bytes": 50000000,
+  "budget_scope": "All returned HTTP response bodies including public download form and retry reads; excludes transport headers.",
+  "requests": [
+    {
+      "endpoint": "https://drive.google.com/uc",
+      "request_range": null,
+      "status": 200,
+      "content_range": null,
+      "body_bytes_read": 2463
+    },
+    {
+      "endpoint": "https://drive.usercontent.google.com/download",
+      "request_range": "bytes=753365977-754594857",
+      "status": 206,
+      "content_range": "bytes 753365977-754594857/2448061811",
+      "body_bytes_read": 1228881
+    }
+  ],
+  "started_utc": "2026-10-09T16:21:35.757081+00:00",
+  "ended_utc": "2026-10-09T16:21:42.930724+00:00"
+}

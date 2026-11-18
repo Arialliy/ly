@@ -1,0 +1,10 @@
+{
+  "official_train_sha256": "51d77e855ee798ee5b6371a130f2cab5b823ffe22a192ea52383d879f95f988d",
+  "official_test_sha256": "99b58962061f101bcaf1cb4e787a46599ab947805444af910d405324cf314b9b",
+  "function_default": 46,
+  "direct_call_lines": [],
+  "worker_seed_uses_wall_clock": true,
+  "released_checkpoint_actual_training_seed": "not established",
+  "current_runs_seed": 46,
+  "current_runner_sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b"
+}

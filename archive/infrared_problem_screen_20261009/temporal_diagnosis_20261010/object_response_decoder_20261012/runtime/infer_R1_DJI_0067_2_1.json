@@ -1,0 +1,76 @@
+{
+  "status": "COMPLETE",
+  "gpu": 3,
+  "job": "infer_R1_DJI_0067_2_1",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "ord_infer_r1_dji_0067_2_1",
+    "--network",
+    "none",
+    "--gpus",
+    "all",
+    "--user",
+    "1004:1004",
+    "--cpus",
+    "4",
+    "--memory",
+    "20g",
+    "--shm-size",
+    "2g",
+    "-e",
+    "CUDA_VISIBLE_DEVICES=3",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "MKL_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "PYTHONUNBUFFERED=1",
+    "-e",
+    "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "-e",
+    "MPLCONFIGDIR=/tmp/mpl",
+    "-v",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009:ro",
+    "-v",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012:rw",
+    "-w",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012",
+    "--entrypoint",
+    "/opt/conda/bin/python",
+    "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/object_response_decoder_20261012/code/infer.py",
+    "--variant",
+    "R1",
+    "--sequence",
+    "DJI_0067_2"
+  ],
+  "gpu_before": {
+    "0": [
+      3321,
+      0
+    ],
+    "1": [
+      8030,
+      40
+    ],
+    "2": [
+      3321,
+      0
+    ],
+    "3": [
+      0,
+      0
+    ]
+  },
+  "start_unix": 1791800137.9225671,
+  "exit_code": 0,
+  "end_unix": 1791800181.0599277
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "config_sha256": "5d772d957fddaaf4751046bb3c3f823eea3c25b7dfcf7177bb71f89b4dff802c",
+  "sequences": {
+    "DJI_0030_9": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0043_2": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0057_1": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0113_3": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0115_2": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0217_2": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0309_1": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0323_2": {
+      "adjacent": 159,
+      "unique_pairs": 159,
+      "window_count": 0
+    },
+    "DJI_0026_2": {
+      "adjacent": 159,
+      "unique_pairs": 463,
+      "window_count": 8
+    },
+    "DJI_0067_2": {
+      "adjacent": 159,
+      "unique_pairs": 463,
+      "window_count": 8
+    }
+  },
+  "pairs_checked": 2198,
+  "confirmation_access": false
+}

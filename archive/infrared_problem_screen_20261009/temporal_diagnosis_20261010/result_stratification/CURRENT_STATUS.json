@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "scope": "result-stratification and capability-gap prioritization only",
+  "new_training": false,
+  "new_inference": false,
+  "main_threshold": 0.5,
+  "independent_numeric_audit": "PASS error_count0",
+  "cause_identified": false,
+  "new_method_gain": false,
+  "working_problem_finalized_for_paper": false,
+  "next": "verify candidatecapabilitygap before choosing model/data route"
+}

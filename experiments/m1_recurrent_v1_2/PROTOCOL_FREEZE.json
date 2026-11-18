@@ -1,0 +1,48 @@
+{
+  "status": "FROZEN",
+  "frozen_at_unix": 1791977606.1203413,
+  "conditions": [
+    "V12Current",
+    "V12History"
+  ],
+  "start_step": 2048,
+  "steps": 128,
+  "final_step": 2176,
+  "snapshots": [
+    2048,
+    2080,
+    2112,
+    2176
+  ],
+  "checkpoint_sha256": "eda063496757f368d7442a7fac99a64f7b33ef0414ef99d006716d77a6dcb725",
+  "protocol_sha256": "6f0938cae9ae15c1e59ebab487ee3e1124872a1ba34c4331f2e5f9b21339f80d",
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/evaluate.py": "16c3d048e688e58b1b81cd088d2b8dc04221d477d253b58f47166eaea7ea671f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/infer.py": "072685d22bd17332d1fff95db4eee89ea64cdd703f969f4979511840bd58dc8b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/launch.py": "f7d4d7e0abe4be457dcbda9358288e2fcc92e2ec57b17ed0bce9b33d224c2a8c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/reference_tests.py": "c58d1478a7e47c0f5fcfb2601d81bf1107d11d851852fa3fa86dc4ac22f70853",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision.py": "31a67f5bc9fbc063fb721530a1eca334f702d80687bef1b1a674b601e7429b98",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/revision_smoke.py": "3d75caa710be3de11bdff53611bd58998b868b1f6d81b85610d5a42365c5212a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/runtime.py": "d2b98787666026a81098ca2dad17e6f5da44f76842a0ebeebc221b123ffa73c0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/trace.py": "01129f0f58ce0a115e826c74d1b45399cbfc1fc623441264de712d6103fa2c61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train.py": "57c3a6ef73ee960e20eda7d3e4cd9769cd1b3c65f8bbe3994e8295da8be7fbc3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/code/train_diagnostics.py": "9f25bd527134756a97aa358cba9e02188cc463a1caae4e8da056401b01c30051",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/state_update.py": "92626b129e9c0b1da865f3d77068390d11f7ac00ed417d535a036a5ad34e2852",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/reference/M1_v12_state_update_reference/test_state_update.py": "7c306fb521f5b95abb6a1da7cace4f1033a7090f7dc4a7727ee133973f9a4b0e"
+  },
+  "checks": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/checks/REFERENCE_TESTS.json": "1610a9b98901422b654f066ec46ed8dd1c8b2bc42fff1e28cf0095e6c9000b71",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/checks/CPU_INITIALIZATION_MIGRATION.json": "f08b27b591a03758f763c2313482a2da53eeba07db83712edba72ec91991039b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_2/checks/GPU_INTEGRATION.json": "87e651901d4c90250409ce34857430fdf91ec2617ba4509c542cbb814df7345a"
+  },
+  "reference_import_sha256": "e523672a88e084d4b56bc9dd3323de47ddc21c3a72a3ac08fd6846802cf672fa",
+  "official_reference_sha256": "30a78e47f910198d8af2ba2de46c1deb4b37483e98cd9cc95b6a576fca25ad5c",
+  "worker_sha256": "8daf3f67657f79166d8bb3cbb8d3f9dcbd56ec27f25996b7d40805af2d63fc90",
+  "aggregation_sha256": "18d83cd2b7872985b5810ec2f07e79fd9b77fdd12188fcca586853c02bd83700",
+  "evidence": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_history_effect_v1/RESULTS.json": "11f87da4beb57cee26dcc9d77a89a9034a03e7a873f9f500001747d7ea63ca0e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1_1/RESULTS.json": "6368fd924f310eb06d77ec14a4ec97127ad806995b7f4985c0f2ff792bef510b"
+  },
+  "input_note": "Latest user recovery-first Current/History protocol supersedes package README Frame/Pixel order",
+  "boundary": "M1 only, no expanded data or M2; fixed short endpoint, diagnostic M/U"
+}

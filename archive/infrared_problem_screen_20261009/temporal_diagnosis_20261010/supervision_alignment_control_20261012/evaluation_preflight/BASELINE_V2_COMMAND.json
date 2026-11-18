@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-11T16:28:25.443911+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "supervision_alignment_baseline_preflight_v2_20261012",
+    "--cpus",
+    "2",
+    "--memory",
+    "4g",
+    "--user",
+    "1004:1004",
+    "-e",
+    "OMP_NUM_THREADS=2",
+    "-e",
+    "OPENBLAS_NUM_THREADS=2",
+    "-v",
+    "/home/ly:/home/ly:ro",
+    "-v",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation_preflight:/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation_preflight:rw",
+    "--entrypoint",
+    "python",
+    "deeppro-official-eval:20261009",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/evaluation_code/evaluate_alignment.py",
+    "--baseline-check"
+  ],
+  "returncode": 0,
+  "script_sha256": "1445a790df99cd431060257af5939647888c3a4a534be8ab9e66e2a864a489c5",
+  "gpu_used": false,
+  "new_models_evaluated": []
+}

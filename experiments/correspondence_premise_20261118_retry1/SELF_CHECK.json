@@ -1,0 +1,5 @@
+{
+  "quadratic_transition_bruteforce": true,
+  "backtracking_score": true,
+  "ncc_coordinates": true
+}

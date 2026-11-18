@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "verified_at": "2026-10-11T22:28:18.757528+08:00",
+  "rows": {
+    "LOW_RESPONSE_OBJECTS.csv": 10400,
+    "SCORE_SEPARATION.csv": 42,
+    "PEAK_LOCATION.csv": 42,
+    "TRACK_PERSISTENCE.csv": 260,
+    "TRACK_SUMMARY.csv": 42
+  },
+  "numeric_values_unchanged": true,
+  "visual_unique_target_frames": 72,
+  "visual_arrangement_rows": 144,
+  "threshold": 0.5,
+  "original_matches": 700,
+  "best_shared_matches": 720,
+  "independent_audits": {
+    "analysis/VALIDATION.json": "PASS",
+    "analysis/INDEPENDENT_BLOCK_AUDIT.json": "PASS",
+    "ASSEMBLY_VALIDATION.json": "PASS",
+    "audit/OBJECT_RECOMPUTATION.json": "PASS",
+    "audit/FINAL_TABLES_AUDIT.json": "PASS",
+    "analysis/INSUFFICIENT_BACKGROUND_ARCHIVE.json": "PASS",
+    "lambda0_control/audit/CONTROL_AUDIT.json": "PASS"
+  },
+  "broken_report_links": [],
+  "selected_intervention": "fixed_top_one_percent_background_negative_aggregation",
+  "selected_intervention_count": 1,
+  "unclaimed": [
+    "official Pd/Fa",
+    "method gain",
+    "causal temporal mechanism",
+    "generalization beyond the two development clips"
+  ]
+}

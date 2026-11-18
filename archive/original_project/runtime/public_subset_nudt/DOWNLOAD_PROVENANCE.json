@@ -1,0 +1,734 @@
+{
+  "source_url": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+  "official_public_form_used": true,
+  "range_only": true,
+  "archive_bytes": 1027614117,
+  "transferred_bytes": 874958,
+  "transfer_budget": 20000000,
+  "members": [
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00001.png",
+      "bytes": 17730,
+      "sha256": "bcebadcd9ae21990fc5da0e7c538e54328aa3f673ab1baf6228c90d3850e9fb9",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00002.png",
+      "bytes": 17248,
+      "sha256": "99dd43ffd0f5ec76dbace0860089d061eeffe2efab041f8f13dda4b2bf9ccf8c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00003.png",
+      "bytes": 17509,
+      "sha256": "c4b1e201f0e571ab50916c6603d2b45cd9d3f76764840a8fbdaf2359d61ee256",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00004.png",
+      "bytes": 17485,
+      "sha256": "dc90fb152d35a42045d2ce97384029ecaa9ac0061777ef827a5d8de9908e7662",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00005.png",
+      "bytes": 17744,
+      "sha256": "076eb1f747919ad51173944a9945b4e9497e6a9f1e48994e306fbaf6fb58ea70",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00006.png",
+      "bytes": 17600,
+      "sha256": "4e9dc4447db3cc2e919fdc5c8791e1c3f32d37ad744548818793e2b2255d8eef",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00007.png",
+      "bytes": 17734,
+      "sha256": "dfeb9eb8319aef6f903f8758e659d4b3f5793b65ed1ae7ccfd1628a3e0cbf8f8",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00008.png",
+      "bytes": 17745,
+      "sha256": "ddeb6a6557244d6623175552df4bcbcf258ae23b775180b88eaca78e2090d0d2",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00009.png",
+      "bytes": 17733,
+      "sha256": "1008fcd28d927f1850c1c4c6d5c67cc7d5d86574b3511acc51d5af16828318d6",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00010.png",
+      "bytes": 17533,
+      "sha256": "6c4eeb79435c5b4b2092950fea66d80a360f3098f48a94c1e9747a54c45b4c1c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00011.png",
+      "bytes": 17646,
+      "sha256": "fe24cbe81ba384cecb75b3044c969091b2552494c787cfa028bacee7627a6def",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00012.png",
+      "bytes": 17744,
+      "sha256": "1d04d456ab504c491d873afc92138031d645061ae7925e7784f27c9681e55cc1",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00013.png",
+      "bytes": 17232,
+      "sha256": "e3c2cdcde35ec2a75b95c1f370c9da10d177c1355d3ce3bdc808abc17d22a01b",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00014.png",
+      "bytes": 17752,
+      "sha256": "6b3bd6427672c0d40731dccb94007f3778d05e36b770fab7febca440bcbd0631",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00015.png",
+      "bytes": 16933,
+      "sha256": "fc2222804bc94035664ecf71693d6d46e3a717091d9b4e9a9c9fc6cf0e5f8d51",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00016.png",
+      "bytes": 17740,
+      "sha256": "d2c3a8d6d7600ff7e7608423122c9e2ab0023ac2c8d819985ed3405c1028431c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00017.png",
+      "bytes": 17740,
+      "sha256": "c5710f6567f4ed27a781f694df8efaa0a1bbf39c645f7c918f8ae7d7f3704331",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00018.png",
+      "bytes": 17543,
+      "sha256": "13919a3acd4d67b4e6abd69a88399b8e7c3e42ea6f822e93aebd903de84e3efc",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00019.png",
+      "bytes": 17697,
+      "sha256": "da34244295ddeeb634822958b7f5894775a2f6f3ec4ad2a855e96f781036ce8d",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00020.png",
+      "bytes": 17737,
+      "sha256": "a4c5ba5f9180212b6520a272c8c462398ef577e23b952d45b47c89c8ed5b52f1",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00021.png",
+      "bytes": 17644,
+      "sha256": "d58fa5174bae4c961ec11a81bf08ca059e52769e53952f307e44fb356e868b94",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00022.png",
+      "bytes": 17720,
+      "sha256": "eb510cb528d33b240cd8b4d3ac222f43fc2406c47595328e6729e99ca78e2b82",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00023.png",
+      "bytes": 17700,
+      "sha256": "a1dc2cf80c38492c722e298dda9ecc2b42fca7aa3a79dc997d3ae62a7dcbcb63",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00024.png",
+      "bytes": 17731,
+      "sha256": "0fb1799de8fa310f413d58035de0b71b7a695c59d80107eda39ac63a09f7af48",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00025.png",
+      "bytes": 17743,
+      "sha256": "6ed43b93f37159409f084415b94ab7ee066ef26dab612b6d51200846e8c23d10",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00026.png",
+      "bytes": 17730,
+      "sha256": "f3fc8f9bb21e3d1cef0c358a36f6ef6fa4c41b9aad0502074efc29388dfffbeb",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00027.png",
+      "bytes": 17412,
+      "sha256": "59d78fffa1cde249ec1f6b813b1292c2c1db4aa3b6520f1de74ad20ab2bf8ea9",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00028.png",
+      "bytes": 17564,
+      "sha256": "5a457bbdb5a2b61047d138fede31b0ab5f06ffde30c255f4e4c9fba38aaee346",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00029.png",
+      "bytes": 17742,
+      "sha256": "d6db9743e13b63108868ad989d43581a7968119a2018b4691afd24ddc87d14cd",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00030.png",
+      "bytes": 17434,
+      "sha256": "f13410c9c465e440970276645a6be1c71e45f37e6635fe4a2a6c10fd1d671ebb",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00031.png",
+      "bytes": 17154,
+      "sha256": "0687ec46a997bd54147a1bdf84e98e9bf8d64c00d3adb55989e66ccc5b667fbb",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00032.png",
+      "bytes": 17708,
+      "sha256": "ba8d3523fe0a92a5f4ca30641f0b8662f501b2796df56c459de32c48b9d3ce98",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00033.png",
+      "bytes": 17709,
+      "sha256": "20d358859b7bb8b385ad00103d51a0c2041458f8a6dc2e4c8f1aa295f94f7fd9",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00034.png",
+      "bytes": 17737,
+      "sha256": "ca8d604f3a54e28db7ba82f6728d9cad07b42c468b10ed647643ba4ab88b913b",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00035.png",
+      "bytes": 17579,
+      "sha256": "04a8e8d1be29c14970c1de69d286b138ec600b2966f422d107d75cb64b96c200",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00036.png",
+      "bytes": 17728,
+      "sha256": "c2641cd3be5145fef04bc4e4a5ea6a3ab349e6becd9ea5d944ce3b6739661983",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00037.png",
+      "bytes": 16728,
+      "sha256": "c2372c2d298649d0c19f71dd24485f0921821cae873b8ad0ef800628dcf2d3b0",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00038.png",
+      "bytes": 17615,
+      "sha256": "6b320414dae95ad6b586a94098356ce31a10bf8dba353af6df87745f056aa1a5",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00039.png",
+      "bytes": 17658,
+      "sha256": "7ad6e58b0b39d19cf2e5e232ce17dd16d82fa45f48794f7eeb610eed6d2eea06",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/images/00040.png",
+      "bytes": 17159,
+      "sha256": "0e61e864612a1b463a655978caf224771e18bd1f1074d4ea4f6e6bd8f23868c1",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00001.png",
+      "bytes": 189,
+      "sha256": "232045b32dd19b0d384cd072be7ad25868b1cedcc013117c5e68bc6bf1c8715f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00002.png",
+      "bytes": 181,
+      "sha256": "5ee188cfd3568bc75a79ecbb5e37548bbf25778426b1e34e217d2cbab684affe",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00003.png",
+      "bytes": 194,
+      "sha256": "ba575c9bc2ac6a876512f81c71cefe5ccb063865eb0ea7083e459d8c3a3bc97d",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00004.png",
+      "bytes": 197,
+      "sha256": "01413008b8b8d585f30b888fc804fa5056c9df2a2f11576bcf709b404cdcc45a",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00005.png",
+      "bytes": 204,
+      "sha256": "ff89902489e0ca2bc7da2b62197a26b968af3e47febf0980e82e5678a62b9549",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00006.png",
+      "bytes": 188,
+      "sha256": "42a20091d0485b4c781823c3a2a4ed41af624f487b1cfca98059a9fccaa79d92",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00007.png",
+      "bytes": 196,
+      "sha256": "44b358e739a6175f4e909b96e13b25428aeda51bffbd7967d345eb285d9cd33c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00008.png",
+      "bytes": 194,
+      "sha256": "22670fb402c2a57fe8b48d521724eaa73eb5e5ebd67d707779bf17f1499795fe",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00009.png",
+      "bytes": 192,
+      "sha256": "7f80be723d1871b0730df1a5eab46442a3dbd0a675a0b4e9667325f11d322912",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00010.png",
+      "bytes": 194,
+      "sha256": "68919cf74fa8d30cfcc0873ae02c8ef988bb8049142006667fcb4728dd8eef98",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00011.png",
+      "bytes": 195,
+      "sha256": "c38ab8441a59acf6a815032db04c32fe66fdfef0f6d6994348741b8861c5964c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00012.png",
+      "bytes": 188,
+      "sha256": "ab8a6203ed6d5613cb69dfda68bfea4901e4f6d7cb4bebe7453fb8e4711699aa",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00013.png",
+      "bytes": 196,
+      "sha256": "7f65ba51f0558b58399e5308a3e80dd9871ec98b6d5182ec22c043a0b9f9c09c",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00014.png",
+      "bytes": 202,
+      "sha256": "36df8668f727654ef45bf0c1462e90ee60ac0f1a43a561d99d11bb33a5be8ccc",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00015.png",
+      "bytes": 201,
+      "sha256": "b1534f5031389d8703860b6bf28807641869368a3da4bc39ac9461120f0f6602",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00016.png",
+      "bytes": 202,
+      "sha256": "a099fa956fbf7140773e8af67e180e2753a1b8bc5477da62c2f6583dfbefba42",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00017.png",
+      "bytes": 203,
+      "sha256": "882521178549faa09543f255610fd7e4f21483acca75c086bf8587fbb92492f7",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00018.png",
+      "bytes": 199,
+      "sha256": "0d3f0e56adcd37ecc02a46fedbdc187bee45013523f8266b031475b191d233c4",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00019.png",
+      "bytes": 198,
+      "sha256": "de0cf16ff53df0be4ecfd4d5219ab9034beb90acce641f7f187a391231d6e7e9",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00020.png",
+      "bytes": 193,
+      "sha256": "434d1626a74aa67568b7c50fffee188a4183cdebb835cbd2ca0908b1c514d388",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00021.png",
+      "bytes": 202,
+      "sha256": "6abaa55d31bee39eba5c9dffc1c72539233381681fe85034c1b6f7a63dbd5bd4",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00022.png",
+      "bytes": 196,
+      "sha256": "2489f2078e5740ac8cc7d43b0742ca7f2cf4c63761755cbd465e95077ddb52e1",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00023.png",
+      "bytes": 201,
+      "sha256": "18c8a59de9cbfba32446dc4c40404bf8dc514b87c449f7fb66a8d67128054d84",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00024.png",
+      "bytes": 197,
+      "sha256": "68cb172842247cb427b333f318ef5978fd0e1413194488e9b1506eddd0cf7f7b",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00025.png",
+      "bytes": 195,
+      "sha256": "0ebf8c14904feaaef0008fc429696e95773e416b65792962d5e1a783e07bbd0d",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00026.png",
+      "bytes": 180,
+      "sha256": "d144a0479a9216c2f530d9d06691885fbdd2d2c6c17ef5218210b44ac743cb27",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00027.png",
+      "bytes": 195,
+      "sha256": "73178a4ef499248e8ebe66fce3bddd08aa67e1147a92e2b7ce0f028131c2e1d5",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00028.png",
+      "bytes": 198,
+      "sha256": "c2fcfb138107e1b59b7552d32f287d57a5d0550ea62158d5656d1ac594b5a452",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00029.png",
+      "bytes": 200,
+      "sha256": "419b0552c2748070367e893bedb1f851e197b0dcab569225964b3ffc29b7325f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00030.png",
+      "bytes": 197,
+      "sha256": "f5bfb7b1904bc65dc93d06d1128896c98de2b67127bf9d23c727fc02c7190ed2",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00031.png",
+      "bytes": 196,
+      "sha256": "b69bddf0ac8750def9797711b5ad24ad74370815114092f6f252df5c9327e5a4",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00032.png",
+      "bytes": 200,
+      "sha256": "fa9dbde28b4dd00eb1d00d084adfa1aca8532ace144c6674be65a4a339e9715b",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00033.png",
+      "bytes": 198,
+      "sha256": "11b546ad7ceaaac248c44ffd5c2ed8cbc8db1fcd342d914846cfdfbe4038b5ca",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00034.png",
+      "bytes": 198,
+      "sha256": "8a837f3236a34ecfd8433d049bcb978ef8781093fb77954f704520032ab43161",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00035.png",
+      "bytes": 202,
+      "sha256": "a54994f54dab8eb6f6b23fa5f82c2c7b8f47ab6aebe0a35a97f42f36dcccd412",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00036.png",
+      "bytes": 191,
+      "sha256": "59ec0a03f5d33983d42a7f72a68661e76de4a446c04583c49e0dad27a18320b7",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00037.png",
+      "bytes": 193,
+      "sha256": "f18e588e52d6aa57f92785db5f8e0f8bd0af306f65a67375e2d4150be1663da3",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00038.png",
+      "bytes": 201,
+      "sha256": "cafa6bf2f4caffd8b5298636682be825427873332635a1c4f2d894f3c52a7bec",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00039.png",
+      "bytes": 199,
+      "sha256": "7af6f1c36ba5bfcb47f163702f39636a7ea9abf4081c43b8f400d8256994a7f8",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks/00040.png",
+      "bytes": 209,
+      "sha256": "813310a092dcf28f6c0d77529b9acaf64eda5e431e708469c839958552c5373f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00001.png",
+      "bytes": 163,
+      "sha256": "e8377b94716c47376d0fb13fea7f6ebd3c7805b98aff567c2e94a32e1715daab",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00002.png",
+      "bytes": 164,
+      "sha256": "8f25e584a94478adc716f2cb2047b38e275655b814f41f123a2d916737693eb5",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00003.png",
+      "bytes": 164,
+      "sha256": "14bcb2f3be594b4e0bc7dd139df9a48bf0aa982786a8eb2a6b50fb8b9341388f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00004.png",
+      "bytes": 164,
+      "sha256": "45647ad6a51ef518a619b97a64a7764656f6e68bf367217a7cadee94268d16fb",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00005.png",
+      "bytes": 163,
+      "sha256": "47f0fa6f08d40f4ce6b868e9b8a6fde7d1f471d031a903dd524952e6f4700069",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00006.png",
+      "bytes": 163,
+      "sha256": "21a8d4ecf5b567d95566999fd41daabc5dded5a759e2acb338d32e7d3e1b15d6",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00007.png",
+      "bytes": 163,
+      "sha256": "035a1b4cb8a7e1ea571fd0edc93f167182870902602d051b15b4f8b35127c3e5",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00008.png",
+      "bytes": 164,
+      "sha256": "ed809341a869609d639a84eba7e1128c80a74d81b6c3a23226b5d4328fabbf6f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00009.png",
+      "bytes": 164,
+      "sha256": "c9c38d5c93e3192ae2c6e7e14e63386afa49fc86610e7124724a69df24eb7e0b",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00010.png",
+      "bytes": 163,
+      "sha256": "f97b79ea7e1913b08ca6dc502ca72677cec706d888b8df7daa90ed4eae8dee56",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00011.png",
+      "bytes": 163,
+      "sha256": "f97b79ea7e1913b08ca6dc502ca72677cec706d888b8df7daa90ed4eae8dee56",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00012.png",
+      "bytes": 162,
+      "sha256": "abeafa959abab944161e2c89e41e881d257d8a9ba5b3c816f6c8b64b5f65fdde",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00013.png",
+      "bytes": 162,
+      "sha256": "abeafa959abab944161e2c89e41e881d257d8a9ba5b3c816f6c8b64b5f65fdde",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00014.png",
+      "bytes": 164,
+      "sha256": "b27b09c1943eae2d8e23d883e4210b3096e01d24ff7fe8cf08ae19118c1ece6a",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00015.png",
+      "bytes": 164,
+      "sha256": "a69b9454dec1c7cbd299658c5991e9a5a1d07bd186c2cfb3d4f3fedd0309f4d6",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00016.png",
+      "bytes": 163,
+      "sha256": "be11f47a3279fcf8569f73e53810dc3692890a02f1f540242e8e79b337e7cced",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00017.png",
+      "bytes": 163,
+      "sha256": "be11f47a3279fcf8569f73e53810dc3692890a02f1f540242e8e79b337e7cced",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00018.png",
+      "bytes": 164,
+      "sha256": "122e51e9d95624c22396910fb47cab9d615ef486eeecf6140c2a33b355c31c30",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00019.png",
+      "bytes": 164,
+      "sha256": "122e51e9d95624c22396910fb47cab9d615ef486eeecf6140c2a33b355c31c30",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00020.png",
+      "bytes": 164,
+      "sha256": "06dec0e14e5b8806e9d60a4920e4407a5cb3c2599137cbdf0ba7c51bf7850f20",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00021.png",
+      "bytes": 164,
+      "sha256": "06dec0e14e5b8806e9d60a4920e4407a5cb3c2599137cbdf0ba7c51bf7850f20",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00022.png",
+      "bytes": 163,
+      "sha256": "7ce63998e895301a9a7d2e538f7b8584ff9ac85dce7485409db22cd192a2b14f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00023.png",
+      "bytes": 163,
+      "sha256": "7ce63998e895301a9a7d2e538f7b8584ff9ac85dce7485409db22cd192a2b14f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00024.png",
+      "bytes": 164,
+      "sha256": "9f1fbc24e725b75a5b4f78a74468057e3114e253ec35c7bf5216833d1902a50f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00025.png",
+      "bytes": 164,
+      "sha256": "9f1fbc24e725b75a5b4f78a74468057e3114e253ec35c7bf5216833d1902a50f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00026.png",
+      "bytes": 164,
+      "sha256": "8d79d622fa8acc420f5d3a12e258ae86284f391e19d226ad60c2e331e4fc6d9f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00027.png",
+      "bytes": 164,
+      "sha256": "71c2307444b4da016a26c92461e068d9686337039a10a18de28f351a4d371090",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00028.png",
+      "bytes": 163,
+      "sha256": "4e237c5c4011af6d71e9e2504096e9a2fe14c6c7d674d903bdb66023b628518e",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00029.png",
+      "bytes": 163,
+      "sha256": "4e237c5c4011af6d71e9e2504096e9a2fe14c6c7d674d903bdb66023b628518e",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00030.png",
+      "bytes": 163,
+      "sha256": "79cc229697c5ba156dc932895b272c49c8eef415a94de49b11c4d9eeefc5c5ad",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00031.png",
+      "bytes": 164,
+      "sha256": "9425ead835bedea6d71a5b6dac2fe1deafc1c8b7c8c3bd835fa598ca0d8597b8",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00032.png",
+      "bytes": 164,
+      "sha256": "b1dc7bb13c259848351bc4c3b7676eb748ab590be0c5505742f1cbac1fc1a2a2",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00033.png",
+      "bytes": 164,
+      "sha256": "8cb4397d7a4551947533edaf2e241a56558c058c9e92a05bfc0568e317514e18",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00034.png",
+      "bytes": 164,
+      "sha256": "8cb4397d7a4551947533edaf2e241a56558c058c9e92a05bfc0568e317514e18",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00035.png",
+      "bytes": 162,
+      "sha256": "2a64213abf7c22b6f00d74931512e634fe8510270a16ccaefd820e3fd89106f2",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00036.png",
+      "bytes": 164,
+      "sha256": "2dbf52d0e7bd8d7849eee5d611f550650a02a94087dab3ce00360ce93c89c85f",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00037.png",
+      "bytes": 164,
+      "sha256": "434525fabbb2322ad00d065894a504bc825660c3a11260b04cdad78e79009e24",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00038.png",
+      "bytes": 164,
+      "sha256": "434525fabbb2322ad00d065894a504bc825660c3a11260b04cdad78e79009e24",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00039.png",
+      "bytes": 164,
+      "sha256": "e18163df26fae0f76179464e56a4e3aa4d0eb05a14909c09f0b89ae1ebaa2322",
+      "crc_verified": false
+    },
+    {
+      "member": "NUDT-MIRSDT/Sequence85/masks_centroid/00040.png",
+      "bytes": 164,
+      "sha256": "e18163df26fae0f76179464e56a4e3aa4d0eb05a14909c09f0b89ae1ebaa2322",
+      "crc_verified": false
+    }
+  ],
+  "sequence": "Sequence85",
+  "selection_rule": "First sequence in official DeepPro NUDT test.txt, first 40 lexical frame names, original images/masks/masks_centroid; engineering only",
+  "synthetic": true,
+  "official_manifest": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/datasets/NUDT-MIRSDT/test.txt"
+}

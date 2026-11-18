@@ -1,0 +1,11 @@
+--- /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/frozen_v1/losses.py
++++ /home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/lambda0_control/code/losses.py
+@@ -70,7 +70,7 @@
+                                         box_mil(logits[wi+1, sb], rect)]))
+     terms = torch.stack(extra_terms) if extra_terms else logits.new_empty((0, 2))
+     extra = reduce_extra(terms, strategy, random_pairs)
+-    total = pos + neg + extra  # Frozen lambda=1; no score-dependent sample inclusion.
++    total = pos + neg  # Isolated lambda=0 control; extra is logged but excluded from optimization.
+     return total, {'positive': pos, 'negative': neg, 'extra': extra,
+                    'extra_objects': len(extra_specs),
+                    'extra_disabled_n_lt_2': int(len(extra_specs) < 2),

@@ -1,0 +1,640 @@
+{
+  "status": "complete",
+  "condition": "N1",
+  "variant": "N1",
+  "mode": "difference",
+  "steps": 512,
+  "seed": 46,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "fresh Adam on evidence parameters only",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "precision": "FP32_no_AMP_no_TF32",
+  "bn_policy": "original_entire_state_and_affine_frozen_eval; evidence_no_BN",
+  "bn_initial_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "initial_checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "reference_checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "plan_sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c",
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "old_log_sha256": "5cc2f455d6d6cd551247969ea9b10e7e6eb37f76f3af88beb910f995dabf78e7",
+  "initial_model_state_sha256": "92a314aa9e9551ccadfd9cd8b5f2ab71a96f665864b86a60724d3deabff7aa27",
+  "original_initial_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "branch_initial_sha256": "68f78a14f307cb5591ad08a7e1c413bdbac5db35a964fc435b783fbc9a0c897a",
+  "label_config": {
+    "version": 1,
+    "condition": "gaussian_softiou_approx",
+    "center": "original_float_bbox_geometric_center",
+    "pixel_coordinates": "x=j+0.5,y=i+0.5; half-open original bbox",
+    "sigma_x": "original_bbox_width/6",
+    "sigma_y": "original_bbox_height/6",
+    "support": "truncate outside original bbox; no minimum sigma or peak normalization",
+    "quantization": "floor(255*Gaussian) to uint8",
+    "target": "quantized>0 cast float32; max union over positive boxes",
+    "positive_objects": "all valid non-ignore non-crowd boxes fully inside crop core9; no size/class filter",
+    "valid_domain": "old_background_mask union full_positive_box_rects, then excluded-object bbox+2px overrides",
+    "excluded_objects": "all valid ignore/crowd or non-full-core boxes; original float box+2px",
+    "crop_core_margin": 9,
+    "outside_positive_box_guard_margin": 2,
+    "loss": "unchanged official SoftLoUloss on gathered valid pixels per window; four-window mean",
+    "smooth": 0.0,
+    "empty_target_window": "retain official loss1 and zero gradient; log occurrence",
+    "alignment_limit": "approximate mask generator and masked domain; not exact author training reproduction"
+  },
+  "effective_supervision_config": {
+    "positive_window": "unchanged masked official SoftLoUloss, internal sigmoid, smooth0",
+    "empty_window": "replace constant1 with old top1pct softplus background loss, coefficient1",
+    "empty_domain_assertion": "valid equals old background mask",
+    "outer_reduction": "four windows equal mean",
+    "label_config_scope": "frozen historical label generation; its old empty-loss note is superseded here"
+  },
+  "frozen_plan_config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "model_config": {
+    "original_frozen": true,
+    "original_bn": "eval",
+    "readout": "z0 + delta_z",
+    "evidence": {
+      "mode": "difference",
+      "delays": [
+        1,
+        4
+      ],
+      "inner_radius": 5,
+      "outer_radius": 7,
+      "annulus_count": 104,
+      "annulus_offsets": [
+        [
+          -7,
+          -7
+        ],
+        [
+          -7,
+          -6
+        ],
+        [
+          -7,
+          -5
+        ],
+        [
+          -7,
+          -4
+        ],
+        [
+          -7,
+          -3
+        ],
+        [
+          -7,
+          -2
+        ],
+        [
+          -7,
+          -1
+        ],
+        [
+          -7,
+          0
+        ],
+        [
+          -7,
+          1
+        ],
+        [
+          -7,
+          2
+        ],
+        [
+          -7,
+          3
+        ],
+        [
+          -7,
+          4
+        ],
+        [
+          -7,
+          5
+        ],
+        [
+          -7,
+          6
+        ],
+        [
+          -7,
+          7
+        ],
+        [
+          -6,
+          -7
+        ],
+        [
+          -6,
+          -6
+        ],
+        [
+          -6,
+          -5
+        ],
+        [
+          -6,
+          -4
+        ],
+        [
+          -6,
+          -3
+        ],
+        [
+          -6,
+          -2
+        ],
+        [
+          -6,
+          -1
+        ],
+        [
+          -6,
+          0
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          -6,
+          2
+        ],
+        [
+          -6,
+          3
+        ],
+        [
+          -6,
+          4
+        ],
+        [
+          -6,
+          5
+        ],
+        [
+          -6,
+          6
+        ],
+        [
+          -6,
+          7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -6
+        ],
+        [
+          -5,
+          6
+        ],
+        [
+          -5,
+          7
+        ],
+        [
+          -4,
+          -7
+        ],
+        [
+          -4,
+          -6
+        ],
+        [
+          -4,
+          6
+        ],
+        [
+          -4,
+          7
+        ],
+        [
+          -3,
+          -7
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          -3,
+          6
+        ],
+        [
+          -3,
+          7
+        ],
+        [
+          -2,
+          -7
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -2,
+          6
+        ],
+        [
+          -2,
+          7
+        ],
+        [
+          -1,
+          -7
+        ],
+        [
+          -1,
+          -6
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          -1,
+          7
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          0,
+          -6
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          -7
+        ],
+        [
+          1,
+          -6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          -7
+        ],
+        [
+          2,
+          -6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          -7
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          4,
+          -6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          5,
+          -6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          6,
+          -5
+        ],
+        [
+          6,
+          -4
+        ],
+        [
+          6,
+          -3
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          6,
+          -1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          7,
+          -6
+        ],
+        [
+          7,
+          -5
+        ],
+        [
+          7,
+          -4
+        ],
+        [
+          7,
+          -3
+        ],
+        [
+          7,
+          -2
+        ],
+        [
+          7,
+          -1
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "s_min": 0.0210595036274995,
+      "channels": [
+        "I",
+        "D1",
+        "mu1",
+        "s1",
+        "E1",
+        "m1",
+        "D4",
+        "mu4",
+        "s4",
+        "E4",
+        "m4"
+      ],
+      "spatial_padding": "replicate",
+      "temporal_missing": "all five channels zero",
+      "median": "average of both central order statistics",
+      "mad": "median(abs(neighbor difference - same local median))",
+      "statistics_chunk_frames": 8,
+      "branch_spatial_radius": 9,
+      "encoder": "Conv2d(11,8,3,p1),ReLU,Conv2d(8,8,3,p1),ReLU",
+      "joint": "Conv2d(16,8,1),ReLU",
+      "output": "Conv2d(8,1,1)",
+      "zero_initialized": [
+        "output.weight",
+        "output.bias"
+      ],
+      "temporal_statistic_input": "normalized raw image, detached",
+      "clipping": null
+    }
+  },
+  "training_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "torch_version": "2.7.0+cu128",
+  "device": "cuda:0",
+  "parameter_count": 72442,
+  "new_parameters": 1529,
+  "trainable_parameters": 1529,
+  "source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro",
+  "checkpoint_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/checkpoints/best_model.pth",
+  "criterion_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py",
+  "label_source_path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py",
+  "protocol": "frozen_original_positive_masked_official_SoftIoU_empty_old_top1pct",
+  "loss_reduction": "unchanged official per positive window; empty old top1 negative; four-window equal mean",
+  "checkpoint_selection": "fixed final update512; snapshots0/128/256/384/512 never selected by validation",
+  "snapshots": [
+    {
+      "step": 0,
+      "path": "snapshot_000.pth",
+      "sha256": "44481a61d9383c0489c1348e52040a97b0a11a57c6169ffab408a41f73d763ea",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "92a314aa9e9551ccadfd9cd8b5f2ab71a96f665864b86a60724d3deabff7aa27"
+    },
+    {
+      "step": 128,
+      "path": "snapshot_128.pth",
+      "sha256": "fa82e776c980124a8852b485512fd1b0b249ed44ad7d28742755d83114942035",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "2fcc4c79b11caef77c7b32288e9c8fde84e105e10a99f10ee2babcd44e1200bd"
+    },
+    {
+      "step": 256,
+      "path": "snapshot_256.pth",
+      "sha256": "0958fd19844c5a4f4387112af4c3ce8e5d317d83ab021bf7e1f4413850745f3b",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "dbf202ecfcba37702357a8e7e4ea4121f92d0abbfaf5304b63daf43252a9a0c9"
+    },
+    {
+      "step": 384,
+      "path": "snapshot_384.pth",
+      "sha256": "5673b45db5dac9d87bc60dcbcdc3bb6f29ba6d5a37cb71ace434fdb01fa8df34",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "99b9e3e4562156319b9be76c4197cc37242373c58aab566f152b72287ab98543"
+    },
+    {
+      "step": 512,
+      "path": "snapshot_512.pth",
+      "sha256": "e2b2b42316e3d49086d9ab411f8dcbea79f7a114c800b1decc42310a472fc731",
+      "original_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+      "model_state_sha256": "64844ae3f2c28ff36fc737465e78545da23cd50ff0ac8434e69aad62c2382c5c"
+    }
+  ],
+  "telemetry_rule": {
+    "steps": "step 1 and every 16th update, before optimizer.step",
+    "target_queries": "first at most 8 valid positive-label pixels per window, flattened T/H/W ascending",
+    "background_queries": "top at most 8 old-detector logits among frozen valid background pixels per window; ties flat index ascending",
+    "selection_uses_new_logits": false,
+    "model_receives_labels": false,
+    "values": "actual mode input I,D1,mu1,s1,E1,m1,D4,mu4,s4,E4,m4; old logit and signed delta",
+    "limitation": "sampled training telemetry; neighboring target pixels need not be distinct objects"
+  },
+  "model_labels_access": false,
+  "train_source_sha256": "96362e07c45e1d435e2f890fd0a2aaca03581e2d7f741dbedfa07cc0a41e5342",
+  "module_source_sha256": "f87efd3f00c5167672045c83880c693e892cf906b58103f6327a55bba2502f2a",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "label_source_sha256": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+  "top1_loss_source_sha256": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+  "common_loss_source_sha256": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b",
+  "prior_train_source_sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11",
+  "batch_source_sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54",
+  "final_step": 512,
+  "duration_seconds": 111.25247555301758,
+  "counts": {
+    "pure_negative_windows": 385,
+    "valid_pixels": 978568892,
+    "positive_pixels": 9360858
+  },
+  "bn_final_sha256": "51832be8d623f18e372232ddefdf4214ad67b3e45f795fbaa2ea9daa7fd0ecab",
+  "original_final_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "frozen_original_unchanged": true,
+  "final_checkpoint_sha256": "e2b2b42316e3d49086d9ab411f8dcbea79f7a114c800b1decc42310a472fc731",
+  "final_model_state_sha256": "64844ae3f2c28ff36fc737465e78545da23cd50ff0ac8434e69aad62c2382c5c",
+  "cumulative_input_sha256": "9522ab5edb31968d008ea822c9971d02c685f5a5d99437f528e98ccc4e93356b",
+  "cumulative_label_sha256": "e7dc82a236220fdad0232ffe5b0653e91e4d4149cfad4b825d41456c64a727a6",
+  "train_log_sha256": "06fcf807a1e9276571a9995af59b382d84e84d2ef6f765708aca3d2ab6f06bea",
+  "parameter_diff_sha256": "6afd6cde584301d81d553c01aba467939598ed31e9d385fcbd14aa9722ac1bbf",
+  "telemetry_sha256": "ee6d4e28cc7b9401f11c61bfecba6916765a93d2cdd4b9663a386c0fc72f2011",
+  "telemetry_seconds": 0.15823518601246178,
+  "max_cuda_memory_allocated_bytes": 3719797760,
+  "max_cuda_memory_reserved_bytes": 5645533184
+}

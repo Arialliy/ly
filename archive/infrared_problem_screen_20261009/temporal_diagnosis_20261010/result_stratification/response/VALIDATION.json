@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "rows": 14919,
+  "unique_target_frames": 4973,
+  "checks": [
+    "Original annotation ID, source frame, track ID, and bbox match saved prediction CSV for every row (asserted in runnable script).",
+    "Every original annotation appears at each of 0.1,0.5,0.9; no duplicate track/frame/threshold key.",
+    "All contrast joins match annotation ID; context presence checked; motion invalid remains missing adjusted_speed and invalid bin.",
+    "Every low-response interval has end-start+1 equal length; sum of interval lengths independently equals count of low-response rows for every population/subset/threshold/track."
+  ],
+  "testing_scope": "CPU-only stdlib data join and reaggregation; no model inference, GPU, package install, or framewise significance tests."
+}

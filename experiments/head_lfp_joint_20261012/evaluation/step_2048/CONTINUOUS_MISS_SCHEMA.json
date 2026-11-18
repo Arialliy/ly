@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "prior_schema": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/low_response_information_20261011/analysis/TRACK_SCHEMA.json",
+  "prior_schema_sha256": "c109210e34fc64a4629f19ad6cee08a57e515dcc7bbd33f26682aa8b36616127",
+  "full_observation_scope": "Exactly all 5200 frozen strict-small target frames, 130 tracks, two clips per arrangement. No filtering by new match or recovery.",
+  "continuity": "Both local frame and source frame must increase by exactly one. Missing labels, frame gaps and original selection holes break runs.",
+  "cohort_continuity": "Cohort rows are separately filtered; excluded rows create local/source gaps and break runs. Cohort longest runs are not complete physical trajectory lengths.",
+  "release_segments": "All maximal release-miss segments within the full frozen observation range, separately for O/S. The same segment boundaries are used for every new condition.",
+  "quantiles": "Linear interpolation; tracks with observations and zero misses have longest miss 0. No-observation track/cohort combinations omitted.",
+  "artifact_sha256": {
+    "CONTINUOUS_MISS_TRACKS.csv": "f7ac7a074fb0c299282df5b0ef2fa1d72eb4f8cddfd48faf4e7ca7349b0020d9",
+    "CONTINUOUS_MISS_SUMMARY.csv": "bfa600f31dbdb3d5466144380143efef15d4bcbe10303330343749e5106b9bd7",
+    "RELEASE_MISS_SEGMENTS.csv": "c71035d51e1dd596d75c50a5819c7868e6279e1e0b3ec7599ad9a89c1652e2f7"
+  }
+}

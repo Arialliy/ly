@@ -1,0 +1,82 @@
+{
+  "all_five_subsets": 462,
+  "legal_five_combinations": 10,
+  "per_clip_pairs": 100,
+  "independent_criterion": "Explicit union of integer frames equals set(range(160)).",
+  "legal_matches_frozen": true,
+  "legal_combinations": [
+    [
+      0,
+      12,
+      48,
+      84,
+      120
+    ],
+    [
+      0,
+      24,
+      48,
+      84,
+      120
+    ],
+    [
+      0,
+      24,
+      60,
+      84,
+      120
+    ],
+    [
+      0,
+      24,
+      60,
+      96,
+      120
+    ],
+    [
+      0,
+      36,
+      48,
+      84,
+      120
+    ],
+    [
+      0,
+      36,
+      60,
+      84,
+      120
+    ],
+    [
+      0,
+      36,
+      60,
+      96,
+      120
+    ],
+    [
+      0,
+      36,
+      72,
+      84,
+      120
+    ],
+    [
+      0,
+      36,
+      72,
+      96,
+      120
+    ],
+    [
+      0,
+      36,
+      72,
+      108,
+      120
+    ]
+  ],
+  "window_frames_per_clip": 200,
+  "all_combinations_distinct": true,
+  "pair_count": 100
+}

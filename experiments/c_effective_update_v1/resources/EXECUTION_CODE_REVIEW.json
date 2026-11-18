@@ -1,0 +1,79 @@
+{
+  "status": "PASS_STATIC_EXECUTION_CONTRACT",
+  "scope": "Read-only review of newly added actual-Adam branch execution in run_effect.py and effect_common.py, plus directly used runtime/operator contracts. No real-model execution or old F numerical tests were performed.",
+  "blocking_findings": [],
+  "checks": [
+    {
+      "item": "F2304 identity and original optimizer",
+      "result": "PASS",
+      "evidence": "runtime.INIT_CP is track_contrast_v2/training/FRAME/run/snapshot_2304.pth. initialize asserts step=2304, condition=FRAME, exact trainable-name list, 14593 trainable scalars, all 28 Adam states at step2304, settings equal original CALIBRATION. Optimizer state uses deepcopy and exact state hash after load."
+    },
+    {
+      "item": "Independent model/Adam copies",
+      "result": "PASS",
+      "evidence": "Every pair and every condition reloads model_state_dict and a fresh deepcopy of optimizer_state_dict, then zero_grad(set_to_none=True). Parameter reference vector theta is captured once from F2304. Updates are not accumulated across conditions or pairs."
+    },
+    {
+      "item": "Four random-state families",
+      "result": "PASS",
+      "evidence": "Python random, NumPy, torch CPU and all visible CUDA RNG states are captured and reset for each condition. Full state digest is checked before step and after deterministic forward measurements."
+    },
+    {
+      "item": "Unchanged scalar F and controlled deletions",
+      "result": "PASS",
+      "evidence": "compute delegates original det/keep/C to v1 loss_terms and FRAME readout to v2 temporal_risk_loss. full_F retains original (det + weighted_keep + weighted_track) + weighted_frame order; no_keep/no_track omit only their corresponding weighted scalar. Real branch gradients are autograd of these scalars, not a substitute grouped sum."
+    },
+    {
+      "item": "Fixed parameter coordinates and unused values",
+      "result": "PASS",
+      "evidence": "Single model.named_parameters order filtered by requires_grad is used throughout. autograd allow_unused=True returns None and assignment retains None. Zero padding is confined to read-only diagnostic vectors and ConFIG combination with a joint usage mask."
+    },
+    {
+      "item": "Grouped gradient consistency",
+      "result": "PASS",
+      "evidence": "Independent fit/weighted_keep/weighted_track gradients are checked against original full_F at rtol1e-4, atol2e-7. Both norms and L2 discrepancy are recorded. ConFIG norm control is explicitly its sequential grouped sum, with original scalar full_F retained for comparison."
+    },
+    {
+      "item": "Actual Adam effect and state progression",
+      "result": "PASS",
+      "evidence": "Each branch executes optimizer.step once; measured delta is actual post-step parameters minus common F2304 theta. Records include update norm/cosine, gradient dot delta, optimizer and model hashes. Used parameters must advance to2305 and true unused parameters stay2304."
+    },
+    {
+      "item": "Frozen frontend and BN",
+      "result": "PASS",
+      "evidence": "Same runtime freezes all except original TPro/conv_out1/conv_out2 and keeps model.eval. Frozen state and BN buffers are hashed before and after each condition. New files add no trainable model parameters."
+    },
+    {
+      "item": "Distinct observer exposure",
+      "result": "PASS_API_CONTRACT",
+      "evidence": "Observer batch is never passed to compute/autograd; it is evaluated only under no_grad before and after each branch. Pair distinctness and cohort selection are separately owned by data audit."
+    },
+    {
+      "item": "ConFIG gate and fallback interface",
+      "result": "PASS",
+      "evidence": "Real config mode asserts OPERATOR_CHECK.status=CONFIG_SINGLE_STEP_AUTHORIZED. It maps groups to exact fit/keep/track keys, calls official wrapper and keeps its detailed operator/fallback diagnostics. No real ConFIG step was executed by this review."
+    },
+    {
+      "item": "Source and data freeze hooks",
+      "result": "PASS_HOOKS",
+      "evidence": "frozen_check validates registered new and reused hashes on entry/exit. Old v1/v2 caches are input/label/aux-input fingerprint checked. Freeze manifest itself is pending parent completion before any real measurements."
+    }
+  ],
+  "limits": [
+    "This is static execution review, not runtime validation. Actual assertions and finite-output checks remain to run after protocol freeze.",
+    "effect_data.py and PAIR_PLAN.json were not yet present when this review began; cohort definitions, observation alignment, and plan distinctness remain the independent data-agent review scope.",
+    "Input gradient norm matching does not guarantee equal actual Adam update norm or beneficial target changes; these are recorded measurements, not assumptions."
+  ],
+  "parse_checks_passed": [
+    "code/run_effect.py",
+    "code/effect_common.py",
+    "code/runtime.py",
+    "code/config_operator.py"
+  ],
+  "file_sha256": {
+    "code/run_effect.py": "8bebe2b816eaffb95fad457e7c666a0d8df57fa312cb94624ef4cec364e3b623",
+    "code/effect_common.py": "8ddd92b8bc65549342ff6d8fffa29db391bdc270b467736876a1842f3c13b7a2",
+    "code/runtime.py": "9a9e28b2eb7bafea2633adf013a98a4721fc16833ae2768023e45ace2342292a",
+    "code/config_operator.py": "caf4a63106fe8f6b8e130085c9ea1172ec70e49d3dbbd02e1b75324a21cdf0f3"
+  }
+}

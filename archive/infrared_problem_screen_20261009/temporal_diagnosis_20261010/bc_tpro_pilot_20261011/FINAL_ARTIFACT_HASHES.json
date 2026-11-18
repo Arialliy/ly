@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-11T16:13:39.403816+00:00",
+  "sha256": {
+    "code/bc_tpro.py": "5603fe22da26e80534cb8f4a3c11676a06b906460dc2ffec66a8542589f83972",
+    "code/infer_bc.py": "8295729e8db808175c8f1ca72629885dbdd23b2a29a44b88952b85ece3ca36e2",
+    "code/launch_jobs.py": "d45e50bba8ff893bb92885ace48cae2079c30ea427f85bbad7bec1ad91add694",
+    "code/test_bc_tpro.py": "302964d3191dedcccab711d1c514e1a398dd9b8fe0ca20eb485320991ee17d5c",
+    "code/train_bc.py": "fca798c4027c3da2921b75ebef0a920f02b1a2c34a5d5433069ebcbc5d5d628c",
+    "PROTOCOL.md": "d12413a7163c21dcbfc8a4081fcd7a075d9c00e2d2b86aec6c4376e1c5723ef9",
+    "PROTOCOL_FREEZE.json": "5e220c5ea12b43cc15dd4fd1eebcaa99df60f6b6e676e87f4f23e777099669a6",
+    "REPORT.md": "e337e553631a2a41ee76e604f3185f87738cdc0ea93c67edad452036c0567f5f",
+    "STATUS.json": "014d64ffd0eb5c0a888effdf208858e3d7be35ab4b733ee666ada7df453d5c48",
+    "OUTCOME.json": "961fa40bb1fab538fdb70fbccd91849416be90df4a4aa34d4fa923c2af3fd49a",
+    "RESOURCE_SUMMARY.json": "4c92be0da103bc01e9fe4629da464dca91d608f413863fe4dca395fa839525a7",
+    "TRAINING_AUDIT.json": "83e961e32f929bc70c3b3316c6ea1ea0807ac0e364be43e1a025b7c4a7a5625c",
+    "INDEPENDENT_RESULT_AUDIT.json": "4a66f3db956d1e584943ae1f3672a785b5d1b2bc9819f5ae4ab48c31ad75e7f6",
+    "evaluation/VALIDATION.json": "a624b1fe041fee57dee4920de27d7ad93bf361e472218c1924c16970424e70da",
+    "evaluation/FRAME_COUNTS.csv": "cb119224a7ad16a457b20d19185d0b3a289abe6550d17afa4b2b226e3d3965bf",
+    "evaluation/OBJECT_COMPARISON.csv": "6a6df0f50da5967e7c7821edc22b334b31e0ec234de850319fb45fdf836611cc",
+    "evaluation/RECOVERY_CONCENTRATION.csv": "a717b2be1f561c28ce479f69d3c41d2e90869a74648797dc281869e0a1ee449d",
+    "evaluation/SEQUENCE_SUMMARY.csv": "ea2dc7f7446dc1a97a807cebdfd30bbb3801cf7f0e63cf5eb71a2c7dab8b0c5d",
+    "evaluation/SUMMARY.csv": "0347a94c38d07f716cc0f2d999a317702cd9c4a43ad137dcdeb1cc0220f86970",
+    "evaluation/TRACK_SUMMARY.csv": "26a03c29b1832e8b481c30f3c0f71c043a3f94465ad748b1aca944736cdb9339",
+    "evaluation/WINDOW_DEPENDENCE.csv": "042b162d2b9eb51fb89b7fc17fb41ba29f00d9815a06c93aceb6e07bd586c841"
+  },
+  "note": "Prediction/checkpoint hashes retained in corresponding COMPLETE and RUN receipts; report numeric review predates added final audit links, main numeric tables unchanged.",
+  "post_completion_user_stop_update": {
+    "REPORT.md": "1f1aea8de5ea584778a1d499662222fc0610de8c93393f92784af0ad93a98bfc",
+    "STATUS.json": "283b380261ec82d2bc28e5312904b78c2e59d0483133a446067113ec3ffd4128",
+    "STOP_DECISION_20261012.json": "fa605a48d83d03a928364f360a636d3d23b0bff59aecb142b85a2f9561cf13d6"
+  }
+}

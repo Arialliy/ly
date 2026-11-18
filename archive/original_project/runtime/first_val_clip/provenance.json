@@ -1,0 +1,28 @@
+{
+  "video": "/home/ly/data/\u7ea2\u5916\u5c0f\u76ee\u6807\u6570\u636e\u96c6/Anti-UAV-RGBT/val/20190925_101846_1_4/infrared.mp4",
+  "annotation": "/home/ly/data/\u7ea2\u5916\u5c0f\u76ee\u6807\u6570\u636e\u96c6/Anti-UAV-RGBT/val/20190925_101846_1_4/infrared.json",
+  "video_sha256": "6d873a57897005b62cd92bab982d692b78e15b1470f8b45351cda757fa7db372",
+  "annotation_sha256": "b3c30b23b4b0579ea2bdc421db31f729dd202d083a17d8613286556afa35fb82",
+  "decoded_frames_sha256": "a40b0d71eac9acb2844abd69d1eefba116498e85bbeb754ab998f0e14c59ac9d",
+  "frame_interval": [
+    0,
+    160
+  ],
+  "interval_convention": "zero-based, end-exclusive",
+  "original_video_frames": 1000,
+  "fps": 20.0,
+  "shape": [
+    160,
+    512,
+    640
+  ],
+  "dtype": "uint8",
+  "min": 0,
+  "max": 255,
+  "max_channel_difference": 5,
+  "channel_policy": "red channel after decoding BGR, equivalent to original PIL channel zero",
+  "resize": null,
+  "interpolation": null,
+  "source_split": "val",
+  "purpose": "cross-dataset diagnostic; not paper benchmark reproduction"
+}

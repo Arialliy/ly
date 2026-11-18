@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE_LIMITED_VALIDATION",
+  "updated_utc": "2026-10-11T19:09:21.038305+00:00",
+  "seed": 46,
+  "authorized_scope": [
+    "same trained E2 checkpoint residual on/off",
+    "frozen release pre-TPro features low-capacity P0/P1/P2 probe",
+    "reuse and narrowly inspect module/update/inference chain"
+  ],
+  "new_detector_training_authorized": false,
+  "old_E2_failed_decision_preserved": true,
+  "new_structure_training": "PAUSED_BY_USER; limited frozen-model validation now explicitly authorized",
+  "inference_job_started": true,
+  "phase_A_protocol": "A_PROTOCOL.json",
+  "phase_A_freeze": "A_FREEZE.json",
+  "phase_B_coverage_limit": "Geometry common support: 43 train frames / 3 of8 sources;18 dev frames/9tracks/2sources; cannot infer entire4342 low-response group",
+  "all_inference_and_analysis_completed": true,
+  "active_jobs": [],
+  "report": "REPORT.md",
+  "decision": "DECISION.json",
+  "phase_B_freeze": "B_FREEZE.json",
+  "new_detector_training_runs": 0,
+  "fixed_linear_readout_fits": 3
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "rows": 10400,
+  "row_keys_unique": true,
+  "comparisons": [
+    {
+      "sequence": "DJI_0026_2",
+      "arrangement": "O",
+      "logits_sha256": "5dbc3667d37c3989e942a66b5d13c1dbfede83bcad61802be28affca1e182862",
+      "probabilities_sha256": "448537e1430853f5cbf72458c8c873bee3b21eed9e17a9ece110cc6f82784a8e",
+      "score_npz_sha256": "973d4dba3d24d8e84ed0fdc87922aca7df93d687273cfa88f22d09cb7d147f1e",
+      "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+      "all_box_probabilities_identical_to_original_scoring": true,
+      "all_point_matches_identical_to_frozen_support_table": true
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "arrangement": "S",
+      "logits_sha256": "08b2909e111f75863cd0a9d0e3b25cdd09f3e1db91434abf3866de661e6b6c9d",
+      "probabilities_sha256": "800550cc71a545b9168801b682c95357359e412841e2a010e9dab949f060648b",
+      "score_npz_sha256": "72500514814fc92d290d3139e02e805d8b878a4f98da6085c0335f7fbf88fae9",
+      "annotations_sha256": "d182e34fb6acf8a761730ebfbb7c776c1056726d829d7c8a21a4eba5a0aae900",
+      "all_box_probabilities_identical_to_original_scoring": true,
+      "all_point_matches_identical_to_frozen_support_table": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "arrangement": "O",
+      "logits_sha256": "c28338886366ff369473fe81924701d4b60e3554f69381075ac0874770218320",
+      "probabilities_sha256": "3c6d4fd13ba7106a6a1dbc452fa34543e6967bc14d4751727eb37c2562219074",
+      "score_npz_sha256": "c361b05a22ac7668428c34de200691a939ba7d846487aa7bb2d7a94dfb0debf3",
+      "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+      "all_box_probabilities_identical_to_original_scoring": true,
+      "all_point_matches_identical_to_frozen_support_table": true
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "arrangement": "S",
+      "logits_sha256": "77bfbb09efce3f624dac9e653cd3fa42fb962120e23720d9cc983002e72a1614",
+      "probabilities_sha256": "d0959f6813e870462499eb61ac9c4ac0562eca69280cc5370fa2f8a2028ec00e",
+      "score_npz_sha256": "8da2f05f800325ef8ce43c643313789930d893e27471f996adef1ddf330f218a",
+      "annotations_sha256": "879403f2a0fd49aee86f8ce83597b0aa212bfc3aa8f791cd0be58f2524095ad2",
+      "all_box_probabilities_identical_to_original_scoring": true,
+      "all_point_matches_identical_to_frozen_support_table": true
+    }
+  ],
+  "protocol_sha256": "953f4916267f4ca8ee96252d446e57e8b25abf182db959939de6c485286bd05f",
+  "script_sha256": "e1056086610a926e3f03ad78c6de67cc2fdf4a6136af0a830773e5d8522acec8",
+  "elapsed_seconds": 41.52378058433533
+}

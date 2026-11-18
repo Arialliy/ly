@@ -1,0 +1,356 @@
+{
+  "status": "PASS",
+  "scope": "existing frozen plan, logs and prior receipts only; no images read, no model forward, no training, no frame/coordinate re-audit",
+  "checks": {
+    "512_ordered_updates": true,
+    "all_2048_positive_box_counts_identical": true,
+    "empty_positive_windows_identical": true,
+    "all_empty_steps_identical": true,
+    "old_empty_batches_nonzero_gradient": true,
+    "new_empty_batches_zero_gradient": true,
+    "same_actual_plan_sha": true,
+    "same_actual_selection_sha": true,
+    "same_actual_base_helper_source": true,
+    "train_dev_sequence_disjoint": true,
+    "train_dev_prefix_disjoint": true,
+    "train_confirmation_prefix_disjoint": true
+  },
+  "source_rows": [
+    {
+      "sequence": "DJI_0030_9",
+      "pair_exposures": 139,
+      "target_centered_pairs": 109,
+      "interior_pairs": 68,
+      "positive_box_frame_exposures": 30656,
+      "top1_available_background_pixel_exposures": 129044560,
+      "top1_selected_negative_pixel_exposures": 1290553,
+      "gaussian_valid_pixel_exposures": 131487383,
+      "gaussian_positive_pixel_exposures": 2222296,
+      "gaussian_binary_negative_pixel_exposures": 129265087,
+      "pure_negative_window": 44,
+      "window_exposures": 278,
+      "frame_exposures": 11120,
+      "boundary_pairs": 71,
+      "updates_containing_source": 139
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "pair_exposures": 128,
+      "target_centered_pairs": 90,
+      "boundary_pairs": 55,
+      "positive_box_frame_exposures": 61062,
+      "top1_available_background_pixel_exposures": 117925184,
+      "top1_selected_negative_pixel_exposures": 1179374,
+      "gaussian_valid_pixel_exposures": 120086674,
+      "gaussian_positive_pixel_exposures": 1957737,
+      "gaussian_binary_negative_pixel_exposures": 118128937,
+      "pure_negative_window": 9,
+      "window_exposures": 256,
+      "frame_exposures": 10240,
+      "interior_pairs": 73,
+      "updates_containing_source": 128
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "pair_exposures": 115,
+      "target_centered_pairs": 84,
+      "boundary_pairs": 60,
+      "positive_box_frame_exposures": 7134,
+      "top1_available_background_pixel_exposures": 110284458,
+      "top1_selected_negative_pixel_exposures": 1102940,
+      "gaussian_valid_pixel_exposures": 110729849,
+      "gaussian_positive_pixel_exposures": 410631,
+      "gaussian_binary_negative_pixel_exposures": 110319218,
+      "pure_negative_window": 47,
+      "window_exposures": 230,
+      "frame_exposures": 9200,
+      "interior_pairs": 55,
+      "updates_containing_source": 115
+    },
+    {
+      "sequence": "DJI_0113_3",
+      "pair_exposures": 126,
+      "target_centered_pairs": 94,
+      "interior_pairs": 62,
+      "positive_box_frame_exposures": 7601,
+      "top1_available_background_pixel_exposures": 120684109,
+      "top1_selected_negative_pixel_exposures": 1206936,
+      "gaussian_valid_pixel_exposures": 121296464,
+      "gaussian_positive_pixel_exposures": 548483,
+      "gaussian_binary_negative_pixel_exposures": 120747981,
+      "pure_negative_window": 61,
+      "window_exposures": 252,
+      "frame_exposures": 10080,
+      "boundary_pairs": 64,
+      "updates_containing_source": 126
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "pair_exposures": 124,
+      "target_centered_pairs": 91,
+      "boundary_pairs": 64,
+      "positive_box_frame_exposures": 10297,
+      "top1_available_background_pixel_exposures": 117497393,
+      "top1_selected_negative_pixel_exposures": 1175064,
+      "gaussian_valid_pixel_exposures": 118805350,
+      "gaussian_positive_pixel_exposures": 1173737,
+      "gaussian_binary_negative_pixel_exposures": 117631613,
+      "pure_negative_window": 64,
+      "window_exposures": 248,
+      "frame_exposures": 9920,
+      "interior_pairs": 60,
+      "updates_containing_source": 124
+    },
+    {
+      "sequence": "DJI_0217_2",
+      "pair_exposures": 135,
+      "target_centered_pairs": 98,
+      "boundary_pairs": 70,
+      "positive_box_frame_exposures": 7940,
+      "top1_available_background_pixel_exposures": 128151239,
+      "top1_selected_negative_pixel_exposures": 1281605,
+      "gaussian_valid_pixel_exposures": 129665239,
+      "gaussian_positive_pixel_exposures": 1348356,
+      "gaussian_binary_negative_pixel_exposures": 128316883,
+      "pure_negative_window": 65,
+      "window_exposures": 270,
+      "frame_exposures": 10800,
+      "interior_pairs": 65,
+      "updates_containing_source": 135
+    },
+    {
+      "sequence": "DJI_0309_1",
+      "pair_exposures": 138,
+      "target_centered_pairs": 104,
+      "interior_pairs": 72,
+      "positive_box_frame_exposures": 8262,
+      "top1_available_background_pixel_exposures": 132631161,
+      "top1_selected_negative_pixel_exposures": 1326400,
+      "gaussian_valid_pixel_exposures": 133003273,
+      "gaussian_positive_pixel_exposures": 339064,
+      "gaussian_binary_negative_pixel_exposures": 132664209,
+      "pure_negative_window": 63,
+      "window_exposures": 276,
+      "frame_exposures": 11040,
+      "boundary_pairs": 66,
+      "updates_containing_source": 138
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "pair_exposures": 119,
+      "target_centered_pairs": 98,
+      "boundary_pairs": 62,
+      "positive_box_frame_exposures": 15950,
+      "top1_available_background_pixel_exposures": 111975982,
+      "top1_selected_negative_pixel_exposures": 1119866,
+      "gaussian_valid_pixel_exposures": 113494660,
+      "gaussian_positive_pixel_exposures": 1360554,
+      "gaussian_binary_negative_pixel_exposures": 112134106,
+      "pure_negative_window": 32,
+      "window_exposures": 238,
+      "frame_exposures": 9520,
+      "interior_pairs": 57,
+      "updates_containing_source": 119
+    }
+  ],
+  "totals": {
+    "pair_exposures": 1024,
+    "target_centered_pairs": 768,
+    "interior_pairs": 512,
+    "positive_box_frame_exposures": 148902,
+    "top1_available_background_pixel_exposures": 968194086,
+    "top1_selected_negative_pixel_exposures": 9682738,
+    "gaussian_valid_pixel_exposures": 978568892,
+    "gaussian_positive_pixel_exposures": 9360858,
+    "gaussian_binary_negative_pixel_exposures": 969208034,
+    "pure_negative_window": 385,
+    "window_exposures": 2048,
+    "frame_exposures": 81920,
+    "boundary_pairs": 512,
+    "unique_updates": 512
+  },
+  "definitions": {
+    "update": "one optimizer.step; 512 unique updates, two different source-pairs per update",
+    "window": "one 40-frame crop exposure; the two windows per pair overlap",
+    "object_frame_exposure": "all valid non-ignore/non-crowd full-core positive box entries, repeated across overlapping windows and updates; not unique objects and not only strict small objects",
+    "pixel_exposure": "count summed across training uses, not unique spatial locations",
+    "negative_domain_note": "top1 counts its original outside-box background mask; gaussian counts binary zero targets inside valid domain, including zero support inside positive rectangles; equal inputs does not imply equal supervised domain",
+    "source_attribution": "Source name, crop, start, stratum and target-centered flag are joined from the frozen plan by update and window ordering, not independently recorded runtime source names. Positive and pixel counts come from actual per-step logs. Same plan/source hashes support this attribution; missing top1 input hashes prevent direct byte identity proof."
+  },
+  "crop_counts": {
+    "target_centered_pairs": 768,
+    "random_pairs": 256,
+    "target_centered_windows": 1536,
+    "random_windows": 512,
+    "empty_target_centered_windows": 0,
+    "empty_random_windows": 385,
+    "updates_with_some_but_not_all_empty_windows": 163,
+    "all_empty_updates": [
+      27,
+      29,
+      30,
+      36,
+      54,
+      72,
+      111,
+      114,
+      118,
+      128,
+      195,
+      285,
+      301,
+      443,
+      467,
+      469
+    ]
+  },
+  "empty_window_supervision": {
+    "empty_windows": 385,
+    "empty_window_fraction": 0.18798828125,
+    "all_empty_updates": 16,
+    "all_empty_update_fraction": 0.03125,
+    "top1_all_empty_gradient_norm_range": [
+      0.0004788463993463665,
+      52.07735824584961
+    ],
+    "top1_all_empty_negative_loss_range": [
+      4.726800398202613e-06,
+      1.6192235946655273
+    ],
+    "gaussian_all_empty_gradient_norm_set": [
+      0.0
+    ],
+    "interpretation": "Official smooth=0 Soft-IoU has loss 1 and zero prediction gradient on empty-target windows. This is a changed supervision behavior under the same exposure, not proof of the cause of development background expansion. Zero current gradient does not imply zero Adam update."
+  },
+  "input_identity_evidence": {
+    "top1_has_per_batch_input_hashes": false,
+    "direct_top1_gaussian_byte_hash_comparison": "unavailable: top1 did not log per-batch input hashes",
+    "available": "same plan, selection and reused deterministic batch helper source hashes; all 2048 logged positive counts identical; original top1 runner verifies frozen data fingerprints. Gaussian prior audit independently reconstructed all 512 inputs and labels and matched its hashes to both historical BC runs. This does not create absent top1 hashes.",
+    "gaussian_cumulative_input_sha256": "9522ab5edb31968d008ea822c9971d02c685f5a5d99437f528e98ccc4e93356b",
+    "gaussian_existing_audit_status": "PASS"
+  },
+  "source_split": {
+    "sequences": {
+      "train": [
+        "DJI_0030_9",
+        "DJI_0043_2",
+        "DJI_0057_1",
+        "DJI_0113_3",
+        "DJI_0115_2",
+        "DJI_0217_2",
+        "DJI_0309_1",
+        "DJI_0323_2"
+      ],
+      "calibration": [
+        "DJI_0026_2",
+        "DJI_0067_2"
+      ],
+      "confirmation": [
+        "DJI_0051_3",
+        "DJI_0075_3",
+        "DJI_0139_2",
+        "DJI_0343_3"
+      ]
+    },
+    "prefixes": {
+      "train": [
+        "DJI_0030",
+        "DJI_0043",
+        "DJI_0057",
+        "DJI_0113",
+        "DJI_0115",
+        "DJI_0217",
+        "DJI_0309",
+        "DJI_0323"
+      ],
+      "calibration": [
+        "DJI_0026",
+        "DJI_0067"
+      ],
+      "confirmation": [
+        "DJI_0051",
+        "DJI_0075",
+        "DJI_0139",
+        "DJI_0343"
+      ]
+    },
+    "training_official_train_overlap_sequences": [
+      "DJI_0030_9",
+      "DJI_0043_2",
+      "DJI_0057_1",
+      "DJI_0113_3",
+      "DJI_0115_2",
+      "DJI_0217_2",
+      "DJI_0309_1",
+      "DJI_0323_2"
+    ],
+    "development_official_train_prefix_overlap_sequences": [],
+    "limit": "source prefix disjointness, not proof of physical scene independence; calibration clips have already informed design and are not unseen confirmation"
+  },
+  "trajectory_evidence": {
+    "saved_checkpoint_files": {
+      "top1": [
+        "top1_background_control_20261011/training/run/final_model.pth"
+      ],
+      "gaussian": [
+        "supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/final_model.pth"
+      ]
+    },
+    "intermediate_checkpoint_available": false,
+    "training_source_detection_performance_trajectory_available": false,
+    "development_detection_performance_trajectory_available": false,
+    "available": "512 per-update training losses, gradient norms and counts; release and fixed-final development inference results. No train-source M/U/A trajectory or paired training/development performance path is saved in these two experiment directories. Losses are evaluated on changing crops before optimizer.step and cannot substitute for fixed-source detection metrics."
+  },
+  "source_manifest": {
+    "plan": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/pilot/TRAIN_PLAN.json",
+      "sha256": "6f86d929ad1275bbb120456dd23a25c7ea9571517f60b4c64a9d5ce6413c975c"
+    },
+    "selection": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/stage1_goal/DATA_SELECTION.json",
+      "sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92"
+    },
+    "top1_log": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/training/run/TRAIN.jsonl",
+      "sha256": "326713208e0672f4c40657bb930a2bed2165ed351a9222ae33cdf080461fa899"
+    },
+    "gaussian_log": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/TRAIN.jsonl",
+      "sha256": "4c974ddc52942ceb2c268bbdbbdc5bd74f4149fe1798a8621bddb015b8dbc728"
+    },
+    "top1_run": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/training/run/RUN.json",
+      "sha256": "833dc1e10bbf8642f92e6f6c57dadc3ff819bd71a6b85a128d4a8dce479a3f2e"
+    },
+    "gaussian_run": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/training/gaussian_softiou_approx/run/RUN.json",
+      "sha256": "f0308eb3dd918e80445fbfbb7b2c406cebab4f7d5bfb8dc19a3d348e1e261625"
+    },
+    "top1_receipt": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/training/COMPLETION_CHECK.json",
+      "sha256": "4dbe6b531d31d1ac75708ed8cc5150e22a600ef6ea0d5bb19443ae62b7b45a51"
+    },
+    "gaussian_training_audit": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/TRAINING_AUDIT.json",
+      "sha256": "7a2a1eba8767dcc369656d7fa5c2b0a8d423675be67c054c67402e21a8a47c37"
+    },
+    "label_preflight": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/LABEL_PREFLIGHT.json",
+      "sha256": "36ae5182e4192c68a95d4c44e75986809cb533d8c598f3ca8de4de2b2e88bcbd"
+    },
+    "base_batch_code": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py",
+      "sha256": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+    },
+    "gaussian_train_code": {
+      "path": "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/train_supervision.py",
+      "sha256": "451c6df723e7678014250752cbd890c78ee7ca44cc2277418857b4b3145ffe11"
+    }
+  },
+  "interpretation_limits": [
+    "Source draw counts are roughly balanced (115 to 139 pair uses); positive box-frame counts vary greatly with scene density and crop content. This alone is not a sampling-bias causal diagnosis.",
+    "Training source identity agrees between the two controls, so different exposure ordering is not supported as the explanation for their difference.",
+    "No exact top1 per-input byte hash existed; no reconstruction/replay was performed this round to fill that absence.",
+    "There is no saved intermediate train/dev M/U/A evidence to establish whether recovery preceded background expansion."
+  ]
+}

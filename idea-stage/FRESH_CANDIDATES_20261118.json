@@ -1,0 +1,170 @@
+{
+  "generated_date": "2026-11-18",
+  "user_constraint": "旧动静转换、停走偏差、缺测证据积累方向撤下；不通过收窄场景或评测切片挽救，要求实质方法创新。",
+  "generated": 8,
+  "deduped": 8,
+  "quality_prefilter": false,
+  "objective_budget_eliminations": 0,
+  "jury_input_ids": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+  ],
+  "pilot_status": "not_run; no candidate selected for pilot",
+  "compute_estimates": "agent design estimates only, not measurements",
+  "candidates": [
+    {
+      "id": "I1",
+      "generator": "gpt-6-astra",
+      "shard_id": "inverse_imaging_task",
+      "title": "把目标建模为替换背景辐射的物体，而非叠加亮点",
+      "dedup_key": "signed_occluding_radiance_layer_transport",
+      "build_3_steps": [
+        "建立观测模型 I_t=g_t{h_t*[(1−α_t)B_t+α_tR_t]}：α为目标覆盖率，R为物体有效辐射，B为其后背景；目标可以比背景亮，也可以暗。",
+        "用短视频联合拟合可移动α层与缓变R；让目标经过不同背景时的对比变化满足 α(R−B)，以这条背景替换规律约束目标身份。",
+        "从α层直接输出目标位置；训练同时使用真实序列和在真实背景上按该方程生成的目标，不再监督网络把所有目标解释成正向加性斑点。"
+      ],
+      "core_hypothesis": "同一物体跨背景时，对比度随背景辐射的变化具有可检验的负斜率结构；这一物理响应能提供外观与运动之外的身份线索。",
+      "importance": "改变整套目标生成与推断假设，潜在收益覆盖训练合成、真实泛化和冷热目标，而非仅增加某个评测切片。",
+      "prior_art": [
+        {
+          "source": "[Dual Band Thermal Videography，CVPR 2026](https://arxiv.org/abs/2509.11334)",
+          "overlap": "已联合利用物体缓变辐射和背景快变辐射；不能声称首次热成像层分解。",
+          "difference": "该工作用双热波段分离反射/发射、估计温度；这里仅以单波段、背景遮挡替换约束识别未分辨目标，不估计温度。"
+        },
+        {
+          "source": "[Thermal-physics-informed 3D Gaussian Splatting，2026](https://doi.org/10.1016/j.infrared.2026.106593)",
+          "overlap": "已有含发射率、温度的热辐射可微渲染；物理渲染本身不是创新。",
+          "difference": "候选的核心是背景变化给目标身份提供识别约束，而非提升热图重建。"
+        }
+      ],
+      "minimum_experiment": "先在约30条真实完整轨迹上比较加性恒幅模型与背景替换模型的留帧预测误差；随后同一小网络分别使用两种生成规律训练，在完整真实验证集比较Pd/Fa。合成验证需同时覆盖正对比、负对比和背景梯度。",
+      "compute_estimate": "识别性验证1–3 GPU小时；小网络对照12–24 GPU小时。",
+      "risk": "高。灰度AGC可能破坏辐射关系；有效α、R与遮挡后的B可能不可辨识；若真实轨迹背景变化不足，现有数据不能支撑机制。这里不能把α解释成经物理标定的真实面积。"
+    },
+    {
+      "id": "I2",
+      "generator": "gpt-6-astra",
+      "shard_id": "inverse_imaging_task",
+      "title": "直接学习对目标敏感、对成像扰动正交的统计量",
+      "dedup_key": "nuisance_orthogonal_target_score",
+      "build_3_steps": [
+        "在真实背景小块中分别施加极弱目标扰动和成像扰动：目标位置固定，目标幅度变化；另改变增益、轻微配准误差和模糊。",
+        "学习观测对目标幅度与各扰动的对数似然导数，将目标导数投影到成像扰动导数的正交补，直接形成检测分数。",
+        "对每个候选位置重复这一检验，输出目标集合；训练目标是保留目标可辨识信息，不需要重建清晰图像或新增语义骨干。"
+      ],
+      "core_hypothesis": "小目标错误主要发生在目标响应与背景/成像扰动响应混淆处；显式消去这部分混淆比一般数据增强更有效，而且能定位不可检测的条件。",
+      "importance": "把网络目标从像素分割误差转成目标可辨识性；可得到一个可解释、轻量的新检测器。",
+      "prior_art": [
+        {
+          "source": "[Nuisance hardened data compression，2019](https://arxiv.org/abs/1903.01473)",
+          "overlap": "非常强的机制先例：已推导保留Fisher信息、对干扰不敏感的score压缩。因此不能把正交投影本身当创新。",
+          "difference": "潜在研究量在未知位置的弱目标检验、现实成像扰动与空间变化背景下，如何估计有效score及证明/验证其检测边界。"
+        },
+        {
+          "source": "[Maximum a posteriori testing in statistical inverse problems，2025](https://doi.org/10.3934/ipi.2025015)",
+          "overlap": "已有逆问题中针对特征存在性的正则化检验及功效分析。",
+          "difference": "候选直接学习复合背景干扰下的目标统计量；不能宣称首次将检测写成假设检验。"
+        }
+      ],
+      "minimum_experiment": "同一小模型比较普通分割、增强训练、广义匹配滤波、score正交化；在保留真实背景的可控扰动中检验目标敏感度与扰动敏感度是否真正分离，并在完整真实集验证。",
+      "compute_estimate": "先验核验2–4 GPU小时；四组小网络16–32 GPU小时。",
+      "risk": "高先例重合。若最终只是learned matched filter或已知score hardening的直接应用，机制创新不足；扰动方向也可能与目标完全共线，投影会把目标一起删除。"
+    },
+    {
+      "id": "I3",
+      "generator": "gpt-6-astra",
+      "shard_id": "inverse_imaging_task",
+      "title": "从单一最佳分割改为求所有合理成像解释共同支持的目标",
+      "dedup_key": "set_identified_target_presence_under_operator_uncertainty",
+      "build_3_steps": [
+        "为一段视频构造受约束的解释集合：允许一组背景变化、PSF与灰度响应，要求每种解释都能在误差界内生成观测。",
+        "分别求某区域目标强度的最小值和最大值：最小值仍大于零表示每种解释都需要目标；最大值接近零表示目标不可能；其余保留为不可辨识。",
+        "将这两个优化问题直接做成检测器，并训练小网络预测可行初值；学习的任务是缩紧有依据的解释集合，而不是给普通检测器追加置信度头。"
+      ],
+      "core_hypothesis": "弱目标漏检与虚警中有一部分来自模型选中了错误的单一解释；显式区分证据不足与确定无目标，可以获得更可靠的检测边界。",
+      "importance": "输出“由观测支持到什么程度”，使物理不可辨识性成为模型的一部分；正负结果都能回答现有灰度视频到底包含多少可用证据。",
+      "prior_art": [
+        {
+          "source": "[Hypothesis Testing in Imaging Inverse Problems，2025](https://arxiv.org/abs/2505.22481)",
+          "overlap": "已把成像解释与语义假设检验连接，并通过e-values控制Ⅰ类错误。",
+          "difference": "候选处理目标位置/存在性的集合识别与未知成像算子；不依赖VLM语义测试。不能声称首次为逆问题检测提供统计可靠性。"
+        },
+        {
+          "source": "[Distribution-free uncertainty quantification for inverse problems，2025](https://doi.org/10.1051/0004-6361/202451756)",
+          "overlap": "已有逆问题预测集合与校准。",
+          "difference": "这里的集合来自前向模型可行性，并直接定义检测结果，而非给重建像素附加区间。"
+        }
+      ],
+      "minimum_experiment": "先在已知生成机制的64×64短序列上建立可求界的简化模型，验证存在性上下界；再测真实序列中“不可辨识”是否集中于跨方法分歧而非任意低置信度。必须同时报告覆盖率、确定检测的Pd/Fa与不可判定比例。",
+      "compute_estimate": "小块优化2–6 GPU小时；摊销模型12–24 GPU小时。",
+      "risk": "高。任意复杂背景会让所有目标都不必要，过紧背景先验又会制造伪证据；只能声称给定模型集合内的界。与背景重建、CHAL、CodeMamba的实质差别必须落在集合决策和可验证界上。"
+    },
+    {
+      "id": "I4",
+      "generator": "gpt-6-astra",
+      "shard_id": "inverse_imaging_task",
+      "title": "把每帧目标视为曝光时间内的一段辐射轨迹",
+      "dedup_key": "exposure_integrated_source_trajectory_detection",
+      "build_3_steps": [
+        "把单帧目标写成PSF沿曝光内轨迹的积分，背景共享相机运动，而每个目标有独立运动。",
+        "从短序列联合估计公共模糊和稀疏目标轨迹，用同一轨迹重新积分解释观测；直接输出目标存在性和帧时刻位置。",
+        "训练时让同一潜在轨迹对应不同曝光积分，要求输出物体身份/位置一致；不以生成锐利图像为中间目标。"
+      ],
+      "core_hypothesis": "未分辨目标的细长斑块包含被普通分割丢掉的运动证据；直接解释成像积分能把目标拖影与背景边缘分开。",
+      "importance": "改变“视频是瞬时图像序列”的假设；潜在价值是把模糊从干扰变成可用观测。",
+      "prior_art": [
+        {
+          "source": "[DeFMO，CVPR 2021](https://openaccess.thecvf.com/content/CVPR2021/papers/Rozumnyi_DeFMO_Deblurring_and_Shape_Recovery_of_Fast_Moving_Objects_CVPR_2021_paper.pdf)",
+          "overlap": "非常强的先例：已根据成像模型从模糊对象恢复曝光内子帧和运动。",
+          "difference": "候选针对不可恢复形状的点状辐射源，直接进行有/无源检验，并与公共相机模糊共同识别；仅把DeFMO换成红外网络不够。"
+        },
+        {
+          "source": "[Pseudo-Sample Generation and Self-Supervised Framework for Infrared Dim and Small Target Detection，2025](https://www.mdpi.com/1099-4300/27/12/1212)",
+          "overlap": "红外小目标已有运动模糊合成与自监督检测。",
+          "difference": "必须实现曝光积分内轨迹的联合反演，普通模糊增强或去模糊前处理已不足以区分。"
+        }
+      ],
+      "minimum_experiment": "先仅检查真实目标是否存在超过PSF宽度的方向拖影；再用真实背景和解析轨迹生成积分观测，对比直接分割、去模糊后检测与源轨迹反演。最终仍在完整原始视频集报告，不能只挑拖影片段支撑主贡献。",
+      "compute_estimate": "识别性试验1–3 GPU小时；小模型12–24 GPU小时。",
+      "risk": "高。现有视频曝光未知，可能几乎不存在有用拖影；单帧积分还丢失时间顺序。此候选有明显跨领域先例，不属于查无近邻的空白。"
+    },
+    {
+      "id": "L1",
+      "generator": "gpt-6-astra",
+      "shard_id": "fresh_learning_ideas",
+      "dedup_key": "privileged_rgb_unbiased_gradient_control_variates",
+      "payload_format": "markdown",
+      "payload": "**候选 A：把 RGB 当作训练优化器的辅助测量**\n\n- **方法，3 步**\n  1. 固定红外检测器及其原始监督目标；用训练集 RGB 提取小维度、任务相关描述量，例如目标数量、局部边缘及前景可分性，计算其训练集精确均值。\n  2. 用上一阶段样本拟合这些描述量与红外梯度低维投影的相关性；训练时采用控制变量梯度  \n     \\(\\tilde g_i=g_i-A(h_i-\\bar h)\\)。每个阶段固定 \\(A,h,\\bar h\\)，均匀采样，保留有限训练集意义下的梯度无偏性。\n  3. 推理只运行红外检测器；检查更少训练计算能否达到同等检测率与虚警率。\n- **核心洞见／假设**：另一模态的价值可以是减少稀有目标梯度的采样噪声。即使 RGB 信息无法在红外推理时恢复，仍可能提高红外监督学习的优化效率。\n- **重要性**：为“训练时有额外模态、部署时只有红外”提供一种不要求模仿 RGB 表征的学习原则；结果成立可推广到其他传感器组合。\n- **近邻与本质差别**：[Contrast-Guided Cross-Modal Distillation，2025](https://arxiv.org/abs/2511.01435)改变训练目标，通过 RGB 教师对齐热图像特征；这里保留原目标，RGB 只改变随机梯度估计器。[Uncertainty-Aware Gradient Stabilization，ICCV 2025](https://openaccess.thecvf.com/content/ICCV2025/papers/Sun_Uncertainty-Aware_Gradient_Stabilization_for_Small_Object_Detection_ICCV_2025_paper.pdf)是需进一步读全文核对的直接优化近邻，本轮 PDF 抓取失败，不能宣称已排除重叠。\n- **撞车／失败风险**：控制变量本身是经典技术；必须证明 RGB 提供了超过标签计数、红外特征和常规方差缩减的收益，否则只是优化器小改。RGB 特征成本也可能超过节省的训练时间。\n- **最小实验**：VT 按原视频分组的训练／开发集，固定小型单帧网络，比较 SGD、标签计数控制、红外特征控制、RGB 控制，统一总 FLOPs 与墙钟时间；先测梯度方差，再测达到同等性能所需时间。先导约 1×5090、1–2 小时；完整 3 种子约 24–48 GPU 小时。若 RGB 控制不优于标签／红外控制，核心假设被否定。\n- **dedup_key**：`privileged_rgb_unbiased_gradient_control_variates`"
+    },
+    {
+      "id": "L2",
+      "generator": "gpt-6-astra",
+      "shard_id": "fresh_learning_ideas",
+      "dedup_key": "observation_equivalence_class_supervision_tiny_targets",
+      "payload_format": "markdown",
+      "payload": "**候选 B：用“同一观测对应的多个世界”监督微小目标检测**\n\n- **方法，3 步**\n  1. 用 NUDT 输入及目标信息构造多个潜在场景，经可控模糊、像素积分、噪声和 8-bit 量化后，寻找观测相同或统计上难以区分、但目标存在性／位置不同的样本组。\n  2. 对这些组监督“与当前观测相容的目标状态分布”，可分辨样本仍用原标签；训练单帧检测器输出存在概率和位置分布。\n  3. 在真实 VT 全部预定测试场景比较同虚警预算下检测率、概率校准和定位；检验收益能否跨观测算子成立。\n- **核心洞见／假设**：点状目标的监督冲突可能来自观测不可辨识，而非标注错误。强迫网络把不可区分的输入拟合成相反硬标签，会把背景偶然纹理学成决策依据。\n- **重要性**：改变训练中“每张图必有一个精确正确答案”的默认假设；方法的价值是让有限信息下的检测分布符合可观察内容。\n- **近邻与差别**：[Observation-Aligned Supervision，2026](https://arxiv.org/abs/2607.04726)在图表生成中指出渲染的多对一映射造成不可辨识监督，但没有研究微弱目标的存在概率；[Measure-Based Supervision，2026](https://www.mdpi.com/2073-431x/15/11/744)用测度运输和前向成像约束实例预测，仍以给定目标集合为监督。本候选研究**不同目标集合产生近乎相同观测时，监督应是什么**。\n- **撞车／失败风险**：极易退化成软标签、label smoothing 或噪声增强。必须显示样本相关的观测等价分布优于这些对照。真实数据是处理后的 JPG，缺少原始传感器参数，不能声称恢复真实物理可辨识边界。\n- **最小实验**：先用 10–20 个 NUDT 训练序列制作约 1–2 万小块；比较硬标签、均匀平滑、噪声增强和观测等价监督，随后迁移到原始 VT 视频划分。先导 1×5090、1–2 小时；完整约 32–64 GPU 小时。若只改善模拟器内校准、真实同虚警检测无收益，应记录为核心迁移假设失败。\n- **dedup_key**：`observation_equivalence_class_supervision_tiny_targets`"
+    },
+    {
+      "id": "L3",
+      "generator": "gpt-6-astra",
+      "shard_id": "fresh_learning_ideas",
+      "dedup_key": "coarsened_annotation_event_likelihood_detection",
+      "payload_format": "markdown",
+      "payload": "**候选 C：直接学习标注所表达的事件，绕开人为热图形状**\n\n- **方法，3 步**\n  1. 网络预测目标集合的概率分布。把框标注解释为“这个区域内有一个目标”，把质心解释为位置测量，把 mask 解释为另一种观测形式。\n  2. 对与标注相容的潜在位置和匹配关系求和，最大化标注事件概率；不先把框或点生成一个固定 Gaussian mask。\n  3. 同一个预测头联合利用 NUDT 的像素／质心信息和 VT 的框信息，输出目标位置与存在概率。\n- **核心洞见／假设**：跨数据集的监督冲突有一部分来自人为栅格化规则；学习标注事件的边际似然，可以在保留监督信息的同时去掉无根据的边界承诺。\n- **重要性**：把已有异质标注直接用于同一任务，尤其契合当前真实数据有框、原作者 Gaussian mask 缺失的条件。\n- **近邻与差别**：[SPIRE，2026](https://github.com/NIRIXIANG/SPIRE-IRSTD)将点转为点响应先验热图；[Conditional Marked Point Processes，2025](https://arxiv.org/abs/2506.21486)提供检测的点过程似然与空区域概率。这里可能成立的独立贡献只能是**对不同标注过程进行边际化，并研究监督粗化时的一致性**，不能把点过程检测或去 decoder 当创新。另须对照上述 Measure-Based Supervision。\n- **撞车／失败风险**：高。弱监督、噪声标签似然和集合预测已有大量工作；若最终只是框内积分损失，创新不足。只有单次标注时，真实位置分布与标注误差分布也可能不可辨识，需要明确哪些量固定、哪些量可估。\n- **最小实验**：在 NUDT 同一批图像上确定性生成 mask／point／box 三种监督，比较固定 Gaussian、框 MIL、SPIRE式响应与事件似然；检验监督表示变化时预测是否稳定，然后用 VT 原框验证。先导约 1×5090、2 小时；完整约 24–48 GPU 小时。若收益只来自弱化定位惩罚、严格定位变差，核心假设不成立。\n- **dedup_key**：`coarsened_annotation_event_likelihood_detection`"
+    },
+    {
+      "id": "L4",
+      "generator": "gpt-6-astra",
+      "shard_id": "fresh_learning_ideas",
+      "dedup_key": "spatial_value_of_information_rgb_query_detection",
+      "payload_format": "markdown",
+      "payload": "**候选 D：让检测器学习向第二传感器问哪个问题**\n\n- **方法，3 步**\n  1. 红外网络先给出候选和未决区域；RGB 图像在软件中保持未读取，预算按实际 RGB 编码面积／计算量计。\n  2. 训练查询策略，选择“读取哪个 RGB 区域、多大范围、是否停止”。奖励使用读取后真实检测损失的下降量减去读取成本；完整成对数据可离线计算查询收益，不需要教师伪标签。\n  3. 部署时逐次获取少量 RGB 区域，更新检测结果；同时允许查询初始没有红外候选的区域，避免召回上限完全锁死。\n- **核心洞见／假设**：最值得读取的另一模态区域，是最可能改变检测决定的区域；它未必具有最高红外不确定度或最高 RGB 质量。\n- **重要性**：将跨模态系统的主要能力从特征融合，转为有限计算预算下主动获取有用信息。这里讨论的是编码和传输预算，现有数据不能证明物理传感器节能。\n- **近邻与差别**：[Cohort-Based Active Modality Acquisition，2025](https://arxiv.org/abs/2505.16791)按样本分配额外模态；[Modality-Decoupled RGB–Thermal Detector via Query Fusion，2026](https://arxiv.org/abs/2601.08458)在已经计算的两路特征中选择高质量查询。本候选在读取 RGB 前选择空间测量，直接优化检测决定的变化与读取成本。\n- **撞车／失败风险**：主动特征获取和级联检测是强近邻；简单“低置信度才跑 RGB”没有足够差异。必须胜过等预算随机、熵排序、候选裁剪和固定网格策略；离线策略可能依赖训练场景，夜间 RGB 也可能没有信息增益。\n- **最小实验**：VT 原视频划分，冻结两个小型编码器，只训练查询策略；RGB 预算设为全图面积的 5%、10%、20%，比较 Pd–Fa–实际延迟曲线。先导约 1×5090、2 小时；完整约 32–72 GPU 小时。若最优离线查询也几乎无收益，则数据不支持该主张；若 oracle 有收益而策略没有，算法假设失败。\n- **dedup_key**：`spatial_value_of_information_rgb_query_detection`\n\n以上均为待证伪的方法候选。当前检索对 A 的“额外模态作为无偏优化辅助测量”、B 的“观测等价类监督”发现的是相关原理近邻，尚不足以宣布首次提出；C、D 的直接方法近邻更密，需要后续全文级查新。"
+    }
+  ]
+}

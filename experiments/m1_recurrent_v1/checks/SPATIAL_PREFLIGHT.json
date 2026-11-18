@@ -1,0 +1,1405 @@
+{
+  "status": "PASS",
+  "small_grid": {
+    "Current": {
+      "status": "PASS",
+      "input_shape": [
+        1,
+        1,
+        40,
+        160,
+        192
+      ],
+      "active_Wout": true,
+      "maximum_absolute_errors": {
+        "F": 0.0,
+        "H": 0.0,
+        "features": 0.0,
+        "logits": 0.0
+      },
+      "logit_change_from_zero_Wout": 8.248233795166016,
+      "comparison": "Original full frontend/global M1/full head vs tiled frozen frontend/global M1/time-chunked pointwise head",
+      "assert_close_atol": 0.0001,
+      "assert_close_rtol": 1e-05,
+      "original_parameters_and_bn_unchanged": true
+    },
+    "History": {
+      "status": "PASS",
+      "input_shape": [
+        1,
+        1,
+        40,
+        160,
+        192
+      ],
+      "active_Wout": true,
+      "maximum_absolute_errors": {
+        "F": 0.0,
+        "H": 0.0,
+        "features": 0.0,
+        "logits": 0.0
+      },
+      "logit_change_from_zero_Wout": 8.248233795166016,
+      "comparison": "Original full frontend/global M1/full head vs tiled frozen frontend/global M1/time-chunked pointwise head",
+      "assert_close_atol": 0.0001,
+      "assert_close_rtol": 1e-05,
+      "original_parameters_and_bn_unchanged": true
+    }
+  },
+  "fullframe": {
+    "Current": {
+      "status": "PASS",
+      "condition": "Current",
+      "input_shape": [
+        1,
+        1,
+        40,
+        512,
+        640
+      ],
+      "baseline": {
+        "seconds": 1.8380620129755698,
+        "peak_cuda_allocated_bytes": 4126772224,
+        "peak_cuda_reserved_bytes": 12002000896
+      },
+      "initialized_wrapper": {
+        "seconds": 2.18728374800412,
+        "peak_cuda_allocated_bytes": 7740263424,
+        "peak_cuda_reserved_bytes": 15359541248
+      },
+      "baseline_reference": "Unmodified historical tiled_logits(core128,halo16)",
+      "maximum_absolute_logit_error": 0.0,
+      "threshold05_disagreements": 0,
+      "global_m1_single_call": true,
+      "adapter_call_shapes": [
+        [
+          [
+            1,
+            32,
+            40,
+            512,
+            640
+          ],
+          [
+            1,
+            32,
+            40,
+            512,
+            640
+          ]
+        ]
+      ],
+      "recurrent_call_count": 39,
+      "recurrent_call_shapes": [
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ]
+      ],
+      "output_shapes": [
+        [
+          1,
+          8,
+          40,
+          512,
+          640
+        ],
+        [
+          1,
+          40,
+          512,
+          640
+        ]
+      ],
+      "outputs_finite": true,
+      "all_model_state_unchanged": true,
+      "spatial_execution": "Only original frozen frontend tiled128/halo16; M1 full512x640; pointwise original head temporalchunk1"
+    },
+    "History": {
+      "status": "PASS",
+      "condition": "History",
+      "input_shape": [
+        1,
+        1,
+        40,
+        512,
+        640
+      ],
+      "baseline": {
+        "seconds": 1.798206003033556,
+        "peak_cuda_allocated_bytes": 4126772224,
+        "peak_cuda_reserved_bytes": 12002000896
+      },
+      "initialized_wrapper": {
+        "seconds": 2.1451836489723064,
+        "peak_cuda_allocated_bytes": 7740263424,
+        "peak_cuda_reserved_bytes": 15359541248
+      },
+      "baseline_reference": "Unmodified historical tiled_logits(core128,halo16)",
+      "maximum_absolute_logit_error": 0.0,
+      "threshold05_disagreements": 0,
+      "global_m1_single_call": true,
+      "adapter_call_shapes": [
+        [
+          [
+            1,
+            32,
+            40,
+            512,
+            640
+          ],
+          [
+            1,
+            32,
+            40,
+            512,
+            640
+          ]
+        ]
+      ],
+      "recurrent_call_count": 39,
+      "recurrent_call_shapes": [
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ],
+        [
+          [
+            1,
+            16,
+            512,
+            640
+          ],
+          [
+            1,
+            16,
+            512,
+            640
+          ]
+        ]
+      ],
+      "output_shapes": [
+        [
+          1,
+          8,
+          40,
+          512,
+          640
+        ],
+        [
+          1,
+          40,
+          512,
+          640
+        ]
+      ],
+      "outputs_finite": true,
+      "all_model_state_unchanged": true,
+      "spatial_execution": "Only original frozen frontend tiled128/halo16; M1 full512x640; pointwise original head temporalchunk1"
+    }
+  },
+  "source_sha256": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/deeppro_c_v2_reference/temporal_risk.py": "6e8343c7d61e5a7d18358369bf546ef6cab0079a917019a653f8636c091dc187",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/evaluate.py": "8bc75424db80e077897384543ace13e665e4bac9ca2be82949d085f310c06381",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/freeze.py": "7c98c24586c74af4bd2618539996c308c02051ab385f212955a84849357de6d2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/infer.py": "b9bab33dad64c159026fe736b5077ea2ed94ece1fc0972ab00e100676237ee76",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/preflight.py": "394afeabbda9055f41f5eed1780ba9cb3e2e162f1613023184a029eed3334bc2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/spatial_preflight.py": "e0065378102caf9e371fd84311eb37c1993ccb6e9a3ef50cbe91c903e3d5a207",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/train.py": "c9ce7425ede1e4160e12494b15f476c7f9b7268f5f804971c5ce197d7dc81810",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/COMPATIBILITY.patch": "4313358e0c9df8705ed194a917883fe077a44bedbca02d1ca5f2e54fc080fe61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/PROVENANCE.json": "29c1af8054c5129b75912fd05b29dc6c9ee038ad6da9a08fe0acd72cbf53fb73",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/RFR_framework.py": "60de85347a49c80202f68e1f5eb8f48624feb5dd1f13fed79653bbc053a888a8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/__init__.py": "5e21022a298927b8bca3e667f366653fb742b7b5eb3a469b451429fa72368684",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/DCN2.cpython-310-x86_64-linux-gnu.so": "93aba2d218912d868c9e9073ec73fff1b4088a845cdd99109aead3f554ecc7ca",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/demo_test.py": "e7d4b037438a576fae21966b3a7139bd018654280d8666a04a2407a8bded4892",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/__init__.py": "0887595259879953855020ece5fb72281eeb5059848664d31e5bf608951d139b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_conv_func.py": "8ca9de19888b2a6ea128f5df67c583c815d700c229b38b979e5b95dbf5112232",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_psroi_pooling_func.py": "525e0b338eb7da4e850073426f43efb5434b89fb3f080598cc5fe32ea316617c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/ewrfdwe.py": "6bc053d035dc4bdf46900845f8c8d5132e3ec2da8b0d3b85030ceb8dc70950e4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/modulated_deform_conv_func.py": "65822c7460288caee1ce7ac889466c31563c1fae534b0f1f4b1f9b9685fad360",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/__init__.py": "c09d9f941c0c08cf5e0b9731c02b3c6f300d7062cfa5345a48d16d2c367c3ed2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_conv.py": "71a8f12c07008356e3c54ac7f1122242fa5ecad5d5214250b587bc0ceff6ff88",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_psroi_pooling.py": "8d8c07fc12b828493475785189897a7ba86d99670b1ee0c351ddeeee6c8b3a72",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/modulated_deform_conv.py": "57b931f2df45c68df3c516f60abbad532d27e959ebbbedb6b52a4df29bd985b9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/setup.py": "eeacd9f5c86d4b950f08e2096c6a5a8afed346207fa0f9a9158b0244c15301d4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_conv_cpu.h": "18a346cb8f7f485efbe527c4ac5d87409e80818720e4fe27956135f310756e9b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_cpu.cpp": "a398e4e4be3150109eafbd52e82893ce1a37fcc404054c1943b4aaf21c3e82f0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.cpp": "88e1b3b000fc26c42773154e6f6dc03ee2c47eff31cc4e409a3eddf574c7481d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.h": "07373eb682e0d9b64faec164f8f79243e4094e77db1e14301dedadc53e7c9616",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_conv_cpu.h": "f52f5cd028581ef734edef2c254c5fde2c21474eb64cb082e3150464564a5bbe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_cpu.cpp": "6e89c316b105a63328fbf703272b04f8911011a0d4ef0f977c5ab9e4cf8a2565",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.cu": "0927a61530a6d0eea6aa8bbb66b9bb96f193a4328fcf05b915f6a667cc2be0c3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.h": "f69d7d5ba3ac48c31ee03e0cd8d9abdb8e45b66af6af059f99f18cda9487bb05",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_im2col_cuda.cuh": "74eb890d36b01740fd04890e5c91960bca8ee99d5059f24e44d383002f91e81f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.cu": "f5316fa8abd4b7e9bd1a0dafd45d5a5d1d1ba1b3470a2dae8cf7b520867a5b3f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.h": "1f9a470d3a73c374d2533b55b35f59573be65ea53d4dcc21e9ca28970d70df0b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.cu": "f796390de3d1d574d2da90cb439d26e5a2c3d2a41f2b39c4424a97e9ae515a97",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.h": "c08a0bbf426e393a9f7a38b037edf354975bfcc988c2c31af0a6a5d55601a42c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_im2col_cuda.cuh": "f5f892cb4abfc43eec960d6d1cf134a5bd2e5d1d14d273bee6bab2a37cec8f06",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_conv.h": "b8e0ee8596f50a3f7ad2e4b73f48709763e3e40f2efbbe4c4badfa7d1f701622",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_psroi_pooling.h": "951384e5ecc6d7f00ca59f8205da3db46ed1e630a12b3e40629836e47ecb2774",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/modulated_deform_conv.h": "9cf510f1e5c0b71da1660bdaedbe7e5c81fd3ab707bc23bf56bddb65aa454ebe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/vision.cpp": "e78cf167a244886b4f41b693b12f9e2dbca4e66ff2dc5bdb3689c429574a4173",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/test.py": "f82e40efffe67e5b4afa1c28fc12ba1d4eab9e93203f6e178659e1e8a4268d91",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/utils.py": "540a4b05409d8fad9221b581fcc5ec67fc7a4aa89baedb5df522e5f176a671a9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/rfr_cell.py": "12bcca91ccca9c252993a68fc60561148bcc6502f0e853a483f0ec4b5053a52d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/smoke_dcn.py": "9cb6da18de331d373368f382ec2738cff559701d0c65b36fcb000235b5cd42b0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/common.py": "85a2fc37be9b63cc08a0f50fb4a1688a83a5743d7a57a384f8175224cb4dd7ec",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/data.py": "f0cd35b67e8b77de104b7a3cf9700bf76e4611b97c2084e87748b7702bcac26d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/runtime.py": "a23ac23fb704010482089f9c092ea41493c47a41d132e8956edd2fbc42f747ce",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/train_modules/temporal_risk.py": "b3e7f813b60ea24873ff77b03d7a2573acbb4ec7a009900048823c4613735a01",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/models/adapters/window_recurrent_adapter.py": "e20f90267e1b7037fd2506f2f8425941f3c9ad7978e2aca828e15d4fd43c5087"
+  },
+  "preflight_only": true,
+  "source_split": "training",
+  "global_m1_spatial_tiling": false,
+  "frontend_core": 128,
+  "frontend_halo": 16,
+  "head_temporal_chunk": 1,
+  "start_unix": 1791917005.019867,
+  "torch_version": "2.2.0a0+81ea7a4",
+  "cuda_version": "12.3",
+  "sequence": "DJI_0030_9",
+  "frame_range": [
+    0,
+    40
+  ],
+  "raw_file_sha256": "a8131324096d27c02ad88c65bfe818424a83d41024eded702865cbe142dabe1c",
+  "source_sha256_final": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/official_deeppro/log/sem_seg/RGB-T__2025-01-14_15-27__SoftLoUloss_DeepPro-Plus_DataL40/DeepPro-Plus.py": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/deeppro_c_v2_reference/temporal_risk.py": "6e8343c7d61e5a7d18358369bf546ef6cab0079a917019a653f8636c091dc187",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/evaluate.py": "8bc75424db80e077897384543ace13e665e4bac9ca2be82949d085f310c06381",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/freeze.py": "7c98c24586c74af4bd2618539996c308c02051ab385f212955a84849357de6d2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/infer.py": "b9bab33dad64c159026fe736b5077ea2ed94ece1fc0972ab00e100676237ee76",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/launch.py": "008aef58c419a2a3d9cc0025fd0750c808ee233b9c8ac1ea9f578da9e2a1a8ff",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/preflight.py": "394afeabbda9055f41f5eed1780ba9cb3e2e162f1613023184a029eed3334bc2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/runtime.py": "6380a3d0146d563b09e737509359782ccb5f6c072e6ec53ed3c21a04ccd87577",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/spatial_preflight.py": "e0065378102caf9e371fd84311eb37c1993ccb6e9a3ef50cbe91c903e3d5a207",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/code/train.py": "c9ce7425ede1e4160e12494b15f476c7f9b7268f5f804971c5ce197d7dc81810",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/COMPATIBILITY.patch": "4313358e0c9df8705ed194a917883fe077a44bedbca02d1ca5f2e54fc080fe61",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/PROVENANCE.json": "29c1af8054c5129b75912fd05b29dc6c9ee038ad6da9a08fe0acd72cbf53fb73",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/RFR_framework.py": "60de85347a49c80202f68e1f5eb8f48624feb5dd1f13fed79653bbc053a888a8",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/__init__.py": "5e21022a298927b8bca3e667f366653fb742b7b5eb3a469b451429fa72368684",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/DCN2.cpython-310-x86_64-linux-gnu.so": "93aba2d218912d868c9e9073ec73fff1b4088a845cdd99109aead3f554ecc7ca",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/demo_test.py": "e7d4b037438a576fae21966b3a7139bd018654280d8666a04a2407a8bded4892",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/__init__.py": "0887595259879953855020ece5fb72281eeb5059848664d31e5bf608951d139b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_conv_func.py": "8ca9de19888b2a6ea128f5df67c583c815d700c229b38b979e5b95dbf5112232",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/deform_psroi_pooling_func.py": "525e0b338eb7da4e850073426f43efb5434b89fb3f080598cc5fe32ea316617c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/ewrfdwe.py": "6bc053d035dc4bdf46900845f8c8d5132e3ec2da8b0d3b85030ceb8dc70950e4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/functions/modulated_deform_conv_func.py": "65822c7460288caee1ce7ac889466c31563c1fae534b0f1f4b1f9b9685fad360",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/__init__.py": "c09d9f941c0c08cf5e0b9731c02b3c6f300d7062cfa5345a48d16d2c367c3ed2",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_conv.py": "71a8f12c07008356e3c54ac7f1122242fa5ecad5d5214250b587bc0ceff6ff88",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/deform_psroi_pooling.py": "8d8c07fc12b828493475785189897a7ba86d99670b1ee0c351ddeeee6c8b3a72",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/modules/modulated_deform_conv.py": "57b931f2df45c68df3c516f60abbad532d27e959ebbbedb6b52a4df29bd985b9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/setup.py": "eeacd9f5c86d4b950f08e2096c6a5a8afed346207fa0f9a9158b0244c15301d4",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_conv_cpu.h": "18a346cb8f7f485efbe527c4ac5d87409e80818720e4fe27956135f310756e9b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_cpu.cpp": "a398e4e4be3150109eafbd52e82893ce1a37fcc404054c1943b4aaf21c3e82f0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.cpp": "88e1b3b000fc26c42773154e6f6dc03ee2c47eff31cc4e409a3eddf574c7481d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/deform_psroi_pooling_cpu.h": "07373eb682e0d9b64faec164f8f79243e4094e77db1e14301dedadc53e7c9616",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_conv_cpu.h": "f52f5cd028581ef734edef2c254c5fde2c21474eb64cb082e3150464564a5bbe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cpu/modulated_deform_cpu.cpp": "6e89c316b105a63328fbf703272b04f8911011a0d4ef0f977c5ab9e4cf8a2565",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.cu": "0927a61530a6d0eea6aa8bbb66b9bb96f193a4328fcf05b915f6a667cc2be0c3",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_conv_cuda.h": "f69d7d5ba3ac48c31ee03e0cd8d9abdb8e45b66af6af059f99f18cda9487bb05",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_im2col_cuda.cuh": "74eb890d36b01740fd04890e5c91960bca8ee99d5059f24e44d383002f91e81f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.cu": "f5316fa8abd4b7e9bd1a0dafd45d5a5d1d1ba1b3470a2dae8cf7b520867a5b3f",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/deform_psroi_pooling_cuda.h": "1f9a470d3a73c374d2533b55b35f59573be65ea53d4dcc21e9ca28970d70df0b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.cu": "f796390de3d1d574d2da90cb439d26e5a2c3d2a41f2b39c4424a97e9ae515a97",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_conv_cuda.h": "c08a0bbf426e393a9f7a38b037edf354975bfcc988c2c31af0a6a5d55601a42c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/cuda/modulated_deform_im2col_cuda.cuh": "f5f892cb4abfc43eec960d6d1cf134a5bd2e5d1d14d273bee6bab2a37cec8f06",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_conv.h": "b8e0ee8596f50a3f7ad2e4b73f48709763e3e40f2efbbe4c4badfa7d1f701622",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/deform_psroi_pooling.h": "951384e5ecc6d7f00ca59f8205da3db46ed1e630a12b3e40629836e47ecb2774",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/modulated_deform_conv.h": "9cf510f1e5c0b71da1660bdaedbe7e5c81fd3ab707bc23bf56bddb65aa454ebe",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/src/vision.cpp": "e78cf167a244886b4f41b693b12f9e2dbca4e66ff2dc5bdb3689c429574a4173",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/dcn/test.py": "f82e40efffe67e5b4afa1c28fc12ba1d4eab9e93203f6e178659e1e8a4268d91",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/compat/utils.py": "540a4b05409d8fad9221b581fcc5ec67fc7a4aa89baedb5df522e5f176a671a9",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/rfr_cell.py": "12bcca91ccca9c252993a68fc60561148bcc6502f0e853a483f0ec4b5053a52d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/m1_recurrent_v1/upstream/smoke_dcn.py": "9cb6da18de331d373368f382ec2738cff559701d0c65b36fcb000235b5cd42b0",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/common.py": "85a2fc37be9b63cc08a0f50fb4a1688a83a5743d7a57a384f8175224cb4dd7ec",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/data.py": "f0cd35b67e8b77de104b7a3cf9700bf76e4611b97c2084e87748b7702bcac26d",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/code/runtime.py": "a23ac23fb704010482089f9c092ea41493c47a41d132e8956edd2fbc42f747ce",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v2/train_modules/temporal_risk.py": "b3e7f813b60ea24873ff77b03d7a2573acbb4ec7a009900048823c4613735a01",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/models/adapters/window_recurrent_adapter.py": "e20f90267e1b7037fd2506f2f8425941f3c9ad7978e2aca828e15d4fd43c5087"
+  },
+  "end_unix": 1791917027.3237195
+}

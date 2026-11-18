@@ -1,0 +1,13 @@
+sequence,group,system_case,object_frames,tracks,window_object_rows,matched_window_rows,objects_any_success_internal,objects_original5_all_boundary,objects_all_windows_full40_annotations,objects_any_window_missing_track_annotations
+DJI_0026_2,additional_annotation_selected_development,extra_window_only_opportunity,9,2,27,9,3,0,3,6
+DJI_0026_2,additional_annotation_selected_development,original_window_match_lost_by_fusion,1,1,2,1,1,0,0,1
+DJI_0028_2,prior_motion_selected_development,extra_window_only_opportunity,0,0,0,0,0,0,0,0
+DJI_0028_2,prior_motion_selected_development,original_window_match_lost_by_fusion,5,1,17,10,5,0,5,0
+DJI_0028_4,prior_motion_selected_development,extra_window_only_opportunity,4,2,13,5,1,1,4,0
+DJI_0028_4,prior_motion_selected_development,original_window_match_lost_by_fusion,0,0,0,0,0,0,0,0
+DJI_0032_5,prior_motion_selected_development,extra_window_only_opportunity,13,8,41,15,7,2,1,12
+DJI_0032_5,prior_motion_selected_development,original_window_match_lost_by_fusion,0,0,0,0,0,0,0,0
+DJI_0047_3,prior_motion_selected_development,extra_window_only_opportunity,26,6,78,35,15,6,11,15
+DJI_0047_3,prior_motion_selected_development,original_window_match_lost_by_fusion,0,0,0,0,0,0,0,0
+DJI_0067_2,additional_annotation_selected_development,extra_window_only_opportunity,95,22,310,127,74,45,42,53
+DJI_0067_2,additional_annotation_selected_development,original_window_match_lost_by_fusion,4,2,12,4,0,2,0,4

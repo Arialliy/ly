@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE_CANDIDATE_FAILED_STOP_EXTENSION",
+  "date": "2026-10-12",
+  "formal_runs_started": 3,
+  "planned_formal_variants": [
+    "E0",
+    "E1",
+    "E2"
+  ],
+  "seed": 46,
+  "radius": 2,
+  "main_checkpoint": 512,
+  "prior_bc_remains_stopped": true,
+  "updated_utc": "2026-10-11T18:23:25.728648+00:00",
+  "additional_seeds": false,
+  "effective_protocol": "EFFECTIVE_PROTOCOL.md",
+  "seed_amendment": "SEED_AMENDMENT.json",
+  "formal_containers": [
+    "mutual_train_E0_20261012",
+    "mutual_train_E1_20261012",
+    "mutual_train_E2_20261012"
+  ],
+  "formal_runs_completed": 3,
+  "formal_training_active": false,
+  "inference_jobs_completed": 28,
+  "cpu_scoring_jobs_completed": 28,
+  "active_own_gpu_jobs": [],
+  "report": "REPORT.md",
+  "outcome": "OUTCOME.json",
+  "successful_method_established": false
+}

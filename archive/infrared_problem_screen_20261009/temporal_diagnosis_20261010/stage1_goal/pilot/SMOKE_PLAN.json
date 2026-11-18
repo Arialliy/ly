@@ -1,0 +1,285 @@
+{
+  "config": {
+    "version": 1,
+    "length": 40,
+    "patch": 128,
+    "core_margin": 9,
+    "negative_box_margin": 2,
+    "pairs_per_batch": 2,
+    "extra_lambda": 1.0,
+    "target_crop_fraction": 0.75,
+    "interior_fraction": 0.5,
+    "interior_deltas": [
+      4,
+      8,
+      12
+    ],
+    "boundary_deltas": [
+      12,
+      24,
+      36
+    ],
+    "mean": 85.0799,
+    "std": 47.4845,
+    "max_sampling_attempts": 1000,
+    "bn": "eval_running_stats_affine_trainable",
+    "dtype": "float32"
+  },
+  "seed": 46,
+  "steps": 2,
+  "selection_sha256": "1f5e617764c0fe27a63440cc5b26d0e27a05db7dbc8c997b0bc5fd74a4b39c92",
+  "train_sequences": [
+    "DJI_0030_9",
+    "DJI_0043_2",
+    "DJI_0057_1",
+    "DJI_0113_3",
+    "DJI_0115_2",
+    "DJI_0217_2",
+    "DJI_0309_1",
+    "DJI_0323_2"
+  ],
+  "data_fingerprints": {
+    "DJI_0030_9": {
+      "raw_sha256": "a8131324096d27c02ad88c65bfe818424a83d41024eded702865cbe142dabe1c",
+      "annotations_sha256": "456703b6d2510f4ca1d3902af598356329e67699f4d35c592d2b5de34fd73ee8",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 2240,
+      "eligible_anchor_tracks": 15,
+      "strict_without_core_crop": 0
+    },
+    "DJI_0043_2": {
+      "raw_sha256": "ccaa322f9f493c458201d9c92819e19fe4dba7ef9af97de0f4ff041e44af15db",
+      "annotations_sha256": "5980f23f6d44b40316a22c23681a53231a2420ccaf1114b54371688da5fbb5de",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 10342,
+      "eligible_anchor_tracks": 92,
+      "strict_without_core_crop": 224
+    },
+    "DJI_0057_1": {
+      "raw_sha256": "e1f2e2d387525a92f5c7f87804fa525b23694011de11a37976b61b9522526719",
+      "annotations_sha256": "74147cfd998f03906ae992364dfbce42fe1685f3b2ab817595154b8ad111a1ca",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 320,
+      "eligible_anchor_tracks": 2,
+      "strict_without_core_crop": 0
+    },
+    "DJI_0113_3": {
+      "raw_sha256": "dd8a533657b3616a7992224211466130f8c4c4c615ee432a041257e98d8c4e2d",
+      "annotations_sha256": "f8242786d6b6ea689c6c7653deb21997a29ffa7bf606a927640b14562454e249",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 160,
+      "eligible_anchor_tracks": 1,
+      "strict_without_core_crop": 0
+    },
+    "DJI_0115_2": {
+      "raw_sha256": "fc92edfdb6e24fd9aadb1693d51a36aaf8a7005fc22601c6f74c3f8217a9d499",
+      "annotations_sha256": "50dc9aae381bca0f7202875f1e58db3d345d6e6f12033b3360623b413fd82432",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 471,
+      "eligible_anchor_tracks": 4,
+      "strict_without_core_crop": 2
+    },
+    "DJI_0217_2": {
+      "raw_sha256": "6c9d438ec584df45b2e0e07244643354f3d8fc1da23c5c5b2c7eacccb1f37857",
+      "annotations_sha256": "8865fba60d47f9b3e1d53ce5c8e196869e2356cd781b8ff93ea4f0ed91bf3b5f",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 376,
+      "eligible_anchor_tracks": 3,
+      "strict_without_core_crop": 0
+    },
+    "DJI_0309_1": {
+      "raw_sha256": "4c07e20f3e954585c37445bd042d8b613b9a13d0eca19462d77e30eb70d53446",
+      "annotations_sha256": "4705847cbddf5fa227f77253079b60920c3c2fd7e32e28fc7dbc8dcb00406523",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 160,
+      "eligible_anchor_tracks": 1,
+      "strict_without_core_crop": 0
+    },
+    "DJI_0323_2": {
+      "raw_sha256": "4cc54e6abdb56ad209c9266d64ac9a84459515e1dcaba64e0b89d6599f6f3351",
+      "annotations_sha256": "c27cc3bcf0c93ae4ae7fb027b5fa1c4c0d59fcdfa4a749baefe9ab83d78b103d",
+      "frames": [
+        160,
+        512,
+        640
+      ],
+      "strict_target_frames": 800,
+      "eligible_anchor_tracks": 5,
+      "strict_without_core_crop": 0
+    }
+  },
+  "counts": {
+    "purpose": "two-step real-data smoke, not experiment result"
+  },
+  "retries": {},
+  "entries": [
+    {
+      "step": 0,
+      "pairs": [
+        {
+          "sequence": "DJI_0309_1",
+          "anchor_frame": 33,
+          "selected_annotation_id": 1181628,
+          "selected_track_id": 3103000,
+          "starts": [
+            9,
+            17
+          ],
+          "crop_yx": [
+            333,
+            383
+          ],
+          "stratum": "interior",
+          "target_centered_crop": true,
+          "sampling_attempts": 1
+        },
+        {
+          "sequence": "DJI_0057_1",
+          "anchor_frame": 93,
+          "selected_annotation_id": 865525,
+          "selected_track_id": 2521501,
+          "starts": [
+            62,
+            86
+          ],
+          "crop_yx": [
+            64,
+            473
+          ],
+          "stratum": "boundary",
+          "target_centered_crop": true,
+          "sampling_attempts": 1
+        }
+      ],
+      "extra_specs": [
+        {
+          "pair_index": 0,
+          "annotation_id": 1181628,
+          "track_id": 3103000,
+          "slots": [
+            24,
+            16
+          ],
+          "rect": [
+            48,
+            44,
+            55,
+            50
+          ]
+        },
+        {
+          "pair_index": 1,
+          "annotation_id": 865525,
+          "track_id": 2521501,
+          "slots": [
+            31,
+            7
+          ],
+          "rect": [
+            66,
+            71,
+            72,
+            79
+          ]
+        }
+      ],
+      "random_pairs": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "step": 1,
+      "pairs": [
+        {
+          "sequence": "DJI_0115_2",
+          "anchor_frame": 122,
+          "selected_annotation_id": 1020850,
+          "selected_track_id": 6801502,
+          "starts": [
+            94,
+            118
+          ],
+          "crop_yx": [
+            78,
+            275
+          ],
+          "stratum": "boundary",
+          "target_centered_crop": false,
+          "sampling_attempts": 1
+        },
+        {
+          "sequence": "DJI_0323_2",
+          "anchor_frame": 49,
+          "selected_annotation_id": 1193400,
+          "selected_track_id": 8620001,
+          "starts": [
+            16,
+            28
+          ],
+          "crop_yx": [
+            88,
+            305
+          ],
+          "stratum": "boundary",
+          "target_centered_crop": true,
+          "sampling_attempts": 1
+        }
+      ],
+      "extra_specs": [
+        {
+          "pair_index": 1,
+          "annotation_id": 1193400,
+          "track_id": 8620001,
+          "slots": [
+            33,
+            21
+          ],
+          "rect": [
+            68,
+            71,
+            78,
+            79
+          ]
+        }
+      ],
+      "random_pairs": []
+    }
+  ],
+  "sampling_note": "Sequence uniform without replacement within each batch; track then eligible frame uniform. No model predictions read.",
+  "purpose": "engineering smoke only"
+}

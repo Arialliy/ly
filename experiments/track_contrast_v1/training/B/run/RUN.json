@@ -1,0 +1,143 @@
+{
+  "status": "complete",
+  "condition": "B",
+  "seed": 46,
+  "final_step": 2048,
+  "steps": 2048,
+  "trainable_parameter_names": [
+    "TPro.QK_heads.0.bias",
+    "TPro.QK_heads.0.weight",
+    "TPro.QK_heads.1.bias",
+    "TPro.QK_heads.1.weight",
+    "TPro.QK_heads.2.bias",
+    "TPro.QK_heads.2.weight",
+    "TPro.QK_heads.3.bias",
+    "TPro.QK_heads.3.weight",
+    "TPro.QK_heads.4.bias",
+    "TPro.QK_heads.4.weight",
+    "TPro.QK_heads.5.bias",
+    "TPro.QK_heads.5.weight",
+    "TPro.QK_heads.6.bias",
+    "TPro.QK_heads.6.weight",
+    "TPro.QK_heads.7.bias",
+    "TPro.QK_heads.7.weight",
+    "TPro.conv.0.bias",
+    "TPro.conv.0.weight",
+    "TPro.conv.1.bias",
+    "TPro.conv.1.weight",
+    "TPro.norm1.bias",
+    "TPro.norm1.weight",
+    "conv_out1.0.bias",
+    "conv_out1.0.weight",
+    "conv_out1.1.bias",
+    "conv_out1.1.weight",
+    "conv_out2.bias",
+    "conv_out2.weight"
+  ],
+  "trainable_parameter_count": 14593,
+  "trainable_parameters": 14593,
+  "total_parameters": 70913,
+  "new_parameters": 0,
+  "initial_checkpoint_sha256": "4fd4aa2736d9a33f2bf1459099068d8b4a7e202ff80aecdb4a3277fd13c7abcc",
+  "model_source_sha256": "fa46a034a30d8bbb0f677271d6368f033fcb389d682478d331551d8bae087668",
+  "protocol_sha256": "e7259dbf5b767a6bfa22c8be100f4b540ee1085097fda4c993d33fa466716fcb",
+  "calibration_sha256": "07015bf62f61e5c1a66405594be65a8e6a6112b5d2cd2a80e6f49a0edbc1cf29",
+  "training_sources": {
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/data.py": "8ad5232591c3538879b1806178da3b15b1e778dfd18d28e3293a06fa59b9397e",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/train.py": "84dd62f7cb68feee8e02094bf76b8726305d3af9992c7e1a02331045b34f6f4a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/prepare.py": "fa45c75a9e824c16b9f858dd36962312e4a33c7fd066ef70aad9898cba16f2a6",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/calibrate.py": "d1230cc844038fcc8c74417c43108b4f22db577fccaf95bf44749e394995e5eb",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/code/runtime.py": "f4c9a387b33440b5d71aebbbbd66c6c84edca37b31313e0377e479d693bd159c",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/track_pair_sampler.py": "1a18f94522c10b39c0e1619a23caf807c31bc023f0ac3b1cd10c1c431fb08905",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/region_contrast_loss.py": "d38a361d17798677ebea3c125a840a6f478955874505c2f4a85a2b9292c6187a",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/experiments/track_contrast_v1/train_modules/reliable_keep_loss.py": "853ee2fd3edff8c3b9b9ba231b1db28ad56e5044fa26680b30a508f4a1332c02",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/supervision_alignment_control_20261012/code/gaussian_labels.py": "a256403d9b3df7670b7e6466e42afd40bcf881b40673c991ba8a0116eeb088b5",
+    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/losses.py": "6e7021b9bd7cc362988473449596eb92212312384d51704343928af120af7ed1",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/mutual_temporal_pilot_20261012/code/train_mutual.py": "783d2bfa67c089a5bc6ba1e624eded099c234cc9a0b2724f5a6fe12b3def443b",
+    "/home/md0/ly/DeepProPlus_TLFP_Code/archive/infrared_problem_screen_20261009/temporal_diagnosis_20261010/top1_background_control_20261011/code/train_pilot.py": "75e4fe9b4115af837cc1769471328a0b88fca8e546ec8d6f7db73d580f460b54"
+  },
+  "settings": {
+    "temperature": 0.47569116950035095,
+    "lambda_temporal": 0.10885460558865433,
+    "lambda_keep": 5.75443767610971
+  },
+  "optimizer": {
+    "name": "Adam",
+    "lr": 1e-05,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "snapshots": [
+    {
+      "step": 0,
+      "path": "snapshot_000.pth",
+      "sha256": "59fae3b509e85ce7542c9c035ce2ce2a3bc57756151633801f9cb309d78460a7"
+    },
+    {
+      "step": 128,
+      "path": "snapshot_128.pth",
+      "sha256": "d88354f745ee8d6299d064115c1ea9298b9f2970f117f1aeb3605506680b0a98"
+    },
+    {
+      "step": 512,
+      "path": "snapshot_512.pth",
+      "sha256": "a6d169b28d2448f74529f843db9256b45bd328ea66e0f07a0c46d94c5d80740e"
+    },
+    {
+      "step": 1024,
+      "path": "snapshot_1024.pth",
+      "sha256": "2fef4fcd9143cbb40cfb570b95a4cd4bd3b0c3468097216775d886b7477bf9ca"
+    },
+    {
+      "step": 2048,
+      "path": "snapshot_2048.pth",
+      "sha256": "796edd11e9af4029460aaa427c8d38711a4de306077760707a7cbcdadf5a1006"
+    }
+  ],
+  "initial_state_sha256": "4a4d8b5ff65c7ea2d5567898d22aebd7e6e565306740188280830e3f5529ab07",
+  "frozen_state_sha256": "c76194bfb953c7d106f3c246ca65f017db20d83308616a29b98447ae4a79dc23",
+  "bn_initial_sha256": "72545fadc2f856833e454e018fe6958a42e427930724a1cc3cd92e068d556cb9",
+  "bn_policy": "all buffers frozen eval; affine within TPro/heads trainable",
+  "exposure": "512 existing four-detection-window entries repeated4; 4 common auxiliary windows per entry",
+  "precision": "FP32 deterministic no AMP no TF32",
+  "torch_version": "2.2.0a0+81ea7a4",
+  "frozen_frontend_unchanged": true,
+  "bn_unchanged": true,
+  "elapsed_seconds": 2798.377625426976,
+  "max_cuda_memory_allocated_bytes": 5766688768,
+  "final_state_sha256": "e60164c48741c7b2ffcfb196ebc2b98f23953f83fef1001178a27bfa78e1530d",
+  "parameter_changes": {
+    "TPro.QK_heads.0.weight": 0.09109533592715088,
+    "TPro.QK_heads.0.bias": 0.004861761726099586,
+    "TPro.QK_heads.1.weight": 0.07543039836177066,
+    "TPro.QK_heads.1.bias": 0.05086901889188085,
+    "TPro.QK_heads.2.weight": 0.058287637240933964,
+    "TPro.QK_heads.2.bias": 0.006527578560559914,
+    "TPro.QK_heads.3.weight": 0.09613961065677554,
+    "TPro.QK_heads.3.bias": 0.02962684508378694,
+    "TPro.QK_heads.4.weight": 0.043633561117895965,
+    "TPro.QK_heads.4.bias": 0.006154154023505342,
+    "TPro.QK_heads.5.weight": 0.09245599083760295,
+    "TPro.QK_heads.5.bias": 0.028137187392570415,
+    "TPro.QK_heads.6.weight": 0.04265117111261307,
+    "TPro.QK_heads.6.bias": 0.007714347420030485,
+    "TPro.QK_heads.7.weight": 0.0433301143715078,
+    "TPro.QK_heads.7.bias": 0.005011212376810004,
+    "TPro.norm1.weight": 0.00950959854156591,
+    "TPro.norm1.bias": 0.005701417515586358,
+    "TPro.conv.0.weight": 0.0794455277424168,
+    "TPro.conv.0.bias": 0.012120633679420977,
+    "TPro.conv.1.weight": 0.013241417480778544,
+    "TPro.conv.1.bias": 0.012181096644534215,
+    "conv_out1.0.weight": 0.05447677011268841,
+    "conv_out1.0.bias": 0.005886932274671375,
+    "conv_out1.1.weight": 0.00814135727795008,
+    "conv_out1.1.bias": 0.006372689143037208,
+    "conv_out2.weight": 0.009331221901761819,
+    "conv_out2.bias": 0.0014255046844482422
+  }
+}

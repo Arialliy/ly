@@ -1,0 +1,11 @@
+{
+  "registered_at": "2026-10-11T22:58:59.860459+08:00",
+  "basis": "Latest user work order; two outcome levels kept separate",
+  "protocol_sha256": "774cc172441b4028fa96ef1d591391236391ac1e93e30dbfd9632c068571f97e",
+  "new_training_runs": 1,
+  "threshold": 0.5,
+  "top_fraction": 0.01,
+  "budget_U": 4015,
+  "prior_combined_gate": "retained as secondary, not sole outcome definition",
+  "no_additional_pre_diagnostics": true
+}

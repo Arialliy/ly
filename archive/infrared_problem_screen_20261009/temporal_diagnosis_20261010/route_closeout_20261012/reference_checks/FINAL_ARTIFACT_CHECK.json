@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "official_source_matches_pinned_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_README_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/CPU_SUITE_v2.launch.json exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/CPU_SUITE_v2.launch.json current framewise_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/CPU_SUITE_v2.launch.json current haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/CPU_SUITE_v2.launch.json current test_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/CPU_SUITE_v2.launch.json current test_haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/DEEPPRO_GPU3_v3.launch.json exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/DEEPPRO_GPU3_v3.launch.json current framewise_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/DEEPPRO_GPU3_v3.launch.json current haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/DEEPPRO_GPU3_v3.launch.json current test_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_checks/DEEPPRO_GPU3_v3.launch.json current test_haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime/DOC_FOLLOW_FINAL_GPU3.launch.json exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime/DOC_FOLLOW_FINAL_GPU3.launch.json current framewise_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime/DOC_FOLLOW_FINAL_GPU3.launch.json current haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime/DOC_FOLLOW_FINAL_GPU3.launch.json current test_adapter.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime/DOC_FOLLOW_FINAL_GPU3.launch.json current test_haar_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_cuda_witness_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_link REFERENCE_REPORT.md upstream/PROVENANCE.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_link REFERENCE_REPORT.md reference_checks/UPSTREAM_CPU.launch.result.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_link REFERENCE_REPORT.md reference_checks/CPU_SUITE_v2.launch.junit.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_link REFERENCE_REPORT.md reference_checks/DEEPPRO_GPU3_v3.launch.result.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_link REFERENCE_REPORT.md runtime/ENVIRONMENT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "legacy_seven_files_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_detection_effect_claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "official_roundtrip_not_reclassified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact_gate_zero_under_same_freeze",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_weights_and_bn_unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 28,
+  "created_utc": "2026-10-12T10:58:29.738810+00:00"
+}
