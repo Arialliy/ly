@@ -1,0 +1,8 @@
+{
+  "status": "SUPERSEDED_BEFORE_TRAINING",
+  "reason": "User fixed the only authorized formal training seed to 46 after this three-seed preparation; this directory is archived only.",
+  "active_replacement_run": "s4_24k_seed46_20261118_01",
+  "recorded_at": "2026-11-18T14:42:32.835169+00:00",
+  "optimizer_updates": 0,
+  "prior_common_protocol_sha256": "475696bfc490799d0a8ff47ad5f45f5fc01a8c0cb399de00eb8d48fae4e61b1b"
+}

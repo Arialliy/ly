@@ -1,0 +1,293 @@
+protocol_id: irstd_independent_v1_s4_20261118
+status: MATERIALIZED_AWAITING_EXECUTION_BINDING
+can_launch_training: false
+base_commit: 5191bf6d26e8132726ea2175a2b6da184cba99f6
+design_document: 1/S4_research_protocol.md
+stage: S4
+data:
+  manifest: manifests/nudt_mirsdt_mask17.json
+  manifest_sha256: e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a
+  split_seed: 46
+  training_centers: 6048
+  training_nonempty_centers: 5874
+  training_empty_centers: 174
+  development_centers: 672
+  historical_test_centers: 1680
+  historical_test_empty_centers: 214
+  temporal_length: 17
+  center_index_zero_based: 8
+  context_offsets:
+  - -8
+  - -7
+  - -6
+  - -5
+  - -4
+  - -3
+  - -2
+  - -1
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  native_coordinates: true
+  intensity_divisor: 255
+  supervision: center_original_mask_only
+  augmentation: none
+  filter_by_s1_trajectory_fit: false
+models:
+  M0:
+    class: VideoBaseline
+    mode: null
+    expected_trainable_parameters: 22921
+  Msep:
+    class: HypothesisEvidenceDetector
+    mode: additive_only
+    expected_trainable_parameters: 23945
+  Mraw:
+    class: HypothesisEvidenceDetector
+    mode: raw_joint
+    expected_trainable_parameters: 23945
+  Mint:
+    class: HypothesisEvidenceDetector
+    mode: interaction
+    expected_trainable_parameters: 23945
+evidence_runtime:
+  grid_config: configs/s1_formal.yaml
+  grid_config_sha256: a2bd44edf37c912cc6f41208b852e6c4f97b2257111bbff5f48706a94a9610c8
+  velocity_axis:
+  - -2.0
+  - -1.5
+  - -1.0
+  - -0.5
+  - 0.0
+  - 0.5
+  - 1.0
+  - 1.5
+  - 2.0
+  query_chunk: 64
+  velocity_chunk: 8
+  checkpoint_chunks: true
+  preserve_rng_state: false
+initialization:
+  seeds:
+  - 46
+  - 47
+  - 48
+  pretrained_checkpoint: null
+  all_parameters_trainable: true
+  evidence_modes_copy_identical_initial_state: true
+  copy_identical_common_layers_to_M0: true
+  independent_optimizers: true
+  verify_initial_tensor_hashes: true
+sampling:
+  batch_size: 1
+  core_hw:
+  - 64
+  - 64
+  loss_region: core_only
+  common_schedule_per_seed: true
+  schedule_generated_through_step: 36000
+  role_cycle:
+  - positive
+  - random_background
+  - positive
+  - random_background
+  - positive
+  - empty_frame
+  - positive
+  - random_background
+  pools_cycle_without_replacement: true
+  positive_core_contains_complete_mask_bbox: true
+  positive_location_jitter: true
+  random_background_pool_all_centers: true
+  random_background_core_has_no_foreground: true
+  edge_priority_every_n_background_slots: 5
+  fail_on_unhandled_sampling_infeasibility: true
+  schedule_hashes: &id001
+    '46': 4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa
+    '47': 736a78caa2ffe2acd336f6ab1d1e8aa97560268e6f762ca1ca9bee1048ea9c0f
+    '48': 76bb6548de76a1c455e46c66eaa8e37d88572f3806f2c49ba75821d33c0aff18
+loss:
+  foreground_bce_weight_when_both_classes_present: 0.5
+  background_bce_weight_when_both_classes_present: 0.5
+  background_full_weight: 0.75
+  background_hard_weight: 0.25
+  hard_background_fraction: 0.1
+  hard_background_min_pixels: 16
+  hard_background_max_pixels: eligible_count
+  hard_background_gt_protection_radius_px: 3
+  protection_mask_dilation_domain: full_center_mask_then_crop
+  hard_selection_score: detached_raw_logit
+  hard_selection_tie_break: global_row_then_column
+  hard_background_refresh: every_update_in_current_core
+  no_hard_candidate_fallback: full_background_bce
+  dice_weight_nonempty_core: 0.5
+  dice_smoothing: 1.0
+  dice_weight_empty_core: 0.0
+  missing_class_policy: average_present_classes_only
+optimization:
+  optimizer: AdamW
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0001
+  foreach: false
+  precision: float32
+  amp: false
+  tf32: false
+  deterministic_algorithms: true
+  cudnn_benchmark: false
+  accumulation_steps: 1
+  gradient_clipping: null
+  nonfinite_policy: stop_and_preserve_failure_record
+  lr_by_completed_updates:
+  - start_completed_updates: 0
+    lr: 0.001
+  - start_completed_updates: 8000
+    lr: 0.0003
+  - start_completed_updates: 16000
+    lr: 0.0001
+  default_updates: 24000
+  extended_updates: 36000
+  extension:
+    decision_after: all_four_models_and_three_seeds_finish_24000
+    trigger: any_run_monotone_train_diagnostic_loss_reduction
+    diagnostic_steps:
+    - 18000
+    - 21000
+    - 24000
+    strict_monotone: true
+    relative_reduction_at_least: 0.03
+    comparison_gap_used: false
+    apply_to: all_four_models_and_all_three_seeds
+    further_automatic_extension: false
+  main_checkpoint: final_common_update_budget
+  evidence_modes_allocated_memory_cap_mib: 8192
+monitoring:
+  train_diagnostic_cores: 144
+  train_diagnostic_cores_per_source: 2
+  train_diagnostic_steps_every: 3000
+  train_diagnostic_at_initialization: true
+  development_monitor_sources:
+  - 5
+  - 19
+  - 34
+  - 45
+  - 48
+  - 49
+  - 51
+  - 74
+  development_monitor_center_ids:
+  - 9
+  - 37
+  - 64
+  - 92
+  development_monitor_only_steps:
+  - 6000
+  - 18000
+  - 30000
+  full_development_steps:
+  - 12000
+  - 24000
+  - 36000
+  steps_beyond_final_budget_are_skipped: true
+  diagnostic_manifest_hashes: &id002
+    train_diagnostics.json: c4a1e21e6e2fcfc9e5dca3e5b62570d41bc74dd3b66eeb3f09057251cb6c7884
+    evaluation_centers.json: e867e6b0b84b9b954ac0addbdb78bac52744c974411548b429a66fe8c86fec0f
+evaluation:
+  score_domain_custom_froc: native_fp32_logits
+  primary_false_alarms_per_frame: 1.0
+  secondary_false_alarms_per_frame:
+  - 0.5
+  - 5.0
+  peak_connectivity: 8
+  plateau_representative: first_global_row_then_column
+  nms_chebyshev_radius_inclusive: 2
+  matching_euclidean_radius_inclusive: 3.0
+  threshold_comparison: greater_or_equal
+  group_equal_scores: true
+  operating_point_tie_break:
+  - maximum_tp
+  - minimum_fp
+  - maximum_threshold
+  include_empty_prediction_point: true
+  include_all_declared_centers_and_real_image_edges: true
+  assert_at_most_one_gt_component_per_current_dataset_frame: true
+  development_threshold: one_global_threshold_per_model_seed_budget
+  historical_test_frozen_threshold_transfer: true
+  historical_test_descriptive_froc_separate: true
+  historical_test_after_protocol_budget_checkpoint_threshold_lock: true
+  native_author_metrics_report_separately: true
+  native_test_subset_label: 17_frame_valid_center_subset_1680_of_2000
+research:
+  H1_primary_pair:
+  - Mraw
+  - Msep
+  H2_primary_pair:
+  - Mint
+  - Mraw
+  minimum_mean_gain_percentage_points: 1.0
+  positive_direction_required_in_all_three_seeds: true
+  report_seed_mean_std_min_and_each_seed: true
+  report_per_source_and_leave_one_source_out: true
+  downgrade_stability_if_leave_one_source_out_flips_mean_sign: true
+  report_paired_per_frame_target_identities: true
+  M0_comparison_is_net_benefit_reference: true
+  development_sources_are_not_verified_independent_physical_scenes: true
+  strong_novelty_or_new_source_generalization_not_proven_by_s4_alone: true
+  result_fields_separate:
+  - execution_status
+  - research_outcome
+checkpoint:
+  require_model_class_and_evidence_mode: true
+  reject_mode_mismatch: true
+  include_optimizer_scheduler_rng_and_schedule_cursor: true
+  include_dependency_grid_schedule_diagnostic_initialization_hashes: true
+  save_at_optimizer_update_boundaries: true
+  keep_archived_s0_s3_results_unchanged: true
+lock_artifacts:
+  implementation_base_commit: 5191bf6d26e8132726ea2175a2b6da184cba99f6
+  prerequisite_code_sha256:
+    checks/s4_protocol.py: d42dd8eae114624c74ba4650965fccc099d3ff0200f69d4a3781ad2cdb90354f
+    data/s4_core_schedule.py: 5bf24eb4229ada6faa67e1cb17162568d3a5c144c8707536265dca617c2f1b79
+  common_protocol_sha256: 475696bfc490799d0a8ff47ad5f45f5fc01a8c0cb399de00eb8d48fae4e61b1b
+  schedules_by_seed: *id001
+  diagnostics_sha256: *id002
+  initial_states_by_seed:
+    '46':
+      file: init_46.pt
+      sha256: f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be
+      tensors: init_46_tensors.json
+      tensors_sha256: 7c47479abc98088cfcab7fe96e90335610a6a9972113619814a6081379694f55
+    '47':
+      file: init_47.pt
+      sha256: 00a1aef94ac0105e5c92eef629b594d0a33d69908e69190caec8fd9f9ef2370f
+      tensors: init_47_tensors.json
+      tensors_sha256: 3907c4ef685545fa84e671491f115e8fcec8875d961327624b79780da13d4f2a
+    '48':
+      file: init_48.pt
+      sha256: 25394d650f03d911e2bdc8b4a959ab0cbcf44fab9651ee507d45608ff048bbae
+      tensors: init_48_tensors.json
+      tensors_sha256: 9effe2e0164a7723e0ecfae704c9e79ca33291fa9e4a6e3e2075968b583a19cf
+  formal_run_ids:
+  - M0/seed46
+  - M0/seed47
+  - M0/seed48
+  - Msep/seed46
+  - Msep/seed47
+  - Msep/seed48
+  - Mraw/seed46
+  - Mraw/seed47
+  - Mraw/seed48
+  - Mint/seed46
+  - Mint/seed47
+  - Mint/seed48
+design_sources_sha256:
+  1/S4_research_protocol.md: 96416af54d941c61e113b3bb4b97311d8399f997345348982880aa9c42087a38
+  1/s4_protocol_proposal.yaml: 7745b27651535527ac181cfbd211a11e668984d99553fa9de43c66dcbed357f9
+launch_authority: reports/S4_protocol_lock.json and execution binding

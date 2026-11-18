@@ -1,0 +1,63 @@
+{
+  "stage": "S4",
+  "scope": "formal GPU prefix and first resumed update",
+  "seed": 46,
+  "run_id": "s4_24k_seed46_20261118_01",
+  "implementation_commit": "1f76052d44d77bdbeafaf4c53c278c9dd4588c13",
+  "utc": "2026-11-18T14:58:26.330727+00:00",
+  "status": "PASS",
+  "runs": {
+    "Msep": {
+      "counted_prefix_updates": 8,
+      "next_observed_step": 9,
+      "common_schedule_matches_through": 9,
+      "role_counts_first_8": {
+        "positive": 4,
+        "random_background": 3,
+        "empty_frame": 1
+      },
+      "resume_verified": true,
+      "first_8_checkpoint_sha256": "b2454df234726b0609e2e20ad64ea19174585964130577510b494f00a56b58c5",
+      "first_8_receipt_sha256": "4312174f04dc314ca83198480d1a66adbe694df811dbe580d566735d3a4ca941",
+      "initial_diagnostic_cores": 144,
+      "peak_allocated_mib_first_8": 183.6416015625,
+      "finite_each_update_through_9": true,
+      "first_9_journal_sha256": "8f0454eb5a4eb9f76365ec6f98be7388ca57980a55e6cfd1b740d110ce05ad53"
+    },
+    "Mraw": {
+      "counted_prefix_updates": 8,
+      "next_observed_step": 9,
+      "common_schedule_matches_through": 9,
+      "role_counts_first_8": {
+        "positive": 4,
+        "random_background": 3,
+        "empty_frame": 1
+      },
+      "resume_verified": true,
+      "first_8_checkpoint_sha256": "af673693e8b093b1081336f9f3b80134943e4a8ad27de049f35071341b0a4528",
+      "first_8_receipt_sha256": "1f6290ca3f7934fc8de96e95d5dbb94e6c4bbb90d89c4e5ee16b969a52ec882e",
+      "initial_diagnostic_cores": 144,
+      "peak_allocated_mib_first_8": 183.62744140625,
+      "finite_each_update_through_9": true,
+      "first_9_journal_sha256": "8ac0ff33607b7e03712c1de7ef50a021fe48b79d2c7d69368cce22da6bbedc0c"
+    },
+    "Mint": {
+      "counted_prefix_updates": 8,
+      "next_observed_step": 9,
+      "common_schedule_matches_through": 9,
+      "role_counts_first_8": {
+        "positive": 4,
+        "random_background": 3,
+        "empty_frame": 1
+      },
+      "resume_verified": true,
+      "first_8_checkpoint_sha256": "e3bbcfc39e77ab2a18ff754b71d3f5d72b36691c070e4b74e67e9ef268c5b147",
+      "first_8_receipt_sha256": "79f298fb65f7183b83fd918061e0fcc8144677afdc0a2b2765a6b7587a41b36a",
+      "initial_diagnostic_cores": 144,
+      "peak_allocated_mib_first_8": 183.62744140625,
+      "finite_each_update_through_9": true,
+      "first_9_journal_sha256": "1977b392b95b46991b3b74b835e80f0879279280d148f7471c84b67e901c8282"
+    }
+  },
+  "M0": "scheduled after Msep on GPU1"
+}

@@ -1,0 +1,9 @@
+{
+  "state": "SUPERSEDED_BEFORE_TRAINING",
+  "formal_optimizer_updates": 0,
+  "reason": "User supplied S4 research protocol and configuration on 2026-11-18 before any formal optimizer update.",
+  "replaced_by_design_sha256": {
+    "1/S4_research_protocol.md": "96416af54d941c61e113b3bb4b97311d8399f997345348982880aa9c42087a38",
+    "1/s4_protocol_proposal.yaml": "7745b27651535527ac181cfbd211a11e668984d99553fa9de43c66dcbed357f9"
+  }
+}

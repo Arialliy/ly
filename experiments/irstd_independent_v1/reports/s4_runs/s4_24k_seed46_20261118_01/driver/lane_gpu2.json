@@ -1,0 +1,7 @@
+{
+  "status": "RUNNING",
+  "job": "train_Mraw_46_24000",
+  "container": "f51125e8a412e1e771312e251abf66938be4df4966127a55b23315024aabe9a9",
+  "gpu_index": 2,
+  "started_or_reattached_utc": "2026-11-18T14:58:11.639554+00:00"
+}

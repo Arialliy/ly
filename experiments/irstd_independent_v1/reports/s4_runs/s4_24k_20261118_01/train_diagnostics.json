@@ -1,0 +1,1874 @@
+[
+  {
+    "source": "Sequence1",
+    "center": 67,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      103,
+      67,
+      167,
+      131
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence1",
+    "center": 46,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      13,
+      72,
+      77,
+      136
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence2",
+    "center": 74,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      201,
+      134,
+      265,
+      198
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence2",
+    "center": 47,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      244,
+      28,
+      308,
+      92
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence3",
+    "center": 78,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      118,
+      61,
+      182,
+      125
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence3",
+    "center": 22,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      15,
+      60,
+      79,
+      124
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence4",
+    "center": 58,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      150,
+      16,
+      214,
+      80
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence4",
+    "center": 75,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      87,
+      65,
+      151,
+      129
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence6",
+    "center": 73,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      80,
+      55,
+      144,
+      119
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence6",
+    "center": 74,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      113,
+      123,
+      177,
+      187
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence7",
+    "center": 17,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      67,
+      19,
+      131,
+      83
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence7",
+    "center": 42,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      175,
+      32,
+      239,
+      96
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence8",
+    "center": 83,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      19,
+      75,
+      83,
+      139
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence8",
+    "center": 91,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      189,
+      37,
+      253,
+      101
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence9",
+    "center": 53,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      216,
+      113,
+      280,
+      177
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence9",
+    "center": 27,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      39,
+      28,
+      103,
+      92
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence10",
+    "center": 58,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      151,
+      16,
+      215,
+      80
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence10",
+    "center": 75,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      44,
+      43,
+      108,
+      107
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence11",
+    "center": 9,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      38,
+      31,
+      102,
+      95
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence11",
+    "center": 23,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      25,
+      76,
+      89,
+      140
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence12",
+    "center": 42,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      10,
+      53,
+      74,
+      117
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence12",
+    "center": 88,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      39,
+      115,
+      103,
+      179
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence13",
+    "center": 68,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      161,
+      76,
+      225,
+      140
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence13",
+    "center": 80,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      45,
+      56,
+      109,
+      120
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence14",
+    "center": 20,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      40,
+      29,
+      104,
+      93
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence14",
+    "center": 39,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      51,
+      87,
+      115,
+      151
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence15",
+    "center": 23,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      180,
+      80,
+      244,
+      144
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence15",
+    "center": 67,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      239,
+      21,
+      303,
+      85
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence16",
+    "center": 46,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      136,
+      109,
+      200,
+      173
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence16",
+    "center": 54,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      70,
+      13,
+      134,
+      77
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence17",
+    "center": 90,
+    "kind": "empty_frame",
+    "sample_role": "empty_frame",
+    "core_xyxy": [
+      39,
+      125,
+      103,
+      189
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence17",
+    "center": 85,
+    "kind": "empty_frame",
+    "sample_role": "empty_frame",
+    "core_xyxy": [
+      216,
+      19,
+      280,
+      83
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence18",
+    "center": 72,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      182,
+      35,
+      246,
+      99
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence18",
+    "center": 9,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      50,
+      91,
+      114,
+      155
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence20",
+    "center": 33,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      86,
+      42,
+      150,
+      106
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence20",
+    "center": 48,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      155,
+      113,
+      219,
+      177
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence21",
+    "center": 28,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      154,
+      48,
+      218,
+      112
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence21",
+    "center": 11,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      64,
+      52,
+      128,
+      116
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence22",
+    "center": 23,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      34,
+      23,
+      98,
+      87
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence22",
+    "center": 66,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      107,
+      77,
+      171,
+      141
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence23",
+    "center": 33,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      116,
+      58,
+      180,
+      122
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence23",
+    "center": 9,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      174,
+      6,
+      238,
+      70
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence24",
+    "center": 44,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      48,
+      13,
+      112,
+      77
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence24",
+    "center": 11,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      63,
+      69,
+      127,
+      133
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence25",
+    "center": 23,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      163,
+      33,
+      227,
+      97
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence25",
+    "center": 92,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      82,
+      27,
+      146,
+      91
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence26",
+    "center": 90,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      97,
+      1,
+      161,
+      65
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence26",
+    "center": 76,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      30,
+      70,
+      94,
+      134
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence27",
+    "center": 73,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      202,
+      98,
+      266,
+      162
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence27",
+    "center": 76,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      147,
+      101,
+      211,
+      165
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence28",
+    "center": 16,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      36,
+      41,
+      100,
+      105
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence28",
+    "center": 18,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      164,
+      28,
+      228,
+      92
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence29",
+    "center": 88,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      76,
+      42,
+      140,
+      106
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence29",
+    "center": 38,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      97,
+      70,
+      161,
+      134
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence30",
+    "center": 14,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      94,
+      58,
+      158,
+      122
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence30",
+    "center": 92,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      211,
+      6,
+      275,
+      70
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence31",
+    "center": 65,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      12,
+      110,
+      76,
+      174
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence31",
+    "center": 36,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      130,
+      12,
+      194,
+      76
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence32",
+    "center": 69,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      4,
+      80,
+      68,
+      144
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence32",
+    "center": 12,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      161,
+      145,
+      225,
+      209
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence33",
+    "center": 80,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      152,
+      142,
+      216,
+      206
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence33",
+    "center": 13,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      140,
+      125,
+      204,
+      189
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence35",
+    "center": 52,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      110,
+      18,
+      174,
+      82
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence35",
+    "center": 61,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      148,
+      51,
+      212,
+      115
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence36",
+    "center": 28,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      74,
+      37,
+      138,
+      101
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence36",
+    "center": 11,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      221,
+      70,
+      285,
+      134
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence37",
+    "center": 75,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      77,
+      74,
+      141,
+      138
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence37",
+    "center": 87,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      113,
+      23,
+      177,
+      87
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence38",
+    "center": 90,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      62,
+      49,
+      126,
+      113
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence38",
+    "center": 15,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      113,
+      132,
+      177,
+      196
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence39",
+    "center": 21,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      3,
+      48,
+      67,
+      112
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence39",
+    "center": 33,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      153,
+      47,
+      217,
+      111
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence40",
+    "center": 55,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      89,
+      8,
+      153,
+      72
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence40",
+    "center": 50,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      115,
+      34,
+      179,
+      98
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence41",
+    "center": 90,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      111,
+      70,
+      175,
+      134
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence41",
+    "center": 50,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      45,
+      125,
+      109,
+      189
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence42",
+    "center": 29,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      57,
+      36,
+      121,
+      100
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence42",
+    "center": 28,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      102,
+      92,
+      166,
+      156
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence43",
+    "center": 23,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      162,
+      32,
+      226,
+      96
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence43",
+    "center": 12,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      225,
+      86,
+      289,
+      150
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence44",
+    "center": 14,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      70,
+      110,
+      134,
+      174
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence44",
+    "center": 70,
+    "kind": "empty_frame",
+    "sample_role": "empty_frame",
+    "core_xyxy": [
+      18,
+      194,
+      82,
+      258
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence46",
+    "center": 85,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      115,
+      27,
+      179,
+      91
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence46",
+    "center": 88,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      92,
+      85,
+      156,
+      149
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence50",
+    "center": 73,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      94,
+      48,
+      158,
+      112
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence50",
+    "center": 57,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      110,
+      126,
+      174,
+      190
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence52",
+    "center": 81,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      50,
+      66,
+      114,
+      130
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence52",
+    "center": 75,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      147,
+      77,
+      211,
+      141
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence53",
+    "center": 67,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      75,
+      85,
+      139,
+      149
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence53",
+    "center": 82,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      195,
+      87,
+      259,
+      151
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence54",
+    "center": 44,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      114,
+      71,
+      178,
+      135
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence54",
+    "center": 68,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      97,
+      129,
+      161,
+      193
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence55",
+    "center": 56,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      116,
+      75,
+      180,
+      139
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence55",
+    "center": 40,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      217,
+      95,
+      281,
+      159
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence57",
+    "center": 44,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      42,
+      84,
+      106,
+      148
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence57",
+    "center": 50,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      109,
+      46,
+      173,
+      110
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence58",
+    "center": 78,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      56,
+      104,
+      120,
+      168
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence58",
+    "center": 80,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      131,
+      118,
+      195,
+      182
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence60",
+    "center": 70,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      91,
+      123,
+      155,
+      187
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence60",
+    "center": 34,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      237,
+      3,
+      301,
+      67
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence61",
+    "center": 21,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      130,
+      15,
+      194,
+      79
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence61",
+    "center": 73,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      61,
+      29,
+      125,
+      93
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence62",
+    "center": 38,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      77,
+      73,
+      141,
+      137
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence62",
+    "center": 90,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      63,
+      100,
+      127,
+      164
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence63",
+    "center": 24,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      182,
+      19,
+      246,
+      83
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence63",
+    "center": 12,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      111,
+      25,
+      175,
+      89
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence64",
+    "center": 76,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      28,
+      76,
+      92,
+      140
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence64",
+    "center": 73,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      19,
+      5,
+      83,
+      69
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence65",
+    "center": 60,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      173,
+      108,
+      237,
+      172
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence65",
+    "center": 46,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      137,
+      79,
+      201,
+      143
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence66",
+    "center": 47,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      107,
+      77,
+      171,
+      141
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence66",
+    "center": 39,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      183,
+      104,
+      247,
+      168
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence67",
+    "center": 38,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      51,
+      49,
+      115,
+      113
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence67",
+    "center": 23,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      128,
+      33,
+      192,
+      97
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence68",
+    "center": 18,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      39,
+      48,
+      103,
+      112
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence68",
+    "center": 80,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      212,
+      24,
+      276,
+      88
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence69",
+    "center": 53,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      74,
+      47,
+      138,
+      111
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence69",
+    "center": 33,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      173,
+      96,
+      237,
+      160
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence70",
+    "center": 77,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      169,
+      86,
+      233,
+      150
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence70",
+    "center": 70,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      227,
+      51,
+      291,
+      115
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence71",
+    "center": 39,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      115,
+      46,
+      179,
+      110
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence71",
+    "center": 35,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      124,
+      48,
+      188,
+      112
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence72",
+    "center": 29,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      38,
+      52,
+      102,
+      116
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence72",
+    "center": 23,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      57,
+      83,
+      121,
+      147
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence73",
+    "center": 18,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      114,
+      47,
+      178,
+      111
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence73",
+    "center": 88,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      95,
+      7,
+      159,
+      71
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence75",
+    "center": 35,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      131,
+      55,
+      195,
+      119
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence75",
+    "center": 68,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      181,
+      123,
+      245,
+      187
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence77",
+    "center": 76,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      96,
+      59,
+      160,
+      123
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence77",
+    "center": 60,
+    "kind": "empty_frame",
+    "sample_role": "empty_frame",
+    "core_xyxy": [
+      113,
+      93,
+      177,
+      157
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence78",
+    "center": 35,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      104,
+      20,
+      168,
+      84
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence78",
+    "center": 47,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      160,
+      188,
+      224,
+      252
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence79",
+    "center": 51,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      142,
+      65,
+      206,
+      129
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence79",
+    "center": 19,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      232,
+      104,
+      296,
+      168
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence80",
+    "center": 89,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      59,
+      75,
+      123,
+      139
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence80",
+    "center": 43,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      211,
+      60,
+      275,
+      124
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence81",
+    "center": 79,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      56,
+      69,
+      120,
+      133
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence81",
+    "center": 81,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      87,
+      113,
+      151,
+      177
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence82",
+    "center": 61,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      81,
+      89,
+      145,
+      153
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence82",
+    "center": 68,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      169,
+      12,
+      233,
+      76
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence83",
+    "center": 42,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      99,
+      70,
+      163,
+      134
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence83",
+    "center": 45,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      161,
+      120,
+      225,
+      184
+    ],
+    "positive": false
+  },
+  {
+    "source": "Sequence84",
+    "center": 54,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      157,
+      26,
+      221,
+      90
+    ],
+    "positive": true
+  },
+  {
+    "source": "Sequence84",
+    "center": 92,
+    "kind": "random_background",
+    "sample_role": "random_background",
+    "core_xyxy": [
+      187,
+      119,
+      251,
+      183
+    ],
+    "positive": false
+  }
+]

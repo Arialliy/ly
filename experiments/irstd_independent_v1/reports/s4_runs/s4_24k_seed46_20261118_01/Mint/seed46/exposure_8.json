@@ -1,0 +1,24 @@
+{
+  "role_counts": {
+    "positive": 4,
+    "random_background": 3,
+    "empty_frame": 1
+  },
+  "center_exposures": {
+    "positive": {
+      "Sequence7/00026": 1,
+      "Sequence54/00023": 1,
+      "Sequence27/00078": 1,
+      "Sequence31/00051": 1
+    },
+    "random_background": {
+      "Sequence31/00070": 1,
+      "Sequence27/00088": 1,
+      "Sequence10/00034": 1
+    },
+    "empty_frame": {
+      "Sequence17/00035": 1
+    }
+  },
+  "edge_priority_slots": 0
+}

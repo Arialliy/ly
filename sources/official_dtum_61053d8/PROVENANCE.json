@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/TinaLRJ/Multi-frame-infrared-small-target-detection-DTUM",
+  "commit": "61053d83b1243bb8fc828d19b6b58c31eaeb69f3",
+  "source_url": "https://github.com/TinaLRJ/Multi-frame-infrared-small-target-detection-DTUM/blob/61053d83b1243bb8fc828d19b6b58c31eaeb69f3/ShootingRules.py",
+  "sha256": "0824e9edd37607033832444487bcf574f729f1f4ca31699d1264371213a5b288",
+  "license_field": null,
+  "license_files_at_commit": [
+    "models/model_ISNet/DCNv2/LICENSE"
+  ],
+  "purpose": "Local unmodified reference evaluator for the published benchmark."
+}

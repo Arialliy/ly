@@ -1,0 +1,107 @@
+[
+  {
+    "query": 64,
+    "velocity": 8,
+    "full": false,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 7.334323058981681,
+    "peak_mib": 83.25830078125,
+    "max_diff": 0.0,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 64,
+    "velocity": 8,
+    "full": true,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 5.971865806990536,
+    "peak_mib": 112.02978515625,
+    "max_diff": 7.450580596923828e-09,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 128,
+    "velocity": 81,
+    "full": true,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 0.8193461039918475,
+    "peak_mib": 147.4072265625,
+    "max_diff": 7.450580596923828e-09,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 256,
+    "velocity": 81,
+    "full": true,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 0.4260413699958008,
+    "peak_mib": 214.87255859375,
+    "max_diff": 7.450580596923828e-09,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 512,
+    "velocity": 81,
+    "full": true,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 0.29540677499608137,
+    "peak_mib": 350.8359375,
+    "max_diff": 1.4901161193847656e-08,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 1024,
+    "velocity": 81,
+    "full": true,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 0.23342306999256834,
+    "peak_mib": 629.5986328125,
+    "max_diff": 1.4901161193847656e-08,
+    "bad": 0,
+    "top100_intersect": 100
+  },
+  {
+    "query": 256,
+    "velocity": 81,
+    "full": false,
+    "id": "Sequence1/00009",
+    "hw": [
+      157,
+      209
+    ],
+    "seconds": 0.5272853309870698,
+    "peak_mib": 187.07080078125,
+    "max_diff": 7.450580596923828e-09,
+    "bad": 0,
+    "top100_intersect": 100
+  }
+]
