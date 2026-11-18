@@ -68,8 +68,8 @@ evidence_runtime:
   - 1.0
   - 1.5
   - 2.0
-  query_chunk: 64
-  velocity_chunk: 8
+  query_chunk: 256
+  velocity_chunk: 81
   checkpoint_chunks: true
   preserve_rng_state: false
 initialization:
@@ -249,9 +249,9 @@ checkpoint:
 lock_artifacts:
   implementation_base_commit: 5191bf6d26e8132726ea2175a2b6da184cba99f6
   prerequisite_code_sha256:
-    checks/s4_protocol.py: 9294d2fb9663054a6cb7e8abd61927adeed6b1983630b69fb4039b963451bf13
+    checks/s4_protocol.py: b039767f343fb4aef2d46c0716014242c70c973c5929b40db6b5d00aff003dfd
     data/s4_core_schedule.py: 5bf24eb4229ada6faa67e1cb17162568d3a5c144c8707536265dca617c2f1b79
-  common_protocol_sha256: b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d
+  common_protocol_sha256: b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5
   schedules_by_seed: *id001
   diagnostics_sha256: *id002
   initial_states_by_seed:
@@ -265,8 +265,8 @@ lock_artifacts:
   - Msep/seed46
   - Mraw/seed46
   - Mint/seed46
-  implementation_commit: 1f76052d44d77bdbeafaf4c53c278c9dd4588c13
-  implementation_ref: refs/experiments/s4/s4_24k_seed46_20261118_01
+  implementation_commit: cb6d4cb1b74fc59247aba9dadefaf3204935aa81
+  implementation_ref: refs/experiments/s4/s4_24k_seed46_q256v81_20261118_02
 user_override:
   authority: user
   original_proposal_seeds:
@@ -280,3 +280,13 @@ design_sources_sha256:
   1/S4_research_protocol.md: 96416af54d941c61e113b3bb4b97311d8399f997345348982880aa9c42087a38
   1/s4_protocol_proposal.yaml: 7745b27651535527ac181cfbd211a11e668984d99553fa9de43c66dcbed357f9
 launch_authority: reports/S4_protocol_lock.json and execution binding
+migration:
+  parent_run_id: s4_24k_seed46_20261118_01
+  common_step: 600
+  first_new_step: 601
+  previous_chunks:
+  - 64
+  - 8
+  new_chunks:
+  - 256
+  - 81

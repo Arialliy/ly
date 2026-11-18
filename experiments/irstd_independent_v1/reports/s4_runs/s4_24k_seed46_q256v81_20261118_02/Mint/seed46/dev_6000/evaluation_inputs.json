@@ -1,0 +1,17 @@
+{
+  "mode": "Mint",
+  "seed": 46,
+  "step": 6000,
+  "population": "development_monitor",
+  "checkpoint_sha256": "f1621988dfc56191d8f9cb1cc0e03f191a62ae07e616cbf482b4b709395809a4",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "center_ids_sha256": "8c056b6bae3643740a1980dcbcf35d5576191ef0c544c406ddd66673d0a7cbdf",
+  "query_chunk": 256,
+  "velocity_chunk": 81,
+  "core_hw": [
+    64,
+    64
+  ],
+  "score_domain": "native_fp32_logits"
+}

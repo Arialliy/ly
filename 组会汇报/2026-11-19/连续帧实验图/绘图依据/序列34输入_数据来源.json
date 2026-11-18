@@ -1,0 +1,418 @@
+{
+  "dataset": "public NUDT-MIRSDT synthetic IR",
+  "center": "Sequence34/00009",
+  "checkpoint_step": 6000,
+  "seed": 46,
+  "split": "32-frame development monitor panel",
+  "selected_reason": "Only Mraw-to-Mint loss in panel",
+  "input_clip_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "consecutive_frames_shown": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "inputs": [
+    {
+      "frame": 1,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00001.png",
+        "sha256": "e67ef8ee3567c979ac910c69f5170b3cefe2c37115f75695f9235f116eb133cc"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00001.png",
+        "sha256": "9aab7d5ac38dba2e660060d9a7a3e368bab456e546ab256c697f1f206ab29350"
+      },
+      "gt_xy": [
+        57.206896551724135,
+        61.0
+      ],
+      "gt_pixels": 29,
+      "mean_gt_gray": 60.206896551724135
+    },
+    {
+      "frame": 2,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00002.png",
+        "sha256": "401717f1147168b9c637bbf482f21aa80eaf9de716272b5faae575fe5c594ff5"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00002.png",
+        "sha256": "d10f6fb82b4bb775f501497f53f47ce948f12973fb030b9d5c62cacd71a4a9e6"
+      },
+      "gt_xy": [
+        58.09375,
+        62.0625
+      ],
+      "gt_pixels": 32,
+      "mean_gt_gray": 60.6875
+    },
+    {
+      "frame": 3,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00003.png",
+        "sha256": "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00003.png",
+        "sha256": "a35a40e97adca0de2ab39a66d1297e5cfb76cdf2639aee155d76b7f174a59241"
+      },
+      "gt_xy": [
+        57.175,
+        62.425
+      ],
+      "gt_pixels": 40,
+      "mean_gt_gray": 60.8
+    },
+    {
+      "frame": 4,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00004.png",
+        "sha256": "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00004.png",
+        "sha256": "7c41306f8bd9c758d395b494b4bb8dbe0d4e6ed491697d9c6ace1c835177ac31"
+      },
+      "gt_xy": [
+        58.888888888888886,
+        63.02777777777778
+      ],
+      "gt_pixels": 36,
+      "mean_gt_gray": 60.666666666666664
+    },
+    {
+      "frame": 5,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00005.png",
+        "sha256": "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00005.png",
+        "sha256": "56b70dc16c6af1a18d77940aef3d985d57fe8763f308b65970bd00e64a3c913f"
+      },
+      "gt_xy": [
+        57.29545454545455,
+        64.63636363636364
+      ],
+      "gt_pixels": 44,
+      "mean_gt_gray": 61.45454545454545
+    },
+    {
+      "frame": 6,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00006.png",
+        "sha256": "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00006.png",
+        "sha256": "c5c017fe4755a49f7b1bc7cc1498a7f8602e57a4a31c068bff45c275daf9eb66"
+      },
+      "gt_xy": [
+        58.479166666666664,
+        62.875
+      ],
+      "gt_pixels": 48,
+      "mean_gt_gray": 61.083333333333336
+    },
+    {
+      "frame": 7,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00007.png",
+        "sha256": "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00007.png",
+        "sha256": "7cbbf25c411ce13c57bb084e9ff38dc7a65587b649567c86938a32aa0381d73e"
+      },
+      "gt_xy": [
+        59.23529411764706,
+        64.19607843137256
+      ],
+      "gt_pixels": 51,
+      "mean_gt_gray": 61.431372549019606
+    },
+    {
+      "frame": 8,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00008.png",
+        "sha256": "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00008.png",
+        "sha256": "2bf1b7c6c35fd8a6c59b0e8de7c212689fdf2f11c211442d8dfb0fb29514a96d"
+      },
+      "gt_xy": [
+        60.37735849056604,
+        63.79245283018868
+      ],
+      "gt_pixels": 53,
+      "mean_gt_gray": 61.20754716981132
+    },
+    {
+      "frame": 9,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00009.png",
+        "sha256": "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00009.png",
+        "sha256": "ce1d81a90d088d77759a1a51866ba765952d1a037d09e9d9516befc6f094f289"
+      },
+      "gt_xy": [
+        60.81967213114754,
+        67.60655737704919
+      ],
+      "gt_pixels": 61,
+      "mean_gt_gray": 61.42622950819672
+    },
+    {
+      "frame": 10,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00010.png",
+        "sha256": "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00010.png",
+        "sha256": "5f2ab939c9f102d5b7789529070336007b9b147687f17eee1374f45edf254735"
+      },
+      "gt_xy": [
+        62.484375,
+        67.125
+      ],
+      "gt_pixels": 64,
+      "mean_gt_gray": 60.984375
+    },
+    {
+      "frame": 11,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00011.png",
+        "sha256": "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00011.png",
+        "sha256": "3bc2f484a892db8f3c0c86d29132b1c0ff83c4024821f953c1c3a9fc039f3380"
+      },
+      "gt_xy": [
+        60.34848484848485,
+        66.06060606060606
+      ],
+      "gt_pixels": 66,
+      "mean_gt_gray": 61.09090909090909
+    },
+    {
+      "frame": 12,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00012.png",
+        "sha256": "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00012.png",
+        "sha256": "2738719489ee6582b1b4dd58c15eb046b4973d4edec7d6e929754242468355af"
+      },
+      "gt_xy": [
+        62.51851851851852,
+        66.85185185185185
+      ],
+      "gt_pixels": 54,
+      "mean_gt_gray": 60.7962962962963
+    },
+    {
+      "frame": 13,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00013.png",
+        "sha256": "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00013.png",
+        "sha256": "6ab2cae40f16ededbb8a903e539729efc9b8a3630a995ed15871de05d0b33ca6"
+      },
+      "gt_xy": [
+        61.945205479452056,
+        68.10958904109589
+      ],
+      "gt_pixels": 73,
+      "mean_gt_gray": 60.78082191780822
+    },
+    {
+      "frame": 14,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00014.png",
+        "sha256": "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00014.png",
+        "sha256": "d2ea53b4e763ff5bb0c830c70f84e8e6f625a00458a3757ff913ee239eb309f8"
+      },
+      "gt_xy": [
+        63.0,
+        68.53333333333333
+      ],
+      "gt_pixels": 60,
+      "mean_gt_gray": 60.983333333333334
+    },
+    {
+      "frame": 15,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00015.png",
+        "sha256": "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00015.png",
+        "sha256": "6e95606f2e3260d6c18aa1b9a15abc9559d54a851d2a9dbd4085c7ea81de5f96"
+      },
+      "gt_xy": [
+        62.285714285714285,
+        66.91071428571429
+      ],
+      "gt_pixels": 56,
+      "mean_gt_gray": 60.875
+    },
+    {
+      "frame": 16,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00016.png",
+        "sha256": "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00016.png",
+        "sha256": "281d77d7454ab556118d6290d202c0ba81ea3962089baca7bc2b4f7907482fac"
+      },
+      "gt_xy": [
+        62.03508771929825,
+        68.29824561403508
+      ],
+      "gt_pixels": 57,
+      "mean_gt_gray": 61.05263157894737
+    },
+    {
+      "frame": 17,
+      "image": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/images/00017.png",
+        "sha256": "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3"
+      },
+      "mask": {
+        "file": "data/public/NUDT-MIRSDT/Sequence34/masks/00017.png",
+        "sha256": "d6c77b9f2ff541af7719edc5f7e40751a91a158de44a9af0b9cddce97417cf03"
+      },
+      "gt_xy": [
+        63.4264705882353,
+        70.01470588235294
+      ],
+      "gt_pixels": 68,
+      "mean_gt_gray": 61.161764705882355
+    }
+  ],
+  "top": {
+    "crop_xyxy_half_open": [
+      46,
+      53,
+      77,
+      84
+    ],
+    "method": "nearest-neighbor magnification; one linear grayscale per entire 7-frame clip fixed at min/max over all 7 crops, no per-frame normalization; exact native mask boundary overlaid only for presentation. Native radiance intensity in source images is unchanged.",
+    "display_range_native_DN": [
+      58,
+      63
+    ]
+  },
+  "bottom": {
+    "models": {
+      "Msep": {
+        "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/logits/Sequence34_00009.npy",
+        "sha256": "8164b3ba5190c74d320d9cb0588a366b5e6cc9514200af5984c773de4673f191",
+        "metrics": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/metrics.json",
+        "threshold": 10.253172874450684,
+        "tp": 1,
+        "fp_full_frame": 1,
+        "matched_xy": [
+          61,
+          67
+        ],
+        "accepted_xy": [
+          [
+            58,
+            63
+          ],
+          [
+            61,
+            67
+          ]
+        ],
+        "archived_gt_xy": [
+          60.81967213114754,
+          67.60655737704919
+        ]
+      },
+      "Mraw": {
+        "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/logits/Sequence34_00009.npy",
+        "sha256": "d84a683465459406c406929711868cb6f141a2a4d90ad796e870750b382a108f",
+        "metrics": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/metrics.json",
+        "threshold": 7.899676322937012,
+        "tp": 1,
+        "fp_full_frame": 1,
+        "matched_xy": [
+          62,
+          67
+        ],
+        "accepted_xy": [
+          [
+            58,
+            63
+          ],
+          [
+            62,
+            67
+          ]
+        ],
+        "archived_gt_xy": [
+          60.81967213114754,
+          67.60655737704919
+        ]
+      },
+      "Mint": {
+        "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/logits/Sequence34_00009.npy",
+        "sha256": "6391bae3b3d8c2ca20ff4fdda2b2f74c0d581165d7af38d1fdfe6649c231f1cc",
+        "metrics": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/metrics.json",
+        "threshold": 8.238456726074219,
+        "tp": 0,
+        "fp_full_frame": 1,
+        "matched_xy": null,
+        "accepted_xy": [
+          [
+            58,
+            64
+          ]
+        ],
+        "archived_gt_xy": [
+          60.81967213114754,
+          67.60655737704919
+        ]
+      }
+    },
+    "source": "pre-existing 6000 step logits; ONLY center frame has model predictions in the figure. Displayed 6–8 and 10–12 are genuine input images with source masks.",
+    "scale": "shared [-10,30], clipped; same fixed local 31x31 crop",
+    "operating_rule": "Per model separate logit threshold selected at a shared <=1 FP/frame aggregate budget on 32 monitor frames; all matched/accepted peaks in these two instances fall within crop."
+  }
+}

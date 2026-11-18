@@ -1,0 +1,116 @@
+{
+  "source": "组会汇报/2026-11-19/连续帧补充分析/provenance.json",
+  "source_sha256": "18fb69a1061b449991a008208ea9e9849109c07d8375488b2e28c1f513b08452",
+  "gif_sha256": "f7810f7456c5e25145d0db57cb3751c60204c76760631c0e42b71e0f359c4182",
+  "n_frames": 6,
+  "duration_ms_each": [
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200
+  ],
+  "repeating": true,
+  "size_wh": [
+    1140,
+    720
+  ],
+  "frame_ids": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "sequences": [
+    "Sequence45",
+    "Sequence34"
+  ],
+  "display_crops_xyxy": {
+    "Sequence45": [
+      122,
+      121,
+      153,
+      152
+    ],
+    "Sequence34": [
+      46,
+      53,
+      77,
+      84
+    ]
+  },
+  "per_sequence_native_gray_minmax": {
+    "Sequence45": [
+      132,
+      255
+    ],
+    "Sequence34": [
+      58,
+      63
+    ]
+  },
+  "only_roi_center_detections": true,
+  "source_seed": 46,
+  "source_step": 6000,
+  "source_analysis_size": {
+    "native_logits_side": 64,
+    "accepted_interior_side": 56,
+    "display_side": 31
+  },
+  "shared_logit_color_range": [
+    -10,
+    30
+  ],
+  "data_checks": [
+    "24 native 64x64 logit tiles match source SHA-256 and score at each recorded peak",
+    "12 distinct input raw PNGs and GT masks hash to source identifiers",
+    "original mask centroids match archived GT",
+    "matched distance <=3 native pixels; all accepted peaks within 31x31 viewport",
+    "GIF palette is fixed across all frames; durations verified from reopened GIF"
+  ],
+  "frozen_thresholds": {
+    "Mraw": 7.899676322937012,
+    "Mint": 8.238456726074219
+  },
+  "hits_by_six_frames": {
+    "Sequence45": {
+      "Mraw": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "Mint": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "Sequence34": {
+      "Mraw": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "Mint": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  }
+}

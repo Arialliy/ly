@@ -10,6 +10,7 @@ import math
 import os
 from pathlib import Path
 import random
+import re
 from statistics import mean
 import tempfile
 from time import perf_counter
@@ -262,7 +263,7 @@ def _save_state(folder, model, optimizer, context, journal, step, device, parent
     return checksum
 
 
-def _latest(folder, context, target, initial_sha):
+def _latest(folder, context, target, initial_sha, root_step=0):
     json_context = json.loads(json.dumps(context))
     previous_sha = initial_sha
     latest = None
@@ -272,15 +273,99 @@ def _latest(folder, context, target, initial_sha):
         _check(sidecar == _state_path(folder,n).with_suffix(".json") and saved["identity"] == json_context
                and saved["parent_checkpoint_sha256"] == previous_sha, f"Checkpoint chain diverged at {sidecar}")
         if latest is None:
-            _check(n == 0, "Missing initial checkpoint in archive")
+            _check(n == root_step, "First checkpoint does not match the declared start of this run")
         else:
             previous_step = latest["step"]
-            _check(n == (8 if previous_step == 0 else (previous_step//RECOVERY_INTERVAL+1)*RECOVERY_INTERVAL),
+            first_update = root_step + 1 if root_step else 8
+            _check(n == (first_update if previous_step == root_step else (previous_step//RECOVERY_INTERVAL+1)*RECOVERY_INTERVAL),
                    f"Skipped or unordered checkpoint between {previous_step} and {n}")
         previous_sha = saved["checkpoint_sha256"]
         latest = saved
         _check(n <= target, "Requested endpoint precedes the newest checkpoint")
     return latest
+
+
+def _journal_prefix_sha(path, step):
+    digest = hashlib.sha256()
+    with path.open("rb") as src:
+        for _ in range(step):
+            data = src.readline()
+            _check(data.endswith(b"\n"), f"Truncated inherited update log: {path}")
+            digest.update(data)
+    return digest.hexdigest()
+
+
+def _migration_source(run, protocol, folder, mode, seed):
+    migration = protocol.get("migration")
+    if migration is None:
+        return None
+    _check(set(migration["modes"]) == {"Msep","Mraw","Mint"} and seed == 46,
+           "A chunk migration must bind all three paired evidence models")
+    if mode == "M0":
+        return None
+    name = migration["parent_run_id"]
+    _check(isinstance(name, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", name)
+           and name != run.name, "Invalid migration parent")
+    parent = run.parent/name
+    step = migration["common_step"]
+    _check(type(step) is int and 0 < step < protocol["initial_steps"] and step % RECOVERY_INTERVAL == 0,
+           "Migration must start at a committed common recovery checkpoint")
+    protocol_sha = migration["parent_protocol_sha256"]
+    execution_sha = migration["parent_execution_binding_sha256"]
+    _check(protocol_sha == _sha(parent/"protocol.json") and execution_sha == _sha(parent/"execution_binding.json"),
+           "Frozen parent protocol or execution lock changed")
+    original = _read(parent/"protocol.json")
+    binding = _read(parent/"execution_binding.json")
+    _check(original["run_id"] == binding["run_id"] == name and binding["common_protocol_sha256"] == protocol_sha
+           and binding["can_launch_training"] is True and original["seeds"] == protocol["seeds"] == [46]
+           and original["schedule_sha256"] == protocol["schedule_sha256"]
+           and original["initialization"] == protocol["initialization"]
+           and original["diagnostics_sha256"] == protocol["diagnostics_sha256"],
+           "Parent identity, paired schedule, initial weights or diagnostic panel mismatch")
+    origin = identity(original,mode,seed,protocol_sha256=protocol_sha,execution_sha256=execution_sha)
+    source_folder = parent/mode/f"seed{seed}"
+    checkpoint = _state_path(source_folder,step)
+    sidecar = checkpoint.with_suffix(".json")
+    contract = migration["modes"][mode]
+    checksum = contract["checkpoint_sha256"]
+    _check(_sha(checkpoint) == checksum and _sha(sidecar) == contract["sidecar_sha256"],
+           "Parent boundary did not match the frozen checkpoint and sidecar digests")
+    record = _read(sidecar)
+    _check(record["step"] == step and record["checkpoint_sha256"] == checksum
+           and record["identity"] == json.loads(json.dumps(origin)),
+           "Parent sidecar has the wrong model, protocol or update boundary")
+    prefix_sha = contract["journal_prefix_sha256"]
+    _check(_journal_prefix_sha(source_folder/"updates.jsonl",step) == prefix_sha
+           and _journal_prefix_sha(folder/"updates.jsonl",step) == prefix_sha,
+           "Inherited updates must be byte-identical to the parent checkpoint prefix")
+    return {"step":step, "parent":name, "checkpoint":checkpoint, "checksum":checksum,
+            "source_identity":origin, "journal":{"updates":step, "sha256":prefix_sha}}
+
+
+def _actual_chunks(model):
+    ag = model.video_aggregator
+    return {"query_chunk":ag.query_chunk, "velocity_chunk":ag.velocity_chunk, "checkpoint_chunks":ag.checkpoint_chunks}
+
+
+def _publish_first_update(folder, source, context, journal):
+    """Emit the actual first child update only after a durable checkpoint, including after interruption."""
+    step = source["step"] + 1
+    row = journal.last_update
+    _check(row["step"] == step and row["evidence_runtime"] ==
+           {k:context["evidence_runtime"][k] for k in ("query_chunk","velocity_chunk","checkpoint_chunks")},
+           "The observed first child update did not use the frozen evidence chunks")
+    receipt = {"step":step, "mode":context["mode"], "seed":context["seed"], "run_id":context["run_id"],
+               "protocol_sha256":context["protocol_sha256"], "execution_binding_sha256":context["execution_sha256"],
+               "source_run_id":source["parent"], "source_step":source["step"], "source_checkpoint_sha256":source["checksum"],
+               "root_checkpoint_sha256":_sha(_state_path(folder,source["step"])),
+               "checkpoint_sha256":_sha(_state_path(folder,step)), "journal":journal.prefix(),
+               "inherited_journal":source["journal"], "schedule_sha256":context["schedule_sha256"], "update":row}
+    path = folder/"migration_first_update.json"
+    if path.exists():
+        _check(_read(path) == receipt, "First child update differs from its published receipt")
+    else:
+        _write(path,receipt)
+    print(f"S4 {context['mode']} migrated at {source['step']}, verified update {step}: {row['evidence_runtime']}", flush=True)
 
 
 def _snapshot(run, p, model, mode, seed, step, checksum, folder, dataset, lookup, device, journal):
@@ -363,8 +448,11 @@ def train(run, p, folder, mode, seed, target, context, device):
     dataset = MaskClipDataset(_read(manifest), PROJECT, "train")
     lookup = {v:i for i,v in enumerate(dataset.centers)}
     _check(len(lookup) == len(dataset) == 6048, "Unexpected S4 training population")
-    last_sha = p["initialization"][str(seed)]["sha256"]
-    latest = _latest(folder,context,target,last_sha)
+    source = _migration_source(run,p,folder,mode,seed)
+    root_step = source["step"] if source else 0
+    _check(not source or target > root_step, "A migrated run cannot retrain its immutable prefix")
+    last_sha = source["checksum"] if source else p["initialization"][str(seed)]["sha256"]
+    latest = _latest(folder,context,target,last_sha,root_step)
     extra = None
     if latest:
         cursor, last_sha = latest["step"], latest["checkpoint_sha256"]
@@ -372,25 +460,45 @@ def train(run, p, folder, mode, seed, target, context, device):
         _check(state["step"] == state["next_sample_index"] == cursor, "Wrong restored update cursor")
         _check(state["parent_checkpoint_sha256"] == latest["parent_checkpoint_sha256"], "Wrong checkpoint parent")
         extra = state["extra"]
+        if source and cursor > root_step+1:
+            receipt = _read(folder/"migration_first_update.json")
+            _check(receipt["step"] == root_step+1 and receipt["source_checkpoint_sha256"] == source["checksum"]
+                   and receipt["checkpoint_sha256"] == _sha(_state_path(folder,root_step+1)),
+                   "Missing or inconsistent first child update")
+    elif source:
+        from .s4_checkpoints import restore_chunk_boundary
+        cursor = root_step
+        model, optimizer, state = restore_chunk_boundary(source["checkpoint"], source["checksum"],
+                    source_identity=source["source_identity"], target_identity=context, expected_step=cursor, device=device)
+        extra = state["extra"]
+        _check(state["next_sample_index"] == state["step"] == cursor and extra["journal"] == source["journal"],
+               "Parent checkpoint and inherited journal disagree")
     else:
         cursor = 0
         model = initial_model(run,p,mode,seed,device)
         optimizer = make_optimizer(model)
     with _journal(folder, extra, cursor, schedule["updates"]) as journal:
         if latest is None:
-            last_sha = _save_state(folder,model,optimizer,context,journal,0,device,last_sha)
+            last_sha = _save_state(folder,model,optimizer,context,journal,cursor,device,last_sha)
         groups = _group_parameters(model)
         for step in range(cursor, target+1):
             if step > cursor:
+                chunks = _actual_chunks(model) if source and step == root_step+1 else None
                 row = _optimize(model,optimizer,groups,dataset,lookup,schedule["updates"][step-1],device)
+                if chunks:
+                    _check(chunks == _actual_chunks(model), "Chunk settings changed during the first child update")
+                    row["evidence_runtime"] = chunks
                 journal.append(row)
                 if step <= 8 or step % 25 == 0:
                     _write(folder/"progress.json", {"phase":"training", "mode":mode, "seed":seed,"step":step,
                            "target":target, "utc":_stamp(), "last_update":row})
-            checkpoint_due = step == 8 or step % RECOVERY_INTERVAL == 0
+            first_child_update = bool(source and step == root_step+1)
+            checkpoint_due = first_child_update or step == 8 or step % RECOVERY_INTERVAL == 0
             if checkpoint_due and step > cursor:
                 last_sha = _save_state(folder,model,optimizer,context,journal,step,device,last_sha)
-            if checkpoint_due:
+            if first_child_update:
+                _publish_first_update(folder,source,context,journal)
+            if checkpoint_due and (not source or step > root_step):
                 _snapshot(run,p,model,mode,seed,step,last_sha,folder,dataset,lookup,device,journal)
             if step == target or (step == 8 and not (folder/"training_8.json").exists()):
                 model, optimizer = _verify_resume(model,optimizer,_state_path(folder,step),last_sha,context,device,

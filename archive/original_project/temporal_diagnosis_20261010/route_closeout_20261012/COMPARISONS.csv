@@ -1,4 +1,0 @@
-comparison,O_M,O_unmatched_components,O_positive_pixels_outside_boxes,O_unmatched_component_area_sum,O_low_all_05_matched,S_M,S_unmatched_components,S_positive_pixels_outside_boxes,S_unmatched_component_area_sum,S_low_all_05_matched
-E1-E0,-16,-1377,1589,-5400,-16,-45,-1396,1544,-3748,-35
-E2-E1,15,1330,-1554,5060,14,47,1334,-1495,3963,38
-E2-E0,-1,-47,35,-340,-2,2,-62,49,215,3

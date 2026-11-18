@@ -71,7 +71,11 @@ def materialized_inputs(run, protocol):
         init["file"]: init["sha256"], init["tensors"]: init["tensors_sha256"],
     })
     audit = read(run / "schedule_verification.json")
-    check(audit["status"] == "PASS" and audit["protocol_sha256"] == artifacts["protocol.json"]
+    audited_protocol = artifacts["protocol.json"]
+    if "migration" in protocol:
+        from .s4_migrate import verify_parent
+        audited_protocol = verify_parent(run, protocol)
+    check(audit["status"] == "PASS" and audit["protocol_sha256"] == audited_protocol
           and audit["schedule_sha256"] == artifacts["schedule_46.json"], "Invalid schedule audit")
     artifacts["schedule_verification.json"] = sha(run / "schedule_verification.json")
     check_files(run, artifacts)
@@ -96,6 +100,8 @@ def verify_execution(run_dir):
 
 def source_paths(protocol):
     local = set(WORKER_FILES) | set(protocol["code_sha256"])
+    if "migration" in protocol:
+        local.update(("checks/s4_migrate.py", "checks/s4_lineage.py", "checks/s4_milestones.py"))
     local.update(k for k in protocol["prerequisite_sha256"] if k.endswith((".py", ".yaml")))
     # Bind the whole small production module sets, including imported utilities.
     for directory in ("models", "geometry", "data"):

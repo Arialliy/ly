@@ -1,9 +1,0 @@
-{
-  "README.md": "0dc222cf4deaaa49f09ae425ad6b18ef1e15355dfe9cb23e223476a4c0fc7b3e",
-  "TEST_ATTEMPT_1.xml": "65afb24ed72bc3a5bc5c1f7bcaa693a2fb06a5b9c4fbe0bc3d266cc6bb4ce737",
-  "TEST_RESULTS.xml": "2655bc66e6dfb4b5fb05fa07675e92c69b78ef224dfbbe971b372e84c4396241",
-  "VALIDATION.json": "66d731cdc96896d15acbb972d098a74a4cdf73ffb607e7e3006720b346f6833d",
-  "segments.py": "0760926a93be1309c5419ca5f6cc5d3fbeea6ebdbf94a5cdd5bc4c5f735119aa",
-  "temporal_risk.py": "6e8343c7d61e5a7d18358369bf546ef6cab0079a917019a653f8636c091dc187",
-  "test_reference.py": "20fee29268e7930223463f2c0dc912dfb1b950e194e5ef14cb4677ae0b39bf6e"
-}

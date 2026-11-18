@@ -1,7 +1,13 @@
 {
-  "status": "TRAINING",
-  "pid": 2007525,
-  "utc": "2026-11-18T14:57:56.731102+00:00",
-  "step": 24000,
-  "seed": 46
+  "status": "SUPERSEDED_AT_COMMON_CHECKPOINT",
+  "step": 600,
+  "seed": 46,
+  "successor": "s4_24k_seed46_q256v81_20261118_02",
+  "last_logged_updates": {
+    "Msep": 602,
+    "Mraw": 602,
+    "Mint": 602
+  },
+  "previous_state": "handover_q256v81/state.json",
+  "utc": "2026-11-18T15:31:53.198973+00:00"
 }

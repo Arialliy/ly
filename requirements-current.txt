@@ -1,10 +1,8 @@
-# Versions observed in the verified current S/T execution image.
-# Torch used CUDA build 2.7.0+cu128; reuse the pinned image for the exact stack.
-# This is not a full lock for every standalone author training entry point.
+# Selected package versions in the S4 runtime. See AGENTS.md for the exact Docker image.
+# The image includes the CUDA 12.8 build of PyTorch.
 torch==2.7.0
 numpy==2.2.5
 scipy==1.16.2
 matplotlib==3.11.2
 Pillow==11.0.0
 pytest==8.3.5
-# Optional author bare-LFP checker only: pytorch-wavelets==1.3.0, PyWavelets==1.8.0.

@@ -1,0 +1,185 @@
+{
+  "purpose": "Independent short scheduling comparison on training data",
+  "device": "cuda",
+  "cpu_threads": 2,
+  "torch_version": "2.7.0+cu128",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "warmup_steps": 2,
+  "measured_steps": 8,
+  "seed": 46,
+  "source_step": 8,
+  "source_protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+  "execution_binding_sha256": "dbafc930e3fbb4fd8058c6a53999f15ba5d6734fe36aa40e7c67eecaab06e6cc",
+  "script_sha256": "e81ec5f35201ed32d95bdefec4478d99852ab9eda559e815bff3778ada50cea5",
+  "inputs_sha256": {
+    "Mint": "e3bbcfc39e77ab2a18ff754b71d3f5d72b36691c070e4b74e67e9ef268c5b147",
+    "Mraw": "af673693e8b093b1081336f9f3b80134943e4a8ad27de049f35071341b0a4528",
+    "Msep": "b2454df234726b0609e2e20ad64ea19174585964130577510b494f00a56b58c5"
+  },
+  "schedule_sha256": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
+  "ordered_rows": [
+    {
+      "source": "Sequence37",
+      "center": 49,
+      "kind": "positive",
+      "sample_role": "positive",
+      "core_xyxy": [
+        69,
+        83,
+        133,
+        147
+      ],
+      "step": 9,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence29",
+      "center": 48,
+      "kind": "random_background",
+      "sample_role": "random_background",
+      "core_xyxy": [
+        0,
+        172,
+        64,
+        236
+      ],
+      "step": 10,
+      "edge_priority": true
+    },
+    {
+      "source": "Sequence84",
+      "center": 34,
+      "kind": "positive",
+      "sample_role": "positive",
+      "core_xyxy": [
+        140,
+        27,
+        204,
+        91
+      ],
+      "step": 11,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence71",
+      "center": 29,
+      "kind": "random_background",
+      "sample_role": "random_background",
+      "core_xyxy": [
+        62,
+        104,
+        126,
+        168
+      ],
+      "step": 12,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence82",
+      "center": 37,
+      "kind": "positive",
+      "sample_role": "positive",
+      "core_xyxy": [
+        26,
+        46,
+        90,
+        110
+      ],
+      "step": 13,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence44",
+      "center": 79,
+      "kind": "empty_frame",
+      "sample_role": "empty_frame",
+      "core_xyxy": [
+        116,
+        26,
+        180,
+        90
+      ],
+      "step": 14,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence7",
+      "center": 56,
+      "kind": "positive",
+      "sample_role": "positive",
+      "core_xyxy": [
+        77,
+        24,
+        141,
+        88
+      ],
+      "step": 15,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence82",
+      "center": 44,
+      "kind": "random_background",
+      "sample_role": "random_background",
+      "core_xyxy": [
+        143,
+        10,
+        207,
+        74
+      ],
+      "step": 16,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence35",
+      "center": 57,
+      "kind": "positive",
+      "sample_role": "positive",
+      "core_xyxy": [
+        94,
+        26,
+        158,
+        90
+      ],
+      "step": 17,
+      "edge_priority": false
+    },
+    {
+      "source": "Sequence9",
+      "center": 49,
+      "kind": "random_background",
+      "sample_role": "random_background",
+      "core_xyxy": [
+        70,
+        174,
+        134,
+        238
+      ],
+      "step": 18,
+      "edge_priority": false
+    }
+  ],
+  "modes": [
+    "Mint",
+    "Mraw",
+    "Msep"
+  ],
+  "tolerance": {
+    "rtol": 0.0001,
+    "atol": 1e-05
+  },
+  "candidate_chunks": [
+    256,
+    81
+  ],
+  "baseline_chunks": [
+    64,
+    8
+  ],
+  "settings": "Identical seed46 checkpoint and AdamW per arm, FP32 deterministic, recomputation enabled.",
+  "timing": "Elapsed synchronized S4 _optimize: PNG decoding and transfers, forward/backward, mining/loss, AdamW, all per-step module diagnostics. One observer stores tensor references. Full checkpointing, periodic diagnostic/evaluation panels, journal fsync, observer snapshots and comparisons excluded.",
+  "memory": "CUDA max allocated from official _optimize with one arm resident. Detached references to core logits and original full masks are retained until the update completes. CPU memory is not measured.",
+  "trajectory": "First update starts from identical model and optimizer. Later updates include accumulated trajectory differences. Eight paired sequential updates per arm are descriptive, not independent replications.",
+  "cache": "Identical data read prior to each arm to reduce filesystem cache order effects; no samples are cached in Python for the timed updates.",
+  "rng": "CUDA replay restores the single saved CUDA RNG. CPU replay restores Python/NumPy/Torch CPU RNG and omits the unavailable CUDA stream; CPU performance applies only to this machine."
+}

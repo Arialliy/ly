@@ -21,6 +21,7 @@ import yaml
 from experiments.irstd_independent_v1.data.s4_core_schedule import diagnostic_cores, make_schedule, training_index
 from experiments.irstd_independent_v1.models.hypothesis_detector import HypothesisEvidenceDetector
 from experiments.irstd_independent_v1.models.video_baseline import VideoBaseline
+from experiments.irstd_independent_v1.engine.s4_models import training_chunks
 
 
 SEEDS = (46,)
@@ -141,8 +142,7 @@ def freeze(run_id):
     proposal.update(status="MATERIALIZED_AWAITING_EXECUTION_BINDING",can_launch_training=False,
                     user_override=override,design_document=str(DESIGN.relative_to(PROJECT)))
     runtime = proposal["evidence_runtime"]
-    require(runtime["query_chunk"] == 64 and runtime["velocity_chunk"] == 8
-            and runtime["checkpoint_chunks"] and not runtime["preserve_rng_state"], "Runtime settings changed")
+    training_chunks(runtime)
     require(proposal["sampling"]["schedule_generated_through_step"] == 36000
             and proposal["optimization"]["default_updates"] == 24000
             and proposal["optimization"]["extended_updates"] == 36000, "Unexpected budget")

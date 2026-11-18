@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="462" viewBox="0 0 1620 462">
+<rect width="100%" height="100%" fill="white"/>
+<polyline points="167,215 195,215 195,64 266,64" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="266.00,64.00 256.00,68.70 256.00,59.30" fill="#80969A"/>
+<polyline points="167,215 195,215 195,255 217,255" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="217.00,255.00 207.00,259.70 207.00,250.30" fill="#80969A"/>
+<polyline points="833,64 1288,64 1288,160" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="1288.00,160.00 1283.30,150.00 1292.70,150.00" fill="#80969A"/>
+<polyline points="412,255 438,255" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="438.00,255.00 428.00,259.70 428.00,250.30" fill="#80969A"/>
+<polyline points="645,255 672,255" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="672.00,255.00 662.00,259.70 662.00,250.30" fill="#80969A"/>
+<polyline points="885,255 917,255" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="917.00,255.00 907.00,259.70 907.00,250.30" fill="#80969A"/>
+<polyline points="1135,255 1170,255" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="1170.00,255.00 1160.00,259.70 1160.00,250.30" fill="#80969A"/>
+<polyline points="1403,220 1432,220" stroke="#80969A" fill="none" stroke-width="2.4"/>
+<polygon points="1432.00,220.00 1422.00,224.70 1422.00,215.30" fill="#80969A"/>
+<polyline points="537,321 537,419 989,419 989,326" stroke="#849A9B" fill="none" stroke-width="2.4"/>
+<polygon points="989.00,326.00 993.70,336.00 984.30,336.00" fill="#849A9B"/>
+<text x="767" y="438" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#526E75">同时保留整段与候选速度处的有符号对齐小图</text>
+<rect x="4" y="165" width="163" height="110" rx="7" fill="#F8FAFA" stroke="#9EAFAD" stroke-width="1.6"/>
+<text x="85.5" y="194" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#193E49">17 帧视频</text>
+<text x="85.5" y="227" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526E75">逐帧红外灰度</text>
+<text x="85.5" y="254" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526E75">输入 H × W</text>
+<rect x="266" y="9" width="567" height="116" rx="7" fill="#F5F8F9" stroke="#A6B8BF" stroke-width="1.6"/>
+<text x="549.5" y="38" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#193E49">中心帧空间编码器 · 设计</text>
+<text x="549.5" y="71" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526E75">灰度 + 局部对比度 → 三层 3×3 空间卷积</text>
+<text x="549.5" y="98" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">膨胀率 1、2、4，保留 16 通道全分辨率特征</text>
+<text x="1014" y="42" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526E75">16 通道外观</text>
+<rect x="217" y="187" width="195" height="136" rx="7" fill="#F1F6F5" stroke="#80A6A3" stroke-width="1.6"/>
+<text x="314.5" y="216" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#20564F">速度提议</text>
+<text x="314.5" y="249" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">逐帧归一化</text>
+<text x="314.5" y="276" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">两组帧互换检验</text>
+<text x="314.5" y="303" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">保留静止与移动</text>
+<rect x="438" y="187" width="207" height="136" rx="7" fill="#F1F6F5" stroke="#80A6A3" stroke-width="1.6"/>
+<text x="541.5" y="216" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#20564F">沿速度对齐</text>
+<text x="541.5" y="249" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">5×5 邻近速度</text>
+<text x="541.5" y="276" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">各取 3×3 小图</text>
+<text x="541.5" y="303" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526E75">短、中、长各 4 帧</text>
+<rect x="672" y="187" width="213" height="136" rx="7" fill="#E4F4F0" stroke="#278B7B" stroke-width="1.6"/>
+<text x="778.5" y="216" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#086E65">跨度关系算子</text>
+<text x="778.5" y="249" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">同跨度比较邻速</text>
+<text x="778.5" y="276" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">保留短跨度 Q</text>
+<text x="778.5" y="303" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">及两次跨度变化</text>
+<rect x="917" y="187" width="218" height="136" rx="7" fill="#F5F8F9" stroke="#A6B8BF" stroke-width="1.6"/>
+<text x="1026.0" y="216" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#193E49">速度网格编码器</text>
+<text x="1026.0" y="249" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">共享卷积与投影</text>
+<text x="1026.0" y="276" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#526E75">编码后合并两次检验</text>
+<text x="1026.0" y="303" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">静止 8 + 移动 8</text>
+<rect x="1170" y="160" width="233" height="148" rx="7" fill="#F5F8F9" stroke="#A6B8BF" stroke-width="1.6"/>
+<text x="1286.5" y="189" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#193E49">逐像素检测头</text>
+<text x="1286.5" y="222" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526E75">16 + 8 + 8 + 2</text>
+<text x="1286.5" y="249" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">两项为可用标记</text>
+<text x="1286.5" y="276" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526E75">1×1 卷积 34→16→1</text>
+<rect x="1432" y="165" width="180" height="110" rx="7" fill="#F8FAFA" stroke="#9EAFAD" stroke-width="1.6"/>
+<text x="1522.0" y="194" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#193E49">中心帧热图</text>
+<text x="1522.0" y="227" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526E75">sigmoid 概率</text>
+<text x="1522.0" y="254" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526E75">输出 H × W</text>
+<text x="429" y="154" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#366F65">复用现有几何采样</text>
+<text x="779" y="154" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#087C73">已通过算子验收</text>
+<text x="1040" y="154" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#526E75">设计</text>
+<text x="1235" y="134" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#526E75">设计</text>
+</svg>

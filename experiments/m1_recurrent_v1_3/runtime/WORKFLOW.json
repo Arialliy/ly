@@ -1,9 +1,0 @@
-{
-  "status": "RUNNING",
-  "pid": 1040399,
-  "start_unix": 1791983184.0560184,
-  "worker_sha256": "da5208fe2245f07dc97607097c1ff2fdae41f5f6853adcc8172b7b5522a86f9d",
-  "protocol_sha256": "ffd7e09f92708bed1899a50bd268e72c17e646915ad17b90030b17b8ce8b3acd",
-  "train_bankcurrent": "RUNNING",
-  "train_bankhistory": "RUNNING"
-}

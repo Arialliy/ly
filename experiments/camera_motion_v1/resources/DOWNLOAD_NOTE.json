@@ -1,6 +1,0 @@
-{
-  "stopped_unused_full_repo_download": true,
-  "removed_own_partial_bytes": 177545216,
-  "reason": "All12actuallyusedDKMsourcefiles verified against official pinned git blobs; full archive unnecessary. Matching jobs unchanged.",
-  "utc": "2026-10-12T14:54:41.066119+00:00"
-}

@@ -1,7 +1,0 @@
-group,object_frames,sequences,sequence_tracks,observation_events,strict_stable_controls
-all_small,5200,2,130,,422
-gain,74,2,21,40,0
-loss,54,2,21,36,0
-common_success,646,2,43,139,422
-all11_failure,4391,2,123,759,0
-both_failure_with_window_opportunity,35,2,18,27,0

@@ -19,14 +19,27 @@ from .checkpoints import configure_determinism, read_checkpoint, require_exact
 MODES = {"M0": None, "Msep": "additive_only", "Mraw": "raw_joint", "Mint": "interaction"}
 
 
-def make_model(mode):
+def training_chunks(runtime):
+    """The legacy default and both admitted training schedules share S3 recomputation."""
+    if runtime is None:
+        return 64, 8
+    query, velocity = runtime["query_chunk"], runtime["velocity_chunk"]
+    if (type(query) is not int or type(velocity) is not int or
+            (query, velocity) not in ((64, 8), (256, 81)) or
+            runtime["checkpoint_chunks"] is not True or runtime["preserve_rng_state"] is not False):
+        raise ValueError("Unsupported S4 chunk or activation-recomputation configuration")
+    return query, velocity
+
+
+def make_model(mode, *, evidence_runtime=None):
     if mode not in MODES:
         raise ValueError(f"Unknown S4 model {mode!r}")
+    query, velocity = training_chunks(evidence_runtime)
     if mode == "M0":
         model = VideoBaseline()
     else:
-        model = HypothesisEvidenceDetector(mode=MODES[mode], query_chunk=64,
-                                           velocity_chunk=8, checkpoint_chunks=True)
+        model = HypothesisEvidenceDetector(mode=MODES[mode], query_chunk=query,
+                                           velocity_chunk=velocity, checkpoint_chunks=True)
     if (not all(p.requires_grad for p in model.parameters()) or
             sum(p.numel() for p in model.parameters()) != (22921 if mode == "M0" else 23945)):
         raise ValueError(f"Unexpected trainable layers for {mode}")
@@ -55,7 +68,7 @@ def initial_model(run_dir, protocol, mode, seed, device):
     if hashes != witness["tensors"][mode]:
         raise ValueError(f"Initialization tensor identity mismatch for {mode}")
     configure_determinism()
-    model = make_model(mode)
+    model = make_model(mode, evidence_runtime=protocol["proposal"]["evidence_runtime"])
     model.load_state_dict(weights, strict=True)
     require_exact(weights, model.state_dict(), "paired initialization")
     random.seed(seed)

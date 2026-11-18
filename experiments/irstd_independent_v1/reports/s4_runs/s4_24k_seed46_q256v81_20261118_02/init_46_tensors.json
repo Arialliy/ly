@@ -1,0 +1,1067 @@
+{
+  "seed": 46,
+  "tensors": {
+    "M0": {
+      "frame_encoder.layers.0.weight": {
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "40e9ea0cdacb7d07b1f627957d769403bd4eda9c44a24cb4ba69737ec66c899f"
+      },
+      "frame_encoder.layers.0.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc27a8f7e0ae607809b5e874dccfc63e9f73baf2d6b893e527a11f6fecf0836d"
+      },
+      "frame_encoder.layers.1.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a8e7d76506bd76a901f310a925ec5db192d407243cd31c537b95e220c0723906"
+      },
+      "frame_encoder.layers.1.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d3b4ffc8a71429ba5f4308f32a097b55adf8d31559792b5e97e7bf32dccf6403"
+      },
+      "video_aggregator.temporal.0.weight": {
+        "shape": [
+          16,
+          11,
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1b530e7a10b5fde09900ba338c1855a46d2ede9b0c03e9bcf4743b85b5af382f"
+      },
+      "video_aggregator.temporal.0.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32",
+        "sha256": "86cef503ecd04e14ebc948b2ecbd0a66b89bb10751ab4228f3d56869babd40b4"
+      },
+      "video_aggregator.temporal.1.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4121f6bf0a4e4c3a1deee974cec062b7b8c5e8ba567a4fcd1c29aa6de5b1b3ab"
+      },
+      "video_aggregator.temporal.1.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7ed1244881762e46617cb84bdb5ca8036f3cf189053b5587ce35af586b2b290f"
+      },
+      "video_aggregator.temporal.2.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e937daed57be1c3f3580e08233fa3e3897343471da1f2ccba4af49f39cc1ea3c"
+      },
+      "video_aggregator.temporal.2.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32",
+        "sha256": "816cc783bcb10e4802a9b4e5d8bf1d19c116949e84136f538e32a33778c9a41a"
+      },
+      "video_aggregator.temporal.3.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cd6395c086a0b1ef9461c848ef6de75fc85f1e2da9f3dae20987ac48a68b1379"
+      },
+      "video_aggregator.temporal.3.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32",
+        "sha256": "916747f88534ab756aa2427fee8c40666f0f171710e16f8f361b9565b722c20f"
+      },
+      "video_aggregator.fusion.weight": {
+        "shape": [
+          32,
+          25,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bf524c15d57318b768aab119d046b639806d95120f866d4d4bc3bab36cd04ce6"
+      },
+      "video_aggregator.fusion.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "65fef7de8992c9961b1ecfd6be593009eb66ebf7dfa7637eefc59a1dec5ede4d"
+      },
+      "spatial_decoder.layers.0.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "87715f20b26b75b69197f2f7ceebb4f06bc5b013e596f662ffa3a2dbc29b15a7"
+      },
+      "spatial_decoder.layers.0.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fbf8db861cc293c9a0b3816680b3b519d9891f96080d30b35d21c51278092da2"
+      },
+      "spatial_decoder.layers.1.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8f31eecc818eee72f2baf7d3e42af37dd4654dee4e9a9be0e40bc5c3625b8d6d"
+      },
+      "spatial_decoder.layers.1.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "009d022c1a038115eb9ac489a56d6df4756dec4e52d152e8596d6da948e57484"
+      },
+      "detection_head.weight": {
+        "shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85f154d3a4f9c2daa526c54f7210ff17cbb847240ebb3f338a95eaec600ef409"
+      },
+      "detection_head.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f113a5d9e6d41209b2268a05aaebb6cce19e22fb5a4490e16eac14429e927923"
+      }
+    },
+    "Msep": {
+      "frame_encoder.layers.0.weight": {
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "40e9ea0cdacb7d07b1f627957d769403bd4eda9c44a24cb4ba69737ec66c899f"
+      },
+      "frame_encoder.layers.0.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc27a8f7e0ae607809b5e874dccfc63e9f73baf2d6b893e527a11f6fecf0836d"
+      },
+      "frame_encoder.layers.1.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a8e7d76506bd76a901f310a925ec5db192d407243cd31c537b95e220c0723906"
+      },
+      "frame_encoder.layers.1.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d3b4ffc8a71429ba5f4308f32a097b55adf8d31559792b5e97e7bf32dccf6403"
+      },
+      "video_aggregator.velocities_xy": {
+        "shape": [
+          9,
+          9,
+          2
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9dd3c6ad95db8761d31b21e8d342d139941ac5e25979cc559de5429759772da2"
+      },
+      "video_aggregator.encoder.amplitude.weight": {
+        "shape": [
+          8,
+          9
+        ],
+        "dtype": "torch.float32",
+        "sha256": "54e3be3d0e96072ce828b3733807c8d337b8685fb3f88b1f35d693c3ac0028ce"
+      },
+      "video_aggregator.encoder.amplitude.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3efe67195d15b96b40d0e983a49b1f9d3c9611853d279e4e9e4c9d25773958e1"
+      },
+      "video_aggregator.encoder.temporal.first.weight": {
+        "shape": [
+          8,
+          10,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85312253521982dda7180b50c0fa225231f4f98e52394350f89cadd87fd78719"
+      },
+      "video_aggregator.encoder.temporal.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bdb93d94b0543ad9e07ad9087a32527612f912a990450ed7b5d8c611bf0ae589"
+      },
+      "video_aggregator.encoder.temporal.second.weight": {
+        "shape": [
+          8,
+          8,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f58b4bac4516897dac68cf9ac78e936960b6c14fb0a62718afbd39c3fd29acbb"
+      },
+      "video_aggregator.encoder.temporal.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "741c05db4bffc2f2a7dec9d30c8663d3c958af152f41b6beb01760c645427493"
+      },
+      "video_aggregator.encoder.velocity.first.weight": {
+        "shape": [
+          8,
+          12,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5505965695ebde5ea9e25cf250abff03a3b80b23e2686206f704c183c7b1309d"
+      },
+      "video_aggregator.encoder.velocity.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e35b3e9a339ee1bd020a52877a24befb3c4eba181b1046fbafc5ad6eb087e32b"
+      },
+      "video_aggregator.encoder.velocity.second.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1858b4ca7177c2b082c0a50222a6c6304c3b70ff2f50170980d455f31d4b8b01"
+      },
+      "video_aggregator.encoder.velocity.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b8dd26d6be3318196306c4ff58b3778ee37527b64ae5bf03dfa2c1e5ce3e7146"
+      },
+      "video_aggregator.encoder.joint.project.weight": {
+        "shape": [
+          16,
+          9,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9c9ecbe2acfef754d516954931aac0aa11f177a635dca2e120071f7791072f66"
+      },
+      "video_aggregator.encoder.joint.coordinates.weight": {
+        "shape": [
+          16,
+          3,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d8ad55b260f0bb393a5c491152bd6410457af324e6e044052baa7493b9a9dac4"
+      },
+      "video_aggregator.encoder.joint.blocks.0.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f42c602d12ab95e6f14412272e915b552cf844f4f25ee01bd7bdadddbdaa7f25"
+      },
+      "video_aggregator.encoder.joint.blocks.0.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "144f8fa1f58f5a53e63f17502f9c03a42f5e7d47ce864dadde86b739922a0642"
+      },
+      "video_aggregator.encoder.joint.blocks.0.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c1a753b554a4343fea3e5f53f1bff54f3961941860957d50d4e33e6c56caa460"
+      },
+      "video_aggregator.encoder.joint.blocks.1.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7c87fd3c63a6b2db62a0d4e130c66a38c5f7737fe368acfe2afc3726707c75c9"
+      },
+      "video_aggregator.encoder.joint.blocks.1.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9faf616fc219af8f5aabb8d16e70c2e6610502194e513f2aa1fd93a915787e67"
+      },
+      "video_aggregator.encoder.joint.blocks.1.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aa98a207e358edb76b3d39b296dec47d238dfc4e5d4a4622dfff3cf67afe9cd1"
+      },
+      "video_aggregator.encoder.joint.score.weight": {
+        "shape": [
+          1,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "59ea2f499d73ae051e99a4cd0c1183a1704f68010736070ca61e7c0b6a7ec6bb"
+      },
+      "video_aggregator.encoder.fusion.weight": {
+        "shape": [
+          32,
+          49
+        ],
+        "dtype": "torch.float32",
+        "sha256": "03cec6197331830c9ae0bc59234d140daf3594b82f01ee9134f990b1f91cd2c5"
+      },
+      "video_aggregator.encoder.fusion.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ae4e952b78a58014108ef78dfc2701cea48f329399ade07ab8ecfb9c596c6b78"
+      },
+      "spatial_decoder.layers.0.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "87715f20b26b75b69197f2f7ceebb4f06bc5b013e596f662ffa3a2dbc29b15a7"
+      },
+      "spatial_decoder.layers.0.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fbf8db861cc293c9a0b3816680b3b519d9891f96080d30b35d21c51278092da2"
+      },
+      "spatial_decoder.layers.1.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8f31eecc818eee72f2baf7d3e42af37dd4654dee4e9a9be0e40bc5c3625b8d6d"
+      },
+      "spatial_decoder.layers.1.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "009d022c1a038115eb9ac489a56d6df4756dec4e52d152e8596d6da948e57484"
+      },
+      "detection_head.weight": {
+        "shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85f154d3a4f9c2daa526c54f7210ff17cbb847240ebb3f338a95eaec600ef409"
+      },
+      "detection_head.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f113a5d9e6d41209b2268a05aaebb6cce19e22fb5a4490e16eac14429e927923"
+      }
+    },
+    "Mraw": {
+      "frame_encoder.layers.0.weight": {
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "40e9ea0cdacb7d07b1f627957d769403bd4eda9c44a24cb4ba69737ec66c899f"
+      },
+      "frame_encoder.layers.0.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc27a8f7e0ae607809b5e874dccfc63e9f73baf2d6b893e527a11f6fecf0836d"
+      },
+      "frame_encoder.layers.1.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a8e7d76506bd76a901f310a925ec5db192d407243cd31c537b95e220c0723906"
+      },
+      "frame_encoder.layers.1.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d3b4ffc8a71429ba5f4308f32a097b55adf8d31559792b5e97e7bf32dccf6403"
+      },
+      "video_aggregator.velocities_xy": {
+        "shape": [
+          9,
+          9,
+          2
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9dd3c6ad95db8761d31b21e8d342d139941ac5e25979cc559de5429759772da2"
+      },
+      "video_aggregator.encoder.amplitude.weight": {
+        "shape": [
+          8,
+          9
+        ],
+        "dtype": "torch.float32",
+        "sha256": "54e3be3d0e96072ce828b3733807c8d337b8685fb3f88b1f35d693c3ac0028ce"
+      },
+      "video_aggregator.encoder.amplitude.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3efe67195d15b96b40d0e983a49b1f9d3c9611853d279e4e9e4c9d25773958e1"
+      },
+      "video_aggregator.encoder.temporal.first.weight": {
+        "shape": [
+          8,
+          10,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85312253521982dda7180b50c0fa225231f4f98e52394350f89cadd87fd78719"
+      },
+      "video_aggregator.encoder.temporal.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bdb93d94b0543ad9e07ad9087a32527612f912a990450ed7b5d8c611bf0ae589"
+      },
+      "video_aggregator.encoder.temporal.second.weight": {
+        "shape": [
+          8,
+          8,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f58b4bac4516897dac68cf9ac78e936960b6c14fb0a62718afbd39c3fd29acbb"
+      },
+      "video_aggregator.encoder.temporal.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "741c05db4bffc2f2a7dec9d30c8663d3c958af152f41b6beb01760c645427493"
+      },
+      "video_aggregator.encoder.velocity.first.weight": {
+        "shape": [
+          8,
+          12,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5505965695ebde5ea9e25cf250abff03a3b80b23e2686206f704c183c7b1309d"
+      },
+      "video_aggregator.encoder.velocity.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e35b3e9a339ee1bd020a52877a24befb3c4eba181b1046fbafc5ad6eb087e32b"
+      },
+      "video_aggregator.encoder.velocity.second.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1858b4ca7177c2b082c0a50222a6c6304c3b70ff2f50170980d455f31d4b8b01"
+      },
+      "video_aggregator.encoder.velocity.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b8dd26d6be3318196306c4ff58b3778ee37527b64ae5bf03dfa2c1e5ce3e7146"
+      },
+      "video_aggregator.encoder.joint.project.weight": {
+        "shape": [
+          16,
+          9,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9c9ecbe2acfef754d516954931aac0aa11f177a635dca2e120071f7791072f66"
+      },
+      "video_aggregator.encoder.joint.coordinates.weight": {
+        "shape": [
+          16,
+          3,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d8ad55b260f0bb393a5c491152bd6410457af324e6e044052baa7493b9a9dac4"
+      },
+      "video_aggregator.encoder.joint.blocks.0.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f42c602d12ab95e6f14412272e915b552cf844f4f25ee01bd7bdadddbdaa7f25"
+      },
+      "video_aggregator.encoder.joint.blocks.0.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "144f8fa1f58f5a53e63f17502f9c03a42f5e7d47ce864dadde86b739922a0642"
+      },
+      "video_aggregator.encoder.joint.blocks.0.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c1a753b554a4343fea3e5f53f1bff54f3961941860957d50d4e33e6c56caa460"
+      },
+      "video_aggregator.encoder.joint.blocks.1.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7c87fd3c63a6b2db62a0d4e130c66a38c5f7737fe368acfe2afc3726707c75c9"
+      },
+      "video_aggregator.encoder.joint.blocks.1.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9faf616fc219af8f5aabb8d16e70c2e6610502194e513f2aa1fd93a915787e67"
+      },
+      "video_aggregator.encoder.joint.blocks.1.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aa98a207e358edb76b3d39b296dec47d238dfc4e5d4a4622dfff3cf67afe9cd1"
+      },
+      "video_aggregator.encoder.joint.score.weight": {
+        "shape": [
+          1,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "59ea2f499d73ae051e99a4cd0c1183a1704f68010736070ca61e7c0b6a7ec6bb"
+      },
+      "video_aggregator.encoder.fusion.weight": {
+        "shape": [
+          32,
+          49
+        ],
+        "dtype": "torch.float32",
+        "sha256": "03cec6197331830c9ae0bc59234d140daf3594b82f01ee9134f990b1f91cd2c5"
+      },
+      "video_aggregator.encoder.fusion.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ae4e952b78a58014108ef78dfc2701cea48f329399ade07ab8ecfb9c596c6b78"
+      },
+      "spatial_decoder.layers.0.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "87715f20b26b75b69197f2f7ceebb4f06bc5b013e596f662ffa3a2dbc29b15a7"
+      },
+      "spatial_decoder.layers.0.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fbf8db861cc293c9a0b3816680b3b519d9891f96080d30b35d21c51278092da2"
+      },
+      "spatial_decoder.layers.1.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8f31eecc818eee72f2baf7d3e42af37dd4654dee4e9a9be0e40bc5c3625b8d6d"
+      },
+      "spatial_decoder.layers.1.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "009d022c1a038115eb9ac489a56d6df4756dec4e52d152e8596d6da948e57484"
+      },
+      "detection_head.weight": {
+        "shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85f154d3a4f9c2daa526c54f7210ff17cbb847240ebb3f338a95eaec600ef409"
+      },
+      "detection_head.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f113a5d9e6d41209b2268a05aaebb6cce19e22fb5a4490e16eac14429e927923"
+      }
+    },
+    "Mint": {
+      "frame_encoder.layers.0.weight": {
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "40e9ea0cdacb7d07b1f627957d769403bd4eda9c44a24cb4ba69737ec66c899f"
+      },
+      "frame_encoder.layers.0.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc27a8f7e0ae607809b5e874dccfc63e9f73baf2d6b893e527a11f6fecf0836d"
+      },
+      "frame_encoder.layers.1.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a8e7d76506bd76a901f310a925ec5db192d407243cd31c537b95e220c0723906"
+      },
+      "frame_encoder.layers.1.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d3b4ffc8a71429ba5f4308f32a097b55adf8d31559792b5e97e7bf32dccf6403"
+      },
+      "video_aggregator.velocities_xy": {
+        "shape": [
+          9,
+          9,
+          2
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9dd3c6ad95db8761d31b21e8d342d139941ac5e25979cc559de5429759772da2"
+      },
+      "video_aggregator.encoder.amplitude.weight": {
+        "shape": [
+          8,
+          9
+        ],
+        "dtype": "torch.float32",
+        "sha256": "54e3be3d0e96072ce828b3733807c8d337b8685fb3f88b1f35d693c3ac0028ce"
+      },
+      "video_aggregator.encoder.amplitude.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3efe67195d15b96b40d0e983a49b1f9d3c9611853d279e4e9e4c9d25773958e1"
+      },
+      "video_aggregator.encoder.temporal.first.weight": {
+        "shape": [
+          8,
+          10,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85312253521982dda7180b50c0fa225231f4f98e52394350f89cadd87fd78719"
+      },
+      "video_aggregator.encoder.temporal.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bdb93d94b0543ad9e07ad9087a32527612f912a990450ed7b5d8c611bf0ae589"
+      },
+      "video_aggregator.encoder.temporal.second.weight": {
+        "shape": [
+          8,
+          8,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f58b4bac4516897dac68cf9ac78e936960b6c14fb0a62718afbd39c3fd29acbb"
+      },
+      "video_aggregator.encoder.temporal.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "741c05db4bffc2f2a7dec9d30c8663d3c958af152f41b6beb01760c645427493"
+      },
+      "video_aggregator.encoder.velocity.first.weight": {
+        "shape": [
+          8,
+          12,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5505965695ebde5ea9e25cf250abff03a3b80b23e2686206f704c183c7b1309d"
+      },
+      "video_aggregator.encoder.velocity.first.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e35b3e9a339ee1bd020a52877a24befb3c4eba181b1046fbafc5ad6eb087e32b"
+      },
+      "video_aggregator.encoder.velocity.second.weight": {
+        "shape": [
+          8,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1858b4ca7177c2b082c0a50222a6c6304c3b70ff2f50170980d455f31d4b8b01"
+      },
+      "video_aggregator.encoder.velocity.second.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b8dd26d6be3318196306c4ff58b3778ee37527b64ae5bf03dfa2c1e5ce3e7146"
+      },
+      "video_aggregator.encoder.joint.project.weight": {
+        "shape": [
+          16,
+          9,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9c9ecbe2acfef754d516954931aac0aa11f177a635dca2e120071f7791072f66"
+      },
+      "video_aggregator.encoder.joint.coordinates.weight": {
+        "shape": [
+          16,
+          3,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d8ad55b260f0bb393a5c491152bd6410457af324e6e044052baa7493b9a9dac4"
+      },
+      "video_aggregator.encoder.joint.blocks.0.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f42c602d12ab95e6f14412272e915b552cf844f4f25ee01bd7bdadddbdaa7f25"
+      },
+      "video_aggregator.encoder.joint.blocks.0.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "144f8fa1f58f5a53e63f17502f9c03a42f5e7d47ce864dadde86b739922a0642"
+      },
+      "video_aggregator.encoder.joint.blocks.0.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c1a753b554a4343fea3e5f53f1bff54f3961941860957d50d4e33e6c56caa460"
+      },
+      "video_aggregator.encoder.joint.blocks.1.time.weight": {
+        "shape": [
+          16,
+          1,
+          5,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7c87fd3c63a6b2db62a0d4e130c66a38c5f7737fe368acfe2afc3726707c75c9"
+      },
+      "video_aggregator.encoder.joint.blocks.1.velocity.weight": {
+        "shape": [
+          16,
+          1,
+          1,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9faf616fc219af8f5aabb8d16e70c2e6610502194e513f2aa1fd93a915787e67"
+      },
+      "video_aggregator.encoder.joint.blocks.1.mix.weight": {
+        "shape": [
+          16,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aa98a207e358edb76b3d39b296dec47d238dfc4e5d4a4622dfff3cf67afe9cd1"
+      },
+      "video_aggregator.encoder.joint.score.weight": {
+        "shape": [
+          1,
+          16,
+          1,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "59ea2f499d73ae051e99a4cd0c1183a1704f68010736070ca61e7c0b6a7ec6bb"
+      },
+      "video_aggregator.encoder.fusion.weight": {
+        "shape": [
+          32,
+          49
+        ],
+        "dtype": "torch.float32",
+        "sha256": "03cec6197331830c9ae0bc59234d140daf3594b82f01ee9134f990b1f91cd2c5"
+      },
+      "video_aggregator.encoder.fusion.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ae4e952b78a58014108ef78dfc2701cea48f329399ade07ab8ecfb9c596c6b78"
+      },
+      "spatial_decoder.layers.0.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "87715f20b26b75b69197f2f7ceebb4f06bc5b013e596f662ffa3a2dbc29b15a7"
+      },
+      "spatial_decoder.layers.0.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fbf8db861cc293c9a0b3816680b3b519d9891f96080d30b35d21c51278092da2"
+      },
+      "spatial_decoder.layers.1.weight": {
+        "shape": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8f31eecc818eee72f2baf7d3e42af37dd4654dee4e9a9be0e40bc5c3625b8d6d"
+      },
+      "spatial_decoder.layers.1.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "009d022c1a038115eb9ac489a56d6df4756dec4e52d152e8596d6da948e57484"
+      },
+      "detection_head.weight": {
+        "shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "85f154d3a4f9c2daa526c54f7210ff17cbb847240ebb3f338a95eaec600ef409"
+      },
+      "detection_head.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f113a5d9e6d41209b2268a05aaebb6cce19e22fb5a4490e16eac14429e927923"
+      }
+    }
+  },
+  "identical_M0_common_layers": [
+    "detection_head.bias",
+    "detection_head.weight",
+    "frame_encoder.layers.0.bias",
+    "frame_encoder.layers.0.weight",
+    "frame_encoder.layers.1.bias",
+    "frame_encoder.layers.1.weight",
+    "spatial_decoder.layers.0.bias",
+    "spatial_decoder.layers.0.weight",
+    "spatial_decoder.layers.1.bias",
+    "spatial_decoder.layers.1.weight"
+  ],
+  "all_evidence_mode_tensors_identical": true
+}

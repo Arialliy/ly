@@ -1,0 +1,67 @@
+{
+  "stage": "S4",
+  "state": "HISTORICAL_LOCKED",
+  "run_id": "s4_24k_seed46_q256v81_20261118_02",
+  "selected_step": 24000,
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "budget_decision_sha256": "8619554e796db9d506c38e936a87807b7efc4f44a1f7bff447d449f759adc892",
+  "runs": {
+    "M0": {
+      "46": {
+        "mode": "M0",
+        "seed": 46,
+        "step": 24000,
+        "checkpoint_sha256": "941d2fa7568850e6d10ba345a78a7c741e9f5c04e6dee6d2fa211000a073a812",
+        "dev_metrics_sha256": "075bc897f813034c0730a7b8bfc7925cf606c64185027044cd9e4b175fd97d82",
+        "thresholds": {
+          "0.5": 0.0023102164268493652,
+          "1": 0.0023102164268493652,
+          "5": 0.0023102164268493652
+        }
+      }
+    },
+    "Msep": {
+      "46": {
+        "mode": "Msep",
+        "seed": 46,
+        "step": 24000,
+        "checkpoint_sha256": "a1e6d10521a152821d464f0877d47e089a64851d6d61026d119273f7be2faca2",
+        "dev_metrics_sha256": "55f495a708d4f2eb9206f359f985540ce8ba2c8c3265853209b9b283651677f9",
+        "thresholds": {
+          "0.5": 1.0227819681167603,
+          "1": 1.0227819681167603,
+          "5": 1.0227819681167603
+        }
+      }
+    },
+    "Mraw": {
+      "46": {
+        "mode": "Mraw",
+        "seed": 46,
+        "step": 24000,
+        "checkpoint_sha256": "784111c5a058f782e405f9f0dd7706cafd8d50de0440f19bcbde37f166a42219",
+        "dev_metrics_sha256": "a4ff741bb81efd3ac134e92ecc514281a9aa884997a76bb03d8af75f7f8531f6",
+        "thresholds": {
+          "0.5": 2.6441636085510254,
+          "1": 0.8257125020027161,
+          "5": 0.8257125020027161
+        }
+      }
+    },
+    "Mint": {
+      "46": {
+        "mode": "Mint",
+        "seed": 46,
+        "step": 24000,
+        "checkpoint_sha256": "c9b6408e181b9ef5c73aca2cf4310f79b61891c146b74257f65639e4ec722af0",
+        "dev_metrics_sha256": "0d7dd252b3022a2ac93478f75b91c616f0a0bb22930f38d6a457cd62c31c4301",
+        "thresholds": {
+          "0.5": 7.873190402984619,
+          "1": 1.8719353675842285,
+          "5": -2.157719373703003
+        }
+      }
+    }
+  }
+}

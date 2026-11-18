@@ -1,0 +1,50 @@
+{
+  "source": "Sequence35",
+  "center": 57,
+  "kind": "positive",
+  "sample_role": "positive",
+  "core_xyxy": [
+    94,
+    26,
+    158,
+    90
+  ],
+  "step": 17,
+  "edge_priority": false,
+  "learning_rate": 0.001,
+  "total": 1.2157548666000366,
+  "foreground_bce": 0.9817574620246887,
+  "background_bce_all": 0.4693796932697296,
+  "background_bce_hard": 0.4695090651512146,
+  "background_bce": 0.46941202878952026,
+  "dice_loss": 0.9803401827812195,
+  "foreground_pixels": 40,
+  "background_pixels": 4056,
+  "eligible_hard_pixels": 3924,
+  "selected_hard_pixels": 393,
+  "gradient_l2_by_module": {
+    "frame_encoder": 0.015589466008622132,
+    "video_aggregator.encoder.amplitude": 0.013284101066469807,
+    "video_aggregator.encoder.temporal": 0.01267811641113055,
+    "video_aggregator.encoder.velocity": 0.014844717782164136,
+    "video_aggregator.encoder.joint": 0.0013790650945123507,
+    "video_aggregator.encoder.fusion": 0.10077072903032055,
+    "spatial_decoder": 0.12522359877399789,
+    "detection_head": 0.17798582366564528
+  },
+  "parameter_update_l2_by_module": {
+    "frame_encoder": 0.01013208786793152,
+    "video_aggregator.encoder.amplitude": 0.0036119968388511944,
+    "video_aggregator.encoder.temporal": 0.008542789471814107,
+    "video_aggregator.encoder.velocity": 0.014394051501783918,
+    "video_aggregator.encoder.joint": 0.01359816478036267,
+    "video_aggregator.encoder.fusion": 0.017951819332792933,
+    "spatial_decoder": 0.06792000115437455,
+    "detection_head": 0.0026624238888129
+  },
+  "finite_after_update": true,
+  "peak_allocated_mib": 444.42333984375,
+  "seconds": 0.42522359802387655,
+  "wall_seconds": 0.4258420650148764,
+  "phase": "measured"
+}

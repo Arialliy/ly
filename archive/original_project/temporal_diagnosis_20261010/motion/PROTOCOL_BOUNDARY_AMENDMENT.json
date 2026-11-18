@@ -1,6 +1,0 @@
-{
-  "recorded_utc": "2026-10-09T17:47:01.201445+00:00",
-  "reason": "Raw source annotations include 128 out-of-image boxes; initial intensity indexing raised empty-array error before any camera results.",
-  "change": "Intensity sampling uses box intersect image, records truncation and sampled pixel count. Motion uses unmodified original center. No camera parameters or validity thresholds changed.",
-  "prior_attempt_retained": "run_attempt2_boundary_error.log"
-}

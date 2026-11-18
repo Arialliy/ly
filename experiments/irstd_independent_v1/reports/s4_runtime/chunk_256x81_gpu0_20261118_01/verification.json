@@ -1,0 +1,89 @@
+{
+  "measured_steps_each": 8,
+  "trajectory_checks_each": 10,
+  "official_baseline_fields_checked": [
+    "total",
+    "foreground_bce",
+    "background_bce_all",
+    "background_bce_hard",
+    "background_bce",
+    "dice_loss",
+    "gradient_l2_by_module",
+    "parameter_update_l2_by_module",
+    "source",
+    "center",
+    "core_xyxy",
+    "step",
+    "sample_role",
+    "learning_rate"
+  ],
+  "source_inputs_sha256": "4459e121b59923271bf4b8eb0d9f9998b13182281c6fcec9c5adaa7551406cc4",
+  "results": {
+    "Mint": {
+      "reference_matches_official_steps": 10,
+      "configurations": {
+        "q64_v8": {
+          "mean": 3.050041796752339,
+          "mib": 185.958984375
+        },
+        "q256_v81": {
+          "mean": 0.43300428975271643,
+          "mib": 446.3466796875
+        }
+      },
+      "speedup": 7.043906651581168,
+      "max_abs_logit_diff": 1.1920928955078125e-07,
+      "max_abs_loss_diff": 0.0,
+      "max_relative_gradient_l2_diff": 2.7758210968052094e-07,
+      "step18_max_abs_weight_diff": 2.9802322387695312e-08,
+      "step18_relative_weight_l2_diff": 2.269884527345128e-08,
+      "hard_coordinates_same_steps": 10,
+      "top1_same_steps": 10,
+      "top16_set_same_steps": 10
+    },
+    "Mraw": {
+      "reference_matches_official_steps": 10,
+      "configurations": {
+        "q64_v8": {
+          "mean": 2.888874777381716,
+          "mib": 185.958984375
+        },
+        "q256_v81": {
+          "mean": 0.4327481375003117,
+          "mib": 446.3466796875
+        }
+      },
+      "speedup": 6.675649245006017,
+      "max_abs_logit_diff": 1.7881393432617188e-07,
+      "max_abs_loss_diff": 0.0,
+      "max_relative_gradient_l2_diff": 2.6239177659452236e-07,
+      "step18_max_abs_weight_diff": 4.470348358154297e-08,
+      "step18_relative_weight_l2_diff": 2.7246457463755275e-08,
+      "hard_coordinates_same_steps": 10,
+      "top1_same_steps": 10,
+      "top16_set_same_steps": 10
+    },
+    "Msep": {
+      "reference_matches_official_steps": 10,
+      "configurations": {
+        "q64_v8": {
+          "mean": 2.89078210650041,
+          "mib": 186.09326171875
+        },
+        "q256_v81": {
+          "mean": 0.43260414186443086,
+          "mib": 446.3466796875
+        }
+      },
+      "speedup": 6.682280234400347,
+      "max_abs_logit_diff": 2.384185791015625e-07,
+      "max_abs_loss_diff": 5.960464477539063e-08,
+      "max_relative_gradient_l2_diff": 1.8473549982797975e-06,
+      "step18_max_abs_weight_diff": 6.016343832015991e-06,
+      "step18_relative_weight_l2_diff": 2.193513607778425e-06,
+      "hard_coordinates_same_steps": 9,
+      "top1_same_steps": 10,
+      "top16_set_same_steps": 10
+    }
+  }
+}

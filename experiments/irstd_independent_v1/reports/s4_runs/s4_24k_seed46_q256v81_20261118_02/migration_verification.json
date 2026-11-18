@@ -1,0 +1,421 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Immutable parent/child migration and a read-only, non-simultaneous per-model snapshot; no model forward pass or CUDA workload. Source of first-update runtime is the executed worker log and durable post-update tensors.",
+  "checked_utc": "2026-11-18T15:38:59.410196+00:00",
+  "device_used_for_audit": "CPU",
+  "run_id": "s4_24k_seed46_q256v81_20261118_02",
+  "parent_run_id": "s4_24k_seed46_20261118_01",
+  "parent_protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+  "parent_execution_binding_sha256": "dbafc930e3fbb4fd8058c6a53999f15ba5d6734fe36aa40e7c67eecaab06e6cc",
+  "child_protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "child_execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "common_step": 600,
+  "first_new_optimizer_update": 601,
+  "seed": 46,
+  "model_modes": [
+    "Msep",
+    "Mraw",
+    "Mint"
+  ],
+  "frozen_schedule_sha256": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
+  "complete_schedule_slots": 36000,
+  "modes": {
+    "Msep": {
+      "tensor_states_bitwise_identical": [
+        "model",
+        "optimizer including all AdamW buffers",
+        "Python/NumPy/Torch CPU and saved CUDA RNG",
+        "scheduler",
+        "runtime",
+        "cursor",
+        "journal"
+      ],
+      "model_state_tensor_count": 32,
+      "adamw_parameter_states": 31,
+      "saved_cuda_rng_count": 1,
+      "parent_chain_through_migration": [
+        {
+          "step": 0,
+          "checkpoint_sha256": "4097de611276a3bf7588c8108bfa78b0be6c7545840d80cacb4b151e5e0b36f2",
+          "sidecar_sha256": "0a9ee3bb38c64d189bd78d0c1172991353bf7de7475ea9f5c1a50e07b6d63c81",
+          "parent_checkpoint_sha256": "f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be",
+          "journal_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "step": 8,
+          "checkpoint_sha256": "b2454df234726b0609e2e20ad64ea19174585964130577510b494f00a56b58c5",
+          "sidecar_sha256": "17735d0cd91e8db1fc5f446ec7261e3815303bddb634cb9b14cd052883f3e23f",
+          "parent_checkpoint_sha256": "4097de611276a3bf7588c8108bfa78b0be6c7545840d80cacb4b151e5e0b36f2",
+          "journal_prefix_sha256": "90cbf5b26ba88185ca7a0b057ebcb95c5627a9e7d38f73c84d2c33b1c83e46ec"
+        },
+        {
+          "step": 300,
+          "checkpoint_sha256": "0ed061a1a6c1a3e509d3d7fbaf40fddc5b5008b1a8999501ac2859942890f42d",
+          "sidecar_sha256": "b2cdf3707e789f4d6af7c5daa1240d1f84854440467e47d756b1635c34641f70",
+          "parent_checkpoint_sha256": "b2454df234726b0609e2e20ad64ea19174585964130577510b494f00a56b58c5",
+          "journal_prefix_sha256": "ab58cb56c2bdf1dfdac5a442bfa24396a412431956b8add53ceafcace958c929"
+        },
+        {
+          "step": 600,
+          "checkpoint_sha256": "04e23563c50891ea89cedae1ea96f5f365c5b3282c5451e62a3e1130a59c7165",
+          "sidecar_sha256": "e5432bb4d2ff7588d8c73d44bb1e04017d300211c493b1b6c3c03059d967019b",
+          "parent_checkpoint_sha256": "0ed061a1a6c1a3e509d3d7fbaf40fddc5b5008b1a8999501ac2859942890f42d",
+          "journal_prefix_sha256": "0c2df145941b32cae4ea4a283a3fbac23e50191231379934f887c9f7c0b9f4f0"
+        }
+      ],
+      "child_committed_chain": [
+        {
+          "step": 600,
+          "checkpoint_sha256": "ca2ac7d16546de15207a265c6e79e3cd3f8050a225ced37c497c0a65ae2ee777",
+          "sidecar_sha256": "92fe87b2f7e5ee80ee3feecbd2c19fbb909a510163afedb99f4a513589a87862",
+          "parent_checkpoint_sha256": "04e23563c50891ea89cedae1ea96f5f365c5b3282c5451e62a3e1130a59c7165",
+          "journal_prefix_sha256": "0c2df145941b32cae4ea4a283a3fbac23e50191231379934f887c9f7c0b9f4f0"
+        },
+        {
+          "step": 601,
+          "checkpoint_sha256": "b17057b46d6104f74a98c0a8af654feb3893ed9de94f1d9aa6dd902cd9821efb",
+          "sidecar_sha256": "22147809dbe96cd1d5fd382320d83f0389f3533fdc0be707e779e9b098091850",
+          "parent_checkpoint_sha256": "ca2ac7d16546de15207a265c6e79e3cd3f8050a225ced37c497c0a65ae2ee777",
+          "journal_prefix_sha256": "454e9274152b273426def3340bd99fa03b861fa8dc4c94cf5ba29901a4bf5c34"
+        },
+        {
+          "step": 900,
+          "checkpoint_sha256": "3dc2bd84cbdc481db7cf8226f870c80362ea861fdcd679ce67685f4e981c57aa",
+          "sidecar_sha256": "1967c8a3d1eb675f1708564179c1ef0a83b4f10cf45a1a11accb68fec1d7046c",
+          "parent_checkpoint_sha256": "b17057b46d6104f74a98c0a8af654feb3893ed9de94f1d9aa6dd902cd9821efb",
+          "journal_prefix_sha256": "974e4b6e42e03da143aefa2f2b75b043c72d179b1cc6ad16de5299ddf175797f"
+        },
+        {
+          "step": 1200,
+          "checkpoint_sha256": "e029dbd00fc7cd0d6da0389079573d010249d25c0ce7ad33b855eb1310a26173",
+          "sidecar_sha256": "f0486211b3f0edb26b8845035bc845c5eef7c15ea22af113a81b169ba4dece05",
+          "parent_checkpoint_sha256": "3dc2bd84cbdc481db7cf8226f870c80362ea861fdcd679ce67685f4e981c57aa",
+          "journal_prefix_sha256": "80b38ca75989b86bdf9e41d034b53adb2301ce97aeccbd8795a3a8c2f151f4d5"
+        }
+      ],
+      "journal_prefix_identical_bytes": 841885,
+      "journal_prefix_sha256": "0c2df145941b32cae4ea4a283a3fbac23e50191231379934f887c9f7c0b9f4f0",
+      "first_observed_update": 601,
+      "first_update_query_velocity_recompute": {
+        "query_chunk": 256,
+        "velocity_chunk": 81,
+        "checkpoint_chunks": true
+      },
+      "first_update_changed_model_tensors": 31,
+      "first_update_receipt_sha256": "61ac7dac482d5474c0290943963d26464393d5dd67c22f3e0ad8421a6ed6b9af",
+      "first_update_seconds": 1.8549195720115677,
+      "first_update_sample": {
+        "source": "Sequence64",
+        "center": 38,
+        "sample_role": "positive",
+        "core_xyxy": [
+          73,
+          105,
+          137,
+          169
+        ]
+      },
+      "last_complete_journal_step_at_read": 1380,
+      "last_complete_journal_sha256": "5e9cb31cd74aa50fa7fa74073691b3a06178d60ee05c1ec5a80bb899d06f3974",
+      "last_committed_step_at_scan": 1200,
+      "journal_role_exposure_at_read": {
+        "positive": 690,
+        "random_background": 518,
+        "empty_frame": 172
+      },
+      "worker_progress_step_at_read": 1375,
+      "worker_phase_at_read": "training",
+      "inherited_step0_diagnostic_sha256": "bc53e95def8af8106852f81ab708616d9e7ddc96d2f7e6c41dfbb854977b3c26"
+    },
+    "Mraw": {
+      "tensor_states_bitwise_identical": [
+        "model",
+        "optimizer including all AdamW buffers",
+        "Python/NumPy/Torch CPU and saved CUDA RNG",
+        "scheduler",
+        "runtime",
+        "cursor",
+        "journal"
+      ],
+      "model_state_tensor_count": 32,
+      "adamw_parameter_states": 31,
+      "saved_cuda_rng_count": 1,
+      "parent_chain_through_migration": [
+        {
+          "step": 0,
+          "checkpoint_sha256": "174a6c384d43c3dc92d41df926e0b0da937897326697e73b2a69222bfeebe5e6",
+          "sidecar_sha256": "a2dc9b24b5dd5f0f5205db28b4aec42b1782799542c3ef21b308184a7342be81",
+          "parent_checkpoint_sha256": "f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be",
+          "journal_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "step": 8,
+          "checkpoint_sha256": "af673693e8b093b1081336f9f3b80134943e4a8ad27de049f35071341b0a4528",
+          "sidecar_sha256": "0419271217ad8235c4f6dbca02b1321d8f36f36cdbee3fede2a953dc28e987a7",
+          "parent_checkpoint_sha256": "174a6c384d43c3dc92d41df926e0b0da937897326697e73b2a69222bfeebe5e6",
+          "journal_prefix_sha256": "8bbc75b442dc17221527fc40878f744d0e353299a5cf6660dea8167c544e9237"
+        },
+        {
+          "step": 300,
+          "checkpoint_sha256": "516b90172c182ed68300c5ce24a88bd72364791b3a1beb38236f22c2d7d19724",
+          "sidecar_sha256": "cc36b9e6533c086c527bb034729d1823022393d958e7e7ef20ab51b835270866",
+          "parent_checkpoint_sha256": "af673693e8b093b1081336f9f3b80134943e4a8ad27de049f35071341b0a4528",
+          "journal_prefix_sha256": "6adcad62a65a08dbbea3a516c2be17038f1b37c307128747f7321b365bb00bb7"
+        },
+        {
+          "step": 600,
+          "checkpoint_sha256": "6330591048d6614c4b7a9c5f63667029fda28c1802aa769f5ae97ad5ef5aad93",
+          "sidecar_sha256": "e40ccca096ce26855db16568bf6db4e0019804a52abbdbab102a517f9042e97c",
+          "parent_checkpoint_sha256": "516b90172c182ed68300c5ce24a88bd72364791b3a1beb38236f22c2d7d19724",
+          "journal_prefix_sha256": "7d69a5d419820ea083cb27a7c712dacc4849d70a8692e40b51495f881c279085"
+        }
+      ],
+      "child_committed_chain": [
+        {
+          "step": 600,
+          "checkpoint_sha256": "b4bd6f9fdf897991ed0d881d18ca2955aaa9888cd5770a6b0d96c53cdbef6cb3",
+          "sidecar_sha256": "08718574e272b12ff173f2c1f783bd6497d2151c81b69928bddd695c9ab0111c",
+          "parent_checkpoint_sha256": "6330591048d6614c4b7a9c5f63667029fda28c1802aa769f5ae97ad5ef5aad93",
+          "journal_prefix_sha256": "7d69a5d419820ea083cb27a7c712dacc4849d70a8692e40b51495f881c279085"
+        },
+        {
+          "step": 601,
+          "checkpoint_sha256": "851f29571b84462cb76fc07bdd6b53f8eae433a2094705a2c6f21a5dc6691b06",
+          "sidecar_sha256": "1cc80162eae4d78ae878161b64333cb7498c48ec1ee021fa2fcaf82fb37d94ad",
+          "parent_checkpoint_sha256": "b4bd6f9fdf897991ed0d881d18ca2955aaa9888cd5770a6b0d96c53cdbef6cb3",
+          "journal_prefix_sha256": "f689af0a194d5d48e5f653a8502848df35ca259c9a7313f4ff7aa854cd5c179e"
+        },
+        {
+          "step": 900,
+          "checkpoint_sha256": "f2ef3bb9b0310236b2db071bff895731364022ae5f0f33d0703337e0f86276af",
+          "sidecar_sha256": "2dd4d61431f6a471e7aba445300740773a0fae18c2d070f77f1e33c9d15aa5f8",
+          "parent_checkpoint_sha256": "851f29571b84462cb76fc07bdd6b53f8eae433a2094705a2c6f21a5dc6691b06",
+          "journal_prefix_sha256": "f19ec48d428e04f65c68392693e6e67e588b8506a7450bbf3031e7041ccb6adf"
+        },
+        {
+          "step": 1200,
+          "checkpoint_sha256": "e3b297e8914a90d6227ec23958b3d806deb1c718c78ae49f932f8959ad12cbb2",
+          "sidecar_sha256": "881a406b0a200727b28403e03b4af13575c10be2f785961a65a5610f8e005ed5",
+          "parent_checkpoint_sha256": "f2ef3bb9b0310236b2db071bff895731364022ae5f0f33d0703337e0f86276af",
+          "journal_prefix_sha256": "4e1ee0cad723b2f691ecc8bcf53bed1d4b39541b2c4bf40de00d841c61931404"
+        }
+      ],
+      "journal_prefix_identical_bytes": 841682,
+      "journal_prefix_sha256": "7d69a5d419820ea083cb27a7c712dacc4849d70a8692e40b51495f881c279085",
+      "first_observed_update": 601,
+      "first_update_query_velocity_recompute": {
+        "query_chunk": 256,
+        "velocity_chunk": 81,
+        "checkpoint_chunks": true
+      },
+      "first_update_changed_model_tensors": 31,
+      "first_update_receipt_sha256": "ec8b606d419fa7f8229696b3bb3282e1ce85ac0775d6c36928c565d290776bcc",
+      "first_update_seconds": 1.905756794003537,
+      "first_update_sample": {
+        "source": "Sequence64",
+        "center": 38,
+        "sample_role": "positive",
+        "core_xyxy": [
+          73,
+          105,
+          137,
+          169
+        ]
+      },
+      "last_complete_journal_step_at_read": 1387,
+      "last_complete_journal_sha256": "dcb137ae6dd49f2b669238a6d0269d6f20b6dd8a05d726e5234c19d8aaba8aae",
+      "last_committed_step_at_scan": 1200,
+      "journal_role_exposure_at_read": {
+        "positive": 694,
+        "random_background": 520,
+        "empty_frame": 173
+      },
+      "worker_progress_step_at_read": 1375,
+      "worker_phase_at_read": "training",
+      "inherited_step0_diagnostic_sha256": "69751c2712470083d09fcaa9edad14cd327d92c68819af25ae5a65c41b94079e"
+    },
+    "Mint": {
+      "tensor_states_bitwise_identical": [
+        "model",
+        "optimizer including all AdamW buffers",
+        "Python/NumPy/Torch CPU and saved CUDA RNG",
+        "scheduler",
+        "runtime",
+        "cursor",
+        "journal"
+      ],
+      "model_state_tensor_count": 32,
+      "adamw_parameter_states": 31,
+      "saved_cuda_rng_count": 1,
+      "parent_chain_through_migration": [
+        {
+          "step": 0,
+          "checkpoint_sha256": "9f6c235b7cf993d587508c22926598a46bcf3c3052dffc71e40f0f16716d49f6",
+          "sidecar_sha256": "b1fcf3fe8e8ff49fd47f116b3a16e81953a3309c382d9680456c5e6f5b4049ba",
+          "parent_checkpoint_sha256": "f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be",
+          "journal_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "step": 8,
+          "checkpoint_sha256": "e3bbcfc39e77ab2a18ff754b71d3f5d72b36691c070e4b74e67e9ef268c5b147",
+          "sidecar_sha256": "6506210beaf3e6c2e74568bd6966210388b20dafd3a8193a78c30f71008b3f4e",
+          "parent_checkpoint_sha256": "9f6c235b7cf993d587508c22926598a46bcf3c3052dffc71e40f0f16716d49f6",
+          "journal_prefix_sha256": "fc946100f814b0eb809a10e228027a34c86545bb76d7801da28de38ffdeb39e8"
+        },
+        {
+          "step": 300,
+          "checkpoint_sha256": "84a350cb24b174afcaa94541609096f6fd745c3031885342fa62d326d9fe595d",
+          "sidecar_sha256": "20f14cf3a7ccab20863d55a444509c8fc4f80c083d3556d0b2949bd9c3a187de",
+          "parent_checkpoint_sha256": "e3bbcfc39e77ab2a18ff754b71d3f5d72b36691c070e4b74e67e9ef268c5b147",
+          "journal_prefix_sha256": "1e1b4d47f9feff69eb98a75743097fb20ba94e48129c38ed08890a042af7d11f"
+        },
+        {
+          "step": 600,
+          "checkpoint_sha256": "a64cc5f25396d8f3106cd15c11e0e37bec82b5cb27630d36fac6927f885f62bd",
+          "sidecar_sha256": "ce8c21179385ec470b83b963d1d1d9e784d893580445c9ed1040944c682b7cd7",
+          "parent_checkpoint_sha256": "84a350cb24b174afcaa94541609096f6fd745c3031885342fa62d326d9fe595d",
+          "journal_prefix_sha256": "99e8dfb1dbc19503a244a966a803b440547c455062936224bd32187484c7b650"
+        }
+      ],
+      "child_committed_chain": [
+        {
+          "step": 600,
+          "checkpoint_sha256": "46ddc9062769319aa6c9655d584079666574ae23f92c5e857dd4961b36ed2e4e",
+          "sidecar_sha256": "ba4f750773f8b6c280a49620f5a21997b98be457dde6ca328f43891b58ecf467",
+          "parent_checkpoint_sha256": "a64cc5f25396d8f3106cd15c11e0e37bec82b5cb27630d36fac6927f885f62bd",
+          "journal_prefix_sha256": "99e8dfb1dbc19503a244a966a803b440547c455062936224bd32187484c7b650"
+        },
+        {
+          "step": 601,
+          "checkpoint_sha256": "b55c25ac08f5aa0ae3e5bbf3e0d44c9f67d52ba9ec0440da7bf9a8637671cb48",
+          "sidecar_sha256": "f3b426a185a7bba662f91012300b99ad6f66967410fabd4ca0e66107ec941f5f",
+          "parent_checkpoint_sha256": "46ddc9062769319aa6c9655d584079666574ae23f92c5e857dd4961b36ed2e4e",
+          "journal_prefix_sha256": "50eb484b2cde3fee850e6758d547c427b726e2d8f42bc5cfbb37a30b2d98bcf3"
+        },
+        {
+          "step": 900,
+          "checkpoint_sha256": "d621caef51bcb5c8ab5807b911519e7ea8a1d5b186f23579a031081be224233b",
+          "sidecar_sha256": "483df5680ff257b701931e1b52487ce25af52d98d5a3105c0f28fdaf2b49b905",
+          "parent_checkpoint_sha256": "b55c25ac08f5aa0ae3e5bbf3e0d44c9f67d52ba9ec0440da7bf9a8637671cb48",
+          "journal_prefix_sha256": "40197ddbdabb151b87aca988374ddde03d37fb47325bbc21fc7a464c09fd13a9"
+        },
+        {
+          "step": 1200,
+          "checkpoint_sha256": "8f1d9fc46c4df557f6e2100fc9afdae2cc3054fa94b64d5de927431d0f7534f8",
+          "sidecar_sha256": "b050a68493290192c2ff52f072fb2431340328c9b6b09718a8d0e411c15b8252",
+          "parent_checkpoint_sha256": "d621caef51bcb5c8ab5807b911519e7ea8a1d5b186f23579a031081be224233b",
+          "journal_prefix_sha256": "ffce489b37f80cf089d526632f9563a97f5d7129c6fc97e76aa5a180f3d34b55"
+        }
+      ],
+      "journal_prefix_identical_bytes": 842047,
+      "journal_prefix_sha256": "99e8dfb1dbc19503a244a966a803b440547c455062936224bd32187484c7b650",
+      "first_observed_update": 601,
+      "first_update_query_velocity_recompute": {
+        "query_chunk": 256,
+        "velocity_chunk": 81,
+        "checkpoint_chunks": true
+      },
+      "first_update_changed_model_tensors": 31,
+      "first_update_receipt_sha256": "1e82ee3afd01bd0503949e3c395148359996da2045eae9c0fd7c8bfdf3fb34ff",
+      "first_update_seconds": 1.8713664349925239,
+      "first_update_sample": {
+        "source": "Sequence64",
+        "center": 38,
+        "sample_role": "positive",
+        "core_xyxy": [
+          73,
+          105,
+          137,
+          169
+        ]
+      },
+      "last_complete_journal_step_at_read": 1376,
+      "last_complete_journal_sha256": "ca8b2a58b4a47bd30929e030d7c1681a4464b5df8287f20f86e346914dd0fa1d",
+      "last_committed_step_at_scan": 1200,
+      "journal_role_exposure_at_read": {
+        "positive": 688,
+        "random_background": 516,
+        "empty_frame": 172
+      },
+      "worker_progress_step_at_read": 1375,
+      "worker_phase_at_read": "training",
+      "inherited_step0_diagnostic_sha256": "8e9bd26cc65f8c4471689c26fde4623e1849a5fc35ae60156b86cff54b6d5940"
+    }
+  },
+  "driver_state_at_read": {
+    "status": "TRAINING",
+    "pid": 2042677,
+    "utc": "2026-11-18T15:32:38.873594+00:00",
+    "step": 24000,
+    "seed": 46
+  },
+  "runtime_monitor": {
+    "observed_utc": "2026-11-18T15:39:30.190093+00:00",
+    "host": "ubuntu-gpu4",
+    "driver": {
+      "pid": 2042677,
+      "arguments": [
+        "/usr/bin/python3",
+        "-B",
+        "-u",
+        "-m",
+        "experiments.irstd_independent_v1.checks.run_s4_local",
+        "--run-id",
+        "s4_24k_seed46_q256v81_20261118_02"
+      ]
+    },
+    "watcher": {
+      "pid": 2042678,
+      "arguments": [
+        "/usr/bin/python3",
+        "-B",
+        "-u",
+        "-m",
+        "experiments.irstd_independent_v1.checks.s4_milestones",
+        "/home/ly/DeepProPlus_TLFP_Code/experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02",
+        "--watch",
+        "60"
+      ]
+    },
+    "driver_status": "TRAINING",
+    "watch_interval_sec": 60,
+    "watch_report_age_seconds": 51.329187631607056,
+    "watch_report_sha256": "5a5590aaed3d3e93061a24e2f4e6ff43559db493f213ccbd1a4d489e09aec411",
+    "watch_report_within_two_intervals_plus_ten_seconds": true,
+    "next_training_diagnostic": 3000,
+    "current_gpu_containers": [
+      {
+        "gpu_index": 1,
+        "job": "train_Msep_46_24000",
+        "container_id": "3a917ea2ee545044e591de5917d1ffd38108d1887a1d7aab39b5d56b1e64c733",
+        "running": true,
+        "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+        "started_utc": "2026-11-18T15:32:46.594555939Z"
+      },
+      {
+        "gpu_index": 2,
+        "job": "train_Mraw_46_24000",
+        "container_id": "7eb5f95034b72e3135be917b95659f9a3f4f84d0dd9a0258a470145897364062",
+        "running": true,
+        "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+        "started_utc": "2026-11-18T15:32:47.050845949Z"
+      },
+      {
+        "gpu_index": 3,
+        "job": "train_Mint_46_24000",
+        "container_id": "03050f1033e18094086d27f37983ad850c04196aaef1c11dd65261030fd99b06",
+        "running": true,
+        "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+        "started_utc": "2026-11-18T15:32:46.597760275Z"
+      }
+    ],
+    "M0_status": "queued after Msep on GPU1",
+    "historical_lock_present_at_read": false
+  },
+  "replay": {
+    "instructions": "Run the stored CPU verifier in the pinned read-only image from the project root. It checks the immutable boundary and every currently committed child checkpoint, and prints a new live snapshot to stdout. Host-process liveness is a separately timed observation.",
+    "command_from_project_root": "python3 -c 'import json,sys; sys.stdout.write(json.load(open(sys.argv[1]))[\"replay\"][\"verified_cpu_python\"])' 'experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/migration_verification.json' | docker run --rm -i --read-only --network none --user \"$(id -u):$(id -g)\" --cpus 2 --memory 3g --tmpfs /tmp:rw,size=128m -v \"$PWD:/project:ro\" -e PYTHONDONTWRITEBYTECODE=1 -e PYTHONPATH=/project:/project/environment/site -e OMP_NUM_THREADS=1 -e OPENBLAS_NUM_THREADS=1 -w /project --entrypoint /opt/conda/bin/python sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92 - /project/experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02",
+    "verified_cpu_python": "import argparse, hashlib, json, math, re\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom collections import Counter\nimport torch\nfrom experiments.irstd_independent_v1.checks.s4_binding import verify_execution\nfrom experiments.irstd_independent_v1.engine.checkpoints import require_exact\nfrom experiments.irstd_independent_v1.engine.s4_checkpoints import identity, _bound_state, lr_for_update\nfrom experiments.irstd_independent_v1.checks.s4_lineage import diagnostic_origin\n\ndef ck(ok, text):\n    if not ok: raise ValueError(text)\n\ndef load(p): return json.loads(p.read_bytes())\ndef sha(p):\n    d=hashlib.sha256()\n    with p.open('rb') as f:\n        for x in iter(lambda:f.read(1048576),b''): d.update(x)\n    return d.hexdigest()\ndef json_id(item): return json.loads(json.dumps(item))\ndef read_complete(path):\n    data=path.read_bytes()\n    return data[:data.rfind(b'\\n')+1].splitlines(keepends=True)\n\ndef inspect_run(run):\n    p, lock=verify_execution(run)\n    migration=p['migration']; k=migration['common_step']; first=k+1\n    parent=run.parent/migration['parent_run_id']; pp=load(parent/'protocol.json')\n    cp,cs=sha(run/'protocol.json'),sha(run/'execution_binding.json')\n    op,osig=sha(parent/'protocol.json'),sha(parent/'execution_binding.json')\n    ck((op,osig)==(migration['parent_protocol_sha256'],migration['parent_execution_binding_sha256']), 'parent locks')\n    ck(k==600 and first==migration['first_new_step']==601 and p['seeds']==pp['seeds']==[46],'common boundary')\n    schedule_path=run/'schedule_46.json'; sched=load(schedule_path)['updates']; ss=sha(schedule_path)\n    ck(ss==sha(parent/'schedule_46.json')==p['schedule_sha256']['46']==pp['schedule_sha256']['46'] and len(sched)==36000,'schedule mismatch')\n    modes=('Msep','Mraw','Mint'); details={}\n    for mode in modes:\n        o=identity(pp,mode,46,protocol_sha256=op,execution_sha256=osig)\n        c=identity(p,mode,46,protocol_sha256=cp,execution_sha256=cs)\n        pf=parent/mode/'seed46'; cf=run/mode/'seed46'\n        contract=migration['modes'][mode]; receipt=load(cf/'migration_first_update.json')\n        def chain(folder, ctx, expected_steps, upstream, read_steps):\n            result=[]; kept={}\n            for s in expected_steps:\n                path=folder/'checkpoints'/f'step_{s:06d}.pt';side=path.with_suffix('.json')\n                row=load(side); digest=sha(path)\n                st=_bound_state(path,digest,ctx)\n                ck(row['identity']==json_id(ctx) and (row['step'],st['step'],st['next_sample_index'])==(s,s,s),'chain identity or cursor')\n                ck(digest==row['checkpoint_sha256'] and upstream==row['parent_checkpoint_sha256']==st['parent_checkpoint_sha256'],'checkpoint chain')\n                result.append({'step':s,'checkpoint_sha256':digest,'sidecar_sha256':sha(side),'parent_checkpoint_sha256':upstream,'journal_prefix_sha256':st['extra']['journal']['sha256']})\n                ck(st['extra']['journal']['updates']==s,'boundary row count')\n                upstream=digest\n                if s in read_steps: kept[s]=st\n            return result,kept\n        pchain,ps=chain(pf,o,[0,8,300,k],pp['initialization']['46']['sha256'],[k])\n        ck(pchain[-1]['checkpoint_sha256']==contract['checkpoint_sha256'] and pchain[-1]['sidecar_sha256']==contract['sidecar_sha256'],'registered source')\n        steps=sorted(int(path.stem.split('_')[1]) for path in (cf/'checkpoints').glob('step_*.json'))\n        ck(steps==[k,first,*range(k+300,steps[-1]+1,300)],'missing or unordered child checkpoint')\n        cchain,ch=chain(cf,c,steps,contract['checkpoint_sha256'],[k,first])\n        a,b=ps[k],ch[k]\n        for field in ('model','optimizer','rng','scheduler','runtime','step','next_sample_index','extra'):\n            require_exact(a[field],b[field],mode+'/'+field)\n        ck((o['evidence_runtime']['query_chunk'],o['evidence_runtime']['velocity_chunk'])==(64,8),'old chunks')\n        expected=dict(query_chunk=256,velocity_chunk=81,checkpoint_chunks=True)\n        ck({x:c['evidence_runtime'][x] for x in expected}==expected,'new chunks')\n        ck(len(a['rng']['torch_cuda'])==1,'missing saved device RNG')\n        ck(all(v['step'].item()==k for v in a['optimizer']['state'].values()),'parent Adam moments step')\n        after=ch[first]\n        changed=[name for name,z in b['model'].items() if not torch.equal(z,after['model'][name])]\n        ck(changed and all(v['step'].item()==first for v in after['optimizer']['state'].values()),'first update did not advance AdamW')\n        for state in [b,after]:\n            ck(all(torch.isfinite(t).all().item() for t in state['model'].values()),'nonfinite model')\n            ck(all(torch.isfinite(z[key]).all().item() for z in state['optimizer']['state'].values() for key in ('exp_avg','exp_avg_sq')),'nonfinite AdamW')\n        raw=read_complete(cf/'updates.jsonl')\n        with (pf/'updates.jsonl').open('rb') as stream:\n            inherited=[stream.readline() for _ in range(k)]\n        ck(raw[:k]==inherited and len(raw)>=steps[-1], 'child log incompatible with parent or committed step')\n        points={row['step']:row['journal_prefix_sha256'] for row in pchain}\n        for row in cchain: \n            if row['step'] in points: ck(points[row['step']]==row['journal_prefix_sha256'],'unequal shared root journals')\n            points[row['step']]=row['journal_prefix_sha256']\n        dig=hashlib.sha256(); ck(dig.hexdigest()==points[0],'step0 prefix'); counts=Counter()\n        for step,line in enumerate(raw,1):\n            z=json.loads(line); wanted=sched[step-1]\n            ck(wanted['step']==z['step']==step and all(z.get(x)==v for x,v in wanted.items()),'unpaired actual schedule')\n            ck(z['learning_rate']==lr_for_update(step) and z['finite_after_update'] is True and math.isfinite(z['total']), 'nonfinite row or wrong LR')\n            counts[z['sample_role']]+=1;dig.update(line)\n            if step in points: ck(dig.hexdigest()==points[step],'checkpoint journal digest')\n            if step==first:\n                ck(z==receipt['update'] and z['evidence_runtime']==expected and z['parameter_update_l2_by_module']\n                    and any(v>0 for v in z['parameter_update_l2_by_module'].values()), 'first receipt/log discrepancy')\n        ck(receipt['schedule_sha256']==ss and receipt['journal']==after['extra']['journal']\n           and receipt['inherited_journal']==b['extra']['journal'] and receipt['inherited_journal']['sha256']==contract['journal_prefix_sha256'],'receipt schedule or prefix')\n        ck((receipt['step'],receipt['source_step'],receipt['mode'],receipt['seed'],receipt['run_id'],receipt['source_run_id'])==(first,k,mode,46,run.name,parent.name),'receipt identification')\n        ck((receipt['protocol_sha256'],receipt['execution_binding_sha256'],receipt['source_checkpoint_sha256'],receipt['root_checkpoint_sha256'],receipt['checkpoint_sha256'])==(cp,cs,contract['checkpoint_sha256'],cchain[0]['checkpoint_sha256'],cchain[1]['checkpoint_sha256']),'receipt provenance')\n        origin,origin_sha=diagnostic_origin(run,p,mode,0)\n        ck(origin==parent and origin_sha==op,'step0 provenance')\n        g=load(cf/'progress.json')\n        details[mode]={'tensor_states_bitwise_identical':['model','optimizer including all AdamW buffers','Python/NumPy/Torch CPU and saved CUDA RNG','scheduler','runtime','cursor','journal'], 'model_state_tensor_count':len(a['model']),'adamw_parameter_states':len(a['optimizer']['state']),'saved_cuda_rng_count':len(a['rng']['torch_cuda']),'parent_chain_through_migration':pchain,'child_committed_chain':cchain,'journal_prefix_identical_bytes':sum(map(len,inherited)),'journal_prefix_sha256':contract['journal_prefix_sha256'],'first_observed_update':first,'first_update_query_velocity_recompute':expected,'first_update_changed_model_tensors':len(changed),'first_update_receipt_sha256':sha(cf/'migration_first_update.json'),'first_update_seconds':receipt['update']['seconds'],'first_update_sample':{key:receipt['update'][key] for key in ('source','center','sample_role','core_xyxy')},'last_complete_journal_step_at_read':len(raw),'last_complete_journal_sha256':dig.hexdigest(),'last_committed_step_at_scan':steps[-1],'journal_role_exposure_at_read':dict(counts),'worker_progress_step_at_read':g['step'],'worker_phase_at_read':g['phase'],'inherited_step0_diagnostic_sha256':sha(pf/'diagnostics_0.json')}\n    return {'schema':1,'status':'PASS','scope':'Immutable parent/child migration and a read-only, non-simultaneous per-model snapshot; no model forward pass or CUDA workload. Source of first-update runtime is the executed worker log and durable post-update tensors.','checked_utc':datetime.now(timezone.utc).isoformat(),'device_used_for_audit':'CPU','run_id':run.name,'parent_run_id':parent.name,'parent_protocol_sha256':op,'parent_execution_binding_sha256':osig,'child_protocol_sha256':cp,'child_execution_binding_sha256':cs,'common_step':k,'first_new_optimizer_update':first,'seed':46,'model_modes':list(modes),'frozen_schedule_sha256':ss,'complete_schedule_slots':len(sched),'modes':details,'driver_state_at_read':load(run/'driver/state.json')}\n\nif __name__=='__main__':\n    ap=argparse.ArgumentParser();ap.add_argument('run_dir',type=Path);args=ap.parse_args()\n    print(json.dumps(inspect_run(args.run_dir.resolve()),separators=(',',':'),allow_nan=False))\n"
+  }
+}

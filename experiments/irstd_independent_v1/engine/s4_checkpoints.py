@@ -12,7 +12,7 @@ from ..contracts import CENTER_INDEX
 from ..models.hypothesis_detector import HypothesisEvidenceDetector
 from ..models.video_baseline import VideoBaseline
 from .checkpoints import capture_rng, configure_determinism, read_checkpoint, require_exact, restore_rng
-from .s4_models import MODES, make_model
+from .s4_models import MODES, make_model, training_chunks
 
 
 FORMAT = 1
@@ -43,14 +43,13 @@ def identity(protocol, mode, seed, *, protocol_sha256, execution_sha256):
     proposal = protocol["proposal"]
     cfg = proposal["models"][mode]
     runtime = proposal["evidence_runtime"]
+    training_chunks(runtime)
     opt = proposal["optimization"]
     stages = tuple((r["start_completed_updates"], r["lr"]) for r in opt["lr_by_completed_updates"])
     settings = (opt["optimizer"], tuple(opt["betas"]), opt["eps"], opt["weight_decay"], opt["foreach"],
                 opt["precision"], opt["amp"], opt["tf32"], opt["deterministic_algorithms"], opt["cudnn_benchmark"])
     if (stages != LR_STAGES or settings != ("AdamW", (0.9, 0.999), 1e-8, 0.0001, False, "float32", False,
-                                             False, True, False) or cfg["mode"] != MODES[mode] or
-            (runtime["query_chunk"], runtime["velocity_chunk"], runtime["checkpoint_chunks"],
-             runtime["preserve_rng_state"]) != (64, 8, True, False)):
+                                             False, True, False) or cfg["mode"] != MODES[mode]):
         raise ValueError("Unrecognized model, optimizer or arithmetic contract")
     axis = runtime["velocity_axis"]
     if axis != [v / 2 for v in range(-4, 5)]:
@@ -97,8 +96,11 @@ def _check_model(model, bound):
         raise ValueError("Expected trainable FP32 parameters")
     if mode != "M0":
         ag = model.video_aggregator
+        if bound["evidence_runtime"] is None:
+            raise ValueError("Missing bound runtime for the evidence detector")
+        query, velocity = training_chunks(bound["evidence_runtime"])
         if ((ag.encoder.mode, ag.query_chunk, ag.velocity_chunk, ag.checkpoint_chunks) !=
-                (MODES[mode], 64, 8, True) or ag.velocities_xy.detach().cpu().tolist() != bound["velocities_xy"]):
+                (MODES[mode], query, velocity, True) or ag.velocities_xy.detach().cpu().tolist() != bound["velocities_xy"]):
             raise ValueError("S4 checkpoint evidence mode, coordinates or chunk configuration mismatch")
 
 
@@ -176,21 +178,19 @@ def _bound_state(path, expected_sha256, bound):
     return state
 
 
-def _model_from_state(state, device):
-    bound = state["identity"]
-    model = make_model(bound["mode"])
+def _model_from_state(state, device, *, bound=None):
+    bound = state["identity"] if bound is None else bound
+    model = make_model(bound["mode"], evidence_runtime=bound["evidence_runtime"])
     model.load_state_dict(state["model"], strict=True)
     require_exact(state["model"], model.state_dict(), "S4 model")
     _check_model(model, bound)
     return model.to(device)
 
 
-def restore_checkpoint(path, expected_sha256, *, identity, device):
-    configure_determinism()
-    state = _bound_state(path, expected_sha256, identity)
+def _restore_training_state(state, bound, device):
     if state["runtime"] != _runtime(device):
         raise ValueError("Training runtime differs from the saved optimizer boundary")
-    model = _model_from_state(state, device).train()
+    model = _model_from_state(state, device, bound=bound).train()
     opt = make_optimizer(model)
     opt.load_state_dict(state["optimizer"])
     require_exact(state["optimizer"], opt.state_dict(), "S4 AdamW")
@@ -198,6 +198,48 @@ def restore_checkpoint(path, expected_sha256, *, identity, device):
     restore_rng(state["rng"], device)
     require_exact(state["rng"], capture_rng(device), "S4 RNG")
     return model, opt, state
+
+
+def restore_checkpoint(path, expected_sha256, *, identity, device):
+    configure_determinism()
+    state = _bound_state(path, expected_sha256, identity)
+    return _restore_training_state(state, identity, device)
+
+
+def restore_chunk_boundary(path, expected_sha256, *, source_identity, target_identity, expected_step, device):
+    """Restore a committed parent into a new run's chunk schedule without taking an update.
+
+    The returned state retains the source identity, cursor and journal. Publish the
+    new checkpoint separately with the target identity and expected_sha256 as parent.
+    """
+    if type(expected_step) is not int or not 0 < expected_step <= 36000:
+        raise ValueError("Migration requires a committed nonzero optimizer boundary")
+    # The new run and its lock are necessarily different. Scientific input,
+    # schedule, optimization, coordinate layout and initialized tensors are pinned.
+    lineage_keys = {"run_id", "protocol_sha256", "execution_sha256", "dependencies_sha256", "evidence_runtime"}
+    left = {k:v for k,v in source_identity.items() if k not in lineage_keys}
+    right = {k:v for k,v in target_identity.items() if k not in lineage_keys}
+    require_exact(left, right, "S4 migration scientific identity")
+    if any(source_identity[k] == target_identity[k] for k in ("run_id", "protocol_sha256", "execution_sha256")):
+        raise ValueError("A scheduling migration requires separate run, protocol and execution bindings")
+    if source_identity["mode"] == "M0":
+        raise ValueError("M0 has no evidence chunk schedule to migrate")
+    old_runtime, new_runtime = source_identity["evidence_runtime"], target_identity["evidence_runtime"]
+    if old_runtime is None or new_runtime is None or training_chunks(old_runtime) != (64, 8) or training_chunks(new_runtime) != (256, 81):
+        raise ValueError("Expected the registered 64/8 to 256/81 evidence migration")
+    expected_runtime = dict(old_runtime, query_chunk=256, velocity_chunk=81)
+    require_exact(expected_runtime, new_runtime, "S4 migration evidence runtime")
+    configure_determinism()
+    state = _bound_state(path, expected_sha256, source_identity)
+    if state["step"] != expected_step or state["next_sample_index"] != expected_step:
+        raise ValueError("Parent checkpoint does not lie at the registered migration step")
+    # Validate under the original identity (including the coordinate buffers),
+    # then materialize and compare the target model and Adam moments separately.
+    original, original_opt, _ = _restore_training_state(state, source_identity, device)
+    target, target_opt, _ = _restore_training_state(state, target_identity, device)
+    require_exact(original.state_dict(), target.state_dict(), "S4 migration model")
+    require_exact(original_opt.state_dict(), target_opt.state_dict(), "S4 migration AdamW")
+    return target, target_opt, state
 
 
 def evaluation_model(path, expected_sha256, *, identity, device):

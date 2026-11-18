@@ -1,4 +1,0 @@
-2026-10-09 16:05:19,873 - Model - INFO - PARAMETER ...
-2026-10-09 16:05:19,873 - Model - INFO - Namespace(batch_size=1, epoch=None, gpu='0', seqlen=40, datapath='/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/data/NUDT-MIRSDT', dataset='NUDT-MIRSDT', log_dir='NUDT-MIRSDT__2024-12-28_16-21__SoftLoUloss_DeepPro-Plus_DataL40', logpath='/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/official_reproduction/doc_follow_probe_v4/log/', visual=False, threshold_eval=0.5, attribution=False)
-2026-10-09 16:05:30,207 - Model - INFO - ---- EVALUATION----
-2026-10-09 16:05:35,254 - Model - INFO - RAW_OFFICIAL_COUNTS_SAVED; complete-order ROC computed after shard merge

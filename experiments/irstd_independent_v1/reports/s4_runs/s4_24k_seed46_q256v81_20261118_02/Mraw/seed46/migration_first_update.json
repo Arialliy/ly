@@ -1,0 +1,75 @@
+{
+  "step": 601,
+  "mode": "Mraw",
+  "seed": 46,
+  "run_id": "s4_24k_seed46_q256v81_20261118_02",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "source_run_id": "s4_24k_seed46_20261118_01",
+  "source_step": 600,
+  "source_checkpoint_sha256": "6330591048d6614c4b7a9c5f63667029fda28c1802aa769f5ae97ad5ef5aad93",
+  "root_checkpoint_sha256": "b4bd6f9fdf897991ed0d881d18ca2955aaa9888cd5770a6b0d96c53cdbef6cb3",
+  "checkpoint_sha256": "851f29571b84462cb76fc07bdd6b53f8eae433a2094705a2c6f21a5dc6691b06",
+  "journal": {
+    "updates": 601,
+    "sha256": "f689af0a194d5d48e5f653a8502848df35ca259c9a7313f4ff7aa854cd5c179e"
+  },
+  "inherited_journal": {
+    "updates": 600,
+    "sha256": "7d69a5d419820ea083cb27a7c712dacc4849d70a8692e40b51495f881c279085"
+  },
+  "schedule_sha256": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
+  "update": {
+    "source": "Sequence64",
+    "center": 38,
+    "kind": "positive",
+    "sample_role": "positive",
+    "core_xyxy": [
+      73,
+      105,
+      137,
+      169
+    ],
+    "step": 601,
+    "edge_priority": false,
+    "learning_rate": 0.001,
+    "total": 1.25799560546875,
+    "foreground_bce": 1.2303001880645752,
+    "background_bce_all": 0.24568545818328857,
+    "background_bce_hard": 0.4622710645198822,
+    "background_bce": 0.2998318672180176,
+    "dice_loss": 0.9858591556549072,
+    "foreground_pixels": 20,
+    "background_pixels": 4076,
+    "eligible_hard_pixels": 3980,
+    "selected_hard_pixels": 398,
+    "gradient_l2_by_module": {
+      "frame_encoder": 0.45447946692566804,
+      "video_aggregator.encoder.amplitude": 0.25071577304533615,
+      "video_aggregator.encoder.temporal": 0.13380466922051634,
+      "video_aggregator.encoder.velocity": 2.2536778289875254,
+      "video_aggregator.encoder.joint": 0.5527492070840674,
+      "video_aggregator.encoder.fusion": 1.4734327070751063,
+      "spatial_decoder": 0.39505348352478953,
+      "detection_head": 0.3971803515456058
+    },
+    "parameter_update_l2_by_module": {
+      "frame_encoder": 0.0051299864230539985,
+      "video_aggregator.encoder.amplitude": 0.0016695999368419984,
+      "video_aggregator.encoder.temporal": 0.006079893582057669,
+      "video_aggregator.encoder.velocity": 0.028821626936354282,
+      "video_aggregator.encoder.joint": 0.013362299218180692,
+      "video_aggregator.encoder.fusion": 0.01205723929347032,
+      "spatial_decoder": 0.03154019537757145,
+      "detection_head": 0.0002918802472939373
+    },
+    "finite_after_update": true,
+    "peak_allocated_mib": 444.326171875,
+    "seconds": 1.905756794003537,
+    "evidence_runtime": {
+      "query_chunk": 256,
+      "velocity_chunk": 81,
+      "checkpoint_chunks": true
+    }
+  }
+}

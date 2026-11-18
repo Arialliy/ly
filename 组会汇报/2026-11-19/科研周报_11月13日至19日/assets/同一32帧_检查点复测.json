@@ -1,0 +1,2380 @@
+{
+  "run": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02",
+  "seed": 46,
+  "scope": "Supplementary post-hoc replay of the common set of 32 native full-frame development-monitor centers (8 existing development sequences x 4 frames). Each model/checkpoint uses a newly optimized descriptive threshold on these 32 centers with <=1 FP/center. No new data or independent replications.",
+  "method": {
+    "center_manifest": "Frame IDs and XY centroids in the officially bound 6000-step monitoring archive. All selected centers contain exactly one annotated object.",
+    "postprocessing": "Archived raw peak_yx and peak_scores already include the official native-image 8-connected regional-maximum plateau representative and Chebyshev radius 2 NMS. Recomputed FP64 squared distance from peak coordinates to stored native mask centroid.",
+    "curve": "Used the official _curve and _at_budget function bodies without modification. Threshold includes tied scores. Peak within squared distance <=9 matches exactly one GT; other kept peaks count toward FP.",
+    "selection": "Among attainable global thresholds with FP<=32 on 32 frames, maximize TP then minimize FP then choose highest threshold. Official 672-panel thresholds only used as independent validation, not as subset thresholds.",
+    "evaluator": "experiments/irstd_independent_v1/evaluation/s2b_froc.py",
+    "evaluator_sha256": "c2bedbcf939acad6ed79ee41e18db606afe36030e334ce9adc5fa47854ed3375"
+  },
+  "checkpoints": {
+    "6000": {
+      "models": {
+        "Msep": {
+          "model": "对照（主效应重建）",
+          "tp": 25,
+          "fp": 32,
+          "pd": 0.78125,
+          "threshold": 10.253172874450684,
+          "fp_per_frame": 1.0,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                132,
+                95
+              ],
+              "match_distance_px": 2.398840943001962
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 3,
+              "matched_peak_xy": [
+                129,
+                118
+              ],
+              "match_distance_px": 1.454696934140316
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                133,
+                152
+              ],
+              "match_distance_px": 1.6598765952379286
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                171,
+                64
+              ],
+              "match_distance_px": 1.1357556200179513
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 3,
+              "matched_peak_xy": [
+                183,
+                86
+              ],
+              "match_distance_px": 2.904668355471935
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                190,
+                101
+              ],
+              "match_distance_px": 2.028235923134878
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                191,
+                118
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                61,
+                67
+              ],
+              "match_distance_px": 0.6327953792006203
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                74,
+                77
+              ],
+              "match_distance_px": 1.9461336245832048
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                139,
+                135
+              ],
+              "match_distance_px": 2.601068156653247
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                155,
+                147
+              ],
+              "match_distance_px": 1.8184170657470193
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                193,
+                165
+              ],
+              "match_distance_px": 1.1010353655403957
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                133,
+                123
+              ],
+              "match_distance_px": 1.4249459337558805
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                136,
+                139
+              ],
+              "match_distance_px": 2.066935466390329
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                140,
+                154
+              ],
+              "match_distance_px": 2.5079872407968895
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                46,
+                119
+              ],
+              "match_distance_px": 2.3890576079078127
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                67,
+                124
+              ],
+              "match_distance_px": 1.3812899826141294
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                84,
+                129
+              ],
+              "match_distance_px": 2.773783976992522
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                103,
+                140
+              ],
+              "match_distance_px": 1.0650340467145432
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 3,
+              "matched_peak_xy": [
+                73,
+                48
+              ],
+              "match_distance_px": 1.0141683565415744
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                97,
+                69
+              ],
+              "match_distance_px": 1.748235441951067
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                109,
+                78
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                98,
+                44
+              ],
+              "match_distance_px": 0.6003637421229481
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                112,
+                52
+              ],
+              "match_distance_px": 0.6009252125773329
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                130,
+                64
+              ],
+              "match_distance_px": 1.677649761898948
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 6
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 6
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 2,
+              "fp": 3
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 3
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 5
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 4
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/metrics.json",
+              "sha256": "d957688aa97bb0fc958498e96ca947e93f1466a95daae9df678cac954eed6775"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/binding.json",
+              "sha256": "1ad47849c288c08505f24a95e3aa1907d6f13f802a7a85384304f1a4c9079f8d"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/froc.npz",
+              "sha256": "fe6478e1e464491b6a79578d5da890c153e5a896eb6c7ede6187d2c0e6a8cca5"
+            }
+          },
+          "checkpoint_sha256": "7f2f266cdd3db0594e82ef5bb1cf71a2e73b5b872b9b008c8726f8c2157a598d",
+          "official_all_frame_count": 32,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 10.253172874450684,
+            "tp": 25,
+            "fp": 32
+          }
+        },
+        "Mraw": {
+          "model": "对照（完整响应）",
+          "tp": 25,
+          "fp": 30,
+          "pd": 0.78125,
+          "threshold": 7.899676322937012,
+          "fp_per_frame": 0.9375,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                132,
+                96
+              ],
+              "match_distance_px": 1.8975225205452457
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                128,
+                118
+              ],
+              "match_distance_px": 2.189022349331526
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                132,
+                155
+              ],
+              "match_distance_px": 2.2207343154132646
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                173,
+                66
+              ],
+              "match_distance_px": 1.770902220495595
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 3
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                189,
+                100
+              ],
+              "match_distance_px": 1.5058509600026662
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                190,
+                119
+              ],
+              "match_distance_px": 2.3596710231043
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                62,
+                67
+              ],
+              "match_distance_px": 1.3270590528090958
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                74,
+                78
+              ],
+              "match_distance_px": 2.5634390705685086
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                83,
+                89
+              ],
+              "match_distance_px": 1.91828462710442
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                96,
+                100
+              ],
+              "match_distance_px": 2.5495097567963922
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 2
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                155,
+                147
+              ],
+              "match_distance_px": 1.8184170657470193
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                194,
+                164
+              ],
+              "match_distance_px": 1.5819612690631382
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                132,
+                122
+              ],
+              "match_distance_px": 0.9888575909503088
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                140,
+                157
+              ],
+              "match_distance_px": 0.5385164807134462
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                47,
+                118
+              ],
+              "match_distance_px": 1.6552505304087137
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                66,
+                125
+              ],
+              "match_distance_px": 1.7131809720800584
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                87,
+                130
+              ],
+              "match_distance_px": 2.9726645780978367
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                102,
+                137
+              ],
+              "match_distance_px": 2.754785468091236
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                73,
+                49
+              ],
+              "match_distance_px": 1.1865276230403679
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                87,
+                58
+              ],
+              "match_distance_px": 1.6400942951709028
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                99,
+                67
+              ],
+              "match_distance_px": 1.0804805743764803
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                109,
+                78
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                97,
+                44
+              ],
+              "match_distance_px": 0.8208955223880565
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                129,
+                64
+              ],
+              "match_distance_px": 0.8142441722754113
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                142,
+                75
+              ],
+              "match_distance_px": 0.75
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 6
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 6
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 2,
+              "fp": 3
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 2,
+              "fp": 3
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 2
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 4
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/metrics.json",
+              "sha256": "5af4590d1b3de5ea9a8e07584f35ce7a641629f1f8217bea61e828cb3299549f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/binding.json",
+              "sha256": "710ebc8aaf4d5ce68cf8bf367bab9855c2ba22ed22d7788a8c0181b7bbb9a1e2"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/froc.npz",
+              "sha256": "45718a3ffa1b50221070952047bba4451491976c8dabe95c7f8a89954010ff97"
+            }
+          },
+          "checkpoint_sha256": "0b5140b365c93e98440a812b2f51437e273dec942dbeab922e513730a781e399",
+          "official_all_frame_count": 32,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 7.899676322937012,
+            "tp": 25,
+            "fp": 30
+          }
+        },
+        "Mint": {
+          "model": "我们的方法（显式交互）",
+          "tp": 26,
+          "fp": 18,
+          "pd": 0.8125,
+          "threshold": 8.238456726074219,
+          "fp_per_frame": 0.5625,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                131,
+                97
+              ],
+              "match_distance_px": 0.9117899685484484
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                129,
+                118
+              ],
+              "match_distance_px": 1.454696934140316
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                133,
+                154
+              ],
+              "match_distance_px": 1.8603958353962942
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                173,
+                66
+              ],
+              "match_distance_px": 1.770902220495595
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 3
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                189,
+                100
+              ],
+              "match_distance_px": 1.5058509600026662
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                191,
+                118
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                73,
+                77
+              ],
+              "match_distance_px": 1.152378681369067
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                84,
+                88
+              ],
+              "match_distance_px": 1.1492787092828176
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                95,
+                98
+              ],
+              "match_distance_px": 2.1213203435596424
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                134,
+                136
+              ],
+              "match_distance_px": 2.7866746411369294
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                157,
+                146
+              ],
+              "match_distance_px": 2.6914941250168094
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                193,
+                164
+              ],
+              "match_distance_px": 0.5842183960088773
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                133,
+                120
+              ],
+              "match_distance_px": 1.5824522503550456
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                138,
+                138
+              ],
+              "match_distance_px": 1.0354816378006024
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                141,
+                156
+              ],
+              "match_distance_px": 0.94339811320567
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                47,
+                118
+              ],
+              "match_distance_px": 1.6552505304087137
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                66,
+                125
+              ],
+              "match_distance_px": 1.7131809720800584
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                87,
+                130
+              ],
+              "match_distance_px": 2.9726645780978367
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                103,
+                138
+              ],
+              "match_distance_px": 1.3643937290730648
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                73,
+                49
+              ],
+              "match_distance_px": 1.1865276230403679
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                87,
+                58
+              ],
+              "match_distance_px": 1.6400942951709028
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                99,
+                68
+              ],
+              "match_distance_px": 0.7822293244627087
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                109,
+                77
+              ],
+              "match_distance_px": 1.4513817126240915
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                97,
+                43
+              ],
+              "match_distance_px": 1.630626899551957
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                129,
+                64
+              ],
+              "match_distance_px": 0.8142441722754113
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                142,
+                75
+              ],
+              "match_distance_px": 0.75
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 4
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 3
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 1
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 1
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/metrics.json",
+              "sha256": "fa2b22985e3920dafbc0fde561d5a95d33ecbd62e543dd43da8c1e24c4889b1f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/binding.json",
+              "sha256": "9795b013fe0e22028a6309143e26185bf25cebac81aa3d5b881c78eb51665486"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/froc.npz",
+              "sha256": "de69ff04b68c4f24d20244f85add8dbe7941e5e3cc36110ab903f838cc3ea143"
+            }
+          },
+          "checkpoint_sha256": "f1621988dfc56191d8f9cb1cc0e03f191a62ae07e616cbf482b4b709395809a4",
+          "official_all_frame_count": 32,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 8.238456726074219,
+            "tp": 26,
+            "fp": 18
+          }
+        }
+      },
+      "Mraw_minus_Msep": {
+        "new_tp": 4,
+        "lost_tp": 4,
+        "net_tp": 0,
+        "net_fp": -2,
+        "new_hit_ids": [
+          "Sequence34/00064",
+          "Sequence34/00092",
+          "Sequence51/00037",
+          "Sequence74/00092"
+        ],
+        "lost_hit_ids": [
+          "Sequence19/00037",
+          "Sequence45/00009",
+          "Sequence48/00037",
+          "Sequence74/00037"
+        ]
+      },
+      "Mint_minus_Mraw": {
+        "new_tp": 2,
+        "lost_tp": 1,
+        "net_tp": 1,
+        "net_fp": -12,
+        "new_hit_ids": [
+          "Sequence45/00009",
+          "Sequence48/00037"
+        ],
+        "lost_hit_ids": [
+          "Sequence34/00009"
+        ]
+      }
+    },
+    "12000": {
+      "models": {
+        "Msep": {
+          "model": "对照（主效应重建）",
+          "tp": 31,
+          "fp": 18,
+          "pd": 0.96875,
+          "threshold": 2.059507369995117,
+          "fp_per_frame": 0.5625,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                130,
+                97
+              ],
+              "match_distance_px": 0.4647325374459367
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                131,
+                115
+              ],
+              "match_distance_px": 2.151663701350823
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                132,
+                134
+              ],
+              "match_distance_px": 1.910518548701476
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                132,
+                154
+              ],
+              "match_distance_px": 1.2564711390172922
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                172,
+                66
+              ],
+              "match_distance_px": 1.461538461538467
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 3,
+              "matched_peak_xy": [
+                182,
+                84
+              ],
+              "match_distance_px": 1.8702150453587136
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                189,
+                100
+              ],
+              "match_distance_px": 1.5058509600026662
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                191,
+                118
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                71,
+                75
+              ],
+              "match_distance_px": 1.6856720140013757
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                84,
+                88
+              ],
+              "match_distance_px": 1.1492787092828176
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                95,
+                99
+              ],
+              "match_distance_px": 1.5811388300841898
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                137,
+                136
+              ],
+              "match_distance_px": 0.4068851871911236
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                156,
+                146
+              ],
+              "match_distance_px": 1.7483250913374206
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                175,
+                155
+              ],
+              "match_distance_px": 0.8051715306415974
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                194,
+                165
+              ],
+              "match_distance_px": 1.8367278510305607
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                133,
+                121
+              ],
+              "match_distance_px": 0.5884389414473158
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                138,
+                140
+              ],
+              "match_distance_px": 0.9689627902499105
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                140,
+                155
+              ],
+              "match_distance_px": 1.5132745950421542
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                142,
+                175
+              ],
+              "match_distance_px": 1.9209372712298476
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                47,
+                117
+              ],
+              "match_distance_px": 0.9826804007566371
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                65,
+                124
+              ],
+              "match_distance_px": 1.0729423373664448
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                84,
+                131
+              ],
+              "match_distance_px": 0.9147320339189834
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                104,
+                138
+              ],
+              "match_distance_px": 1.2239010925305727
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                70,
+                49
+              ],
+              "match_distance_px": 2.148195603747928
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                85,
+                58
+              ],
+              "match_distance_px": 1.9084785168906417
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                100,
+                67
+              ],
+              "match_distance_px": 1.9150556836825734
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                109,
+                78
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                97,
+                42
+              ],
+              "match_distance_px": 2.577599408831422
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                114,
+                53
+              ],
+              "match_distance_px": 1.6414763002993498
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                129,
+                63
+              ],
+              "match_distance_px": 0.7151771952245918
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                142,
+                73
+              ],
+              "match_distance_px": 2.1360009363293826
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 5
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 4
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 4
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/metrics.json",
+              "sha256": "6d84a301491363462f76ef02dfab96e26f2f1435ce1f0a8bb5c5029acf40f66f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/binding.json",
+              "sha256": "98a5daaefbe367b8a8875cee0a485a035bcadd3cfff7418784d462f606ef8d0b"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/froc.npz",
+              "sha256": "8e8878c49aa9ea8f99d2561d3f9ff88fc3af8460b00897ba619c54aa1413756f"
+            }
+          },
+          "checkpoint_sha256": "1356fba4bfe509be953c58671c9e8aff173020b4735b6819707800b8de85c688",
+          "official_all_frame_count": 672,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 2.059507369995117,
+            "tp": 31,
+            "fp": 18
+          }
+        },
+        "Mraw": {
+          "model": "对照（完整响应）",
+          "tp": 30,
+          "fp": 15,
+          "pd": 0.9375,
+          "threshold": 4.159989833831787,
+          "fp_per_frame": 0.46875,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                131,
+                97
+              ],
+              "match_distance_px": 0.9117899685484484
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                128,
+                118
+              ],
+              "match_distance_px": 2.189022349331526
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                132,
+                155
+              ],
+              "match_distance_px": 2.2207343154132646
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                173,
+                66
+              ],
+              "match_distance_px": 1.770902220495595
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                180,
+                83
+              ],
+              "match_distance_px": 1.8782990566438442
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                189,
+                100
+              ],
+              "match_distance_px": 1.5058509600026662
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                191,
+                118
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 1
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                71,
+                75
+              ],
+              "match_distance_px": 1.6856720140013757
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                83,
+                89
+              ],
+              "match_distance_px": 1.91828462710442
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                93,
+                99
+              ],
+              "match_distance_px": 0.7071067811865476
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                138,
+                136
+              ],
+              "match_distance_px": 1.2775845264491097
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                156,
+                146
+              ],
+              "match_distance_px": 1.7483250913374206
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                174,
+                154
+              ],
+              "match_distance_px": 0.76661276610142
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                194,
+                164
+              ],
+              "match_distance_px": 1.5819612690631382
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                133,
+                121
+              ],
+              "match_distance_px": 0.5884389414473158
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                138,
+                141
+              ],
+              "match_distance_px": 1.9677962857527271
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                140,
+                156
+              ],
+              "match_distance_px": 0.5385164807134462
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                141,
+                174
+              ],
+              "match_distance_px": 0.5385164807134462
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                47,
+                118
+              ],
+              "match_distance_px": 1.6552505304087137
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                66,
+                125
+              ],
+              "match_distance_px": 1.7131809720800584
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                86,
+                131
+              ],
+              "match_distance_px": 1.5971914124998552
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                103,
+                139
+              ],
+              "match_distance_px": 0.705644304375462
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                70,
+                50
+              ],
+              "match_distance_px": 2.6446275156984798
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                87,
+                58
+              ],
+              "match_distance_px": 1.6400942951709028
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                99,
+                66
+              ],
+              "match_distance_px": 1.9295061096458004
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                109,
+                77
+              ],
+              "match_distance_px": 1.4513817126240915
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                97,
+                44
+              ],
+              "match_distance_px": 0.8208955223880565
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                112,
+                53
+              ],
+              "match_distance_px": 0.8333333333333315
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                129,
+                63
+              ],
+              "match_distance_px": 0.7151771952245918
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                143,
+                74
+              ],
+              "match_distance_px": 2.0155644370746373
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 6
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 1
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 3
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 2
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 3
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/metrics.json",
+              "sha256": "fd768aa15446ad1136ed913d699806465099539f924cd42b8d88807cdebe2fa7"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/binding.json",
+              "sha256": "c19af3398076a69b2b695288fdf9ce39e84a39aba90cd238025e7c81e317c59e"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/froc.npz",
+              "sha256": "bbe0668616fb44cda75e891dc9921a48f627a796adcc73f10d105499a41981ca"
+            }
+          },
+          "checkpoint_sha256": "a917956f296309c6159cf911597679d76b9f07c81319fe6e872fa63082274050",
+          "official_all_frame_count": 672,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 2.559009075164795,
+            "tp": 30,
+            "fp": 18
+          }
+        },
+        "Mint": {
+          "model": "我们的方法（显式交互）",
+          "tp": 27,
+          "fp": 32,
+          "pd": 0.84375,
+          "threshold": 6.788393974304199,
+          "fp_per_frame": 1.0,
+          "per_frame": {
+            "Sequence5/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                131,
+                97
+              ],
+              "match_distance_px": 0.9117899685484484
+            },
+            "Sequence5/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 3,
+              "matched_peak_xy": [
+                131,
+                118
+              ],
+              "match_distance_px": 1.6627663151645453
+            },
+            "Sequence5/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 2
+            },
+            "Sequence5/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                133,
+                151
+              ],
+              "match_distance_px": 2.324273894132972
+            },
+            "Sequence19/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                173,
+                66
+              ],
+              "match_distance_px": 1.770902220495595
+            },
+            "Sequence19/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 3
+            },
+            "Sequence19/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                189,
+                100
+              ],
+              "match_distance_px": 1.5058509600026662
+            },
+            "Sequence19/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                190,
+                119
+              ],
+              "match_distance_px": 2.3596710231043
+            },
+            "Sequence34/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                62,
+                67
+              ],
+              "match_distance_px": 1.3270590528090958
+            },
+            "Sequence34/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                74,
+                78
+              ],
+              "match_distance_px": 2.5634390705685086
+            },
+            "Sequence34/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                83,
+                89
+              ],
+              "match_distance_px": 1.91828462710442
+            },
+            "Sequence34/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                95,
+                98
+              ],
+              "match_distance_px": 2.1213203435596424
+            },
+            "Sequence45/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                138,
+                135
+              ],
+              "match_distance_px": 1.8162843634433683
+            },
+            "Sequence45/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                155,
+                147
+              ],
+              "match_distance_px": 1.8184170657470193
+            },
+            "Sequence45/00064": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence45/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                195,
+                164
+              ],
+              "match_distance_px": 2.5814514869345353
+            },
+            "Sequence48/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                134,
+                123
+              ],
+              "match_distance_px": 1.800276986998639
+            },
+            "Sequence48/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                137,
+                137
+              ],
+              "match_distance_px": 2.2961320132392666
+            },
+            "Sequence48/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                141,
+                155
+              ],
+              "match_distance_px": 1.7000000000000053
+            },
+            "Sequence48/00092": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence49/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                47,
+                118
+              ],
+              "match_distance_px": 1.6552505304087137
+            },
+            "Sequence49/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                67,
+                124
+              ],
+              "match_distance_px": 1.3812899826141294
+            },
+            "Sequence49/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                87,
+                133
+              ],
+              "match_distance_px": 2.7479120088101903
+            },
+            "Sequence49/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                105,
+                139
+              ],
+              "match_distance_px": 1.330661924391309
+            },
+            "Sequence51/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                71,
+                50
+              ],
+              "match_distance_px": 1.9811837823756142
+            },
+            "Sequence51/00037": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                87,
+                58
+              ],
+              "match_distance_px": 1.6400942951709028
+            },
+            "Sequence51/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                99,
+                68
+              ],
+              "match_distance_px": 0.7822293244627087
+            },
+            "Sequence51/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 2,
+              "matched_peak_xy": [
+                109,
+                78
+              ],
+              "match_distance_px": 1.2522169689307416
+            },
+            "Sequence74/00009": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 1,
+              "matched_peak_xy": [
+                97,
+                43
+              ],
+              "match_distance_px": 1.630626899551957
+            },
+            "Sequence74/00037": {
+              "gt": 1,
+              "tp": 0,
+              "fp": 0
+            },
+            "Sequence74/00064": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                129,
+                64
+              ],
+              "match_distance_px": 0.8142441722754113
+            },
+            "Sequence74/00092": {
+              "gt": 1,
+              "tp": 1,
+              "fp": 0,
+              "matched_peak_xy": [
+                143,
+                73
+              ],
+              "match_distance_px": 2.6575364531836625
+            }
+          },
+          "per_source": {
+            "Sequence5": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 7
+            },
+            "Sequence19": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 5
+            },
+            "Sequence34": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 4
+            },
+            "Sequence45": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 1
+            },
+            "Sequence48": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 2
+            },
+            "Sequence49": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 5
+            },
+            "Sequence51": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 4,
+              "fp": 7
+            },
+            "Sequence74": {
+              "frames": 4,
+              "gt": 4,
+              "tp": 3,
+              "fp": 1
+            }
+          },
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/metrics.json",
+              "sha256": "682797fb38489f955240ee7c100b51916963249e4678f0c2c436cbdd28b7e366"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/binding.json",
+              "sha256": "5d9434a7448dc6fe4bbe0ca035ec2540ca3ea37741fa1f0cbd77a6d7b28756a1"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/froc.npz",
+              "sha256": "7d51d9d816fc812027cf8959f006a777a6c5762c92f424787c234ab4b3d1df73"
+            }
+          },
+          "checkpoint_sha256": "b4dd695edb9893ae2c871d134503fba041254133b6767d1246ae6e863773d8cc",
+          "official_all_frame_count": 672,
+          "same_32_at_official_all_frame_threshold_as_crosscheck": {
+            "threshold": 6.828060150146484,
+            "tp": 26,
+            "fp": 32
+          }
+        }
+      },
+      "Mraw_minus_Msep": {
+        "new_tp": 0,
+        "lost_tp": 1,
+        "net_tp": -1,
+        "net_fp": -3,
+        "new_hit_ids": [],
+        "lost_hit_ids": [
+          "Sequence5/00064"
+        ]
+      },
+      "Mint_minus_Mraw": {
+        "new_tp": 1,
+        "lost_tp": 4,
+        "net_tp": -3,
+        "net_fp": 17,
+        "new_hit_ids": [
+          "Sequence34/00009"
+        ],
+        "lost_hit_ids": [
+          "Sequence19/00037",
+          "Sequence45/00064",
+          "Sequence48/00092",
+          "Sequence74/00037"
+        ]
+      }
+    }
+  },
+  "official_18000_all_three_available_at_snapshot": false,
+  "center_ids": [
+    "Sequence5/00009",
+    "Sequence5/00037",
+    "Sequence5/00064",
+    "Sequence5/00092",
+    "Sequence19/00009",
+    "Sequence19/00037",
+    "Sequence19/00064",
+    "Sequence19/00092",
+    "Sequence34/00009",
+    "Sequence34/00037",
+    "Sequence34/00064",
+    "Sequence34/00092",
+    "Sequence45/00009",
+    "Sequence45/00037",
+    "Sequence45/00064",
+    "Sequence45/00092",
+    "Sequence48/00009",
+    "Sequence48/00037",
+    "Sequence48/00064",
+    "Sequence48/00092",
+    "Sequence49/00009",
+    "Sequence49/00037",
+    "Sequence49/00064",
+    "Sequence49/00092",
+    "Sequence51/00009",
+    "Sequence51/00037",
+    "Sequence51/00064",
+    "Sequence51/00092",
+    "Sequence74/00009",
+    "Sequence74/00037",
+    "Sequence74/00064",
+    "Sequence74/00092"
+  ]
+}

@@ -1,1 +1,0 @@
-Engineering subset only: Sequence85 is first sequence in the official DeepPro test manifest. First 40 images, masks, masks_centroid copied unchanged from the official public archive. test.txt preserves original selected manifest entries; the official test loader uses their sequence-name prefix and reads PNG folders, not the Mix paths. This is not a full benchmark test set.

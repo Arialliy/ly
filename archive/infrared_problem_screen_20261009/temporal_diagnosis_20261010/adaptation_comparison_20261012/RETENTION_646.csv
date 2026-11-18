@@ -1,4 +1,0 @@
-condition,target_frames,both_matched,O_only,S_only,neither_matched,lost_both_success_status,lost_both_success_status_fraction
-release,646,646,0,0,0,0,0.0
-lambda0_top1,646,618,5,5,18,28,0.043343653250773995
-gaussian_softiou_approx,646,586,25,13,22,60,0.09287925696594428

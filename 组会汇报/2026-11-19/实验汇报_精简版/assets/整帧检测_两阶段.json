@@ -1,0 +1,432 @@
+{
+  "data": "NUDT-MIRSDT",
+  "run_dir": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02",
+  "seed": 46,
+  "all_three_models_have_same_parameter_count": 23945,
+  "scope": "Native full-frame detection on development sets. Per model and checkpoint, descriptive FROC obtained by scanning its native logit scores on that panel. Operating threshold chosen for greatest Pd below or at a mean 1 FP/frame, then fewest FP. Curves show maximum attained Pd per empirical FP count and held constant through the next FP count.",
+  "panel_overlap": {
+    "n_shared_center_frames": 32,
+    "overlapping_frame_ids": [
+      "Sequence19/00009",
+      "Sequence19/00037",
+      "Sequence19/00064",
+      "Sequence19/00092",
+      "Sequence34/00009",
+      "Sequence34/00037",
+      "Sequence34/00064",
+      "Sequence34/00092",
+      "Sequence45/00009",
+      "Sequence45/00037",
+      "Sequence45/00064",
+      "Sequence45/00092",
+      "Sequence48/00009",
+      "Sequence48/00037",
+      "Sequence48/00064",
+      "Sequence48/00092",
+      "Sequence49/00009",
+      "Sequence49/00037",
+      "Sequence49/00064",
+      "Sequence49/00092",
+      "Sequence5/00009",
+      "Sequence5/00037",
+      "Sequence5/00064",
+      "Sequence5/00092",
+      "Sequence51/00009",
+      "Sequence51/00037",
+      "Sequence51/00064",
+      "Sequence51/00092",
+      "Sequence74/00009",
+      "Sequence74/00037",
+      "Sequence74/00064",
+      "Sequence74/00092"
+    ],
+    "32_frame_panel_is_subset_of_672": true,
+    "same_training_seed": true,
+    "shared_source_sequences": [
+      "Sequence5",
+      "Sequence19",
+      "Sequence34",
+      "Sequence45",
+      "Sequence48",
+      "Sequence49",
+      "Sequence51",
+      "Sequence74"
+    ],
+    "independence": "These checkpoints and panels are not independent replications. Training step and set of evaluation centers both differ."
+  },
+  "stages": {
+    "6000": {
+      "stage": "32-frame development monitoring panel",
+      "frame_count": 32,
+      "ground_truth_count": 32,
+      "source_sequences": [
+        "Sequence5",
+        "Sequence19",
+        "Sequence34",
+        "Sequence45",
+        "Sequence48",
+        "Sequence49",
+        "Sequence51",
+        "Sequence74"
+      ],
+      "models": {
+        "Msep": {
+          "role": "主效应重建",
+          "tp": 25,
+          "fp": 32,
+          "pd": 0.78125,
+          "actual_fp_per_frame": 1.0,
+          "threshold_raw_logit": 10.253172874450684,
+          "checkpoint_sha256": "7f2f266cdd3db0594e82ef5bb1cf71a2e73b5b872b9b008c8726f8c2157a598d",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/metrics.json",
+              "sha256": "d957688aa97bb0fc958498e96ca947e93f1466a95daae9df678cac954eed6775"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/binding.json",
+              "sha256": "1ad47849c288c08505f24a95e3aa1907d6f13f802a7a85384304f1a4c9079f8d"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/froc.npz",
+              "sha256": "fe6478e1e464491b6a79578d5da890c153e5a896eb6c7ede6187d2c0e6a8cca5"
+            }
+          }
+        },
+        "Mraw": {
+          "role": "完整响应",
+          "tp": 25,
+          "fp": 30,
+          "pd": 0.78125,
+          "actual_fp_per_frame": 0.9375,
+          "threshold_raw_logit": 7.899676322937012,
+          "checkpoint_sha256": "0b5140b365c93e98440a812b2f51437e273dec942dbeab922e513730a781e399",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/metrics.json",
+              "sha256": "5af4590d1b3de5ea9a8e07584f35ce7a641629f1f8217bea61e828cb3299549f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/binding.json",
+              "sha256": "710ebc8aaf4d5ce68cf8bf367bab9855c2ba22ed22d7788a8c0181b7bbb9a1e2"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/froc.npz",
+              "sha256": "45718a3ffa1b50221070952047bba4451491976c8dabe95c7f8a89954010ff97"
+            }
+          }
+        },
+        "Mint": {
+          "role": "主效应与交互分支",
+          "tp": 26,
+          "fp": 18,
+          "pd": 0.8125,
+          "actual_fp_per_frame": 0.5625,
+          "threshold_raw_logit": 8.238456726074219,
+          "checkpoint_sha256": "f1621988dfc56191d8f9cb1cc0e03f191a62ae07e616cbf482b4b709395809a4",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/metrics.json",
+              "sha256": "fa2b22985e3920dafbc0fde561d5a95d33ecbd62e543dd43da8c1e24c4889b1f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/binding.json",
+              "sha256": "9795b013fe0e22028a6309143e26185bf25cebac81aa3d5b881c78eb51665486"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/froc.npz",
+              "sha256": "de69ff04b68c4f24d20244f85add8dbe7941e5e3cc36110ab903f838cc3ea143"
+            }
+          }
+        }
+      },
+      "paired_comparisons": {
+        "Mraw minus Msep": {
+          "net_tp": 0,
+          "delta_fp": -2,
+          "difference_in_pd_percentage_points": 0.0,
+          "only_left_count": 4,
+          "only_right_count": 4,
+          "only_left_ids": [
+            "Sequence34/00064",
+            "Sequence34/00092",
+            "Sequence51/00037",
+            "Sequence74/00092"
+          ],
+          "only_right_ids": [
+            "Sequence19/00037",
+            "Sequence45/00009",
+            "Sequence48/00037",
+            "Sequence74/00037"
+          ]
+        },
+        "Mint minus Mraw": {
+          "net_tp": 1,
+          "delta_fp": -12,
+          "difference_in_pd_percentage_points": 3.125,
+          "only_left_count": 2,
+          "only_right_count": 1,
+          "only_left_ids": [
+            "Sequence45/00009",
+            "Sequence48/00037"
+          ],
+          "only_right_ids": [
+            "Sequence34/00009"
+          ]
+        }
+      }
+    },
+    "12000": {
+      "stage": "672-frame full development set",
+      "frame_count": 672,
+      "ground_truth_count": 672,
+      "source_sequences": [
+        "Sequence5",
+        "Sequence19",
+        "Sequence34",
+        "Sequence45",
+        "Sequence48",
+        "Sequence49",
+        "Sequence51",
+        "Sequence74"
+      ],
+      "models": {
+        "Msep": {
+          "role": "主效应重建",
+          "tp": 646,
+          "fp": 501,
+          "pd": 0.9613095238095238,
+          "actual_fp_per_frame": 0.7455357142857143,
+          "threshold_raw_logit": 2.059507369995117,
+          "checkpoint_sha256": "1356fba4bfe509be953c58671c9e8aff173020b4735b6819707800b8de85c688",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/metrics.json",
+              "sha256": "6d84a301491363462f76ef02dfab96e26f2f1435ce1f0a8bb5c5029acf40f66f"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/binding.json",
+              "sha256": "98a5daaefbe367b8a8875cee0a485a035bcadd3cfff7418784d462f606ef8d0b"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/froc.npz",
+              "sha256": "8e8878c49aa9ea8f99d2561d3f9ff88fc3af8460b00897ba619c54aa1413756f"
+            }
+          }
+        },
+        "Mraw": {
+          "role": "完整响应",
+          "tp": 641,
+          "fp": 492,
+          "pd": 0.9538690476190477,
+          "actual_fp_per_frame": 0.7321428571428571,
+          "threshold_raw_logit": 2.559009075164795,
+          "checkpoint_sha256": "a917956f296309c6159cf911597679d76b9f07c81319fe6e872fa63082274050",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/metrics.json",
+              "sha256": "fd768aa15446ad1136ed913d699806465099539f924cd42b8d88807cdebe2fa7"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/binding.json",
+              "sha256": "c19af3398076a69b2b695288fdf9ce39e84a39aba90cd238025e7c81e317c59e"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/froc.npz",
+              "sha256": "bbe0668616fb44cda75e891dc9921a48f627a796adcc73f10d105499a41981ca"
+            }
+          }
+        },
+        "Mint": {
+          "role": "主效应与交互分支",
+          "tp": 570,
+          "fp": 671,
+          "pd": 0.8482142857142857,
+          "actual_fp_per_frame": 0.9985119047619048,
+          "threshold_raw_logit": 6.828060150146484,
+          "checkpoint_sha256": "b4dd695edb9893ae2c871d134503fba041254133b6767d1246ae6e863773d8cc",
+          "sources": {
+            "metrics": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/metrics.json",
+              "sha256": "682797fb38489f955240ee7c100b51916963249e4678f0c2c436cbdd28b7e366"
+            },
+            "binding": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/binding.json",
+              "sha256": "5d9434a7448dc6fe4bbe0ca035ec2540ca3ea37741fa1f0cbd77a6d7b28756a1"
+            },
+            "froc": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/froc.npz",
+              "sha256": "7d51d9d816fc812027cf8959f006a777a6c5762c92f424787c234ab4b3d1df73"
+            }
+          }
+        }
+      },
+      "paired_comparisons": {
+        "Mraw minus Msep": {
+          "net_tp": -5,
+          "delta_fp": -9,
+          "difference_in_pd_percentage_points": -0.7440476190476164,
+          "only_left_count": 14,
+          "only_right_count": 19,
+          "only_left_ids": [
+            "Sequence19/00038",
+            "Sequence19/00060",
+            "Sequence34/00017",
+            "Sequence34/00082",
+            "Sequence45/00063",
+            "Sequence48/00052",
+            "Sequence49/00032",
+            "Sequence49/00069",
+            "Sequence5/00084",
+            "Sequence51/00042",
+            "Sequence51/00049",
+            "Sequence51/00056",
+            "Sequence51/00061",
+            "Sequence74/00020"
+          ],
+          "only_right_ids": [
+            "Sequence19/00082",
+            "Sequence34/00021",
+            "Sequence34/00033",
+            "Sequence34/00039",
+            "Sequence34/00073",
+            "Sequence45/00057",
+            "Sequence48/00045",
+            "Sequence49/00051",
+            "Sequence49/00063",
+            "Sequence49/00089",
+            "Sequence5/00039",
+            "Sequence5/00064",
+            "Sequence51/00033",
+            "Sequence51/00036",
+            "Sequence51/00052",
+            "Sequence51/00068",
+            "Sequence74/00019",
+            "Sequence74/00074",
+            "Sequence74/00075"
+          ]
+        },
+        "Mint minus Mraw": {
+          "net_tp": -71,
+          "delta_fp": 179,
+          "difference_in_pd_percentage_points": -10.565476190476197,
+          "only_left_count": 15,
+          "only_right_count": 86,
+          "only_left_ids": [
+            "Sequence19/00018",
+            "Sequence34/00009",
+            "Sequence34/00010",
+            "Sequence34/00021",
+            "Sequence34/00026",
+            "Sequence34/00033",
+            "Sequence34/00039",
+            "Sequence34/00073",
+            "Sequence45/00057",
+            "Sequence49/00051",
+            "Sequence49/00089",
+            "Sequence5/00039",
+            "Sequence51/00033",
+            "Sequence74/00019",
+            "Sequence74/00074"
+          ],
+          "only_right_ids": [
+            "Sequence19/00021",
+            "Sequence19/00029",
+            "Sequence19/00030",
+            "Sequence19/00034",
+            "Sequence19/00037",
+            "Sequence19/00051",
+            "Sequence19/00053",
+            "Sequence19/00066",
+            "Sequence19/00074",
+            "Sequence19/00078",
+            "Sequence19/00080",
+            "Sequence34/00012",
+            "Sequence34/00017",
+            "Sequence34/00018",
+            "Sequence34/00031",
+            "Sequence34/00044",
+            "Sequence34/00049",
+            "Sequence34/00058",
+            "Sequence34/00060",
+            "Sequence34/00082",
+            "Sequence45/00025",
+            "Sequence45/00046",
+            "Sequence45/00047",
+            "Sequence45/00051",
+            "Sequence45/00062",
+            "Sequence45/00063",
+            "Sequence45/00064",
+            "Sequence45/00065",
+            "Sequence45/00066",
+            "Sequence45/00067",
+            "Sequence45/00068",
+            "Sequence45/00069",
+            "Sequence45/00070",
+            "Sequence45/00071",
+            "Sequence45/00072",
+            "Sequence45/00090",
+            "Sequence48/00009",
+            "Sequence48/00013",
+            "Sequence48/00015",
+            "Sequence48/00025",
+            "Sequence48/00038",
+            "Sequence48/00039",
+            "Sequence48/00040",
+            "Sequence48/00041",
+            "Sequence48/00050",
+            "Sequence48/00051",
+            "Sequence48/00065",
+            "Sequence48/00066",
+            "Sequence48/00084",
+            "Sequence48/00085",
+            "Sequence48/00086",
+            "Sequence48/00087",
+            "Sequence48/00088",
+            "Sequence48/00089",
+            "Sequence48/00090",
+            "Sequence48/00091",
+            "Sequence48/00092",
+            "Sequence49/00017",
+            "Sequence49/00074",
+            "Sequence49/00083",
+            "Sequence5/00033",
+            "Sequence5/00038",
+            "Sequence5/00041",
+            "Sequence5/00072",
+            "Sequence5/00080",
+            "Sequence5/00088",
+            "Sequence51/00011",
+            "Sequence51/00012",
+            "Sequence51/00032",
+            "Sequence51/00040",
+            "Sequence51/00063",
+            "Sequence74/00017",
+            "Sequence74/00022",
+            "Sequence74/00023",
+            "Sequence74/00025",
+            "Sequence74/00027",
+            "Sequence74/00029",
+            "Sequence74/00030",
+            "Sequence74/00031",
+            "Sequence74/00032",
+            "Sequence74/00033",
+            "Sequence74/00035",
+            "Sequence74/00037",
+            "Sequence74/00040",
+            "Sequence74/00049",
+            "Sequence74/00086"
+          ]
+        }
+      }
+    }
+  },
+  "figure_axes": {
+    "x": "Mean false positives per center frame, 0–2 inclusive",
+    "y": "Object-level detection probability, 0–100 percent"
+  },
+  "exact_run_protocol": {
+    "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/protocol.json",
+    "sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5"
+  }
+}

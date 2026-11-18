@@ -1,0 +1,246 @@
+{
+  "title": "时间–速度交互检测网络",
+  "canvas": {
+    "width": 2210,
+    "height": 767
+  },
+  "style": {
+    "font_family": "Noto Sans CJK SC, sans-serif",
+    "font_size": 24,
+    "bg_color": "#FFFFFF"
+  },
+  "nodes": [
+    {
+      "id": "input",
+      "label": "17 帧红外图像",
+      "x": 130,
+      "y": 375,
+      "width": 217,
+      "height": 85,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "frame",
+      "label": "逐帧特征提取\n8 个学习通道\n另算 1 个局部对比度通道",
+      "x": 445,
+      "y": 375,
+      "width": 308,
+      "height": 126,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "center",
+      "label": "中心第 9 帧外观\n8 维学习特征",
+      "x": 1395,
+      "y": 62,
+      "width": 285,
+      "height": 94,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "sample",
+      "label": "前后 16 帧取样\n每帧试 81 种速度\n每通道得到响应表 R",
+      "x": 804,
+      "y": 390,
+      "width": 305,
+      "height": 132,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "mains",
+      "label": "总体 · 时间 · 速度\n三个编码器各输出 8 维",
+      "x": 1233,
+      "y": 261,
+      "width": 365,
+      "height": 102,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "j",
+      "label": "交互残差提取\n从 R 中扣除主效应",
+      "x": 1161,
+      "y": 454,
+      "width": 317,
+      "height": 96,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "joint",
+      "label": "联合编码器\n时间卷积、速度平面卷积\n加权汇总为 16 维",
+      "x": 1500,
+      "y": 454,
+      "width": 311,
+      "height": 116,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "coverage",
+      "label": "有效速度覆盖率 · 1 维",
+      "x": 1780,
+      "y": 646,
+      "width": 300,
+      "height": 65,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "fusion",
+      "label": "特征融合\n拼接 49 维\n映射至 32 维",
+      "x": 1774,
+      "y": 342,
+      "width": 190,
+      "height": 134,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    },
+    {
+      "id": "output",
+      "label": "空间解码器与检测头\n输出中心帧逐像素得分",
+      "x": 2054,
+      "y": 342,
+      "width": 289,
+      "height": 110,
+      "shape": "rounded",
+      "fill": "#F2F6F7",
+      "stroke": "#88A3A7",
+      "text_color": "#213E48",
+      "font_size": 24
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "frame",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "frame",
+      "to": "center",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "center",
+      "to": "fusion",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "frame",
+      "to": "sample",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "sample",
+      "to": "mains",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "mains",
+      "to": "fusion",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "sample",
+      "to": "j",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "j",
+      "to": "joint",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "joint",
+      "to": "fusion",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "coverage",
+      "to": "fusion",
+      "color": "#5D777F",
+      "thickness": 2.5
+    },
+    {
+      "from": "fusion",
+      "to": "output",
+      "color": "#5D777F",
+      "thickness": 2.5
+    }
+  ],
+  "labels": [
+    {
+      "x": 32,
+      "y": 58,
+      "text": "时间–速度交互检测网络",
+      "font_size": 36,
+      "color": "#213E48",
+      "anchor": "start"
+    },
+    {
+      "x": 32,
+      "y": 645,
+      "text": "R 为同一候选位置在各上下文时刻、各候选速度下的取样响应。",
+      "font_size": 23,
+      "color": "#455F67",
+      "anchor": "start"
+    },
+    {
+      "x": 32,
+      "y": 690,
+      "text": "交互残差 J = R −（总体均值 + 时间效应 + 速度效应）。",
+      "font_size": 23,
+      "color": "#455F67",
+      "anchor": "start"
+    },
+    {
+      "x": 1780,
+      "y": 717,
+      "text": "由采样有效掩膜计算",
+      "font_size": 19,
+      "color": "#526B75",
+      "anchor": "middle"
+    }
+  ]
+}

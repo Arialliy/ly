@@ -1,9 +1,0 @@
-{
-  "frozen_utc": "2026-10-11T11:20:06.505870+00:00",
-  "protocol_sha256": "15fdd8218026c2496b6515d0db175741184f9868153bb9e42f7b6ee257dec2cc",
-  "phase": "before scoring original eleven-window non-response-selected development and two new simple controls",
-  "new_training": false,
-  "confirmation_predictions_used": false,
-  "revised_utc": "2026-10-11T11:21:45.151755+00:00",
-  "revision": "Correct clip sampling provenance from original queue; add threshold-only control before simple-control scores"
-}

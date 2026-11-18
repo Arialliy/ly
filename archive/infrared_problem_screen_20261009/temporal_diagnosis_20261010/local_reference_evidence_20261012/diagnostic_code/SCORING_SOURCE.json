@@ -1,9 +1,0 @@
-{
-  "status": "READY",
-  "source_sha256": {
-    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/diagnostic_code/score_misreference.py": "41ec0fd8add2e3c6c649cede1cb7259cf6d5b13a41fb84f244ca48c7541f543d",
-    "/home/ly/small_object_ideas_20260928/idea-stage/infrared_problem_screen_20261009/temporal_diagnosis_20261010/local_reference_evidence_20261012/diagnostic_code/launch_score_misreference.py": "d8caaec91f0286a9dcc2c649b760b1034a7659c2b65316e74acd95a74e120c9a"
-  },
-  "syntax": "PASS",
-  "scope": "Distinct diagnostic CPU scorer; frozen main files unchanged. Actual training identity is N2."
-}

@@ -1,0 +1,77 @@
+{
+  "selected_step": 24000,
+  "triggered_by": [],
+  "diagnostic_steps": [
+    18000,
+    21000,
+    24000
+  ],
+  "by_model_seed": {
+    "M0": {
+      "46": {
+        "losses": [
+          0.14627681335004025,
+          0.14583131228626042,
+          0.14558835941750203
+        ],
+        "strictly_decreasing": true,
+        "fractional_reduction": 0.004706514428166748,
+        "trigger": false
+      }
+    },
+    "Msep": {
+      "46": {
+        "losses": [
+          0.1700897798503623,
+          0.16813724361994295,
+          0.1693758246508676
+        ],
+        "strictly_decreasing": false,
+        "fractional_reduction": 0.004197519687090087,
+        "trigger": false
+      }
+    },
+    "Mraw": {
+      "46": {
+        "losses": [
+          0.1692970281572141,
+          0.1654410590792597,
+          0.16461435410292324
+        ],
+        "strictly_decreasing": true,
+        "fractional_reduction": 0.02765951715314448,
+        "trigger": false
+      }
+    },
+    "Mint": {
+      "46": {
+        "losses": [
+          0.16870684905299843,
+          0.16438541648050078,
+          0.1655246551902615
+        ],
+        "strictly_decreasing": false,
+        "fractional_reduction": 0.01886226837025014,
+        "trigger": false
+      }
+    }
+  },
+  "seeds": [
+    46
+  ],
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "diagnostic_sha256": {
+    "M0/seed46/diagnostics_18000.json": "551dbf736976bf20096759b1bbe857d0f92c3d12b243f433cb358af94bdf847c",
+    "M0/seed46/diagnostics_21000.json": "c9bb79b410e3543b6130c1061943c55cebaa60ee6996311d884d6570cb2095dc",
+    "M0/seed46/diagnostics_24000.json": "9a25486615563d3c5be3540b437458f4a198ff8c13250198edb4b4ef6fdd4617",
+    "Msep/seed46/diagnostics_18000.json": "61757c6c7cfd301bbc3117df6c933824d16597ed6ec18914d0c04bbe25d5452d",
+    "Msep/seed46/diagnostics_21000.json": "3cc9220715deb177aa98b4d3b93da0fbc1b66ccce8a42bd88c24081c3dcad516",
+    "Msep/seed46/diagnostics_24000.json": "2ffdfc9863ff9525d284660f47a3462e369d0d8d05b2b593d9b01341b0274e82",
+    "Mraw/seed46/diagnostics_18000.json": "d7adbe450589337956f5ed69d2ac3048089957162bd67f7e75ea87056054d4c2",
+    "Mraw/seed46/diagnostics_21000.json": "38bf81bfd197afbadeec3a7c98ca580ee31081dc821c22025d7f12a611a2ed35",
+    "Mraw/seed46/diagnostics_24000.json": "eb5acdae494326bc891ac0369685ac173bc7c2231500e3ec09c0a3b398e5c006",
+    "Mint/seed46/diagnostics_18000.json": "b37648f34dd915b8dcf8469a73b11222d751dd90b5ab2232245115d08cdae1f6",
+    "Mint/seed46/diagnostics_21000.json": "0f244205e60fb0c63dc4e7c3d1f6ddb808abfd66ee7549297a9b7137c37ab471",
+    "Mint/seed46/diagnostics_24000.json": "6277ec73add181d965e9a995cc039de9dac034dcbcc373d04b8fe8e121405112"
+  }
+}

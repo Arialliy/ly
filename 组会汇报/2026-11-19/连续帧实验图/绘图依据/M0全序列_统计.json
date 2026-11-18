@@ -1,0 +1,91 @@
+{
+  "project_root": "/home/ly/DeepProPlus_TLFP_Code",
+  "manifest": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/prediction_manifest.json",
+  "sha256_manifest": "aa34c56889975c9a0e8f30d586ab51529be2f93147762444560c87fe63de176d",
+  "threshold_native_raw_logit": 59.03249740600586,
+  "matching_radius_px": 3,
+  "scope": "Original whole-frame native FP32 stored outputs and training-source GT masks; no new inference. Sequence1 has 1 GT on every frame, Sequence17 none. The distance series measures the closest above-threshold archived peak anywhere on each full native frame. Distances are left empty for Sequence17 because it has no GT.",
+  "summary_by_sequence": {
+    "Sequence1": {
+      "frames": 84,
+      "gt": 84,
+      "tp": 83,
+      "fp": 35,
+      "frames_with_fp": 29,
+      "histogram_fp_per_frame": {
+        "1": 25,
+        "0": 55,
+        "2": 2,
+        "3": 2
+      }
+    },
+    "Sequence17": {
+      "frames": 84,
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "frames_with_fp": 0,
+      "histogram_fp_per_frame": {
+        "0": 84
+      }
+    }
+  },
+  "Sequence1_all_fp_presence_runs_inclusive": [
+    [
+      9,
+      11
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      21,
+      21
+    ],
+    [
+      32,
+      35
+    ],
+    [
+      44,
+      52
+    ],
+    [
+      72,
+      72
+    ],
+    [
+      84,
+      92
+    ]
+  ],
+  "Sequence1_longest_fp_presence_runs_inclusive": [
+    [
+      44,
+      52
+    ],
+    [
+      84,
+      92
+    ]
+  ],
+  "Sequence1_nearest_distance_min_median_max_px": [
+    0.15451574283614938,
+    1.063408050989067,
+    3.3692486899446723
+  ],
+  "Sequence1_missed_frames": [
+    84
+  ],
+  "curves_semantics": "Shading frames 81–87 marks seven-frame detail; the red dashed line is 3-px criterion. Thumbnails are native Sequence1 images, full gray scale 0..255 with a 15x15-pixel rectangle centered at GT centroid to point out its location. False alarms are counts across the whole original frame, not counts of pixels.",
+  "thumbnails_frame_numbers": [
+    9,
+    30,
+    50,
+    70,
+    84,
+    92
+  ],
+  "per_frame_data": "per_frame.csv"
+}

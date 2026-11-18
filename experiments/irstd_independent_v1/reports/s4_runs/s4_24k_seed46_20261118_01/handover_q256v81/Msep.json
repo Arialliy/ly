@@ -1,0 +1,9 @@
+{
+  "mode": "Msep",
+  "step": 600,
+  "checkpoint_sha256": "04e23563c50891ea89cedae1ea96f5f365c5b3282c5451e62a3e1130a59c7165",
+  "last_logged_step": 600,
+  "container": "790e8a5bd1d35b67d0f9f8159e2bf07f59c719a4bf3b7bd9bfe31a64f57604f4",
+  "gpu_index": 1,
+  "utc": "2026-11-18T15:30:47.103227+00:00"
+}

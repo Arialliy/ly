@@ -1,0 +1,291 @@
+{
+  "dataset": "NUDT-MIRSDT synthetic infrared; training-source Sequence1 only, not held-out validation.",
+  "model": "M0 baseline, official S2b step 400 checkpoint evaluated in S2c; no new inference performed.",
+  "selection": "Consecutive 81 through 87, the three frames before and after the sole recorded miss 84 on this sequence.",
+  "project_root": "/home/ly/DeepProPlus_TLFP_Code",
+  "manifest": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/prediction_manifest.json",
+  "manifest_sha256": "aa34c56889975c9a0e8f30d586ab51529be2f93147762444560c87fe63de176d",
+  "model_checkpoint_sha256": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+  "input_frames_per_center": 17,
+  "threshold_raw_logit": 59.03249740600586,
+  "matching_distance_euclidean_px": 3,
+  "fixed_crop_xyxy_native_half_open": [
+    99,
+    75,
+    129,
+    105
+  ],
+  "raw_gray_range": [
+    0,
+    255
+  ],
+  "common_score_color_range": [
+    -12,
+    320
+  ],
+  "palette": "magma",
+  "nearest_distance_definition": "GT center to closest accepted full-frame prediction peak. TP counted only if a peak is within 3 px. All accepted peaks from every depicted frame lie in the shown crop.",
+  "matches_summary": {
+    "gt": 7,
+    "tp": 6,
+    "fp": 4,
+    "fn": 1
+  },
+  "animation_frame_ms": 850,
+  "rendering": "Rows: full source frame with fixed crop box, nearest-neighbor native gray crop, shared-scale genuine saved native FP32 score map, native crop with GT-centered radius and actual thresholded peak markers. Underlying pixels are not synthesized or frame-normalized.",
+  "rows": [
+    {
+      "sequence": "Sequence1",
+      "frame": 81,
+      "gt": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 0.22809896167307336,
+      "gt_x": 113.2258064516129,
+      "gt_y": 86.96774193548387,
+      "foreground_pixels": 31,
+      "accepted_xy": [
+        [
+          113,
+          87
+        ]
+      ],
+      "matched_xy": [
+        113,
+        87
+      ],
+      "accepted_raw_logits": [
+        303.4534912109375
+      ],
+      "all_distances_px": [
+        0.22809896167307336
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00081.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00081.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00081.npy",
+      "input_sha256": "99a6711cecb7af9e6ffdc7d31cb305046780d6e4bd75573b5dcaf2a6caf580f3",
+      "mask_sha256": "1036ae616723484d6ce6b501dec406bfd16e4d20d8700ead3165a9d39958f41c",
+      "native_logit_sha256": "743d9e3b0c715fd4ce577e0cf3404204ed44747bb6bc4235aaea3b4ab47553f1"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 82,
+      "gt": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 1.6780034566339994,
+      "gt_x": 113.27586206896552,
+      "gt_y": 88.65517241379311,
+      "foreground_pixels": 29,
+      "accepted_xy": [
+        [
+          113,
+          87
+        ]
+      ],
+      "matched_xy": [
+        113,
+        87
+      ],
+      "accepted_raw_logits": [
+        292.5151672363281
+      ],
+      "all_distances_px": [
+        1.6780034566339994
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00082.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00082.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00082.npy",
+      "input_sha256": "15aaab945e27bd48946d2349b688e59b8007da941ff81684ec46b8e42d5249f4",
+      "mask_sha256": "45dd6ce5644da7ab79c06eee58597c7dc85c7acd1bd05493122e80c4c21222f7",
+      "native_logit_sha256": "4761c403228c52efac279a741674857e5421da966dce96e83109faae43e14b1a"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 83,
+      "gt": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 0.7457361792078888,
+      "gt_x": 113.28571428571429,
+      "gt_y": 88.21428571428571,
+      "foreground_pixels": 28,
+      "accepted_xy": [
+        [
+          114,
+          88
+        ]
+      ],
+      "matched_xy": [
+        114,
+        88
+      ],
+      "accepted_raw_logits": [
+        275.0809631347656
+      ],
+      "all_distances_px": [
+        0.7457361792078888
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00083.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00083.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00083.npy",
+      "input_sha256": "331f2ccea7081f5d78237a33a568d2d127f711a735f76c0ad107f7ba3e050a8e",
+      "mask_sha256": "14be526a87c7b090411cd01b7c993a226e0da769a6de3c8c3b85cdfa37b97117",
+      "native_logit_sha256": "ecdffb606e999ba3cd1fabcd7446cceac3a09ecd84ddda531eea6afae8df8b95"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 84,
+      "gt": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "nearest_accepted_peak_distance_px": 3.3692486899446723,
+      "gt_x": 112.71428571428571,
+      "gt_y": 91.11428571428571,
+      "foreground_pixels": 35,
+      "accepted_xy": [
+        [
+          114,
+          88
+        ]
+      ],
+      "matched_xy": null,
+      "accepted_raw_logits": [
+        267.47882080078125
+      ],
+      "all_distances_px": [
+        3.3692486899446723
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00084.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00084.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00084.npy",
+      "input_sha256": "20b0e624ec8c04816f80bc609e85ac4f0263d8658f0e61c01e098ee3ddd9193f",
+      "mask_sha256": "c17d989989d85632e1eb0ee2352d90ee216eb06818d72934365dfd245312a9a1",
+      "native_logit_sha256": "6ea448092345bf9d4f03f8110d0252596e87df1af17d01739b6c6db72ac0c1da"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 85,
+      "gt": 1,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 2.345913069264168,
+      "gt_x": 113.17391304347827,
+      "gt_y": 91.19565217391305,
+      "foreground_pixels": 46,
+      "accepted_xy": [
+        [
+          114,
+          89
+        ],
+        [
+          117,
+          98
+        ]
+      ],
+      "matched_xy": [
+        114,
+        89
+      ],
+      "accepted_raw_logits": [
+        262.8908386230469,
+        80.63236236572266
+      ],
+      "all_distances_px": [
+        2.345913069264168,
+        7.806285335371748
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00085.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00085.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00085.npy",
+      "input_sha256": "bb2a813601f7b4c8c3a3b49034475a093ccce8f73853b8abc938ba33d6e5a63e",
+      "mask_sha256": "fce9f1587f2930ee33448b352f04a76ab06e2259dd668e4caf515225897e125e",
+      "native_logit_sha256": "922872c370d0f2c3d59f7c89ed8eb7d2663da018ee99591c1d23dab6051ad848"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 86,
+      "gt": 1,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 1.601388286595236,
+      "gt_x": 114.06666666666666,
+      "gt_y": 91.6,
+      "foreground_pixels": 30,
+      "accepted_xy": [
+        [
+          114,
+          90
+        ],
+        [
+          118,
+          98
+        ]
+      ],
+      "matched_xy": [
+        114,
+        90
+      ],
+      "accepted_raw_logits": [
+        308.9802551269531,
+        94.05770111083984
+      ],
+      "all_distances_px": [
+        1.601388286595236,
+        7.512064370804554
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00086.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00086.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00086.npy",
+      "input_sha256": "c0a383c714e94dac4119b07eb33d5077730e7aed91984bf6cf481d8b20464cb4",
+      "mask_sha256": "72b2ffeea1f48ded89c886004c8139641d83403d7a702b92faf21759121c7746",
+      "native_logit_sha256": "33a7c880c3a5a0e199d1a6e89af521b859fe56b671f12b3ccd1dd4872c4cc8c4"
+    },
+    {
+      "sequence": "Sequence1",
+      "frame": 87,
+      "gt": 1,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "nearest_accepted_peak_distance_px": 0.7031674369909687,
+      "gt_x": 114.06666666666666,
+      "gt_y": 91.7,
+      "foreground_pixels": 30,
+      "accepted_xy": [
+        [
+          114,
+          91
+        ],
+        [
+          118,
+          99
+        ]
+      ],
+      "matched_xy": [
+        114,
+        91
+      ],
+      "accepted_raw_logits": [
+        306.2060241699219,
+        102.62101745605469
+      ],
+      "all_distances_px": [
+        0.7031674369909687,
+        8.292231974029134
+      ],
+      "input_file": "data/public/NUDT-MIRSDT/Sequence1/images/00087.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence1/masks/00087.png",
+      "native_logit_file": "experiments/irstd_independent_v1/reports/s2c_runs/seed46_step400_20261118_01/predictions/full/Sequence1/00087.npy",
+      "input_sha256": "e7bc7863187b28485a0079b1336ae63c6678993796b1f5a13d34f0bc1c0dcf84",
+      "mask_sha256": "e6dfa17f6b0f6a735f19c2c77185ed38888688b682b3f71ec6fab00db6980949",
+      "native_logit_sha256": "7f85c496dbee8a46bc3e7a3e68b7d4da5037cd63ad9d44152e6cb099d5b0dbb0"
+    }
+  ]
+}

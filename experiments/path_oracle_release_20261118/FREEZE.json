@@ -1,9 +1,0 @@
-{
-  "utc": "2026-11-17T18:28:08.481179+00:00",
-  "sha256": {
-    "PROTOCOL.md": "2cefc7b009caeeec0edbab2fd23467b8bbeec446d8d38631b2409c4062a14c72",
-    "run.py": "7c5fc890a73162f3198dc6a887ec9b744590828ea345300f0472f8b0de3dd426",
-    "features.py": "1e025911af09a01d5810d6913cad4945a9edbdad78fc4465f5c7b33d970e29b3",
-    "evaluation.py": "2df027a5733ec0632c2be738acb9fcc2985ea5aede6a36335b9b28db15d9fe6f"
-  }
-}

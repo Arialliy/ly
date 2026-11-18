@@ -1,0 +1,193 @@
+{
+  "scope": "Paired CPU forward probe at the same unmodified formal Mint seed46 step-8 GPU weights. Two training crop identities; zero optimization steps. No dev or historical video opened.",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "torch": "2.7.0+cu128",
+  "torch_threads": 2,
+  "interop_threads": 1,
+  "cuda_available": false,
+  "deterministic_algorithms": true,
+  "implementation_commit": "1f76052d44d77bdbeafaf4c53c278c9dd4588c13",
+  "protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+  "schedule_sha256": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
+  "manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+  "checkpoint": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_20261118_01/Mint/seed46/checkpoints/step_000008.pt",
+  "checkpoint_sha256": "e3bbcfc39e77ab2a18ff754b71d3f5d72b36691c070e4b74e67e9ef268c5b147",
+  "loss_source_sha256": "8faf2cd9d0e36ceda6ce5415a5484945307afe08e224fe53341e205664455fea",
+  "prediction_function": "engine/s4_models.py:core_prediction",
+  "hard_set_definition": "Intercept exact argsort input/order from s4_detection_loss, independently map its eligible scores to native (row,column) in row-major order; validate equal values and hard BCE; k taken from production loss.",
+  "array_digests": "Logits little-endian FP32 row-major; selected native coordinates sorted lexicographically, little-endian int32 [k,2].",
+  "comparison": {
+    "baseline": {
+      "query": 64,
+      "velocity": 8
+    },
+    "probe": {
+      "query": 256,
+      "velocity": 81
+    }
+  },
+  "crops": [
+    {
+      "schedule": {
+        "source": "Sequence37",
+        "center": 49,
+        "kind": "positive",
+        "sample_role": "positive",
+        "core_xyxy": [
+          69,
+          83,
+          133,
+          147
+        ],
+        "step": 9,
+        "edge_priority": false
+      },
+      "frame_id": "Sequence37/00049",
+      "baseline": {
+        "seconds": 4.098810359981144,
+        "loss": {
+          "total": 1.1864153146743774,
+          "foreground_bce": 0.7529051303863525,
+          "background_bce_all": 0.6367246508598328,
+          "background_bce_hard": 0.6367899775505066,
+          "background_bce": 0.6367409825325012,
+          "dice_loss": 0.9831845164299011,
+          "foreground_pixels": 34,
+          "background_pixels": 4062,
+          "eligible_hard_pixels": 3948,
+          "selected_hard_pixels": 395
+        },
+        "logits_sha256": "39fa5bb57710e37be4506da77c77c651a95e222e83bb95eb2ba0d98c5dbefcc9",
+        "core_top1_rc": [
+          90,
+          111
+        ],
+        "hard_top1_rc": [
+          98,
+          69
+        ],
+        "hard_set_sha256": "e3ef4a3657b4bd06c717fb000abcb901dbaaf98d45c0bdddee8233fdc76dc288",
+        "hard_boundary_margin": 3.725290298461914e-08
+      },
+      "probe": {
+        "seconds": 3.3682484040036798,
+        "loss": {
+          "total": 1.1864153146743774,
+          "foreground_bce": 0.7529051303863525,
+          "background_bce_all": 0.6367246508598328,
+          "background_bce_hard": 0.6367899775505066,
+          "background_bce": 0.6367409825325012,
+          "dice_loss": 0.9831845164299011,
+          "foreground_pixels": 34,
+          "background_pixels": 4062,
+          "eligible_hard_pixels": 3948,
+          "selected_hard_pixels": 395
+        },
+        "logits_sha256": "39fa5bb57710e37be4506da77c77c651a95e222e83bb95eb2ba0d98c5dbefcc9",
+        "core_top1_rc": [
+          90,
+          111
+        ],
+        "hard_top1_rc": [
+          98,
+          69
+        ],
+        "hard_set_sha256": "e3ef4a3657b4bd06c717fb000abcb901dbaaf98d45c0bdddee8233fdc76dc288",
+        "hard_boundary_margin": 3.725290298461914e-08
+      },
+      "max_abs_logit_delta": 0.0,
+      "mean_abs_logit_delta": 0.0,
+      "nonidentical_logits": 0,
+      "logits_outside_rtol1e-4_atol1e-5": 0,
+      "hard_intersection": 395,
+      "hard_union": 395,
+      "hard_jaccard": 1.0,
+      "baseline_only_hard_rc": [],
+      "probe_only_hard_rc": [],
+      "same_core_top1": true,
+      "same_hard_top1": true,
+      "absolute_loss_delta": 0.0
+    },
+    {
+      "schedule": {
+        "source": "Sequence44",
+        "center": 79,
+        "kind": "empty_frame",
+        "sample_role": "empty_frame",
+        "core_xyxy": [
+          116,
+          26,
+          180,
+          90
+        ],
+        "step": 14,
+        "edge_priority": false
+      },
+      "frame_id": "Sequence44/00079",
+      "baseline": {
+        "seconds": 3.2099815190013032,
+        "loss": {
+          "total": 0.6370232105255127,
+          "foreground_bce": null,
+          "background_bce_all": 0.6369900107383728,
+          "background_bce_hard": 0.6371229290962219,
+          "background_bce": 0.6370232105255127,
+          "dice_loss": null,
+          "foreground_pixels": 0,
+          "background_pixels": 4096,
+          "eligible_hard_pixels": 4096,
+          "selected_hard_pixels": 410
+        },
+        "logits_sha256": "b59b5db9d1a2c6a52a21cda9b383d6da637081f7bb693f803cf1257eb9b81de2",
+        "core_top1_rc": [
+          50,
+          118
+        ],
+        "hard_top1_rc": [
+          50,
+          118
+        ],
+        "hard_set_sha256": "f74ff172e60d41eeb9b4a21a12d07a52862afcc73e42b37ad2acc3a6c235d131",
+        "hard_boundary_margin": 1.9371509552001953e-07
+      },
+      "probe": {
+        "seconds": 3.494652283989126,
+        "loss": {
+          "total": 0.6370232105255127,
+          "foreground_bce": null,
+          "background_bce_all": 0.6369900107383728,
+          "background_bce_hard": 0.6371229290962219,
+          "background_bce": 0.6370232105255127,
+          "dice_loss": null,
+          "foreground_pixels": 0,
+          "background_pixels": 4096,
+          "eligible_hard_pixels": 4096,
+          "selected_hard_pixels": 410
+        },
+        "logits_sha256": "b59b5db9d1a2c6a52a21cda9b383d6da637081f7bb693f803cf1257eb9b81de2",
+        "core_top1_rc": [
+          50,
+          118
+        ],
+        "hard_top1_rc": [
+          50,
+          118
+        ],
+        "hard_set_sha256": "f74ff172e60d41eeb9b4a21a12d07a52862afcc73e42b37ad2acc3a6c235d131",
+        "hard_boundary_margin": 1.9371509552001953e-07
+      },
+      "max_abs_logit_delta": 0.0,
+      "mean_abs_logit_delta": 0.0,
+      "nonidentical_logits": 0,
+      "logits_outside_rtol1e-4_atol1e-5": 0,
+      "hard_intersection": 410,
+      "hard_union": 410,
+      "hard_jaccard": 1.0,
+      "baseline_only_hard_rc": [],
+      "probe_only_hard_rc": [],
+      "same_core_top1": true,
+      "same_hard_top1": true,
+      "absolute_loss_delta": 0.0
+    }
+  ]
+}

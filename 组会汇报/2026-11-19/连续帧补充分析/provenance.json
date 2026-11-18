@@ -1,0 +1,1439 @@
+{
+  "scope": "Supplementary ROI-only CPU inference. These are not full-frame FROC results; samples not random. Two dev examples selected for opposite Mraw/Mint outcomes at anchor 9.",
+  "geometry": "64x64 native core via frozen core_prediction, same decoder/sampler halos and 256/81 chunking as 6000-step dev evaluation. Origin selected to center the annotated region. Derived from 17 consecutive original inputs for each output center. No resizing of inputs.",
+  "checkpoint_step": 6000,
+  "seed": 46,
+  "run": "s4_24k_seed46_q256v81_20261118_02",
+  "manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "step6k_display_budget_fp_per_frame": 1,
+  "cores_xyxy_halfopen": {
+    "Sequence45": [
+      104,
+      104,
+      168,
+      168
+    ],
+    "Sequence34": [
+      30,
+      36,
+      94,
+      100
+    ]
+  },
+  "output_centers": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "mode_records": {
+    "Mraw": {
+      "checkpoint_path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/checkpoints/step_006000.pt",
+      "checkpoint_sha256": "0b5140b365c93e98440a812b2f51437e273dec942dbeab922e513730a781e399",
+      "frozen_threshold": 7.899676322937012,
+      "metrics_sha256": "5af4590d1b3de5ea9a8e07584f35ce7a641629f1f8217bea61e828cb3299549f",
+      "authoritative_archive": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000"
+    },
+    "Mint": {
+      "checkpoint_path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/checkpoints/step_006000.pt",
+      "checkpoint_sha256": "f1621988dfc56191d8f9cb1cc0e03f191a62ae07e616cbf482b4b709395809a4",
+      "frozen_threshold": 8.238456726074219,
+      "metrics_sha256": "fa2b22985e3920dafbc0fde561d5a95d33ecbd62e543dd43da8c1e24c4889b1f",
+      "authoritative_archive": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000"
+    }
+  },
+  "frames": [
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00009",
+      "clip_frame_range": [
+        1,
+        17
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00009.npy",
+      "roi_sha256": "236dc15ea74d94241d47a848656ace9c0ba78f5a43dbd7d61c5d6737533b6cd7",
+      "inference_seconds": 2.25404264399549,
+      "mask_sha256": "f364c6650fb062c95bb2d9de1b8aaf27d5dc7e4af13c5b038137233b31b95cdf",
+      "image_sha256": "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+      "gt_xy": [
+        136.76666666666668,
+        136.33333333333334
+      ],
+      "interior_accepted_xy": [
+        [
+          140,
+          134
+        ],
+        [
+          133,
+          135
+        ]
+      ],
+      "interior_accepted_logit": [
+        18.37461280822754,
+        10.01163387298584
+      ],
+      "local_hit": false,
+      "match_xy": null,
+      "local_unmatched_count": 2,
+      "anchor_audit": {
+        "source_gpu_full_frame": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/logits/Sequence45_00009.npy",
+        "gpu_sha256": "a52abdad1ee0b330b4f92f2df4fda74fd337c8999b5607ffb8134d47b0a0f595",
+        "max_abs_logit_diff": 7.152557373046875e-06,
+        "mean_abs_logit_diff": 1.0964504326693714e-06,
+        "identical_interior_accepted_xy_and_fullframe_match": true,
+        "official_full_frame": {
+          "gt": 1,
+          "tp": 0,
+          "fp": 2
+        }
+      },
+      "source_window_17_file_sha256": [
+        "cc8eea00129e477e57a02e678431f7efeaef3f49f7a52860d326d18a8f4fb541",
+        "9df475e6780233ac7b1657413e284e96d802737718fd0ca94afdea1a7bdb3711",
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00009",
+      "clip_frame_range": [
+        1,
+        17
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00009.npy",
+      "roi_sha256": "0663690cb1f9eeba99638ea50a440b87a2099e907cb250409bd2c4a685c3f548",
+      "inference_seconds": 2.250216480984818,
+      "mask_sha256": "ce1d81a90d088d77759a1a51866ba765952d1a037d09e9d9516befc6f094f289",
+      "image_sha256": "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+      "gt_xy": [
+        60.81967213114754,
+        67.60655737704919
+      ],
+      "interior_accepted_xy": [
+        [
+          58,
+          63
+        ],
+        [
+          62,
+          67
+        ]
+      ],
+      "interior_accepted_logit": [
+        16.12968635559082,
+        9.438583374023438
+      ],
+      "local_hit": true,
+      "match_xy": [
+        62,
+        67
+      ],
+      "local_unmatched_count": 1,
+      "anchor_audit": {
+        "source_gpu_full_frame": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/logits/Sequence34_00009.npy",
+        "gpu_sha256": "d84a683465459406c406929711868cb6f141a2a4d90ad796e870750b382a108f",
+        "max_abs_logit_diff": 6.67572021484375e-06,
+        "mean_abs_logit_diff": 7.759135769447312e-07,
+        "identical_interior_accepted_xy_and_fullframe_match": true,
+        "official_full_frame": {
+          "gt": 1,
+          "tp": 1,
+          "fp": 1,
+          "matched_peak_xy": [
+            62,
+            67
+          ],
+          "match_distance_px": 1.3270590528090958
+        }
+      },
+      "source_window_17_file_sha256": [
+        "e67ef8ee3567c979ac910c69f5170b3cefe2c37115f75695f9235f116eb133cc",
+        "401717f1147168b9c637bbf482f21aa80eaf9de716272b5faae575fe5c594ff5",
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00010",
+      "clip_frame_range": [
+        2,
+        18
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00010.npy",
+      "roi_sha256": "a0102fcc9fe884e7eee14146d298a50649f07f4c83e65b61436374fbf7a3a73b",
+      "inference_seconds": 2.1374895669869147,
+      "mask_sha256": "065e4c125593dbeae8f2aae89441b4a28a6fed5c8a1cf5a4a43ab97a2a7644b8",
+      "image_sha256": "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+      "gt_xy": [
+        137.64705882352942,
+        136.2941176470588
+      ],
+      "interior_accepted_xy": [
+        [
+          139,
+          136
+        ]
+      ],
+      "interior_accepted_logit": [
+        16.190820693969727
+      ],
+      "local_hit": true,
+      "match_xy": [
+        139,
+        136
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "9df475e6780233ac7b1657413e284e96d802737718fd0ca94afdea1a7bdb3711",
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00010",
+      "clip_frame_range": [
+        2,
+        18
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00010.npy",
+      "roi_sha256": "4c5bcc0b68218e4e81640118de6e9061f7c27780460e4c1a3c79b7ee1b44f881",
+      "inference_seconds": 2.0899226689944044,
+      "mask_sha256": "5f2ab939c9f102d5b7789529070336007b9b147687f17eee1374f45edf254735",
+      "image_sha256": "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+      "gt_xy": [
+        62.484375,
+        67.125
+      ],
+      "interior_accepted_xy": [
+        [
+          59,
+          64
+        ],
+        [
+          64,
+          66
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.040352821350098,
+        7.951573848724365
+      ],
+      "local_hit": true,
+      "match_xy": [
+        64,
+        66
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "401717f1147168b9c637bbf482f21aa80eaf9de716272b5faae575fe5c594ff5",
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00011",
+      "clip_frame_range": [
+        3,
+        19
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00011.npy",
+      "roi_sha256": "55312b9ecdbd02d9f7cfc25099a9a61f7b41f32335c358d9f3f7ffdd5d826a3c",
+      "inference_seconds": 2.0381789219973143,
+      "mask_sha256": "0f0f8f46c748b547923e792b4d514b16f19d54f8b6ed1666f7519fca5ac3b700",
+      "image_sha256": "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+      "gt_xy": [
+        137.2,
+        136.2
+      ],
+      "interior_accepted_xy": [
+        [
+          140,
+          136
+        ]
+      ],
+      "interior_accepted_logit": [
+        17.340396881103516
+      ],
+      "local_hit": true,
+      "match_xy": [
+        140,
+        136
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00011",
+      "clip_frame_range": [
+        3,
+        19
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00011.npy",
+      "roi_sha256": "6ca7bdaee8c3c8352cdec7633d72d5691dd7eca947dc0756f3eb67998f24a6e1",
+      "inference_seconds": 1.7000614170101471,
+      "mask_sha256": "3bc2f484a892db8f3c0c86d29132b1c0ff83c4024821f953c1c3a9fc039f3380",
+      "image_sha256": "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+      "gt_xy": [
+        60.34848484848485,
+        66.06060606060606
+      ],
+      "interior_accepted_xy": [
+        [
+          61,
+          63
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          60,
+          68
+        ]
+      ],
+      "interior_accepted_logit": [
+        11.42601203918457,
+        10.082846641540527,
+        10.014583587646484
+      ],
+      "local_hit": true,
+      "match_xy": [
+        60,
+        68
+      ],
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00012",
+      "clip_frame_range": [
+        4,
+        20
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00012.npy",
+      "roi_sha256": "a1e6064ac243bbfc1efbf9a0b296cbd82096ff9dfba0eddd53d31714dcab1a10",
+      "inference_seconds": 2.120864664990222,
+      "mask_sha256": "c1b4c8f9d7e76aecb8480b0cf97426e624c3fa9ba7dcf45b8393823b059cfa33",
+      "image_sha256": "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+      "gt_xy": [
+        137.28125,
+        136.09375
+      ],
+      "interior_accepted_xy": [
+        [
+          139,
+          138
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.428718566894531
+      ],
+      "local_hit": true,
+      "match_xy": [
+        139,
+        138
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00012",
+      "clip_frame_range": [
+        4,
+        20
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00012.npy",
+      "roi_sha256": "0014ffe5404a4b645c603c18e7405bc135d662fbbe0fac2db000d0f3b534b473",
+      "inference_seconds": 2.0526461859990377,
+      "mask_sha256": "2738719489ee6582b1b4dd58c15eb046b4973d4edec7d6e929754242468355af",
+      "image_sha256": "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+      "gt_xy": [
+        62.51851851851852,
+        66.85185185185185
+      ],
+      "interior_accepted_xy": [
+        [
+          61,
+          64
+        ],
+        [
+          59,
+          70
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.627581596374512,
+        13.602025985717773
+      ],
+      "local_hit": false,
+      "match_xy": null,
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00013",
+      "clip_frame_range": [
+        5,
+        21
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00013.npy",
+      "roi_sha256": "3dc04c3a7a61fb3a7f9a3ca7f9b469b461ae27ac87ca73efe44ce6ddcb0931b9",
+      "inference_seconds": 1.9062117240100633,
+      "mask_sha256": "a27f8df6696949224c1814353e97a925ddd0a51444cf8829ecd975ebaa74088c",
+      "image_sha256": "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+      "gt_xy": [
+        138.0909090909091,
+        136.8181818181818
+      ],
+      "interior_accepted_xy": [
+        [
+          136,
+          134
+        ]
+      ],
+      "interior_accepted_logit": [
+        11.174398422241211
+      ],
+      "local_hit": false,
+      "match_xy": null,
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb",
+        "5f8f19dc0991070d2086d209e8417c7f79e29cec39b1edb8f8f5affbbd5ee79f"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00013",
+      "clip_frame_range": [
+        5,
+        21
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00013.npy",
+      "roi_sha256": "9337a012f996f2722247f584be2d44be61b277c954f24819d50d07728edf2d06",
+      "inference_seconds": 1.9548329270037357,
+      "mask_sha256": "6ab2cae40f16ededbb8a903e539729efc9b8a3630a995ed15871de05d0b33ca6",
+      "image_sha256": "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+      "gt_xy": [
+        61.945205479452056,
+        68.10958904109589
+      ],
+      "interior_accepted_xy": [
+        [
+          61,
+          68
+        ],
+        [
+          60,
+          65
+        ],
+        [
+          63,
+          64
+        ]
+      ],
+      "interior_accepted_logit": [
+        12.782397270202637,
+        10.702056884765625,
+        9.66464614868164
+      ],
+      "local_hit": true,
+      "match_xy": [
+        61,
+        68
+      ],
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8",
+        "eadcdd9ed54641f1bc8c8c9f40db8dc7eadfc57847c2baf25096b28649e9d9b4"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence45/00014",
+      "clip_frame_range": [
+        6,
+        22
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence45_00014.npy",
+      "roi_sha256": "b520f85ff413fe6be21ee7d10a669669e1c62e9dd181f84bb165e85f4db298e0",
+      "inference_seconds": 2.0093465509999078,
+      "mask_sha256": "4c4c785d31e525b987e0ee75a9fd3450b8b25069953b79d55115b11a30c2dc3c",
+      "image_sha256": "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+      "gt_xy": [
+        138.25,
+        137.8125
+      ],
+      "interior_accepted_xy": [
+        [
+          137,
+          135
+        ],
+        [
+          140,
+          135
+        ]
+      ],
+      "interior_accepted_logit": [
+        13.630067825317383,
+        10.057783126831055
+      ],
+      "local_hit": false,
+      "match_xy": null,
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb",
+        "5f8f19dc0991070d2086d209e8417c7f79e29cec39b1edb8f8f5affbbd5ee79f",
+        "ccd56ca139bbdd61a427e4ba06207f75f2d3fd4293ec2e143476e93dbd67b9ea"
+      ]
+    },
+    {
+      "mode": "Mraw",
+      "frame_id": "Sequence34/00014",
+      "clip_frame_range": [
+        6,
+        22
+      ],
+      "roi_npy": "native_roi_logits/Mraw_Sequence34_00014.npy",
+      "roi_sha256": "95a3d23b2de12ba00547315558b1745e099fdf3ac35acedc4fa65ce75edb26f8",
+      "inference_seconds": 1.8328767560014967,
+      "mask_sha256": "d2ea53b4e763ff5bb0c830c70f84e8e6f625a00458a3757ff913ee239eb309f8",
+      "image_sha256": "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+      "gt_xy": [
+        63.0,
+        68.53333333333333
+      ],
+      "interior_accepted_xy": [
+        [
+          63,
+          66
+        ],
+        [
+          61,
+          71
+        ]
+      ],
+      "interior_accepted_logit": [
+        10.86521053314209,
+        8.735711097717285
+      ],
+      "local_hit": true,
+      "match_xy": [
+        63,
+        66
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8",
+        "eadcdd9ed54641f1bc8c8c9f40db8dc7eadfc57847c2baf25096b28649e9d9b4",
+        "adb4d4aeeee104b916c20152f9e2bc8d0f4e82d7bfa705a3e9543c774e35efc4"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00009",
+      "clip_frame_range": [
+        1,
+        17
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00009.npy",
+      "roi_sha256": "4c876cc0cf9be85019d8be4e8d44285c0088798725bfd2d71a480c762d0b32c9",
+      "inference_seconds": 1.7837865409965161,
+      "mask_sha256": "f364c6650fb062c95bb2d9de1b8aaf27d5dc7e4af13c5b038137233b31b95cdf",
+      "image_sha256": "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+      "gt_xy": [
+        136.76666666666668,
+        136.33333333333334
+      ],
+      "interior_accepted_xy": [
+        [
+          139,
+          134
+        ],
+        [
+          134,
+          136
+        ]
+      ],
+      "interior_accepted_logit": [
+        26.857215881347656,
+        12.812870979309082
+      ],
+      "local_hit": true,
+      "match_xy": [
+        134,
+        136
+      ],
+      "local_unmatched_count": 1,
+      "anchor_audit": {
+        "source_gpu_full_frame": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/logits/Sequence45_00009.npy",
+        "gpu_sha256": "d48a87bc6163441dfb039b191f1d7a53021c0be79eaa9ad7c8416c7ba399e6fb",
+        "max_abs_logit_diff": 1.239776611328125e-05,
+        "mean_abs_logit_diff": 1.6890662664081901e-06,
+        "identical_interior_accepted_xy_and_fullframe_match": true,
+        "official_full_frame": {
+          "gt": 1,
+          "tp": 1,
+          "fp": 1,
+          "matched_peak_xy": [
+            134,
+            136
+          ],
+          "match_distance_px": 2.7866746411369294
+        }
+      },
+      "source_window_17_file_sha256": [
+        "cc8eea00129e477e57a02e678431f7efeaef3f49f7a52860d326d18a8f4fb541",
+        "9df475e6780233ac7b1657413e284e96d802737718fd0ca94afdea1a7bdb3711",
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00009",
+      "clip_frame_range": [
+        1,
+        17
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00009.npy",
+      "roi_sha256": "b28c9a9863e74050024436c33e0206b53e9e034295e11272bd37fcbe99815d5e",
+      "inference_seconds": 2.101961984997615,
+      "mask_sha256": "ce1d81a90d088d77759a1a51866ba765952d1a037d09e9d9516befc6f094f289",
+      "image_sha256": "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+      "gt_xy": [
+        60.81967213114754,
+        67.60655737704919
+      ],
+      "interior_accepted_xy": [
+        [
+          58,
+          64
+        ]
+      ],
+      "interior_accepted_logit": [
+        21.214006423950195
+      ],
+      "local_hit": false,
+      "match_xy": null,
+      "local_unmatched_count": 1,
+      "anchor_audit": {
+        "source_gpu_full_frame": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/logits/Sequence34_00009.npy",
+        "gpu_sha256": "6391bae3b3d8c2ca20ff4fdda2b2f74c0d581165d7af38d1fdfe6649c231f1cc",
+        "max_abs_logit_diff": 7.62939453125e-06,
+        "mean_abs_logit_diff": 1.263685589947272e-06,
+        "identical_interior_accepted_xy_and_fullframe_match": true,
+        "official_full_frame": {
+          "gt": 1,
+          "tp": 0,
+          "fp": 1
+        }
+      },
+      "source_window_17_file_sha256": [
+        "e67ef8ee3567c979ac910c69f5170b3cefe2c37115f75695f9235f116eb133cc",
+        "401717f1147168b9c637bbf482f21aa80eaf9de716272b5faae575fe5c594ff5",
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00010",
+      "clip_frame_range": [
+        2,
+        18
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00010.npy",
+      "roi_sha256": "3df020008e6db71a583d7766a3cf47c444b17ab018a3e1bbabc9fa6cc0aa2e24",
+      "inference_seconds": 1.968328038987238,
+      "mask_sha256": "065e4c125593dbeae8f2aae89441b4a28a6fed5c8a1cf5a4a43ab97a2a7644b8",
+      "image_sha256": "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+      "gt_xy": [
+        137.64705882352942,
+        136.2941176470588
+      ],
+      "interior_accepted_xy": [
+        [
+          138,
+          137
+        ]
+      ],
+      "interior_accepted_logit": [
+        21.92696189880371
+      ],
+      "local_hit": true,
+      "match_xy": [
+        138,
+        137
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "9df475e6780233ac7b1657413e284e96d802737718fd0ca94afdea1a7bdb3711",
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00010",
+      "clip_frame_range": [
+        2,
+        18
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00010.npy",
+      "roi_sha256": "42fb023a4ab7028fa63a2cfbc24a0e7e5e3d32d5667dfcbd2501d913522cabfc",
+      "inference_seconds": 2.2028217790066265,
+      "mask_sha256": "5f2ab939c9f102d5b7789529070336007b9b147687f17eee1374f45edf254735",
+      "image_sha256": "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+      "gt_xy": [
+        62.484375,
+        67.125
+      ],
+      "interior_accepted_xy": [
+        [
+          59,
+          64
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          60,
+          67
+        ]
+      ],
+      "interior_accepted_logit": [
+        16.940444946289062,
+        10.742461204528809,
+        10.363024711608887
+      ],
+      "local_hit": true,
+      "match_xy": [
+        63,
+        65
+      ],
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "401717f1147168b9c637bbf482f21aa80eaf9de716272b5faae575fe5c594ff5",
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00011",
+      "clip_frame_range": [
+        3,
+        19
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00011.npy",
+      "roi_sha256": "36a815056278db405203e5c067f8c131522d501daf30a710696e3ce9f5d2b994",
+      "inference_seconds": 2.236323520017322,
+      "mask_sha256": "0f0f8f46c748b547923e792b4d514b16f19d54f8b6ed1666f7519fca5ac3b700",
+      "image_sha256": "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+      "gt_xy": [
+        137.2,
+        136.2
+      ],
+      "interior_accepted_xy": [
+        [
+          139,
+          137
+        ]
+      ],
+      "interior_accepted_logit": [
+        22.460399627685547
+      ],
+      "local_hit": true,
+      "match_xy": [
+        139,
+        137
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00011",
+      "clip_frame_range": [
+        3,
+        19
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00011.npy",
+      "roi_sha256": "8234bb2c9ef0eca40021a73a44a37ef5eb7991f7ba6c953821796868e003ac7d",
+      "inference_seconds": 2.2754344510030933,
+      "mask_sha256": "3bc2f484a892db8f3c0c86d29132b1c0ff83c4024821f953c1c3a9fc039f3380",
+      "image_sha256": "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+      "gt_xy": [
+        60.34848484848485,
+        66.06060606060606
+      ],
+      "interior_accepted_xy": [
+        [
+          61,
+          64
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          60,
+          68
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.115614891052246,
+        13.420381546020508,
+        12.489480018615723
+      ],
+      "local_hit": true,
+      "match_xy": [
+        60,
+        68
+      ],
+      "local_unmatched_count": 2,
+      "source_window_17_file_sha256": [
+        "0f0104e30e3c74578af7a968080217407d7162f99a3337dee009042f33e58052",
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00012",
+      "clip_frame_range": [
+        4,
+        20
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00012.npy",
+      "roi_sha256": "b09a4df59e2946475ad7409c7a22f8199191a15a3dedd08240fe96f0f8a3a6de",
+      "inference_seconds": 2.301041235012235,
+      "mask_sha256": "c1b4c8f9d7e76aecb8480b0cf97426e624c3fa9ba7dcf45b8393823b059cfa33",
+      "image_sha256": "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+      "gt_xy": [
+        137.28125,
+        136.09375
+      ],
+      "interior_accepted_xy": [
+        [
+          139,
+          138
+        ],
+        [
+          135,
+          135
+        ]
+      ],
+      "interior_accepted_logit": [
+        18.312149047851562,
+        10.065141677856445
+      ],
+      "local_hit": true,
+      "match_xy": [
+        135,
+        135
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00012",
+      "clip_frame_range": [
+        4,
+        20
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00012.npy",
+      "roi_sha256": "c1ad3969b97975917683f7f81c23b7f39ab4d55409ee5b964563f331d941ab80",
+      "inference_seconds": 2.1483975909941364,
+      "mask_sha256": "2738719489ee6582b1b4dd58c15eb046b4973d4edec7d6e929754242468355af",
+      "image_sha256": "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+      "gt_xy": [
+        62.51851851851852,
+        66.85185185185185
+      ],
+      "interior_accepted_xy": [
+        [
+          61,
+          65
+        ],
+        [
+          60,
+          69
+        ]
+      ],
+      "interior_accepted_logit": [
+        17.755796432495117,
+        16.282428741455078
+      ],
+      "local_hit": true,
+      "match_xy": [
+        61,
+        65
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "d1c6ec8a8a3edcbf5c3184dd2d12723a8f6ad5982c7fa124c864f3d109692c10",
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00013",
+      "clip_frame_range": [
+        5,
+        21
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00013.npy",
+      "roi_sha256": "e82dca47643f76fdee8c8ac4f80f3ae4dcbb0adda2e825dfdb30b809396bf4ba",
+      "inference_seconds": 2.1656421429943293,
+      "mask_sha256": "a27f8df6696949224c1814353e97a925ddd0a51444cf8829ecd975ebaa74088c",
+      "image_sha256": "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+      "gt_xy": [
+        138.0909090909091,
+        136.8181818181818
+      ],
+      "interior_accepted_xy": [
+        [
+          137,
+          135
+        ],
+        [
+          141,
+          135
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.349116325378418,
+        13.534716606140137
+      ],
+      "local_hit": true,
+      "match_xy": [
+        137,
+        135
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb",
+        "5f8f19dc0991070d2086d209e8417c7f79e29cec39b1edb8f8f5affbbd5ee79f"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00013",
+      "clip_frame_range": [
+        5,
+        21
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00013.npy",
+      "roi_sha256": "bf76771db18d78875d25658b492557562f1e98e3c84e4843cacc1bd24ecf0205",
+      "inference_seconds": 1.819197509001242,
+      "mask_sha256": "6ab2cae40f16ededbb8a903e539729efc9b8a3630a995ed15871de05d0b33ca6",
+      "image_sha256": "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+      "gt_xy": [
+        61.945205479452056,
+        68.10958904109589
+      ],
+      "interior_accepted_xy": [
+        [
+          62,
+          68
+        ]
+      ],
+      "interior_accepted_logit": [
+        17.984798431396484
+      ],
+      "local_hit": true,
+      "match_xy": [
+        62,
+        68
+      ],
+      "local_unmatched_count": 0,
+      "source_window_17_file_sha256": [
+        "0d78c730602a62ec6d568b06db54ded65804654a40edc38b4c871d190875bb64",
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8",
+        "eadcdd9ed54641f1bc8c8c9f40db8dc7eadfc57847c2baf25096b28649e9d9b4"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence45/00014",
+      "clip_frame_range": [
+        6,
+        22
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence45_00014.npy",
+      "roi_sha256": "32e858f96ad3dbcb1e9194d026cc5932c35eaa6ea2a29db132e817c4eee25bd3",
+      "inference_seconds": 2.025350054987939,
+      "mask_sha256": "4c4c785d31e525b987e0ee75a9fd3450b8b25069953b79d55115b11a30c2dc3c",
+      "image_sha256": "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+      "gt_xy": [
+        138.25,
+        137.8125
+      ],
+      "interior_accepted_xy": [
+        [
+          142,
+          136
+        ],
+        [
+          137,
+          136
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.977380752563477,
+        14.648821830749512
+      ],
+      "local_hit": true,
+      "match_xy": [
+        137,
+        136
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+        "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+        "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+        "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+        "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+        "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+        "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+        "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+        "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+        "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+        "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+        "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6",
+        "3d57ce5434b0c7ca4db69da26e022029019d5cd54a45f25665e425741d166853",
+        "94b40cf7e4bbad360c0b46ae216233587a320fbacee9fd3cd826157e5c9d0606",
+        "07106cd2aef41a2a6c10c0aac0cb9961074a4027b7f1ac62e65624b166645eeb",
+        "5f8f19dc0991070d2086d209e8417c7f79e29cec39b1edb8f8f5affbbd5ee79f",
+        "ccd56ca139bbdd61a427e4ba06207f75f2d3fd4293ec2e143476e93dbd67b9ea"
+      ]
+    },
+    {
+      "mode": "Mint",
+      "frame_id": "Sequence34/00014",
+      "clip_frame_range": [
+        6,
+        22
+      ],
+      "roi_npy": "native_roi_logits/Mint_Sequence34_00014.npy",
+      "roi_sha256": "1b60ce5e845baa352d80211c30e60df15d39b8c5e22c210bc0853f435be05017",
+      "inference_seconds": 2.281425817986019,
+      "mask_sha256": "d2ea53b4e763ff5bb0c830c70f84e8e6f625a00458a3757ff913ee239eb309f8",
+      "image_sha256": "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+      "gt_xy": [
+        63.0,
+        68.53333333333333
+      ],
+      "interior_accepted_xy": [
+        [
+          64,
+          66
+        ],
+        [
+          61,
+          67
+        ]
+      ],
+      "interior_accepted_logit": [
+        14.139781951904297,
+        13.66109561920166
+      ],
+      "local_hit": true,
+      "match_xy": [
+        61,
+        67
+      ],
+      "local_unmatched_count": 1,
+      "source_window_17_file_sha256": [
+        "0140c17b45d144351a8eb981b3e49ca9c2515ce147b45d96b99aacef859103eb",
+        "b5dc535bd3e8b612a333dce19da4be7f1533187ba543e094ae81bb3542325ffa",
+        "449710b4d411dd3df74c244262acde1f9c60b8591c9a7ca7936f0c0d502a1c44",
+        "5976cd9e15bfb2585ea90ba3c2eea76819fbeff279f398f845146cd60c919e87",
+        "38433352bf0f7b8444fa61c51b3379198ce43044d5300f6ff91735e7204bbd5e",
+        "2a262271df37b3cc12c72c3bc3e56a1417b03bfefa822aafcfe68679ac190648",
+        "53a6c47658f55fdca8467c4617abec9741a99ab579219abf88055447c1cd8f41",
+        "db587f2211250abc8246f2843414e35bafedb1a2e43cbc24c17fe463d1bbed74",
+        "001b3db37b482f8d051f00b5e8b31ced0ba6dbee6519ab632962a1ff74bb8d4d",
+        "5e9c6490895036e82036aacea048b1b8ceef8478ab91aa1a7c8e989727fa7bcf",
+        "0191a6e6615133a9fa741d437e16101fb7e795d8d7fd0f8e68a415a7b975ac1e",
+        "fe34a68bea83ec4f44c46549296c280ad4ca02591b0e560627a5804682eb5bb3",
+        "d495b46bdfb0adcc67f3dbbfb3797aa182853c198a10230685372e64f711c993",
+        "b26b6fd399e73e2a501713c7c7efd484f64a2791dc21b9a0effc23a7f4518af0",
+        "f743d82217e9fcba40ec4c56d2b54965b394d2c80840c3a02e626448716909f8",
+        "eadcdd9ed54641f1bc8c8c9f40db8dc7eadfc57847c2baf25096b28649e9d9b4",
+        "adb4d4aeeee104b916c20152f9e2bc8d0f4e82d7bfa705a3e9543c774e35efc4"
+      ]
+    }
+  ],
+  "cpu_environment": {
+    "docker_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "cpu_cores": 4,
+    "inter_op_threads": 1,
+    "device": "cpu",
+    "gpu_exposed": false,
+    "native_tensors": "float32",
+    "deterministic_algorithms": true,
+    "seed": 46
+  },
+  "local_peak_accounting": "Extract candidates from full 64x64 ROI using project _frame_peaks; include only local maxima in the displayed central 56x56 region. For a GT within the region, any accepted peak within Euclidean distance <=3 px is a local hit; select closest among eligible matches. Frame-wide false positives are outside the scope of this evaluation.",
+  "color_scale": {
+    "field": "native raw logits",
+    "colormap": "magma",
+    "fixed_display_range": [
+      -10,
+      30
+    ],
+    "clip_for_display_only": true
+  },
+  "threshold_origin": "Each model uses the threshold previously determined from the 32-center, step-6000 development monitoring population at 1 FP/output frame.",
+  "inference_seconds_median": 2.09594232699601
+}

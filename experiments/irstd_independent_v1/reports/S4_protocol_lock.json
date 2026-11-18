@@ -2,11 +2,11 @@
   "stage": "S4",
   "status": "FROZEN",
   "can_launch_training": true,
-  "run_id": "s4_24k_seed46_20261118_01",
-  "run_dir": "reports/s4_runs/s4_24k_seed46_20261118_01",
+  "run_id": "s4_24k_seed46_q256v81_20261118_02",
+  "run_dir": "reports/s4_runs/s4_24k_seed46_q256v81_20261118_02",
   "config": "configs/s4_protocol.yaml",
-  "config_sha256": "7e00c4ae1107fcc6d5bc97647ca1f481a7f4a2086abffc9d12b759f0c36aa837",
-  "common_protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+  "config_sha256": "1f484c597f87263cb7eb8d5aa0ec8697561923133de59d5a7dfd893c9a5edc77",
+  "common_protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
   "specification_sha256": {
     "1/S4_research_protocol.md": "96416af54d941c61e113b3bb4b97311d8399f997345348982880aa9c42087a38",
     "1/s4_protocol_proposal.yaml": "7745b27651535527ac181cfbd211a11e668984d99553fa9de43c66dcbed357f9"
@@ -77,7 +77,7 @@
     "manifests/s2b_train12.json": "acc07845130099b0d1ae19163099974a698487954a8f60bc65e88df57b3e6d74"
   },
   "protocol_code_sha256": {
-    "checks/s4_protocol.py": "9294d2fb9663054a6cb7e8abd61927adeed6b1983630b69fb4039b963451bf13",
+    "checks/s4_protocol.py": "b039767f343fb4aef2d46c0716014242c70c973c5929b40db6b5d00aff003dfd",
     "data/s4_core_schedule.py": "5bf24eb4229ada6faa67e1cb17162568d3a5c144c8707536265dca617c2f1b79"
   },
   "seeds": [
@@ -101,7 +101,7 @@
     "Mraw/seed46",
     "Mint/seed46"
   ],
-  "prepared_config_sha256": "2bd9bb1aff40cdc74461d77276ab7334200e6311645bbbc54dfc7ae7d1b4a306",
+  "prepared_config_sha256": "4248c03b4ca20e0a074602f734aed80ccfa88afdeccb0454e9ae8f23eb840e9a",
   "code_sha256": {
     "1/S4_research_protocol.md": "96416af54d941c61e113b3bb4b97311d8399f997345348982880aa9c42087a38",
     "1/s4_protocol_proposal.yaml": "7745b27651535527ac181cfbd211a11e668984d99553fa9de43c66dcbed357f9",
@@ -114,7 +114,7 @@
     "experiments/irstd_independent_v1/checks/check_s2a.py": "b1c3733f85f2df1fe632bce48026994dec5d29fcbc2f40d8f29367f2454ba58c",
     "experiments/irstd_independent_v1/checks/check_s2b.py": "613b1350c01cf0faa6c64438fd8e23f3cc8401118b33570e9330a774c7611b84",
     "experiments/irstd_independent_v1/checks/check_s3.py": "9c982894f2439cec773cb0d95714173a60be57ff41c0bf288424a85e8f67910d",
-    "experiments/irstd_independent_v1/checks/run_s4_local.py": "6224da10bc19572ebc62b32bf74726b905f33a98fe9a386963e63830407f0972",
+    "experiments/irstd_independent_v1/checks/run_s4_local.py": "1cdb447cf419ff5fe2eff5167a12b36aa9d2a98d17d5b832f60f0877f6bac2ac",
     "experiments/irstd_independent_v1/checks/s1_coverage_reference.py": "3736b53f838ade3b2b76cd77b9b298f8f379e6fa54cb4c3e67179b77815cc129",
     "experiments/irstd_independent_v1/checks/s1_grid_coverage.py": "92d9174038ed42221a3b245668f2ffa73557726c37bb363d6febe555508e0240",
     "experiments/irstd_independent_v1/checks/s1_runtime.py": "1711b930128698d54bbd106656ca9e8ee4c37a4756bdef3be840d20579923a4f",
@@ -122,9 +122,12 @@
     "experiments/irstd_independent_v1/checks/s2c_prediction.py": "3e35194716dd39e0ba6680a256480dce685b2772b8a9d24d2f07afb5009ec6ab",
     "experiments/irstd_independent_v1/checks/s3_parts_check.py": "b8daca64e964907986d6f9b94aac0e20d4274d2b7d61fdacfff4fcc994a18fc6",
     "experiments/irstd_independent_v1/checks/s3_structure_check.py": "48a0345848175f0fbee4f3ba5ef1f442a6012affe0573959efde387afbb39481",
-    "experiments/irstd_independent_v1/checks/s4_binding.py": "b8581048233685b588b17e2e1e1de6709748a25eeb34ff1e6e2b8ee07ed464fe",
-    "experiments/irstd_independent_v1/checks/s4_compare.py": "cd42b948aecc8b9ee824c2efec39c2c6f58e5172865c31026f2f3864aae1a98a",
-    "experiments/irstd_independent_v1/checks/s4_protocol.py": "9294d2fb9663054a6cb7e8abd61927adeed6b1983630b69fb4039b963451bf13",
+    "experiments/irstd_independent_v1/checks/s4_binding.py": "2fdd59ecafe4a1c103edfc80396d8dd0b1b426f34c45015d9074edc3a4b6c728",
+    "experiments/irstd_independent_v1/checks/s4_compare.py": "6f9a1cbb112721c2918c77f017e44dd2516a5c07fd1be692d9f01baddc3dbf8a",
+    "experiments/irstd_independent_v1/checks/s4_lineage.py": "d3720a66bc4de44d1166b66abc9e84f98e87f67f621cf25582ff85064f7cc3a2",
+    "experiments/irstd_independent_v1/checks/s4_migrate.py": "79be826b26020700227d8aea10b9b81463fb5e88e6e7f361704cc16de214aa48",
+    "experiments/irstd_independent_v1/checks/s4_milestones.py": "5417139ba72e863dc6f44c5e27193861dc2076df6de3f22612d03bf43c14c907",
+    "experiments/irstd_independent_v1/checks/s4_protocol.py": "b039767f343fb4aef2d46c0716014242c70c973c5929b40db6b5d00aff003dfd",
     "experiments/irstd_independent_v1/configs/s1_formal.yaml": "a2bd44edf37c912cc6f41208b852e6c4f97b2257111bbff5f48706a94a9610c8",
     "experiments/irstd_independent_v1/configs/task.yaml": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab",
     "experiments/irstd_independent_v1/contracts.py": "049f7426b861e07757d117f3b66ba2c28b4f960fef10e50dc539a16f631019b4",
@@ -136,13 +139,13 @@
     "experiments/irstd_independent_v1/engine/checkpoints.py": "edddcdb4bb4674711ce4787c400b05167622fa512f31621a6b91c4ad94f7b5e8",
     "experiments/irstd_independent_v1/engine/predict.py": "818ba51a9ee0a3d423d82cd77359690a217e74fccde62b420ef159417bb7076e",
     "experiments/irstd_independent_v1/engine/s2b_train.py": "e13e87eb07fcf4e53b1604915e85877eb4816b5595bd631ee575898b0dc3c9dd",
-    "experiments/irstd_independent_v1/engine/s4_checkpoints.py": "f0fcaa0d5afc37b2ffae1edad53798d6a3c9ef9e9533914e48ec34c134cc568b",
-    "experiments/irstd_independent_v1/engine/s4_models.py": "645950644c82632de170a7c77fe30107dc1834335a37fcb1d1510023f25076eb",
-    "experiments/irstd_independent_v1/engine/s4_train.py": "d165360cf6ee4e49501cb4eba3c991dff0302da6220c45c3f6405b6f9e017a73",
+    "experiments/irstd_independent_v1/engine/s4_checkpoints.py": "3a398fee457b95c6c72897c9807e418c3f9eaeda6bf3981eafcde5b36d0039ae",
+    "experiments/irstd_independent_v1/engine/s4_models.py": "e8f31eb9abc72c50bac3bab498f9ec2ae60a551712497b54ea6cfe01299b3a7d",
+    "experiments/irstd_independent_v1/engine/s4_train.py": "cff3909fd596bb444b38719d584e4f07586de9d7805c98ce451ad589b811a1e8",
     "experiments/irstd_independent_v1/evaluation/s2b_diagnostics.py": "9167452b6018bf2955236049ea0d70a8afe858be98ac6a2e648134bde7301b62",
     "experiments/irstd_independent_v1/evaluation/s2b_froc.py": "c2bedbcf939acad6ed79ee41e18db606afe36030e334ce9adc5fa47854ed3375",
     "experiments/irstd_independent_v1/evaluation/s4_metrics.py": "981d8bcb441c0f13b5b30b7c5f85aea36e4335f942545108c3ce9844c227b5dc",
-    "experiments/irstd_independent_v1/evaluation/s4_predict.py": "72863727e23b40ab69863b69b20369073990c3660c95c7e6d5fc9131f8ccb02f",
+    "experiments/irstd_independent_v1/evaluation/s4_predict.py": "9739f9ff030f3b5f8f61c20770f978b9988b311c494fed2cd9f99e38c49eec17",
     "experiments/irstd_independent_v1/geometry/__init__.py": "3b39f5cd4979d6755082b8b2cc88123c0cf8272f2713b2a627edcff019ad46e8",
     "experiments/irstd_independent_v1/geometry/sampler.py": "9fc66c72a0285544712ed24deb247c8dbd222ba28c09c8fc92ded3e242315dad",
     "experiments/irstd_independent_v1/geometry/tiles.py": "e40afdf6818f6a29d2dbd580ab1e72a6233d3a2ba877b3a49bb65a717a1e7252",
@@ -164,13 +167,67 @@
   "input_sha256": {
     "train_diagnostics.json": "c4a1e21e6e2fcfc9e5dca3e5b62570d41bc74dd3b66eeb3f09057251cb6c7884",
     "evaluation_centers.json": "e867e6b0b84b9b954ac0addbdb78bac52744c974411548b429a66fe8c86fec0f",
-    "protocol.json": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+    "protocol.json": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
     "schedule_46.json": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
     "data_verification.json": "2515bb0998ea807f7850648d1d196d7069634fc61b02c919253651fc7e5a40d5",
     "init_46.pt": "f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be",
     "init_46_tensors.json": "7c47479abc98088cfcab7fe96e90335610a6a9972113619814a6081379694f55",
     "schedule_verification.json": "c93ce3db4d22a56b08397664d7b756d7817033a996e8b88cf7cec7dc13aff2a8"
   },
-  "implementation_commit": "1f76052d44d77bdbeafaf4c53c278c9dd4588c13",
-  "implementation_ref": "refs/experiments/s4/s4_24k_seed46_20261118_01"
+  "implementation_commit": "cb6d4cb1b74fc59247aba9dadefaf3204935aa81",
+  "implementation_ref": "refs/experiments/s4/s4_24k_seed46_q256v81_20261118_02",
+  "migration": {
+    "parent_run_id": "s4_24k_seed46_20261118_01",
+    "parent_protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+    "parent_execution_binding_sha256": "dbafc930e3fbb4fd8058c6a53999f15ba5d6734fe36aa40e7c67eecaab06e6cc",
+    "common_step": 600,
+    "first_new_step": 601,
+    "modes": {
+      "Msep": {
+        "checkpoint_sha256": "04e23563c50891ea89cedae1ea96f5f365c5b3282c5451e62a3e1130a59c7165",
+        "sidecar_sha256": "e5432bb4d2ff7588d8c73d44bb1e04017d300211c493b1b6c3c03059d967019b",
+        "journal_prefix_sha256": "0c2df145941b32cae4ea4a283a3fbac23e50191231379934f887c9f7c0b9f4f0",
+        "diagnostics": {
+          "0": "bc53e95def8af8106852f81ab708616d9e7ddc96d2f7e6c41dfbb854977b3c26"
+        },
+        "development": {}
+      },
+      "Mraw": {
+        "checkpoint_sha256": "6330591048d6614c4b7a9c5f63667029fda28c1802aa769f5ae97ad5ef5aad93",
+        "sidecar_sha256": "e40ccca096ce26855db16568bf6db4e0019804a52abbdbab102a517f9042e97c",
+        "journal_prefix_sha256": "7d69a5d419820ea083cb27a7c712dacc4849d70a8692e40b51495f881c279085",
+        "diagnostics": {
+          "0": "69751c2712470083d09fcaa9edad14cd327d92c68819af25ae5a65c41b94079e"
+        },
+        "development": {}
+      },
+      "Mint": {
+        "checkpoint_sha256": "a64cc5f25396d8f3106cd15c11e0e37bec82b5cb27630d36fac6927f885f62bd",
+        "sidecar_sha256": "ce8c21179385ec470b83b963d1d1d9e784d893580445c9ed1040944c682b7cd7",
+        "journal_prefix_sha256": "99e8dfb1dbc19503a244a966a803b440547c455062936224bd32187484c7b650",
+        "diagnostics": {
+          "0": "8e9bd26cc65f8c4471689c26fde4623e1849a5fc35ae60156b86cff54b6d5940"
+        },
+        "development": {}
+      }
+    },
+    "previous_chunks": [
+      64,
+      8
+    ],
+    "new_chunks": [
+      256,
+      81
+    ],
+    "benchmark_sha256": {
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/REPORT.md": "1a4de1b7897416379194fc0dfa2e69216d37915317dcd97ddb246d6cd687a725",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/verification.json": "811293e0d55f62b4b98d8a5c82279d9a6d731227dba04e5317b76efcad3b5aba",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/launch.json": "a3442724bf91fc906dfd278a713e44b1972898c034f13bf6f9ca7bf98d828d77",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/measurements/inputs.json": "4459e121b59923271bf4b8eb0d9f9998b13182281c6fcec9c5adaa7551406cc4",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/measurements/summary.json": "45bdfd26096a4f12589113dfd7f50527c0580c71f06d47c4684c2f6c97366165",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/measurements/Msep/comparison.json": "e84d743401de8f37f70a1274a196474d5a136b30c3c0a03af2c1795ea402f469",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/measurements/Mraw/comparison.json": "3904de21cbed838a7dafc8be0ef39db5a96f1b621ca41e82bcbc3978eb839468",
+      "experiments/irstd_independent_v1/reports/s4_runtime/chunk_256x81_gpu0_20261118_01/measurements/Mint/comparison.json": "ef55c5dce0caa667356e64d3da48a579ce62bcfeeaeda692e1ab3fe0bcf9622d"
+    }
+  }
 }

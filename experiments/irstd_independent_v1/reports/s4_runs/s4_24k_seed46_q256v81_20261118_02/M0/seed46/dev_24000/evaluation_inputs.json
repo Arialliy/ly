@@ -1,0 +1,17 @@
+{
+  "mode": "M0",
+  "seed": 46,
+  "step": 24000,
+  "population": "development",
+  "checkpoint_sha256": "941d2fa7568850e6d10ba345a78a7c741e9f5c04e6dee6d2fa211000a073a812",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "center_ids_sha256": "bf847562260e7944a7d55aa0d8c3da064134d8e2616980de686ed20f28e5429f",
+  "query_chunk": null,
+  "velocity_chunk": null,
+  "core_hw": [
+    64,
+    64
+  ],
+  "score_domain": "native_fp32_logits"
+}

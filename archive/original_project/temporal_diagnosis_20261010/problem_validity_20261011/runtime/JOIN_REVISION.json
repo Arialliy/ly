@@ -1,8 +1,0 @@
-{
-  "reason": "Cache NPZ arrays once instead of repeated decompression; matching/statistical algorithms unchanged",
-  "first_container": "deeppro_validity_join_20261011",
-  "first_exit": 0,
-  "redundant_v2_exit": 1,
-  "redundant_v2_reason": "Correctly refused overwrite of already-completed first run; original results archived before rerun",
-  "prior_outputs": "join_v1/"
-}

@@ -1,0 +1,17 @@
+{
+  "mode": "Mraw",
+  "seed": 46,
+  "step": 18000,
+  "population": "development_monitor",
+  "checkpoint_sha256": "410580d0b1e2cd3a5169938a68c82dac00b489b18fab2c91f8ae110e16983cdf",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "execution_binding_sha256": "bf5b4f079d478bce88b23f9b54af193b7c14edfa53964d3bdca60c7360c3429a",
+  "center_ids_sha256": "8c056b6bae3643740a1980dcbcf35d5576191ef0c544c406ddd66673d0a7cbdf",
+  "query_chunk": 256,
+  "velocity_chunk": 81,
+  "core_hw": [
+    64,
+    64
+  ],
+  "score_domain": "native_fp32_logits"
+}

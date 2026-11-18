@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "seed": 46,
+  "run_id": "s4_24k_seed46_20261118_01",
+  "protocol_sha256": "b62cad25e7fa21226d33c25879af5e3b7b84b3c002add1e6085bbe8997579a0d",
+  "schedule_sha256": "4aa8ec09622d4d44ad45eaea85ec4c34c9e2a15da708f9fdb93c4be8d37025fa",
+  "method": "Independently decoded every training-center full mask; replayed every declared role, cyclic shuffle without replacement, core containment/background exclusivity, edge-priority and exposure counters. Reread persisted tensor hashes and verified all four model pairings.",
+  "prefixes": {
+    "24000": {
+      "updates": {
+        "positive": 12000,
+        "random_background": 9000,
+        "empty_frame": 3000
+      },
+      "edge_priority": 2400,
+      "covered_by_role": {
+        "positive": 5874,
+        "random_background": 6048,
+        "empty_frame": 174
+      }
+    },
+    "36000": {
+      "updates": {
+        "positive": 18000,
+        "random_background": 13500,
+        "empty_frame": 4500
+      },
+      "edge_priority": 3600,
+      "covered_by_role": {
+        "positive": 5874,
+        "random_background": 6048,
+        "empty_frame": 174
+      }
+    }
+  },
+  "training_diagnostics": {
+    "sources": 72,
+    "total_cores": 144,
+    "positive_cores": 71
+  },
+  "development_centers": 672,
+  "development_monitor_centers": 32,
+  "historical_test_centers_listed_by_manifest": 1680,
+  "historical_test_images_or_masks_opened": 0,
+  "initial_file_sha256": "f537b81e4f30abad3cfe5ff35fc65355c6902310e09217816ff39518e00251be",
+  "initial_tensor_audit_sha256": "7c47479abc98088cfcab7fe96e90335610a6a9972113619814a6081379694f55",
+  "matching_evidence_state_tensors": 32,
+  "matching_M0_shared_tensors": 10
+}

@@ -1,0 +1,257 @@
+{
+  "seed": 46,
+  "run": "s4_24k_seed46_q256v81_20261118_02",
+  "population": "原定32帧固定开发面板；每模型、每检查点在同样32帧上按≤1虚警/帧各自选阈值",
+  "role": "6,000与18,000为预设监测；12,000为从完整672帧的存档原生峰对32帧做的事后同面板复测。",
+  "semantics": {
+    "tp": "检出数，各帧仅一处标注",
+    "fp": "实际虚警总次数",
+    "threshold": "raw logit 工作点"
+  },
+  "model_identity": {
+    "Msep": "对照（主效应重建）",
+    "Mraw": "对照（完整响应）",
+    "Mint": "我们的方法（显式交互）"
+  },
+  "verified_local": "2026-11-19T02:02:18.657600+08:00",
+  "frame_ids": [
+    "Sequence5/00009",
+    "Sequence5/00037",
+    "Sequence5/00064",
+    "Sequence5/00092",
+    "Sequence19/00009",
+    "Sequence19/00037",
+    "Sequence19/00064",
+    "Sequence19/00092",
+    "Sequence34/00009",
+    "Sequence34/00037",
+    "Sequence34/00064",
+    "Sequence34/00092",
+    "Sequence45/00009",
+    "Sequence45/00037",
+    "Sequence45/00064",
+    "Sequence45/00092",
+    "Sequence48/00009",
+    "Sequence48/00037",
+    "Sequence48/00064",
+    "Sequence48/00092",
+    "Sequence49/00009",
+    "Sequence49/00037",
+    "Sequence49/00064",
+    "Sequence49/00092",
+    "Sequence51/00009",
+    "Sequence51/00037",
+    "Sequence51/00064",
+    "Sequence51/00092",
+    "Sequence74/00009",
+    "Sequence74/00037",
+    "Sequence74/00064",
+    "Sequence74/00092"
+  ],
+  "checkpoints": {
+    "6000": {
+      "formal_monitor": true,
+      "models": {
+        "Msep": {
+          "tp": 25,
+          "fp": 32,
+          "threshold": 10.253172874450684,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/binding.json",
+              "sha256": "1ad47849c288c08505f24a95e3aa1907d6f13f802a7a85384304f1a4c9079f8d"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/metrics.json",
+              "sha256": "d957688aa97bb0fc958498e96ca947e93f1466a95daae9df678cac954eed6775"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_6000/froc.npz",
+              "sha256": "fe6478e1e464491b6a79578d5da890c153e5a896eb6c7ede6187d2c0e6a8cca5"
+            }
+          }
+        },
+        "Mraw": {
+          "tp": 25,
+          "fp": 30,
+          "threshold": 7.899676322937012,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/binding.json",
+              "sha256": "710ebc8aaf4d5ce68cf8bf367bab9855c2ba22ed22d7788a8c0181b7bbb9a1e2"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/metrics.json",
+              "sha256": "5af4590d1b3de5ea9a8e07584f35ce7a641629f1f8217bea61e828cb3299549f"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_6000/froc.npz",
+              "sha256": "45718a3ffa1b50221070952047bba4451491976c8dabe95c7f8a89954010ff97"
+            }
+          }
+        },
+        "Mint": {
+          "tp": 26,
+          "fp": 18,
+          "threshold": 8.238456726074219,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/binding.json",
+              "sha256": "9795b013fe0e22028a6309143e26185bf25cebac81aa3d5b881c78eb51665486"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/metrics.json",
+              "sha256": "fa2b22985e3920dafbc0fde561d5a95d33ecbd62e543dd43da8c1e24c4889b1f"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_6000/froc.npz",
+              "sha256": "de69ff04b68c4f24d20244f85add8dbe7941e5e3cc36110ab903f838cc3ea143"
+            }
+          }
+        }
+      }
+    },
+    "12000": {
+      "formal_monitor": false,
+      "models": {
+        "Msep": {
+          "tp": 31,
+          "fp": 18,
+          "threshold": 2.059507369995117,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/binding.json",
+              "sha256": "98a5daaefbe367b8a8875cee0a485a035bcadd3cfff7418784d462f606ef8d0b"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/metrics.json",
+              "sha256": "6d84a301491363462f76ef02dfab96e26f2f1435ce1f0a8bb5c5029acf40f66f"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_12000/froc.npz",
+              "sha256": "8e8878c49aa9ea8f99d2561d3f9ff88fc3af8460b00897ba619c54aa1413756f"
+            }
+          }
+        },
+        "Mraw": {
+          "tp": 30,
+          "fp": 15,
+          "threshold": 4.159989833831787,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/binding.json",
+              "sha256": "c19af3398076a69b2b695288fdf9ce39e84a39aba90cd238025e7c81e317c59e"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/metrics.json",
+              "sha256": "fd768aa15446ad1136ed913d699806465099539f924cd42b8d88807cdebe2fa7"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/froc.npz",
+              "sha256": "bbe0668616fb44cda75e891dc9921a48f627a796adcc73f10d105499a41981ca"
+            }
+          }
+        },
+        "Mint": {
+          "tp": 27,
+          "fp": 32,
+          "threshold": 6.788393974304199,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/binding.json",
+              "sha256": "5d9434a7448dc6fe4bbe0ca035ec2540ca3ea37741fa1f0cbd77a6d7b28756a1"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/metrics.json",
+              "sha256": "682797fb38489f955240ee7c100b51916963249e4678f0c2c436cbdd28b7e366"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/froc.npz",
+              "sha256": "7d51d9d816fc812027cf8959f006a777a6c5762c92f424787c234ab4b3d1df73"
+            }
+          }
+        }
+      }
+    },
+    "18000": {
+      "formal_monitor": true,
+      "models": {
+        "Msep": {
+          "tp": 31,
+          "fp": 8,
+          "threshold": 1.9935753345489502,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_18000/binding.json",
+              "sha256": "0e3ab18ff3b23da965adbae52f0ae68e39dee0b9b09042bd343b75ee98a60210"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_18000/metrics.json",
+              "sha256": "17a1aa302176a1bb29bc0ca0bde86b3618a36cb5f5050909f29292350506dbb1"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Msep/seed46/dev_18000/froc.npz",
+              "sha256": "eaa92c5ea92af88a85e36a19ede8e706a3653aae1d4cfd041067b62875f8f9c7"
+            }
+          }
+        },
+        "Mraw": {
+          "tp": 31,
+          "fp": 16,
+          "threshold": 3.4552347660064697,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_18000/binding.json",
+              "sha256": "9195e81b2bc27b2cb10896053fa474ebb13e755664837aea1fadcd855f2d336f"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_18000/metrics.json",
+              "sha256": "d75b78cc4eb44b9bd43fbd9cdb09cb29a5c999d8dec916ff29cb4ee705f958a2"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_18000/froc.npz",
+              "sha256": "cb013c70496e9bfb9eeb953909139684d70883ee13de7068f793b5b22be816b5"
+            }
+          }
+        },
+        "Mint": {
+          "tp": 28,
+          "fp": 29,
+          "threshold": 3.2842087745666504,
+          "n_gt": 32,
+          "n_frames": 32,
+          "binding_files": {
+            "binding.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_18000/binding.json",
+              "sha256": "27a196e45e9048988af5a0f4ad734b7e8788061ef71206893f78559794ea9219"
+            },
+            "metrics.json": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_18000/metrics.json",
+              "sha256": "11254cab6fe1256a268397bf00d40737396d667e1a35ce4d66de5af5514ce0f6"
+            },
+            "froc.npz": {
+              "path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_18000/froc.npz",
+              "sha256": "431070428a2288a010d61e2182052777e00ea7195c5ecd1b9564bdb52a63f0df"
+            }
+          }
+        }
+      }
+    }
+  }
+}

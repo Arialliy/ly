@@ -1,0 +1,329 @@
+{
+  "deck_name": "文献配图版",
+  "language": "简体中文",
+  "goal": "研究生组会汇报我们自己的时间—速度交互证据检测实验。",
+  "deck_context": "本组红外视频小目标检测实验进度；使用陈述式科研标题。正文展示实验数据和方法，讲解过程全部留给备注。",
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 3,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "edit",
+    "model": "built-in default",
+    "size": "16:9 landscape",
+    "prompt_source": "第11页：以本组序列45六帧原生科学图为参考设计完整中文样张",
+    "input_context_preparation": "view_image on local reference before image_gen with referenced_image_paths",
+    "approved_sample_path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/文献配图版/origin_image/slide_11.png",
+    "handoff_rule": "Use same built-in tool with local paths. Return selected generated path."
+  },
+  "style": {
+    "name": "科研组会白底实测图版",
+    "visual_direction": "白底，大号深青标题左对齐，强调用青绿，朴素学术风格；做完整横版16:9幻灯片。只渲染本页的精简要点，不重复解释。图与数据优先，统一简体中文。"
+  },
+  "approved_style_reference": {
+    "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/文献配图版/origin_image/slide_11.png",
+    "role": "第11页样张，仅参考字体与色彩，忽略页内内容",
+    "fidelity": "style only"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "红外视频小目标检测的时间–速度交互建模",
+      "key_points": [
+        "科研进度汇报",
+        "本组自主模型 · 17 帧输入，预测中心帧",
+        "NUDT-MIRSDT 合成序列 02，第 9 帧｜标注外接框 9 × 11 像素"
+      ],
+      "layout": "标题加一行副标题。两幅真实图像同高、横向并列占右侧约65%版面。左列只保留任务与数据集和外接框尺寸。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/文献配图版/assets/figures/序列02_原图与局部.png",
+          "role": "源图及同位置标注局部，来自原始公开帧与掩膜",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ],
+      "local_context": "Need preserve the two real gray regions. No reproduction of other sample labels."
+    },
+    {
+      "number": 2,
+      "title": "研究动机｜时间剖面与运动补偿叠加",
+      "key_points": [
+        "固定位置的时间剖面表征亮度变化",
+        "候选速度决定对齐叠加后的目标形态",
+        "本组假设：逐时刻保留候选速度响应有助于检测"
+      ],
+      "layout": "顶部标题，下方两个等宽独立参考图面板，其下分别写文献引文及简短发现；底栏一行本组假设。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/文献配图版/assets/figures/deeppro_fig1de_case1.png",
+          "role": "DeepPro 图 1(d,e) 例1局部",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        },
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/文献配图版/assets/figures/heinze_fig7_top_left_excerpt.png",
+          "role": "Heinze 等，图 7 左上局部，保留原面板",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "分别取平均会丢失时刻与速度的对应关系",
+      "key_points": [
+        "每帧一种速度响应高，另一种低",
+        "两种速度各有两次高响应",
+        "平均值相同，高响应出现的时刻不同"
+      ],
+      "layout": "人工示意。做两张精确的二行四列表，列为时刻1 2 3 4，行为速度甲/乙。左表上行高高低低，下行低低高高；右表上行高低高低，下行低高低高。用实心字“高”“低”+深浅青；手动核对8+8格。不要赋予目标/背景标签。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ],
+      "local_context": "Empirical data not implied; label these matrices 人工示意. Exact values in design instruction."
+    },
+    {
+      "number": 4,
+      "title": "模型架构｜17 帧输入，预测中心帧目标得分",
+      "key_points": [
+        "逐帧编码 → 按候选速度采样 → 16 个时刻 × 81 种速度",
+        "分开编码总体强弱、时间效应、速度效应、交互",
+        "融合中心帧外观和有效覆盖率 → 解码、检测"
+      ],
+      "layout": "主干从左往右。17个输入帧经逐帧编码器，分上、下两路：中心第9帧外观走独立分支直达融合；前后16帧 × 81候选速度走采样，分出4个并列分量再融合。末端一张清楚标为示意的最终得分格。确保箭头依赖关系正确。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "模型实测｜目标位置的时间–速度响应分解",
+      "key_points": [
+        "序列 45，第 9 帧，标注位置 (137, 136)",
+        "第 8 帧，假设向右 1 像素/帧",
+        "实测 0.7628 − 可加部分 0.5655 = 交互 0.1973"
+      ],
+      "layout": "原实测图尽可能大，保留三列、黑框、色标、3个数。可以沿用嵌入图标题，避免重复。均值与两个单轴效应相加为可加部分。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/连续帧补充分析/核心表示/时间速度联合证据_目标位置实测.png",
+          "role": "模型内部张量可视化实测图，画出同一个格子三个观测值",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "等参数消融｜三种联合分支输入",
+      "key_points": [
+        "分别汇总：用时间均值和速度均值重建表",
+        "直接读表：联合分支读整张响应表",
+        "我们的方法：联合分支专读剩余的时刻与速度交互"
+      ],
+      "layout": "表格三行，两列：模型、交给联合分支的响应。正文突出三种方法的正式中文名称，每版23,945个参数。底部简洁标注两项消融“保留完整对应 / 显式分离交互”。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "结构干预｜保留交互的分支能区分两种排列",
+      "key_points": [
+        "分别汇总  0",
+        "直接读表  0.02172",
+        "单独学习交互  0.00357"
+      ],
+      "layout": "上方一句：保持各时刻与各速度的均值，翻转交互排列。用三行带标签的数值表示融合前联合特征的最大绝对差。结语“两个保留交互的分支都对排列变化有反应”。注明随机初始化、人工输入、结构检查。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "开发监测｜8 段视频，32 个标注目标",
+      "key_points": [
+        "每段取第 9、37、64、92 帧，每帧 1 个标注",
+        "距标注质心不超过 3 个像素，一对一匹配",
+        "平均每输出帧至多 1 次虚警，种子 46，第 6,000 步"
+      ],
+      "layout": "左边2×2的协议摘要；右边一个带3像素圆、一处匹配峰和一处未匹配峰的可视示意。注明每个模型在同一预算内选阈值。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "显式交互多检出 1 个目标，少报 12 次",
+      "key_points": [
+        "分别汇总  25/32，32 次虚警",
+        "直接读表  25/32，30 次虚警",
+        "我们的方法  26/32，18 次虚警"
+      ],
+      "layout": "采用真实共轴曲线和工作点（左）+极简三行数据表（右）。用名称对照图例：分别汇总 Msep、直接读表 Mraw、我们的方法 Mint。突出单种子、32帧、第6,000步。曲线不能自行拟合，数据不能改造。独立配套原始工作点材料可核验。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/实验图/04_自主模型6000步开发FROC.png",
+          "role": "本组正式监测 FROC 原图，提取共轴曲线部分、原阈值线和图例",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        },
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/连续帧补充分析/核心结果/同预算主结果.png",
+          "role": "三组定量结果的依据，右半区精简成上述三行数据",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "逐帧配对｜新增 2 个命中，同时少了 1 个命中",
+      "key_points": [
+        "两种读法共同命中 24 帧，共同漏检 5 帧",
+        "只有我们命中：序列 45 第 9 帧、序列 48 第 37 帧",
+        "只有直接读表命中：序列 34 第 9 帧"
+      ],
+      "layout": "以 32 中心帧全景源图为主体。突出两种独有结果，同类用一致颜色。数字 24+5+2+1 = 32。请完整保留铺排，小字可减少，严禁臆造帧或换序。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/连续帧实验图/06_S4开发监测32帧全景.png",
+          "role": "实际开发32帧的配对全景",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ],
+      "local_context": "8 annotated videos, same selection. Source original and native experimental images will be available for inspection."
+    },
+    {
+      "number": 11,
+      "title": "序列 45｜单独学习交互后，这六帧多命中三帧",
+      "key_points": [
+        "对照 3/6",
+        "我们的方法 6/6"
+      ],
+      "layout": "批准样张，六个中心帧 9–14，原图及两个自主模型的最终得分。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/连续帧补充分析/核心结果/Sequence45_六帧最终目标得分.png",
+          "role": "六帧真实最终分数",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": true,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "序列 34｜两种模型均命中 5/6，漏检帧不同",
+      "key_points": [
+        "仅完整响应对照命中：第 9 帧",
+        "仅显式交互命中：第 12 帧",
+        "前后各 8 帧作为输入，按每个中心帧独立预测"
+      ],
+      "layout": "批准的第11页科研结果版式，六列为第9–14帧，记录逐帧输入和两版预测。标题与摘要只写实测结论；不渲染讲解话。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/连续帧补充分析/核心结果/Sequence34_六帧最终目标得分.png",
+          "role": "序列34严格的六帧原图、预测、统一色标和逐格计数",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "训练来源基线｜固定位置聚合检出 83/84",
+      "key_points": [
+        "2 个训练来源、168 个中心帧、84 个标注｜83 个命中，35 次虚警",
+        "第 12 帧误差 0.68 像素，第 84 帧 3.37 像素",
+        "3 段预留交通视频：两种冻结骨干方案均检出 16 个框，虚警分别为 9、8 次"
+      ],
+      "layout": "小图呈现训练来源第12与84帧对应的原始输入、分数或其中关键局部。数据分成两个范围清楚的段落，早期固定位置与冻结骨干交通实验不可混合。交通实验标注3段12帧，实际虚警9与8。",
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/实验图/03_M0命中与漏检的预测对照.png",
+          "role": "固定位置训练来源里定位误差的实测对照",
+          "fidelity": "作为已经成图的科学素材。直接采用源图像，确保符号、帧号、图序、数值来自源文件。"
+        }
+      ],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "运动假设网格｜每轴 9 个取值，共 81 种速度",
+      "key_points": [
+        "5,856 个可拟合训练窗口",
+        "端点量化通过率：步长 1 为 60.88%，步长 0.5 为 98.33%",
+        "全部 16 个时刻均在容差内：65.83%"
+      ],
+      "layout": "左侧示意 9×9 候选网格，每轴 −2 到 +2 像素/帧，间隔 0.5。右侧给3个数分别命名。脚注“按标注质心估计速度；各训练窗口有重叠”。",
+      "required_images": [],
+      "sample_approved": false,
+      "constraints": [
+        "不要页码、标志、外框和装饰徽章。紧凑清晰，保证文字不会被遮挡。",
+        "Use only facts inside this job for this slide. 序列编号、数字和正负号逐项核对。",
+        "仅展示研究事实、实验条件、图例、数值和简洁陈述句。删除所有问句、读图指南、阅读顺序、口播、指示观众或讲者如何阅读的文字。版式说明仅给设计师。"
+      ],
+      "local_context": "源于训练窗口中标注质心的位移代理；通过率衡量网格几何覆盖。"
+    }
+  ]
+}

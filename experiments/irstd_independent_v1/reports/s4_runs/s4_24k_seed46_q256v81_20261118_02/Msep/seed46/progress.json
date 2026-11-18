@@ -1,0 +1,8 @@
+{
+  "phase": "training_target_complete",
+  "mode": "Msep",
+  "seed": 46,
+  "step": 24000,
+  "checkpoint_sha256": "a1e6d10521a152821d464f0877d47e089a64851d6d61026d119273f7be2faca2",
+  "utc": "2026-11-18T18:58:38.240826+00:00"
+}

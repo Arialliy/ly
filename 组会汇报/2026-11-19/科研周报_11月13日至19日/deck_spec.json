@@ -1,0 +1,441 @@
+{
+  "deck_name": "科研周报_11月13日至19日",
+  "language": "简体中文",
+  "goal": "用可核验的多个科研实测图、简洁图注与逐页讲稿，汇报红外视频检测的研究进展。",
+  "deck_context": "这是研究进度，主数据第12000步的672帧完整开发集；第6000步32帧及两段邻帧属于早期检查。主效应重建、完整响应、显式交互是本组等参消融的三个变体。",
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 3,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "edit",
+    "model": "built-in default",
+    "size": "16:9 landscape",
+    "prompt_source": "第11页：以本组序列45六帧原生科学图为参考设计完整中文样张",
+    "input_context_preparation": "view_image on local reference before image_gen with referenced_image_paths",
+    "approved_sample_path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/样张_字体与配色.png",
+    "handoff_rule": "Use same built-in tool with local paths. Return selected generated path."
+  },
+  "style": {
+    "name": "实验室组会｜白底、墨青标题、黑字、实测绘图",
+    "requirements": "实质内容密集、独立区块自然对齐。满幅16:9。字号适合投屏，留足小块间距。以结果和条件为主。不出现“怎样读、该怎么看、看这一格、该怎么讲、请看、讲者、读图、怎么汇报”，无问句，无口播。无装饰编号、假数据、想象的红外图、封面或目录。",
+    "fixed_type": "全套采用平实的学术汇报版式。按1672×941参考画布，页标题48px左右，正文和数值统一27px，图注22–24px。每页只一个页标题。数据与行标签同字号同字重；所有说明只作一行普通字标注。不要放大数字或公式，不要重复标题或结论，不要多张卡片、彩条、大字结论或大号分区标题。"
+  },
+  "approved_style_reference": {
+    "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/样张_字体与配色.png",
+    "role": "核准的色彩与字体参考，只作样式参考",
+    "fidelity": "style only, no content"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "科研汇报",
+      "role": "研究进展",
+      "key_points": [
+        "模型实现、几何检验与完整开发集检出，三组实测"
+      ],
+      "layout": {
+        "composition": "模型实现、几何检验与完整开发集检出，三组实测"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/研究进展概览.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/架构_同一像素三阶段.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "弱目标移动时，固定像素会错过信号",
+      "role": "研究进展",
+      "key_points": [
+        "文献原图、序列45三帧实测和真实时间剖面"
+      ],
+      "layout": {
+        "composition": "文献原图、序列45三帧实测和真实时间剖面"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/动机_跨帧证据组合.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_group_20261119/lit/deeppro_fig1de_case1.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_group_20261119/lit/heinze_fig7_top_left_excerpt.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "时间–速度交互检测网络",
+      "role": "研究进展",
+      "key_points": [
+        "整网前向、输入、交互残差和输出"
+      ],
+      "layout": {
+        "composition": "整网前向、输入、交互残差和输出"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/时间–速度交互检测网络.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/架构_同一像素三阶段.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "响应分解与等参数对照",
+      "role": "研究进展",
+      "key_points": [
+        "九张中间响应和六张终端得分"
+      ],
+      "layout": {
+        "composition": "九张中间响应和六张终端得分"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/内部响应与三组预测.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "运动采样与定位验证",
+      "role": "研究进展",
+      "key_points": [
+        "网格、短训、连续三帧输入和得分"
+      ],
+      "layout": {
+        "composition": "网格、短训、连续三帧输入和得分"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/本周验收_三项验证.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "完整开发集上，显式交互少检出 71 个目标",
+      "role": "研究进展",
+      "key_points": [
+        "实测FROC、双预算与三个来源九个局部"
+      ],
+      "layout": {
+        "composition": "实测FROC、双预算与三个来源九个局部"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/主结果_完整开发与早期参照.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence45_00025_Mint.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence45_00025_Mraw.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence45_00025_input.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence48_00009_Mint.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence48_00009_Mraw.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence48_00009_input.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence51_00011_Mint.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence51_00011_Mraw.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/main_cases/Sequence51_00011_input.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "两段视频的连续六帧预测",
+      "role": "研究进展",
+      "key_points": [
+        "三行六列、两个来源，共三十六幅原图与得分"
+      ],
+      "layout": {
+        "composition": "三行六列、两个来源，共三十六幅原图与得分"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/两个序列_连续六帧实测.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "连续六帧中的目标信号与定位",
+      "role": "逐帧信号诊断",
+      "key_points": [
+        "真实目标区域与局部背景亮度、两个模型的匹配范围内检测信号，均按真实帧号排布。"
+      ],
+      "layout": {
+        "composition": "两个序列并列，十二幅实测原始帧、两幅亮度图和两幅检测分数图。"
+      },
+      "constraints": [
+        "使用原始信号和图像，空缺保持为空。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/两个序列_连续六帧实测.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/峰值余量_序列34.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/峰值余量_序列45.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第09帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第10帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第11帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第12帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第13帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列34_第14帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第09帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第10帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第11帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第12帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第13帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/序列45_第14帧.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/灰度_序列34.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/continuous_signals/灰度_序列45.png",
+          "role": "实测科研图",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "八段开发视频均出现检出下降",
+      "role": "研究进展",
+      "key_points": [
+        "八组数据、九幅案例和逐帧配对"
+      ],
+      "layout": {
+        "composition": "八组数据、九幅案例和逐帧配对"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/八个来源_检出与虚警差_双栏.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/完整开发_三个逐帧案例.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "同一批开发帧的复测结果",
+      "role": "研究进展",
+      "key_points": [
+        "十张同帧实图、三检查点的九个工作点"
+      ],
+      "layout": {
+        "composition": "十张同帧实图、三检查点的九个工作点"
+      },
+      "constraints": [
+        "白底；分面之间对齐；正式页题与单行提要；结果须准确。"
+      ],
+      "required_images": [
+        {
+          "path": "/home/ly/DeepProPlus_TLFP_Code/组会汇报/2026-11-19/科研周报_11月13日至19日/assets/同帧复测_检出与工作点.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mint_12000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mint_18000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mint_6000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mraw_12000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mraw_18000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Mraw_6000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Msep_12000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Msep_18000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/Msep_6000.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        },
+        {
+          "path": "/tmp/ir_week_update/check_grid/infrared.png",
+          "role": "科研图版",
+          "fidelity": "strict input asset"
+        }
+      ]
+    }
+  ]
+}

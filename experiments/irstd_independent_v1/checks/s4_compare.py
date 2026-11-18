@@ -14,6 +14,8 @@ import tempfile
 
 import numpy as np
 
+from .s4_lineage import diagnostic_origin, parent_run, runtime_chunks
+
 
 MODES = ("M0", "Msep", "Mraw", "Mint")
 SEEDS = (46,)
@@ -77,7 +79,15 @@ def _protocol(run_dir):
 
 
 def _fit_loss(folder, p, step):
-    j = _read(folder / f"diagnostics_{step}.json")
+    run, mode = folder.parents[1], folder.parent.name
+    source, protocol_sha = diagnostic_origin(run, p, mode, step)
+    at = source / mode / "seed46"
+    j = _read(at / f"diagnostics_{step}.json")
+    side = _read(at / "checkpoints" / f"step_{step:06d}.json")
+    _check((j["mode"], j["seed"], j["step"], j["protocol_sha256"]) == (mode, 46, step, protocol_sha)
+           and j["checkpoint_sha256"] == side["checkpoint_sha256"]
+           and j["diagnostic_sha256"] == p["diagnostics_sha256"]["train_diagnostics.json"],
+           f"Diagnostic does not match its original protocol: {at}/{step}")
     def key(row):
         return row["source"], row["center"], tuple(row["core_xyxy"])
     expected = {key(r) for r in p["fit_centers"]}
@@ -115,8 +125,9 @@ def decide_budget(run_dir):
             _check(training["checkpoint_sha256"] == _sha(path), "24k weights differ from training receipt")
             trend = _trend(*[_fit_loss(folder,p,n) for n in (18000,21000,24000)])
             for n in (18000,21000,24000):
-                d = folder/f"diagnostics_{n}.json"
-                evidence[str(d.relative_to(run_dir))] = _sha(d)
+                origin, _ = diagnostic_origin(run_dir,p,mode,n)
+                d = origin/mode/f"seed{seed}"/f"diagnostics_{n}.json"
+                evidence[os.path.relpath(d, run_dir)] = _sha(d)
             monitored[mode][str(seed)] = trend
             if trend["trigger"]:
                 triggered.append(f"{mode}/seed{seed}")
@@ -189,6 +200,9 @@ def _check_binding(run_dir, folder, split_folder, p, mode, seed, step, train, id
     for key,value in (("mode",mode),("seed",seed),("step",step),("protocol_sha256",_sha(run_dir/"protocol.json")),
                       ("checkpoint_sha256",train["checkpoint_sha256"])):
         _check(binding[key] == train[key] == value, f"Endpoint dependency mismatch: {split_folder}/{key}")
+    _check((binding["query_chunk"], binding["velocity_chunk"]) == runtime_chunks(p,mode)
+           and binding["execution_binding_sha256"] == _sha(run_dir/"execution_binding.json"),
+           "Endpoint evaluation used a different arithmetic contract")
     _check(binding["metrics_sha256"] == _sha(split_folder/"metrics.json"), "Final metrics digest mismatch")
     _check(set(binding["frame_sha256"]) == ids, "Raw output population disagrees with protocol")
     for name, checksum in binding["frame_sha256"].items():
@@ -236,6 +250,18 @@ def _run_result(run_dir,p,mode,seed,step,lock):
     history = {n:_fit_loss(folder,p,n) for n in range(0,step+1,3000)}
     result = {"step":step, "checkpoint_sha256":train["checkpoint_sha256"], "fit_loss_by_step":history,
               "endpoint_learning_trend":_trend(*[history[step-x] for x in (6000,3000,0)])}
+    if step == 36000:
+        # The only common intermediate endpoint with a budget decision and a complete paired dev population.
+        first = folder / "dev_24000"
+        old = _read(folder / "training_24000.json")
+        ids = set(p["dev_ids"])
+        _check(old["checkpoint_sha256"] == _sha(folder / "checkpoints/step_024000.pt"), "24k state changed")
+        _check_binding(run_dir,folder,first,p,mode,seed,24000,old,ids)
+        desc = _read(first / "metrics.json")["descriptive"]
+        _curve_check(desc,first,ids)
+        point, _ = _point(desc["budgets"]["1"],ids,1)
+        result["development_24000_at_one_fp_per_frame"] = {
+            key:point[key] for key in ("threshold","frames","gt","tp","fp","pd","fp_per_frame")}
     identities = {}
     for split,n_gt,n_empty in (("dev",672,0),("test",1466,214)):
         out = folder/f"{split}_{step}"
@@ -348,6 +374,22 @@ def _markdown(result):
                 "optimization_uncertain":"终点训练诊断仍在明显改善，训练充分性存疑"}
     lines = ["# S4 · 固定种子 46 的红外小目标检测比较", "",
              f"四个模型以相同裁块日程训练至 {result['step']:,} 步。主比较在合成发布数据的 8 个开发来源、672 个中心帧上进行。每帧各有一个标注目标。", ""]
+    if "migration" in result:
+        lineage = result["migration"]
+        lines += [f"三个证据模型共同继承父运行 `{lineage['parent_run_id']}` 的前 {lineage['common_step']:,} 次更新，"
+                  f"计算分块从 {lineage['parent_chunks']} 改为 {lineage['child_chunks']}，继续执行同一份种子 46 裁块日程。"
+                  "M0 从配对初始状态独立训练。父运行原始诊断保留其原始摘要。",""]
+    if result["step"] == 36000:
+        lines += ["## 延长预算后的开发集结果","",
+                  "同一模型均在 672 帧完整开发集和 1 FP/帧预算下取工作点。", "",
+                  "| 模型 | 24k TP / FP / Pd | 36k TP / FP / Pd | Pd 变化（百分点） |",
+                  "|---|---:|---:|---:|"]
+        for mode in MODES:
+            r = result["runs"][mode]["46"]
+            early, final = r["development_24000_at_one_fp_per_frame"],r["dev"]["descriptive"]["1"]
+            points = [f"{v['tp']} / {v['fp']} / {100*v['pd']:.2f}%" for v in (early,final)]
+            lines.append("| "+mode+" | "+" | ".join(points)+f" | {100*(final['pd']-early['pd']):+.2f} |")
+        lines.append("")
     for name, delta in result["research_outcome"].items():
         lines.extend([f"**{name}（{delta['candidate']} 对 {delta['control']}）**　{outcomes[delta['outcome']]}。"
                       f"每帧至多 1 个虚警时，检出率相差 {delta['gain_pp']:+.2f} 个百分点，"
@@ -421,6 +463,14 @@ def emit_summary(run_dir, step):
               "historical_lock_sha256":_sha(run_dir/"historical_lock.json"),"paired_gt_counts":pair_counts,
               "comparison_csv_sha256":_sha(run_dir/"S4_comparison.csv"),
               "paired_csv_sha256":_sha(run_dir/"S4_paired_targets.csv"),"runs":runs}
+    migration = p.get("migration")
+    if migration:
+        parent = parent_run(run_dir,p)
+        prior = _read(parent / "protocol.json")
+        def chunks(protocol):
+            q,v = runtime_chunks(protocol,"Mint")
+            return f"q{q}/v{v}"
+        result["migration"] = {**migration, "parent_chunks":chunks(prior), "child_chunks":chunks(p)}
     _save(run_dir/"S4_summary.json",result)
     _write(run_dir/"S4_research_report.md",_markdown(result))
     return result

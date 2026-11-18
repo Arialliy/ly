@@ -1,0 +1,74 @@
+{
+  "Mint": {
+    "arm_order": [
+      "q64_v8",
+      "q256_v81"
+    ],
+    "speedup_ratio_of_total": 7.043906651581168,
+    "source_runtime": {
+      "device_type": "cuda",
+      "torch": "2.7.0+cu128",
+      "deterministic_algorithms": true,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "cudnn_tf32": false,
+      "matmul_tf32": false,
+      "cuda": "12.8",
+      "cudnn": 90701,
+      "capability": [
+        12,
+        0
+      ],
+      "device_name": "NVIDIA GeForce RTX 5090"
+    },
+    "per_step_comparisons": "Mint/comparison.json"
+  },
+  "Mraw": {
+    "arm_order": [
+      "q256_v81",
+      "q64_v8"
+    ],
+    "speedup_ratio_of_total": 6.675649245006017,
+    "source_runtime": {
+      "device_type": "cuda",
+      "torch": "2.7.0+cu128",
+      "deterministic_algorithms": true,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "cudnn_tf32": false,
+      "matmul_tf32": false,
+      "cuda": "12.8",
+      "cudnn": 90701,
+      "capability": [
+        12,
+        0
+      ],
+      "device_name": "NVIDIA GeForce RTX 5090"
+    },
+    "per_step_comparisons": "Mraw/comparison.json"
+  },
+  "Msep": {
+    "arm_order": [
+      "q64_v8",
+      "q256_v81"
+    ],
+    "speedup_ratio_of_total": 6.682280234400347,
+    "source_runtime": {
+      "device_type": "cuda",
+      "torch": "2.7.0+cu128",
+      "deterministic_algorithms": true,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "cudnn_tf32": false,
+      "matmul_tf32": false,
+      "cuda": "12.8",
+      "cudnn": 90701,
+      "capability": [
+        12,
+        0
+      ],
+      "device_name": "NVIDIA GeForce RTX 5090"
+    },
+    "per_step_comparisons": "Msep/comparison.json"
+  }
+}

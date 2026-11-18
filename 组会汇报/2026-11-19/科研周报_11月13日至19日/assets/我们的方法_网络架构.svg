@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2210 767" width="2210" height="767" font-family="Noto Sans CJK SC, sans-serif">
+  <rect width="2210" height="767" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow-default" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#555555"/>
+    </marker>
+    <marker id="arrow-c0" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-c1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-c2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#7C3AED"/>
+    </marker>
+    <marker id="arrow-c3" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#EA580C"/>
+    </marker>
+    <marker id="arrow-c4" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#C62828"/>
+    </marker>
+    <marker id="arrow-c5" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#0D47A1"/>
+    </marker>
+    <marker id="arrow-c6" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#1B5E20"/>
+    </marker>
+    <marker id="arrow-c7" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#4A148C"/>
+    </marker>
+    <marker id="arrow-c8" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#BF360C"/>
+    </marker>
+    <marker id="arrow-c9" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#37474F"/>
+    </marker>
+  </defs>
+  <path d="M 238.5,375.0 L 291.0,375.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 599.0,324.3 L 1252.5,108.9" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1458.6,109.0 L 1683.3,275.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 599.0,381.4 L 651.5,383.6" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 956.5,344.1 L 1063.4,312.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1415.5,288.3 L 1679.0,327.8" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 956.5,417.3 L 1002.5,425.6" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1319.5,454.0 L 1344.5,454.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1641.9,396.0 L 1679.0,380.8" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1779.4,613.5 L 1775.3,409.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 1869.0,342.0 L 1909.5,342.0" stroke="#5D777F" stroke-width="2.5" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="21.5" y="332.5" width="217.0" height="85.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="130.0" y="383.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">17 帧红外图像</text>
+  <rect x="291.0" y="312.0" width="308.0" height="126.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="445.0" y="357.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">逐帧特征提取</text>
+  <text x="445.0" y="383.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">8 个学习通道</text>
+  <text x="445.0" y="409.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">另算 1 个局部对比度通道</text>
+  <rect x="1252.5" y="15.0" width="285.0" height="94.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1395.0" y="57.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">中心第 9 帧外观</text>
+  <text x="1395.0" y="83.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">8 维学习特征</text>
+  <rect x="651.5" y="324.0" width="305.0" height="132.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="804.0" y="372.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">前后 16 帧取样</text>
+  <text x="804.0" y="398.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">每帧试 81 种速度</text>
+  <text x="804.0" y="424.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">每通道得到响应表 R</text>
+  <rect x="1050.5" y="210.0" width="365.0" height="102.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1233.0" y="256.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">总体 · 时间 · 速度</text>
+  <text x="1233.0" y="282.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">三个编码器各输出 8 维</text>
+  <rect x="1002.5" y="406.0" width="317.0" height="96.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1161.0" y="449.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">交互残差提取</text>
+  <text x="1161.0" y="475.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">从 R 中扣除主效应</text>
+  <rect x="1344.5" y="396.0" width="311.0" height="116.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1500.0" y="436.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">联合编码器</text>
+  <text x="1500.0" y="462.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">时间卷积、速度平面卷积</text>
+  <text x="1500.0" y="488.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">加权汇总为 16 维</text>
+  <rect x="1630.0" y="613.5" width="300.0" height="65.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1780.0" y="654.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">有效速度覆盖率 · 1 维</text>
+  <rect x="1679.0" y="275.0" width="190.0" height="134.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="1774.0" y="324.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">特征融合</text>
+  <text x="1774.0" y="350.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">拼接 49 维</text>
+  <text x="1774.0" y="376.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">映射至 32 维</text>
+  <rect x="1909.5" y="287.0" width="289.0" height="110.0" fill="#F2F6F7" stroke="#88A3A7" stroke-width="2" rx="8"/>
+  <text x="2054.0" y="337.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">空间解码器与检测头</text>
+  <text x="2054.0" y="363.4" font-size="24" fill="#213E48" text-anchor="middle" font-weight="bold">输出中心帧逐像素得分</text>
+  <text x="32.0" y="58.0" font-size="36" fill="#213E48" text-anchor="start">本组提出的时间–速度交互检测网络</text>
+  <text x="32.0" y="645.0" font-size="23" fill="#455F67" text-anchor="start">R 为同一候选位置在各上下文时刻、各候选速度下的取样响应。</text>
+  <text x="32.0" y="690.0" font-size="23" fill="#455F67" text-anchor="start">交互残差 J = R −（总体均值 + 时间效应 + 速度效应）。</text>
+  <text x="1780.0" y="717.0" font-size="19" fill="#526B75" text-anchor="middle">由采样有效掩膜计算</text>
+</svg>

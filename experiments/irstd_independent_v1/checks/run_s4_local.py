@@ -76,9 +76,26 @@ def result_valid(run, protocol, bindings, action, mode, seed, step):
     if step == 8:
         check(entry.get("resume_verified") is True, f"Fresh-model restore has not passed at {path}")
     if step >= 24000:
+        migration = protocol.get("migration")
+        if migration and mode in migration["modes"]:
+            first = migration["common_step"]+1
+            receipt = read(folder/"migration_first_update.json")
+            check(receipt["step"] == first and receipt["mode"] == mode and receipt["seed"] == seed
+                  and receipt["run_id"] == run.name and receipt["protocol_sha256"] == data_sha
+                  and receipt["source_run_id"] == migration["parent_run_id"]
+                  and receipt["source_checkpoint_sha256"] == migration["modes"][mode]["checkpoint_sha256"]
+                  and receipt["root_checkpoint_sha256"] == sha(folder/"checkpoints"/f"step_{first-1:06d}.pt")
+                  and receipt["checkpoint_sha256"] == sha(folder/"checkpoints"/f"step_{first:06d}.pt"),
+                  "Missing or inconsistent first optimizer update after the parent boundary")
         for observed in range(0, step + 1, 3000):
-            diag = read(folder / f"diagnostics_{observed}.json")
-            check(diag["step"] == observed and isinstance(diag["fit"]["loss"], (float, int)),
+            diag_folder, diag_protocol = folder, data_sha
+            if migration and mode in migration["modes"] and observed <= migration["common_step"]:
+                from experiments.irstd_independent_v1.checks.s4_lineage import diagnostic_origin
+                ancestor, diag_protocol = diagnostic_origin(run,protocol,mode,observed)
+                diag_folder = ancestor/mode/f"seed{seed}"
+            diag = read(diag_folder / f"diagnostics_{observed}.json")
+            check(diag["step"] == observed and diag["protocol_sha256"] == diag_protocol
+                  and isinstance(diag["fit"]["loss"], (float, int)),
                   f"Missing training diagnostic {folder}/{observed}")
         for observed in range(12000, step + 1, 12000):
             out = folder / f"dev_{observed}"
@@ -284,8 +301,15 @@ def run_protocol(run):
     def update(status, **more):
         publish(state_path, {"status": status, "pid": os.getpid(), "utc": stamp(), **more})
     try:
-        update("TRAINING_PREFIX", step=8, seed=SEED)
-        run_phase(run, protocol, bindings, "train", 8)
+        migration = protocol.get("migration")
+        if migration:
+            check(set(migration["modes"]) == {"Msep","Mraw","Mint"}
+                  and 0 < migration["common_step"] < 3000 and migration["common_step"] % 300 == 0,
+                  "Expected a shared pre-diagnostic migration boundary for the three evidence models")
+            update("MIGRATING", step=migration["common_step"], parent_run_id=migration["parent_run_id"], seed=SEED)
+        else:
+            update("TRAINING_PREFIX", step=8, seed=SEED)
+            run_phase(run, protocol, bindings, "train", 8)
         update("TRAINING", step=24000, seed=SEED)
         run_phase(run, protocol, bindings, "train", 24000)
         compare(run)

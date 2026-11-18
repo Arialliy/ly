@@ -12,6 +12,8 @@ import numpy as np
 import torch
 
 from ..checks.check_s0 import atomic_text
+from ..checks.s4_lineage import runtime_chunks
+from ..engine.checkpoints import read_checkpoint, require_exact
 from ..data.dataset import MaskClipDataset, _frame_path, _load_gray
 from .s4_metrics import evaluate_frames, prepare_frame
 
@@ -146,10 +148,11 @@ def _run_panel(run, protocol, model, mode, seed, step, population, checkpoint_sh
     ids = protocol[key]
     expected_size = {"development_monitor": 32, "development": 672, "historical_test": 1680}[population]
     _check(step in steps and len(ids) == len(set(ids)) == expected_size, "Wrong panel or monitoring step")
+    query_chunk, velocity_chunk = runtime_chunks(protocol, mode)
     inputs = {"mode": mode, "seed": seed, "step": step, "population": population, "checkpoint_sha256": checkpoint_sha256,
               "protocol_sha256": _sha(run / "protocol.json"), "execution_binding_sha256": _sha(run / "execution_binding.json"),
               "center_ids_sha256": hashlib.sha256("\n".join(ids).encode()).hexdigest(),
-              "query_chunk": 64 if mode != "M0" else None, "velocity_chunk": 8 if mode != "M0" else None,
+              "query_chunk": query_chunk, "velocity_chunk": velocity_chunk,
               "core_hw": [64,64], "score_domain": "native_fp32_logits"}
     locked = _read(run / "execution_binding.json")
     _check(locked["can_launch_training"] is True and locked["run_id"] == run.name
@@ -231,14 +234,26 @@ def evaluate_checkpoint(run_dir, protocol, model, mode, seed, step, *, populatio
     run = Path(run_dir)
     _check(mode in MODES and seed == 46 and protocol["seeds"] == [46] and population in PANELS,
            "Unauthorized model, seed or evaluation population")
-    _check(protocol == _read(run / "protocol.json") and _sha(_checkpoint(run, mode, seed, step)) == checkpoint_sha256,
-           "Wrong protocol or checkpoint bytes for this evaluation")
+    _check(protocol == _read(run / "protocol.json"), "Evaluation protocol differs from frozen bytes")
+    state = read_checkpoint(_checkpoint(run, mode, seed, step), checkpoint_sha256)
+    bound = state["identity"]
+    runtime = protocol["proposal"]["evidence_runtime"] if mode != "M0" else None
+    _check((state["stage"], state["mode"], state["seed"], state["step"]) == ("S4", mode, seed, step)
+           and (bound["run_id"], bound["mode"], bound["seed"]) == (run.name, mode, seed)
+           and bound["protocol_sha256"] == _sha(run / "protocol.json")
+           and bound["execution_sha256"] == _sha(run / "execution_binding.json")
+           and bound["evidence_runtime"] == runtime, "Checkpoint and protocol arithmetic contracts differ")
     expected_class = "VideoBaseline" if mode == "M0" else "HypothesisEvidenceDetector"
-    _check(type(model).__name__ == expected_class, "The supplied model class does not match its declared configuration")
-    if mode != "M0":
-        aggregator = model.video_aggregator
-        _check(aggregator.encoder.mode == MODES[mode] and (aggregator.query_chunk,aggregator.velocity_chunk) == (64,8),
-               "Evaluation requires the frozen evidence mode and q64/v8")
+    _check(type(model).__name__ == expected_class == bound["model_config"]["class"],
+           "The supplied model class differs from its bound configuration")
+    require_exact(state["model"], model.state_dict(), "evaluation checkpoint model")
+    if runtime is not None:
+        ag = model.video_aggregator
+        _check(ag.encoder.mode == MODES[mode] and (ag.query_chunk, ag.velocity_chunk) == runtime_chunks(protocol, mode)
+               and ag.checkpoint_chunks == runtime["checkpoint_chunks"]
+               and ag.velocities_xy.detach().cpu().tolist() == bound["velocities_xy"],
+               "Evaluation model differs from the checkpoint-bound evidence configuration")
+    del state
     split = PANELS[population][0]
     folder = run / mode / f"seed{seed}" / f"{split}_{step}"
     folder.mkdir(parents=True, exist_ok=True)

@@ -1,7 +1,0 @@
-{
-  "utc": "2026-10-09T18:14:05.512787+00:00",
-  "type": "exploratory followup after fixed-choice gains/losses observed",
-  "comparison": "earliest versus latest naturalwindow for sameGT/frame; fixed strict threshold.5, maxside<=16; matched flips; no fitting",
-  "covariates": "annotation support count, median absolute standardized local contrast, temporal standard deviation of ringmean, median residual speed; qualityproxies notvisibility/causal mechanisms",
-  "independence": "frames correlated; no pvalues"
-}

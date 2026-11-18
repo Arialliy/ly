@@ -1,7 +1,0 @@
-{
-  "utc": "2026-10-12T15:06:20.501995+00:00",
-  "query": "index,temperature.gpu,power.draw,clocks.current.sm,clocks.current.memory,utilization.gpu,memory.used,clocks_throttle_reasons.hw_thermal_slowdown,clocks_throttle_reasons.sw_thermal_slowdown",
-  "output": "0, 61, 125.35 W, 1695 MHz, 9501 MHz, 0 %, 11849 MiB, Not Active, Not Active\n1, 84, 177.31 W, 375 MHz, 9501 MHz, 100 %, 14295 MiB, Not Active, Active\n2, 64, 159.15 W, 1935 MHz, 9751 MHz, 0 %, 15 MiB, Not Active, Not Active\n",
-  "error": "",
-  "exit_code": 0
-}

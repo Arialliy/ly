@@ -1,6 +1,0 @@
-sequence,frame,track_id,annotation_id,successful_window,source_area,fused_area,old_source_components_in_fused_component,direct_merge,foreground_preserved,exact_same_binary_component,eligible_fused_peaks,source_peak_x,source_peak_y,fused_peak_x,fused_peak_y,fused_score_minus_preserved_original_peak
-DJI_0026_2,147,400005,805870,120,25,40,1,0,1,0,0,522.5,315.5,519.5,315.5,0.0
-DJI_0067_2,74,7701908,874123,72,6,35,2,1,1,0,0,350.5,225.5,345.5,225.5,4.0531158447265625e-06
-DJI_0067_2,75,7701908,874218,72,6,30,3,1,1,0,0,350.5,225.5,344.5,226.5,5.3882598876953125e-05
-DJI_0067_2,142,7701917,880643,108,22,22,1,0,1,1,0,475.5,208.5,477.5,207.5,1.1920928955078125e-07
-DJI_0067_2,144,7701917,880830,108,13,15,1,0,1,0,0,475.5,206.5,477.5,207.5,7.474422454833984e-05

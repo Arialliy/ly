@@ -1,0 +1,729 @@
+{
+  "seq": "DJI_0067_2",
+  "c": 56,
+  "track": 7700540,
+  "xy": [
+    585,
+    197
+  ],
+  "fit": [
+    -1.1740196078431373,
+    0.05514705882352941
+  ],
+  "rms": 0.9488689888048102,
+  "native": [
+    [
+      -1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0
+    ]
+  ],
+  "inside": [
+    16,
+    16
+  ],
+  "fixed": 11,
+  "means": [
+    [
+      1.354164958000183,
+      1.2252874374389648,
+      1.0549367666244507
+    ],
+    [
+      1.3777766227722168,
+      1.2680970430374146,
+      1.037256121635437
+    ]
+  ],
+  "perturbations": [
+    [
+      0.6554785370826721,
+      0.31993308663368225,
+      1,
+      0,
+      [
+        [
+          0.5315503478050232,
+          0.48137855529785156,
+          0.11935369670391083
+        ],
+        [
+          0.7928927540779114,
+          0.7110049724578857,
+          0.17626874148845673
+        ]
+      ],
+      [
+        [
+          0.4142661392688751,
+          0.41175782680511475,
+          0.7341992259025574
+        ],
+        [
+          0.2575821578502655,
+          0.2679483890533447,
+          0.6554785370826721
+        ]
+      ]
+    ],
+    [
+      0.6169154644012451,
+      0.1453496813774109,
+      0,
+      1,
+      [
+        [
+          0.45423081517219543,
+          0.3540797829627991,
+          0.21178500354290009
+        ],
+        [
+          0.5816203951835632,
+          0.3841363787651062,
+          0.15155911445617676
+        ]
+      ],
+      [
+        [
+          0.47156578302383423,
+          0.5187714099884033,
+          0.6169154644012451
+        ],
+        [
+          0.38659676909446716,
+          0.5044765472412109,
+          0.6872179508209229
+        ]
+      ]
+    ],
+    [
+      0.3424724042415619,
+      0.14721186459064484,
+      -1,
+      0,
+      [
+        [
+          1.0719033479690552,
+          0.9207354784011841,
+          0.459788054227829
+        ],
+        [
+          0.9112868309020996,
+          0.6594065427780151,
+          0.48252561688423157
+        ]
+      ],
+      [
+        [
+          0.11173950135707855,
+          0.1355961114168167,
+          0.36857590079307556
+        ],
+        [
+          0.19526053965091705,
+          0.3002167344093323,
+          0.3424724042415619
+        ]
+      ]
+    ],
+    [
+      0.480067640542984,
+      -0.24708637595176697,
+      0,
+      -1,
+      [
+        [
+          0.21823860704898834,
+          0.12088756263256073,
+          0.32108691334724426
+        ],
+        [
+          0.17555205523967743,
+          0.17613455653190613,
+          0.33194178342819214
+        ]
+      ],
+      [
+        [
+          0.6792178750038147,
+          0.7636696100234985,
+          0.4971802830696106
+        ],
+        [
+          0.727154016494751,
+          0.7071234583854675,
+          0.480067640542984
+        ]
+      ]
+    ]
+  ],
+  "err": 0.18254868394695456,
+  "bboxes": [
+    [
+      588,
+      192,
+      15,
+      10
+    ],
+    [
+      587,
+      192,
+      15,
+      9
+    ],
+    [
+      586,
+      192,
+      15,
+      9
+    ],
+    [
+      585,
+      193,
+      15,
+      9
+    ],
+    [
+      583,
+      193,
+      15,
+      9
+    ],
+    [
+      580,
+      192,
+      15,
+      9
+    ],
+    [
+      579,
+      192,
+      15,
+      9
+    ],
+    [
+      579,
+      192,
+      15,
+      9
+    ],
+    [
+      577,
+      193,
+      15,
+      8
+    ],
+    [
+      577,
+      192,
+      15,
+      9
+    ],
+    [
+      578,
+      193,
+      15,
+      9
+    ],
+    [
+      576,
+      192,
+      15,
+      9
+    ],
+    [
+      574,
+      193,
+      15,
+      9
+    ],
+    [
+      572,
+      193,
+      15,
+      9
+    ],
+    [
+      572,
+      193,
+      15,
+      9
+    ],
+    [
+      569,
+      194,
+      15,
+      8
+    ],
+    [
+      569,
+      193,
+      15,
+      9
+    ]
+  ],
+  "crop_xyxy": [
+    542,
+    166,
+    629,
+    230
+  ],
+  "frames": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "frame_paths": [
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00048.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00049.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00050.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00051.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00052.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00053.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00054.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00055.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00056.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00057.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00058.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00059.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00060.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00061.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00062.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00063.jpg",
+    "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00064.jpg"
+  ],
+  "rows": [
+    {
+      "frame": 48,
+      "tau": -8,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00048.jpg",
+      "sha256": "1776db37bd54d3f7be39476d5eac661730a959f666eeb0d095ebb44f3e9faf03",
+      "bbox_x": 588,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 10,
+      "gt_centre_x": 595.5,
+      "gt_centre_y": 197.0,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 593,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 0,
+      "raw_DN_fixed": 96,
+      "raw_DN_native": 137
+    },
+    {
+      "frame": 49,
+      "tau": -7,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00049.jpg",
+      "sha256": "9fc6969f2139b624c78a5f94cf98c675dd294b80ace2f88fdeb5b553216f722d",
+      "bbox_x": 587,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 594.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 592,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 0,
+      "raw_DN_fixed": 94,
+      "raw_DN_native": 147
+    },
+    {
+      "frame": 50,
+      "tau": -6,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00050.jpg",
+      "sha256": "493a34354a1ce93473b1901e945916337ef786a6e1cd1eae0cd92bce3bd9279c",
+      "bbox_x": 586,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 593.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 591,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 0,
+      "raw_DN_fixed": 95,
+      "raw_DN_native": 147
+    },
+    {
+      "frame": 51,
+      "tau": -5,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00051.jpg",
+      "sha256": "5eb83c4a1652a48c0d649979b578364d6a12d66b315297464f6bd8667006ce8a",
+      "bbox_x": 585,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 592.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 590,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 97,
+      "raw_DN_native": 159
+    },
+    {
+      "frame": 52,
+      "tau": -4,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00052.jpg",
+      "sha256": "47ba22c0cd189fbb134db048261c373b35832ef62d70e0cc37f09cbd5fd6e99c",
+      "bbox_x": 583,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 590.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 589,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 105,
+      "raw_DN_native": 158
+    },
+    {
+      "frame": 53,
+      "tau": -3,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00053.jpg",
+      "sha256": "9305d3d02a94364d83ac2beb32eff01a96c04936892b8ddee7b5d6462f8bd93b",
+      "bbox_x": 580,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 587.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 588,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 96,
+      "raw_DN_native": 168
+    },
+    {
+      "frame": 54,
+      "tau": -2,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00054.jpg",
+      "sha256": "2fea5abecf762e403aa817a578fdd6996f322f89cde9c5bfbd87c1c7bf664412",
+      "bbox_x": 579,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 586.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 587,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 103,
+      "raw_DN_native": 171
+    },
+    {
+      "frame": 55,
+      "tau": -1,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00055.jpg",
+      "sha256": "3df34cab3c4a184b36c9d195ee5b7c8db16e0bf498f70e78832496c5a5c2bc17",
+      "bbox_x": 579,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 586.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 586,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 157,
+      "raw_DN_native": 189
+    },
+    {
+      "frame": 56,
+      "tau": 0,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00056.jpg",
+      "sha256": "5210cf45920ce8e017c3fede568b12a162d42e5706408181dd61c2bca14480da",
+      "bbox_x": 577,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 8,
+      "gt_centre_x": 584.5,
+      "gt_centre_y": 197.0,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 585,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 180,
+      "raw_DN_native": 180
+    },
+    {
+      "frame": 57,
+      "tau": 1,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00057.jpg",
+      "sha256": "f5a5b76c64c422695eff28e770b306bba9668b96b641d349116267c452b5f597",
+      "bbox_x": 577,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 584.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 584,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 195,
+      "raw_DN_native": 188
+    },
+    {
+      "frame": 58,
+      "tau": 2,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00058.jpg",
+      "sha256": "f85b942e0107cf7289401f4fba81a70ea3687c8eef6fe57396f8d21ed4488ef2",
+      "bbox_x": 578,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 585.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 583,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 186,
+      "raw_DN_native": 194
+    },
+    {
+      "frame": 59,
+      "tau": 3,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00059.jpg",
+      "sha256": "4cff826e9e4751347ee2270462e8c2e68061d9e7061661c4d3cf56bc8da115e6",
+      "bbox_x": 576,
+      "bbox_y": 192,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 583.5,
+      "gt_centre_y": 196.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 582,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 130,
+      "raw_DN_native": 190
+    },
+    {
+      "frame": 60,
+      "tau": 4,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00060.jpg",
+      "sha256": "a2d77b47677d266dd11650de8cf8c8f275de55c6c5eb22e3802bb91208d59a3b",
+      "bbox_x": 574,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 581.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 581,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 115,
+      "raw_DN_native": 191
+    },
+    {
+      "frame": 61,
+      "tau": 5,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00061.jpg",
+      "sha256": "5a6f99c733881e7e7319d7d488ea16229509fd6f14141bc9e763e1b63ef1a497",
+      "bbox_x": 572,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 579.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 580,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 102,
+      "raw_DN_native": 177
+    },
+    {
+      "frame": 62,
+      "tau": 6,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00062.jpg",
+      "sha256": "7fc2e8170ecfb81bb95656db059999f238b9e4ec59b0ae13968f98806fb7a04f",
+      "bbox_x": 572,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 579.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 579,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 1,
+      "raw_DN_fixed": 88,
+      "raw_DN_native": 164
+    },
+    {
+      "frame": 63,
+      "tau": 7,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00063.jpg",
+      "sha256": "ea4f15a26e9232706f70b516f96a6b270bad05f3e26698e3056f23dc6471d96c",
+      "bbox_x": 569,
+      "bbox_y": 194,
+      "bbox_w": 15,
+      "bbox_h": 8,
+      "gt_centre_x": 576.5,
+      "gt_centre_y": 198.0,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 578,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 0,
+      "raw_DN_fixed": 64,
+      "raw_DN_native": 154
+    },
+    {
+      "frame": 64,
+      "tau": 8,
+      "path": "/home/ly/DeepProPlus_TLFP_Code/data/stage1/DJI_0067_2/source_archive/VT-Tiny-MOT/train2017/DJI_0067_2/01/00064.jpg",
+      "sha256": "a5d4e8d95098721fbaef2e3fbf20f7af8a06035fc282b1e0ef83a0236b015de7",
+      "bbox_x": 569,
+      "bbox_y": 193,
+      "bbox_w": 15,
+      "bbox_h": 9,
+      "gt_centre_x": 576.5,
+      "gt_centre_y": 197.5,
+      "anchor_x": 585,
+      "anchor_y": 197,
+      "v_x": -1.0,
+      "v_y": 0.0,
+      "q_x": 577,
+      "q_y": 197,
+      "native_in_box": 1,
+      "fixed_in_box": 0,
+      "raw_DN_fixed": 60,
+      "raw_DN_native": 146
+    }
+  ],
+  "first_exchange_evaluation_spans": [
+    [
+      57,
+      54,
+      53,
+      60
+    ],
+    [
+      57,
+      54,
+      51,
+      62
+    ],
+    [
+      53,
+      60,
+      63,
+      48
+    ]
+  ],
+  "native_R_first": [
+    1.354164958000183,
+    1.2252874374389648,
+    1.0549367666244507
+  ],
+  "fixed_R_first": [
+    0.5315503478050232,
+    0.48137855529785156,
+    0.11935369670391083
+  ],
+  "native_horizontal_plus_one_Q_first": [
+    0.4142661392688751,
+    0.41175782680511475,
+    0.7341992259025574
+  ],
+  "native_perp_plus_one_R_first": [
+    0.45423081517219543,
+    0.3540797829627991,
+    0.21178500354290009
+  ],
+  "selection": "事后教学例，检查同一民用道路 DJI_0067_2 的中心24、40、56、66、80、96、112、128、144。检查17帧均有同一车辆框、位移斜率落入每轴±2、合速率≥0.5、框最长边≤30、拟合平均空间误差≤1.5且离边界25像素的框。挑一个两次独立发现均近似标注速度、拟合路径都能覆盖目标且部分邻速实测相对优势长跨度更明显的真实窗口。此例只用于显示算子怎样工作；不统计检测准确率。"
+}

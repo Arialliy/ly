@@ -1,0 +1,13 @@
+﻿sequence,frame,model,model_label,threshold,tp,fp,nms_in_3px,match_distance_px,matched_peak_x,matched_peak_y,image_file
+19,18,Msep,主效应重建对照,2.059507369995117,0,1,0,,,,Sequence19_00018_Msep.png
+19,18,Mraw,完整响应对照,2.559009075164795,0,3,0,,,,Sequence19_00018_Mraw.png
+19,18,Mint,显式交互,6.828060150146484,1,1,1,1.4808162057327372,174,69,Sequence19_00018_Mint.png
+34,9,Msep,主效应重建对照,2.059507369995117,0,1,0,,,,Sequence34_00009_Msep.png
+34,9,Mraw,完整响应对照,2.559009075164795,0,1,0,,,,Sequence34_00009_Mraw.png
+34,9,Mint,显式交互,6.828060150146484,1,1,1,1.3270590528090958,62,67,Sequence34_00009_Mint.png
+34,10,Msep,主效应重建对照,2.059507369995117,0,3,0,,,,Sequence34_00010_Msep.png
+34,10,Mraw,完整响应对照,2.559009075164795,0,3,0,,,,Sequence34_00010_Mraw.png
+34,10,Mint,显式交互,6.828060150146484,1,2,2,1.862523594649206,61,66,Sequence34_00010_Mint.png
+34,26,Msep,主效应重建对照,2.059507369995117,0,2,0,,,,Sequence34_00026_Msep.png
+34,26,Mraw,完整响应对照,2.559009075164795,0,2,0,,,,Sequence34_00026_Mraw.png
+34,26,Mint,显式交互,6.828060150146484,1,1,1,2.982424796635266,71,73,Sequence34_00026_Mint.png

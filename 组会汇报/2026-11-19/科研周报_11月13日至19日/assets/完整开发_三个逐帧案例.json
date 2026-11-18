@@ -1,0 +1,310 @@
+{
+  "dataset": "NUDT-MIRSDT",
+  "step": 12000,
+  "seed": 46,
+  "population": "same 672 full-development frames",
+  "budget": "descriptive, at most 1 whole-frame FP per frame; one threshold per model",
+  "selection": "Within each of Mraw only, Mint only, both missed, select first case after sorting by numeric video and frame ID. Examples illustrate outcomes; they do not estimate prevalence.",
+  "full_population_counts": {
+    "(1, 1)": 555,
+    "(1, 0)": 86,
+    "(0, 1)": 15,
+    "(0, 0)": 16
+  },
+  "plots": {
+    "crop_wh_xy": [
+      49,
+      23
+    ],
+    "center": "rounded ground-truth native centroid, identical across rows for each frame",
+    "origin": "native x increases right and y increases down",
+    "input_gray_dn_common": [
+      83,
+      93
+    ],
+    "output_logit_common": [
+      -9,
+      21
+    ],
+    "matching_radius_native_pixels": 3,
+    "marker_policy": "all accepted thresholded peaks in visible crop; matched determined by official global record; outside-crop FP retained in JSON."
+  },
+  "model_sources": {
+    "Mraw": {
+      "checkpoint_sha256": "a917956f296309c6159cf911597679d76b9f07c81319fe6e872fa63082274050",
+      "metrics_file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/metrics.json",
+      "metrics_sha256": "fd768aa15446ad1136ed913d699806465099539f924cd42b8d88807cdebe2fa7",
+      "binding_sha256": "c19af3398076a69b2b695288fdf9ce39e84a39aba90cd238025e7c81e317c59e",
+      "froc_sha256": "bbe0668616fb44cda75e891dc9921a48f627a796adcc73f10d105499a41981ca",
+      "global_logit_threshold_at_budget_one": 2.559009075164795,
+      "global_tp": 641,
+      "global_fp": 492
+    },
+    "Mint": {
+      "checkpoint_sha256": "b4dd695edb9893ae2c871d134503fba041254133b6767d1246ae6e863773d8cc",
+      "metrics_file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/metrics.json",
+      "metrics_sha256": "682797fb38489f955240ee7c100b51916963249e4678f0c2c436cbdd28b7e366",
+      "binding_sha256": "5d9434a7448dc6fe4bbe0ca035ec2540ca3ea37741fa1f0cbd77a6d7b28756a1",
+      "froc_sha256": "7d51d9d816fc812027cf8959f006a777a6c5762c92f424787c234ab4b3d1df73",
+      "global_logit_threshold_at_budget_one": 6.828060150146484,
+      "global_tp": 570,
+      "global_fp": 671
+    }
+  },
+  "cases": [
+    {
+      "id": "Sequence5/00033",
+      "outcome_mraw_mint": [
+        1,
+        0
+      ],
+      "original_image_file": "data/public/NUDT-MIRSDT/Sequence5/images/00033.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence5/masks/00033.png",
+      "source_image_sha256": "4e7cd5528bbb96f780fa67aa8f3173ea5f89f30a917135231fc723d9363fa461",
+      "mask_sha256": "9b4c86117884335713b13d8719bf67e9823bd1c4adc5e49d5b0bf9461fb3c614",
+      "gt_xy": [
+        131.9189189189189,
+        111.86486486486487
+      ],
+      "crop_xyxy_halfopen": [
+        108,
+        101,
+        157,
+        124
+      ],
+      "models": {
+        "Mraw": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/logits/Sequence5_00033.npy",
+          "sha256": "737da920d618c6aa46ca8da1ca41ced61356028c24a7b66f50fc9d2a9322b63b",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 1,
+            "fp": 0,
+            "matched_peak_xy": [
+              131,
+              114
+            ],
+            "match_distance_px": 2.3244814528912894
+          },
+          "full_frame_accepted_xy": [
+            [
+              131,
+              114
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              131,
+              114
+            ]
+          ]
+        },
+        "Mint": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/logits/Sequence5_00033.npy",
+          "sha256": "51eff9852554a945c7ba1fb8bb2b17c6761908b81aa36b983751d8f1465b5eb6",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 4
+          },
+          "full_frame_accepted_xy": [
+            [
+              132,
+              115
+            ],
+            [
+              128,
+              112
+            ],
+            [
+              136,
+              110
+            ],
+            [
+              133,
+              109
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              132,
+              115
+            ],
+            [
+              128,
+              112
+            ],
+            [
+              136,
+              110
+            ],
+            [
+              133,
+              109
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Sequence5/00039",
+      "outcome_mraw_mint": [
+        0,
+        1
+      ],
+      "original_image_file": "data/public/NUDT-MIRSDT/Sequence5/images/00039.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence5/masks/00039.png",
+      "source_image_sha256": "4ff545be9d2b000ef3f6adc7c38aa32c37a08273dd1dd76a1eecd921a7f864f9",
+      "mask_sha256": "59f211da980c456c56a303d4a10beac9f2dd678c5b8fc6382c57fadfdfe65ae9",
+      "gt_xy": [
+        131.54054054054055,
+        116.13513513513513
+      ],
+      "crop_xyxy_halfopen": [
+        108,
+        105,
+        157,
+        128
+      ],
+      "models": {
+        "Mraw": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/logits/Sequence5_00039.npy",
+          "sha256": "0265fa7a813dfaaa002cf6f1f95070e2c357d2d16a37ca81fc422dea0fbe13c0",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 2
+          },
+          "full_frame_accepted_xy": [
+            [
+              129,
+              118
+            ],
+            [
+              135,
+              116
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              129,
+              118
+            ],
+            [
+              135,
+              116
+            ]
+          ]
+        },
+        "Mint": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/logits/Sequence5_00039.npy",
+          "sha256": "551b2b261c9057b5f654abb580673960b1266078c1a3e3641040716af0916fee",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 1,
+            "fp": 1,
+            "matched_peak_xy": [
+              130,
+              116
+            ],
+            "match_distance_px": 1.5464561622616246
+          },
+          "full_frame_accepted_xy": [
+            [
+              130,
+              116
+            ],
+            [
+              131,
+              120
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              130,
+              116
+            ],
+            [
+              131,
+              120
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Sequence5/00064",
+      "outcome_mraw_mint": [
+        0,
+        0
+      ],
+      "original_image_file": "data/public/NUDT-MIRSDT/Sequence5/images/00064.png",
+      "mask_file": "data/public/NUDT-MIRSDT/Sequence5/masks/00064.png",
+      "source_image_sha256": "f8721a0a5164bcb0fb53e773ca849b374f6f42d595c6b9a9dc8925db794d25ad",
+      "mask_sha256": "ab193904c87908a8f53a78a627715a9cfa64179001d800a991fec4e7427c8952",
+      "gt_xy": [
+        130.37209302325581,
+        135.0
+      ],
+      "crop_xyxy_halfopen": [
+        106,
+        124,
+        155,
+        147
+      ],
+      "models": {
+        "Mraw": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mraw/seed46/dev_12000/logits/Sequence5_00064.npy",
+          "sha256": "f3e36071e6c36b4fa2a6c01a06796675778e4f9efeda71e1e236e4ca1875ca7d",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 1
+          },
+          "full_frame_accepted_xy": [
+            [
+              133,
+              132
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              133,
+              132
+            ]
+          ]
+        },
+        "Mint": {
+          "file": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/dev_12000/logits/Sequence5_00064.npy",
+          "sha256": "4a0ccf00e2d4c21b008153d3cda46ca9a9cd21a45d27ca004feeec6ca16cc344",
+          "recorded_per_frame_global": {
+            "gt": 1,
+            "tp": 0,
+            "fp": 2
+          },
+          "full_frame_accepted_xy": [
+            [
+              133,
+              133
+            ],
+            [
+              133,
+              130
+            ]
+          ],
+          "visible_accepted_xy": [
+            [
+              133,
+              133
+            ],
+            [
+              133,
+              130
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "figure_sha256": "3d59e1a7be814bc9cad75e511c942b866242dd094fe6f0dee707ddd66d2c1a82"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "RUNNING",
+  "job": "train_Msep_46_24000",
+  "container": "790e8a5bd1d35b67d0f9f8159e2bf07f59c719a4bf3b7bd9bfe31a64f57604f4",
+  "gpu_index": 1,
+  "started_or_reattached_utc": "2026-11-18T14:58:10.641280+00:00"
+}

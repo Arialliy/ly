@@ -1,0 +1,217 @@
+{
+  "model": "Mint / interaction",
+  "seed": 46,
+  "step": 6000,
+  "sample_id": "Sequence45/00009",
+  "checkpoint_path": "experiments/irstd_independent_v1/reports/s4_runs/s4_24k_seed46_q256v81_20261118_02/Mint/seed46/checkpoints/step_006000.pt",
+  "checkpoint_sha256": "f1621988dfc56191d8f9cb1cc0e03f191a62ae07e616cbf482b4b709395809a4",
+  "protocol_sha256": "b969e6f919df065e0670e265edfe319b78eb92ce1a5c13485f96c8125c8760c5",
+  "manifest_path": "experiments/irstd_independent_v1/manifests/nudt_mirsdt_mask17.json",
+  "manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+  "input_17_files_sha256": [
+    "cc8eea00129e477e57a02e678431f7efeaef3f49f7a52860d326d18a8f4fb541",
+    "9df475e6780233ac7b1657413e284e96d802737718fd0ca94afdea1a7bdb3711",
+    "b42c9dc0aa838a61418fa4363ea35a3e5a5cd3b94b21a624c0ef516509d30d08",
+    "861ec008027bb50bb637989f4da5d135f65ced5b6e05172dc12262b537794d27",
+    "e0c6f3e2c60143bad93d04029a2f4f7c6de139f7c50a60b97b4595a4a379dc41",
+    "927c674727c1f3a8e0e6d3090d3beef244655769dffdc44d678040aee60f66bd",
+    "ec1cb63444b30099b0c48f16f733373150d030b5260dfc302cc86e2260863343",
+    "1cf71ee6cbad6135800a210c8685faf93142b1e4a9962a3b513b9e7fa504b601",
+    "ca2290d7008eec0561c89aecad2e6613d8708fa6a55dcbaebef14e8a57222f6e",
+    "9a117c8fdc2301e71ab4078964d68f02bbc4d83a3ec96f8bb4b1c922054cce85",
+    "91898d14000d1d242f2701b47c747a6c0caf812c8e5d314702e9e06cc2aefc1b",
+    "a2aea7f0e380850d09a19f990a5d29324374e4163f23c3f3d195c5702eff62f8",
+    "2b51d91bd0fbacf88a1b659a89f116ca72653d590956f59ad8934879bfa912bf",
+    "0a5851dc26faa2b1ef8289d4f36ccbdcda0f333128f2a99afeb9799190e0f04d",
+    "83a43246efa614de69eb4ce6606055996c7e7d1a93970568a901ba3882bddea0",
+    "fce9021f3d70f47785eaa650e24905c1fc668405e90e02596b96f0cd9a3b2119",
+    "94dabc6329b03a65cd33f00094be1f68787c70f04230265c0e6d690a2a5c4ac6"
+  ],
+  "center_mask_sha256": "f364c6650fb062c95bb2d9de1b8aaf27d5dc7e4af13c5b038137233b31b95cdf",
+  "score_archive_sha256": "d48a87bc6163441dfb039b191f1d7a53021c0be79eaa9ad7c8416c7ba399e6fb",
+  "mode_threshold": 8.238456726074219,
+  "upstream_sources_sha256": {
+    "experiments/irstd_independent_v1/geometry/sampler.py": "9fc66c72a0285544712ed24deb247c8dbd222ba28c09c8fc92ded3e242315dad",
+    "experiments/irstd_independent_v1/models/evidence_parts.py": "6e1e8e91a026a8d56643568084bc2013ece8ecace6b6183548c0fb223ea18a4c",
+    "experiments/irstd_independent_v1/models/frame_encoder.py": "085d530b7afc12144a4eaa503b5e6c9e99c1e4109cefe52c96a72f3a77fece02",
+    "experiments/irstd_independent_v1/models/evidence_encoder.py": "4375820a54a816bf9ab0c885f2901261f48523d807931a666881cf5b36ba3c7c",
+    "experiments/irstd_independent_v1/models/hypothesis_detector.py": "2092b89d404a74daf699e206a6f6099b3db79ff0f8d192a73aa7c9799f81dda8"
+  },
+  "capture": "Input argument to the actual EvidenceEncoder during forward through a real Mint crop; also verified J is bitwise identical to the actual JointEncoder first argument for all nine channels at both sampled coordinates.",
+  "reference": "Original S4 GPU native full-frame prediction archive for Sequence45/00009. Outputs inside the 64x64 extraction crop are replayed on CPU, max absolute logit difference reported below.",
+  "fwd_core_xyxy": [
+    104,
+    104,
+    168,
+    168
+  ],
+  "cpu_vs_gpu_max_abs_final_logit": 1.239776611328125e-05,
+  "tensor_axes": {
+    "R,J,additive": [
+      "channel",
+      "context_time",
+      "vy",
+      "vx"
+    ],
+    "A": [
+      "channel",
+      "time"
+    ],
+    "B": [
+      "channel",
+      "vy",
+      "vx"
+    ],
+    "mu": [
+      "channel"
+    ],
+    "velocities_xy": [
+      "vy-index",
+      "vx-index",
+      "coordinate pair x,y"
+    ]
+  },
+  "channel9": "Ninth channel (index 8) is fixed local contrast: center minus mean of valid 5x5 neighbors (including center), divided by sqrt(population variance + (1/255)^2). Values are bilinearly sampled along p + time_offset*(vx,vy). Other eight are learned frame-encoder features.",
+  "coordinates": "Zero-based native x increases right, y increases down; time offsets in original frames; velocities in native pixels/frame.",
+  "samples": {
+    "unmatched_peak": {
+      "query_xy": [
+        139,
+        134
+      ],
+      "gt_mean_xy": [
+        136.76666666666668,
+        136.33333333333334
+      ],
+      "distance_to_gt_px": 3.229895079135266,
+      "is_foreground_mask_pixel": false,
+      "final_logit": 26.857215881347656,
+      "n_valid_velocities": 81,
+      "channel9": {
+        "max_abs_reconstruct_error": 1.1920928955078125e-07,
+        "max_abs_time_mean_of_J_per_velocity": 3.91155481338501e-08,
+        "max_abs_velocity_mean_of_J_per_time": 1.4717196350488848e-08,
+        "R_min_max": [
+          -1.4702752828598022,
+          1.4339075088500977
+        ],
+        "J_min_max": [
+          -1.3699859380722046,
+          1.3210922479629517
+        ],
+        "J_rms": 0.4376942813396454
+      },
+      "all_channels": {
+        "max_abs_reconstruct_error": 1.1920928955078125e-07,
+        "max_abs_time_mean_of_J_per_velocity": 4.0978193283081055e-08,
+        "max_abs_velocity_mean_of_J_per_time": 1.8083754582676193e-07,
+        "R_min_max": [
+          -1.4702752828598022,
+          1.9301313161849976
+        ],
+        "J_min_max": [
+          -1.3699859380722046,
+          1.3210922479629517
+        ],
+        "J_rms": 0.17835719883441925
+      },
+      "file": "Mint6000_Sequence45_00009_unmatched_peak.npz",
+      "file_sha256": "a1c0c667636336aca867accc7d819944f79e9d4987dcd9ef214a9790e12f3232"
+    },
+    "gt_rounded": {
+      "query_xy": [
+        137,
+        136
+      ],
+      "gt_mean_xy": [
+        136.76666666666668,
+        136.33333333333334
+      ],
+      "distance_to_gt_px": 0.4068851871911236,
+      "is_foreground_mask_pixel": true,
+      "final_logit": 14.90885066986084,
+      "n_valid_velocities": 81,
+      "channel9": {
+        "max_abs_reconstruct_error": 1.1920928955078125e-07,
+        "max_abs_time_mean_of_J_per_velocity": 3.725290298461914e-08,
+        "max_abs_velocity_mean_of_J_per_time": 3.8264708734914166e-08,
+        "R_min_max": [
+          -1.35054349899292,
+          1.4339075088500977
+        ],
+        "J_min_max": [
+          -1.4845354557037354,
+          1.3450450897216797
+        ],
+        "J_rms": 0.4395584762096405
+      },
+      "all_channels": {
+        "max_abs_reconstruct_error": 1.1920928955078125e-07,
+        "max_abs_time_mean_of_J_per_velocity": 4.842877388000488e-08,
+        "max_abs_velocity_mean_of_J_per_time": 1.3135097276517627e-07,
+        "R_min_max": [
+          -1.35054349899292,
+          1.9826511144638062
+        ],
+        "J_min_max": [
+          -1.4845354557037354,
+          1.3450450897216797
+        ],
+        "J_rms": 0.1796562522649765
+      },
+      "file": "Mint6000_Sequence45_00009_gt_rounded.npz",
+      "file_sha256": "496a2f64147cb1f2eb100e72674ede10b5af8e70b76e37c68e4b21debbb8f214"
+    }
+  },
+  "time_order_original_frames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "figure": {
+    "source_sha256": "496a2f64147cb1f2eb100e72674ede10b5af8e70b76e37c68e4b21debbb8f214",
+    "render_sha256": "168d1baf27d286b95574e65a6a4ff3a59ac9087bd60b65041c0828e16846ad32",
+    "artifact": "时间速度联合证据_目标位置实测.png",
+    "location": "rounded ground-truth centroid",
+    "zero_based_channel": 8,
+    "shown_context_offsets": [
+      -8,
+      -1,
+      8
+    ],
+    "bounds_shared_for_display": [
+      -1.5,
+      1.5
+    ],
+    "highlight": {
+      "offset": -1,
+      "vx": 1,
+      "vy": 0,
+      "sampled_native_xy": [
+        136,
+        136
+      ],
+      "R": 0.7627618908882141,
+      "additive": 0.5654985308647156,
+      "J": 0.19726336002349854
+    },
+    "render_size_pixels": [
+      1240,
+      1080
+    ],
+    "style": "3×3 scientific heatmaps, one common diverging scale, fixed context time rows and component columns, one highlighted measured entry."
+  }
+}
