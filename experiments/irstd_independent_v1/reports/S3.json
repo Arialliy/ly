@@ -1,0 +1,488 @@
+{
+  "stage": "S3",
+  "status": "PASS",
+  "next_allowed_stage": "S4",
+  "start_utc": "2026-11-18T13:52:29.593857+00:00",
+  "run_dir": "reports/s3_runs/seed46_core64_20261118_01",
+  "protocol": {
+    "seed": 46,
+    "mode": "interaction",
+    "schedule": [
+      [
+        "Sequence82",
+        43,
+        [
+          64,
+          64,
+          128,
+          128
+        ],
+        true
+      ],
+      [
+        "Sequence17",
+        9,
+        [
+          64,
+          64,
+          128,
+          128
+        ],
+        false
+      ],
+      [
+        "Sequence6",
+        59,
+        [
+          128,
+          64,
+          192,
+          128
+        ],
+        true
+      ],
+      [
+        "Sequence17",
+        78,
+        [
+          0,
+          0,
+          64,
+          64
+        ],
+        false
+      ]
+    ],
+    "updates": 4,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "precision": "FP32",
+    "batch": 1,
+    "query_chunk": 64,
+    "velocity_chunk": 8,
+    "checkpoint_chunks": true,
+    "core_hw": [
+      64,
+      64
+    ],
+    "primary_resource_step": 2,
+    "allocated_budget_mib": 8192,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "time_limit": null,
+    "stage_order": [
+      "decomposition",
+      "structure",
+      "training"
+    ]
+  },
+  "prerequisites": {
+    "reports/S2a.json": "d2a9aee69b8d58a058b4e74c642016655d85bbb816cef57b65f5bbe66513850b",
+    "reports/S2b.json": "52c0c46f937f3bcfd938cf99056b92e894b5f2fe5fe92ccd82aca0e60e85ddca",
+    "reports/S2c.json": "2ec60d663a52b6ef04776067e0867a5d752446d723bbcf83d75a58aa8894a9a5",
+    "configs/s1_formal.yaml": "a2bd44edf37c912cc6f41208b852e6c4f97b2257111bbff5f48706a94a9610c8",
+    "reports/S2.json": "a09fd01a65280fa6443ff6437aac3ece4b762f9da39da79290afb81e33e6c850",
+    "manifests/nudt_mirsdt_mask17.json": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a"
+  },
+  "code_sha256": {
+    "models/evidence_parts.py": "6e1e8e91a026a8d56643568084bc2013ece8ecace6b6183548c0fb223ea18a4c",
+    "models/evidence_encoder.py": "4375820a54a816bf9ab0c885f2901261f48523d807931a666881cf5b36ba3c7c",
+    "models/hypothesis_detector.py": "2092b89d404a74daf699e206a6f6099b3db79ff0f8d192a73aa7c9799f81dda8",
+    "checks/check_s3.py": "9c982894f2439cec773cb0d95714173a60be57ff41c0bf288424a85e8f67910d",
+    "checks/s3_parts_check.py": "b8daca64e964907986d6f9b94aac0e20d4274d2b7d61fdacfff4fcc994a18fc6",
+    "checks/s3_structure_check.py": "48a0345848175f0fbee4f3ba5ef1f442a6012affe0573959efde387afbb39481"
+  },
+  "base_commit": "8d39562a507780b148b8153a6ecb1b872067890e",
+  "environment": {
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+    "gpu_index": "2",
+    "torch": "2.7.0+cu128",
+    "cuda": "12.8"
+  },
+  "decomposition": {
+    "status": "PASS",
+    "reference": "compact FP64 means and analytical centered-matrix adjoint",
+    "max_abs_error_by_component": {
+      "mean": 1.955777406692505e-08,
+      "time": 1.5506520867347717e-07,
+      "velocity": 4.299605885216273e-08,
+      "interaction": 2.5326800034974895e-07
+    },
+    "input_gradient_max_abs_error": 2.2910535335540771e-07,
+    "reconstruction_max_abs_error": 2.384185791015625e-07,
+    "row_margin_max_abs": 1.3907749973895989e-07,
+    "column_margin_max_abs": 4.470348358154297e-08,
+    "velocity_counts": [
+      [
+        0,
+        1,
+        9,
+        8
+      ],
+      [
+        0,
+        1,
+        9,
+        3
+      ]
+    ],
+    "invalid_gradient_nonzeros": 0,
+    "empty_support_all_zero": true,
+    "singleton_interaction_exact_zero": true,
+    "fp16_promoted_and_differentiable": true,
+    "checkerboard_joint_difference": 1.0
+  },
+  "structure": {
+    "status": "PASS",
+    "equal_parameter_count": 23945,
+    "encoder_paths": {
+      "additive_only": {
+        "joint_input_matches": true,
+        "positive_negative_joint_feature_difference": 0.0,
+        "zero_marginal_perturbation_gradient": 2.7939677238464355e-09,
+        "empty_center_gradient_l1": 0.43228256702423096,
+        "invalid_gradient_nonzeros": 0
+      },
+      "raw_joint": {
+        "joint_input_matches": true,
+        "positive_negative_joint_feature_difference": 0.021718829870224,
+        "zero_marginal_perturbation_gradient": 0.04799205809831619,
+        "empty_center_gradient_l1": 0.43228256702423096,
+        "invalid_gradient_nonzeros": 0
+      },
+      "interaction": {
+        "joint_input_matches": true,
+        "positive_negative_joint_feature_difference": 0.0035697519779205322,
+        "zero_marginal_perturbation_gradient": 0.11511412262916565,
+        "empty_center_gradient_l1": 0.43228256702423096,
+        "invalid_gradient_nonzeros": 0
+      }
+    },
+    "center_and_interface": {
+      "center_to_evidence_max_change": 0.0,
+      "center_feature_max_change": 0.1519480049610138,
+      "center_to_output_max_change": 0.00026448629796504974,
+      "detector_and_s2c_evaluation_entries": {
+        "additive_only": {
+          "logits_hw": [
+            9,
+            13
+          ],
+          "frame_id": "Fixture/00009"
+        },
+        "raw_joint": {
+          "logits_hw": [
+            9,
+            13
+          ],
+          "frame_id": "Fixture/00009"
+        },
+        "interaction": {
+          "logits_hw": [
+            9,
+            13
+          ],
+          "frame_id": "Fixture/00009"
+        }
+      }
+    },
+    "spatial": {
+      "pixels_per_pass": 559,
+      "tiled": [
+        {
+          "core_hw": [
+            13,
+            15
+          ],
+          "actual_core_writes": 3,
+          "cropped_sources": 2,
+          "max_abs_delta": 5.587935447692871e-09
+        },
+        {
+          "core_hw": [
+            8,
+            12
+          ],
+          "actual_core_writes": 8,
+          "cropped_sources": 6,
+          "max_abs_delta": 3.725290298461914e-09
+        }
+      ],
+      "query_chunk_sizes": [
+        64,
+        47
+      ],
+      "query_chunk_max_abs_delta": 0.0
+    }
+  },
+  "training": {
+    "optimizer_updates": 4,
+    "parameters": 23945,
+    "updates": [
+      {
+        "step": 1,
+        "frame_id": "Sequence82/00043",
+        "core_xyxy": [
+          64,
+          64,
+          128,
+          128
+        ],
+        "query_hw": [
+          68,
+          68
+        ],
+        "input_xyxy": [
+          43,
+          43,
+          149,
+          149
+        ],
+        "foreground_pixels": 55,
+        "loss": 1.1798726320266724,
+        "modules": {
+          "frame_encoder": {
+            "gradient_l2": 2.219979460386998e-05,
+            "update_l2": 0.02499072686945514
+          },
+          "amplitude": {
+            "gradient_l2": 1.226403925982104e-05,
+            "update_l2": 0.008310763548220468
+          },
+          "temporal": {
+            "gradient_l2": 1.2097540262116538e-05,
+            "update_l2": 0.013348846550143907
+          },
+          "velocity": {
+            "gradient_l2": 1.2731974039782745e-05,
+            "update_l2": 0.025018848411267766
+          },
+          "joint": {
+            "gradient_l2": 2.4868671973334296e-06,
+            "update_l2": 0.009869930022082538
+          },
+          "fusion": {
+            "gradient_l2": 0.00010659542114066687,
+            "update_l2": 0.03534349539267788
+          },
+          "spatial_decoder": {
+            "gradient_l2": 0.0013721218773782861,
+            "update_l2": 0.1329578685891634
+          },
+          "detection_head": {
+            "gradient_l2": 0.0042584086263732866,
+            "update_l2": 0.0057427322458901585
+          }
+        },
+        "peak_allocated_mib": 187.65966796875,
+        "peak_reserved_mib": 238.0,
+        "seconds": {
+          "forward_and_loss": 1.0928123979829252,
+          "backward": 2.4723679409944452,
+          "optimizer": 0.00639400799991563,
+          "total": 3.571574346977286
+        }
+      },
+      {
+        "step": 2,
+        "frame_id": "Sequence17/00009",
+        "core_xyxy": [
+          64,
+          64,
+          128,
+          128
+        ],
+        "query_hw": [
+          68,
+          68
+        ],
+        "input_xyxy": [
+          43,
+          43,
+          149,
+          149
+        ],
+        "foreground_pixels": 0,
+        "loss": 0.6940431594848633,
+        "modules": {
+          "frame_encoder": {
+            "gradient_l2": 0.005557392998868891,
+            "update_l2": 0.01934630567311385
+          },
+          "amplitude": {
+            "gradient_l2": 0.002043766146168003,
+            "update_l2": 0.006623098371195741
+          },
+          "temporal": {
+            "gradient_l2": 0.0013179651774588095,
+            "update_l2": 0.011705854882185299
+          },
+          "velocity": {
+            "gradient_l2": 0.0014448837663454744,
+            "update_l2": 0.02189582769036132
+          },
+          "joint": {
+            "gradient_l2": 9.982995254150755e-05,
+            "update_l2": 0.016837009582693574
+          },
+          "fusion": {
+            "gradient_l2": 0.016011203778828274,
+            "update_l2": 0.02948643235782894
+          },
+          "spatial_decoder": {
+            "gradient_l2": 0.162399679761227,
+            "update_l2": 0.10211301141596052
+          },
+          "detection_head": {
+            "gradient_l2": 0.5035272060427646,
+            "update_l2": 0.004306809848681436
+          }
+        },
+        "peak_allocated_mib": 187.7822265625,
+        "peak_reserved_mib": 238.0,
+        "seconds": {
+          "forward_and_loss": 1.0799064760212786,
+          "backward": 2.087841431988636,
+          "optimizer": 0.0026188429910689592,
+          "total": 3.1703667510009836
+        }
+      },
+      {
+        "step": 3,
+        "frame_id": "Sequence6/00059",
+        "core_xyxy": [
+          128,
+          64,
+          192,
+          128
+        ],
+        "query_hw": [
+          68,
+          68
+        ],
+        "input_xyxy": [
+          107,
+          43,
+          213,
+          149
+        ],
+        "foreground_pixels": 36,
+        "loss": 1.184316873550415,
+        "modules": {
+          "frame_encoder": {
+            "gradient_l2": 0.00014489279776293355,
+            "update_l2": 0.015115628423262414
+          },
+          "amplitude": {
+            "gradient_l2": 6.724332307793622e-05,
+            "update_l2": 0.005332076746919438
+          },
+          "temporal": {
+            "gradient_l2": 1.0404393410629327e-05,
+            "update_l2": 0.009592836713396193
+          },
+          "velocity": {
+            "gradient_l2": 1.0120092097141131e-05,
+            "update_l2": 0.017524325507707862
+          },
+          "joint": {
+            "gradient_l2": 2.7949733563606444e-05,
+            "update_l2": 0.010730575470018669
+          },
+          "fusion": {
+            "gradient_l2": 0.00018241318155574692,
+            "update_l2": 0.021641087815003034
+          },
+          "spatial_decoder": {
+            "gradient_l2": 0.0010384248471352095,
+            "update_l2": 0.07822974310680694
+          },
+          "detection_head": {
+            "gradient_l2": 0.002668538399126113,
+            "update_l2": 0.003296767673854737
+          }
+        },
+        "peak_allocated_mib": 188.31103515625,
+        "peak_reserved_mib": 238.0,
+        "seconds": {
+          "forward_and_loss": 1.069043616997078,
+          "backward": 2.0848337820207234,
+          "optimizer": 0.002875632984796539,
+          "total": 3.156753032002598
+        }
+      },
+      {
+        "step": 4,
+        "frame_id": "Sequence17/00078",
+        "core_xyxy": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "query_hw": [
+          66,
+          66
+        ],
+        "input_xyxy": [
+          0,
+          0,
+          85,
+          85
+        ],
+        "foreground_pixels": 0,
+        "loss": 0.6841248273849487,
+        "modules": {
+          "frame_encoder": {
+            "gradient_l2": 0.006964522865015829,
+            "update_l2": 0.01644678499733948
+          },
+          "amplitude": {
+            "gradient_l2": 0.0037842445320494114,
+            "update_l2": 0.006398330593564132
+          },
+          "temporal": {
+            "gradient_l2": 0.0027238947800413663,
+            "update_l2": 0.010031929923972062
+          },
+          "velocity": {
+            "gradient_l2": 0.0020677525352663104,
+            "update_l2": 0.019582791624578887
+          },
+          "joint": {
+            "gradient_l2": 0.0002509433939837591,
+            "update_l2": 0.015378153114385472
+          },
+          "fusion": {
+            "gradient_l2": 0.025875742762532607,
+            "update_l2": 0.026287390334054608
+          },
+          "spatial_decoder": {
+            "gradient_l2": 0.16967148812023294,
+            "update_l2": 0.08446712429270659
+          },
+          "detection_head": {
+            "gradient_l2": 0.4994856937725578,
+            "update_l2": 0.004003823794119275
+          }
+        },
+        "peak_allocated_mib": 177.4228515625,
+        "peak_reserved_mib": 238.0,
+        "seconds": {
+          "forward_and_loss": 0.9495841249881778,
+          "backward": 1.9821607450139709,
+          "optimizer": 0.00216283998452127,
+          "total": 2.93390770998667
+        }
+      }
+    ],
+    "checkpoint_sha256": "fe05b5a461b14fb73ae680da366831da7a65f894550b0e2d95c1bb7eef4b6a23",
+    "primary_measured_step": 2,
+    "peak_over_all_updates_mib": 188.31103515625,
+    "allocated_budget_mib": 8192
+  },
+  "finish_utc": "2026-11-18T13:52:46.754636+00:00"
+}

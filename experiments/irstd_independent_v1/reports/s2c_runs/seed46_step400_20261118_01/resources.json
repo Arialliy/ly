@@ -1,0 +1,54 @@
+{
+  "stage": "S2c-3",
+  "diagnostic_optimizer_updates": 2,
+  "measured_updates": 1,
+  "measurement_scope": "Single synchronized FP32 training update with resident input, model and AdamW.",
+  "sample_id": "Sequence32/00009",
+  "input_shape": [
+    1,
+    17,
+    1,
+    272,
+    407
+  ],
+  "native_hw": [
+    272,
+    407
+  ],
+  "train_sources": 72,
+  "largest_area_pixels": 110704,
+  "precision": "FP32",
+  "batch_size": 1,
+  "checkpoint_sha256": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+  "restored_optimizer_step": 400,
+  "allocated_budget_mib": 8192,
+  "optimizer": "AdamW",
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "total_device_bytes": 33668726784,
+    "host_gpu_index": "2",
+    "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "torch": "2.7.0+cu128",
+    "cuda": "12.8"
+  },
+  "warmup_loss": 0.509428858757019,
+  "memory": {
+    "allocated_before_bytes": 77366784,
+    "reserved_before_bytes": 2132803584,
+    "peak_allocated_bytes": 1592523776,
+    "peak_allocated_mib": 1518.7490234375,
+    "peak_reserved_bytes": 2132803584,
+    "peak_reserved_mib": 2034.0
+  },
+  "timing_ms": {
+    "forward": 8.490642008837312,
+    "loss": 0.801260001026094,
+    "backward": 56.67555698892102,
+    "optimizer_step": 1.3442090130411088,
+    "total": 67.31166801182553
+  },
+  "measured_loss": 0.5075876712799072,
+  "allocated_within_budget": true,
+  "status": "PASS"
+}

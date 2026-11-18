@@ -1,0 +1,86 @@
+{
+  "stage": "S2c",
+  "status": "PASS",
+  "next_allowed_stage": "S3",
+  "start_utc": "2026-11-18T13:38:53.389331+00:00",
+  "run_dir": "reports/s2c_runs/seed46_step400_20261118_01",
+  "base_commit": "8d39562a507780b148b8153a6ecb1b872067890e",
+  "main_fit_optimizer_updates": 400,
+  "checkpoint_sha256": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+  "inputs": {
+    "experiments/irstd_independent_v1/reports/S2a.json": "d2a9aee69b8d58a058b4e74c642016655d85bbb816cef57b65f5bbe66513850b",
+    "experiments/irstd_independent_v1/reports/S2b.json": "52c0c46f937f3bcfd938cf99056b92e894b5f2fe5fe92ccd82aca0e60e85ddca",
+    "experiments/irstd_independent_v1/manifests/s2b_train12.json": "acc07845130099b0d1ae19163099974a698487954a8f60bc65e88df57b3e6d74",
+    "experiments/irstd_independent_v1/reports/s2b_runs/seed46_400_20261118_01/final.pt": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+    "experiments/irstd_independent_v1/reports/s2b_runs/seed46_400_20261118_01/logits_400.npz": "5be8d609b9e89a684e90f12e99db702ce6a044811ab1747c6706d94d942f3f0f",
+    "experiments/irstd_independent_v1/reports/s2b_runs/seed46_400_20261118_01/endpoint_audit.json": "a566475b8933b5969fb0d7ab8307cd7c2ff146f32e196721dd43bc40858aee28",
+    "experiments/irstd_independent_v1/reports/s2b_runs/seed46_400_20261118_01/updates.jsonl": "fb60087833011cbe8f661eb2591052c34532823c48b40beda74a563987c930d6",
+    "experiments/irstd_independent_v1/manifests/nudt_mirsdt_mask17.json": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+    "1/S2c_execution_plan.md": "2bd88853a7aa0a157f401bf8b13c6ff8667aef622a738b7852c16d2e98910a81"
+  },
+  "controller_sha256": "90fdb5593e5185bf0f75c9382451df5a91d909cd2fc244c35f6f75a29f2ca036",
+  "stages": {
+    "resume": {
+      "start_utc": "2026-11-18T13:38:53.395999+00:00",
+      "status": "PASS",
+      "result": "resume/result.json",
+      "code_sha256": {
+        "checks/check_s2c_resume.py": "08dd1ac80317aaf7436034eed1fcf23044ca6a9ad83a90013ef1f2a686afe500",
+        "engine/checkpoints.py": "edddcdb4bb4674711ce4787c400b05167622fa512f31621a6b91c4ad94f7b5e8"
+      },
+      "environment": {
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "gpu_index": "2",
+        "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+        "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+        "python": "3.11.12",
+        "torch": "2.7.0+cu128"
+      },
+      "sha256": "edcd580f695328155db0bb42d43080c7bf793ef40b07abd080b7f6436213f45e",
+      "finish_utc": "2026-11-18T13:39:03.514239+00:00"
+    },
+    "prediction": {
+      "start_utc": "2026-11-18T13:40:45.686566+00:00",
+      "status": "PASS",
+      "result": "prediction.json",
+      "code_sha256": {
+        "checks/s2c_prediction.py": "3e35194716dd39e0ba6680a256480dce685b2772b8a9d24d2f07afb5009ec6ab",
+        "engine/checkpoints.py": "edddcdb4bb4674711ce4787c400b05167622fa512f31621a6b91c4ad94f7b5e8",
+        "engine/predict.py": "818ba51a9ee0a3d423d82cd77359690a217e74fccde62b420ef159417bb7076e"
+      },
+      "environment": {
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "gpu_index": "2",
+        "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+        "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+        "python": "3.11.12",
+        "torch": "2.7.0+cu128"
+      },
+      "sha256": "72b3928b60ee5a3184d2945b31b3778b0eab38023fad30e1a5e505723b7e9350",
+      "finish_utc": "2026-11-18T13:41:04.164972+00:00"
+    },
+    "resources": {
+      "start_utc": "2026-11-18T13:43:07.840935+00:00",
+      "status": "PASS",
+      "result": "resources.json",
+      "code_sha256": {
+        "checks/s2c_resources.py": "8400e55577330c47c715b8d7b8b1c995271f05cf680773645321197d504da9c9",
+        "engine/checkpoints.py": "edddcdb4bb4674711ce4787c400b05167622fa512f31621a6b91c4ad94f7b5e8"
+      },
+      "environment": {
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "gpu_index": "2",
+        "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+        "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+        "python": "3.11.12",
+        "torch": "2.7.0+cu128"
+      },
+      "sha256": "a76d360308d1a9967cdb84e1bef73279f2333faf00453fe5e77865440fdf2a02",
+      "finish_utc": "2026-11-18T13:43:13.516183+00:00"
+    }
+  },
+  "finish_utc": "2026-11-18T13:43:13.516150+00:00"
+}

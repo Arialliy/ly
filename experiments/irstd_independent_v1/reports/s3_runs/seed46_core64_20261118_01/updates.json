@@ -1,0 +1,258 @@
+[
+  {
+    "step": 1,
+    "frame_id": "Sequence82/00043",
+    "core_xyxy": [
+      64,
+      64,
+      128,
+      128
+    ],
+    "query_hw": [
+      68,
+      68
+    ],
+    "input_xyxy": [
+      43,
+      43,
+      149,
+      149
+    ],
+    "foreground_pixels": 55,
+    "loss": 1.1798726320266724,
+    "modules": {
+      "frame_encoder": {
+        "gradient_l2": 2.219979460386998e-05,
+        "update_l2": 0.02499072686945514
+      },
+      "amplitude": {
+        "gradient_l2": 1.226403925982104e-05,
+        "update_l2": 0.008310763548220468
+      },
+      "temporal": {
+        "gradient_l2": 1.2097540262116538e-05,
+        "update_l2": 0.013348846550143907
+      },
+      "velocity": {
+        "gradient_l2": 1.2731974039782745e-05,
+        "update_l2": 0.025018848411267766
+      },
+      "joint": {
+        "gradient_l2": 2.4868671973334296e-06,
+        "update_l2": 0.009869930022082538
+      },
+      "fusion": {
+        "gradient_l2": 0.00010659542114066687,
+        "update_l2": 0.03534349539267788
+      },
+      "spatial_decoder": {
+        "gradient_l2": 0.0013721218773782861,
+        "update_l2": 0.1329578685891634
+      },
+      "detection_head": {
+        "gradient_l2": 0.0042584086263732866,
+        "update_l2": 0.0057427322458901585
+      }
+    },
+    "peak_allocated_mib": 187.65966796875,
+    "peak_reserved_mib": 238.0,
+    "seconds": {
+      "forward_and_loss": 1.0928123979829252,
+      "backward": 2.4723679409944452,
+      "optimizer": 0.00639400799991563,
+      "total": 3.571574346977286
+    }
+  },
+  {
+    "step": 2,
+    "frame_id": "Sequence17/00009",
+    "core_xyxy": [
+      64,
+      64,
+      128,
+      128
+    ],
+    "query_hw": [
+      68,
+      68
+    ],
+    "input_xyxy": [
+      43,
+      43,
+      149,
+      149
+    ],
+    "foreground_pixels": 0,
+    "loss": 0.6940431594848633,
+    "modules": {
+      "frame_encoder": {
+        "gradient_l2": 0.005557392998868891,
+        "update_l2": 0.01934630567311385
+      },
+      "amplitude": {
+        "gradient_l2": 0.002043766146168003,
+        "update_l2": 0.006623098371195741
+      },
+      "temporal": {
+        "gradient_l2": 0.0013179651774588095,
+        "update_l2": 0.011705854882185299
+      },
+      "velocity": {
+        "gradient_l2": 0.0014448837663454744,
+        "update_l2": 0.02189582769036132
+      },
+      "joint": {
+        "gradient_l2": 9.982995254150755e-05,
+        "update_l2": 0.016837009582693574
+      },
+      "fusion": {
+        "gradient_l2": 0.016011203778828274,
+        "update_l2": 0.02948643235782894
+      },
+      "spatial_decoder": {
+        "gradient_l2": 0.162399679761227,
+        "update_l2": 0.10211301141596052
+      },
+      "detection_head": {
+        "gradient_l2": 0.5035272060427646,
+        "update_l2": 0.004306809848681436
+      }
+    },
+    "peak_allocated_mib": 187.7822265625,
+    "peak_reserved_mib": 238.0,
+    "seconds": {
+      "forward_and_loss": 1.0799064760212786,
+      "backward": 2.087841431988636,
+      "optimizer": 0.0026188429910689592,
+      "total": 3.1703667510009836
+    }
+  },
+  {
+    "step": 3,
+    "frame_id": "Sequence6/00059",
+    "core_xyxy": [
+      128,
+      64,
+      192,
+      128
+    ],
+    "query_hw": [
+      68,
+      68
+    ],
+    "input_xyxy": [
+      107,
+      43,
+      213,
+      149
+    ],
+    "foreground_pixels": 36,
+    "loss": 1.184316873550415,
+    "modules": {
+      "frame_encoder": {
+        "gradient_l2": 0.00014489279776293355,
+        "update_l2": 0.015115628423262414
+      },
+      "amplitude": {
+        "gradient_l2": 6.724332307793622e-05,
+        "update_l2": 0.005332076746919438
+      },
+      "temporal": {
+        "gradient_l2": 1.0404393410629327e-05,
+        "update_l2": 0.009592836713396193
+      },
+      "velocity": {
+        "gradient_l2": 1.0120092097141131e-05,
+        "update_l2": 0.017524325507707862
+      },
+      "joint": {
+        "gradient_l2": 2.7949733563606444e-05,
+        "update_l2": 0.010730575470018669
+      },
+      "fusion": {
+        "gradient_l2": 0.00018241318155574692,
+        "update_l2": 0.021641087815003034
+      },
+      "spatial_decoder": {
+        "gradient_l2": 0.0010384248471352095,
+        "update_l2": 0.07822974310680694
+      },
+      "detection_head": {
+        "gradient_l2": 0.002668538399126113,
+        "update_l2": 0.003296767673854737
+      }
+    },
+    "peak_allocated_mib": 188.31103515625,
+    "peak_reserved_mib": 238.0,
+    "seconds": {
+      "forward_and_loss": 1.069043616997078,
+      "backward": 2.0848337820207234,
+      "optimizer": 0.002875632984796539,
+      "total": 3.156753032002598
+    }
+  },
+  {
+    "step": 4,
+    "frame_id": "Sequence17/00078",
+    "core_xyxy": [
+      0,
+      0,
+      64,
+      64
+    ],
+    "query_hw": [
+      66,
+      66
+    ],
+    "input_xyxy": [
+      0,
+      0,
+      85,
+      85
+    ],
+    "foreground_pixels": 0,
+    "loss": 0.6841248273849487,
+    "modules": {
+      "frame_encoder": {
+        "gradient_l2": 0.006964522865015829,
+        "update_l2": 0.01644678499733948
+      },
+      "amplitude": {
+        "gradient_l2": 0.0037842445320494114,
+        "update_l2": 0.006398330593564132
+      },
+      "temporal": {
+        "gradient_l2": 0.0027238947800413663,
+        "update_l2": 0.010031929923972062
+      },
+      "velocity": {
+        "gradient_l2": 0.0020677525352663104,
+        "update_l2": 0.019582791624578887
+      },
+      "joint": {
+        "gradient_l2": 0.0002509433939837591,
+        "update_l2": 0.015378153114385472
+      },
+      "fusion": {
+        "gradient_l2": 0.025875742762532607,
+        "update_l2": 0.026287390334054608
+      },
+      "spatial_decoder": {
+        "gradient_l2": 0.16967148812023294,
+        "update_l2": 0.08446712429270659
+      },
+      "detection_head": {
+        "gradient_l2": 0.4994856937725578,
+        "update_l2": 0.004003823794119275
+      }
+    },
+    "peak_allocated_mib": 177.4228515625,
+    "peak_reserved_mib": 238.0,
+    "seconds": {
+      "forward_and_loss": 0.9495841249881778,
+      "backward": 1.9821607450139709,
+      "optimizer": 0.00216283998452127,
+      "total": 2.93390770998667
+    }
+  }
+]

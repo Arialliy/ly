@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "reference": "compact FP64 means and analytical centered-matrix adjoint",
+  "max_abs_error_by_component": {
+    "mean": 1.955777406692505e-08,
+    "time": 1.5506520867347717e-07,
+    "velocity": 4.299605885216273e-08,
+    "interaction": 2.5326800034974895e-07
+  },
+  "input_gradient_max_abs_error": 2.2910535335540771e-07,
+  "reconstruction_max_abs_error": 2.384185791015625e-07,
+  "row_margin_max_abs": 1.3907749973895989e-07,
+  "column_margin_max_abs": 4.470348358154297e-08,
+  "velocity_counts": [
+    [
+      0,
+      1,
+      9,
+      8
+    ],
+    [
+      0,
+      1,
+      9,
+      3
+    ]
+  ],
+  "invalid_gradient_nonzeros": 0,
+  "empty_support_all_zero": true,
+  "singleton_interaction_exact_zero": true,
+  "fp16_promoted_and_differentiable": true,
+  "checkerboard_joint_difference": 1.0
+}

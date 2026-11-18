@@ -1,0 +1,16 @@
+{
+  "logical_step": 402,
+  "sample_id": "Sequence77/00046",
+  "loss": 0.007601586170494556,
+  "pid": 16,
+  "checkpoint_sha256": "605144404a9329ccd570bc91a0cb2828309d9f4f8c64a4012336be5494bcc53e",
+  "rng_negative_control": {
+    "python": true,
+    "numpy": true,
+    "torch_cpu": true,
+    "torch_cuda_devices": [
+      true
+    ]
+  },
+  "rng_restored_exactly": true
+}

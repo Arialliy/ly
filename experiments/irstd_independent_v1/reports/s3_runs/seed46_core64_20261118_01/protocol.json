@@ -1,0 +1,105 @@
+{
+  "stage": "S3",
+  "status": "RUNNING",
+  "next_allowed_stage": null,
+  "start_utc": "2026-11-18T13:52:29.593857+00:00",
+  "run_dir": "reports/s3_runs/seed46_core64_20261118_01",
+  "protocol": {
+    "seed": 46,
+    "mode": "interaction",
+    "schedule": [
+      [
+        "Sequence82",
+        43,
+        [
+          64,
+          64,
+          128,
+          128
+        ],
+        true
+      ],
+      [
+        "Sequence17",
+        9,
+        [
+          64,
+          64,
+          128,
+          128
+        ],
+        false
+      ],
+      [
+        "Sequence6",
+        59,
+        [
+          128,
+          64,
+          192,
+          128
+        ],
+        true
+      ],
+      [
+        "Sequence17",
+        78,
+        [
+          0,
+          0,
+          64,
+          64
+        ],
+        false
+      ]
+    ],
+    "updates": 4,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "precision": "FP32",
+    "batch": 1,
+    "query_chunk": 64,
+    "velocity_chunk": 8,
+    "checkpoint_chunks": true,
+    "core_hw": [
+      64,
+      64
+    ],
+    "primary_resource_step": 2,
+    "allocated_budget_mib": 8192,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "time_limit": null,
+    "stage_order": [
+      "decomposition",
+      "structure",
+      "training"
+    ]
+  },
+  "prerequisites": {
+    "reports/S2a.json": "d2a9aee69b8d58a058b4e74c642016655d85bbb816cef57b65f5bbe66513850b",
+    "reports/S2b.json": "52c0c46f937f3bcfd938cf99056b92e894b5f2fe5fe92ccd82aca0e60e85ddca",
+    "reports/S2c.json": "2ec60d663a52b6ef04776067e0867a5d752446d723bbcf83d75a58aa8894a9a5",
+    "configs/s1_formal.yaml": "a2bd44edf37c912cc6f41208b852e6c4f97b2257111bbff5f48706a94a9610c8",
+    "reports/S2.json": "a09fd01a65280fa6443ff6437aac3ece4b762f9da39da79290afb81e33e6c850",
+    "manifests/nudt_mirsdt_mask17.json": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a"
+  },
+  "code_sha256": {
+    "models/evidence_parts.py": "6e1e8e91a026a8d56643568084bc2013ece8ecace6b6183548c0fb223ea18a4c",
+    "models/evidence_encoder.py": "4375820a54a816bf9ab0c885f2901261f48523d807931a666881cf5b36ba3c7c",
+    "models/hypothesis_detector.py": "2092b89d404a74daf699e206a6f6099b3db79ff0f8d192a73aa7c9799f81dda8",
+    "checks/check_s3.py": "9c982894f2439cec773cb0d95714173a60be57ff41c0bf288424a85e8f67910d",
+    "checks/s3_parts_check.py": "b8daca64e964907986d6f9b94aac0e20d4274d2b7d61fdacfff4fcc994a18fc6",
+    "checks/s3_structure_check.py": "48a0345848175f0fbee4f3ba5ef1f442a6012affe0573959efde387afbb39481"
+  },
+  "base_commit": "8d39562a507780b148b8153a6ecb1b872067890e",
+  "environment": {
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "gpu_uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+    "gpu_index": "2",
+    "torch": "2.7.0+cu128",
+    "cuda": "12.8"
+  }
+}

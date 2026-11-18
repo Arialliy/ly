@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "stage": "S3",
+  "source_run": "seed46_core64_20261118_01",
+  "device": "cpu",
+  "torch": "2.7.0+cu128",
+  "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "scope": "Final weights versus independent seed-46 initialization; direct exact path endpoints versus production S1 validity on all four fixed native training cores.",
+  "optimizer_updates_performed_in_this_audit": 0,
+  "initial_seed": 46,
+  "mode": "interaction",
+  "observed_training_updates": 4,
+  "trainable_parameters": 23945,
+  "trainable_tensors": 31,
+  "changed_parameter_tensors": 31,
+  "changed_scalar_parameters": 23945,
+  "total_parameter_delta_l2": 0.38238386029247107,
+  "changes_by_module": {
+    "frame_encoder": {
+      "parameters": 664,
+      "parameters_changed": 664,
+      "tensors": 4,
+      "delta_l2": 0.0671631389360939
+    },
+    "amplitude": {
+      "parameters": 80,
+      "parameters_changed": 80,
+      "tensors": 2,
+      "delta_l2": 0.020430640392684912
+    },
+    "temporal": {
+      "parameters": 448,
+      "parameters_changed": 448,
+      "tensors": 4,
+      "delta_l2": 0.03222958168096214
+    },
+    "velocity": {
+      "parameters": 1456,
+      "parameters_changed": 1456,
+      "tensors": 4,
+      "delta_l2": 0.06605339853822607
+    },
+    "joint": {
+      "parameters": 1168,
+      "parameters_changed": 1168,
+      "tensors": 9,
+      "delta_l2": 0.03881957163525591
+    },
+    "fusion": {
+      "parameters": 1600,
+      "parameters_changed": 1600,
+      "tensors": 2,
+      "delta_l2": 0.0865712709115936
+    },
+    "spatial_decoder": {
+      "parameters": 18496,
+      "parameters_changed": 18496,
+      "tensors": 4,
+      "delta_l2": 0.3558232885891452
+    },
+    "detection_head": {
+      "parameters": 33,
+      "parameters_changed": 33,
+      "tensors": 2,
+      "delta_l2": 0.016600124342932215
+    }
+  },
+  "checkpoint_sha256": "fe05b5a461b14fb73ae680da366831da7a65f894550b0e2d95c1bb7eef4b6a23",
+  "checkpoint_strict_cpu_load": true,
+  "protocol_sha256": "16b3c8fac2588c883a01af0d010cf394c87b8795e8fbcc19959098b783a1d462",
+  "result_sha256": "87a0531f40084b708f0f1af820505d9b8a90f6f771c122d3892bcd98d320b4b9",
+  "updates_sha256": "28a95bc904c0516b222f2c0389cc3cbca58aa590905d478f45e6b827350e1cbf",
+  "checks": [
+    "All frozen S3 implementation hashes verified; checkpoint file digest, seed, mode, step and parameter contract verified.",
+    "Seed-46 FP32 CPU initial parameters rebuilt before loading trained checkpoint; 31 nonzero tensor changes verified.",
+    "Original native masks and actual pixel layout verified for four selected cores. Every native context pixel is observed.",
+    "For every query, velocity, and signed noncentral time, tested both half-pixel endpoint coordinates against original extents with integer arithmetic. All 16x81 validity bits, the AND over 16 contexts, and every per-query count match S1."
+  ],
+  "cores": [
+    {
+      "step": 1,
+      "frame_id": "Sequence82/00043",
+      "native_hw": [
+        194,
+        284
+      ],
+      "core_xyxy": [
+        64,
+        64,
+        128,
+        128
+      ],
+      "foreground_pixels": 55,
+      "core_pixels": 4096,
+      "common_support_bits_checked": 331776,
+      "sample_valid_bits_checked": 5308416,
+      "min_k": 81,
+      "max_k": 81,
+      "k0": 0,
+      "k1": 0,
+      "hist": {
+        "81": 4096
+      }
+    },
+    {
+      "step": 2,
+      "frame_id": "Sequence17/00009",
+      "native_hw": [
+        209,
+        302
+      ],
+      "core_xyxy": [
+        64,
+        64,
+        128,
+        128
+      ],
+      "foreground_pixels": 0,
+      "core_pixels": 4096,
+      "common_support_bits_checked": 331776,
+      "sample_valid_bits_checked": 5308416,
+      "min_k": 81,
+      "max_k": 81,
+      "k0": 0,
+      "k1": 0,
+      "hist": {
+        "81": 4096
+      }
+    },
+    {
+      "step": 3,
+      "frame_id": "Sequence6/00059",
+      "native_hw": [
+        199,
+        304
+      ],
+      "core_xyxy": [
+        128,
+        64,
+        192,
+        128
+      ],
+      "foreground_pixels": 36,
+      "core_pixels": 4096,
+      "common_support_bits_checked": 331776,
+      "sample_valid_bits_checked": 5308416,
+      "min_k": 81,
+      "max_k": 81,
+      "k0": 0,
+      "k1": 0,
+      "hist": {
+        "81": 4096
+      }
+    },
+    {
+      "step": 4,
+      "frame_id": "Sequence17/00078",
+      "native_hw": [
+        209,
+        302
+      ],
+      "core_xyxy": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "foreground_pixels": 0,
+      "core_pixels": 4096,
+      "common_support_bits_checked": 331776,
+      "sample_valid_bits_checked": 5308416,
+      "min_k": 1,
+      "max_k": 81,
+      "k0": 0,
+      "k1": 16,
+      "hist": {
+        "1": 16,
+        "3": 32,
+        "5": 32,
+        "7": 32,
+        "9": 400,
+        "15": 32,
+        "21": 32,
+        "25": 16,
+        "27": 384,
+        "35": 32,
+        "45": 384,
+        "49": 16,
+        "63": 384,
+        "81": 2304
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "S2",
+  "status": "PASS",
+  "next_allowed_stage": "S3",
+  "main_fit_optimizer_updates": 400,
+  "s2a_engineering_updates": 1,
+  "s2c_resume_audit_updates": 3,
+  "s2c_resource_updates": 2,
+  "checkpoint_sha256": "a960e500f7f00da69de273ade47ecc021de386afb7835a9957a1dd7b90cb37de",
+  "checkpoint": "reports/s2b_runs/seed46_400_20261118_01/final.pt",
+  "substage_reports": {
+    "S2a": {
+      "path": "reports/S2a.json",
+      "sha256": "d2a9aee69b8d58a058b4e74c642016655d85bbb816cef57b65f5bbe66513850b"
+    },
+    "S2b": {
+      "path": "reports/S2b.json",
+      "sha256": "52c0c46f937f3bcfd938cf99056b92e894b5f2fe5fe92ccd82aca0e60e85ddca"
+    },
+    "S2c": {
+      "path": "reports/S2c.json",
+      "sha256": "2ec60d663a52b6ef04776067e0867a5d752446d723bbcf83d75a58aa8894a9a5"
+    }
+  },
+  "finish_utc": "2026-11-18T13:43:13.522973+00:00"
+}
