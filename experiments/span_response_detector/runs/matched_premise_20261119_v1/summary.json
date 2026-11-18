@@ -1,0 +1,661 @@
+{
+  "frames": [
+    {
+      "sequence": "DJI_0030_9",
+      "center": 8,
+      "boxes": 14,
+      "eligible_target_peaks": 12,
+      "eligible_background_peaks": 258,
+      "pairs": 2
+    },
+    {
+      "sequence": "DJI_0030_9",
+      "center": 25,
+      "boxes": 14,
+      "eligible_target_peaks": 12,
+      "eligible_background_peaks": 313,
+      "pairs": 3
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "center": 8,
+      "boxes": 68,
+      "eligible_target_peaks": 44,
+      "eligible_background_peaks": 258,
+      "pairs": 10
+    },
+    {
+      "sequence": "DJI_0043_2",
+      "center": 25,
+      "boxes": 71,
+      "eligible_target_peaks": 37,
+      "eligible_background_peaks": 323,
+      "pairs": 6
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "center": 8,
+      "boxes": 1,
+      "eligible_target_peaks": 1,
+      "eligible_background_peaks": 262,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0057_1",
+      "center": 25,
+      "boxes": 1,
+      "eligible_target_peaks": 1,
+      "eligible_background_peaks": 320,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "center": 8,
+      "boxes": 3,
+      "eligible_target_peaks": 3,
+      "eligible_background_peaks": 376,
+      "pairs": 1
+    },
+    {
+      "sequence": "DJI_0115_2",
+      "center": 25,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 391,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "center": 8,
+      "boxes": 5,
+      "eligible_target_peaks": 5,
+      "eligible_background_peaks": 366,
+      "pairs": 1
+    },
+    {
+      "sequence": "DJI_0323_2",
+      "center": 25,
+      "boxes": 5,
+      "eligible_target_peaks": 4,
+      "eligible_background_peaks": 439,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 8,
+      "boxes": 4,
+      "eligible_target_peaks": 3,
+      "eligible_background_peaks": 177,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 25,
+      "boxes": 4,
+      "eligible_target_peaks": 3,
+      "eligible_background_peaks": 194,
+      "pairs": 1
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 42,
+      "boxes": 4,
+      "eligible_target_peaks": 3,
+      "eligible_background_peaks": 347,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 59,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 242,
+      "pairs": 1
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 76,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 136,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 93,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 116,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 110,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 388,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 127,
+      "boxes": 4,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 314,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0026_2",
+      "center": 144,
+      "boxes": 3,
+      "eligible_target_peaks": 2,
+      "eligible_background_peaks": 280,
+      "pairs": 0
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 8,
+      "boxes": 69,
+      "eligible_target_peaks": 21,
+      "eligible_background_peaks": 235,
+      "pairs": 14
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 25,
+      "boxes": 70,
+      "eligible_target_peaks": 19,
+      "eligible_background_peaks": 314,
+      "pairs": 14
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 42,
+      "boxes": 69,
+      "eligible_target_peaks": 9,
+      "eligible_background_peaks": 440,
+      "pairs": 5
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 59,
+      "boxes": 70,
+      "eligible_target_peaks": 17,
+      "eligible_background_peaks": 310,
+      "pairs": 13
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 76,
+      "boxes": 72,
+      "eligible_target_peaks": 7,
+      "eligible_background_peaks": 387,
+      "pairs": 3
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 93,
+      "boxes": 74,
+      "eligible_target_peaks": 14,
+      "eligible_background_peaks": 270,
+      "pairs": 11
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 110,
+      "boxes": 75,
+      "eligible_target_peaks": 15,
+      "eligible_background_peaks": 324,
+      "pairs": 8
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 127,
+      "boxes": 74,
+      "eligible_target_peaks": 20,
+      "eligible_background_peaks": 389,
+      "pairs": 13
+    },
+    {
+      "sequence": "DJI_0067_2",
+      "center": 144,
+      "boxes": 74,
+      "eligible_target_peaks": 20,
+      "eligible_background_peaks": 311,
+      "pairs": 17
+    }
+  ],
+  "sources": {
+    "DJI_0026_2": {
+      "pairs": 2,
+      "moving_short": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.15379559434950352
+      },
+      "moving_long": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": 0.15347765386104584
+      },
+      "moving_change": {
+        "wins": 2,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": 0.29861292243003845
+      },
+      "static_short": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.16665427386760712
+      },
+      "static_long": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.03984716534614563
+      },
+      "static_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": -0.2682183310389519
+      }
+    },
+    "DJI_0030_9": {
+      "pairs": 5,
+      "moving_short": {
+        "wins": 3,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": 0.10096126794815063
+      },
+      "moving_long": {
+        "wins": 2,
+        "ties": 0,
+        "losses": 3,
+        "median_target_minus_background": -0.15565899014472961
+      },
+      "moving_change": {
+        "wins": 2,
+        "ties": 0,
+        "losses": 3,
+        "median_target_minus_background": -0.20520848035812378
+      },
+      "static_short": {
+        "wins": 3,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": 0.050951965153217316
+      },
+      "static_long": {
+        "wins": 3,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": 0.14879900217056274
+      },
+      "static_change": {
+        "wins": 4,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": 0.1645483523607254
+      }
+    },
+    "DJI_0043_2": {
+      "pairs": 16,
+      "moving_short": {
+        "wins": 5,
+        "ties": 0,
+        "losses": 11,
+        "median_target_minus_background": -0.05336202681064606
+      },
+      "moving_long": {
+        "wins": 6,
+        "ties": 0,
+        "losses": 10,
+        "median_target_minus_background": -0.04521412402391434
+      },
+      "moving_change": {
+        "wins": 6,
+        "ties": 0,
+        "losses": 10,
+        "median_target_minus_background": -0.19579298794269562
+      },
+      "static_short": {
+        "wins": 10,
+        "ties": 0,
+        "losses": 6,
+        "median_target_minus_background": 0.07826578617095947
+      },
+      "static_long": {
+        "wins": 12,
+        "ties": 0,
+        "losses": 4,
+        "median_target_minus_background": 0.13684609532356262
+      },
+      "static_change": {
+        "wins": 5,
+        "ties": 0,
+        "losses": 11,
+        "median_target_minus_background": -0.0734211802482605
+      }
+    },
+    "DJI_0057_1": {
+      "pairs": 0,
+      "moving_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      },
+      "moving_long": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      },
+      "moving_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      },
+      "static_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      },
+      "static_long": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      },
+      "static_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": null
+      }
+    },
+    "DJI_0067_2": {
+      "pairs": 98,
+      "moving_short": {
+        "wins": 53,
+        "ties": 0,
+        "losses": 45,
+        "median_target_minus_background": 0.019588839262723923
+      },
+      "moving_long": {
+        "wins": 59,
+        "ties": 0,
+        "losses": 39,
+        "median_target_minus_background": 0.03593301959335804
+      },
+      "moving_change": {
+        "wins": 56,
+        "ties": 0,
+        "losses": 42,
+        "median_target_minus_background": 0.05901282839477062
+      },
+      "static_short": {
+        "wins": 41,
+        "ties": 0,
+        "losses": 57,
+        "median_target_minus_background": -0.030921243131160736
+      },
+      "static_long": {
+        "wins": 46,
+        "ties": 0,
+        "losses": 52,
+        "median_target_minus_background": -0.017037417739629745
+      },
+      "static_change": {
+        "wins": 49,
+        "ties": 0,
+        "losses": 49,
+        "median_target_minus_background": 0.004348933696746826
+      }
+    },
+    "DJI_0115_2": {
+      "pairs": 1,
+      "moving_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.11560295522212982
+      },
+      "moving_long": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.2434239387512207
+      },
+      "moving_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.4385606646537781
+      },
+      "static_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.13181304931640625
+      },
+      "static_long": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": 0.10258811712265015
+      },
+      "static_change": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": 0.01611495018005371
+      }
+    },
+    "DJI_0323_2": {
+      "pairs": 1,
+      "moving_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.06318822503089905
+      },
+      "moving_long": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.1972951591014862
+      },
+      "moving_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.08677073568105698
+      },
+      "static_short": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": 0.13619451224803925
+      },
+      "static_long": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 0,
+        "median_target_minus_background": 0.47744497656822205
+      },
+      "static_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": -0.09016379714012146
+      }
+    }
+  },
+  "pooled": {
+    "pairs": 123,
+    "moving_short": {
+      "wins": 62,
+      "ties": 0,
+      "losses": 61,
+      "median_target_minus_background": 0.0034110546112060547
+    },
+    "moving_long": {
+      "wins": 68,
+      "ties": 0,
+      "losses": 55,
+      "median_target_minus_background": 0.021926816552877426
+    },
+    "moving_change": {
+      "wins": 66,
+      "ties": 0,
+      "losses": 57,
+      "median_target_minus_background": 0.014743529260158539
+    },
+    "static_short": {
+      "wins": 56,
+      "ties": 0,
+      "losses": 67,
+      "median_target_minus_background": -0.02038285881280899
+    },
+    "static_long": {
+      "wins": 64,
+      "ties": 0,
+      "losses": 59,
+      "median_target_minus_background": 0.044058263301849365
+    },
+    "static_change": {
+      "wins": 59,
+      "ties": 0,
+      "losses": 64,
+      "median_target_minus_background": -0.00309675931930542
+    }
+  },
+  "target_bbox_area": {
+    "1-16": {
+      "pairs": 3,
+      "moving_short": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 3,
+        "median_target_minus_background": -0.17345832288265228
+      },
+      "moving_long": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": -0.15831196308135986
+      },
+      "moving_change": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 3,
+        "median_target_minus_background": -0.18470290303230286
+      },
+      "static_short": {
+        "wins": 2,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": 0.18136581778526306
+      },
+      "static_long": {
+        "wins": 2,
+        "ties": 0,
+        "losses": 1,
+        "median_target_minus_background": 0.1471412479877472
+      },
+      "static_change": {
+        "wins": 1,
+        "ties": 0,
+        "losses": 2,
+        "median_target_minus_background": -0.14890222251415253
+      }
+    },
+    "17-64": {
+      "pairs": 75,
+      "moving_short": {
+        "wins": 38,
+        "ties": 0,
+        "losses": 37,
+        "median_target_minus_background": 0.0034110546112060547
+      },
+      "moving_long": {
+        "wins": 42,
+        "ties": 0,
+        "losses": 33,
+        "median_target_minus_background": 0.012751827947795391
+      },
+      "moving_change": {
+        "wins": 41,
+        "ties": 0,
+        "losses": 34,
+        "median_target_minus_background": 0.014743529260158539
+      },
+      "static_short": {
+        "wins": 34,
+        "ties": 0,
+        "losses": 41,
+        "median_target_minus_background": -0.02038285881280899
+      },
+      "static_long": {
+        "wins": 41,
+        "ties": 0,
+        "losses": 34,
+        "median_target_minus_background": 0.0465262234210968
+      },
+      "static_change": {
+        "wins": 35,
+        "ties": 0,
+        "losses": 40,
+        "median_target_minus_background": -0.00309675931930542
+      }
+    },
+    "65-144": {
+      "pairs": 45,
+      "moving_short": {
+        "wins": 24,
+        "ties": 0,
+        "losses": 21,
+        "median_target_minus_background": 0.021704576909542084
+      },
+      "moving_long": {
+        "wins": 25,
+        "ties": 0,
+        "losses": 20,
+        "median_target_minus_background": 0.043242841958999634
+      },
+      "moving_change": {
+        "wins": 25,
+        "ties": 0,
+        "losses": 20,
+        "median_target_minus_background": 0.05188928544521332
+      },
+      "static_short": {
+        "wins": 20,
+        "ties": 0,
+        "losses": 25,
+        "median_target_minus_background": -0.02306521311402321
+      },
+      "static_long": {
+        "wins": 21,
+        "ties": 0,
+        "losses": 24,
+        "median_target_minus_background": -0.016493111848831177
+      },
+      "static_change": {
+        "wins": 23,
+        "ties": 0,
+        "losses": 22,
+        "median_target_minus_background": 0.009989023208618164
+      }
+    }
+  }
+}
