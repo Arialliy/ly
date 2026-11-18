@@ -1,0 +1,209 @@
+{
+  "stage": "S2a",
+  "status": "PASS",
+  "next_allowed_stage": "S2b",
+  "seed": 46,
+  "started_utc": "2026-11-18T13:08:13.255572+00:00",
+  "short_fit_steps": 0,
+  "base_commit": "ec5e9f1c4dfd182b472c7b9277d0c7d7c273ce92",
+  "prerequisites": {
+    "S0_sha256": "5f5804e039bab81d3eb531d1d0442d2ef2c3c0f7ca39e5a0f4a01a626f02d639",
+    "S1_sha256": "5c7a76a12a82e6b62fd861440f95c6dae1e3b409ed40b0c7e50b67bb3c8a4d50",
+    "data_manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+    "train_sample_ids": [
+      "Sequence1/00009",
+      "Sequence17/00009",
+      "Sequence2/00009"
+    ],
+    "release_files_verified": 54
+  },
+  "design_sha256": "2aa83e65b6e7a3642cc74a12c5cd06760de6660b8525af8b7d6f9715dd610f77",
+  "code_sha256": {
+    "checks/s2a_gate.py": "c8affe67a96cd6dc117be152651b8753605935605b54aac869103d83e78f1ed4",
+    "checks/check_s2a.py": "b1c3733f85f2df1fe632bce48026994dec5d29fcbc2f40d8f29367f2454ba58c",
+    "models/frame_encoder.py": "085d530b7afc12144a4eaa503b5e6c9e99c1e4109cefe52c96a72f3a77fece02",
+    "models/input_checks.py": "fc876b2f6258cd219d2aacd1b6b9c9d17646a6286de87fd0966ef533950ca097",
+    "models/spatial_decoder.py": "ee23132599c5b523b0cf88da8e2c35d4ccf58d474ec02b6f1073b95bb3cad6fe",
+    "models/video_baseline.py": "667f58d376988b6b754e1530319bda1be4b80170804c37b1ab0d950148fce404",
+    "losses/detection.py": "dc4f5d23ffb16fbf4ae3bec7b3fad75151c44004782c0da1be003fb7bff45ac4"
+  },
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.7.0+cu128",
+    "device": "cuda:0",
+    "image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "precision": "float32",
+    "cudnn_deterministic": true,
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "checks": {
+    "status": "PASS",
+    "seed": 46,
+    "trainable_parameters": 22921,
+    "tolerance": {
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "rejected_inputs": [
+      "last_offset_repeats_previous",
+      "center_id_mismatch",
+      "discontinuous_frames",
+      "center_index_mismatch"
+    ],
+    "local_contrast": {
+      "reference_max_abs_error": 1.1920928955078125e-07,
+      "pixels": 1989,
+      "invalid_pixels": 197,
+      "quantized_backgrounds": {
+        "flat_uint8_levels": 256,
+        "flat_nonzero_outputs": 0,
+        "signed_one_level_impulse_cases": 1530,
+        "max_abs_error": 6.556510925292969e-07,
+        "fractional_backgrounds": [
+          0.012345599941909313,
+          0.3742159903049469,
+          0.8475411534309387,
+          0.9234560132026672,
+          0.9945600032806396
+        ],
+        "fractional_signed_impulse_cases": 30,
+        "fractional_max_abs_error": 2.980232238769531e-07
+      }
+    },
+    "analytical_loss": {
+      "max_abs_loss_error": 0.0,
+      "max_abs_gradient_error": 7.450580596923828e-09,
+      "empty_zero_logit_bce": 0.6931471824645996,
+      "ignored_gradient_nonzeros": 0
+    },
+    "branch_dependence": {
+      "temporal_l1_feature_gradient_by_slot": [
+        0.08730217814445496,
+        0.03392905741930008,
+        0.13818097114562988,
+        0.07285541296005249,
+        0.19221898913383484,
+        0.07940047234296799,
+        0.16301681101322174,
+        0.08482936024665833,
+        0.0,
+        0.16213923692703247,
+        0.2052714228630066,
+        0.18190118670463562,
+        0.2101912945508957,
+        0.08150552213191986,
+        0.10428071767091751,
+        0.08827126026153564,
+        0.04625018686056137
+      ],
+      "center_temporal_max_change": 0.0,
+      "center_spatial_feature_max_change": 0.1519480049610138,
+      "center_input_logit_max_change": 0.0009493604302406311,
+      "first_context_input_logit_max_change": 3.6383047699928284e-05,
+      "coverage_with_one_missing": 0.9375
+    },
+    "spatial_equivalence": {
+      "real_batch_shape": [
+        3,
+        17,
+        1,
+        324,
+        323
+      ],
+      "single_to_batch_max_abs_errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nan_padding_logit_error": 0.0,
+      "padded_loss_error": 0.0,
+      "tile_checks": [
+        {
+          "core_hw": [
+            64,
+            64
+          ],
+          "tile_calls": 68,
+          "max_abs_logit_error": 5.587935447692871e-09,
+          "unique_native_pixels": 200583
+        },
+        {
+          "core_hw": [
+            59,
+            43
+          ],
+          "tile_calls": 15,
+          "max_abs_logit_error": 5.587935447692871e-09,
+          "unique_native_pixels": 32813
+        }
+      ]
+    },
+    "engineering_optimizer_updates": 1,
+    "update": {
+      "engineering_optimizer_updates": 1,
+      "aggregation": "equal average over three separate B=1 forwards",
+      "optimizer": "AdamW",
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "samples": [
+        {
+          "center": "Sequence1/00009",
+          "native_hw": [
+            157,
+            209
+          ],
+          "foreground_pixels": 25,
+          "loss": 1.1923828125
+        },
+        {
+          "center": "Sequence17/00009",
+          "native_hw": [
+            209,
+            302
+          ],
+          "foreground_pixels": 0,
+          "loss": 0.7026984691619873,
+          "min_background_logit_gradient": 7.977813766046893e-06
+        },
+        {
+          "center": "Sequence2/00009",
+          "native_hw": [
+            324,
+            323
+          ],
+          "foreground_pixels": 76,
+          "loss": 1.192460298538208
+        }
+      ],
+      "groups": {
+        "frame_encoder": {
+          "parameters": 664,
+          "gradient_l2": 0.001188370133531727,
+          "update_l2": 0.02573738071622075
+        },
+        "time_convolutions": {
+          "parameters": 2896,
+          "gradient_l2": 0.0007131573015551866,
+          "update_l2": 0.05167402053239839
+        },
+        "fusion": {
+          "parameters": 832,
+          "gradient_l2": 0.00443522127754728,
+          "update_l2": 0.028756891563116612
+        },
+        "spatial_decoder": {
+          "parameters": 18496,
+          "gradient_l2": 0.0555703195457796,
+          "update_l2": 0.13577535865885848
+        },
+        "detection_head": {
+          "parameters": 33,
+          "gradient_l2": 0.1724039964326843,
+          "update_l2": 0.005744474727750814
+        }
+      }
+    }
+  },
+  "finished_utc": "2026-11-18T13:08:17.523476+00:00"
+}
