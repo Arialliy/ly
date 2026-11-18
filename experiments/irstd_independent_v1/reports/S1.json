@@ -1,0 +1,570 @@
+{
+  "stage": "S1",
+  "status": "PASS",
+  "gate_kind": "engineering",
+  "training_steps": 0,
+  "next_allowed_stage": "S2",
+  "started_utc": "2026-11-18T12:34:45.647427+00:00",
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.7.0+cu128",
+    "device": "cuda:0",
+    "cuda_available": true,
+    "container_image": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "device_total_memory_bytes": 33668726784
+  },
+  "scope": [
+    "sampling",
+    "validity",
+    "tiling",
+    "feature_gradients"
+  ],
+  "pending_requirements": [],
+  "configuration": {
+    "stage": "S1",
+    "seed": 46,
+    "velocity_grid": {
+      "vx": [
+        -2.0,
+        -1.5,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "vy": [
+        -2.0,
+        -1.5,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "units": "native_pixels_per_original_frame_interval",
+      "purpose": "formal",
+      "formal_coverage_approved": true,
+      "coverage_evidence": {
+        "path": "reports/S1_grid_coverage.json",
+        "sha256": "a818a603caffe2e73c86bb2c1371625c4da6cc9170c70d020c9cfcaf84d4055b",
+        "protocol_path": "configs/s1_grid_protocol.yaml",
+        "protocol_sha256": "05e15bb9c62303d8dd712589f87e37d961320d84fb09f033be3dd6bcf8e2030d"
+      }
+    },
+    "sampling": {
+      "query_chunk": 256,
+      "velocity_chunk": 8,
+      "interpolation": "native_pixel_bilinear",
+      "coordinate_convention": "pixel_centers_align_corners_false_equivalent",
+      "center_in_context": false
+    },
+    "tolerance": {
+      "fp32_atol": 1e-05,
+      "fp32_rtol": 0.0001
+    },
+    "resource": {
+      "query_hw": [
+        68,
+        68
+      ],
+      "feature_channels": 9,
+      "max_peak_cuda_allocated_mib": 8192
+    }
+  },
+  "repository_base_commit": "3ca39abb575e32f168fb771253ca68704bd7a669",
+  "code_and_config_sha256": {
+    "geometry/__init__.py": "3b39f5cd4979d6755082b8b2cc88123c0cf8272f2713b2a627edcff019ad46e8",
+    "geometry/sampler.py": "9fc66c72a0285544712ed24deb247c8dbd222ba28c09c8fc92ded3e242315dad",
+    "geometry/tiles.py": "e40afdf6818f6a29d2dbd580ab1e72a6233d3a2ba877b3a49bb65a717a1e7252",
+    "geometry/velocity_grid.py": "83f5102401cbed69e641149d597d4ed9cc6c57ff869a47193f1c22c94c792fa7",
+    "checks/check_s1.py": "5f824b49497d2d020d40e2aac4b7126191f6f40fe034774b8265fd03bde37d04",
+    "checks/s1_runtime.py": "1711b930128698d54bbd106656ca9e8ee4c37a4756bdef3be840d20579923a4f",
+    "configs/s1_formal.yaml": "a2bd44edf37c912cc6f41208b852e6c4f97b2257111bbff5f48706a94a9610c8",
+    "checks/s1_grid_coverage.py": "92d9174038ed42221a3b245668f2ffa73557726c37bb363d6febe555508e0240",
+    "checks/s1_coverage_reference.py": "3736b53f838ade3b2b76cd77b9b298f8f379e6fa54cb4c3e67179b77815cc129"
+  },
+  "s0_prerequisite": {
+    "status": "PASS",
+    "gate_kind": "archived_integrity",
+    "recorded_code_commit": "73dc0315b6aa27918d15cb0ec604fd2dce223760",
+    "commit_equality_required": false,
+    "verified_code_and_config": [
+      {
+        "path": "checks/audit_pixels.py",
+        "sha256": "0700bbc97635ce4c265a7dd8c9c0ba1ec49bc925faae3e9dd7b013d25197baf3"
+      },
+      {
+        "path": "checks/check_backgrounds.py",
+        "sha256": "ac3130eac9b777ba701caacefa2eaacab2952d05565bd1d70509d9e24a2b62ae"
+      },
+      {
+        "path": "checks/check_loader.py",
+        "sha256": "a45504920ad8f8c8de538ba329bb2fff4f69ca2b924d0eed4e312056366edf2f"
+      },
+      {
+        "path": "checks/check_mat_alignment.py",
+        "sha256": "6d3d64eb2b6301710a819896bb4d66c2d373bd2957affa3f95b12a988e5e7376"
+      },
+      {
+        "path": "checks/check_s0.py",
+        "sha256": "41cf78e3c599a0cb343334d4afb74b5788540eb182290b686d844f1b67895dec"
+      },
+      {
+        "path": "configs/task.yaml",
+        "sha256": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab"
+      },
+      {
+        "path": "contracts.py",
+        "sha256": "049f7426b861e07757d117f3b66ba2c28b4f960fef10e50dc539a16f631019b4"
+      },
+      {
+        "path": "data/__init__.py",
+        "sha256": "97181ab361a6ab7ad0015f0ead35ae4eb2eb660fc760e8ff9e6bf07efbc8186b"
+      },
+      {
+        "path": "data/dataset.py",
+        "sha256": "d063be9911e5da69d7b8456ba904896f5454a8b96e124c6ed05afc6192c592e1"
+      },
+      {
+        "path": "data/manifest.py",
+        "sha256": "813e57996efe1c7f5b1bd5964cd7981b23a2d1c899abe2bc3f94e8138150b5e0"
+      }
+    ],
+    "verified_file_count": 10,
+    "data_manifest": "manifests/nudt_mirsdt_mask17.json",
+    "data_manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+    "new_files_enumerated": false,
+    "raw_data_reaudited": false,
+    "remaining_S0_limits": [
+      "synthetic_release",
+      "no_physical_scene_ids",
+      "no_velocity_or_track_ids",
+      "official_test_previously_used",
+      "17_frame_subset",
+      "no_model_training",
+      "no_empty_dev_centers",
+      "background_similarity_across_splits"
+    ]
+  },
+  "formal_coverage": {
+    "status": "PASS",
+    "evidence": {
+      "path": "reports/S1_grid_coverage.json",
+      "sha256": "a818a603caffe2e73c86bb2c1371625c4da6cc9170c70d020c9cfcaf84d4055b",
+      "protocol_path": "configs/s1_grid_protocol.yaml",
+      "protocol_sha256": "05e15bb9c62303d8dd712589f87e37d961320d84fb09f033be3dd6bcf8e2030d"
+    },
+    "training_sources": 72,
+    "all_centers": 6048,
+    "fitted": 5856,
+    "selected": {
+      "radius": 2,
+      "step": 0.5,
+      "hypotheses": 81,
+      "range_count": 5856,
+      "quantization_count": 5758,
+      "range_fraction": 1.0,
+      "quantization_fraction": 0.9832650273224044,
+      "passes": true
+    },
+    "actual_axes": [
+      -2.0,
+      -1.5,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ]
+  },
+  "coverage_binding_rejections": [
+    "wrong_evidence_digest",
+    "wrong_protocol_digest",
+    "axis_not_from_receipt",
+    "resource_shape_changed",
+    "increased_memory_budget"
+  ],
+  "coverage_reference": {
+    "status": "PASS",
+    "all_training_centers": 6048,
+    "fitted_windows": 5856,
+    "reference": "Pillow, SciPy 8-connected components, NumPy least squares and enumerated grid distances.",
+    "candidates": [
+      {
+        "radius": 2,
+        "step": 1.0,
+        "in_range": 5856,
+        "within_quantization_limit": 3565
+      },
+      {
+        "radius": 2,
+        "step": 0.5,
+        "in_range": 5856,
+        "within_quantization_limit": 5758
+      },
+      {
+        "radius": 3,
+        "step": 1.0,
+        "in_range": 5856,
+        "within_quantization_limit": 3565
+      },
+      {
+        "radius": 3,
+        "step": 0.5,
+        "in_range": 5856,
+        "within_quantization_limit": 5758
+      },
+      {
+        "radius": 4,
+        "step": 1.0,
+        "in_range": 5856,
+        "within_quantization_limit": 3565
+      },
+      {
+        "radius": 4,
+        "step": 0.5,
+        "in_range": 5856,
+        "within_quantization_limit": 5758
+      },
+      {
+        "radius": 6,
+        "step": 1.0,
+        "in_range": 5856,
+        "within_quantization_limit": 3565
+      },
+      {
+        "radius": 6,
+        "step": 0.5,
+        "in_range": 5856,
+        "within_quantization_limit": 5758
+      }
+    ],
+    "continuous_fit_against_annotations": {
+      "context_centers_inside_box": 91030,
+      "context_observations": 93696,
+      "windows_all_16_inside": 4559,
+      "eligible_windows": 5856
+    },
+    "selected_grid_against_annotations": {
+      "context_centers_inside_box": 88738,
+      "context_observations": 93696,
+      "windows_all_16_inside": 3629,
+      "eligible_windows": 5856
+    },
+    "box_diagnostic": "Post-selection. Test each predicted centroid location against the corresponding observed component's bounding box expanded to outer pixel edges (inclusive). Ties in nearest velocity choose the lower component. A box hit is a permissive geometric diagnostic; it does not establish a mask hit, identity or detection."
+  },
+  "operator_checks": {
+    "status": "PASS",
+    "count": 20,
+    "checks": [
+      {
+        "name": "test_01_velocity_axis_and_units",
+        "status": "PASS",
+        "seconds": 0.16090310798608698
+      },
+      {
+        "name": "test_02_independent_scalar_reference",
+        "status": "PASS",
+        "seconds": 0.13237738702446222
+      },
+      {
+        "name": "test_03_analytic_plane_and_actual_time_offsets",
+        "status": "PASS",
+        "seconds": 0.0061377150123007596
+      },
+      {
+        "name": "test_04_known_moving_bright_and_dark_points",
+        "status": "PASS",
+        "seconds": 0.12019789300393313
+      },
+      {
+        "name": "test_05_zero_velocity_preserves_time_and_excludes_center",
+        "status": "PASS",
+        "seconds": 0.07719990200712346
+      },
+      {
+        "name": "test_06_heterogeneous_padding_is_not_an_observation",
+        "status": "PASS",
+        "seconds": 0.01440831899526529
+      },
+      {
+        "name": "test_07_fp32_integer_pixel_padding_poison_regression",
+        "status": "PASS",
+        "seconds": 0.00388409398146905
+      },
+      {
+        "name": "test_08_positive_weight_footprint_and_mask_holes",
+        "status": "PASS",
+        "seconds": 0.0026019440265372396
+      },
+      {
+        "name": "test_09_true_image_boundary_and_zero_or_one_valid_path",
+        "status": "PASS",
+        "seconds": 0.002845704002538696
+      },
+      {
+        "name": "test_10_missing_source_halo_is_an_error",
+        "status": "PASS",
+        "seconds": 0.00299968000035733
+      },
+      {
+        "name": "test_11_chunked_values_masks_and_gradients",
+        "status": "PASS",
+        "seconds": 0.10557853200589307
+      },
+      {
+        "name": "test_12_feature_gradient_independent_scatter",
+        "status": "PASS",
+        "seconds": 0.004847805976169184
+      },
+      {
+        "name": "test_13_feature_finite_difference_gradcheck",
+        "status": "PASS",
+        "seconds": 0.19027505000121891
+      },
+      {
+        "name": "test_14_invalid_and_empty_samples_have_zero_gradient",
+        "status": "PASS",
+        "seconds": 0.004770630999701098
+      },
+      {
+        "name": "test_15_tile_partition_and_declared_halo",
+        "status": "PASS",
+        "seconds": 0.0018558939918875694
+      },
+      {
+        "name": "test_16_full_image_and_tile_sampling_match",
+        "status": "PASS",
+        "seconds": 0.04946788298548199
+      },
+      {
+        "name": "test_17_encoder_and_decoder_halo_reach_core",
+        "status": "PASS",
+        "seconds": 0.11332338699139655
+      },
+      {
+        "name": "test_18_invalid_geometry_is_rejected",
+        "status": "PASS",
+        "seconds": 0.0026039009972009808
+      },
+      {
+        "name": "test_19_float64_inputs_and_fixed_geometry_contract",
+        "status": "PASS",
+        "seconds": 0.0033517800038680434
+      },
+      {
+        "name": "test_20_clip_timeline_matches_physical_frames_and_output_id",
+        "status": "PASS",
+        "seconds": 0.0007844069914426655
+      }
+    ],
+    "metrics": {
+      "scalar_reference": {
+        "values_compared": 540,
+        "valid_samples": 190,
+        "max_absolute_error": 6.699701771140099e-08
+      },
+      "known_motion_cases": 12,
+      "fp32_integer_padding_regression": {
+        "queries": 323,
+        "max_error": 0.0,
+        "invalid_pixel_nonzero_gradients": 0
+      },
+      "chunk_gradient_max_error": 2.86102294921875e-06,
+      "tile_partition": {
+        "tiles": 25,
+        "pixels_covered_once": 1333
+      },
+      "full_vs_tile_max_error": 0.0,
+      "fixed_local_pipeline_tile_max_error": 0.0
+    }
+  },
+  "real_training_batch": {
+    "scope": "fixed_train_clips_only",
+    "sample_ids": [
+      "Sequence1/00009",
+      "Sequence17/00009",
+      "Sequence2/00009"
+    ],
+    "device": "cuda:0",
+    "training_steps": 0,
+    "required_file_count": 54,
+    "batch_shape": [
+      3,
+      17,
+      1,
+      324,
+      323
+    ],
+    "native_shapes_hw": [
+      [
+        157,
+        209
+      ],
+      [
+        209,
+        302
+      ],
+      [
+        324,
+        323
+      ]
+    ],
+    "query_count_per_image": 5,
+    "context_slots": 16,
+    "status": "PASS",
+    "vx": [
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "vy": [
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "velocity_grid_shape": [
+      5,
+      5,
+      2
+    ],
+    "query_chunk": 3,
+    "velocity_chunk": 7,
+    "max_abs_reference_error": 5.960464477539063e-08,
+    "tolerance": {
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "valid_samples": 2784,
+    "invalid_samples": 3216,
+    "checks": [
+      "independent_scalar_bilinear",
+      "both_validity_masks",
+      "exact_image_edges",
+      "outside_image_is_invalid_zero",
+      "padding_poison_invariance"
+    ],
+    "configured_grid": {
+      "status": "PASS",
+      "vx": [
+        -2.0,
+        -1.5,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "vy": [
+        -2.0,
+        -1.5,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "velocity_grid_shape": [
+        9,
+        9,
+        2
+      ],
+      "query_chunk": 256,
+      "velocity_chunk": 8,
+      "max_abs_reference_error": 7.450580596923828e-08,
+      "tolerance": {
+        "atol": 1e-05,
+        "rtol": 0.0001
+      },
+      "valid_samples": 8448,
+      "invalid_samples": 10992,
+      "checks": [
+        "independent_scalar_bilinear",
+        "both_validity_masks",
+        "exact_image_edges",
+        "outside_image_is_invalid_zero",
+        "padding_poison_invariance"
+      ]
+    }
+  },
+  "resource_measurement": {
+    "status": "PASS",
+    "scope": "synthetic_sampler_only_not_full_model",
+    "device": "cuda:0",
+    "torch_version": "2.7.0+cu128",
+    "input_shape": [
+      1,
+      17,
+      9,
+      102,
+      102
+    ],
+    "query_hw": [
+      68,
+      68
+    ],
+    "velocity_grid_shape": [
+      9,
+      9,
+      2
+    ],
+    "context_slots": 16,
+    "query_chunk": 256,
+    "velocity_chunk": 8,
+    "warmup_forward_iterations": 1,
+    "measured_iterations": 1,
+    "forward_seconds": 0.3103937669948209,
+    "backward_seconds": 0.12413567898329347,
+    "backward_objective": "mean_squared_sampled_evidence; no optimizer or model training",
+    "tensor_bytes": {
+      "feature_input": 6367248,
+      "feature_gradient": 6367248,
+      "clip_frames_extra_allocation": 0,
+      "pixel_valid": 176868,
+      "time_offsets": 68,
+      "queries": 36992,
+      "velocities": 648,
+      "sampled_values": 215737344,
+      "sample_valid": 5992704,
+      "velocity_valid": 374544
+    },
+    "tensor_bytes_note": "Named tensor sizes, not a complete autograd/workspace peak; clip.frames is a feature view.",
+    "cuda_memory": {
+      "allocated_before_measurement_bytes": 6583808,
+      "reserved_before_measurement_bytes": 507510784,
+      "peak_allocated_bytes": 1411198464,
+      "peak_reserved_bytes": 1677721600,
+      "scope": "allocator peak after warmup, includes retained inputs and timed autograd"
+    },
+    "cuda_resource_gate": "MEASURED_NO_THRESHOLD",
+    "cpu_rss": {
+      "before_profile_high_water_bytes": 1553559552,
+      "process_high_water_bytes": 1553559552,
+      "scope": "process_lifetime_high_water_including_prior_checks; not sampler-only or CUDA memory"
+    },
+    "performance_threshold_applied": false,
+    "training_steps": 0
+  },
+  "memory_budget": {
+    "budget_mib": 8192,
+    "peak_allocated_mib": 1345.82373046875,
+    "status": "PASS"
+  },
+  "finished_utc": "2026-11-18T12:34:53.827767+00:00"
+}

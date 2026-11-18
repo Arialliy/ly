@@ -1,0 +1,63 @@
+{
+  "scope": "Independent local reproduction of the supplied S1 package in an ephemeral project tree. No patch installed.",
+  "stage_status": "BLOCKED",
+  "host_repository_commit": "3ca39abb575e32f168fb771253ca68704bd7a669",
+  "image_id": "sha256:eb956873870d737f2b68dff0724b8f6f56f778829d119b0938d29b7abeaa2f92",
+  "supplied_patch": "1/irstd_s1.patch",
+  "supplied_patch_sha256": "8c0b6df37924e2e64ed9a1da783bc4e83e72fe7dc876a7a52aa30dd405e162a9",
+  "parent_s0_sha256": "5f5804e039bab81d3eb531d1d0442d2ef2c3c0f7ca39e5a0f4a01a626f02d639",
+  "package_report_sha256": "d2ea75528c94c4ff5459e05735bed38b550595bf944f9c68b77bffa29bc7b4c6",
+  "code_and_config_match": true,
+  "cuda_device": {
+    "host_index": 2,
+    "uuid": "GPU-4a0f4ab5-9d4e-20d9-4e7a-515e2d4e0562",
+    "model": "NVIDIA GeForce RTX 5090",
+    "container_index": 0
+  },
+  "runs": {
+    "cpu": {
+      "report": "cpu/S1.json",
+      "sha256": "7244027e6d0789b8cba00ffe2c29a2f6a98a0506127f32b30aaf7de6036a8302",
+      "exit_code": 2,
+      "status": "BLOCKED",
+      "operator_checks": "PASS",
+      "real_batch": "PASS",
+      "pending": [
+        "formal_grid_coverage_decision_from_training_data",
+        "actual_cuda_peak_memory_and_time"
+      ]
+    },
+    "cuda": {
+      "report": "cuda/S1.json",
+      "sha256": "14464bcc655e60b06c3940e28c769d96aad53e8b586007bb8162afa38a22ac48",
+      "exit_code": 2,
+      "status": "BLOCKED",
+      "operator_checks": "PASS",
+      "real_batch": "PASS",
+      "pending": [
+        "formal_grid_coverage_decision_from_training_data",
+        "declared_cuda_memory_budget"
+      ]
+    }
+  },
+  "interpretation": {
+    "test_13_device": "CPU FP64 in both launches",
+    "real_batch_grid_axes": [
+      -1,
+      -0.5,
+      0,
+      0.5,
+      1
+    ],
+    "resource_grid_axes": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "real_batch_and_resource_grid_are_separate": true,
+    "resource_scope": "one measured sampler forward/backward, no detector or optimizer",
+    "training_steps": 0
+  }
+}

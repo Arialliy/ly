@@ -1,0 +1,377 @@
+{
+  "stage": "S1",
+  "status": "BLOCKED",
+  "gate_kind": "engineering",
+  "training_steps": 0,
+  "next_allowed_stage": null,
+  "started_utc": "2026-11-18T12:24:31.754931+00:00",
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.7.0+cu128",
+    "device": "cuda:0",
+    "cuda_available": true
+  },
+  "scope": [
+    "sampling",
+    "validity",
+    "tiling",
+    "feature_gradients"
+  ],
+  "configuration": {
+    "stage": "S1",
+    "seed": 46,
+    "velocity_grid": {
+      "vx": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "vy": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "units": "native_pixels_per_original_frame_interval",
+      "purpose": "engineering",
+      "formal_coverage_approved": false,
+      "coverage_evidence": null
+    },
+    "sampling": {
+      "query_chunk": 256,
+      "velocity_chunk": 8,
+      "interpolation": "native_pixel_bilinear",
+      "coordinate_convention": "pixel_centers_align_corners_false_equivalent",
+      "center_in_context": false
+    },
+    "tolerance": {
+      "fp32_atol": 1e-05,
+      "fp32_rtol": 0.0001
+    },
+    "resource": {
+      "query_hw": [
+        32,
+        32
+      ],
+      "feature_channels": 9,
+      "max_peak_cuda_allocated_mib": null
+    }
+  },
+  "pending_requirements": [
+    "formal_grid_coverage_decision_from_training_data",
+    "declared_cuda_memory_budget"
+  ],
+  "repository_base_commit": null,
+  "code_and_config_sha256": {
+    "geometry/__init__.py": "3b39f5cd4979d6755082b8b2cc88123c0cf8272f2713b2a627edcff019ad46e8",
+    "geometry/sampler.py": "6b22c21c9d8c4f1caaf4168768a20a8aa59557ae91b02d6f16872b2673f184c1",
+    "geometry/tiles.py": "e40afdf6818f6a29d2dbd580ab1e72a6233d3a2ba877b3a49bb65a717a1e7252",
+    "geometry/velocity_grid.py": "83f5102401cbed69e641149d597d4ed9cc6c57ff869a47193f1c22c94c792fa7",
+    "checks/check_s1.py": "fa93bddbe415184ce1e5065f02a87e8daea3328a9f72046ee0d9a4e854d121b1",
+    "checks/s1_runtime.py": "6294de39f23662f68de7ff0ed1458391ccd667973aa8a12dc585e46c18b4fa83",
+    "configs/s1_geometry.yaml": "71a3662d18f04e1a2cbdd4f8470b99ce34d0b2c4b7e6ff0977a2240ddacf3881"
+  },
+  "s0_prerequisite": {
+    "status": "PASS",
+    "gate_kind": "archived_integrity",
+    "recorded_code_commit": "73dc0315b6aa27918d15cb0ec604fd2dce223760",
+    "commit_equality_required": false,
+    "verified_code_and_config": [
+      {
+        "path": "checks/audit_pixels.py",
+        "sha256": "0700bbc97635ce4c265a7dd8c9c0ba1ec49bc925faae3e9dd7b013d25197baf3"
+      },
+      {
+        "path": "checks/check_backgrounds.py",
+        "sha256": "ac3130eac9b777ba701caacefa2eaacab2952d05565bd1d70509d9e24a2b62ae"
+      },
+      {
+        "path": "checks/check_loader.py",
+        "sha256": "a45504920ad8f8c8de538ba329bb2fff4f69ca2b924d0eed4e312056366edf2f"
+      },
+      {
+        "path": "checks/check_mat_alignment.py",
+        "sha256": "6d3d64eb2b6301710a819896bb4d66c2d373bd2957affa3f95b12a988e5e7376"
+      },
+      {
+        "path": "checks/check_s0.py",
+        "sha256": "41cf78e3c599a0cb343334d4afb74b5788540eb182290b686d844f1b67895dec"
+      },
+      {
+        "path": "configs/task.yaml",
+        "sha256": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab"
+      },
+      {
+        "path": "contracts.py",
+        "sha256": "049f7426b861e07757d117f3b66ba2c28b4f960fef10e50dc539a16f631019b4"
+      },
+      {
+        "path": "data/__init__.py",
+        "sha256": "97181ab361a6ab7ad0015f0ead35ae4eb2eb660fc760e8ff9e6bf07efbc8186b"
+      },
+      {
+        "path": "data/dataset.py",
+        "sha256": "d063be9911e5da69d7b8456ba904896f5454a8b96e124c6ed05afc6192c592e1"
+      },
+      {
+        "path": "data/manifest.py",
+        "sha256": "813e57996efe1c7f5b1bd5964cd7981b23a2d1c899abe2bc3f94e8138150b5e0"
+      }
+    ],
+    "verified_file_count": 10,
+    "data_manifest": "manifests/nudt_mirsdt_mask17.json",
+    "data_manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
+    "new_files_enumerated": false,
+    "raw_data_reaudited": false,
+    "remaining_S0_limits": [
+      "synthetic_release",
+      "no_physical_scene_ids",
+      "no_velocity_or_track_ids",
+      "official_test_previously_used",
+      "17_frame_subset",
+      "no_model_training",
+      "no_empty_dev_centers",
+      "background_similarity_across_splits"
+    ]
+  },
+  "operator_checks": {
+    "status": "PASS",
+    "count": 19,
+    "checks": [
+      {
+        "name": "test_01_velocity_axis_and_units",
+        "status": "PASS",
+        "seconds": 0.17299013899173588
+      },
+      {
+        "name": "test_02_independent_scalar_reference",
+        "status": "PASS",
+        "seconds": 0.13491765499929897
+      },
+      {
+        "name": "test_03_analytic_plane_and_actual_time_offsets",
+        "status": "PASS",
+        "seconds": 0.006355456978781149
+      },
+      {
+        "name": "test_04_known_moving_bright_and_dark_points",
+        "status": "PASS",
+        "seconds": 0.12134847999550402
+      },
+      {
+        "name": "test_05_zero_velocity_preserves_time_and_excludes_center",
+        "status": "PASS",
+        "seconds": 0.07763519801665097
+      },
+      {
+        "name": "test_06_heterogeneous_padding_is_not_an_observation",
+        "status": "PASS",
+        "seconds": 0.012082683999324217
+      },
+      {
+        "name": "test_07_fp32_integer_pixel_padding_poison_regression",
+        "status": "PASS",
+        "seconds": 0.003546652995282784
+      },
+      {
+        "name": "test_08_positive_weight_footprint_and_mask_holes",
+        "status": "PASS",
+        "seconds": 0.002267184987431392
+      },
+      {
+        "name": "test_09_true_image_boundary_and_zero_or_one_valid_path",
+        "status": "PASS",
+        "seconds": 0.0028217650251463056
+      },
+      {
+        "name": "test_10_missing_source_halo_is_an_error",
+        "status": "PASS",
+        "seconds": 0.0031084109796211123
+      },
+      {
+        "name": "test_11_chunked_values_masks_and_gradients",
+        "status": "PASS",
+        "seconds": 0.1035432789940387
+      },
+      {
+        "name": "test_12_feature_gradient_independent_scatter",
+        "status": "PASS",
+        "seconds": 0.004149710002820939
+      },
+      {
+        "name": "test_13_feature_finite_difference_gradcheck",
+        "status": "PASS",
+        "seconds": 0.23167886800365523
+      },
+      {
+        "name": "test_14_invalid_and_empty_samples_have_zero_gradient",
+        "status": "PASS",
+        "seconds": 0.005290682980557904
+      },
+      {
+        "name": "test_15_tile_partition_and_declared_halo",
+        "status": "PASS",
+        "seconds": 0.0017426599806640297
+      },
+      {
+        "name": "test_16_full_image_and_tile_sampling_match",
+        "status": "PASS",
+        "seconds": 0.05128910799976438
+      },
+      {
+        "name": "test_17_encoder_and_decoder_halo_reach_core",
+        "status": "PASS",
+        "seconds": 0.12714435599627905
+      },
+      {
+        "name": "test_18_invalid_geometry_is_rejected",
+        "status": "PASS",
+        "seconds": 0.0023415939940605313
+      },
+      {
+        "name": "test_19_float64_inputs_and_fixed_geometry_contract",
+        "status": "PASS",
+        "seconds": 0.002901464991737157
+      }
+    ],
+    "metrics": {
+      "scalar_reference": {
+        "values_compared": 540,
+        "valid_samples": 190,
+        "max_absolute_error": 6.699701771140099e-08
+      },
+      "known_motion_cases": 12,
+      "fp32_integer_padding_regression": {
+        "queries": 323,
+        "max_error": 0.0,
+        "invalid_pixel_nonzero_gradients": 0
+      },
+      "chunk_gradient_max_error": 2.86102294921875e-06,
+      "tile_partition": {
+        "tiles": 25,
+        "pixels_covered_once": 1333
+      },
+      "full_vs_tile_max_error": 0.0,
+      "fixed_local_pipeline_tile_max_error": 0.0
+    }
+  },
+  "real_training_batch": {
+    "scope": "fixed_train_clips_only",
+    "sample_ids": [
+      "Sequence1/00009",
+      "Sequence17/00009",
+      "Sequence2/00009"
+    ],
+    "device": "cuda:0",
+    "training_steps": 0,
+    "status": "PASS",
+    "required_file_count": 54,
+    "batch_shape": [
+      3,
+      17,
+      1,
+      324,
+      323
+    ],
+    "native_shapes_hw": [
+      [
+        157,
+        209
+      ],
+      [
+        209,
+        302
+      ],
+      [
+        324,
+        323
+      ]
+    ],
+    "query_count_per_image": 5,
+    "velocity_grid_shape": [
+      5,
+      5,
+      2
+    ],
+    "context_slots": 16,
+    "max_abs_reference_error": 5.960464477539063e-08,
+    "tolerance": {
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "valid_samples": 2784,
+    "invalid_samples": 3216,
+    "checks": [
+      "fixed_train_loader_samples",
+      "heterogeneous_padding_and_ignore",
+      "16_context_slots_center_excluded",
+      "independent_scalar_bilinear",
+      "integer_and_half_velocity",
+      "exact_right_and_bottom_edges",
+      "outside_image_is_invalid_zero",
+      "padding_poison_invariance"
+    ]
+  },
+  "resource_measurement": {
+    "status": "PASS",
+    "scope": "synthetic_sampler_only_not_full_model",
+    "device": "cuda:0",
+    "torch_version": "2.7.0+cu128",
+    "input_shape": [
+      1,
+      17,
+      9,
+      66,
+      66
+    ],
+    "query_hw": [
+      32,
+      32
+    ],
+    "velocity_grid_shape": [
+      5,
+      5,
+      2
+    ],
+    "context_slots": 16,
+    "query_chunk": 256,
+    "velocity_chunk": 8,
+    "warmup_forward_iterations": 1,
+    "measured_iterations": 1,
+    "forward_seconds": 0.020878198003629223,
+    "backward_seconds": 0.014517272997181863,
+    "backward_objective": "mean_squared_sampled_evidence; no optimizer or model training",
+    "tensor_bytes": {
+      "feature_input": 2665872,
+      "feature_gradient": 2665872,
+      "clip_frames_extra_allocation": 0,
+      "pixel_valid": 74052,
+      "time_offsets": 68,
+      "queries": 8192,
+      "velocities": 200,
+      "sampled_values": 14745600,
+      "sample_valid": 409600,
+      "velocity_valid": 25600
+    },
+    "tensor_bytes_note": "Named tensor sizes, not a complete autograd/workspace peak; clip.frames is a feature view.",
+    "cuda_memory": {
+      "allocated_before_measurement_bytes": 2749440,
+      "reserved_before_measurement_bytes": 96468992,
+      "peak_allocated_bytes": 100723200,
+      "peak_reserved_bytes": 146800640,
+      "scope": "allocator peak after warmup, includes retained inputs and timed autograd"
+    },
+    "cuda_resource_gate": "MEASURED_NO_THRESHOLD",
+    "cpu_rss": {
+      "before_profile_high_water_bytes": 1525678080,
+      "process_high_water_bytes": 1525678080,
+      "scope": "process_lifetime_high_water_including_prior_checks; not sampler-only or CUDA memory"
+    },
+    "performance_threshold_applied": false,
+    "training_steps": 0
+  },
+  "finished_utc": "2026-11-18T12:24:34.993700+00:00"
+}

@@ -1,0 +1,2430 @@
+diff --git a/experiments/irstd_independent_v1/checks/check_s1.py b/experiments/irstd_independent_v1/checks/check_s1.py
+new file mode 100644
+index 0000000..6176aac
+--- /dev/null
++++ b/experiments/irstd_independent_v1/checks/check_s1.py
+@@ -0,0 +1,538 @@
++"""S1 geometry gate. No detector, training, checkpoint, or test-set evaluation.
++
++CPU operator checks are runnable without the release images. A complete gate
++also needs a real training batch, the explicitly chosen formal velocity grid,
++and an actual CUDA memory-budget measurement. Missing requirements are BLOCKED,
++never silently counted as PASS. Exit codes: 0 PASS, 1 FAIL, 2 BLOCKED.
++"""
++from __future__ import annotations
++
++import argparse
++from dataclasses import replace
++from datetime import datetime, timezone
++import hashlib
++import json
++from pathlib import Path
++import platform
++import subprocess
++import sys
++import time
++import traceback
++import unittest
++
++import numpy as np
++import torch
++from torch.nn import functional as F
++import yaml
++
++EXPERIMENT = Path(__file__).resolve().parents[1]
++PROJECT = EXPERIMENT.parents[1]
++sys.path.insert(0, str(PROJECT))
++
++from experiments.irstd_independent_v1.contracts import ClipBatch, SceneMeta
++from experiments.irstd_independent_v1.geometry import (
++    MissingHaloError, make_velocity_grid, sample_clip_features, sample_context,
++)
++from experiments.irstd_independent_v1.geometry.tiles import dense_queries, plan_tiles
++from experiments.irstd_independent_v1.checks.s1_runtime import (
++    check_real_batch, profile_sampler, verify_s0,
++)
++
++METRICS: dict = {}
++DEVICE = "cpu"
++ATOL, RTOL = 1e-5, 1e-4
++
++
++def reference_bilinear(features, offsets, queries, velocities, valid=None,
++                       image_hw=None, origin_xy=None, source_hw=None):
++    """Independent scalar NumPy enumeration, with no production grid helpers.
++
++    Accumulates in float64 and returns an explicit positive-support validity.
++    This intentionally does not use grid_sample or a vectorized Torch formula.
++    """
++    f = np.asarray(features, dtype=np.float64)
++    bsz, times, channels, height, width = f.shape
++    q = np.asarray(queries, dtype=np.float64)
++    if q.ndim == 2:
++        q = np.repeat(q[None], bsz, axis=0)
++    v = np.asarray(velocities, dtype=np.float64)
++    offsets = np.asarray(offsets, dtype=np.float64)
++    if valid is None:
++        valid = np.ones((bsz, times, 1, height, width), dtype=bool)
++    if image_hw is None:
++        image_hw = [(height, width)] * bsz
++    if origin_xy is None:
++        origin_xy = [(0, 0)] * bsz
++    if source_hw is None:
++        source_hw = image_hw
++    values = np.zeros((bsz, q.shape[1], channels, times, *v.shape[:2]))
++    mask = np.zeros((bsz, q.shape[1], times, *v.shape[:2]), dtype=bool)
++    for b in range(bsz):
++        ih, iw = image_hw[b]
++        sh, sw = source_hw[b]
++        ox, oy = origin_xy[b]
++        for n, (px, py) in enumerate(q[b]):
++            if not (0 <= px <= iw - 1 and 0 <= py <= ih - 1):
++                continue
++            for t, dt in enumerate(offsets[b]):
++                for iy in range(v.shape[0]):
++                    for ix in range(v.shape[1]):
++                        x = float(px + dt * v[iy, ix, 0])
++                        y = float(py + dt * v[iy, ix, 1])
++                        if not (0 <= x <= iw - 1 and 0 <= y <= ih - 1):
++                            continue
++                        x, y = x - ox, y - oy
++                        if not (0 <= x <= sw - 1 and 0 <= y <= sh - 1):
++                            raise RuntimeError("Reference encountered missing tile halo")
++                        x0, y0 = int(np.floor(x)), int(np.floor(y))
++                        dx, dy = x - x0, y - y0
++                        support = [(x0, y0, (1-dx)*(1-dy)),
++                                   (x0+1, y0, dx*(1-dy)),
++                                   (x0, y0+1, (1-dx)*dy),
++                                   (x0+1, y0+1, dx*dy)]
++                        support = [(xx, yy, w) for xx, yy, w in support if w > 0]
++                        if not all(bool(valid[b, t, 0, yy, xx]) for xx, yy, _ in support):
++                            continue
++                        mask[b, n, t, iy, ix] = True
++                        for xx, yy, w in support:
++                            values[b, n, :, t, iy, ix] += w * f[b, t, :, yy, xx]
++    return values, mask
++
++
++def cpu(tensor):
++    return tensor.detach().cpu().numpy()
++
++
++def fixture_clip(sizes=((9, 11), (7, 8)), channels=2):
++    """Only an in-memory ClipBatch contract fixture; not a release-data test."""
++    h, w = max(s[0] for s in sizes), max(s[1] for s in sizes)
++    frames = torch.rand(len(sizes), 17, 1, h, w, device=DEVICE)
++    features = torch.rand(len(sizes), 17, channels, h, w, device=DEVICE)
++    mask = torch.zeros_like(frames, dtype=torch.bool)
++    metas = []
++    for b, (ih, iw) in enumerate(sizes):
++        mask[b, :, :, :ih, :iw] = True
++        metas.append(SceneMeta(f"fixture{b}", tuple(range(1, 18)), (ih, iw),
++                               (0, 0), (0, 0, iw, ih)))
++    clip = ClipBatch(frames, torch.arange(-8, 9, device=DEVICE).float()[None].repeat(len(sizes), 1),
++                     mask, 8, tuple(f"fixture{b}/00009" for b in range(len(sizes))), tuple(metas))
++    return clip, features
++
++
++class GeometryChecks(unittest.TestCase):
++    def setUp(self):
++        torch.manual_seed(46)
++
++    def close(self, actual, expected, atol=None, rtol=None):
++        atol=ATOL if atol is None else atol
++        rtol=RTOL if rtol is None else rtol
++        torch.testing.assert_close(actual, torch.as_tensor(expected, device=actual.device,
++                                                        dtype=actual.dtype), atol=atol, rtol=rtol)
++
++    def test_01_velocity_axis_and_units(self):
++        grid = make_velocity_grid([-1.5, 0, .5], [-2, 0, 1], device=DEVICE)
++        expected = [[[x, y] for x in [-1.5, 0, .5]] for y in [-2, 0, 1]]
++        self.close(grid, expected, atol=0, rtol=0)
++        self.assertEqual(tuple(grid.shape), (3, 3, 2))
++        for bad in ([1, 2], [0, 0], [0, -1], [float("nan"), 0], []):
++            with self.assertRaises((ValueError, TypeError)):
++                make_velocity_grid(bad, [0], device=DEVICE)
++
++    def test_02_independent_scalar_reference(self):
++        f = torch.rand(2, 3, 2, 11, 13, device=DEVICE)
++        times = torch.tensor([[-3, -1, 2], [-2, 1, 4]], device=DEVICE)
++        q = torch.tensor([[0, 0], [12, 10], [5.25, 4.125], [8, 7], [1, 9]], device=DEVICE)
++        v = make_velocity_grid([-.5, 0, .75], [-.25, 0, .5], device=DEVICE)
++        mask = torch.ones(2, 3, 1, 11, 13, dtype=torch.bool, device=DEVICE)
++        mask[0, 1, 0, 4, 5] = False
++        got = sample_context(f, times, q, v, mask, query_chunk=2, velocity_chunk=4)
++        ref, ok = reference_bilinear(cpu(f), cpu(times), cpu(q), cpu(v), cpu(mask))
++        self.close(got.values, ref)
++        self.assertTrue(np.array_equal(cpu(got.sample_valid), ok))
++        self.assertTrue(np.array_equal(cpu(got.velocity_valid), ok.all(axis=2)))
++        METRICS["scalar_reference"] = {"values_compared": int(ref.size),
++            "valid_samples": int(ok.sum()), "max_absolute_error": float(np.max(np.abs(cpu(got.values)-ref)))}
++
++    def test_03_analytic_plane_and_actual_time_offsets(self):
++        yy, xx = torch.meshgrid(torch.arange(15, device=DEVICE), torch.arange(17, device=DEVICE), indexing="ij")
++        f = torch.stack([.01*xx + .03*yy + .1*t for t in range(3)])[None, :, None]
++        times = torch.tensor([[-3, 1, 2]], device=DEVICE)
++        q = torch.tensor([[8.25, 7.5]], device=DEVICE)
++        v = make_velocity_grid([-.5, 0, .5], [-.25, 0, .25], device=DEVICE)
++        got = sample_context(f, times, q, v)
++        for t, dt in enumerate([-3, 1, 2]):
++            wanted = .01*(q[0, 0]+dt*v[..., 0])+.03*(q[0, 1]+dt*v[..., 1])+.1*t
++            self.close(got.values[0, 0, 0, t], wanted)
++        self.assertTrue(bool(got.sample_valid.all()))
++
++    def test_04_known_moving_bright_and_dark_points(self):
++        grid = make_velocity_grid([-1, -.5, 0, .5, 1], [-1, -.5, 0, .5, 1], device=DEVICE)
++        times = torch.tensor([[-4, -2, 1, 4]], device=DEVICE)
++        yy, xx = torch.meshgrid(torch.arange(41, device=DEVICE), torch.arange(41, device=DEVICE), indexing="ij")
++        q = torch.tensor([[20., 20.]], device=DEVICE)
++        cases = [(-1., 0.), (0., 1.), (.5, -.5), (0., 0.), (-.5, -1.), (1., 1.)]
++        for vx, vy in cases:
++            blob = torch.stack([torch.exp(-((xx-20-dt*vx)**2+(yy-20-dt*vy)**2)/2)
++                                for dt in [-4, -2, 1, 4]])[None, :, None]
++            for sign in [1, -1]:
++                f = .5 + .4*sign*blob
++                out = sample_context(f, times, q, grid)
++                response = sign*out.values[0, 0, 0].mean(0)
++                chosen = grid.reshape(-1, 2)[response.flatten().argmax()]
++                self.close(chosen, [vx, vy], atol=0, rtol=0)
++        METRICS["known_motion_cases"] = len(cases)*2
++
++    def test_05_zero_velocity_preserves_time_and_excludes_center(self):
++        clip, f = fixture_clip()
++        f = f.detach().requires_grad_()
++        grid = make_velocity_grid([0], [0], device=DEVICE)
++        q = torch.tensor([[2, 3], [5, 4]], device=DEVICE)
++        out = sample_clip_features(f, clip, q, grid)
++        keep = list(range(8)) + list(range(9, 17))
++        self.assertEqual(tuple(out.values.shape), (2, 2, 2, 16, 1, 1))
++        self.close(out.time_offsets, [list(range(-8, 0))+list(range(1, 9))]*2, atol=0, rtol=0)
++        self.close(out.values[:, 0, :, :, 0, 0], f[:, keep, :, 3, 2].permute(0, 2, 1), atol=0, rtol=0)
++        out.values.sum().backward()
++        self.assertEqual(int(torch.count_nonzero(f.grad[:, 8])), 0)
++        self.assertGreater(int(torch.count_nonzero(f.grad[:, keep])), 0)
++
++    def test_06_heterogeneous_padding_is_not_an_observation(self):
++        clip, f = fixture_clip()
++        v = make_velocity_grid([-.25, 0, .25], [-.25, 0, .25], device=DEVICE)
++        q = torch.tensor([[7, 6], [10, 8], [3.25, 4.25]], device=DEVICE)
++        a = sample_clip_features(f, clip, q, v)
++        poisoned = torch.where(clip.pixel_valid, f, torch.full_like(f, 1e6)).requires_grad_()
++        b = sample_clip_features(poisoned, clip, q, v)
++        self.close(a.values, b.values, atol=0, rtol=0)
++        self.assertFalse(bool(b.sample_valid[1, 1].any()))
++        b.values.sum().backward()
++        invalid = ~clip.pixel_valid.expand_as(poisoned)
++        self.assertEqual(int(torch.count_nonzero(poisoned.grad[invalid])), 0)
++
++    def test_07_fp32_integer_pixel_padding_poison_regression(self):
++        # W=323 exposes normalized-grid round-trip errors at integer pixels.
++        w = 323
++        f = torch.full((w, 1, 1, 1, w), 1e6, device=DEVICE)
++        valid = torch.zeros_like(f, dtype=torch.bool)
++        rows = torch.arange(w, device=DEVICE)
++        f[rows, 0, 0, 0, rows] = 1
++        valid[rows, 0, 0, 0, rows] = True
++        f.requires_grad_()
++        q = torch.stack([rows, torch.zeros_like(rows)], -1).float()[:, None]
++        out = sample_context(f, torch.zeros(w, 1, device=DEVICE), q,
++                             make_velocity_grid([0], [0], device=DEVICE), valid)
++        self.assertTrue(bool(out.sample_valid.all()))
++        self.close(out.values, torch.ones_like(out.values), atol=0, rtol=0)
++        out.values.sum().backward()
++        self.assertEqual(int(torch.count_nonzero(f.grad[~valid])), 0)
++        METRICS["fp32_integer_padding_regression"] = {"queries": w, "max_error": 0.0,
++                                                      "invalid_pixel_nonzero_gradients": 0}
++
++    def test_08_positive_weight_footprint_and_mask_holes(self):
++        f = torch.arange(25, device=DEVICE).float().reshape(1, 1, 1, 5, 5)
++        mask = torch.ones_like(f, dtype=torch.bool)
++        mask[..., 2, 3] = False
++        q = torch.tensor([[2., 2.], [2.25, 2.], [2., 2.25], [4., 4.]], device=DEVICE)
++        out = sample_context(f, torch.zeros(1, 1, device=DEVICE), q,
++                             make_velocity_grid([0], [0], device=DEVICE), mask)
++        self.assertEqual(out.sample_valid.flatten().tolist(), [True, False, True, True])
++        self.close(out.values.flatten(), [12, 0, 13.25, 24], atol=0, rtol=0)
++
++    def test_09_true_image_boundary_and_zero_or_one_valid_path(self):
++        f = torch.ones(1, 2, 1, 3, 3, device=DEVICE)
++        times = torch.tensor([[-1, 1]], device=DEVICE)
++        q = torch.tensor([[0, 0], [-1, 0], [2, 2]], device=DEVICE)
++        out = sample_context(f, times, q, make_velocity_grid([-1, 0, 1], [-1, 0, 1], device=DEVICE))
++        self.assertEqual(out.velocity_valid.sum((-1, -2)).tolist(), [[1, 0, 1]])
++        self.assertTrue(bool(torch.isfinite(out.values).all()))
++        self.assertEqual(int(torch.count_nonzero(out.values[:, 1])), 0)
++
++    def test_10_missing_source_halo_is_an_error(self):
++        f = torch.ones(1, 1, 1, 4, 4, device=DEVICE)
++        args = dict(features=f, time_offsets=torch.ones(1, 1, device=DEVICE),
++                    velocities_xy=make_velocity_grid([0, 2], [0], device=DEVICE),
++                    image_hw=(10, 10), origin_xy=(3, 3), source_hw=(4, 4))
++        with self.assertRaises(MissingHaloError):
++            sample_context(queries_xy=torch.tensor([[6, 4]], device=DEVICE), **args)
++        # In contrast, leaving the true image is a normal invalid observation.
++        args.update(origin_xy=(6, 3))
++        out = sample_context(queries_xy=torch.tensor([[9, 4]], device=DEVICE), **args)
++        self.assertEqual(out.sample_valid.flatten().tolist(), [True, False])
++
++    def test_11_chunked_values_masks_and_gradients(self):
++        f = torch.rand(1, 3, 2, 9, 11, device=DEVICE, requires_grad=True)
++        times = torch.tensor([[-3, 1, 2]], device=DEVICE)
++        q = dense_queries((0, 0, 11, 9), device=DEVICE)
++        v = make_velocity_grid([-.5, 0, .5], [-.25, 0, .25], device=DEVICE)
++        a = sample_context(f, times, q, v, query_chunk=1000, velocity_chunk=100)
++        ga, = torch.autograd.grad(a.values.square().sum(), f)
++        b = sample_context(f, times, q, v, query_chunk=7, velocity_chunk=2)
++        gb, = torch.autograd.grad(b.values.square().sum(), f)
++        self.close(a.values, b.values, atol=0, rtol=0)
++        self.assertTrue(torch.equal(a.sample_valid, b.sample_valid))
++        self.assertTrue(torch.equal(a.velocity_valid, b.velocity_valid))
++        self.close(ga, gb)
++        METRICS["chunk_gradient_max_error"] = float((ga-gb).abs().max())
++
++    def test_12_feature_gradient_independent_scatter(self):
++        f = torch.rand(1, 1, 2, 5, 6, dtype=torch.float64, device=DEVICE, requires_grad=True)
++        q = torch.tensor([[1.25, 2.5], [3.5, 1.25]], dtype=torch.float64, device=DEVICE)
++        out = sample_context(f, torch.zeros(1, 1, device=DEVICE), q,
++                             make_velocity_grid([0], [0], dtype=torch.float64, device=DEVICE))
++        out.values.sum().backward()
++        expected = torch.zeros_like(f)
++        # Hand-enumerated bilinear weights for both locations, all channels.
++        for x, y, weight in [(1,2,.375),(2,2,.125),(1,3,.375),(2,3,.125),
++                             (3,1,.375),(4,1,.375),(3,2,.125),(4,2,.125)]:
++            expected[0, 0, :, y, x] += weight
++        self.close(f.grad, expected, atol=0, rtol=0)
++
++    def test_13_feature_finite_difference_gradcheck(self):
++        # CPU double is intentional; CUDA atomic addition is not bitwise deterministic.
++        f = torch.rand(1, 2, 1, 5, 6, dtype=torch.float64, requires_grad=True)
++        q = torch.tensor([[2.125, 2.375]], dtype=torch.float64)
++        v = make_velocity_grid([-.25, 0, .25], [0], dtype=torch.float64)
++        times = torch.tensor([[-1., 2.]], dtype=torch.float64)
++        passed = torch.autograd.gradcheck(lambda x: sample_context(x, times, q, v).values,
++                                         (f,), eps=1e-6, atol=1e-5, rtol=1e-3, fast_mode=True)
++        self.assertTrue(passed)
++
++    def test_14_invalid_and_empty_samples_have_zero_gradient(self):
++        f = torch.rand(1, 1, 1, 3, 4, device=DEVICE, requires_grad=True)
++        grid = make_velocity_grid([0], [0], device=DEVICE)
++        out = sample_context(f, torch.zeros(1, 1, device=DEVICE),
++                             torch.tensor([[-1, -1]], device=DEVICE), grid)
++        out.values.sum().backward()
++        self.assertEqual(int(torch.count_nonzero(f.grad)), 0)
++        f.grad = None
++        empty = sample_context(f, torch.zeros(1, 1, device=DEVICE), torch.empty(0, 2, device=DEVICE), grid)
++        self.assertEqual(tuple(empty.values.shape), (1, 0, 1, 1, 1, 1))
++        empty.values.sum().backward()
++        self.assertEqual(int(torch.count_nonzero(f.grad)), 0)
++
++    def test_15_tile_partition_and_declared_halo(self):
++        times = [-3, 1, 2]
++        v = [[-1, -.5], [0, 0], [.5, 1.5]]
++        tiles = plan_tiles((31, 43), (7, 9), times, v, encoder_radius=2,
++                           contrast_radius=3, decoder_radius=2, interp_radius=1)
++        counts = np.zeros((31, 43), dtype=int)
++        for tile in tiles:
++            x0, y0, x1, y1 = tile.core_xyxy
++            counts[y0:y1, x0:x1] += 1
++            expected_q = (max(0,x0-2), max(0,y0-2), min(43,x1+2), min(31,y1+2))
++            self.assertEqual(tile.query_xyxy, expected_q)
++            qx0,qy0,qx1,qy1 = expected_q
++            self.assertEqual(tile.input_xyxy, (max(0,qx0-7),max(0,qy0-9),min(43,qx1+7),min(31,qy1+9)))
++            q = dense_queries(tile.query_xyxy)
++            self.assertEqual(q.tolist(), [[float(x),float(y)] for y in range(qy0,qy1) for x in range(qx0,qx1)])
++        self.assertTrue(np.all(counts == 1))
++        METRICS["tile_partition"] = {"tiles": len(tiles), "pixels_covered_once": int(counts.size)}
++
++    def test_16_full_image_and_tile_sampling_match(self):
++        f = torch.rand(1, 3, 2, 23, 29, device=DEVICE)
++        times = torch.tensor([[-3, 1, 2]], device=DEVICE)
++        v = make_velocity_grid([-.5, 0, .5], [-.25, 0, .25], device=DEVICE)
++        all_q = dense_queries((0,0,29,23), device=DEVICE)
++        full = sample_context(f, times, all_q, v)
++        full_values = full.values.reshape(1,23,29,2,3,3,3)
++        full_valid = full.sample_valid.reshape(1,23,29,3,3,3)
++        maxerr = 0.0
++        for tile in plan_tiles((23,29),(7,9),cpu(times[0]),cpu(v.reshape(-1,2))):
++            x0,y0,x1,y1 = tile.input_xyxy
++            out = sample_context(f[...,y0:y1,x0:x1], times,
++                dense_queries(tile.query_xyxy,device=DEVICE),v,image_hw=(23,29),
++                origin_xy=tile.source_origin_xy,source_hw=tile.input_hw)
++            qx0,qy0,qx1,qy1 = tile.query_xyxy
++            expected = full_values[:,qy0:qy1,qx0:qx1].reshape_as(out.values)
++            self.close(out.values,expected)
++            self.assertTrue(torch.equal(out.sample_valid,
++                full_valid[:,qy0:qy1,qx0:qx1].reshape_as(out.sample_valid)))
++            maxerr = max(maxerr,float((out.values-expected).abs().max()))
++        METRICS["full_vs_tile_max_error"] = maxerr
++
++    def test_17_encoder_and_decoder_halo_reach_core(self):
++        # Fixed convolutions are a boundary check, not an S2 model or training.
++        raw = torch.rand(1,3,1,23,29,device=DEVICE)
++        times = torch.tensor([[-3,1,2]],device=DEVICE)
++        v = make_velocity_grid([-.5,0,.5],[-.5,0,.5],device=DEVICE)
++        kernel = torch.tensor([[1,2,1],[2,4,2],[1,2,1]],device=DEVICE).float()[None,None]/16
++        def encode(x):
++            b,t,c,h,w=x.shape
++            return F.conv2d(x.reshape(b*t,c,h,w),kernel,padding=1).reshape(b,t,1,h,w)
++        def decode(evidence,hw):
++            weight = evidence.sample_valid[:, :, None].to(evidence.values.dtype)
++            denom = weight.sum((3,4,5)).clamp_min(1)
++            value = (evidence.values*weight).sum((3,4,5))/denom
++            image = value.transpose(1,2).reshape(1,1,*hw)
++            return F.conv2d(F.conv2d(image,kernel,padding=1),kernel,padding=1)
++        full = decode(sample_context(encode(raw),times,dense_queries((0,0,29,23),device=DEVICE),v),(23,29))
++        assembled = torch.zeros_like(full)
++        tiles = plan_tiles((23,29),(7,9),cpu(times[0]),cpu(v.reshape(-1,2)),encoder_radius=1,decoder_radius=2)
++        for tile in tiles:
++            x0,y0,x1,y1=tile.input_xyxy
++            out=sample_context(encode(raw[...,y0:y1,x0:x1]),times,
++                dense_queries(tile.query_xyxy,device=DEVICE),v,image_hw=(23,29),
++                origin_xy=tile.source_origin_xy,source_hw=tile.input_hw)
++            local=decode(out,tile.query_hw)
++            cy,cx=tile.core_slice_in_query
++            x0,y0,x1,y1=tile.core_xyxy
++            assembled[...,y0:y1,x0:x1]=local[...,cy,cx]
++        self.close(assembled,full)
++        METRICS["fixed_local_pipeline_tile_max_error"]=float((assembled-full).abs().max())
++
++    def test_18_invalid_geometry_is_rejected(self):
++        f=torch.ones(1,1,1,4,5,device=DEVICE)
++        times=torch.zeros(1,1,device=DEVICE)
++        q=torch.tensor([[1.,1.]],device=DEVICE)
++        v=make_velocity_grid([0],[0],device=DEVICE)
++        for kw in [dict(query_chunk=0),dict(velocity_chunk=-1),dict(origin_xy=(-1,0)),
++                   dict(image_hw=(4,5),origin_xy=(3,0),source_hw=(4,5)),
++                   dict(origin_xy=(1,1)),dict(source_hw=(5,5))]:
++            with self.assertRaises((ValueError,TypeError)):
++                sample_context(f,times,q,v,**kw)
++        with self.assertRaises(ValueError):
++            sample_context(f,times,torch.tensor([[float('nan'),0]],device=DEVICE),v)
++        with self.assertRaises(TypeError):
++            sample_context(f.half(),times,q,v)
++        clip,features=fixture_clip()
++        with self.assertRaises(ValueError):
++            sample_clip_features(features,replace(clip,center_index=7),q,v)
++
++    def test_19_float64_inputs_and_fixed_geometry_contract(self):
++        values=[0.,1.00000001,1.00000002]
++        grid=make_velocity_grid(values,[0.],dtype=torch.float64,device=DEVICE)
++        self.close(grid[0,:,0],values,atol=0,rtol=0)
++        f=torch.arange(6,dtype=torch.float64,device=DEVICE).reshape(1,1,1,1,6).requires_grad_()
++        zero=make_velocity_grid([0],[0],dtype=torch.float64,device=DEVICE)
++        out=sample_context(f,[[0.]],[[2.00000001,0.]],zero)
++        self.close(out.values.flatten(),[2.00000001],atol=1e-14,rtol=0)
++        for coordinates in ['time','query','velocity']:
++            t=torch.zeros(1,1,dtype=torch.float64,device=DEVICE,requires_grad=coordinates=='time')
++            q=torch.tensor([[2.,0.]],dtype=torch.float64,device=DEVICE,requires_grad=coordinates=='query')
++            v=zero.clone().requires_grad_(coordinates=='velocity')
++            with self.assertRaises((ValueError,TypeError)):
++                sample_context(f,t,q,v)
++
++
++class RecordedResult(unittest.TextTestResult):
++    def __init__(self,*args,**kwargs):
++        super().__init__(*args,**kwargs)
++        self.records=[]
++    def startTest(self,test):
++        self.started=time.perf_counter()
++        super().startTest(test)
++    def addSuccess(self,test):
++        super().addSuccess(test)
++        self.records.append({"name":test._testMethodName,"status":"PASS",
++                             "seconds":time.perf_counter()-self.started})
++    def addFailure(self,test,err):
++        super().addFailure(test,err)
++        self.records.append({"name":test._testMethodName,"status":"FAIL","error":self._exc_info_to_string(err,test)})
++    def addError(self,test,err):
++        super().addError(test,err)
++        self.records.append({"name":test._testMethodName,"status":"FAIL","error":self._exc_info_to_string(err,test)})
++
++
++def write_coordinate_svg(path):
++    """Exact coordinate illustration, not a generated scientific result."""
++    scale, ox, oy = 25, 45, 60
++    parts=['<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400">',
++           '<rect width="590" height="400" fill="white"/>',
++           '<g font-family="sans-serif" font-size="14" fill="#172337">',
++           '<text x="24" y="27">S1: q(t,v) = p + t v (native pixel coordinates)</text>']
++    for y in range(11):
++        for x in range(17):
++            parts.append(f'<circle cx="{ox+x*scale}" cy="{oy+y*scale}" r="1.5" fill="#b6c1cc"/>')
++    colors=['#2563eb','#cc3547','#16805f']
++    for (vx,vy),color in zip([(1,.5),(0,0),(-.5,.5)],colors):
++        coords=[(8+t*vx,5+t*vy) for t in list(range(-8,0))+list(range(1,9))]
++        points=' '.join(f'{ox+x*scale},{oy+y*scale}' for x,y in coords)
++        parts.append(f'<polyline points="{points}" fill="none" stroke="{color}" stroke-width="2"/>')
++        for x,y in coords:
++            parts.append(f'<circle cx="{ox+x*scale}" cy="{oy+y*scale}" r="4" fill="{color}"/>')
++    parts.extend([f'<circle cx="{ox+8*scale}" cy="{oy+5*scale}" r="8" fill="none" stroke="black" stroke-width="2"/>',
++        '<text x="25" y="350">Circles: retained context samples; ring: center query p.</text>',
++        '<text x="25" y="374">Time t=0 is excluded. Different colors are velocity hypotheses.</text>', '</g></svg>'])
++    path.write_text('\n'.join(parts)+'\n',encoding='utf-8')
++
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--project-root',type=Path,default=PROJECT,
++                        help='Root containing the frozen manifest-relative release paths')
++    parser.add_argument('--config',type=Path,default=EXPERIMENT/'configs/s1_geometry.yaml')
++    parser.add_argument('--device',default='cpu',help='Explicit device, e.g. cpu or cuda:1; no automatic GPU selection')
++    parser.add_argument('--output',type=Path,default=EXPERIMENT/'reports/S1.json')
++    parser.add_argument('--threads',type=int,default=2)
++    args=parser.parse_args()
++    global DEVICE,ATOL,RTOL
++    DEVICE=args.device
++    torch.set_num_threads(args.threads)
++    config=yaml.safe_load(args.config.read_text(encoding='utf-8'))
++    ATOL=float(config['tolerance']['fp32_atol'])
++    RTOL=float(config['tolerance']['fp32_rtol'])
++    state={'stage':'S1','status':'RUNNING','gate_kind':'engineering','training_steps':0,
++           'next_allowed_stage':None,'started_utc':datetime.now(timezone.utc).isoformat(),
++           'environment':{'python':platform.python_version(),'torch':torch.__version__,
++                          'device':DEVICE,'cuda_available':torch.cuda.is_available()},
++           'scope':['sampling','validity','tiling','feature_gradients'],
++           'configuration':config,'pending_requirements':[]}
++    try:
++        state['repository_base_commit']=subprocess.check_output(['git','-C',str(PROJECT),'rev-parse','HEAD'],text=True).strip()
++    except (FileNotFoundError,subprocess.CalledProcessError):
++        state['repository_base_commit']=None
++    files=[*sorted((EXPERIMENT/'geometry').glob('*.py')),Path(__file__),
++           EXPERIMENT/'checks/s1_runtime.py',args.config]
++    state['code_and_config_sha256']={str(p.relative_to(EXPERIMENT)) if p.is_relative_to(EXPERIMENT) else str(p):
++                                    hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
++    try:
++        state['s0_prerequisite']=verify_s0(EXPERIMENT)
++        suite=unittest.defaultTestLoader.loadTestsFromTestCase(GeometryChecks)
++        result=unittest.TextTestRunner(verbosity=2,resultclass=RecordedResult).run(suite)
++        state['operator_checks']={'status':'PASS' if result.wasSuccessful() else 'FAIL',
++                                  'count':result.testsRun,'checks':result.records,'metrics':METRICS}
++        if not result.wasSuccessful():
++            raise AssertionError('One or more S1 operator checks failed; no next stage permitted')
++        state['real_training_batch']=check_real_batch(EXPERIMENT,args.project_root,DEVICE)
++        if state['real_training_batch']['status']!='PASS':
++            state['pending_requirements'].append('real_training_batch')
++        gridcfg=config['velocity_grid']
++        grid=make_velocity_grid(gridcfg['vx'],gridcfg['vy'],device=DEVICE)
++        sampling=config['sampling']
++        resource=config['resource']
++        state['resource_measurement']=profile_sampler(DEVICE,grid,
++            query_hw=tuple(resource['query_hw']),channels=resource['feature_channels'],
++            query_chunk=sampling['query_chunk'],velocity_chunk=sampling['velocity_chunk'])
++        if not gridcfg.get('formal_coverage_approved') or not gridcfg.get('coverage_evidence'):
++            state['pending_requirements'].append('formal_grid_coverage_decision_from_training_data')
++        if not str(DEVICE).startswith('cuda'):
++            state['pending_requirements'].append('actual_cuda_peak_memory_and_time')
++        else:
++            budget=resource.get('max_peak_cuda_allocated_mib')
++            if budget is None:
++                state['pending_requirements'].append('declared_cuda_memory_budget')
++            else:
++                measured=state['resource_measurement']['cuda_memory']['peak_allocated_bytes']/1024**2
++                if measured>float(budget):
++                    raise RuntimeError(f'Peak allocated memory {measured:.2f} MiB exceeds {budget} MiB')
++        state['status']='BLOCKED' if state['pending_requirements'] else 'PASS'
++        state['next_allowed_stage']='S2' if state['status']=='PASS' else None
++        args.output.parent.mkdir(parents=True,exist_ok=True)
++        write_coordinate_svg(args.output.parent/'S1_sampling_coordinates.svg')
++    except Exception as exc:
++        state['status']='FAIL'
++        state['error']=str(exc)
++        state['traceback']=traceback.format_exc()
++        print(state['traceback'],file=sys.stderr)
++    state['finished_utc']=datetime.now(timezone.utc).isoformat()
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(state,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf-8')
++    print(json.dumps({'stage':'S1','status':state['status'],
++                      'operator_checks':state.get('operator_checks',{}).get('status'),
++                      'pending_requirements':state['pending_requirements'],
++                      'report':str(args.output)},ensure_ascii=False,indent=2))
++    return {'PASS':0,'FAIL':1,'BLOCKED':2}[state['status']]
++
++
++if __name__=='__main__':
++    raise SystemExit(main())
+diff --git a/experiments/irstd_independent_v1/checks/s1_runtime.py b/experiments/irstd_independent_v1/checks/s1_runtime.py
+new file mode 100644
+index 0000000..fb7a0a6
+--- /dev/null
++++ b/experiments/irstd_independent_v1/checks/s1_runtime.py
+@@ -0,0 +1,372 @@
++"""S1 runtime helpers: archived S0 integrity, fixed TRAIN clips, sampler costs.
++
++These helpers do not change S0 records, select a device, set thread counts,
++train a model, or read development/test images. Assertion failures are failures;
++unavailable input files/devices are explicitly reported as BLOCKED.
++"""
++from __future__ import annotations
++
++import hashlib
++import json
++import math
++from pathlib import Path
++import resource
++import sys
++from time import perf_counter
++
++
++_MANIFEST = Path("manifests/nudt_mirsdt_mask17.json")
++_REAL_SAMPLES = (("Sequence1", 9), ("Sequence17", 9), ("Sequence2", 9))
++
++
++def _check(condition, message):
++    if not condition:
++        raise AssertionError(message)
++
++
++def _relative_file(root: Path, relative) -> Path:
++    relative = Path(relative)
++    if relative.is_absolute() or ".." in relative.parts:
++        raise ValueError(f"Expected a safe relative path: {relative}")
++    return root / relative
++
++
++def _sha256(path: Path) -> str:
++    with path.open("rb") as stream:
++        return hashlib.file_digest(stream, "sha256").hexdigest()
++
++
++def verify_s0(experiment: Path) -> dict:
++    """Verify exactly the code/config files and manifest recorded by S0.
++
++    The archived commit is provenance, not an equality gate: new S1 files need
++    not have existed at that commit. Existing recorded files must still match.
++    This does not reopen/re-audit the released images or change the S0 report.
++    Missing or mismatching integrity evidence raises an exception.
++    """
++    experiment = Path(experiment)
++    report = json.loads((experiment / "reports/S0.json").read_text())
++    _check(report.get("stage") == "S0", "Expected an S0 stage record")
++    _check(report.get("status") == "PASS", "S0 has not passed")
++    _check(report.get("next_allowed_stage") == "S1", "S0 does not authorize S1")
++    recorded = report.get("code_and_config_sha256")
++    _check(isinstance(recorded, dict) and recorded and "contracts.py" in recorded,
++           "S0 must record its code/config hashes, including contracts.py")
++    checked = []
++    for relative, expected in recorded.items():
++        path = _relative_file(experiment, relative)
++        _check(path.is_file(), f"S0-recorded file is missing: {relative}")
++        actual = _sha256(path)
++        _check(actual == expected, f"S0-recorded file changed: {relative}")
++        checked.append({"path": relative, "sha256": actual})
++    manifest_path = experiment / _MANIFEST
++    _check(manifest_path.is_file(), f"S0 manifest is missing: {_MANIFEST}")
++    manifest_hash = _sha256(manifest_path)
++    _check(manifest_hash == report.get("data_manifest_hash"), "S0 manifest hash changed")
++    return {
++        "status": "PASS", "gate_kind": "archived_integrity",
++        "recorded_code_commit": report.get("code_commit"),
++        "commit_equality_required": False,
++        "verified_code_and_config": checked,
++        "verified_file_count": len(checked),
++        "data_manifest": str(_MANIFEST), "data_manifest_sha256": manifest_hash,
++        "new_files_enumerated": False, "raw_data_reaudited": False,
++        "remaining_S0_limits": report.get("remaining_limits", []),
++    }
++
++
++def _manual_bilinear(frames, pixel_valid, shapes, queries, velocities, offsets):
++    """Independent scalar interpolation; no sampler/grid_sample/grid normalization.
++
++    Inputs are CPU NumPy arrays. All stored images start at full-image (0,0).
++    Positive-weight support must exist; zero-weight neighbours at image edges
++    do not invalidate an exact integer sample.
++    """
++    import numpy as np
++
++    batch, _, channels, _, _ = frames.shape
++    count = queries.shape[1]
++    my, mx = velocities.shape[:2]
++    values = np.zeros((batch, count, channels, 16, my, mx), dtype=np.float64)
++    valid = np.zeros((batch, count, 16, my, mx), dtype=bool)
++    context_indices = [i for i in range(17) if i != 8]
++    for b, (height, width) in enumerate(shapes):
++        for q, (px, py) in enumerate(queries[b]):
++            if not (0 <= px <= width - 1 and 0 <= py <= height - 1):
++                continue
++            for t, frame_index in enumerate(context_indices):
++                for vy_index in range(my):
++                    for vx_index in range(mx):
++                        vx, vy = velocities[vy_index, vx_index]
++                        x = float(px + offsets[b, t] * vx)
++                        y = float(py + offsets[b, t] * vy)
++                        if not (0 <= x <= width - 1 and 0 <= y <= height - 1):
++                            continue
++                        x0, y0 = math.floor(x), math.floor(y)
++                        dx, dy = x - x0, y - y0
++                        result = np.zeros(channels, dtype=np.float64)
++                        usable = True
++                        for xx, yy, weight in (
++                            (x0, y0, (1-dx)*(1-dy)), (x0+1, y0, dx*(1-dy)),
++                            (x0, y0+1, (1-dx)*dy), (x0+1, y0+1, dx*dy),
++                        ):
++                            if weight == 0:
++                                continue
++                            if not (0 <= xx < width and 0 <= yy < height
++                                    and pixel_valid[b, frame_index, 0, yy, xx]):
++                                usable = False
++                                break
++                            result += weight * frames[b, frame_index, :, yy, xx]
++                        if usable:
++                            values[b, q, :, t, vy_index, vx_index] = result
++                            valid[b, q, t, vy_index, vx_index] = True
++    return values, valid
++
++
++def check_real_batch(experiment: Path, project_root: Path, device: str = "cpu") -> dict:
++    """Check 3 fixed, S0-selected TRAIN clips; never substitute synthetic data.
++
++    Missing manifest, raw images or center masks returns BLOCKED before loading
++    any images. Invalid metadata, interpolation or masks raises an exception.
++    The loader opens 17 images and one center mask for each selected sample.
++    """
++    experiment, project_root = Path(experiment), Path(project_root)
++    sample_ids = [f"{name}/{center:05d}" for name, center in _REAL_SAMPLES]
++    base = {"scope": "fixed_train_clips_only", "sample_ids": sample_ids,
++            "device": str(device), "training_steps": 0}
++    manifest_path = experiment / _MANIFEST
++    if not manifest_path.is_file():
++        return dict(base, status="BLOCKED", reason="missing_manifest",
++                    missing_files=[str(manifest_path)])
++    manifest = json.loads(manifest_path.read_text())
++    _check(manifest.get("clip_length") == 17 and manifest.get("center_index") == 8,
++           "Expected S0's 17-frame, center-index-8 contract")
++    sources = {}
++    for source in manifest["sequences"]:
++        _check(source["id"] not in sources, "Duplicate source in manifest")
++        sources[source["id"]] = source
++    required_paths = []
++    for name, center in _REAL_SAMPLES:
++        _check(name in sources and sources[name]["split"] == "train",
++               f"Required real check sample is not TRAIN: {name}")
++        source = sources[name]
++        _check(center in source["centers"], f"Missing eligible center: {name}/{center}")
++        records = {row["number"]: row for row in source["frames"]}
++        _check(len(records) == len(source["frames"]), f"Duplicate frame in {name}")
++        for number in range(center-8, center+9):
++            _check(number in records, f"Missing physical frame record: {name}/{number}")
++            required_paths.append(_relative_file(project_root, records[number]["image"]))
++        required_paths.append(_relative_file(project_root, records[center]["mask"]))
++    missing = [str(path) for path in required_paths if not path.is_file()]
++    if missing:
++        return dict(base, status="BLOCKED", reason="missing_training_images_or_center_masks",
++                    required_file_count=len(required_paths), missing_file_count=len(missing),
++                    missing_files=missing)
++
++    import numpy as np
++    import torch
++    from ..data.dataset import MaskClipDataset, collate_clips
++    from ..geometry.sampler import sample_clip_features
++
++    requested_device = torch.device(device)
++    if requested_device.type == "cuda" and not torch.cuda.is_available():
++        return dict(base, status="BLOCKED", reason="requested_cuda_unavailable")
++    dataset = MaskClipDataset(manifest, project_root, "train")
++    lookup = {key: index for index, key in enumerate(dataset.centers)}
++    clip, labels = collate_clips([dataset[lookup[key]] for key in _REAL_SAMPLES])
++    _check(list(clip.output_frame_id) == sample_ids, "Unexpected real sample IDs/order")
++    _check(clip.frames.shape[:3] == (3, 17, 1) and clip.center_index == 8,
++           "Real batch does not satisfy the S0 temporal shape")
++    expected_offsets = torch.arange(-8, 9, dtype=torch.float32).repeat(3, 1)
++    torch.testing.assert_close(clip.time_offsets, expected_offsets, atol=0, rtol=0)
++    shapes = [meta.original_hw for meta in clip.scene_meta]
++    _check(len(set(shapes)) > 1, "Real check must exercise heterogeneous padding")
++    _check([bool(objects) for objects in labels.objects] == [True, False, True],
++           "S0 positive/negative/different-size sample polarity changed")
++    queries = []
++    for b, (height, width) in enumerate(shapes):
++        expected_valid = torch.zeros_like(clip.pixel_valid[b])
++        expected_valid[..., :height, :width] = True
++        _check(torch.equal(clip.pixel_valid[b], expected_valid), "Padding validity changed")
++        _check(torch.equal(labels.ignore_map[b, 0], ~expected_valid[0, 0]),
++               "Padding loss-ignore map changed")
++        _check(bool((clip.frames[b][~expected_valid] == 0).all()), "Nonzero batch padding")
++        queries.append([(width//2, height//2), (0, 0), (width-1, height-1),
++                        (width-1, height//2), (width, height//2)])
++    queries_cpu = torch.tensor(queries, dtype=torch.float32)
++    axes = torch.tensor([-1.0, -0.5, 0.0, 0.5, 1.0], dtype=torch.float32)
++    yy, xx = torch.meshgrid(axes, axes, indexing="ij")
++    velocities_cpu = torch.stack((xx, yy), dim=-1)
++    features = clip.frames.to(requested_device)  # Native raw frames are the features.
++    with torch.no_grad():
++        sampled = sample_clip_features(
++            features, clip, queries_cpu.to(requested_device), velocities_cpu.to(requested_device),
++            query_chunk=3, velocity_chunk=7,
++        )
++    expected_context = torch.cat((expected_offsets[:, :8], expected_offsets[:, 9:]), dim=1)
++    _check(tuple(sampled.values.shape) == (3, 5, 1, 16, 5, 5), "Context shape changed")
++    torch.testing.assert_close(sampled.time_offsets.cpu(), expected_context, atol=0, rtol=0)
++    _check(not bool((sampled.time_offsets == 0).any()), "Center leaked into context")
++    expected, expected_valid = _manual_bilinear(
++        clip.frames.numpy(), clip.pixel_valid.numpy(), shapes,
++        queries_cpu.numpy(), velocities_cpu.numpy(), expected_context.numpy(),
++    )
++    got = sampled.values.cpu().numpy()
++    np.testing.assert_array_equal(sampled.sample_valid.cpu().numpy(), expected_valid)
++    np.testing.assert_array_equal(sampled.velocity_valid.cpu().numpy(), expected_valid.all(axis=2))
++    np.testing.assert_allclose(got, expected, atol=1e-5, rtol=1e-4)
++    _check(not bool(sampled.sample_valid[:, 4].any()), "Padding/outside-image query became valid")
++    _check(bool((sampled.values[:, 4] == 0).all()), "Padding/outside-image output is not zero")
++    _check(bool(sampled.sample_valid[:, 3, :, 2, 2].all()),
++           "Exact right-edge zero-velocity observations must remain valid")
++    _check(bool(sampled.sample_valid[:, 2, :, 2, 2].all()),
++           "Exact bottom-right observations must remain valid")
++    # Padded storage must not affect results, even if its values are conspicuous.
++    poisoned = features.masked_fill(~clip.pixel_valid.to(requested_device), 1e4)
++    with torch.no_grad():
++        repeated = sample_clip_features(
++            poisoned, clip, queries_cpu.to(requested_device), velocities_cpu.to(requested_device),
++            query_chunk=3, velocity_chunk=7,
++        )
++    torch.testing.assert_close(repeated.values, sampled.values, atol=0, rtol=0)
++    _check(torch.equal(repeated.sample_valid, sampled.sample_valid), "Padding changed validity")
++    return dict(base, status="PASS", required_file_count=len(required_paths),
++                batch_shape=list(clip.frames.shape), native_shapes_hw=[list(s) for s in shapes],
++                query_count_per_image=5, velocity_grid_shape=[5, 5, 2], context_slots=16,
++                max_abs_reference_error=float(np.max(np.abs(got-expected))),
++                tolerance={"atol": 1e-5, "rtol": 1e-4},
++                valid_samples=int(expected_valid.sum()),
++                invalid_samples=int(expected_valid.size-expected_valid.sum()),
++                checks=["fixed_train_loader_samples", "heterogeneous_padding_and_ignore",
++                        "16_context_slots_center_excluded", "independent_scalar_bilinear",
++                        "integer_and_half_velocity", "exact_right_and_bottom_edges",
++                        "outside_image_is_invalid_zero", "padding_poison_invariance"])
++
++
++def _rss_high_water_bytes() -> int:
++    value = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
++    return int(value if sys.platform == "darwin" else value * 1024)
++
++
++def profile_sampler(device, velocities_xy, query_hw=(32, 32), channels=9,
++                    query_chunk=256, velocity_chunk=8) -> dict:
++    """Measure one deterministic sampler forward/backward, never a training step.
++
++    One no-grad warmup precedes one timed forward and one timed backward of
++    mean-squared sampled evidence. CUDA timings synchronize the requested
++    device. CPU RSS is process-lifetime high-water, not sampler peak or CUDA
++    memory. No speed/memory threshold or automatic device selection is applied.
++    """
++    import torch
++    from ..contracts import ClipBatch, SceneMeta
++    from ..geometry.sampler import sample_clip_features
++    from ..geometry.tiles import dense_queries
++
++    requested_device = torch.device(device)
++    if requested_device.type not in ("cpu", "cuda"):
++        raise ValueError("S1 profiling supports an explicitly requested cpu or cuda device")
++    if requested_device.type == "cuda" and not torch.cuda.is_available():
++        return {"status": "BLOCKED", "device": str(requested_device),
++                "reason": "requested_cuda_unavailable", "cuda_resource_gate": "UNAVAILABLE"}
++    if (len(query_hw) != 2 or any(type(v) is not int or v <= 0 for v in query_hw)
++            or type(channels) is not int or channels <= 0):
++        raise ValueError("query_hw and channels must be positive integers")
++    if any(type(v) is not int or v <= 0 for v in (query_chunk, velocity_chunk)):
++        raise ValueError("query_chunk and velocity_chunk must be positive integers")
++    velocity = torch.as_tensor(velocities_xy, dtype=torch.float32, device=requested_device)
++    if velocity.ndim == 2 and velocity.shape[-1] == 2:
++        velocity = velocity[None]
++    if (velocity.ndim != 3 or velocity.shape[-1] != 2
++            or min(velocity.shape[:2]) <= 0 or not bool(torch.isfinite(velocity).all())):
++        raise ValueError("velocities_xy must have finite shape [My,Mx,2] or [V,2]")
++    if velocity.requires_grad:
++        velocity = velocity.detach()
++    max_xy = velocity.abs().reshape(-1, 2).amax(dim=0).cpu().tolist()
++    pad_x, pad_y = (math.ceil(8 * value) + 1 for value in max_xy)
++    query_h, query_w = query_hw
++    height, width = query_h + 2*pad_y, query_w + 2*pad_x
++    rss_before = _rss_high_water_bytes()
++    # Deterministic, bounded synthetic intensities; global RNG state is untouched.
++    count = 17 * channels * height * width
++    features = torch.arange(count, dtype=torch.float32, device=requested_device)
++    features = features.remainder(251).div(250).reshape(1, 17, channels, height, width)
++    features.requires_grad_(True)
++    offsets = torch.arange(-8, 9, dtype=torch.float32, device=requested_device)[None]
++    pixel_valid = torch.ones((1, 17, 1, height, width), dtype=torch.bool, device=requested_device)
++    meta = SceneMeta("S1Synthetic", tuple(range(1, 18)), (height, width),
++                     (0, 0), (0, 0, width, height))
++    clip = ClipBatch(features[:, :, :1].detach(), offsets, pixel_valid, 8,
++                     ("S1Synthetic/00009",), (meta,))
++    queries = dense_queries((pad_x, pad_y, pad_x+query_w, pad_y+query_h),
++                            device=requested_device, dtype=torch.float32)
++
++    def synchronize():
++        if requested_device.type == "cuda":
++            torch.cuda.synchronize(requested_device)
++
++    def run():
++        return sample_clip_features(features, clip, queries, velocity,
++                                    query_chunk=query_chunk, velocity_chunk=velocity_chunk)
++
++    with torch.no_grad():
++        warmup = run()
++    del warmup
++    synchronize()
++    allocated_before = reserved_before = None
++    if requested_device.type == "cuda":
++        allocated_before = torch.cuda.memory_allocated(requested_device)
++        reserved_before = torch.cuda.memory_reserved(requested_device)
++        torch.cuda.reset_peak_memory_stats(requested_device)
++    start = perf_counter()
++    sampled = run()
++    synchronize()
++    forward_seconds = perf_counter() - start
++    start = perf_counter()
++    sampled.values.square().mean().backward()
++    synchronize()
++    backward_seconds = perf_counter() - start
++    _check(sampled.values.shape[3] == 16, "Profile must use all 16 noncenter contexts")
++    _check(bool(sampled.sample_valid.all()), "Profile halo did not support all queries")
++    _check(features.grad is not None and bool(torch.isfinite(features.grad).all())
++           and bool((features.grad != 0).any()), "Profile feature gradient is missing/invalid")
++    _check(bool((features.grad[:, 8] == 0).all()), "Profile center must have zero context gradient")
++    cuda = None
++    if requested_device.type == "cuda":
++        cuda = {
++            "allocated_before_measurement_bytes": allocated_before,
++            "reserved_before_measurement_bytes": reserved_before,
++            "peak_allocated_bytes": torch.cuda.max_memory_allocated(requested_device),
++            "peak_reserved_bytes": torch.cuda.max_memory_reserved(requested_device),
++            "scope": "allocator peak after warmup, includes retained inputs and timed autograd",
++        }
++
++    def tensor_bytes(tensor):
++        return int(tensor.numel() * tensor.element_size())
++
++    return {
++        "status": "PASS", "scope": "synthetic_sampler_only_not_full_model",
++        "device": str(requested_device), "torch_version": torch.__version__,
++        "input_shape": list(features.shape), "query_hw": list(query_hw),
++        "velocity_grid_shape": list(velocity.shape), "context_slots": 16,
++        "query_chunk": query_chunk, "velocity_chunk": velocity_chunk,
++        "warmup_forward_iterations": 1, "measured_iterations": 1,
++        "forward_seconds": forward_seconds, "backward_seconds": backward_seconds,
++        "backward_objective": "mean_squared_sampled_evidence; no optimizer or model training",
++        "tensor_bytes": {
++            "feature_input": tensor_bytes(features), "feature_gradient": tensor_bytes(features.grad),
++            "clip_frames_extra_allocation": 0, "pixel_valid": tensor_bytes(pixel_valid),
++            "time_offsets": tensor_bytes(offsets), "queries": tensor_bytes(queries),
++            "velocities": tensor_bytes(velocity), "sampled_values": tensor_bytes(sampled.values),
++            "sample_valid": tensor_bytes(sampled.sample_valid),
++            "velocity_valid": tensor_bytes(sampled.velocity_valid),
++        },
++        "tensor_bytes_note": "Named tensor sizes, not a complete autograd/workspace peak; clip.frames is a feature view.",
++        "cuda_memory": cuda,
++        "cuda_resource_gate": "MEASURED_NO_THRESHOLD" if cuda is not None else "UNAVAILABLE_ON_CPU",
++        "cpu_rss": {
++            "before_profile_high_water_bytes": rss_before,
++            "process_high_water_bytes": _rss_high_water_bytes(),
++            "scope": "process_lifetime_high_water_including_prior_checks; not sampler-only or CUDA memory",
++        },
++        "performance_threshold_applied": False, "training_steps": 0,
++    }
+diff --git a/experiments/irstd_independent_v1/configs/s1_geometry.yaml b/experiments/irstd_independent_v1/configs/s1_geometry.yaml
+new file mode 100644
+index 0000000..ed14ec4
+--- /dev/null
++++ b/experiments/irstd_independent_v1/configs/s1_geometry.yaml
+@@ -0,0 +1,26 @@
++stage: S1
++seed: 46
++# This dictionary exercises geometry. It is NOT an established motion-coverage
++# choice for NUDT-MIRSDT or another dataset.
++velocity_grid:
++  vx: [-2, -1, 0, 1, 2]
++  vy: [-2, -1, 0, 1, 2]
++  units: native_pixels_per_original_frame_interval
++  purpose: engineering
++  formal_coverage_approved: false
++  coverage_evidence: null
++sampling:
++  query_chunk: 256
++  velocity_chunk: 8
++  interpolation: native_pixel_bilinear
++  coordinate_convention: pixel_centers_align_corners_false_equivalent
++  center_in_context: false
++tolerance:
++  fp32_atol: 0.00001
++  fp32_rtol: 0.0001
++resource:
++  query_hw: [32, 32]
++  feature_channels: 9
++  # Set a concrete budget in a separate formal config after selecting a grid
++  # using training data; never fill it from held-out performance.
++  max_peak_cuda_allocated_mib: null
+diff --git a/experiments/irstd_independent_v1/geometry/__init__.py b/experiments/irstd_independent_v1/geometry/__init__.py
+new file mode 100644
+index 0000000..cf75533
+--- /dev/null
++++ b/experiments/irstd_independent_v1/geometry/__init__.py
+@@ -0,0 +1,8 @@
++"""S1 geometry only: fixed hypotheses and differentiable per-time sampling."""
++from .sampler import ALIGN_CORNERS, MissingHaloError, SampledEvidence, sample_clip_features, sample_context
++from .velocity_grid import make_velocity_grid
++
++__all__ = [
++    "ALIGN_CORNERS", "MissingHaloError", "SampledEvidence", "make_velocity_grid",
++    "sample_context", "sample_clip_features",
++]
+diff --git a/experiments/irstd_independent_v1/geometry/sampler.py b/experiments/irstd_independent_v1/geometry/sampler.py
+new file mode 100644
+index 0000000..24822ef
+--- /dev/null
++++ b/experiments/irstd_independent_v1/geometry/sampler.py
+@@ -0,0 +1,317 @@
++"""Differentiable, per-time motion-hypothesis evidence with explicit geometry.
++
++Coordinates denote native pixel centers: x=0 is the first pixel center. Their
++normalized-grid equivalent uses align_corners=False and the normalization
++``2 * (local_xy + 0.5) / (storage_width, storage_height) - 1``. Actual interpolation
++uses four native-coordinate gathers: avoiding a normalized-coordinate round trip
++prevents numerical weights on zero-weight padded neighbors. Physical validity is
++independent of bottom/right tensor padding.
++"""
++from dataclasses import dataclass
++
++import torch
++
++from ..contracts import ClipBatch
++
++
++ALIGN_CORNERS = False
++
++
++class MissingHaloError(ValueError):
++    """A real-image observation is unavailable in the loaded source tile."""
++
++
++@dataclass(frozen=True)
++class SampledEvidence:
++    values: torch.Tensor          # [B,N,C,T,My,Mx], invalid time samples are zero
++    sample_valid: torch.Tensor    # bool [B,N,T,My,Mx]
++    velocity_valid: torch.Tensor  # bool [B,N,My,Mx], sample_valid.all(time)
++    time_offsets: torch.Tensor    # [B,T], context times in original frame units
++    queries_xy: torch.Tensor      # [B,N,2], original-image coordinates
++    velocities_xy: torch.Tensor   # [My,Mx,2], original pixels / frame interval
++
++
++def _real_tensor(value, name, *, device, dtype):
++    tensor = torch.as_tensor(value, device=device)
++    if tensor.requires_grad:
++        raise TypeError(f"{name} is fixed geometry in S1; only feature gradients are supported")
++    if tensor.is_complex() or tensor.dtype == torch.bool:
++        raise TypeError(f"{name} must contain real numeric coordinates")
++    # Re-read the original input in the requested dtype. Converting the
++    # inferred tensor would already have rounded Python float lists to FP32.
++    tensor = torch.as_tensor(value, device=device, dtype=dtype)
++    if not bool(torch.isfinite(tensor).all()):
++        raise ValueError(f"{name} must contain only finite values")
++    return tensor
++
++
++def _batch_geometry(value, name, batch, *, device, dtype, positive=False):
++    tensor = _real_tensor(value, name, device=device, dtype=dtype)
++    if tensor.shape == (2,):
++        tensor = tensor[None].expand(batch, -1)
++    if tensor.shape != (batch, 2):
++        raise ValueError(f"{name} must have shape [B,2] (or a common length-2 pair)")
++    if not bool((tensor == tensor.round()).all()):
++        raise ValueError(f"{name} must contain integer pixel geometry")
++    if positive and not bool((tensor > 0).all()):
++        raise ValueError(f"{name} sizes must be positive")
++    return tensor
++
++
++def _positive_chunk(value, name):
++    if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
++        raise ValueError(f"{name} must be a positive integer")
++    return value
++
++
++def sample_context(
++    features: torch.Tensor,
++    time_offsets: torch.Tensor,
++    queries_xy: torch.Tensor,
++    velocities_xy: torch.Tensor,
++    pixel_valid: torch.Tensor | None = None,
++    image_hw: torch.Tensor | None = None,
++    origin_xy: torch.Tensor | None = None,
++    source_hw: torch.Tensor | None = None,
++    *,
++    query_chunk: int = 256,
++    velocity_chunk: int = 8,
++) -> SampledEvidence:
++    """Sample ``features[t]`` at ``query + time_offsets[t] * velocity``.
++
++    ``features`` is float32/float64 ``[B,T,C,H,W]``; T must be positive.
++    ``queries_xy`` is ``[N,2]`` or ``[B,N,2]`` and may be empty. Time and both
++    velocity axes are preserved. The supplied time axis is not sorted, averaged,
++    or filtered by this low-level function. Geometry is fixed in S1: time,
++    query, velocity, and image/source geometry tensors requiring gradients are
++    rejected. Gradients with respect to features remain supported.
++
++    ``image_hw`` is the true full-image size, ``origin_xy`` is the loaded tile's
++    origin in that image, and ``source_hw`` is the tile's actual loaded extent
++    before bottom/right batch padding. Full-image defaults are allowed. Every
++    cropped source, including one with origin (0,0), must explicitly supply
++    image_hw and source_hw. Omitting source_hw declares that the complete real
++    image is loaded; a mask cannot distinguish missing crop extent from holes
++    within an otherwise loaded image, so crop extent is never inferred from it.
++
++    A sample is valid only if every *positive-weight* bilinear support pixel is
++    inside the real image, loaded source, and pixel_valid. Real-image samples
++    missing from the source raise MissingHaloError instead of silently becoming
++    background. Queries outside the real image yield only invalid zero samples.
++    Invalid samples have zero derivative with respect to features. Chunking only
++    changes working-memory use, never the mathematical operator.
++    """
++    if not isinstance(features, torch.Tensor) or features.ndim != 5:
++        raise ValueError("features must be a tensor with shape [B,T,C,H,W]")
++    if features.dtype not in (torch.float32, torch.float64):
++        raise TypeError("features must use float32 or float64")
++    batch, times, channels, height, width = features.shape
++    if min(batch, times, channels, height, width) <= 0:
++        raise ValueError("features requires positive B, T, C, H, and W")
++    query_chunk = _positive_chunk(query_chunk, "query_chunk")
++    velocity_chunk = _positive_chunk(velocity_chunk, "velocity_chunk")
++    device, dtype = features.device, features.dtype
++
++    times_tensor = _real_tensor(time_offsets, "time_offsets", device=device, dtype=dtype)
++    if times_tensor.shape != (batch, times):
++        raise ValueError("time_offsets must have shape [B,T] matching features")
++    queries = _real_tensor(queries_xy, "queries_xy", device=device, dtype=dtype)
++    if queries.ndim == 2 and queries.shape[-1] == 2:
++        queries = queries[None].expand(batch, -1, -1)
++    if queries.ndim != 3 or queries.shape[0] != batch or queries.shape[-1] != 2:
++        raise ValueError("queries_xy must have shape [N,2] or [B,N,2]")
++    velocities = _real_tensor(velocities_xy, "velocities_xy", device=device, dtype=dtype)
++    if velocities.ndim != 3 or velocities.shape[-1] != 2 or min(velocities.shape[:2]) <= 0:
++        raise ValueError("velocities_xy must have nonempty shape [My,Mx,2]")
++    my, mx = velocities.shape[:2]
++    velocity_count = my * mx
++    velocities_flat = velocities.reshape(velocity_count, 2)
++
++    origins = _batch_geometry(
++        (0, 0) if origin_xy is None else origin_xy, "origin_xy", batch,
++        device=device, dtype=dtype,
++    )
++    if not bool((origins >= 0).all()):
++        raise ValueError("origin_xy must be nonnegative; source tiles must be clipped to the real image")
++    cropped_origin = bool((origins != 0).any())
++    if cropped_origin and (image_hw is None or source_hw is None):
++        raise ValueError("Nonzero origin_xy requires explicit image_hw and source_hw; do not infer tile halo")
++    images = _batch_geometry(
++        (height, width) if image_hw is None else image_hw, "image_hw", batch,
++        device=device, dtype=dtype, positive=True,
++    )
++    sources = _batch_geometry(
++        images if source_hw is None else source_hw, "source_hw", batch,
++        device=device, dtype=dtype, positive=True,
++    )
++    storage_hw = features.new_tensor((height, width))
++    if not bool((sources <= storage_hw).all()):
++        raise ValueError("source_hw exceeds stored features; a crop must provide its actual loaded extent")
++    if not bool((origins + sources.flip(-1) <= images.flip(-1)).all()):
++        raise ValueError("origin_xy plus source_hw exceeds the real image extent")
++
++    if pixel_valid is None:
++        valid_pixels = torch.ones((batch, times, 1, height, width), dtype=torch.bool, device=device)
++    else:
++        if not isinstance(pixel_valid, torch.Tensor) or pixel_valid.dtype != torch.bool:
++            raise TypeError("pixel_valid must be a boolean tensor")
++        if pixel_valid.shape != (batch, times, 1, height, width):
++            raise ValueError("pixel_valid must have shape [B,T,1,H,W] matching features")
++        valid_pixels = pixel_valid.to(device=device)
++
++    count = queries.shape[1]
++    if count == 0:
++        # This empty view retains the feature autograd connection.
++        values = features[:, :0].reshape(batch, 0, channels, times, my, mx)
++        sample_valid = torch.empty((batch, 0, times, my, mx), dtype=torch.bool, device=device)
++        return SampledEvidence(values, sample_valid, sample_valid.all(dim=2),
++                               times_tensor, queries, velocities)
++
++    image_max_xy = images.flip(-1) - 1
++    source_max_xy = sources.flip(-1) - 1
++    query_valid = ((queries >= 0) & (queries <= image_max_xy[:, None])).all(dim=-1)
++    flat_features = features.reshape(batch * times, channels, height * width)
++    flat_valid = valid_pixels.reshape(batch * times, height * width)
++    result_chunks = []
++    validity_chunks = []
++
++    for q_start in range(0, count, query_chunk):
++        q_stop = min(count, q_start + query_chunk)
++        local_count = q_stop - q_start
++        values_for_velocities = []
++        masks_for_velocities = []
++        for v_start in range(0, velocity_count, velocity_chunk):
++            v_stop = min(velocity_count, v_start + velocity_chunk)
++            local_velocities = v_stop - v_start
++            global_xy = (
++                queries[:, None, q_start:q_stop, None, :]
++                + times_tensor[:, :, None, None, None]
++                * velocities_flat[None, None, None, v_start:v_stop, :]
++            )
++            if not bool(torch.isfinite(global_xy).all()):
++                raise ValueError("query + time * velocity overflowed the coordinate dtype")
++            real_sample = (
++                (global_xy >= 0) & (global_xy <= image_max_xy[:, None, None, None])
++            ).all(dim=-1) & query_valid[:, None, q_start:q_stop, None]
++            local_xy = global_xy - origins[:, None, None, None, :]
++            in_source = (
++                (local_xy >= 0) & (local_xy <= source_max_xy[:, None, None, None])
++            ).all(dim=-1)
++            missing = real_sample & ~in_source
++            if bool(missing.any()):
++                b, t, q, v = torch.nonzero(missing, as_tuple=False)[0].tolist()
++                coordinate = global_xy[b, t, q, v].detach().cpu().tolist()
++                raise MissingHaloError(
++                    "Missing source halo: a valid real-image sample at "
++                    f"{coordinate} (batch={b}, time={t}, query={q_start + q}, "
++                    f"velocity={v_start + v}) is outside the loaded source extent. "
++                    "Load sufficient halo or correct source_hw/origin_xy."
++                )
++
++            # Do not convert huge/invalid coordinates to integer gather indices.
++            safe_xy = torch.where(real_sample[..., None], local_xy, torch.zeros_like(local_xy))
++            floor_xy = safe_xy.floor()
++            fraction = safe_xy - floor_xy
++            lower = floor_xy.to(torch.long)
++            dx, dy = fraction.unbind(dim=-1)
++            support_valid = torch.ones_like(real_sample)
++            # Test positive factors, not their product: tiny nonzero weights
++            # must not be mistaken for zero if a low-precision product underflows.
++            corners = ((0, 0, (1 - dx) * (1 - dy), torch.ones_like(real_sample)),
++                       (1, 0, dx * (1 - dy), dx > 0),
++                       (0, 1, (1 - dx) * dy, dy > 0),
++                       (1, 1, dx * dy, (dx > 0) & (dy > 0)))
++            corner_indices = []
++            for offset_x, offset_y, weight, positive_weight in corners:
++                ix = (lower[..., 0] + offset_x).clamp(0, width - 1)
++                iy = (lower[..., 1] + offset_y).clamp(0, height - 1)
++                indices = (iy * width + ix).reshape(batch * times, -1)
++                corner_indices.append(indices)
++                support = flat_valid.gather(1, indices).reshape(
++                    batch, times, local_count, local_velocities
++                )
++                support_valid = support_valid & (~positive_weight | support)
++            sample_ok = real_sample & support_valid
++
++            sampled = None
++            for indices, (_, _, weight, positive_weight) in zip(corner_indices, corners):
++                gathered = flat_features.gather(
++                    2, indices[:, None].expand(-1, channels, -1)
++                ).reshape(batch, times, channels, local_count, local_velocities)
++                use_corner = (sample_ok & positive_weight)[:, :, None]
++                # Mask before multiplication: even NaN/Inf poison in unused
++                # padding cannot turn an exact-zero contribution into NaN.
++                gathered = torch.where(use_corner, gathered, torch.zeros_like(gathered))
++                contribution = gathered * weight[:, :, None]
++                sampled = contribution if sampled is None else sampled + contribution
++            values_for_velocities.append(sampled.permute(0, 3, 2, 1, 4))
++            masks_for_velocities.append(sample_ok.permute(0, 2, 1, 3))
++        result_chunks.append(torch.cat(values_for_velocities, dim=-1))
++        validity_chunks.append(torch.cat(masks_for_velocities, dim=-1))
++
++    values = torch.cat(result_chunks, dim=1).reshape(batch, count, channels, times, my, mx)
++    sample_valid = torch.cat(validity_chunks, dim=1).reshape(batch, count, times, my, mx)
++    return SampledEvidence(values, sample_valid, sample_valid.all(dim=2),
++                           times_tensor, queries, velocities)
++
++
++def sample_clip_features(
++    features: torch.Tensor,
++    clip: ClipBatch,
++    queries_xy: torch.Tensor,
++    velocities_xy: torch.Tensor,
++    **kwargs,
++) -> SampledEvidence:
++    """Use S0 geometry and remove the center from features, masks, and times.
++
++    A 17-frame S0 clip produces 16 context slots in original order. Full images
++    with heterogeneous batch padding use each SceneMeta.original_hw as source_hw.
++    Every cropped clip, including a crop at origin (0,0), requires explicit
++    source_hw. The default declares complete original images, not a crop inferred
++    from pixel_valid. Nonzero origins are additionally checked at runtime; padded
++    storage size never substitutes for the actual loaded tile extent.
++    """
++    if not isinstance(clip, ClipBatch):
++        raise TypeError("clip must be an S0 ClipBatch")
++    if not isinstance(features, torch.Tensor) or features.ndim != 5:
++        raise ValueError("features must have shape [B,T,C,H,W]")
++    batch, times, _, height, width = features.shape
++    if clip.frames.ndim != 5 or clip.frames.shape != (batch, times, 1, height, width):
++        raise ValueError("features must match clip batch, time, and native spatial dimensions")
++    if len(clip.scene_meta) != batch:
++        raise ValueError("clip.scene_meta must have one record per batch element")
++    if times < 2 or isinstance(clip.center_index, bool) or not isinstance(clip.center_index, int):
++        raise ValueError("clip requires at least two frames and an integer center_index")
++    if not 0 <= clip.center_index < times:
++        raise ValueError("clip.center_index is outside the time axis")
++    if clip.time_offsets.shape != (batch, times):
++        raise ValueError("clip.time_offsets must match [B,T]")
++    if not bool((clip.time_offsets[:, clip.center_index] == 0).all()):
++        raise ValueError("clip center_index must identify time offset zero")
++    if clip.pixel_valid.shape != (batch, times, 1, height, width):
++        raise ValueError("clip.pixel_valid must match feature geometry")
++    for name in ("time_offsets", "pixel_valid", "image_hw", "origin_xy"):
++        if name in kwargs:
++            raise ValueError(f"{name} is derived from ClipBatch and cannot be overridden")
++
++    images = [meta.original_hw for meta in clip.scene_meta]
++    origins = [meta.tile_origin_xy for meta in clip.scene_meta]
++    source_hw = kwargs.pop("source_hw", None)
++    if source_hw is None:
++        if any(tuple(origin) != (0, 0) for origin in origins):
++            raise ValueError("Cropped ClipBatch requires explicit source_hw, separate from batch padding")
++        source_hw = images
++    indices = torch.tensor(
++        [index for index in range(times) if index != clip.center_index],
++        dtype=torch.long, device=features.device,
++    )
++    context_times = clip.time_offsets.to(device=features.device).index_select(1, indices)
++    if bool((context_times == 0).any()):
++        raise ValueError("Noncenter context must not contain another zero time offset")
++    return sample_context(
++        features.index_select(1, indices), context_times,
++        queries_xy, velocities_xy,
++        pixel_valid=clip.pixel_valid.to(device=features.device).index_select(1, indices),
++        image_hw=images, origin_xy=origins, source_hw=source_hw,
++        **kwargs,
++    )
+diff --git a/experiments/irstd_independent_v1/geometry/tiles.py b/experiments/irstd_independent_v1/geometry/tiles.py
+new file mode 100644
+index 0000000..2ef6751
+--- /dev/null
++++ b/experiments/irstd_independent_v1/geometry/tiles.py
+@@ -0,0 +1,230 @@
++"""Dense tile geometry in native image coordinates; no model or label access.
++
++All boxes are ``(x0, y0, x1, y1)`` with exclusive right/bottom bounds.
++Sizes are ``(height, width)``. Cores partition the image exactly once; queries
++also cover the decoder's spatial neighbourhood, and input crops supply the
++motion, frame-encoder/contrast, and interpolation support around those queries.
++
++For axis ``a`` the conservative input halo outside the query is
++``ceil(max_{t,v} |time_offsets[t] * velocities_xy[v,a]|)
++  + max(encoder_radius, contrast_radius) + interp_radius``.
++The decoder radius is already included when forming the query box. Adding
++these supports is necessary when encoding a cropped raw clip: supplying only
++the displaced sampling points would make encoded features depend on artificial
++crop-edge padding. This guarantee assumes local, stride-one operators with the
++declared radii; crop-dependent global normalization is not covered. True image
++edges remain clipped, and the sampler must still exclude out-of-image paths.
++
++Planning uses only the standard library. ``dense_queries`` imports PyTorch
++lazily and creates coordinates, not learned features or model outputs.
++"""
++
++from __future__ import annotations
++
++from dataclasses import dataclass
++from math import ceil, isfinite
++from numbers import Real
++from operator import index
++from typing import Any, Iterable
++
++
++Box = tuple[int, int, int, int]
++SizeHW = tuple[int, int]
++
++
++def _integer(value: Any, name: str, *, minimum: int = 0) -> int:
++    if isinstance(value, bool):
++        raise ValueError(f"{name} must be an integer, not bool")
++    try:
++        result = index(value)
++    except TypeError as exc:
++        raise ValueError(f"{name} must be an integer") from exc
++    if result < minimum:
++        raise ValueError(f"{name} must be >= {minimum}")
++    return result
++
++
++def _items(value: Any, name: str) -> list[Any]:
++    # Tensor/array inputs are geometry metadata; no torch/numpy import needed.
++    if hasattr(value, "tolist"):
++        value = value.tolist()
++    if isinstance(value, (str, bytes)):
++        raise ValueError(f"{name} must be a sequence")
++    try:
++        return list(value)
++    except TypeError as exc:
++        raise ValueError(f"{name} must be a sequence") from exc
++
++
++def _size(value: Any, name: str) -> SizeHW:
++    values = _items(value, name)
++    if len(values) != 2:
++        raise ValueError(f"{name} must contain (height, width)")
++    return (
++        _integer(values[0], f"{name}[0]", minimum=1),
++        _integer(values[1], f"{name}[1]", minimum=1),
++    )
++
++
++def _box(value: Any, name: str) -> Box:
++    values = _items(value, name)
++    if len(values) != 4:
++        raise ValueError(f"{name} must contain (x0, y0, x1, y1)")
++    box = tuple(_integer(v, f"{name}[{i}]") for i, v in enumerate(values))
++    if box[0] >= box[2] or box[1] >= box[3]:
++        raise ValueError(f"{name} must be nonempty with exclusive upper bounds")
++    return box
++
++
++def _real(value: Any, name: str) -> float:
++    if isinstance(value, bool) or not isinstance(value, Real):
++        raise ValueError(f"{name} must be a finite real number")
++    result = float(value)
++    if not isfinite(result):
++        raise ValueError(f"{name} must be finite")
++    return result
++
++
++def _contains(outer: Box, inner: Box) -> bool:
++    return (outer[0] <= inner[0] and outer[1] <= inner[1]
++            and inner[2] <= outer[2] and inner[3] <= outer[3])
++
++
++def _expand(box: Box, pad_x: int, pad_y: int, image_hw: SizeHW) -> Box:
++    height, width = image_hw
++    return (max(0, box[0] - pad_x), max(0, box[1] - pad_y),
++            min(width, box[2] + pad_x), min(height, box[3] + pad_y))
++
++
++@dataclass(frozen=True)
++class Tile:
++    """One immutable tile, with all boxes in full-image coordinates.
++
++    ``core_slice_in_query`` indexes the last two dimensions of a query-grid
++    result. ``source_origin_xy`` and ``input_hw`` describe the actual crop,
++    before any batch padding, for conversion between source and image space.
++    """
++
++    core_xyxy: Box
++    query_xyxy: Box
++    input_xyxy: Box
++    original_hw: SizeHW
++
++    def __post_init__(self) -> None:
++        image_hw = _size(self.original_hw, "original_hw")
++        object.__setattr__(self, "original_hw", image_hw)
++        full_image = (0, 0, image_hw[1], image_hw[0])
++        for name in ("core_xyxy", "query_xyxy", "input_xyxy"):
++            box = _box(getattr(self, name), name)
++            if not _contains(full_image, box):
++                raise ValueError(f"{name} must be entirely inside the original image")
++            object.__setattr__(self, name, box)
++        if not _contains(self.query_xyxy, self.core_xyxy):
++            raise ValueError("query_xyxy must contain core_xyxy")
++        if not _contains(self.input_xyxy, self.query_xyxy):
++            raise ValueError("input_xyxy must contain query_xyxy")
++
++    @property
++    def source_origin_xy(self) -> tuple[int, int]:
++        return self.input_xyxy[:2]
++
++    @property
++    def input_hw(self) -> SizeHW:
++        x0, y0, x1, y1 = self.input_xyxy
++        return y1 - y0, x1 - x0
++
++    @property
++    def query_hw(self) -> SizeHW:
++        x0, y0, x1, y1 = self.query_xyxy
++        return y1 - y0, x1 - x0
++
++    @property
++    def core_slice_in_query(self) -> tuple[slice, slice]:
++        x0, y0, x1, y1 = self.core_xyxy
++        qx0, qy0, _, _ = self.query_xyxy
++        return slice(y0 - qy0, y1 - qy0), slice(x0 - qx0, x1 - qx0)
++
++
++def plan_tiles(
++    image_hw: Iterable[int],
++    core_hw: Iterable[int],
++    time_offsets: Iterable[float],
++    velocities_xy: Iterable[Iterable[float]],
++    encoder_radius: int = 0,
++    contrast_radius: int = 0,
++    decoder_radius: int = 0,
++    interp_radius: int = 1,
++) -> list[Tile]:
++    """Partition a nonempty image, with conservative, axis-specific halos.
++
++    ``time_offsets`` is a nonempty 1-D sequence. ``velocities_xy`` has shape
++    ``[V,2]`` and is nonempty. Time and velocity must use compatible units:
++    e.g. original frame intervals and original pixels per frame interval.
++    All radii are nonnegative integers in original pixels. Cores may exceed
++    the image size; the resulting final core is clipped to the image.
++
++    Returned tiles are ordered by increasing core y, then x. Core pixels
++    occur exactly once; query/input overlap supplies context only. No query
++    is emitted outside the real image, including at right/bottom edges.
++    """
++    image_hw = _size(image_hw, "image_hw")
++    core_hw = _size(core_hw, "core_hw")
++    encoder_radius = _integer(encoder_radius, "encoder_radius")
++    contrast_radius = _integer(contrast_radius, "contrast_radius")
++    decoder_radius = _integer(decoder_radius, "decoder_radius")
++    interp_radius = _integer(interp_radius, "interp_radius")
++
++    times = [_real(t, "time_offsets entry") for t in _items(time_offsets, "time_offsets")]
++    velocities = []
++    for row in _items(velocities_xy, "velocities_xy"):
++        pair = _items(row, "velocities_xy row")
++        if len(pair) != 2:
++            raise ValueError("velocities_xy must have shape [V,2]")
++        velocities.append((_real(pair[0], "vx"), _real(pair[1], "vy")))
++    if not times or not velocities:
++        raise ValueError("time_offsets and velocities_xy must both be nonempty")
++
++    # Each time is paired with every velocity, so max |t*v| factors exactly.
++    max_time = max(abs(t) for t in times)
++    displacement = tuple(max_time * max(abs(v[axis]) for v in velocities)
++                         for axis in (0, 1))
++    if not all(isfinite(value) for value in displacement):
++        raise ValueError("time/velocity products must be finite")
++    local_support = max(encoder_radius, contrast_radius) + interp_radius
++    pad_x, pad_y = (ceil(value) + local_support for value in displacement)
++
++    height, width = image_hw
++    core_h, core_w = core_hw
++    tiles = []
++    for y0 in range(0, height, core_h):
++        for x0 in range(0, width, core_w):
++            core = (x0, y0, min(width, x0 + core_w), min(height, y0 + core_h))
++            query = _expand(core, decoder_radius, decoder_radius, image_hw)
++            source = _expand(query, pad_x, pad_y, image_hw)
++            tiles.append(Tile(core, query, source, image_hw))
++    return tiles
++
++
++def dense_queries(box: Iterable[int], device: Any = None, dtype: Any = None):
++    """Return row-major ``[N,2]`` global ``(x,y)`` pixel-center coordinates.
++
++    ``box`` must be a nonempty, nonnegative integer box. Pass the already
++    clipped ``tile.query_xyxy`` for image-safe queries. The output has one row
++    per pixel (y outermost, x innermost), not just selected high-score points.
++    A floating dtype is required; the default is ``torch.float32``. Dtypes
++    unable to represent every integer in the box exactly are rejected.
++    """
++    x0, y0, x1, y1 = _box(box, "box")
++    import torch
++
++    if dtype is None:
++        dtype = torch.float32
++    if not isinstance(dtype, torch.dtype) or not dtype.is_floating_point:
++        raise ValueError("dense query dtype must be a floating torch dtype")
++    largest_coordinate = max(x1 - 1, y1 - 1)
++    if largest_coordinate > 2.0 / torch.finfo(dtype).eps:
++        raise ValueError("dtype cannot represent every query pixel coordinate exactly")
++    ys = torch.arange(y0, y1, device=device, dtype=dtype)
++    xs = torch.arange(x0, x1, device=device, dtype=dtype)
++    yy, xx = torch.meshgrid(ys, xs, indexing="ij")
++    return torch.stack((xx, yy), dim=-1).reshape(-1, 2)
+diff --git a/experiments/irstd_independent_v1/geometry/velocity_grid.py b/experiments/irstd_independent_v1/geometry/velocity_grid.py
+new file mode 100644
+index 0000000..880f42a
+--- /dev/null
++++ b/experiments/irstd_independent_v1/geometry/velocity_grid.py
+@@ -0,0 +1,45 @@
++"""Fixed velocity hypotheses in native-image pixels per original frame interval."""
++from collections.abc import Sequence
++
++import torch
++
++
++def make_velocity_grid(
++    vx: Sequence[float] | torch.Tensor,
++    vy: Sequence[float] | torch.Tensor,
++    *,
++    dtype: torch.dtype = torch.float32,
++    device: torch.device | str | None = None,
++) -> torch.Tensor:
++    """Return ``[My, Mx, 2]`` with the last dimension ordered ``(vx, vy)``.
++
++    Each axis must be nonempty, finite, strictly increasing, and contain an
++    exact zero. The grid is fixed geometry, not a learned proposal or top-k.
++    Tensor axes requiring gradients are rejected rather than silently detached.
++    """
++    if dtype not in (torch.float32, torch.float64):
++        raise TypeError("Velocity grids support float32 or float64")
++
++    def axis(values, name):
++        raw = torch.as_tensor(values, device=device)
++        if raw.requires_grad:
++            raise TypeError(f"{name} is fixed geometry in S1; only feature gradients are supported")
++        if raw.is_complex() or raw.dtype == torch.bool:
++            raise TypeError(f"{name} must contain real numeric velocities")
++        # Convert the original values directly: a Python float sequence must
++        # not first lose precision through the default float32 inference.
++        out = torch.as_tensor(values, device=device, dtype=dtype)
++        if out.ndim != 1 or out.numel() == 0:
++            raise ValueError(f"{name} must be a nonempty one-dimensional sequence")
++        if not bool(torch.isfinite(out).all()):
++            raise ValueError(f"{name} must contain only finite velocities")
++        if out.numel() > 1 and not bool((out[1:] > out[:-1]).all()):
++            raise ValueError(f"{name} must be strictly increasing")
++        if not bool((out == 0).any()):
++            raise ValueError(f"{name} must contain zero velocity")
++        return out
++
++    x = axis(vx, "vx")
++    y = axis(vy, "vy")
++    grid_y, grid_x = torch.meshgrid(y, x, indexing="ij")
++    return torch.stack((grid_x, grid_y), dim=-1)
+diff --git a/experiments/irstd_independent_v1/reports/S1.json b/experiments/irstd_independent_v1/reports/S1.json
+new file mode 100644
+index 0000000..3e4e5a4
+--- /dev/null
++++ b/experiments/irstd_independent_v1/reports/S1.json
+@@ -0,0 +1,385 @@
++{
++  "stage": "S1",
++  "status": "BLOCKED",
++  "gate_kind": "engineering",
++  "training_steps": 0,
++  "next_allowed_stage": null,
++  "started_utc": "2026-11-18T12:15:28.045072+00:00",
++  "environment": {
++    "python": "3.12.14",
++    "torch": "2.7.0+cpu",
++    "device": "cpu",
++    "cuda_available": false
++  },
++  "scope": [
++    "sampling",
++    "validity",
++    "tiling",
++    "feature_gradients"
++  ],
++  "configuration": {
++    "stage": "S1",
++    "seed": 46,
++    "velocity_grid": {
++      "vx": [
++        -2,
++        -1,
++        0,
++        1,
++        2
++      ],
++      "vy": [
++        -2,
++        -1,
++        0,
++        1,
++        2
++      ],
++      "units": "native_pixels_per_original_frame_interval",
++      "purpose": "engineering",
++      "formal_coverage_approved": false,
++      "coverage_evidence": null
++    },
++    "sampling": {
++      "query_chunk": 256,
++      "velocity_chunk": 8,
++      "interpolation": "native_pixel_bilinear",
++      "coordinate_convention": "pixel_centers_align_corners_false_equivalent",
++      "center_in_context": false
++    },
++    "tolerance": {
++      "fp32_atol": 1e-05,
++      "fp32_rtol": 0.0001
++    },
++    "resource": {
++      "query_hw": [
++        32,
++        32
++      ],
++      "feature_channels": 9,
++      "max_peak_cuda_allocated_mib": null
++    }
++  },
++  "pending_requirements": [
++    "real_training_batch",
++    "formal_grid_coverage_decision_from_training_data",
++    "actual_cuda_peak_memory_and_time"
++  ],
++  "repository_base_commit": "3ca39abb575e32f168fb771253ca68704bd7a669",
++  "code_and_config_sha256": {
++    "geometry/__init__.py": "3b39f5cd4979d6755082b8b2cc88123c0cf8272f2713b2a627edcff019ad46e8",
++    "geometry/sampler.py": "6b22c21c9d8c4f1caaf4168768a20a8aa59557ae91b02d6f16872b2673f184c1",
++    "geometry/tiles.py": "e40afdf6818f6a29d2dbd580ab1e72a6233d3a2ba877b3a49bb65a717a1e7252",
++    "geometry/velocity_grid.py": "83f5102401cbed69e641149d597d4ed9cc6c57ff869a47193f1c22c94c792fa7",
++    "checks/check_s1.py": "fa93bddbe415184ce1e5065f02a87e8daea3328a9f72046ee0d9a4e854d121b1",
++    "checks/s1_runtime.py": "6294de39f23662f68de7ff0ed1458391ccd667973aa8a12dc585e46c18b4fa83",
++    "configs/s1_geometry.yaml": "71a3662d18f04e1a2cbdd4f8470b99ce34d0b2c4b7e6ff0977a2240ddacf3881"
++  },
++  "s0_prerequisite": {
++    "status": "PASS",
++    "gate_kind": "archived_integrity",
++    "recorded_code_commit": "73dc0315b6aa27918d15cb0ec604fd2dce223760",
++    "commit_equality_required": false,
++    "verified_code_and_config": [
++      {
++        "path": "checks/audit_pixels.py",
++        "sha256": "0700bbc97635ce4c265a7dd8c9c0ba1ec49bc925faae3e9dd7b013d25197baf3"
++      },
++      {
++        "path": "checks/check_backgrounds.py",
++        "sha256": "ac3130eac9b777ba701caacefa2eaacab2952d05565bd1d70509d9e24a2b62ae"
++      },
++      {
++        "path": "checks/check_loader.py",
++        "sha256": "a45504920ad8f8c8de538ba329bb2fff4f69ca2b924d0eed4e312056366edf2f"
++      },
++      {
++        "path": "checks/check_mat_alignment.py",
++        "sha256": "6d3d64eb2b6301710a819896bb4d66c2d373bd2957affa3f95b12a988e5e7376"
++      },
++      {
++        "path": "checks/check_s0.py",
++        "sha256": "41cf78e3c599a0cb343334d4afb74b5788540eb182290b686d844f1b67895dec"
++      },
++      {
++        "path": "configs/task.yaml",
++        "sha256": "1cd73fcd3f2e5907e67c70e98ceba062d4d1eda2500a83450ab977f06e687aab"
++      },
++      {
++        "path": "contracts.py",
++        "sha256": "049f7426b861e07757d117f3b66ba2c28b4f960fef10e50dc539a16f631019b4"
++      },
++      {
++        "path": "data/__init__.py",
++        "sha256": "97181ab361a6ab7ad0015f0ead35ae4eb2eb660fc760e8ff9e6bf07efbc8186b"
++      },
++      {
++        "path": "data/dataset.py",
++        "sha256": "d063be9911e5da69d7b8456ba904896f5454a8b96e124c6ed05afc6192c592e1"
++      },
++      {
++        "path": "data/manifest.py",
++        "sha256": "813e57996efe1c7f5b1bd5964cd7981b23a2d1c899abe2bc3f94e8138150b5e0"
++      }
++    ],
++    "verified_file_count": 10,
++    "data_manifest": "manifests/nudt_mirsdt_mask17.json",
++    "data_manifest_sha256": "e130a9ebd52e549059e8992575b4766b88f67f5e4d563e10574bd17da4f22b1a",
++    "new_files_enumerated": false,
++    "raw_data_reaudited": false,
++    "remaining_S0_limits": [
++      "synthetic_release",
++      "no_physical_scene_ids",
++      "no_velocity_or_track_ids",
++      "official_test_previously_used",
++      "17_frame_subset",
++      "no_model_training",
++      "no_empty_dev_centers",
++      "background_similarity_across_splits"
++    ]
++  },
++  "operator_checks": {
++    "status": "PASS",
++    "count": 19,
++    "checks": [
++      {
++        "name": "test_01_velocity_axis_and_units",
++        "status": "PASS",
++        "seconds": 0.007292578999113175
++      },
++      {
++        "name": "test_02_independent_scalar_reference",
++        "status": "PASS",
++        "seconds": 0.012561551999169751
++      },
++      {
++        "name": "test_03_analytic_plane_and_actual_time_offsets",
++        "status": "PASS",
++        "seconds": 0.0021937729998171562
++      },
++      {
++        "name": "test_04_known_moving_bright_and_dark_points",
++        "status": "PASS",
++        "seconds": 0.03360590800002683
++      },
++      {
++        "name": "test_05_zero_velocity_preserves_time_and_excludes_center",
++        "status": "PASS",
++        "seconds": 0.003459088000454358
++      },
++      {
++        "name": "test_06_heterogeneous_padding_is_not_an_observation",
++        "status": "PASS",
++        "seconds": 0.004995491999579826
++      },
++      {
++        "name": "test_07_fp32_integer_pixel_padding_poison_regression",
++        "status": "PASS",
++        "seconds": 0.013527938001061557
++      },
++      {
++        "name": "test_08_positive_weight_footprint_and_mask_holes",
++        "status": "PASS",
++        "seconds": 0.0015823220001038862
++      },
++      {
++        "name": "test_09_true_image_boundary_and_zero_or_one_valid_path",
++        "status": "PASS",
++        "seconds": 0.0017882619995361893
++      },
++      {
++        "name": "test_10_missing_source_halo_is_an_error",
++        "status": "PASS",
++        "seconds": 0.0016938499993557343
++      },
++      {
++        "name": "test_11_chunked_values_masks_and_gradients",
++        "status": "PASS",
++        "seconds": 0.04082695899887767
++      },
++      {
++        "name": "test_12_feature_gradient_independent_scatter",
++        "status": "PASS",
++        "seconds": 0.0016705959988030372
++      },
++      {
++        "name": "test_13_feature_finite_difference_gradcheck",
++        "status": "PASS",
++        "seconds": 0.4006964929994865
++      },
++      {
++        "name": "test_14_invalid_and_empty_samples_have_zero_gradient",
++        "status": "PASS",
++        "seconds": 0.0019122499998047715
++      },
++      {
++        "name": "test_15_tile_partition_and_declared_halo",
++        "status": "PASS",
++        "seconds": 0.0028974530014238553
++      },
++      {
++        "name": "test_16_full_image_and_tile_sampling_match",
++        "status": "PASS",
++        "seconds": 0.030398167000385
++      },
++      {
++        "name": "test_17_encoder_and_decoder_halo_reach_core",
++        "status": "PASS",
++        "seconds": 0.0428315079989261
++      },
++      {
++        "name": "test_18_invalid_geometry_is_rejected",
++        "status": "PASS",
++        "seconds": 0.0027453729999251664
++      },
++      {
++        "name": "test_19_float64_inputs_and_fixed_geometry_contract",
++        "status": "PASS",
++        "seconds": 0.0015546009999525268
++      }
++    ],
++    "metrics": {
++      "scalar_reference": {
++        "values_compared": 540,
++        "valid_samples": 190,
++        "max_absolute_error": 6.332993507385254e-08
++      },
++      "known_motion_cases": 12,
++      "fp32_integer_padding_regression": {
++        "queries": 323,
++        "max_error": 0.0,
++        "invalid_pixel_nonzero_gradients": 0
++      },
++      "chunk_gradient_max_error": 2.86102294921875e-06,
++      "tile_partition": {
++        "tiles": 25,
++        "pixels_covered_once": 1333
++      },
++      "full_vs_tile_max_error": 0.0,
++      "fixed_local_pipeline_tile_max_error": 0.0
++    }
++  },
++  "real_training_batch": {
++    "scope": "fixed_train_clips_only",
++    "sample_ids": [
++      "Sequence1/00009",
++      "Sequence17/00009",
++      "Sequence2/00009"
++    ],
++    "device": "cpu",
++    "training_steps": 0,
++    "status": "BLOCKED",
++    "reason": "missing_training_images_or_center_masks",
++    "required_file_count": 54,
++    "missing_file_count": 54,
++    "missing_files": [
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00001.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00002.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00003.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00004.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00005.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00006.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00007.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00008.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00009.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00010.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00011.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00012.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00013.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00014.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00015.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00016.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/images/00017.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence1/masks/00009.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00001.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00002.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00003.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00004.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00005.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00006.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00007.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00008.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00009.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00010.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00011.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00012.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00013.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00014.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00015.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00016.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/images/00017.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence17/masks/00009.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00001.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00002.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00003.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00004.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00005.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00006.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00007.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00008.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00009.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00010.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00011.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00012.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00013.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00014.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00015.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00016.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/images/00017.png",
++      "/workspace/scratch/223aa04c534f/ly_s1/data/public/NUDT-MIRSDT/Sequence2/masks/00009.png"
++    ]
++  },
++  "resource_measurement": {
++    "status": "PASS",
++    "scope": "synthetic_sampler_only_not_full_model",
++    "device": "cpu",
++    "torch_version": "2.7.0+cpu",
++    "input_shape": [
++      1,
++      17,
++      9,
++      66,
++      66
++    ],
++    "query_hw": [
++      32,
++      32
++    ],
++    "velocity_grid_shape": [
++      5,
++      5,
++      2
++    ],
++    "context_slots": 16,
++    "query_chunk": 256,
++    "velocity_chunk": 8,
++    "warmup_forward_iterations": 1,
++    "measured_iterations": 1,
++    "forward_seconds": 0.1636079100007919,
++    "backward_seconds": 0.12058847899970715,
++    "backward_objective": "mean_squared_sampled_evidence; no optimizer or model training",
++    "tensor_bytes": {
++      "feature_input": 2665872,
++      "feature_gradient": 2665872,
++      "clip_frames_extra_allocation": 0,
++      "pixel_valid": 74052,
++      "time_offsets": 68,
++      "queries": 8192,
++      "velocities": 200,
++      "sampled_values": 14745600,
++      "sample_valid": 409600,
++      "velocity_valid": 25600
++    },
++    "tensor_bytes_note": "Named tensor sizes, not a complete autograd/workspace peak; clip.frames is a feature view.",
++    "cuda_memory": null,
++    "cuda_resource_gate": "UNAVAILABLE_ON_CPU",
++    "cpu_rss": {
++      "before_profile_high_water_bytes": 289562624,
++      "process_high_water_bytes": 418484224,
++      "scope": "process_lifetime_high_water_including_prior_checks; not sampler-only or CUDA memory"
++    },
++    "performance_threshold_applied": false,
++    "training_steps": 0
++  },
++  "finished_utc": "2026-11-18T12:15:29.116194+00:00"
++}
+diff --git a/experiments/irstd_independent_v1/reports/S1_geometry_contract.md b/experiments/irstd_independent_v1/reports/S1_geometry_contract.md
+new file mode 100644
+index 0000000..24a8163
+--- /dev/null
++++ b/experiments/irstd_independent_v1/reports/S1_geometry_contract.md
+@@ -0,0 +1,203 @@
++# S1：自主红外小目标视频检测的时间—速度采样器
++
++**当前结论：S1 算子已实现，CPU 算子检查通过；完整 S1 验收仍待真实训练 batch、正式速度网格覆盖决定和 CUDA 资源测量。训练步数为 0，尚未进入 S2。**
++
++本次基于仓库提交 `3ca39abb575e32f168fb771253ca68704bd7a669` 新增文件。S0 原有代码、配置、manifest 和报告均保持原样，S0 归档中的 10 项代码/配置摘要及 manifest 摘要已重新比对一致。当前提交号不同于历史 S0 报告中的提交号，不代表数据接口被修改；实际内容摘要是本次衔接检查的依据。
++
++## 1. S1 在模型中的位置
++
++S0 解决连续 17 帧与第 9 帧标签的对应关系。S1 解决：对中心帧位置 `p`，在每一个上下文时刻、每一个速度假设下，究竟读取哪个位置、读取什么数值、这个数值是否有效。
++
++后续模型将把自主逐帧编码器输出交给本算子，再由自己的证据编码器、空间解码器和检测头完成检测。本阶段提供采样接口和正确性检查，不包含检测头或优化器。
++
++```mermaid
++flowchart TD
++    A[17 帧数据接口] --> B[逐帧特征]
++    B --> C[S1 时间与速度采样]
++    D[原图坐标与速度网格] --> C
++    E[有效像素与裁剪范围] --> C
++    C --> F[逐时刻逐速度证据]
++    C --> G[采样有效位与路径有效位]
++    F --> H[后续自主证据网络]
++    G --> H
++```
++
++图中的逐帧编码器及后续网络属于后续阶段。本次检查可直接用原始单通道图像或受控特征作为输入；没有调用 DeepPro-Plus 的权重、特征或检测结果。
++
++## 2. 输入、输出和坐标约定
++
++### 2.1 输入接口
++
++```python
++sample_clip_features(features, clip, queries_xy, velocities_xy,
++                     query_chunk=256, velocity_chunk=8, source_hw=None)
++```
++
++| 输入 | 维度/类型 | 含义 |
++|---|---|---|
++| `features` | `[B,17,C,Hpad,Wpad]`，FP32 或 FP64 | 原生分辨率、stride=1 的逐帧特征，允许向特征反传梯度 |
++| `clip` | S0 `ClipBatch` | 提供原始时间间隔、像素有效位、原图尺寸和裁剪原点 |
++| `queries_xy` | `[N,2]` 或 `[B,N,2]` | 要计算证据的全图坐标，最后一维为 `(x,y)` |
++| `velocities_xy` | `[My,Mx,2]` | 每个速度的 `(vx,vy)`，单位为原图像素/原始帧间隔 |
++| `source_hw` | 可选 `[B,2]` | 实际加载的图像区域尺寸，不包含批次补齐；任何 crop 均应明确传入 |
++
++低层接口 `sample_context(...)` 接受已去掉中心帧的特征及实际时间间隔，也可用于短序列的几何检查。
++
++**S1 只保证对特征可微。时间、查询坐标、速度和图像几何属于固定输入；带 `requires_grad=True` 的几何张量会被明确拒绝。** 未来若研究可学习运动，需要另行定义并检查坐标梯度，不能从当前特征梯度检查推导出坐标学习正确。
++
++### 2.2 采样规则
++
++对每个全图查询位置与速度假设，读取：
++
++\[
++q_{t,v}=p+\tau_t v.
++\]
++
++第 9 帧的索引为 8，在 wrapper 中同时从特征、有效位与时间数组剔除。上下文时间严格保持：
++
++```text
++[-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8]
++```
++
++若使用图像块，先在全图坐标计算 `q`，再减去实际输入块的原点。不能把时间槽号当成原始帧间隔，也不能把 tile 内部坐标当成全图坐标。
++
++插值直接在原生像素坐标上执行四邻点双线性加权。像素中心的约定与 `align_corners=False` 下的归一化公式等价，但实际实现不进行归一化再反变换，避免整数像素位置的舍入误差制造额外插值权重。
++
++[坐标示意图](S1_sampling_coordinates.svg) 展示固定位置在 16 个上下文时刻、三种速度假设下的采样点。零速度的 16 个空间位置重合，但时间槽仍分别保留。
++
++### 2.3 输出接口
++
++| `SampledEvidence` 字段 | 维度 | 含义 |
++|---|---|---|
++| `values` | `[B,N,C,16,My,Mx]` | 每个时刻、每个速度假设的证据；无效项置零 |
++| `sample_valid` | `[B,N,16,My,Mx]` | 这一次双线性采样的所有正权重支撑像素是否有效 |
++| `velocity_valid` | `[B,N,My,Mx]` | 此速度在全部上下文时刻都有效，即沿时间轴求 `all` |
++| `time_offsets` | `[B,16]` | 实际保留下来的时间间隔 |
++| `queries_xy` | `[B,N,2]` | 完整查询顺序与全图坐标 |
++| `velocities_xy` | `[My,Mx,2]` | 完整速度网格 |
++
++本阶段不按时间平均，不选择“最佳速度”，不按已有检测分数筛选位置。后续计算均值或分解时必须同时读取有效位，不能把置零的缺失观测当作真实暗像素。
++
++## 3. 三类边界分别处理
++
++| 情况 | 处理 |
++|---|---|
++| 位移后离开真实图像 | 对应 `sample_valid=False`，数值为零，对特征的梯度为零 |
++| 批次补齐或图像内明确无效的像素 | 只要正权重插值支撑触及这些像素，该采样无效 |
++| 位置仍在真实图像中，但当前 tile 没加载所需邻域 | 抛出 `MissingHaloError`，要求修正输入范围或元数据 |
++
++整数像素位置的零权重邻居不应影响有效性。无效像素即使被填入很大的数值，也不能改变合法观测或收到梯度。
++
++对完整、异尺寸 batch，wrapper 按各张原图的 `original_hw` 判断真实范围。**所有裁剪输入，包括原点恰好为 `(0,0)` 的左上角 crop，都必须显式传 `source_hw`。** 缺省值表示完整原图；从 `pixel_valid` 猜测某个无效区域究竟是孔洞还是没有加载的裁剪区域是不可靠的。
++
++## 4. 分块的三个范围
++
++`Tile` 保存 `core_xyxy`、`query_xyxy` 和 `input_xyxy`，全部是全图坐标，右下边界不包含。
++
++1. **core**：最终写回的像素。所有核心块覆盖全图恰好一次。
++2. **query**：在 core 外增加空间解码器需要的邻域。
++3. **input**：在 query 外增加运动位移、逐帧编码器/对比度算子与插值所需邻域。
++
++每个轴在 query 外的保守输入余量为：
++
++\[
++h_a=\left\lceil\max_{t,v}|\tau_t v_a|\right\rceil
++ +\max(r_\mathrm{encoder},r_\mathrm{contrast})+r_\mathrm{interp}.
++\]
++
++真正图像边缘按真实图像截断。人工块边界必须加载相邻真实像素。执行后续空间解码后，才用 `tile.core_slice_in_query` 裁出最终 core。
++
++该规则要求逐帧算子为局部 stride=1 运算，且声明的感受野半径准确。依赖整张 crop 统计量的归一化不自动满足整图与分块等价。
++
++## 5. 已运行的检查与证据
++
++运行环境为 Python 3.12.14、PyTorch 2.7.0+cpu。原 S0 归档环境为 Python 3.11.12、PyTorch 2.7.0+cu128。本次没有在原项目 CUDA 环境执行。
++
++正式机器记录为 [S1.json](S1.json)。本次 19 项 CPU 算子检查全部通过，检查包含：
++
++| 检查组 | 已核对的行为 |
++|---|---|
++| 速度与时间 | 横纵顺序、正负/零/亚像素速度、实际时间间隔、12 组亮/暗运动点 |
++| 独立数值参考 | 标量 NumPy 插值与生产实现逐项比较，含无效支撑与边界 |
++| 17→16 接口 | 保留原顺序，剔除中心帧，中心帧不接收上下文路径的梯度 |
++| 有效域 | 异形 batch、补齐污染、整数边缘、正权重支撑、全路径有效性 |
++| 特征梯度 | 手工散射权重、双精度有限差分、无效与空查询的零梯度 |
++| 分块 | query/velocity chunk 一致、核心覆盖、真实缺 halo 报错、整图与分块一致 |
++| 空间邻域 | 固定局部编码与两层卷积解码下，整图输出与分块核心输出一致 |
++| 非法输入 | 几何尺寸、裁剪范围、中心索引及非有限坐标错误被拒绝 |
++| 精度契约 | FP64 输入不先损失到 FP32，固定几何不误开放坐标梯度 |
++
++本地结果中的主要数值：
++
++- 独立参考比较 540 个数值，最大绝对误差约 `6.33e-8`。
++- 25 个核心块覆盖 31×43 图像的 1,333 个像素，所有像素恰好覆盖一次。
++- 当前整图与分块采样用例最大差为 0；加入固定局部编码、解码的用例最大差也为 0。
++- 改变 chunk 后前向输出逐值一致，反向梯度最大差约 `2.86e-6`，在预设 FP32 容差内。
++- 对宽度 323 的整数坐标回归，323 个位置输出误差为 0，无效像素的非零梯度数为 0。
++
++这些结果验证算子的数值和接口行为，不构成目标检测效果或研究创新性证据。
++
++### 5.1 本轮实际修正的数值问题
++
++早期实现采用归一化网格采样。在宽度 323 的回归中，每个样本仅将一个查询像素设为有效、值为 1，其余无效像素填入 `1e6`。归一化坐标往返的舍入使 83 个查询混入了无效邻居，独立复核最大误差约 15.26，且无效像素出现非零梯度。
++
++修正为原生像素四角插值后，上述用例输出与无效像素梯度均精确符合契约。回归已纳入正式检查。这里的巨大填充值用于放大实现错误，不代表正常红外图像的数值范围。
++
++### 5.2 资源记录的解释范围
++
++CPU 测量使用 17 帧、9 通道、32×32 查询区、16 个上下文时刻和 5×5 速度网格。输出 `values` 的张量大小为 14,745,600 字节，约 14.06 MiB。前向和反向实测时间及进程高水位内存见机器记录。
++
++这只是采样器的一次预热后单次测量，未包含后续模型；CPU 进程高水位不等于采样器独立峰值，更不等于 GPU 显存。query/velocity 分块减少部分工作张量的大小，但返回的完整证据张量仍需存储，不能据此宣称内存与查询数或速度数无关。
++
++## 6. 为什么完整 S1 状态仍为 BLOCKED
++
++这不是算子检查失败。按已经确定的阶段方案，S1 还有以下未满足项：
++
++| 待完成项 | 当前状态 | 完成方法 |
++|---|---|---|
++| S0 真实 batch 接入采样器 | 当前副本缺所需 51 张图像和 3 张 mask | 在原数据目录运行同一检查，固定使用 S0 的三个训练样本 |
++| 正式速度网格的范围与步长 | 当前 `[-2,-1,0,1,2]²` 只用于工程检查 | 基于训练来源的运动/尺度诊断，记录覆盖依据和不确定性，冻结正式配置 |
++| CUDA 峰值显存及耗时 | 当前环境没有 CUDA | 在明确可用的 GPU 上，按正式网格和预先声明的预算实测 |
++
++S0 的相邻单分量质心位移统计并不是真实目标速度标注，也不能证明 ±2 像素/帧已经覆盖数据。范围与步长需要分别检查：范围不足会缺少运动假设，步长过大则会使最远上下文产生较大的空间偏差。最大时间间隔为 8 时，步长为 1 的单轴最近格点误差可对应约 4 像素的端点偏差。
++
++下一步应继续在 S1 内完成这些衔接和资源项。无需重跑未改变的整个 S0；检查器会验证 S0 摘要。无需使用开发集或测试集的检测性能来选网格。
++
++## 7. 在原项目中复算
++
++将本次新增文件应用到仓库后，在已经配置好的项目 Python 环境运行：
++
++```bash
++cd /home/ly/DeepProPlus_TLFP_Code
++python experiments/irstd_independent_v1/checks/check_s1.py --device cpu
++```
++
++这会核验 S0 摘要、运行算子检查、尝试加载固定的三个训练样本并测量采样器。若真实数据存在，这一项应实际运行；CPU 运行不会自动给 CUDA 资源项记为通过。
++
++先查看 GPU 占用，选定可用设备。下面仅以设备 1 为示例；检查脚本不会自动选择 GPU 或中止其他进程：
++
++```bash
++nvidia-smi
++python experiments/irstd_independent_v1/checks/check_s1.py \
++  --device cuda:1 \
++  --output experiments/irstd_independent_v1/reports/S1_cuda.json
++```
++
++默认配置是工程配置，即使 CUDA 与真实 batch 均通过，仍会明确报告尚未冻结正式网格。正式配置应另存一个 YAML 文件，用 `--config` 传入，并填写训练来源的覆盖依据、正式网格、query 尺寸与显存预算。`formal_coverage_approved` 是人工审定记录，不能仅为了使程序返回 PASS 而改为 `true`；程序也不能用一个布尔值替代覆盖证据。
++
++检查器退出码：`0=PASS`，`1=FAIL`，`2=BLOCKED`。`BLOCKED` 表示必要资源、数据或配置决定尚未完成。只有完整 S1 通过时，机器记录才输出 `next_allowed_stage: S2`。
++
++## 8. 文件与后续边界
++
++| 文件 | 责任 |
++|---|---|
++| `geometry/velocity_grid.py` | 固定速度网格、坐标顺序与输入检查 |
++| `geometry/sampler.py` | 可微特征采样、有效支撑、S0 wrapper |
++| `geometry/tiles.py` | 全图 core/query/input 与 halo 几何 |
++| `geometry/__init__.py` | 采样公共接口 |
++| `checks/check_s1.py` | 算子检查、状态汇总、可视化与运行入口 |
++| `checks/s1_runtime.py` | S0 摘要、真实训练 batch 和资源测量 |
++| `configs/s1_geometry.yaml` | 工程速度网格、分块和预设容差 |
++| `reports/S1.json` | 本次实际运行记录与代码摘要 |
++
++S1 完整通过后，S2 才实现自己的 FrameEncoder、视频基础聚合、SpatialDecoder 和 DetectionHead，并开始验证真实训练通路。S3 才接入时间—速度主效应与交互证据的核心建模。阶段顺序保持原方案，不因为当前算子已可运行就提前把所有网络文件写完。
+diff --git a/experiments/irstd_independent_v1/reports/S1_sampling_coordinates.svg b/experiments/irstd_independent_v1/reports/S1_sampling_coordinates.svg
+new file mode 100644
+index 0000000..9cc2f2d
+--- /dev/null
++++ b/experiments/irstd_independent_v1/reports/S1_sampling_coordinates.svg
+@@ -0,0 +1,246 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400">
++<rect width="590" height="400" fill="white"/>
++<g font-family="sans-serif" font-size="14" fill="#172337">
++<text x="24" y="27">S1: q(t,v) = p + t v (native pixel coordinates)</text>
++<circle cx="45" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="60" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="85" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="110" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="135" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="160" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="185" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="210" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="235" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="260" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="285" r="1.5" fill="#b6c1cc"/>
++<circle cx="45" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="70" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="95" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="120" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="145" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="170" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="195" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="220" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="245" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="270" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="295" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="320" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="345" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="370" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="395" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="420" cy="310" r="1.5" fill="#b6c1cc"/>
++<circle cx="445" cy="310" r="1.5" fill="#b6c1cc"/>
++<polyline points="45,85.0 70,97.5 95,110.0 120,122.5 145,135.0 170,147.5 195,160.0 220,172.5 270,197.5 295,210.0 320,222.5 345,235.0 370,247.5 395,260.0 420,272.5 445,285.0" fill="none" stroke="#2563eb" stroke-width="2"/>
++<circle cx="45" cy="85.0" r="4" fill="#2563eb"/>
++<circle cx="70" cy="97.5" r="4" fill="#2563eb"/>
++<circle cx="95" cy="110.0" r="4" fill="#2563eb"/>
++<circle cx="120" cy="122.5" r="4" fill="#2563eb"/>
++<circle cx="145" cy="135.0" r="4" fill="#2563eb"/>
++<circle cx="170" cy="147.5" r="4" fill="#2563eb"/>
++<circle cx="195" cy="160.0" r="4" fill="#2563eb"/>
++<circle cx="220" cy="172.5" r="4" fill="#2563eb"/>
++<circle cx="270" cy="197.5" r="4" fill="#2563eb"/>
++<circle cx="295" cy="210.0" r="4" fill="#2563eb"/>
++<circle cx="320" cy="222.5" r="4" fill="#2563eb"/>
++<circle cx="345" cy="235.0" r="4" fill="#2563eb"/>
++<circle cx="370" cy="247.5" r="4" fill="#2563eb"/>
++<circle cx="395" cy="260.0" r="4" fill="#2563eb"/>
++<circle cx="420" cy="272.5" r="4" fill="#2563eb"/>
++<circle cx="445" cy="285.0" r="4" fill="#2563eb"/>
++<polyline points="245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185 245,185" fill="none" stroke="#cc3547" stroke-width="2"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<circle cx="245" cy="185" r="4" fill="#cc3547"/>
++<polyline points="345.0,85.0 332.5,97.5 320.0,110.0 307.5,122.5 295.0,135.0 282.5,147.5 270.0,160.0 257.5,172.5 232.5,197.5 220.0,210.0 207.5,222.5 195.0,235.0 182.5,247.5 170.0,260.0 157.5,272.5 145.0,285.0" fill="none" stroke="#16805f" stroke-width="2"/>
++<circle cx="345.0" cy="85.0" r="4" fill="#16805f"/>
++<circle cx="332.5" cy="97.5" r="4" fill="#16805f"/>
++<circle cx="320.0" cy="110.0" r="4" fill="#16805f"/>
++<circle cx="307.5" cy="122.5" r="4" fill="#16805f"/>
++<circle cx="295.0" cy="135.0" r="4" fill="#16805f"/>
++<circle cx="282.5" cy="147.5" r="4" fill="#16805f"/>
++<circle cx="270.0" cy="160.0" r="4" fill="#16805f"/>
++<circle cx="257.5" cy="172.5" r="4" fill="#16805f"/>
++<circle cx="232.5" cy="197.5" r="4" fill="#16805f"/>
++<circle cx="220.0" cy="210.0" r="4" fill="#16805f"/>
++<circle cx="207.5" cy="222.5" r="4" fill="#16805f"/>
++<circle cx="195.0" cy="235.0" r="4" fill="#16805f"/>
++<circle cx="182.5" cy="247.5" r="4" fill="#16805f"/>
++<circle cx="170.0" cy="260.0" r="4" fill="#16805f"/>
++<circle cx="157.5" cy="272.5" r="4" fill="#16805f"/>
++<circle cx="145.0" cy="285.0" r="4" fill="#16805f"/>
++<circle cx="245" cy="185" r="8" fill="none" stroke="black" stroke-width="2"/>
++<text x="25" y="350">Circles: retained context samples; ring: center query p.</text>
++<text x="25" y="374">Time t=0 is excluded. Different colors are velocity hypotheses.</text>
++</g></svg>

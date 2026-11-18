@@ -1,0 +1,31 @@
+version: 1
+scope: NUDT-MIRSDT synthetic training split; S1 engineering decision
+population:
+  split: train
+  center_set: all_eligible_centers_in_the_frozen_manifest
+  fit_requires: exactly_one_native_mask_component_in_each_of_17_frames
+  component_connectivity: 8
+  interpretation: image_plane_centroid_proxy_without_track_ids_or_physical_speed_labels
+candidates:
+  radii: [2, 3, 4, 6]
+  steps: [1.0, 0.5]
+  grid: symmetric_cartesian_in_native_px_per_frame
+selection:
+  min_range_fraction: 0.95
+  min_quantization_fraction: 0.90
+  endpoint_offset: 8
+  max_box_fraction_per_axis: 0.5
+  velocity_fit: center_anchored_least_squares_over_signed_offsets
+  range_population: all_fitted_training_windows
+  quantization_population: all_fitted_training_windows_including_out_of_range
+  tie_break: [fewest_hypotheses, smallest_radius, smallest_step]
+  on_no_passing_candidate: report_without_a_formal_selection
+resource:
+  query_hw: [68, 68]
+  output_core_hw: [64, 64]
+  decoder_radius: 2
+  batch: 1
+  context_frames: 16
+  feature_channels: 9
+  max_peak_cuda_allocated_mib: 8192
+  scope: standalone_fp32_sampler_forward_and_backward_including_inputs

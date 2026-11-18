@@ -1,0 +1,26 @@
+stage: S1
+seed: 46
+# This dictionary exercises geometry. It is NOT an established motion-coverage
+# choice for NUDT-MIRSDT or another dataset.
+velocity_grid:
+  vx: [-2, -1, 0, 1, 2]
+  vy: [-2, -1, 0, 1, 2]
+  units: native_pixels_per_original_frame_interval
+  purpose: engineering
+  formal_coverage_approved: false
+  coverage_evidence: null
+sampling:
+  query_chunk: 256
+  velocity_chunk: 8
+  interpolation: native_pixel_bilinear
+  coordinate_convention: pixel_centers_align_corners_false_equivalent
+  center_in_context: false
+tolerance:
+  fp32_atol: 0.00001
+  fp32_rtol: 0.0001
+resource:
+  query_hw: [32, 32]
+  feature_channels: 9
+  # Set a concrete budget in a separate formal config after selecting a grid
+  # using training data; never fill it from held-out performance.
+  max_peak_cuda_allocated_mib: null
